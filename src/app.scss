@@ -1,0 +1,17 @@
+@import 'styles/_colors';
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: $background-color;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+div, p, li, span {
+  font-size: 1.6rem;
+}

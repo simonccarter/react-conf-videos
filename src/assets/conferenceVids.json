@@ -1,0 +1,50 @@
+[
+  {
+    "title": "React Conf 2017",
+    "date": "24-03-2017",
+    "videos" : [
+      {
+        "title": "react was great",
+        "author": {
+          "name" : "Simon Carter",
+          "twitter" : "some link"
+        },
+        "duration": "21:36",
+        "link": "some youtube link"
+      },
+      {
+        "title": "react was great p2",
+        "author": {
+          "name" : "Simon Carter",
+          "twitter" : "some link"
+        },
+        "duration": "35:17",
+        "link": "some youtube link"
+      }
+    ]
+  },
+  {
+    "title": "React Conf 2016",
+    "date": "24-03-2017",
+    "videos" : [
+      {
+        "title": "react was great",
+        "author": {
+          "name" : "Simon Carter",
+          "twitter" : "some link"
+        },
+        "duration": "21:36",
+        "link": "some youtube link"
+      },
+      {
+        "title": "react was great p2",
+        "author": {
+          "name" : "Simon Carter",
+          "twitter" : "some link"
+        },
+        "duration": "35:17",
+        "link": "some youtube link"
+      }
+    ]
+  }
+]
