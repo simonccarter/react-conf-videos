@@ -1,6 +1,24 @@
 .root {
+  // transition: transform 0.4s;
+
+  // &.isActive {
+    // transform: translateY(-100px);
+    // transition: transform 0.4s;
+  // }
+
   .input {
-    color: yellow;
-    background-color: red;
+    padding: 1rem 2rem;
+    background: #EFEEEE;
+    font-size: 2.6rem;
+    color: #404d5b;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 100%;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  .results {
+    margin-top: 2rem;
   }
 }

@@ -1,6 +1,30 @@
 .FrontPage {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  transform: translateY(100px);
+  min-height: 100vh;
+  
+  // &.isActive {
+  //   transform: translateY(0%);
+  //   transition: transform 0.4s;
+  // }
+
+  .container {
+    width: 400px;
+  }
+
+  .text {
+    height: 100%;
+    transition: height 0.4s;
+
+    // &.isActive {
+    //   height: 0%;
+    //   // transform: scale(0);
+    //   transition: height 0.4s;
+    //   transition-delay: 0.4s;
+    //   overflow: hidden;
+    // }
+  }
+
 }

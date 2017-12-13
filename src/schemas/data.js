@@ -3,9 +3,9 @@ import hash from 'object-hash'
 
 const hashIdOpts = { idAttribute: v => hash(v) }
 
-const author = new schema.Entity('speakers', {}, hashIdOpts)
+const presenter = new schema.Entity('presenters', {}, hashIdOpts)
 
-const video = new schema.Entity('videos', { author }, hashIdOpts)
+const video = new schema.Entity('videos', { presenter }, hashIdOpts)
 
 const conference = new schema.Entity('conferences', {
   videos: [video]
