@@ -3,8 +3,6 @@ import { connect } from 'react-redux'
 import { compose, pure, withHandlers } from 'recompose'
 import { frontPageActions } from 'redux/modules'
 import Video from 'components/Videos/Video'
-import FlipMove from 'react-flip-move'
-import LazyRender from 'react-lazy-render'
 import { flatten } from 'ramda'
 import cn from 'classnames'
 
