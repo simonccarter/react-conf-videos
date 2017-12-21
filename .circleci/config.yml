@@ -36,7 +36,13 @@ jobs:
       # run tests!
       # - run: yarn test
 
-      # deploy
+      # build
       - run: yarn run prod
+
+  deployment:
+    prod:
+      branch: master
+      commands:
+        - aws s3 sync dist/ s3://reactjsvideos.com.s3-website.eu-west-2.amazonaws.com --delete
 
 
