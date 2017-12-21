@@ -47,12 +47,12 @@ jobs:
     steps:
       # install awscli
       - run:
-        command: |
-          apt-get -y -qq update
-          apt-get -y -qq install python3.4-dev
-          curl -O https://bootstrap.pypa.io/get-pip.py
-          python3.4 get-pip.py --user
-          pip install awscli --upgrade --user
+          command: |
+            apt-get -y -qq update
+            apt-get -y -qq install python3.4-dev
+            curl -O https://bootstrap.pypa.io/get-pip.py
+            python3.4 get-pip.py --user
+            pip install awscli --upgrade --user
       
       - run: aws s3 sync ~/repo/dist/ s3://reactjsvideos.com.s3-website.eu-west-2.amazonaws.com --delete
 
