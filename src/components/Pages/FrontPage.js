@@ -9,13 +9,13 @@ import styles from './FrontPage.scss'
 
 const FrontPageInner = props => (
   <main className={cn(styles.FrontPage, { [`${styles.isActive}`]: props.isActive })} >
-    <div className={styles.container} >
+    <div className={styles.header} >
       <div className={cn(styles.text, { [`${styles.isActive}`]: props.isActive })} >
-        <h1> React conference videos </h1>
-        <p> Search over most/all react conference videos that can be found online. </p>
+        <h1> React Videos </h1>
+        <p> Search React.js conference videos. </p>
       </div>
-      <List />
     </div>
+    <List />
   </main>
 )
 

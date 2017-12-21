@@ -1,30 +1,29 @@
-.FrontPage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transform: translateY(100px);
-  min-height: 100vh;
-  
-  // &.isActive {
-  //   transform: translateY(0%);
-  //   transition: transform 0.4s;
-  // }
+@import '../../styles/_colors';
 
-  .container {
-    width: 400px;
+.FrontPage {
+
+  .header {
+    height: 160px;
+    background-color: $header-background-color;
+    color: $header-text-color;
+    padding-top: 8rem;
   }
 
   .text {
     height: 100%;
-    transition: height 0.4s;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 2rem;
 
-    // &.isActive {
-    //   height: 0%;
-    //   // transform: scale(0);
-    //   transition: height 0.4s;
-    //   transition-delay: 0.4s;
-    //   overflow: hidden;
-    // }
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    p {
+      margin-top: 0rem;
+      font-weight: bold;
+    }
   }
 
 }

@@ -1,24 +1,18 @@
 .root {
-  // transition: transform 0.4s;
-
-  // &.isActive {
-    // transform: translateY(-100px);
-    // transition: transform 0.4s;
-  // }
+  max-width: 450px;
+  margin: 0 auto;
 
   .input {
     padding: 1rem 2rem;
-    background: #EFEEEE;
+    background: white;
     font-size: 2.6rem;
     color: #404d5b;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    width: 100%;
+    width: 450px;
     border: 0;
     outline: none;
     box-sizing: border-box;
+    transform: translateY(-25px);
   }
-
-  .results {
-    margin-top: 2rem;
-  }
+  
 }

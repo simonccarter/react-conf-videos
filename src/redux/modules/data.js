@@ -3,7 +3,24 @@ import { combineEpics } from 'redux-observable'
 
 import { normalize } from 'normalizr'
 import conference from 'schemas/data'
-import { curry, fromPairs, map, adjust, toPairs, toLower, merge, keys } from 'ramda'
+import {
+  concat,
+  curry,
+  fromPairs,
+  map,
+  adjust,
+  toPairs,
+  toLower,
+  merge,
+  keys,
+  compose,
+  pluck,
+  uniq,
+  split,
+  forEach,
+  countBy,
+  reduce
+} from 'ramda'
 
 import { LOAD_DATA_END } from './bootstrap'
 
@@ -18,6 +35,34 @@ const lowerCaseAllValues = (obj) => {
   }, obj)
 }
 
+const computeNgrams = (videos) => {
+
+  const ngrams = {} // [ngram] => count
+  const countNgrams = () => {
+
+  }
+
+  const titleWords = compose(
+    countBy(toLower),
+    map(e => console.log('e1', e)),
+    reduce((acc, e) => {
+      console.log(acc, e)
+      concat(acc, e)
+    }, []),
+    map((e) => {
+      console.log('e2', e)
+      return e
+    }),
+    // map(e => console.log(e)),
+    map(uniq), // keep only uniq words
+    map(split(' ')), // split into array of words
+    pluck('title') // get titles
+  )(videos)
+
+  // extract
+  console.log(titleWords)
+}
+
 // normalize data
 const transformDataFromJson = (data) => {
   const normalized = normalize(data, conference)
@@ -25,6 +70,9 @@ const transformDataFromJson = (data) => {
   // for quicker searching later
   const lowerVideos = lowerCaseAllValues(normalized.entities.videos)
   const lowerSpeakerNames = lowerCaseAllValues(normalized.entities.presenters)
+
+  // compute and rank ngrams
+  // computeNgrams(lowerVideos)
 
   return merge(normalized.entities, {
     videosLC: lowerVideos,

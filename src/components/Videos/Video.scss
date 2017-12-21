@@ -1,7 +1,39 @@
+@import '../../styles/_colors';
+
 .root {
   width: 100%;
-  background: #EFEEEE;
   padding: 1rem 2rem;
   box-sizing: border-box;
   font-size: 1.6rem;
+  color: $text-color;
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+
+    .title {
+      font-weight: bold;
+    }
+
+    .right {
+      font-size: 1.6rem;
+    }
+  }
+
+  .details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+
+    span {
+      font-size: 1.4rem;
+    }    
+  }
+
+  .divider {
+    height: 1px;
+    width: 100%;
+    background-color: grey;
+  }
+
 }

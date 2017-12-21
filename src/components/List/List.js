@@ -15,11 +15,12 @@ const ListInner = ({
 }) => {
   const children = flatten(Object.keys(conferences).map((conference) => {
     const conferenceProps = conferences[conference]
-    return conferenceProps.videos.map(video => <Video key={video} videoId={video} />)
+    return conferenceProps.videos.map(video => <Video key={video} videoId={video} conferenceId={conference} />)
   }))
   return  (
     <div className={cn(styles.root, { [`${styles.isActive}`]: isActive })}>
       <input type="text" value={filterValue} onChange={onInputChange} className={styles.input} />
+      {/* <p className={styles.results}>{children.length} {children.length === 1 ? 'Result' : 'Results'} </p> */}
       <section className={styles.results}>
         { true && children }
       </section>
@@ -33,7 +34,7 @@ const mapStateToProps = ({ frontPage }) => ({
   isActive: frontPage.isActive
 })
 
-const mapDispatchToProps = { 
+const mapDispatchToProps = {
   filter: frontPageActions.filter,
   setIsActive: frontPageActions.setIsActive,
 }
