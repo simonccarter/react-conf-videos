@@ -26,15 +26,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      # install awscli
-      - run: 
-        command: |
-          apt-get -y -qq update
-          apt-get -y -qq install python3.4-dev
-          curl -O https://bootstrap.pypa.io/get-pip.py
-          python3.4 get-pip.py --user
-          pip install awscli --upgrade --user
-
+      # install repo
       - run: yarn install
 
       - save_cache:
@@ -53,6 +45,15 @@ jobs:
       # specify the version you desire here
       - image: circleci/node:7.10
     steps:
+      # install awscli
+      - run:
+        command: |
+          apt-get -y -qq update
+          apt-get -y -qq install python3.4-dev
+          curl -O https://bootstrap.pypa.io/get-pip.py
+          python3.4 get-pip.py --user
+          pip install awscli --upgrade --user
+      
       - run: aws s3 sync ~/repo/dist/ s3://reactjsvideos.com.s3-website.eu-west-2.amazonaws.com --delete
 
 workflows:
