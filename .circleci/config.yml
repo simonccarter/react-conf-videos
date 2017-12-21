@@ -39,7 +39,7 @@ jobs:
       # build
       - run: yarn run prod
 
-deploy:
+deployment:
   prod:
     branch: master
     commands:
