@@ -29,6 +29,16 @@ jobs:
       # install repo
       - run: yarn install
 
+      # install
+      - run:
+          name: 'install awscli'
+          command: |
+            sudo apt-get -y -qq update
+            sudo apt-get -y -qq install python3.4-dev
+            curl -O https://bootstrap.pypa.io/get-pip.py
+            python3.4 get-pip.py --user
+            ./local/bin/pip install awscli --upgrade --user
+
       - save_cache:
           paths:
             - node_modules
@@ -46,15 +56,9 @@ jobs:
       - image: circleci/node:7.10
     steps:
       # install awscli
-      - run:
-          command: |
-            apt-get -y -qq update
-            apt-get -y -qq install python3.4-dev
-            curl -O https://bootstrap.pypa.io/get-pip.py
-            python3.4 get-pip.py --user
-            pip install awscli --upgrade --user
-      
-      - run: aws s3 sync ~/repo/dist/ s3://reactjsvideos.com.s3-website.eu-west-2.amazonaws.com --delete
+      - deploy:
+          working_directory: /
+          command: aws s3 sync ~/repo/dist/ s3://reactjsvideos.com.s3-website.eu-west-2.amazonaws.com --delete
 
 workflows:
   version: 2
