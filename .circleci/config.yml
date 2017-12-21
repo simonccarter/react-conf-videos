@@ -27,12 +27,13 @@ jobs:
           - v1-dependencies-
 
       # install awscli
-      - run: |
-        apt-get -y -qq update
-        apt-get -y -qq install python3.4-dev
-        curl -O https://bootstrap.pypa.io/get-pip.py
-        python3.4 get-pip.py --user
-        pip install awscli --upgrade --user
+      - run: 
+        - command: |
+          apt-get -y -qq update
+          apt-get -y -qq install python3.4-dev
+          curl -O https://bootstrap.pypa.io/get-pip.py
+          python3.4 get-pip.py --user
+          pip install awscli --upgrade --user
 
       - run: yarn install
 
