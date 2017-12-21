@@ -44,8 +44,16 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:7.10
-    working_directory: ~/repo    
+    working_directory: ~/    
     steps:
+      - checkout
+
+      - restore_cache:
+         keys:
+           - v1-dependencies-{{ checksum "package.json" }}
+           # fallback to using the latest cache if no exact match is found
+           - v1-dependencies-
+
       # install awscli
       - run:
           name: 'install awscli'
