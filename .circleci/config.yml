@@ -44,7 +44,7 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:7.10
-    working_directory: ~/    
+    working_directory: ~/repo  
     steps:
       - checkout
 
@@ -62,7 +62,7 @@ jobs:
             sudo apt-get -y -qq install python3.4-dev
             curl -O https://bootstrap.pypa.io/get-pip.py
             python3.4 get-pip.py --user
-            .local/bin/pip install awscli --upgrade --user
+            ../.local/bin/pip install awscli --upgrade --user
 
       - deploy:
           working_directory: /
