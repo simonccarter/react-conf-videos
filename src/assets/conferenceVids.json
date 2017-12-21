@@ -1,49 +1,1451 @@
 [
   {
-    "title": "React Conf 2017",
+    "title": "React Rally",
     "date": "24-03-2017",
+    "website": "http://conf.reactjs.org/",
+    "playlist": "https://www.youtube.com/playlist?list=PLb0IAmt7-GS3fZ46IGFirdqKTIxlws7e0",
     "videos" : [
       {
-        "title": "react was great",
-        "author": {
-          "name" : "Simon Carter",
-          "twitter" : "some link"
+        "title": "Keynote Part 1",
+        "presenter": {
+          "name": "Tom Occhino"
         },
-        "duration": "21:36",
-        "link": "some youtube link"
+        "length": "6:36"
       },
       {
-        "title": "react was great p2",
-        "author": {
-          "name" : "Simon Carter",
-          "twitter" : "some link"
+        "title": "Keynote Part 2 - Incrementally Adopting React Native at Facebook",
+        "presenter": {
+          "name": "Jing Chen"
         },
-        "duration": "35:17",
-        "link": "some youtube link"
+        "length": "14:13"
+      },
+      {
+        "title": "Keynote Part 3 - React Performance End to End (React Fiber)",
+        "presenter": {
+          "name": "Sebastian Markbåge"
+        },
+        "length": "18:51"
+      },
+      {
+        "title": "Keynote Part 4 - React Fiber, Create React App, and React Community",
+        "presenter": {
+          "name": "Tom Occhino"
+        },
+        "length": "6:09"
+      },
+      {
+        "title": "A Cartoon Intro to Fiber",
+        "presenter": {
+          "name": "Lin Clark"
+        },
+        "length": "31:47"
+      },
+      {
+        "title": "Next.js: Universal React Made Easy and Simple",
+        "presenter": {
+          "name": "Guillermo Rauch"
+        },
+        "length": "34:40"
+      },
+      {
+        "title": "React + ES next = ♥",
+        "presenter": {
+          "name": "Ben Ilegbodu"
+        },
+        "length": "35:53"
+      },
+      {
+        "title": "MobX vs Redux: Comparing the Opposing Paradigms",
+        "presenter": {
+          "name": "Preethi Kasireddy"
+        },
+        "length": "25:17"
+      },
+      {
+        "title": "Type Systems Will Make You a Better JavaScript Developer",
+        "presenter": {
+          "name": "Jared Forsyth"
+        },
+        "length": "22:05"
+      },
+      {
+        "title": "React Native in the \"Brown Field\"",
+        "presenter": {
+          "name": "Leland Richardson"
+        },
+        "length": "27:57"
+      },
+      {
+        "title": "Beyond Animations User Interactions @ 60 FPS in React Native",
+        "presenter": {
+          "name": "Tal Kol"
+        },
+        "length": "26:38"
+      },
+      {
+        "title": "Goodbye Flatland! An Introduction to ReactVR",
+        "presenter": {
+          "name": "Michaela Lehr"
+        },
+        "length": "24:15"
+      },
+      {
+        "title": "Realtime React Apps with GraphQL",
+        "presenter": {
+          "name": "Robert Zhu"
+        },
+        "length": "24:01"
+      },
+      {
+        "title": "Jest Snapshots and Beyond",
+        "presenter": {
+          "name": "Rogelio Guzman"
+        },
+        "length": "26:34"
+      },
+      {
+        "title": "A Beginner's Guide to Code Splitting Your React App",
+        "presenter": {
+          "name": "Neehar Venugopal"
+        },
+        "length": "24:00"
+      },
+      {
+        "title": "Web-Like Development and Release Agility for React Native",
+        "presenter": {
+          "name": "Parashuram N"
+        },
+        "length": "35:20"
+      },
+      {
+        "title": "React Storybook: Design, Dev, Doc, Debug Components",
+        "presenter": {
+          "name": "Marie-Laure Thuret"
+        },
+        "length": "24:16"
+      },
+      {
+        "title": "Extensible React",
+        "presenter": {
+          "name": "Cameron Westland"
+        },
+        "length": "19:13"
+      },
+      {
+        "title": "Taming the Meta Language",
+        "presenter": {
+          "name": "Cheng Lou"
+        },
+        "length": "36:46"
+      },
+      {
+        "title": "Speaker Panel",
+        "presenter": {
+          "name": "n/a"
+        },
+        "length": "42:46"
       }
     ]
   },
   {
     "title": "React Conf 2016",
     "date": "24-03-2017",
-    "videos" : [
+    "website": "http://www.reactrally.com/",
+    "playlist": "https://www.youtube.com/watch?v=2rhkgB8Cohc&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531",
+    "videos": [
       {
-        "title": "react was great",
-        "author": {
-          "name" : "Simon Carter",
-          "twitter" : "some link"
+        "title": "UNPKG: The CDN for everything on npm",
+        "presenter": {
+          "name": "Michael Jackson"
         },
-        "duration": "21:36",
-        "link": "some youtube link"
+        "length": "31:46"
       },
       {
-        "title": "react was great p2",
-        "author": {
-          "name" : "Simon Carter",
-          "twitter" : "some link"
+        "title": "D3 & React",
+        "presenter": {
+          "name": "Shirley Wu"
         },
-        "duration": "35:17",
-        "link": "some youtube link"
+        "length": "26:57"
+      },
+      {
+        "title": "A hand wave of React for all your Internet of Thangs",
+        "presenter": {
+          "name": "Devon Lindsey"
+        },
+        "length": "28:09"
+      },
+      {
+        "title": "Back to React: The Story of Two Apps",
+        "presenter": {
+          "name": "Michael Chan"
+        },
+        "length": "28:08"
+      },
+      {
+        "title": "What WebAssembly means for React",
+        "presenter": {
+          "name": "Lin Clark"
+        },
+        "length": "32:21"
+      },
+      {
+        "title": "Layperson's guide to React Fiber",
+        "presenter": {
+          "name": "Ben Ilegbodu"
+        },
+        "length": "31:59"
+      },
+      {
+        "title": "ReacTex: using React Native and Neural Networks to recognize handwritten equations",
+        "presenter": {
+          "name": "Bonnie Milian"
+        },
+        "length": "Bonnie Milian"
+      },
+      {
+        "title": "Twitter Lite, React Native, and Progressive Web Apps",
+        "presenter": {
+          "name": "Nicolas Gallagher"
+        },
+        "length": "27:51"
+      },
+      {
+        "title": "React-ing htmlFor=empathy",
+        "presenter": {
+          "name": "Jana Beck"
+        },
+        "length": "30:52"
+      },
+      {
+        "title": "Redux + ServiceWorker = Offline React",
+        "presenter": {
+          "name": "Zack Argyle"
+        },
+        "length": "21:24"
+      },
+        {
+          "title": "We All Started Somewhere",
+          "presenter": {
+            "name": "Preethi Kasireddy"
+          },
+          "length": "24:30"
+        },
+        {
+          "title": "Convergent Evolution",
+          "presenter": {
+            "name": "Evan Czaplicki"
+          },
+          "length": "27:42"
+        },
+        {
+          "title": "So how does Babel even work?",
+          "presenter": {
+            "name": "Henry Zhu"
+          },
+          "length": "21:36"
+        },
+        {
+          "title": "Scaling My First Enterprise React App!",
+          "presenter": {
+            "name": "Jennifer Van"
+          },
+          "length": "21:15"
+        },
+        {
+          "title": "Everything is a plugin!! Mastering webpack from the inside out",
+          "presenter": {
+            "name": "Sean Larkin"
+          },
+          "length": "18:02"
+        },
+        {
+          "title": "GraphQL IRL",
+          "presenter": {
+            "name": "Cameron Matheson"
+          },
+          "length": "18:54"
+        },
+        {
+          "title": "Demystifying setState()",
+          "presenter": {
+            "name": "Justice Mba"
+          },
+          "length": "25:40"
+        },
+        {
+          "title": "Infinitely Better UIs with Finite Automata",
+          "presenter": {
+            "name": "David Khourshid"
+          },
+          "length": "25:33"
+        },
+        {
+          "title": "Start a conversation between browser windows",
+          "presenter": {
+            "name": "Cara Kuei"
+          },
+          "length": "20:02"
+        },
+        {
+          "title": "I want you to contribute to open source",
+          "presenter": {
+            "name": "Max Stoober"
+          },
+          "length": "19:32"
+        }
+    ]
+  },
+  {
+    "title": "React Europe 2017",
+    "date": "24-03-2017",
+    "website": "https://2017.react-europe.org/",
+    "playlist": [
+      "https://www.youtube.com/playlist?list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD",
+      "https://www.youtube.com/playlist?list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH"
+    ],
+    "videos": [
+      {
+        "title": "Keynote",
+        "presenter": {
+          "name": "Andrew Clark"
+        },
+        "length": "25:42"
+      },
+      {
+        "title": "What I Learned Benchmarking React",
+        "presenter": {
+          "name": "Dominic Gannaway"
+        },
+        "length": "16:58"
+      },
+      {
+        "title": "Building High-Quality JavaScript Tools",
+        "presenter": {
+          "name": "Christoph Pojer"
+        },
+        "length": "24:38"
+      },
+      {
+        "title": "La nouvelle vague",
+        "presenter": {
+          "name": "Sunil Pai"
+        },
+        "length": "28:02"
+      },
+      {
+        "title": "Worse is Better: The Upside of JavaScript Fatigue",
+        "presenter": {
+          "name": "Kevin Lacker"
+        },
+        "length": "22:56"
+      },
+      {
+        "title": "What WebAssembly means for React",
+        "presenter": {
+          "name": "Lin Clark"
+        },
+        "length": "33:07"
+      },
+      {
+        "title": "Imperfection",
+        "presenter": {
+          "name": "Cheng Lou Aka"
+        },
+        "length": "30:18"
+      },
+      {
+        "title": "Practical Confidence: Using Types to Help Your Computer Help You",
+        "presenter": {
+          "name": "Adam Perry"
+        },
+        "length": "28:24"
+      },
+      {
+        "title": "Maximally Modular Apps with React Navigation",
+        "presenter": {
+          "name": "Eric Vicenti"
+        },
+        "length": "21:38"
+      },
+      {
+        "title": "How Streaming Can Supercharge React",
+        "presenter": {
+          "name": "Sasha Aickin"
+        },
+        "length": "30:21"
+      },
+      {
+        "title": "Next generation state management",
+        "presenter": {
+          "name": "Michel Weststrate"
+        },
+        "length": "24:47"
+      },
+      {
+        "title": "Composition",
+        "presenter": {
+          "name": "Nik Graf"
+        },
+        "length": "32:57"
+      },
+      {
+        "title": "The making of Twitter Lite",
+        "presenter": {
+          "name": "Nicolas Gallagher"
+        },
+        "length": "22:10"
+      },
+      {
+        "title": "The runtimes of React VR and use at Oculus",
+        "presenter": {
+          "name": "Mike Armstrong"
+        },
+        "length": "28:49"
+      },
+      {
+        "title": "Functional && Reactive",
+        "presenter": {
+          "name": "Preethi Kasireddy"
+        },
+        "length": "31:16"
+      },
+      {
+        "title": "Relay Modern",
+        "presenter": {
+          "name": "Lee Byron"
+        },
+        "length": "27:32"
+      },
+      {
+        "title": "React as a Platform: A path towards a truly cross-platform UI",
+        "presenter": {
+          "name": "Leland Richardson"
+        },
+        "length": "27:18"
+      },
+      {
+        "title": "Animating the Virtual DOM",
+        "presenter": {
+          "name": "Sarah Drasner"
+        },
+        "length": "31:06"
+      },
+      {
+        "title": "A Novel Approach to Declarative Animations in React Native",
+        "presenter": {
+          "name": "Joel Arvidsson"
+        },
+        "length": "22:18"
+      },
+      {
+        "title": "Putting the fun in functional with Elm",
+        "presenter": {
+          "name": "Tereza Sokol"
+        },
+        "length": "14:45"
+      },
+      {
+        "title": "Integrating React Native with Native Infrastructure",
+        "presenter": {
+          "name": "Mehdi Mulani"
+        },
+        "length": "13:02"
+      },
+      {
+        "title": "Q&A Panel with Core team and speakers",
+        "presenter": {
+          "name": "n/a"
+        }
+      }
+    ]
+  },
+  {
+    "title": "ReactNext 2017",
+    "date": "24-03-2017",
+    "website": "https://react-next.com/",
+    "playlist": [
+      "https://www.youtube.com/playlist?list=PLMYVq3z1QxSqq6D7jxVdqttOX7H_Brq8Z",
+      "https://www.youtube.com/playlist?list=PLMYVq3z1QxSqCZmaqgTXLsrcJ8mZmBF7T"
+    ],
+    "videos": [
+      {
+        "title": "What's New in React?",
+        "presenter": {
+          "name": "Ari Lerner"
+        },
+        "length": "23:58"
+      },
+      {
+        "title": "Level Up Your React With TypeScript",
+        "presenter": {
+          "name": "Doron Zavelevsky"
+        },
+        "length": "30:16"
+      },
+      {
+        "title": "Webpack – The React Parts",
+        "presenter": {
+          "name": "Juho Vepsäläinen"
+        },
+        "length": "30:08"
+      },
+      {
+        "title": "Universal React Apps Using Next.js",
+        "presenter": {
+          "name": "Sia Karamalegos"
+        },
+        "length": "22:22"
+      },
+      {
+        "title": "Practical Advanced Redux",
+        "presenter": {
+          "name": "Boris Dinkevich"
+        },
+        "length": "25:25"
+      },
+      {
+        "title": "React, But For Data",
+        "presenter": {
+          "name": "Michel Weststrate"
+        },
+        "length": "26:45"
+      },
+      {
+        "title": "Relay Modern or Apollo?",
+        "presenter": {
+          "name": "Gerard Sans"
+        },
+        "length": "30:10"
+      },
+      {
+        "title": "GatsbyJS — How to Create The Fastest Sites In The World",
+        "presenter": {
+          "name": "Kyle Mathews"
+        },
+        "length": "24:52"
+      },
+      {
+        "title": "Handling Side Effects in Redux With Redux-Saga",
+        "presenter": {
+          "name": "Katarzyna Jastrzębska"
+        },
+        "length": "19:28"
+      },
+      {
+        "title": "Things You Didn't Know You Can Do With React Native",
+        "presenter": {
+          "name": "Vladimir Novick"
+        },
+        "length": "31:50"
+      },
+      {
+        "title": "Get That CSS Out Of My JavaScript",
+        "presenter": {
+          "name": "Brian Hough"
+        },
+        "length": "26:09"
+      },
+      {
+        "title": "Critical ReasonML'ing",
+        "presenter": {
+          "name": "Brandon Dail"
+        },
+        "length": "30:15"
+      },
+      {
+        "title": "React on Steroids with ClojureScript",
+        "presenter": {
+          "name": "Yehonathan Sharvit"
+        },
+        "length": "31:55"
+      },
+      {
+        "title": "Dealing with Data Offline in Web Apps",
+        "presenter": {
+          "name": "Jai Santhosh"
+        },
+        "length": "20:36"
+      },
+      {
+        "title": "Write Once, Render Anywhere",
+        "presenter": {
+          "name": "Peggy Rayzis"
+        },
+        "length": "24:57"
+      },
+      {
+        "title": "D3 and React, Together",
+        "presenter": {
+          "name": "Shirley Wu"
+        },
+        "length": "25:32"
+      },
+      {
+        "title": "Bridges to React Native",
+        "presenter": {
+          "name": "Florian Rival"
+        },
+        "length": "26:50"
+      },
+      {
+        "title": "Detox — Graybox E2E Tests Library for React Native",
+        "presenter": {
+          "name": "Rotem Mizrachi-Meidan"
+        },
+        "length": "23:43"
+      },
+      {
+        "title": "WebVR and React",
+        "presenter": {
+          "name": "Shay Keinan"
+        },
+        "length": "22:53"
+      }
+    ]
+  },
+  {
+    "title": "React.js Conf 2016",
+    "date": "24-03-2016",
+    "website": "http://conf2016.reactjs.org/",
+    "playlist": "https://www.youtube.com/playlist?list=PLb0IAmt7-GS0M8Q95RIc2lOM6nc77q1IY",
+    "videos": [
+      {
+        "title": "Keynote",
+        "presenter": {
+          "name": "Nick Schrock"
+        },
+        "length": "29:47"
+      },
+      {
+        "title": "What Lies Ahead",
+        "presenter": {
+          "name": "Ben Alpert"
+        },
+        "length": "27:44"
+      },
+      {
+        "title": "Rich Text Editing with React",
+        "presenter": {
+          "name": "Isaac Salier-Hellendag"
+        },
+        "length": "25:12"
+      },
+      {
+        "title": "A Cartoon Guide to the Wilds of Data Handling",
+        "presenter": {
+          "name": "Lin Clark"
+        },
+        "length": "24:38"
+      },
+      {
+        "title": "Demystifying Tech Recruiting",
+        "presenter": {
+          "name": "Helena Milosevic"
+        },
+        "length": "19:56"
+      },
+      {
+        "title": "Web-like Release Agility for Native Apps",
+        "presenter": {
+          "name": "Parashuram N"
+        },
+        "length": "15:26"
+      },
+      {
+        "title": "React, Meet Virtual Reality",
+        "presenter": {
+          "name": "Eric Florenzano"
+        },
+        "length": "30:07"
+      },
+      {
+        "title": "Building a Progressive Web App",
+        "presenter": {
+          "name": "Aditya Punjani"
+        },
+        "length": "20:48"
+      },
+      {
+        "title": "How To Use React In A Wedding Gift Without Being A Bad Friend",
+        "presenter": {
+          "name": "Keith Poplawski"
+        },
+        "length": "25:44"
+      },
+      {
+        "title": "Universal GL Effects for Web and Native",
+        "presenter": {
+          "name": "Gaetan Renaudeau"
+        },
+        "length": "28:46"
+      },
+      {
+        "title": "Redux, Re-frame, Relay, Om/next, oh my!",
+        "presenter": {
+          "name": "Jared Forsyth"
+        },
+        "length": "21:31"
+      },
+      {
+        "title": "Performance Without Compromise",
+        "presenter": {
+          "name": "Steve McGuire"
+        },
+        "length": "25:20"
+      },
+      {
+        "title": "A GraphQL Framework in Non-JS Servers",
+        "presenter": {
+          "name": "Syrus Akbary"
+        },
+        "length": "21:32"
+      },
+      {
+        "title": "Speeding up Startup for Large React",
+        "presenter": {
+          "name": "Bhuwan Khattar"
+        },
+        "length": "31:20"
+      },
+      {
+        "title": "Rethinking All Practices: Building Applications in Elm",
+        "presenter": {
+          "name": "Jamison Dance"
+        },
+        "length": "29:06"
+      },
+      {
+        "title": "Optimising React Native: Tools and Tips",
+        "presenter": {
+          "name": "Tadeu Zagallo"
+        },
+        "length": "24:12"
+      }
+    ]
+  },
+  {
+    "title": "React Amsterdam",
+    "date": "24-03-2016",
+    "website": "https://react.amsterdam/2016/index.html",
+    "playlist": "https://www.youtube.com/playlist?list=PLNBNS7NRGKMG3uLrm5fgY02hJ87Wzb4IU&disable_polymer=true",
+    "videos":   [
+      {
+        "title": "Migrating Safely to React",
+        "presenter": {
+          "name": "Jamis Charles"
+        },
+        "length": "26:56"
+      },
+      {
+        "title": "Buildings Lovable UIs",
+        "presenter": {
+          "name": "Henrique Alves"
+        },
+        "length": "24:47"
+      },
+      {
+        "title": "React Native Architecture Overview",
+        "presenter": {
+          "name": "Tadeu Zagallo"
+        },
+        "length": "28:11"
+      },
+      {
+        "title": "Building Reactive GraphQL Apps with Apollo",
+        "presenter": {
+          "name": "Martijn Walraven"
+        },
+        "length": "24:03"
+      },
+      {
+        "title": "Mastering Server-rendered Apps",
+        "presenter": {
+          "name": "Sven Anders Robbestad"
+        },
+        "length": "22:35"
+      },
+      {
+        "title": "JavaScript Style Sheets",
+        "presenter": {
+          "name": "Oleg Slobodskoi"
+        },
+        "length": "25:43"
+      },
+      {
+        "title": "React for Game Development",
+        "presenter": {
+          "name": "Johannes Stein"
+        },
+        "length": "24:59"
+      },
+      {
+        "title": "The React Native Playground",
+        "presenter": {
+          "name": "Joshua Sierles"
+        },
+        "length": "20:38"
+      },
+      {
+        "title": "Introducing and Implementing React at Coolblue",
+        "presenter": {
+          "name": "Paul van Dam"
+        },
+        "length": "26:05"
+      },
+      {
+        "title": "React Component Library",
+        "presenter": {
+          "name": "Robert Haritonov"
+        },
+        "length": "16:03"
+      },
+      {
+        "title": "Testing React Applications",
+        "presenter": {
+          "name": "Jack Franklin"
+        },
+        "length": "29:32"
+      },
+      {
+        "title": "Solving a Tooling Problem for React Native",
+        "presenter": {
+          "name": "Alexey Kureev, Mike Grabowski"
+        },
+        "length": "31:09"
+      },
+      {
+        "title": "React WebGL in Liberty Global",
+        "presenter": {
+          "name": "Denis Radin"
+        },
+        "length": "10:42"
+      },
+      {
+        "title": "State Management is Easy",
+        "presenter": {
+          "name": "Michel Weststrate"
+        },
+        "length": "20:47"
+      }
+    ]
+  },
+  {
+    "title": "React Europe",
+    "date": "24-03-2016",
+    "website": "https://2016.react-europe.org/",
+    "playlist": "https://www.youtube.com/playlist?list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa",
+    "videos":   [
+      {
+        "title": "The Redux Journey",
+        "presenter": {
+          "name": "Dan Abrmaov"
+        },
+        "length": "26:56"
+      },
+      {
+        "title": "Native Navigation for Every Platform",
+        "presenter": {
+          "name": "Eric Vicenti"
+        },
+        "length": "27:25"
+      },
+      {
+        "title": "A cartoon guide to performance",
+        "presenter": {
+          "name": "Lin Clark"
+        },
+        "length": "26:19"
+      },
+      {
+        "title": "React Native ❤ 60FPS",
+        "presenter": {
+          "name": "Krzysztof Magiera"
+        },
+        "length": "25:25"
+      },
+      {
+        "title": "Being Successful at Open Source",
+        "presenter": {
+          "name": "Christopher Chedeau"
+        },
+        "length": "28:38"
+      },
+      {
+        "title": "GraphQL at Facebook",
+        "presenter": {
+          "name": "Dan Schafer"
+        },
+        "length": "26:30"
+      },
+      {
+        "title": "A Deepdive Into Flow",
+        "presenter": {
+          "name": "Jeff Morrison"
+        },
+        "length": "27:52"
+      },
+      {
+        "title": "Debugging flux applications in production",
+        "presenter": {
+          "name": "Mihail Diordiev"
+        },
+        "length": "19:52"
+      },
+      {
+        "title": "On the Spectrum of Abstraction",
+        "presenter": {
+          "name": "Cheng Lou"
+        },
+        "length": "35:31"
+      },
+      {
+        "title": "React Redux Analytics",
+        "presenter": {
+          "name": "Bertrand Karerangabo & Evan Schultz"
+        },
+        "length": "26:54"
+      },
+      {
+        "title": "Evolving the Visual Programming Environment with React",
+        "presenter": {
+          "name": "Jonas Gebhardt"
+        },
+        "length": "29:27"
+      },
+      {
+        "title": "React Native Retrospective",
+        "presenter": {
+          "name": "Bonnie Eisenman"
+        },
+        "length": "25:35"
+      },
+      {
+        "title": "The Evolution of React UI Development",
+        "presenter": {
+          "name": "Max Stoiber & Nik Graf"
+        },
+        "length": "20:42"
+      },
+      {
+        "title": "Recomposing your React application",
+        "presenter": {
+          "name": "Andrew Clark"
+        },
+        "length": "29:55"
+      },
+      {
+        "title": "JavaScript, React Native and Performance",
+        "presenter": {
+          "name": "Tadeu Zagallo"
+        },
+        "length": "21:18"
+      },
+      {
+        "title": "Falcor: One Model Everywhere",
+        "presenter": {
+          "name": "Jafar Husain"
+        },
+        "length": "27:51"
+      },
+      {
+        "title": "Building li.st for Android with Exponent and React Native",
+        "presenter": {
+          "name": "Brent Vatne"
+        },
+        "length": "32:44"
+      },
+      {
+        "title": "GraphQL Future",
+        "presenter": {
+          "name": "Laney Kuenzel & Lee Byron"
+        },
+        "length": "32:17"
+      },
+      {
+        "title": "Building native mobile apps with GraphQL",
+        "presenter": {
+          "name": "Martijn Walraven"
+        },
+        "length": "23:55"
+      },
+      {
+        "title": "Question and Answers with core team members",
+        "presenter": {
+          "name": "n/a"
+        },
+        "length": "57:27"
+      }
+    ]
+  },
+  {
+    "title": "React Rally 2016",
+    "date": "24-03-2016",
+    "website": "https://github.com/simonccarter/react-conf-videos/blob/master/README.md",
+    "playlist": "https://www.youtube.com/playlist?list=PLUD4kD-wL_zYSfU3tIYsb4WqfFQzO_EjQ",
+    "videos":    [
+      {
+        "title": "Building React From Scratch",
+        "presenter": {
+          "name": "Paul O Shannessy"
+        },
+        "length": "33:56"
+      },
+      {
+        "title": "‹Rethinker stop={false}/›",
+        "presenter": {
+          "name": "Ryan Florence"
+        },
+        "length": "37:15"
+      },
+      {
+        "title": "React and Give Back",
+        "presenter": {
+          "name": "Devon Lindsey"
+        },
+        "length": "26:55"
+      },
+      {
+        "title": "Async Redux Actions With RxJS",
+        "presenter": {
+          "name": "Ben Lesh"
+        },
+        "length": "35:10"
+      },
+      {
+        "title": "Where in the Stack is Carmen Sanfrancisco?",
+        "presenter": {
+          "name": "Marcy Sutton"
+        },
+        "length": "32:24"
+      },
+      {
+        "title": "Oh Composable World!",
+        "presenter": {
+          "name": "Brian Lonsdorf"
+        },
+        "length": "27:31"
+      },
+      {
+        "title": "Rise of the Web Workers",
+        "presenter": {
+          "name": "Parashuram"
+        },
+        "length": "31:39"
+      },
+      {
+        "title": "Animating in React",
+        "presenter": {
+          "name": "Sarah Drasner"
+        },
+        "length": "42:53"
+      },
+      {
+        "title": "From Zero to Binary Search Tree",
+        "presenter": {
+          "name": "James Kyle"
+        },
+        "length": "27:22"
+      },
+      {
+        "title": "RRR matey! - React, RethinkDB, and Raspberry Pi",
+        "presenter": {
+          "name": "Mike Glukhovsky"
+        },
+        "length": "29:17"
+      },
+      {
+        "title": "Scaling React to Accelerate Life Science Research",
+        "presenter": {
+          "name": "Saif Hakim"
+        },
+        "length": "38:45"
+      },
+      {
+        "title": "PureScript & Pux -- a safer, more expressive way to React",
+        "presenter": {
+          "name": "Michael Trotter"
+        },
+        "length": "25:20"
+      },
+      {
+        "title": "Deploying GraphQL in a Serverless Context",
+        "presenter": {
+          "name": "Kevin Old"
+        },
+        "length": "28:38"
+      },
+      {
+        "title": "Reintroducing Relay",
+        "presenter": {
+          "name": "Joseph Savona"
+        },
+        "length": "31:30"
+      },
+      {
+        "title": "Debugging Your Debugger",
+        "presenter": {
+          "name": "James Long"
+        },
+        "length": "31:02"
+      },
+      {
+        "title": "Real World React Debugging",
+        "presenter": {
+          "name": "Jared Forsyth"
+        },
+        "length": "24:49"
+      },
+      {
+        "title": "Writing better multi-process hybrid apps with React and Redux",
+        "presenter": {
+          "name": "Kate Hudson"
+        },
+        "length": "27:41"
+      },
+      {
+        "title": "Powering React-based Dashboards using GraphQL and PostgreSQL",
+        "presenter": {
+          "name": "Lukas Fittl"
+        },
+        "length": "28:20"
+      },
+      {
+        "title": "All the terrible things I did the first time I made a complex React app",
+        "presenter": {
+          "name": "Raquel Moss"
+        },
+        "length": "26:36"
+      },
+      {
+        "title": "The Danger Crew: Lessons learned from building an RPG in React",
+        "presenter": {
+          "name": "Drew Conley"
+        },
+        "length": "26:14"
+      }
+    ]
+  },
+  {
+    "title": "ReactiveConf 2016",
+    "date": "24-03-2016",
+    "website": "https://reactiveconf.com/2016/",
+    "playlist": "https://www.youtube.com/watch?v=gbATtWPUfN0&list=PLa2ZZ09WYepMCRRGCRPhTYuTCat4TiDlX",
+    "videos":   [
+      {
+        "title": "ReactiveConf 2016 in a Nutshell",
+        "presenter": {
+          "name": ""
+        },
+        "length": "1:00"
+      },
+      {
+        "title": "Opening Ceremony",
+        "presenter": {
+          "name": ""
+        },
+        "length": "10:47"
+      },
+      {
+        "title": "How the web ecosystem shaped Angular 2",
+        "presenter": {
+          "name": "Igor Minar"
+        },
+        "length": "32:52"
+      },
+      {
+        "title": "Testing the way it should be",
+        "presenter": {
+          "name": "Brian Mann"
+        },
+        "length": "36:43"
+      },
+      {
+        "title": "The Age of Reason(ML)",
+        "presenter": {
+          "name": "Sean Grove"
+        },
+        "length": "30:23"
+      },
+      {
+        "title": "Living in an async world of React Native",
+        "presenter": {
+          "name": "Krzysztof Magiera"
+        },
+        "length": "30:17"
+      },
+      {
+        "title": "What's Next? Exploring the future of React",
+        "presenter": {
+          "name": "Guillermo Rauch"
+        },
+        "length": "34:10"
+      },
+      {
+        "title": "Speed up app development with prefabricated, open source, backends",
+        "presenter": {
+          "name": "Michael Glukhovsky"
+        },
+        "length": "29:15"
+      },
+      {
+        "title": "Paradigms for dealing with asynchrony",
+        "presenter": {
+          "name": "Jared Forsyth"
+        },
+        "length": "30:11"
+      },
+      {
+        "title": "Optimistic updates in a pessimistic world",
+        "presenter": {
+          "name": "Daniel Woelfel"
+        },
+        "length": "27:47"
+      },
+      {
+        "title": "Past and future of client-side routing",
+        "presenter": {
+          "name": "Thomas Roch"
+        },
+        "length": "28:17"
+      },
+      {
+        "title": "Elm and React in production",
+        "presenter": {
+          "name": "Richard Fieldmen"
+        },
+        "length": "32:33"
+      },
+      {
+        "title": "Opening",
+        "presenter": {
+          "name": ""
+        },
+        "length": "5:33"
+      },
+      {
+        "title": "Styled-components: Enforcing best practices",
+        "presenter": {
+          "name": "Max Stoiber"
+        },
+        "length": "30:08"
+      },
+      {
+        "title": "Building validated forms with great UX in React",
+        "presenter": {
+          "name": "Marcela Hrda"
+        },
+        "length": "28:19"
+      },
+      {
+        "title": "The Universality of Static Sites",
+        "presenter": {
+          "name": "Mark Dalgleish"
+        },
+        "length": "32:09"
+      },
+      {
+        "title": "Visualizing the data flow with Cycle.js",
+        "presenter": {
+          "name": "André Staltz"
+        },
+        "length": "35:24"
+      },
+      {
+        "title": "Writing Sound Asynchronous Code with Coroutines",
+        "presenter": {
+          "name": "Tomaš Kulich"
+        },
+        "length": "35:43"
+      },
+      {
+        "title": "Immer-mutable state management",
+        "presenter": {
+          "name": "Michel Weststrate"
+        },
+        "length": "34:09"
+      },
+      {
+        "title": "Debugging in Production: A Preview of CodePush vNext",
+        "presenter": {
+          "name": "Ryan J. Salva"
+        },
+        "length": "29:12"
+      },
+      {
+        "title": "Building better mobile apps with GraphQL",
+        "presenter": {
+          "name": "Martijn Walraven"
+        },
+        "length": "28:59"
+      },
+      {
+        "title": "Bridging the Gap: How to use React Native in existing large native code bases",
+        "presenter": {
+          "name": "Leland Richardson"
+        },
+        "length": "35:18"
+      },
+      {
+        "title": "No Xcode, Android Studio, Java, Swift, Objective C - how far can JavaScript get you?",
+        "presenter": {
+          "name": "Brent Vatne"
+        },
+        "length": "29:23"
+      },
+      {
+        "title": "Through the Looking Glass",
+        "presenter": {
+          "name": "David Nolen"
+        },
+        "length": "34:39"
+      },
+      {
+        "title": "Closing",
+        "presenter": {
+          "name": "n/a"
+        },
+        "length": "0:33"
+      }
+    ]
+  },
+  {
+    "title": "React.js Conf 2015",
+    "date": "24-03-2016",
+    "website": "http://conf2015.reactjs.org/",
+    "playlist": "https://www.youtube.com/playlist?list=PLb0IAmt7-GS1cbw4qonlQztYV1TAW0sCr",
+    "videos":    [
+      {
+        "title": "Keynote - Introducing React Native",
+        "presenter": {
+          "name": "Tom Occhino"
+        },
+        "length": "31:46"
+      },
+      {
+        "title": "Keynote 2 - A Deep Dive into React Native",
+        "presenter": {
+          "name": "Christopher Chedeau"
+        },
+        "length": "30:13"
+      },
+      {
+        "title": "Tweak your page in real time",
+        "presenter": {
+          "name": "Brenton Simpson"
+        },
+        "length": "21:34"
+      },
+      {
+        "title": "Data fetching for React applications at Facebook",
+        "presenter": {
+          "name": "Daniel Schafer and Jing Chen"
+        },
+        "length": "26:39"
+      },
+      {
+        "title": "Communicating with channels",
+        "presenter": {
+          "name": "James Long"
+        },
+        "length": "33:27"
+      },
+      {
+        "title": "react-router increases your productivity",
+        "presenter": {
+          "name": "Michael Jackson"
+        },
+        "length": "32:14"
+      },
+      {
+        "title": "Full Stack Flux",
+        "presenter": {
+          "name": "Pete Hunt"
+        },
+        "length": "32:34"
+      },
+      {
+        "title": "Making your app fast with high-performance components",
+        "presenter": {
+          "name": "Jason Bonta"
+        },
+        "length": "29:48"
+      },
+      {
+        "title": "Formatting with FormatJS and react-intl",
+        "presenter": {
+          "name": "Eric Ferraiuolo"
+        },
+        "length": "28:02"
+      },
+      {
+        "title": "Hype!",
+        "presenter": {
+          "name": "Ryan Florence"
+        },
+        "length": "31:16"
+      },
+      {
+        "title": "The complementarity of React and Web Components",
+        "presenter": {
+          "name": "Andrew Rota"
+        },
+        "length": "25:46"
+      },
+      {
+        "title": "Immutable Data and React",
+        "presenter": {
+          "name": "Lee Byron"
+        },
+        "length": "31:10"
+      },
+      {
+        "title": "Beyond the DOM: How Netflix plans to enhance your television experience",
+        "presenter": {
+          "name": "Jafar Husain"
+        },
+        "length": "25:54"
+      },
+      {
+        "title": "Scalable Data Visualization",
+        "presenter": {
+          "name": "Zach Nation"
+        },
+        "length": "26:51"
+      },
+      {
+        "title": "Refracting React",
+        "presenter": {
+          "name": "David Nolen"
+        },
+        "length": "31:42"
+      },
+      {
+        "title": "Flux Panel",
+        "presenter": {
+          "name": "Michael Ridgway, Spike Brehm, Andres Suarez, Jing Chen, Kyle Davis and Ian Obermiller"
+        },
+        "length": "31:01"
+      },
+      {
+        "title": "Codecademy's approach to component communication",
+        "presenter": {
+          "name": "Bonnie Eisenman"
+        },
+        "length": "23:57"
+      },
+      {
+        "title": "Static typing with Flow and TypeScript",
+        "presenter": {
+          "name": "James Brantly"
+        },
+        "length": "31:50"
+      },
+      {
+        "title": "Q&A with the team",
+        "presenter": {
+          "name": "n/a"
+        },
+        "length": "31:0"
       }
     ]
   }

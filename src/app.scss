@@ -1,17 +1,26 @@
 @import 'styles/_colors';
 
+@import url('https://fonts.googleapis.com/css?family=Ralewayfamily=Raleway:400,700');
+
 html {
   font-size: 10px;
 }
 
 body {
   background-color: $background-color;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;  
 }
 
 h1 {
-  font-size: 3.2rem;
+  font-size: 3.6rem;
+  font-family: 'Raleway', sans-serif;  
+  font-weight: bold;
 }
 
 div, p, li, span {
   font-size: 1.6rem;
+  font-family: 'Raleway', sans-serif;
 }

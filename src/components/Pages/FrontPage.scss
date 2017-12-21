@@ -1,6 +1,29 @@
+@import '../../styles/_colors';
+
 .FrontPage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+  .header {
+    height: 160px;
+    background-color: $header-background-color;
+    color: $header-text-color;
+    padding-top: 8rem;
+  }
+
+  .text {
+    height: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 2rem;
+
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    p {
+      margin-top: 0rem;
+      font-weight: bold;
+    }
+  }
+
 }

@@ -1,6 +1,18 @@
 .root {
+  max-width: 450px;
+  margin: 0 auto;
+
   .input {
-    color: yellow;
-    background-color: red;
+    padding: 1rem 2rem;
+    background: white;
+    font-size: 2.6rem;
+    color: #404d5b;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 450px;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    transform: translateY(-25px);
   }
+  
 }
