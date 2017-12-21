@@ -45,9 +45,9 @@ export const boostrapEndRemoveLoaderEpic = action$ =>
         document.getElementById('loader').classList.remove('fullscreen')
       })
     })
-    .delay(10000)
+    .delay(5000)
     .do((action) => {
-      // document.getElementById('loader').remove()
+      document.getElementById('loader').remove()
     })
     .mapTo({ type: 'END_LOADER' })
 
