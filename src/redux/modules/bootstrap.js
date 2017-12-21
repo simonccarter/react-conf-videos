@@ -33,11 +33,26 @@ export const loadJSONDataEpic = action$ =>
 export const boostrapEndEpic = action$ =>
   action$.ofType(...BOOTSTRAP_COMPLETE_ACTIONS)
     .bufferCount(BOOTSTRAP_COMPLETE_ACTIONS.length)
-    .take(1) // TODO: seems unncessary
+    .take(1)
     .mapTo({ type: BOOTSTRAP_END })
 
+
+// listen to end bootstrap action, and remove loader on dom for seamless merge into app vd
+export const boostrapEndRemoveLoaderEpic = action$ =>
+  action$.ofType(BOOTSTRAP_END)
+    .do((action) => {
+      requestAnimationFrame(() => {
+        document.getElementById('loader').classList.remove('fullscreen')
+      })
+    })
+    .delay(5000)
+    .do((action) => {
+      document.getElementById('loader').remove()
+    })
+    .mapTo({ type: 'END_LOADER' })
+
 export const bootstrapEpics = combineEpics(
-  bootstrapStartEpic, loadJSONDataEpic, boostrapEndEpic
+  bootstrapStartEpic, loadJSONDataEpic, boostrapEndEpic, boostrapEndRemoveLoaderEpic
 )
 
 // remove loader from html and render app on DOM

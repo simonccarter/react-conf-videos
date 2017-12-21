@@ -8,6 +8,7 @@
     "comma-dangle": "off",
     "react/prop-types": 0,
     "import/prefer-default-export": 0,
+    "function-paren-newline": 0,
     "no-underscore-dangle": 0,
     "no-unused-vars": 0,
     "curly": 0,
