@@ -26,10 +26,15 @@
     width: 100%;
     overflow-y: hidden;
     transition: height .5s;
+    background: url('../../assets/tv.svg');
+    background-repeat: no-repeat;
+    background-size: 150px 150px;
+    background-position: center center;
 
     &.open {
       height: 360px;
       margin: 1rem 0;
+      background-color: black;
     }
 
   }
