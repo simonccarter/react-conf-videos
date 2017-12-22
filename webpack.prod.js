@@ -67,12 +67,7 @@ module.exports = {
         comments: false
       }
     }),
-    new CopyWebpackPlugin([
-      {
-        from: 'src/manifest.json',
-        to: 'manifest.json'
-      }
-    ]),
+    new CopyWebpackPlugin([{ from: 'public' }]),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     })
