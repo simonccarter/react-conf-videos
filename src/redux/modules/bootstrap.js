@@ -1,7 +1,8 @@
-import JSONData from 'assets/conferenceVids.json'
 import Immutable from 'seamless-immutable'
 import { COPY_DATA } from 'redux/modules/data'
 import { combineEpics } from 'redux-observable'
+
+import JSONData from '../../../public/assets/conferenceVids.json'
 
 /* bootstsap process is uncessarily complicated, but I wanted to play with some */
 const BOOTSTRAP_START = 'BOOTSTRAP_START'
