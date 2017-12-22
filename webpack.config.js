@@ -31,6 +31,12 @@ module.exports = {
           'css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]',
           'sass-loader'
         ]
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader'
+        ]
       }
     ]
   },
@@ -43,7 +49,7 @@ module.exports = {
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './public/index.html',
       filename: 'index.html',
       inject: 'body'
     }),
