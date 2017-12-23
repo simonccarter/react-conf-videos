@@ -3,8 +3,9 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const CompressionPlugin = require("compression-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin")
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -75,6 +76,9 @@ module.exports = {
       output: {
         comments: false
       }
+    }),
+    new ScriptExtHtmlWebpackPlugin({
+      defaultAttribute: 'defer'
     }),
     new CopyWebpackPlugin([{ from: 'public' }]),
     new webpack.DefinePlugin({

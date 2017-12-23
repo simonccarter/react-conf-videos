@@ -13,6 +13,20 @@
     outline: none;
     box-sizing: border-box;
     transform: translateY(-25px);
+
+    &::placeholder {
+      opacity: 0.2;
+    }
+  }
+
+  .resultsCount{
+    transform: translateY(-25px);
+    margin: 0rem 2rem;
+    font-size: 1.4rem;
+
+    .resultsNumber {
+      font-weight: bold;
+    }
   }
   
 }
