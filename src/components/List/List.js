@@ -15,10 +15,25 @@ const ListInner = ({
     const conferenceProps = conferences[conference]
     return conferenceProps.videos.map(video => <Video key={video} videoId={video} conferenceId={conference} />)
   }))
+  const countVids = children.length
+  const countVidsS = countVids === 1 ? 'video' : 'videos'
+  const countConfs = Object.keys(conferences).length
+  const countConfsS = countConfs === 1 ? 'conferences' : 'conferences'
+
   return  (
     <div className={cn(styles.root, { [`${styles.isActive}`]: isActive })}>
-      <input type="text" value={filterValue} onChange={onInputChange} className={styles.input} />
-      {/* <p className={styles.results}>{children.length} {children.length === 1 ? 'Result' : 'Results'} </p> */}
+      <input
+        type="text" 
+        value={filterValue}
+        onChange={onInputChange}
+        className={styles.input}
+        placeholder="query"
+        autoFocus="autofocus"
+      />
+      <p className={styles.resultsCount}>
+        <span className={styles.resultsNumber}> {countVids} </span> {countVidsS}
+        <span className={styles.resultsNumber}> {countConfs} </span> {countConfsS}
+      </p>
       <section className={styles.results}>
         { true && children }
       </section>
