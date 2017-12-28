@@ -2,8 +2,9 @@
 const util = require('util')
 const mdtable2json = require('mdtable2json')
 const fs = require('fs')
+const { compose, ifElse, either, is, identity, map } = require('ramda')
 
-const args = process.argv;
+const args = process.argv
 console.log(args)
 
 // const x = `| Title | Link | Speaker | duration |
@@ -25,12 +26,16 @@ const convertHeader = (markdown) => {
   // match only header line, and lower case
   const regHeaderCase = /(\|.?Title\/Link.*\|)/gi
   const lcHeaders = markdown.replace(regHeaderCase, (name, m1) => m1.toLowerCase())
-
   // converts markdown to seperate title and link columns
   const regHeader = /title\/link/gi
   const withAdditionalHeaders = lcHeaders.replace(regHeader, 'title | link')
-
   return withAdditionalHeaders
+}
+
+const replaceLinkColon = (markdown) => {
+  const linkColonBody = /(https?):/gi
+  const replacedColons = markdown.replace(linkColonBody, '$1')
+  return replacedColons
 }
 
 // converts markdown to seperate title and link columns
@@ -40,7 +45,7 @@ const convertBody = (markdown) => {
   return withLinks
 }
 
-const formatSpeakerName = (json) => {
+const formatSpeakerName = (json) => {  
   const withAuthors = json.map((table) => {
     return table['json'].map((video) => {
       // now nest speaker name in own object
@@ -50,15 +55,32 @@ const formatSpeakerName = (json) => {
   return withAuthors
 }
 
-const run = (markdown) => {
-  const withHeader = convertHeader(markdown)
-  const withLinks = convertBody(withHeader)
-  const json = mdtable2json.getTables(withLinks)
-  const njson = formatSpeakerName(json)
-  return njson
-} 
+const recurseAction =
+  action =>
+    ifElse(
+      either(is(Array), is(Object)),
+      map(a => recurseAction(action)(a)),
+      identity
+    )
+
+const reg = /(https?)\/\//gi
+const fixLink = ifElse(
+  is(String),
+  s => s.replace(reg, '$1://'),
+  identity
+)
+
+const run = compose(
+  recurseAction(fixLink),
+  formatSpeakerName,
+  mdtable2json.getTables,
+  replaceLinkColon,
+  convertBody,
+  convertHeader
+)
 
 const markdown = fs.readFileSync('./README.md', 'utf-8')
 const json = run(markdown)
 
-fs.writeFileSync(args[2], JSON.stringify(json, null, 2))
+fs.writeFileSync(args[3], JSON.stringify(json, null, 2))
+

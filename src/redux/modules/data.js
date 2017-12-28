@@ -19,21 +19,32 @@ import {
   split,
   forEach,
   countBy,
-  reduce
+  reduce,
+  ifElse,
+  either,
+  is,
+  identity
 } from 'ramda'
 
 import { LOAD_DATA_END } from './bootstrap'
 
 export const COPY_DATA = 'data.COPY_DATA'
 
+const recurseAction =
+  action =>
+    ifElse(
+      either(is(Array), is(Object)),
+      map(e => recurseAction(action)(e)),
+      ifElse(
+        is(String),
+        action,
+        identity
+      )
+    )
+
+
 // lower case all property values (without recursion)
-const lowerCaseAllValues = (obj) => {
-  return map((entry) => {
-    return keys(entry).reduce((acc, key) => {
-      return merge(acc, { [key]: entry[key].toLowerCase ? entry[key].toLowerCase() : entry[key] })
-    }, {})
-  }, obj)
-}
+const lowerCaseAllValues = obj => recurseAction(e => e.toLowerCase)(obj)
 
 const computeNgrams = (videos) => {
 
@@ -63,10 +74,26 @@ const computeNgrams = (videos) => {
   console.log(titleWords)
 }
 
-// normalize data
-const transformDataFromJson = (data) => {
-  const normalized = normalize(data, conference)
+const addEmbeddableLinksToVideos = (data) => {
+  const linkReg = /https:?\/\/www\.youtube\.com\/watch\?v=(.*?)\&.*$/;
+  return data.map((conference) => {
+    const videos = conference.videos || []
+    const nVideos = videos.map((video) => {
+      const embeddableLink = video.link.replace(linkReg, 'https://www.youtube.com/embed/$1')
+      return Object.assign({}, video, { embeddableLink })
+    })
+    return Object.assign({}, conference, { videos: nVideos })
+  })
+}
 
+// normalize data
+const transformDataFromJson = (data) => {  
+  // add embeddable links to videos
+  const dataWithEmbeddableLinks = addEmbeddableLinksToVideos(data)
+
+  // normalize
+  const normalized = normalize(dataWithEmbeddableLinks, conference)
+  
   // for quicker searching later
   const lowerVideos = lowerCaseAllValues(normalized.entities.videos)
   const lowerSpeakerNames = lowerCaseAllValues(normalized.entities.presenters)
