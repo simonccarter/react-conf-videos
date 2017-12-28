@@ -8,11 +8,11 @@ import styles from './Video.scss'
 const VideoInner = ({
   video, speaker, videoId, conference, isOpen, toggleIsOpen
 }) => {
-  const { title, length, link } = video
+  const { title, length, link, embeddableLink } = video
   return (
     <div className={styles.root} key={videoId} >
       <div className={styles.top} onClick={toggleIsOpen} >
-        <a className={styles.title} href={link}>{title}</a>
+        <span className={styles.title} href={link}>{title}</span>
         <span className={styles.right}>{length}</span>
       </div>
       <div className={cn(styles.videoWrapper, { [styles.open]: isOpen })}>
@@ -22,7 +22,7 @@ const VideoInner = ({
           type="text/html"
           width="410"
           height="360"
-          src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=0&origin=http://example.com"
+          src={embeddableLink}
           frameBorder="0"
         /> }
       </div>
