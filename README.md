@@ -89,7 +89,7 @@ List of react conference videos.
 | [Demystifying setState()](https://www.youtube.com/watch?v=f4iiyy28VL4&index=17&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531) | Justice Mba | 25:40
 | [Infinitely Better UIs with Finite Automata](https://www.youtube.com/watch?v=VU1NKX6Qkxc&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531&index=18) | David Khourshid | 25:33
 | [Start a conversation between browser windows](https://www.youtube.com/watch?v=c6_Cp-yfyko&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531&index=19) | Cara Kuei | 20:02
-| [I want you to contribute to open source](https://www.youtube.com/watch?v=hwdeUG_gySI&index=20&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531) | Max Stoober | 19:32 
+| [I want you to contribute to open source](https://www.youtube.com/watch?v=hwdeUG_gySI&index=20&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531) | Max Stoiber | 19:32 
 
 ### ReactiveConf 2017
 

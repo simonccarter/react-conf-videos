@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { compose, pure, withHandlers } from 'recompose'
 import { frontPageActions } from 'redux/modules'
 import Video from 'components/Videos/Video'
-import { flatten } from 'ramda'
+import { flatten, map, pathOr } from 'ramda'
 import cn from 'classnames'
 
 import styles from './List.scss'
@@ -13,7 +13,7 @@ const ListInner = ({
 }) => {
   const children = flatten(Object.keys(conferences).map((conference) => {
     const conferenceProps = conferences[conference]
-    return conferenceProps.videos.map(video => <Video key={video} videoId={video} conferenceId={conference} />)
+    return map(video => <Video key={video} videoId={video} conferenceId={conference} />, pathOr([], ['videos'], conferenceProps))
   }))
   const countVids = children.length
   const countVidsS = countVids === 1 ? 'video' : 'videos'
