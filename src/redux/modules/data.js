@@ -3,29 +3,8 @@ import { combineEpics } from 'redux-observable'
 
 import { normalize } from 'normalizr'
 import conference from 'schemas/data'
-import {
-  concat,
-  curry,
-  fromPairs,
-  map,
-  adjust,
-  toPairs,
-  toLower,
-  merge,
-  keys,
-  compose,
-  pluck,
-  uniq,
-  split,
-  forEach,
-  countBy,
-  reduce,
-  ifElse,
-  either,
-  is,
-  identity,
-  mapObjIndexed
-} from 'ramda'
+
+import { is, merge, ifElse, either, mapObjIndexed } from 'ramda'
 
 import { LOAD_DATA_END } from './bootstrap'
 
@@ -37,19 +16,16 @@ const recurseAction =
     whiteList =>
       ifElse(
         either(is(Array), is(Object)),
-        mapObjIndexed((value, key) => {
-          return whiteList.includes(key) ? value : recurseAction(action)(whiteList)(value)
-        }),
+        mapObjIndexed((value, key) => whiteList.includes(key) ? value : recurseAction(action)(whiteList)(value)),
         e => action(e)
       )
 
-// lower case all property values (without recursion)
 const lowerCaseAllValues = obj => recurseAction(e => e.toLowerCase())(obj)
 const lowerCaseVideos = lowerCaseAllValues(whiteListVideos)
 const lowerCasePresenters = lowerCaseAllValues(whiteListVideos)
 
 const addEmbeddableLinksToVideos = (data) => {
-  const linkReg = /https:?\/\/www\.youtube\.com\/watch\?v=(.*?)\&.*$/;
+  const linkReg = /https:?\/\/www\.youtube\.com\/watch\?v=(.*?)\&.*$/
   return data.map((conference) => {
     const videos = conference.videos || []
     const nVideos = videos.map((video) => {
@@ -61,13 +37,13 @@ const addEmbeddableLinksToVideos = (data) => {
 }
 
 // normalize data
-const transformDataFromJson = (data) => {  
+const transformDataFromJson = (data) => {
   // add embeddable links to videos
   const dataWithEmbeddableLinks = addEmbeddableLinksToVideos(data)
 
   // normalize
   const normalized = normalize(dataWithEmbeddableLinks, conference)
-  
+
   // for quicker searching later
   const lowerVideos = lowerCaseVideos(normalized.entities.videos)
   const lowerSpeakerNames = lowerCasePresenters(normalized.entities.presenters)

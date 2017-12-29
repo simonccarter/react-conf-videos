@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { compose, pure, branch, renderComponent } from 'recompose'
 import cn from 'classnames'
-import ReducerTest from 'components/ReducerTest'
 import { List } from 'components/List'
 
 import styles from './FrontPage.scss'
