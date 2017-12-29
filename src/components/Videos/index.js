@@ -1,3 +1,3 @@
-import Videos from './Videos'
+import Video from './Video'
 
-export { Videos }
+export { Video }
