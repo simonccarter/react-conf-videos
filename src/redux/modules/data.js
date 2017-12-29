@@ -23,56 +23,30 @@ import {
   ifElse,
   either,
   is,
-  identity
+  identity,
+  mapObjIndexed
 } from 'ramda'
 
 import { LOAD_DATA_END } from './bootstrap'
 
 export const COPY_DATA = 'data.COPY_DATA'
 
+const whiteListVideos = ['link', 'embeddableLink']
 const recurseAction =
   action =>
-    ifElse(
-      either(is(Array), is(Object)),
-      map(e => recurseAction(action)(e)),
+    whiteList =>
       ifElse(
-        is(String),
-        action,
-        identity
+        either(is(Array), is(Object)),
+        mapObjIndexed((value, key) => {
+          return whiteList.includes(key) ? value : recurseAction(action)(whiteList)(value)
+        }),
+        e => action(e)
       )
-    )
-
 
 // lower case all property values (without recursion)
-const lowerCaseAllValues = obj => recurseAction(e => e.toLowerCase)(obj)
-
-const computeNgrams = (videos) => {
-
-  const ngrams = {} // [ngram] => count
-  const countNgrams = () => {
-
-  }
-
-  const titleWords = compose(
-    countBy(toLower),
-    map(e => console.log('e1', e)),
-    reduce((acc, e) => {
-      console.log(acc, e)
-      concat(acc, e)
-    }, []),
-    map((e) => {
-      console.log('e2', e)
-      return e
-    }),
-    // map(e => console.log(e)),
-    map(uniq), // keep only uniq words
-    map(split(' ')), // split into array of words
-    pluck('title') // get titles
-  )(videos)
-
-  // extract
-  console.log(titleWords)
-}
+const lowerCaseAllValues = obj => recurseAction(e => e.toLowerCase())(obj)
+const lowerCaseVideos = lowerCaseAllValues(whiteListVideos)
+const lowerCasePresenters = lowerCaseAllValues(whiteListVideos)
 
 const addEmbeddableLinksToVideos = (data) => {
   const linkReg = /https:?\/\/www\.youtube\.com\/watch\?v=(.*?)\&.*$/;
@@ -95,8 +69,8 @@ const transformDataFromJson = (data) => {
   const normalized = normalize(dataWithEmbeddableLinks, conference)
   
   // for quicker searching later
-  const lowerVideos = lowerCaseAllValues(normalized.entities.videos)
-  const lowerSpeakerNames = lowerCaseAllValues(normalized.entities.presenters)
+  const lowerVideos = lowerCaseVideos(normalized.entities.videos)
+  const lowerSpeakerNames = lowerCasePresenters(normalized.entities.presenters)
 
   // compute and rank ngrams
   // computeNgrams(lowerVideos)
