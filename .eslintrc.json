@@ -25,7 +25,8 @@
     "quotes": [2, "single", "avoid-escape"],
     "camelcase": 0,
     "new-cap": [1, { "capIsNew": false }],
-    "no-undef": 2
+    "no-undef": 2,
+    "no-confusing-arrow" : 0
   },
   "env": {
     "es6": true,

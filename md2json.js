@@ -2,7 +2,7 @@
 const util = require('util')
 const mdtable2json = require('mdtable2json')
 const fs = require('fs')
-const { compose, ifElse, either, is, identity, map } = require('ramda')
+const { compose, ifElse, either, is, identity, map, keys } = require('ramda')
 
 const args = process.argv
 console.log(args)
@@ -69,6 +69,14 @@ const fixLink = ifElse(
   s => s.replace(reg, '$1://'),
   identity
 )
+
+// const lowerCaseAllValues = (obj) => {
+//   return map((entry) => {
+//     return keys(entry).reduce((acc, key) => {
+//       return merge(acc, { [key]: entry[key].toLowerCase ? entry[key].toLowerCase() : entry[key] })
+//     }, {})
+//    }, obj)
+//  }
 
 const run = compose(
   recurseAction(fixLink),
