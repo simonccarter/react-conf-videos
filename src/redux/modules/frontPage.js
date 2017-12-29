@@ -1,10 +1,8 @@
 import Immutable from 'seamless-immutable'
 
 import { any } from 'ramda'
-import conference from 'schemas/data'
 import { COPY_DATA } from 'redux/modules/data'
 import { combineEpics } from 'redux-observable'
-
 
 const INIT_SLICE = 'frontPage/INIT_SLICE'
 const FILTER = 'frontPage/FILTER'

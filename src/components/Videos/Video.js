@@ -8,7 +8,9 @@ import styles from './Video.scss'
 const VideoInner = ({
   video, speaker, videoId, conference, isOpen, toggleIsOpen
 }) => {
-  const { title, length, link, embeddableLink } = video
+  const {
+    title, length, link, embeddableLink
+  } = video
   return (
     <div className={styles.root} key={videoId} >
       <div className={styles.top} onClick={toggleIsOpen} >
@@ -24,6 +26,11 @@ const VideoInner = ({
           height="360"
           src={embeddableLink}
           frameBorder="0"
+          allowFullScreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
         /> }
       </div>
       <div className={styles.details}>
