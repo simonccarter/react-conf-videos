@@ -23,7 +23,7 @@ const ListInner = ({
   return  (
     <div className={cn(styles.root, { [`${styles.isActive}`]: isActive })}>
       <input
-        type="text" 
+        type="text"
         value={filterValue}
         onChange={onInputChange}
         className={styles.input}
