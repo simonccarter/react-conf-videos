@@ -18,7 +18,7 @@ const ListInner = ({
   const countVids = children.length
   const countVidsS = countVids === 1 ? 'video' : 'videos'
   const countConfs = Object.keys(conferences).length
-  const countConfsS = countConfs === 1 ? 'conferences' : 'conferences'
+  const countConfsS = countConfs === 1 ? 'conference' : 'conferences'
 
   return  (
     <div className={cn(styles.root, { [`${styles.isActive}`]: isActive })}>
