@@ -67,22 +67,20 @@ const computeFilteredConferences = (filterValue, conferences, videos, presenters
 export const filterEpic = (action$, store) =>
   action$
     .ofType(FILTER)
-    .debounceTime(200)
+    .debounceTime(80)
     .map((action) => {
       const { payload: filterValue } = action
       const state = store.getState()
-      if (filterValue === '') {
-        // if filteredValue is empty/null, just copy initialData over
-        return { type: SET_FILTERED_CONFERENCES, payload: state.frontPage.conferences }
-      }
-
+      const rAction = { type: SET_FILTERED_CONFERENCES }
       const { conferences, videosLC, presentersLC } = state.data
-      const filteredConferences = computeFilteredConferences(filterValue.toLowerCase(), conferences, videosLC, presentersLC)
-      return { type: SET_FILTERED_CONFERENCES, payload: filteredConferences }
+      // if no/empty query, return original set of videos
+      rAction.payload = filterValue === '' ?
+        state.frontPage.conferences :
+        computeFilteredConferences(filterValue.toLowerCase(), conferences, videosLC, presentersLC)
+      return rAction
     })
 
 export const frontPageEpics = combineEpics(initSliceEpic, filterEpic)
-
 export const frontPageActions = {
   filter,
   setIsActive
