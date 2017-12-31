@@ -4,19 +4,19 @@ List of react conference videos.
 ## Quick Links
 
 * 2017
-  * [React Conf 2017](react-conf-2017)
-  * [ReactiveConf 2017](reactiveconf-2017)
-  * [React Europe 2017](react-europe-2017)
-  * [ReactNext 2017](reactnext-2017)
-  * [React Rally 2017](react-rally-2017)
+  * [React Conf 2017](#react-conf-2017)
+  * [ReactiveConf 2017](#reactiveconf-2017)
+  * [React Europe 2017](#react-europe-2017)
+  * [ReactNext 2017](#reactnext-2017)
+  * [React Rally 2017](#react-rally-2017)
 * 2016
-  * [React Amsterdam](react-amsterdam)
-  * [React Europe 2016](react-europe-2016)
-  * [React Rally 2016](react-rally-2016)
-  * [ReactiveConf 2016](reactiveconf-2016)
-  * [React Conf 2016](react-conf-2016)
+  * [React Amsterdam](#react-amsterdam)
+  * [React Europe 2016](#react-europe-2016)
+  * [React Rally 2016](#react-rally-2016)
+  * [ReactiveConf 2016](#reactiveconf-2016)
+  * [React Conf 2016](#react-conf-2016)
 * 2015
-  * [React.js Conf 2015](react.js-conf-2015)
+  * [React.js Conf 2015](#reactjs-conf-2015)
 
 
 ## 2017
@@ -99,7 +99,7 @@ List of react conference videos.
 
 ##### [website](https://react-next.com/) - [playlist: Hall A](https://www.youtube.com/playlist?list=PLMYVq3z1QxSqq6D7jxVdqttOX7H_Brq8Z) - [playlist: Hall B](https://www.youtube.com/playlist?list=PLMYVq3z1QxSqCZmaqgTXLsrcJ8mZmBF7T)
 
-#### Day 1
+#### Hall A
 
 | Title/Link        | Presenter  | Length |
 | ------------- |:-------------:| -----:|
@@ -113,7 +113,7 @@ List of react conference videos.
 [GatsbyJS — How to Create The Fastest Sites In The World](https://www.youtube.com/watch?v=Gtd-Ht-D0sg&list=PLMYVq3z1QxSqq6D7jxVdqttOX7H_Brq8Z&index=8) | Kyle Mathews | 24:52
 [Handling Side Effects in Redux With Redux-Saga](https://www.youtube.com/watch?v=bTfjQZCGk_0&list=PLMYVq3z1QxSqq6D7jxVdqttOX7H_Brq8Z&index=9) | Katarzyna Jastrzębska | 19:28
 
-#### Day 2
+#### Hall B
 
 | Title/Link        | Presenter  | Length |
 | ------------- |:-------------:| -----:|
@@ -171,7 +171,7 @@ List of react conference videos.
 
 ### React Amsterdam
 
-##### [website](https://react.amsterdam/2016/index.html) - [playlist](https://www.youtube.com/playlist?list=PLNBNS7NRGKMG3uLrm5fgY02hJ87Wzb4IU&disable_polymer=true)
+##### [website](https://react.amsterdam/2016/) - [playlist](https://www.youtube.com/playlist?list=PLNBNS7NRGKMG3uLrm5fgY02hJ87Wzb4IU&disable_polymer=true)
 
 
 | Title/Link        | Presenter  | Length |
@@ -227,7 +227,7 @@ List of react conference videos.
 
 ### React Rally 2016
 
-##### [website](https://github.com/simonccarter/react-conf-videos/blob/master/README.md) - [playlist](https://www.youtube.com/playlist?list=PLUD4kD-wL_zYSfU3tIYsb4WqfFQzO_EjQ)
+##### [website](http://www.reactrally.com/) - [playlist](https://www.youtube.com/playlist?list=PLUD4kD-wL_zYSfU3tIYsb4WqfFQzO_EjQ)
 
 
 | Title/Link        | Presenter  | Length |
@@ -294,7 +294,7 @@ List of react conference videos.
 
 ### React Conf 2016
 
-##### [website](http://www.reactrally.com/) - [playlist](https://www.youtube.com/watch?v=2rhkgB8Cohc&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531)
+##### [website](http://conf2016.reactjs.org/) - [playlist](https://www.youtube.com/watch?v=2rhkgB8Cohc&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531)
 
 
 | Title/Link        | Presenter  | Length |
