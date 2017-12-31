@@ -1,5 +1,4 @@
 const fs = require('fs')
-const util = require('util')
 const {
   is,
   zip,
@@ -102,7 +101,7 @@ const createNavLinks = (conferenceVids) => {
     if (idx === 0 || year !== titlesAndYears[idx > 0 ? idx - 1 : 0][1]) {
       acc += `\n* ${year}`
     }
-    acc += `\n  * [${title}](${title.replace(/ /g, '-').toLowerCase()})`
+    acc += `\n  * [${title}](#${title.replace(/\s/g, '-').replace(/\.+/g, '').toLowerCase()})`
     return acc
   }, '')
 

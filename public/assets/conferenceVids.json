@@ -1,7 +1,7 @@
 [
   {
     "title": "React Conf 2017",
-    "date": "24-03-2017",
+    "date": "13-03-2017",
     "website": "http://conf.reactjs.org/",
     "playlist": "https://www.youtube.com/playlist?list=PLb0IAmt7-GS3fZ46IGFirdqKTIxlws7e0",
     "videos" : [
@@ -189,7 +189,7 @@
   },
   {
     "title": "React Rally 2017",
-    "date": "24-03-2017",
+    "date": "24-08-2017",
     "website": "http://www.reactrally.com/",
     "playlist": "https://www.youtube.com/watch?v=2rhkgB8Cohc&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531",
     "videos":   [
@@ -376,7 +376,7 @@
   },
   {
     "title": "ReactiveConf 2017",
-    "date": "24-03-2017",
+    "date": "25-10-2017",
     "website": "https://reactiveconf.com/",
     "playlist": {
       "Day 1": "https://www.youtube.com/watch?v=X9iqnovPGyY",
@@ -385,7 +385,7 @@
   },
   {
     "title": "React Europe 2017",
-    "date": "24-03-2017",
+    "date": "16-05-2017",
     "website": "https://2017.react-europe.org/",
     "playlist": {
       "Day 1": "https://www.youtube.com/playlist?list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD",
@@ -593,7 +593,7 @@
   },
   {
     "title": "ReactNext 2017",
-    "date": "24-03-2017",
+    "date": "10-09-2017",
     "website": "https://react-next.com/",
     "playlist": {
       "Hall A" : "https://www.youtube.com/playlist?list=PLMYVq3z1QxSqq6D7jxVdqttOX7H_Brq8Z",
@@ -607,7 +607,7 @@
           "name": "Ari Lerner"
         },
         "length": "23:58",
-        "split": "Day 1"
+        "split": "Hall A"
       },
       {
         "title": "Level Up Your React With TypeScript",
@@ -616,7 +616,7 @@
           "name": "Doron Zavelevsky"
         },
         "length": "30:16",
-        "split": "Day 1"
+        "split": "Hall A"
       },
       {
         "title": "Webpack – The React Parts",
@@ -625,7 +625,7 @@
           "name": "Juho Vepsäläinen"
         },
         "length": "30:08",
-        "split": "Day 1"
+        "split": "Hall A"
       },
       {
         "title": "Universal React Apps Using Next.js",
@@ -634,7 +634,7 @@
           "name": "Sia Karamalegos"
         },
         "length": "22:22",
-        "split": "Day 1"
+        "split": "Hall A"
       },
       {
         "title": "Practical Advanced Redux",
@@ -643,7 +643,7 @@
           "name": "Boris Dinkevich"
         },
         "length": "25:25",
-        "split": "Day 1"
+        "split": "Hall A"
       },
       {
         "title": "React, But For Data",
@@ -652,7 +652,7 @@
           "name": "Michel Weststrate"
         },
         "length": "26:45",
-        "split": "Day 1"
+        "split": "Hall A"
       },
       {
         "title": "Relay Modern or Apollo?",
@@ -661,7 +661,7 @@
           "name": "Gerard Sans"
         },
         "length": "30:10",
-        "split": "Day 1"
+        "split": "Hall A"
       },
       {
         "title": "GatsbyJS — How to Create The Fastest Sites In The World",
@@ -670,7 +670,7 @@
           "name": "Kyle Mathews"
         },
         "length": "24:52",
-        "split": "Day 1"
+        "split": "Hall A"
       },
       {
         "title": "Handling Side Effects in Redux With Redux-Saga",
@@ -679,7 +679,7 @@
           "name": "Katarzyna Jastrzębska"
         },
         "length": "19:28",
-        "split": "Day 1"
+        "split": "Hall A"
       },
       {
         "title": "Things You Didn't Know You Can Do With React Native",
@@ -688,7 +688,7 @@
           "name": "Vladimir Novick"
         },
         "length": "31:50",
-        "split": "Day 2"
+        "split": "Hall B"
       },
       {
         "title": "Get That CSS Out Of My JavaScript",
@@ -697,7 +697,7 @@
           "name": "Brian Hough"
         },
         "length": "26:09",
-        "split": "Day 2"
+        "split": "Hall B"
       },
       {
         "title": "Critical ReasonML'ing",
@@ -706,7 +706,7 @@
           "name": "Brandon Dail"
         },
         "length": "30:15",
-        "split": "Day 2"
+        "split": "Hall B"
       },
       {
         "title": "React on Steroids with ClojureScript",
@@ -715,7 +715,7 @@
           "name": "Yehonathan Sharvit"
         },
         "length": "31:55",
-        "split": "Day 2"
+        "split": "Hall B"
       },
       {
         "title": "Dealing with Data Offline in Web Apps",
@@ -724,7 +724,7 @@
           "name": "Jai Santhosh"
         },
         "length": "20:36",
-        "split": "Day 2"
+        "split": "Hall B"
       },
       {
         "title": "Write Once, Render Anywhere",
@@ -733,7 +733,7 @@
           "name": "Peggy Rayzis"
         },
         "length": "24:57",
-        "split": "Day 2"
+        "split": "Hall B"
       },
       {
         "title": "D3 and React, Together",
@@ -742,7 +742,7 @@
           "name": "Shirley Wu"
         },
         "length": "25:32",
-        "split": "Day 2"
+        "split": "Hall B"
       },
       {
         "title": "Bridges to React Native",
@@ -751,7 +751,7 @@
           "name": "Florian Rival"
         },
         "length": "26:50",
-        "split": "Day 2"
+        "split": "Hall B"
       },
       {
         "title": "Detox — Graybox E2E Tests Library for React Native",
@@ -760,7 +760,7 @@
           "name": "Rotem Mizrachi-Meidan"
         },
         "length": "23:43",
-        "split": "Day 2"
+        "split": "Hall B"
       },
       {
         "title": "WebVR and React",
@@ -769,14 +769,14 @@
           "name": "Shay Keinan"
         },
         "length": "22:53",
-        "split": "Day 2"
+        "split": "Hall B"
       }
     ]
   },
   {
     "title": "React Conf 2016",
-    "date": "24-03-2016",
-    "website": "http://www.reactrally.com/",
+    "date": "22-02-2016",
+    "website": "http://conf2016.reactjs.org/",
     "playlist": "https://www.youtube.com/watch?v=2rhkgB8Cohc&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531",
     "videos":   [
       {
@@ -911,8 +911,8 @@
   },
   {
     "title": "React Amsterdam",
-    "date": "24-03-2016",
-    "website": "https://react.amsterdam/2016/index.html",
+    "date": "10-04-2016",
+    "website": "https://react.amsterdam/2016/",
     "playlist": "https://www.youtube.com/playlist?list=PLNBNS7NRGKMG3uLrm5fgY02hJ87Wzb4IU&disable_polymer=true",
     "videos":   [
       {
@@ -1031,7 +1031,7 @@
   },
   {
     "title": "React Europe 2016",
-    "date": "24-03-2016",
+    "date": "02-06-2016",
     "website": "https://2016.react-europe.org/",
     "playlist": "https://www.youtube.com/playlist?list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa",
     "videos": [
@@ -1219,8 +1219,8 @@
   },
   {
     "title": "React Rally 2016",
-    "date": "24-03-2016",
-    "website": "https://github.com/simonccarter/react-conf-videos/blob/master/README.md",
+    "date": "25-09-2016",
+    "website": "http://www.reactrally.com/",
     "playlist": "https://www.youtube.com/playlist?list=PLUD4kD-wL_zYSfU3tIYsb4WqfFQzO_EjQ",
     "videos":  [
       {
@@ -1387,7 +1387,7 @@
   },
   {
     "title": "ReactiveConf 2016",
-    "date": "24-03-2016",
+    "date": "26-10-2016",
     "website": "https://reactiveconf.com/2016/",
     "playlist": "https://www.youtube.com/watch?v=gbATtWPUfN0&list=PLa2ZZ09WYepMCRRGCRPhTYuTCat4TiDlX",
     "videos":   [
@@ -1620,7 +1620,7 @@
   },
   {
     "title": "React.js Conf 2015",
-    "date": "24-03-2015",
+    "date": "28-01-2015",
     "website": "http://conf2015.reactjs.org/",
     "playlist": "https://www.youtube.com/playlist?list=PLb0IAmt7-GS1cbw4qonlQztYV1TAW0sCr",
     "videos":     [
