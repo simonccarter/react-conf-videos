@@ -1,6 +1,21 @@
 const fs = require('fs')
 const util = require('util')
-const { pluck, zip, map, compose, reverse, prop, sortBy, is, ifElse, forEachObjIndexed } = require('ramda')
+const {
+  is,
+  zip,
+  map,
+  uniq,
+  prop,
+  pluck,
+  curry,
+  ifElse,
+  sortBy,
+  filter,
+  propEq,
+  compose,
+  reverse,
+  forEachObjIndexed
+} = require('ramda')
 
 const conferenceVids = JSON.parse(fs.readFileSync('./public/assets/conferenceVids.json'))
 
@@ -22,21 +37,36 @@ const conferenceDetails = ({ title, website, playlist = '' }) => {
   let output = ''
   output += `\n### ${title}\n\n##### ${website ? `[website](${website})` : ''}`
   output += computePlaylistDetails(playlist)
-  return output
+  return `${output}\n`
 }
 
 const tableHeader = () => '\n| Title/Link        | Presenter  | Length |\n| ------------- |:-------------:| -----:|'
 
-const conferenceVideos = ({ videos }) => {
+const conferenceVideos = (videos) => {
+  const createTable = curry((title, videos) => {
+    let output = title ? `\n#### ${title}\n` : '\n'
+    output += tableHeader()
+    output += videos.reduce((acc, {
+      title, link, presenter: { name }, length
+    }) => {
+      acc += `\n[${title}](${link}) | ${name} | ${length}`
+      return acc
+    }, '')
+    output += '\n'
+    return output
+  })
+
+  const splits = compose(uniq,pluck('split'))(videos)
   let output = ''
-  output += tableHeader()
-  output += videos.reduce((acc, {
-    title, link, presenter: { name }, length
-  }) => {
-    acc += `\n[${title}](${link}) | ${name} | ${length}`
-    return acc
-  }, '')
-  output += '\n'
+  if (!splits.length) {
+    output = createTable('', videos)
+  } else {
+    output = map(split => compose(
+      createTable(split),
+      filter(propEq('split', split)) // extract out matching videos for split
+    )(videos)
+    )(splits).join('')
+  }
   return output
 }
 
@@ -48,20 +78,14 @@ const createBody = conferenceVids => conferenceVids.reduce((acc, conference, idx
   if (idx === 0 || year !== pYear) {
     acc += `\n\n## ${year}\n`
   }
-
   // conf details
   acc += conferenceDetails(conference)
-
   // video table(s)
-  acc += conference.videos ? conferenceVideos(conference) : ''
-
+  acc += conference.videos ? conferenceVideos(conference.videos) : ''
   return acc
 }, '')
 
-const createHead = () => {
-  return '\n# React Conference Videos\n' +
-  'List of react conference videos.'
-}
+const createHead = () => '# React.js Conference Videos\nList of react conference videos.'
 
 const createNavLinks = (conferenceVids) => {
   // produce nested arrays containing [[title, year], [title, year]...]
@@ -78,7 +102,7 @@ const createNavLinks = (conferenceVids) => {
     if (idx === 0 || year !== titlesAndYears[idx > 0 ? idx - 1 : 0][1]) {
       acc += `\n* ${year}`
     }
-    acc += `\n  * ${title}`
+    acc += `\n  * [${title}](${title.replace(/ /g, '-').toLowerCase()})`
     return acc
   }, '')
 
