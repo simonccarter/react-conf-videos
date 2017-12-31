@@ -378,19 +378,19 @@
     "title": "ReactiveConf 2017",
     "date": "24-03-2017",
     "website": "https://reactiveconf.com/",
-    "playlist": [
-      "https://www.youtube.com/watch?v=X9iqnovPGyY",
-      "https://www.youtube.com/watch?v=62xd25kEZ3o"
-    ]
+    "playlist": {
+      "Day 1": "https://www.youtube.com/watch?v=X9iqnovPGyY",
+      "Day 2": "https://www.youtube.com/watch?v=62xd25kEZ3o"
+    }
   },
   {
     "title": "React Europe 2017",
     "date": "24-03-2017",
     "website": "https://2017.react-europe.org/",
-    "playlist": [
-      "https://www.youtube.com/playlist?list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD",
-      "https://www.youtube.com/playlist?list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH"
-    ],
+    "playlist": {
+      "Day 1": "https://www.youtube.com/playlist?list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD",
+      "Day 2": "https://www.youtube.com/playlist?list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH"
+    },
     "videos": [
       {
         "title": "Keynote",
@@ -595,10 +595,10 @@
     "title": "ReactNext 2017",
     "date": "24-03-2017",
     "website": "https://react-next.com/",
-    "playlist": [
-      "https://www.youtube.com/playlist?list=PLMYVq3z1QxSqq6D7jxVdqttOX7H_Brq8Z",
-      "https://www.youtube.com/playlist?list=PLMYVq3z1QxSqCZmaqgTXLsrcJ8mZmBF7T"
-    ],
+    "playlist": {
+      "Hall A" : "https://www.youtube.com/playlist?list=PLMYVq3z1QxSqq6D7jxVdqttOX7H_Brq8Z",
+      "Hall B" : "https://www.youtube.com/playlist?list=PLMYVq3z1QxSqCZmaqgTXLsrcJ8mZmBF7T"
+    },
     "videos": [
       {
         "title": "What's New in React?",

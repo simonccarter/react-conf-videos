@@ -1,14 +1,27 @@
 const fs = require('fs')
 const util = require('util')
-const { pluck, zip, map, compose, reverse, prop, sortBy } = require('ramda')
+const { pluck, zip, map, compose, reverse, prop, sortBy, is, ifElse, forEachObjIndexed } = require('ramda')
 
 const conferenceVids = JSON.parse(fs.readFileSync('./public/assets/conferenceVids.json'))
 
 const extratYearFromDDMMYY = date => date.split('-')[2]
 
+const computePlaylistDetails = ifElse(
+  is(String),
+  playlist => ` - [playlist](${playlist})`,
+  (playlist) => {
+    let playlists = ''
+    forEachObjIndexed((val, key) => {
+      playlists += ` - [playlist: ${key}](${val})`
+    }, playlist)
+    return playlists
+  }
+)
+
 const conferenceDetails = ({ title, website, playlist = '' }) => {
   let output = ''
-  output += `\n### ${title}\n\n##### ${website ? `[website](${website})` : ''}\n`
+  output += `\n### ${title}\n\n##### ${website ? `[website](${website})` : ''}`
+  output += computePlaylistDetails(playlist)
   return output
 }
 
