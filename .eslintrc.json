@@ -26,7 +26,8 @@
     "camelcase": 0,
     "new-cap": [1, { "capIsNew": false }],
     "no-undef": 2,
-    "no-confusing-arrow" : 0
+    "no-confusing-arrow" : 0,
+    "no-param-reassign": 0
   },
   "env": {
     "es6": true,
