@@ -189,7 +189,7 @@
   },
   {
     "title": "React Rally 2017",
-    "date": "24-03-2016",
+    "date": "24-03-2017",
     "website": "http://www.reactrally.com/",
     "playlist": "https://www.youtube.com/watch?v=2rhkgB8Cohc&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531",
     "videos":   [
@@ -376,21 +376,21 @@
   },
   {
     "title": "ReactiveConf 2017",
-    "data": "24-03-2017",
+    "date": "24-03-2017",
     "website": "https://reactiveconf.com/",
-    "playlist": [
-      "https://www.youtube.com/watch?v=X9iqnovPGyY",
-      "https://www.youtube.com/watch?v=62xd25kEZ3o"
-    ]
+    "playlist": {
+      "Day 1": "https://www.youtube.com/watch?v=X9iqnovPGyY",
+      "Day 2": "https://www.youtube.com/watch?v=62xd25kEZ3o"
+    }
   },
   {
     "title": "React Europe 2017",
     "date": "24-03-2017",
     "website": "https://2017.react-europe.org/",
-    "playlist": [
-      "https://www.youtube.com/playlist?list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD",
-      "https://www.youtube.com/playlist?list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH"
-    ],
+    "playlist": {
+      "Day 1": "https://www.youtube.com/playlist?list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD",
+      "Day 2": "https://www.youtube.com/playlist?list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH"
+    },
     "videos": [
       {
         "title": "Keynote",
@@ -595,10 +595,10 @@
     "title": "ReactNext 2017",
     "date": "24-03-2017",
     "website": "https://react-next.com/",
-    "playlist": [
-      "https://www.youtube.com/playlist?list=PLMYVq3z1QxSqq6D7jxVdqttOX7H_Brq8Z",
-      "https://www.youtube.com/playlist?list=PLMYVq3z1QxSqCZmaqgTXLsrcJ8mZmBF7T"
-    ],
+    "playlist": {
+      "Hall A" : "https://www.youtube.com/playlist?list=PLMYVq3z1QxSqq6D7jxVdqttOX7H_Brq8Z",
+      "Hall B" : "https://www.youtube.com/playlist?list=PLMYVq3z1QxSqCZmaqgTXLsrcJ8mZmBF7T"
+    },
     "videos": [
       {
         "title": "What's New in React?",
@@ -775,7 +775,7 @@
   },
   {
     "title": "React Conf 2016",
-    "date": "24-03-2017",
+    "date": "24-03-2016",
     "website": "http://www.reactrally.com/",
     "playlist": "https://www.youtube.com/watch?v=2rhkgB8Cohc&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531",
     "videos":   [
@@ -1620,7 +1620,7 @@
   },
   {
     "title": "React.js Conf 2015",
-    "date": "24-03-2016",
+    "date": "24-03-2015",
     "website": "http://conf2015.reactjs.org/",
     "playlist": "https://www.youtube.com/playlist?list=PLb0IAmt7-GS1cbw4qonlQztYV1TAW0sCr",
     "videos":     [
