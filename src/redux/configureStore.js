@@ -4,7 +4,6 @@ import { rootEpic, rootReducer } from './modules/root'
 
 /* eslint-disable-next-line */
 const NODE_ENV = process.env.NODE_ENV
-console.log(NODE_ENV)
 
 const epicMiddleware = createEpicMiddleware(rootEpic)
 
