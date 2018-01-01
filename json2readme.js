@@ -84,7 +84,8 @@ const createBody = conferenceVids => conferenceVids.reduce((acc, conference, idx
   return acc
 }, '')
 
-const createHead = () => '# React.js Conference Videos\nList of react conference videos.'
+const createHead = () => '# React.js Conference Videos\nList of react conference videos.\n' +
+'[www.reactjsvideos.com](https://www.reactjsvideos.com)'
 
 const createNavLinks = (conferenceVids) => {
   // produce nested arrays containing [[title, year], [title, year]...]
@@ -105,7 +106,7 @@ const createNavLinks = (conferenceVids) => {
     return acc
   }, '')
 
-  return `\n## Quick Links\n${computeLinks()}`
+  return `\n## Quick Links\n${computeLinks()}\n * [Contributing](#contributing)`
 }
 
 // sort function by date
@@ -120,6 +121,16 @@ const sortJSONByDate = compose(
   sortByDate
 )
 
+const createFooter = () => `
+
+## Contributing
+
+To add a conference and it's videos, or to simply fix a typo: 
+
+1. edit \`public/assets/conferenceVids.json\`
+2. run \`node json2readme > README.md\`
+`
+
 const run = (conferenceVids) => {
   // should already be sorted, but in case not
   const sorted = sortJSONByDate(conferenceVids)
@@ -127,8 +138,9 @@ const run = (conferenceVids) => {
   const head = createHead()
   const navLinks = createNavLinks(sorted)
   const body = createBody(sorted)
+  const footer = createFooter()
 
-  return `${head}\n${navLinks}\n${body}`
+  return `${head}\n${navLinks}\n${body}\n${footer}`
 }
 
 console.log(run(conferenceVids))

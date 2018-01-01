@@ -1,5 +1,6 @@
 # React.js Conference Videos
 List of react conference videos.
+[www.reactjsvideos.com](https://www.reactjsvideos.com)
 
 ## Quick Links
 
@@ -17,6 +18,7 @@ List of react conference videos.
   * [React Conf 2016](#react-conf-2016)
 * 2015
   * [React.js Conf 2015](#reactjs-conf-2015)
+ * [Contributing](#contributing)
 
 
 ## 2017
@@ -345,4 +347,13 @@ List of react conference videos.
 [Codecademy's approach to component communication](https://www.youtube.com/watch?v=ZM6wXoFTY3o&list=PLb0IAmt7-GS1cbw4qonlQztYV1TAW0sCr&index=18) | Bonnie Eisenman | 23:57
 [Static typing with Flow and TypeScript](https://www.youtube.com/watch?v=9PTa9-PPVAc&index=19&list=PLb0IAmt7-GS1cbw4qonlQztYV1TAW0sCr) | James Brantly | 31:50
 [Q&A with the team](https://www.youtube.com/watch?v=EPpkboSKvPI&index=20&list=PLb0IAmt7-GS1cbw4qonlQztYV1TAW0sCr) | n/a | 31:0
+
+
+
+## Contributing
+
+To add a conference and it's videos, or to simply fix a typo: 
+
+1. edit `public/assets/conferenceVids.json`
+2. run `node json2readme > README.md`
 
