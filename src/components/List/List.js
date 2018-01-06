@@ -1,12 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { compose, pure, withHandlers } from 'recompose'
-
-import Video from 'components/Videos/Video'
 import { flatten, map, pathOr } from 'ramda'
 
+import Video from 'components/Videos/Video'
+import { SearchInput } from 'components/SearchInput'
+
 import styles from './List.scss'
-import { SearchInput } from '../SearchInput'
 
 const ListInner = ({ conferences }) => {
   const children = flatten(Object.keys(conferences).map((conference) => {

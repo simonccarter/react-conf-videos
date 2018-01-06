@@ -41,11 +41,14 @@ module.exports = {
     ]
   },
   resolve: {
-    modules: [path.resolve(__dirname, 'src'), 'node_modules']
+    modules: [
+      path.resolve(__dirname, 'src'),
+      path.resolve(__dirname, 'public'),
+      'node_modules'
+    ]
   },
   plugins: [
     new ProgressBarPlugin(),
-    // new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
