@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { compose, pure, branch, renderComponent } from 'recompose'
+import { compose, pure } from 'recompose'
 import cn from 'classnames'
 import { List } from 'components/List'
 
@@ -19,17 +19,12 @@ const FrontPageInner = props => (
 )
 
 const mapStateToProps = state => ({
-  finished: state.bootstrap.finished,
   isActive: state.frontPage.isActive
 })
 
 const FrontPage = compose(
   connect(mapStateToProps),
-  pure,
-  branch(
-    ({ finished }) => !finished,
-    renderComponent(() => (<div>loading in branch</div>))
-  ),
+  pure
 )(FrontPageInner)
 
 export default FrontPage
