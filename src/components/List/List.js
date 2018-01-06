@@ -1,16 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { compose, pure, withHandlers } from 'recompose'
-import { frontPageActions } from 'redux/modules'
+
 import Video from 'components/Videos/Video'
 import { flatten, map, pathOr } from 'ramda'
-import cn from 'classnames'
 
 import styles from './List.scss'
+import { SearchInput } from '../SearchInput'
 
-const ListInner = ({
-  conferences, onInputChange, filterValue, isActive
-}) => {
+const ListInner = ({ conferences }) => {
   const children = flatten(Object.keys(conferences).map((conference) => {
     const conferenceProps = conferences[conference]
     return map(video => <Video key={video} videoId={video} conferenceId={conference} />, pathOr([], ['videos'], conferenceProps))
@@ -21,15 +19,8 @@ const ListInner = ({
   const countConfsS = countConfs === 1 ? 'conference' : 'conferences'
 
   return  (
-    <div className={cn(styles.root, { [`${styles.isActive}`]: isActive })}>
-      <input
-        type="text"
-        value={filterValue}
-        onChange={onInputChange}
-        className={styles.input}
-        placeholder="query"
-        autoFocus="autofocus"
-      />
+    <div className={styles.root}>
+      <SearchInput />
       <p className={styles.resultsCount}>
         <span className={styles.resultsNumber}> {countVids} </span> {countVidsS}
         <span className={styles.resultsNumber}> {countConfs} </span> {countConfsS}
@@ -43,17 +34,10 @@ const ListInner = ({
 
 const mapStateToProps = ({ frontPage }) => ({
   conferences: frontPage.filteredConferences,
-  filterValue: frontPage.filterValue,
-  isActive: frontPage.isActive
 })
 
-const mapDispatchToProps = {
-  filter: frontPageActions.filter,
-  setIsActive: frontPageActions.setIsActive,
-}
-
 const List = compose(
-  connect(mapStateToProps, mapDispatchToProps),
+  connect(mapStateToProps),
   pure,
   withHandlers({
     onInputChange: ({ filter, setIsActive }) => (e) => {
