@@ -2,22 +2,19 @@ import Immutable from 'seamless-immutable'
 import { COPY_DATA } from 'redux/modules/data'
 import { combineEpics } from 'redux-observable'
 
-import JSONData from '../../../public/assets/conferenceVids.json'
+import JSONData from 'assets/conferenceVids.json'
 
-/* bootstsap process is uncessarily complicated, but I wanted to play with some */
 const BOOTSTRAP_START = 'BOOTSTRAP_START'
 const BOOTSTRAP_END = 'BOOTSTRAP_END'
 
 const LOAD_DATA_START = 'LOAD_DATA_START'
 export const LOAD_DATA_END = 'LOAD_DATA_END'
 
-// list of actions we need to hit the store before we can say bootstrap is complete
 const BOOTSTRAP_COMPLETE_ACTIONS = [LOAD_DATA_END, COPY_DATA]
 
-const loadDataEnd = (payload, error) => ({
+const loadDataEnd = payload => ({
   type: LOAD_DATA_END,
-  payload,
-  error
+  payload
 })
 
 // kick off bootstrap actions
@@ -30,7 +27,7 @@ export const loadJSONDataEpic = action$ =>
   action$.ofType(LOAD_DATA_START)
     .mapTo(loadDataEnd(JSONData, null))
 
-// end bookstrap process by listening for all actions in BOOTSTRAP_COMPLETE_ACTIONS to hit the store
+// end bookstrap process by listening for all actions in BOOTSTRAP_COMPLETE_ACTIONS
 export const boostrapEndEpic = action$ =>
   action$.ofType(...BOOTSTRAP_COMPLETE_ACTIONS)
     .bufferCount(BOOTSTRAP_COMPLETE_ACTIONS.length)
@@ -38,16 +35,15 @@ export const boostrapEndEpic = action$ =>
     .mapTo({ type: BOOTSTRAP_END })
 
 
-// listen to end bootstrap action, and remove loader on dom for seamless merge into app vd
+// listen to end bootstrap action, and remove loader on dom for seamless merge into app
 export const boostrapEndRemoveLoaderEpic = action$ =>
   action$.ofType(BOOTSTRAP_END)
-    .do((action) => {
-      requestAnimationFrame(() => {
-        document.getElementById('loader').classList.remove('fullscreen')
-      })
+    .do(() => {
+      document.getElementById('loader').classList.remove('fullscreen')
     })
     .delay(3000)
-    .do((action) => {
+    .do(() => {
+      // loader on initial html no longer visible. remove.
       document.getElementById('loader').remove()
     })
     .mapTo({ type: 'END_LOADER' })

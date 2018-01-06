@@ -3,8 +3,6 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const CompressionPlugin = require("compression-webpack-plugin")
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 
 module.exports = {
@@ -41,7 +39,11 @@ module.exports = {
     ]
   },
   resolve: {
-    modules: [path.resolve(__dirname, 'src'), 'node_modules']
+    modules: [
+      path.resolve(__dirname, 'src'),
+      path.resolve(__dirname, 'public'),
+      'node_modules'
+    ]
   },
   plugins: [
     new ProgressBarPlugin(),
