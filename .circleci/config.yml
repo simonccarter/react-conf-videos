@@ -91,7 +91,7 @@ workflows:
           filters:
             branches:
               only: 
-                - hotfix/circleci
+                - develop
       - deploy-master:
           requires:
             - set-up
