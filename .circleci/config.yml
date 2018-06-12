@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-  build:
+  test:
     docker:
       # specify the version you desire here
       - image: circleci/node:7.10
@@ -40,7 +40,41 @@ jobs:
       # build
       - run: yarn run prod
 
-  deploy:
+  deploy-dev:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:7.10
+    working_directory: ~/repo  
+    steps:
+      - checkout
+
+      - restore_cache:
+         keys:
+           - v1-dependencies-{{ checksum "package.json" }}
+           # fallback to using the latest cache if no exact match is found
+           - v1-dependencies-
+
+      # install awscli
+      - run:
+          working_directory: ~/
+          name: 'install awscli'
+          command: |
+            sudo apt-get -y -qq update
+            sudo apt-get -y -qq install python3.4-dev
+            curl -O https://bootstrap.pypa.io/get-pip.py
+            python3.4 get-pip.py --user
+            .local/bin/pip install awscli --upgrade --user
+
+      # build
+      - run: 
+          name: 'build'
+          command: yarn run prod
+
+      - deploy:
+          working_directory: ~/
+          command: .local/bin/aws s3 sync repo/dist/ s3://dev-reactjsvideos.com --delete
+
+  deploy-master:
     docker:
       # specify the version you desire here
       - image: circleci/node:7.10
@@ -78,12 +112,18 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-      - build
-      - deploy:
+      - test
+      - deploy-master:
           requires:
-            - build
+            - test
           filters:
             branches:
               only: master
+      - deploy-dev:
+          requires:
+            - test
+          filters:
+            branches:
+              only: feature/circleCiBranches
 
 
