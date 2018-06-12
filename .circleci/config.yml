@@ -124,6 +124,7 @@ workflows:
             - test
           filters:
             branches:
-              only: feature/circleCiBranches
+              only: 
+                - feature/circleCiBranches
 
 
