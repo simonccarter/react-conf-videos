@@ -10,8 +10,9 @@ const FrontPageInner = props => (
   <main className={cn(styles.FrontPage, { [`${styles.isActive}`]: props.isActive })} >
     <div className={styles.header} >
       <div className={cn(styles.text, { [`${styles.isActive}`]: props.isActive })} >
-        <h1> React Videos </h1>
+        <h1> React.js Videos </h1>
         <p> Search React.js conference videos. </p>
+        <p className={styles.contribute}> Contribute <a href="https://github.com/simonccarter/react-conf-videos">here</a>.</p>
       </div>
     </div>
     <List />
