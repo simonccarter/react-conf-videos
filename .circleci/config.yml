@@ -68,7 +68,7 @@ workflows:
           filters:
             branches:
               only: 
-                - dev
+                - develop
       - deploy-master:
           requires:
             - set-up
