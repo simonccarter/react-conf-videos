@@ -10,7 +10,7 @@
     "normalizr": "^3.2.4",
     "object-hash": "^1.2.0",
     "ramda": "^0.25.0",
-    "react": "^16.2.0",
+    "react": "^16.4.0",
     "react-dom": "^16.2.0",
     "react-flip-move": "^2.10.0",
     "react-hot-loader": "^3.1.3",
