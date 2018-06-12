@@ -3,42 +3,80 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2
+
+references:
+
+  # vars
+  npm_cache_key: &npm_cache_key
+    v1-dependency-npm-{{ checksum "package.json" }}
+  npm_backup_cache_key: &npm_backup_cache_key
+    v1-dependency-npm
+
+
+  restore_repo: &restore_repo
+    restore_cache:
+      keys:
+        - v1-repo-{{ .Branch }}-{{ .Revision }}
+        - v1-repo-{{ .Branch }}
+        - v1-repo
+
+  restore_node_modules: &restore_node_modules
+    restore_cache:
+      keys:
+        - *npm_cache_key
+        - *npm_backup_cache_key
+
 jobs:
-  test:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:7.10
-      
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
+  set_up:
     working_directory: ~/repo
-
     steps:
+      - *restore_repo
       - checkout
-
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
 
       # install repo
       - run: yarn install
 
       - save_cache:
+          key: v1-repo-{{ .Branch }}-{{ .Revision }}
           paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-        
-      # run tests!
-      # - run: yarn test
+            - .
+    
+  # test:
+  #   docker:
+  #     # specify the version you desire here
+  #     - image: circleci/node:7.10
+      
+  #     # Specify service dependencies here if necessary
+  #     # CircleCI maintains a library of pre-built images
+  #     # documented at https://circleci.com/docs/2.0/circleci-images/
+  #     # - image: circleci/mongo:3.4.4
 
-      # build
-      - run: yarn run prod
+  #   working_directory: ~/repo
+
+  #   steps:
+  #     - checkout_code
+  #     - install
+
+  #     # Download and cache dependencies
+  #     - restore_cache:
+  #         keys:
+  #         - v1-dependencies-{{ checksum "package.json" }}
+  #         # fallback to using the latest cache if no exact match is found
+  #         - v1-dependencies-
+
+  #     # install repo
+  #     - run: yarn install
+
+  #     - save_cache:
+  #         paths:
+  #           - node_modules
+  #         key: v1-dependencies-{{ checksum "package.json" }}
+        
+  #     # run tests!
+  #     # - run: yarn test
+
+  #     # build
+  #     - run: yarn run prod
 
   deploy-dev:
     docker:
@@ -46,7 +84,7 @@ jobs:
       - image: circleci/node:7.10
     working_directory: ~/repo  
     steps:
-      - checkout
+      - set_up
 
       - restore_cache:
          keys:
@@ -112,15 +150,19 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-      - test
-      - deploy-master:
-          requires:
-            - test
-          filters:
-            branches:
-              only: master
+      - set_up
+      # - deploy-master:
+      #     requires:
+      #       - test
+      #     filters:
+      #       branches:
+      #         only: master
+      # - test: 
+      #     requires:
+      #       - set_up
       - deploy-dev:
           requires:
+            - set_up
             - test
           filters:
             branches:
