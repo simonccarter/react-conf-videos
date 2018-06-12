@@ -1,3 +1,7 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
 version: 2.0
 
 references:
@@ -24,9 +28,9 @@ references:
 
 jobs:
   set-up:
-    # docker:
+    docker:
       # specify the version you desire here
-      # - image: circleci/node:7.10
+      - image: circleci/node:7.10
     working_directory: ~/repo
     steps:
       - *restore_repo
@@ -44,12 +48,11 @@ jobs:
             - .
 
   deploy-dev:
-    # docker:
-    #   # specify the version you desire here
-    #   - image: circleci/node:7.10
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:7.10
     working_directory: ~/repo  
     steps:
-      - set-up:
       # install awscli
       - run:
           working_directory: ~/
