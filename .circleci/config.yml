@@ -58,7 +58,7 @@ jobs:
 
       - deploy:
           working_directory: ~/
-          command: aws s3 sync repo/dist/ s3://dev-reactjsvideos.com --delete
+          command: .local/bin/aws s3 sync repo/dist/ s3://dev-reactjsvideos.com --delete
 
   deploy-master:
     <<: *container_config
