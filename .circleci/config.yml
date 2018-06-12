@@ -37,9 +37,7 @@ jobs:
       - run: yarn install
 
       # build
-      - run: 
-          name: 'build'
-          command: yarn run prod
+      - run: yarn run prod
 
       - save_cache:
           key: v1-repo-{{ .Branch }}-{{ .Revision }}
@@ -51,7 +49,7 @@ jobs:
       # specify the version you desire here
       - image: circleci/node:7.10
     working_directory: ~/repo  
-
+  
       # install awscli
       - run:
           working_directory: ~/
