@@ -35,6 +35,16 @@ jobs:
       # build
       - run: yarn run prod
 
+      - save_cache:
+          key: v1-repo-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - .
+
+  deploy-dev:
+    <<: *container_config
+    steps:
+      - *restore_repo
+
       # install awscli
       - run:
           working_directory: ~/
@@ -46,16 +56,6 @@ jobs:
             python3.4 get-pip.py --user
             .local/bin/pip install awscli --upgrade --user
 
-      - save_cache:
-          key: v1-repo-{{ .Branch }}-{{ .Revision }}
-          paths:
-            - .
-
-  deploy-dev:
-    <<: *container_config
-    steps:
-      - *restore_repo
-
       - deploy:
           working_directory: ~/
           command: .local/bin/aws s3 sync repo/dist/ s3://dev-reactjsvideos.com --delete
@@ -64,6 +64,17 @@ jobs:
     <<: *container_config
     steps:
       - *restore_repo
+
+      # install awscli
+      - run:
+          working_directory: ~/
+          name: 'install awscli'
+          command: |
+            sudo apt-get -y -qq update
+            sudo apt-get -y -qq install python3.4-dev
+            curl -O https://bootstrap.pypa.io/get-pip.py
+            python3.4 get-pip.py --user
+            .local/bin/pip install awscli --upgrade --user
 
       - deploy:
           working_directory: ~/
