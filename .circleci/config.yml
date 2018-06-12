@@ -6,12 +6,10 @@ version: 2.0
 
 references:
 
-  # vars
-  npm_cache_key: &npm_cache_key
-    v1-dependency-npm-{{ checksum "package.json" }}
-  npm_backup_cache_key: &npm_backup_cache_key
-    v1-dependency-npm
-
+  container_config: &container_config
+    docker:
+      - image: circleci/node:7.10
+    working_directory: ~/repo
 
   restore_repo: &restore_repo
     restore_cache:
@@ -19,12 +17,6 @@ references:
         - v1-repo-{{ .Branch }}-{{ .Revision }}
         - v1-repo-{{ .Branch }}
         - v1-repo
-
-  restore_node_modules: &restore_node_modules
-    restore_cache:
-      keys:
-        - *npm_cache_key
-        - *npm_backup_cache_key
 
 jobs:
   set-up:
@@ -48,27 +40,22 @@ jobs:
             - .
 
   deploy-dev:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:7.10
-    working_directory: ~/repo  
+    <<: *container_config
     steps:
       - *restore_repo
-      
-      # install awscli
-      - run:
-          working_directory: ~/
-          name: 'install awscli'
-          command: |
-            sudo apt-get -y -qq update
-            sudo apt-get -y -qq install python3.4-dev
-            curl -O https://bootstrap.pypa.io/get-pip.py
-            python3.4 get-pip.py --user
-            .local/bin/pip install awscli --upgrade --user
 
       - deploy:
           working_directory: ~/
-          command: .local/bin/aws s3 sync repo/dist/ s3://dev-reactjsvideos.com --delete
+          command: aws s3 sync repo/dist/ s3://dev-reactjsvideos.com --delete
+
+  deploy-master:
+    <<: *container_config
+    steps:
+      - *restore_repo
+
+      - deploy:
+          working_directory: ~/
+          command: aws s3 sync repo/dist/ s3://www.reactjsvideos.com --delete
 
 workflows:
   version: 2
@@ -81,6 +68,13 @@ workflows:
           filters:
             branches:
               only: 
-                - feature/circleCiBranches
+                - dev
+      - deploy-master:
+          requires:
+            - set-up
+          filters:
+            branches:
+              only: 
+                - master
 
 
