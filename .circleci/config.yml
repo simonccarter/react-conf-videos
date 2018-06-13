@@ -26,6 +26,7 @@ jobs:
     working_directory: ~/repo
     steps:
       - *restore_repo
+
       - checkout
 
       # install repo
@@ -44,14 +45,36 @@ jobs:
     steps:
       - *restore_repo
 
+      # install awscli
+      - run:
+          working_directory: ~/
+          name: 'install awscli'
+          command: |
+            sudo apt-get -y -qq update
+            sudo apt-get -y -qq install python3.4-dev
+            curl -O https://bootstrap.pypa.io/get-pip.py
+            python3.4 get-pip.py --user
+            .local/bin/pip install awscli --upgrade --user
+
       - deploy:
           working_directory: ~/
-          command: aws s3 sync repo/dist/ s3://dev-reactjsvideos.com --delete
+          command: .local/bin/aws s3 sync repo/dist/ s3://dev-reactjsvideos.com --delete
 
   deploy-master:
     <<: *container_config
     steps:
       - *restore_repo
+
+      # install awscli
+      - run:
+          working_directory: ~/
+          name: 'install awscli'
+          command: |
+            sudo apt-get -y -qq update
+            sudo apt-get -y -qq install python3.4-dev
+            curl -O https://bootstrap.pypa.io/get-pip.py
+            python3.4 get-pip.py --user
+            .local/bin/pip install awscli --upgrade --user
 
       - deploy:
           working_directory: ~/
@@ -76,5 +99,3 @@ workflows:
             branches:
               only: 
                 - master
-
-
