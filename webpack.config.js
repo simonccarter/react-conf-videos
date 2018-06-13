@@ -21,9 +21,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        loader: 'babel-loader',
+        test: /\.(t|j)s?$/,
+        loader: 'awesome-typescript-loader',
         exclude: /node_modules/
+      },
+      {
+        test: /\.js$/,
+        enforce: 'pre',
+        loader: 'source-map-loader'
       },
       {
         test: /\.scss$/,
