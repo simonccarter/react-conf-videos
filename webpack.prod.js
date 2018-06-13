@@ -24,11 +24,6 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.js$/,
-        enforce: 'pre',
-        loader: 'source-map-loader'
-      },
-      {
         test: /\.scss$/,
         use: [
           'style-loader',

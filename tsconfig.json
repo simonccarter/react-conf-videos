@@ -7,12 +7,9 @@
     "jsx": "react",             // use typescript to transpile jsx to js
     "target": "es5",            // specify ECMAScript target version
     "lib": ["es5", "es2017", "dom"],
-    "allowJs": true            // allow a partial TypeScript and JavaScript codebase
+    "allowJs": true,            // allow a partial TypeScript and JavaScript codebase
   },
   "include": [
     "./src/"
-  ],
-  "exclude": [
-    "./node_modules/*"
   ]
 }

@@ -7,7 +7,11 @@
   "engines": {
     "node": ">=6.11.5"
   },
+  "resolutions": {
+    "@types/react": "^16.0.40"
+  },
   "dependencies": {
+    "awesome-typescript-loader": "^5.0.0",
     "classnames": "^2.2.5",
     "copy-webpack-plugin": "^4.5.1",
     "html-webpack-plugin": "^3.2.0",
@@ -38,7 +42,6 @@
   },
   "devDependencies": {
     "@types/react-dom": "^16.0.6",
-    "awesome-typescript-loader": "^5.0.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.3",
     "babel-loader": "^7.1.4",
