@@ -69,6 +69,7 @@ workflows:
             branches:
               only: 
                 - develop
+                - feature/webpack4
       - deploy-master:
           requires:
             - set-up

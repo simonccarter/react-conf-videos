@@ -1,6 +1,6 @@
 import Immutable from 'seamless-immutable'
 
-import { any } from 'ramda'
+import any from 'ramda/es/any'
 import { COPY_DATA } from 'redux/modules/data'
 import { combineEpics } from 'redux-observable'
 
