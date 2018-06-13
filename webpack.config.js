@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 
 module.exports = {
+  mode: 'development',
   entry: {
     app: [
       'webpack-dev-server/client?http://localhost:8080',
@@ -18,7 +19,7 @@ module.exports = {
     filename: '[name].[hash].js'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         loader: 'babel-loader',

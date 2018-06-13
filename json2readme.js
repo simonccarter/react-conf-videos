@@ -55,7 +55,7 @@ const conferenceVideos = (videos) => {
     return output
   })
 
-  const splits = compose(uniq,pluck('split'))(videos)
+  const splits = compose(uniq, pluck('split'))(videos)
   let output = ''
   if (!splits.length) {
     output = createTable('', videos)
