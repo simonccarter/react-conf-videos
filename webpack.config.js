@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
+const { CheckerPlugin } = require('awesome-typescript-loader')
 
 module.exports = {
   mode: 'development',
@@ -21,7 +22,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(t|j)s?$/,
+        test: /\.(t|j)sx?$/,
         loader: 'awesome-typescript-loader',
         exclude: /node_modules/
       },
@@ -54,8 +55,8 @@ module.exports = {
     ]
   },
   plugins: [
+    new CheckerPlugin(),
     new ProgressBarPlugin(),
-    new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: './public/index.html',

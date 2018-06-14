@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { compose, pure, withHandlers } from 'recompose'
 import { flatten, map, pathOr } from 'ramda'
 
-import Video from 'components/Videos/Video'
+import { Video } from 'components/Videos'
 import { SearchInput } from 'components/SearchInput'
 
 import styles from './List.scss'

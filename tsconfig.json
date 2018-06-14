@@ -1,15 +1,17 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "built",
     "skipLibCheck": true,
-    "sourceMap": true,          // allow sourcemap support
-    "strictNullChecks": true,   // enable strict null checks as a best practice
-    "module": "es6",            // specify module code generation
-    "jsx": "react",             // use typescript to transpile jsx to js
-    "target": "es5",            // specify ECMAScript target version
+    "sourceMap": true,          
+    "strictNullChecks": true,   
+    "module": "es6",            
+    "jsx": "react",             
+    "target": "es5",            
     "lib": ["es5", "es2017", "dom"],
-    "allowJs": true,            // allow a partial TypeScript and JavaScript codebase
-  },
-  "include": [
-    "./src/"
-  ]
+    "allowJs": true,            
+    "paths": {
+      "*": ["*", "src/*"]
+    }
+  }
 }

@@ -1,11 +1,15 @@
-import React from 'react'
+import * as React from 'react'
 import { connect } from 'react-redux'
 import { compose, pure, withStateHandlers } from 'recompose'
+
+import { Test } from 'components/Test'
+// import { Video as VideoProp } from 'domain'
+
 import * as cn from 'classnames'
 
-import styles from './Video.scss'
+const styles = require('./Video.scss')
 
-const VideoInner = ({
+const VideoInner: React.SFC<any> = ({
   video, speaker, videoId, conference, isOpen, toggleIsOpen
 }) => {
   const {
@@ -14,23 +18,18 @@ const VideoInner = ({
   return (
     <div className={styles.root} key={videoId} >
       <div className={styles.top} onClick={toggleIsOpen} >
-        <span className={styles.title} href={link}>{title}</span>
+        <a className={styles.title} href={link}>{title}</a>
         <span className={styles.right}>{length}</span>
       </div>
       <div className={cn(styles.videoWrapper, { [styles.open]: isOpen })}>
         {isOpen && <iframe
           title="videoPlayer"
           id="ytplayer"
-          type="text/html"
           width="410"
           height="360"
           src={embeddableLink}
           frameBorder="0"
-          allowFullScreen="allowfullscreen"
-          mozallowfullscreen="mozallowfullscreen"
-          msallowfullscreen="msallowfullscreen"
-          oallowfullscreen="oallowfullscreen"
-          webkitallowfullscreen="webkitallowfullscreen"
+          allowFullScreen
         /> }
       </div>
       <div className={styles.details}>
@@ -54,7 +53,7 @@ const mapStateToProps = (state, props) => {
   }
 }
 
-const Video = compose(
+const VideoA = compose(
   connect(mapStateToProps, null),
   pure,
   withStateHandlers({ isOpen: false }, {
@@ -62,4 +61,8 @@ const Video = compose(
   })
 )(VideoInner)
 
-export default Video
+const Video = () => (
+  <div>Video comp</div>
+)
+
+export { Video }
