@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-const styles = require('./ConferenceDetails.scss')
+import styles from './ConferenceDetails.scss'
 
 type Props = {
   title: string

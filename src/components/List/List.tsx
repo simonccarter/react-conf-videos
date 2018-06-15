@@ -1,33 +1,32 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
+import { compose, pure } from 'recompose'
 import { flatten, map, pathOr } from 'ramda'
-import { compose, pure, withHandlers } from 'recompose'
 
 import { Conference } from '../../domain'
-import { SearchInput } from '../SearchInput'
-import { Video } from '../Videos/Video.tsx'
+
+const { SearchInput } = require('../SearchInput')
+const { Video } = require('../Videos')
 
 import styles from './List.scss'
 
-// type Props = {
-//   filter: any
-//   setIsActive: any
-// }
+type WithHandlers = {
+  onInputChange: (e: any) => void
+}
 
-// type WithHandlers = {
-//   onInputChange: (e: any) => void
-// }
+type State = {
+  conferences: {[idx: string]: Conference}
+}
 
-// type State = {
-//   conferences: {[idx: string]: Conference}
-// }
+type CombinedProps = WithHandlers & State
 
-// type CombinedProps = Props & WithHandlers & State
-
-const ListInner = ({ conferences }) => {
+const ListInner: React.SFC<CombinedProps> = ({ conferences }) => {
   const children = flatten(Object.keys(conferences).map((conferenceId) => {
     const conferenceProps = conferences[conferenceId]
-    return map(video => <Video key={video} videoId={video} conferenceId={conferenceId} />, pathOr([], ['videos'], conferenceProps))
+    return map(
+      (video: any) => {return (<Video key={video} videoId={video} conferenceId={conferenceId} />)}, 
+      pathOr([], ['videos'], conferenceProps)
+    )
   }))
   const countVids = children.length
   const countVidsS = countVids === 1 ? 'video' : 'videos'
@@ -36,7 +35,7 @@ const ListInner = ({ conferences }) => {
 
   return  (
     <div className={styles.root}>
-      <SearchInput />
+      <SearchInput x={1} />
       <p className={styles.resultsCount}>
         <span className={styles.resultsNumber}> {countVids} </span> {countVidsS}
         <span className={styles.resultsNumber}> {countConfs} </span> {countConfsS}
@@ -48,19 +47,13 @@ const ListInner = ({ conferences }) => {
   )
 }
 
-const mapStateToProps = ({ frontPage }) => ({
+const mapStateToProps = ({ frontPage }: any) => ({
   conferences: frontPage.filteredConferences,
 })
 
-const List = compose(
+const List = compose<CombinedProps, {}>(
   connect(mapStateToProps),
-  pure,
-  withHandlers({
-    onInputChange: ({ filter, setIsActive }) => (e) => {
-      setIsActive(e.target.value !== '')
-      filter(e.target.value)
-    }
-  })
+  pure
 )(ListInner)
 
 export default List

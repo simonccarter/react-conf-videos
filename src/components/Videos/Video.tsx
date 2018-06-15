@@ -5,7 +5,7 @@ import { compose, pure, withStateHandlers } from 'recompose'
 
 import { Video as VideoProp, Presenter, Conference } from '../../domain'
 
-import * as styles from './Video.scss'
+import styles from './Video.scss'
 
 type Props = {
   videoId: string
