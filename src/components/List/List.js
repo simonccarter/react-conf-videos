@@ -3,8 +3,8 @@ import { connect } from 'react-redux'
 import { compose, pure, withHandlers } from 'recompose'
 import { flatten, map, pathOr } from 'ramda'
 
-import { Video } from 'components/Videos'
 import { SearchInput } from 'components/SearchInput'
+import { Video } from '../Videos/index.ts' // !!!
 
 import styles from './List.scss'
 

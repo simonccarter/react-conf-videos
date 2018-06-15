@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const { CheckerPlugin } = require('awesome-typescript-loader')
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -48,10 +49,14 @@ module.exports = {
     ]
   },
   resolve: {
+    extensions: ['.ts', '.tsx', '.js'],
     modules: [
       path.resolve(__dirname, 'src'),
       path.resolve(__dirname, 'public'),
       'node_modules'
+    ],
+    plugins: [
+      new TsconfigPathsPlugin({ configFile: './tsconfig.json' })
     ]
   },
   plugins: [

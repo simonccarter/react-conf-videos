@@ -1,15 +1,34 @@
 import * as React from 'react'
+import * as cn from 'classnames'
 import { connect } from 'react-redux'
 import { compose, pure, withStateHandlers } from 'recompose'
 
-import { Test } from 'components/Test'
-// import { Video as VideoProp } from 'domain'
-
-import * as cn from 'classnames'
+import { Video as VideoProp, Presenter, Conference } from '../../domain'
 
 const styles = require('./Video.scss')
 
-const VideoInner: React.SFC<any> = ({
+type Props = {
+  videoId: string
+  conferenceId: string
+}
+
+type RecState = {
+  isOpen: boolean
+}
+
+type StateHandlers = {
+  toggleIsOpen: (e: any) => RecState
+}
+
+type RedState = {
+  video: VideoProp
+  conference: Conference
+  speaker: Presenter
+}
+
+type CombinedProps = Props & RecState & RedState & StateHandlers
+
+const VideoInner: React.SFC<CombinedProps> = ({
   video, speaker, videoId, conference, isOpen, toggleIsOpen
 }) => {
   const {
@@ -40,7 +59,7 @@ const VideoInner: React.SFC<any> = ({
   )
 }
 
-const mapStateToProps = (state, props) => {
+const mapStateToProps = (state: any, props: Props) => {
   const { data: { videos, presenters, conferences } } = state
   const { videoId, conferenceId } = props
   const video = videos[videoId]
@@ -53,16 +72,12 @@ const mapStateToProps = (state, props) => {
   }
 }
 
-const VideoA = compose(
+const Video = compose<CombinedProps, Props>(
   connect(mapStateToProps, null),
   pure,
   withStateHandlers({ isOpen: false }, {
     toggleIsOpen: ({ isOpen }) => () => ({ isOpen: !isOpen })
   })
 )(VideoInner)
-
-const Video = () => (
-  <div>Video comp</div>
-)
 
 export { Video }

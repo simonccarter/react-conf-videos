@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-const Test = () => (
+const Test: React.SFC<void> = () => (
   <div>Test</div>
 )
 

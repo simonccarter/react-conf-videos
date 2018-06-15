@@ -1,17 +1,19 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "built",
     "skipLibCheck": true,
-    "sourceMap": true,          
+    "noImplicitAny": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "removeComments": true,
+    "sourceMap": true,       
     "strictNullChecks": true,   
     "module": "es6",            
     "jsx": "react",             
-    "target": "es5",            
-    "lib": ["es5", "es2017", "dom"],
+    "target": "es5",
+    "lib": ["es6", "es7", "dom"],
     "allowJs": true,            
-    "paths": {
-      "*": ["*", "src/*"]
-    }
-  }
+    "moduleResolution": "node"
+  },
+  "exclude": ["dist", "build", "node_modules"]
 }
