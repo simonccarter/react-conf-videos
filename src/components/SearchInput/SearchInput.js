@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { connect } from 'react-redux'
 import { compose, withHandlers, withStateHandlers, pure } from 'recompose'
 import { frontPageActions } from 'redux/modules'

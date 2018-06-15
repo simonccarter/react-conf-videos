@@ -3,7 +3,6 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const { CheckerPlugin } = require('awesome-typescript-loader')
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -19,6 +18,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[hash].js'
+  },
+  stats: {
+    errorDetails: true
   },
   module: {
     rules: [
@@ -49,14 +51,11 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
+    extensions: ['.js', '.json', '.ts', '.tsx', '.scss'],
     modules: [
       path.resolve(__dirname, 'src'),
       path.resolve(__dirname, 'public'),
       'node_modules'
-    ],
-    plugins: [
-      new TsconfigPathsPlugin({ configFile: './tsconfig.json' })
     ]
   },
   plugins: [

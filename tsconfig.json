@@ -11,7 +11,7 @@
     "module": "es6",            
     "jsx": "react",             
     "target": "es5",
-    "lib": ["es6", "es7", "dom"],
+    "lib": ["es5", "es6", "dom"],
     "allowJs": true,            
     "moduleResolution": "node"
   },

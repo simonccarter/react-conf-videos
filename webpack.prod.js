@@ -19,7 +19,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(t|j)s?$/,
+        test: /\.(t|j)sx?$/,
         loader: 'awesome-typescript-loader',
         exclude: /node_modules/
       },
@@ -40,6 +40,7 @@ module.exports = {
     ]
   },
   resolve: {
+    extensions: ['.js', '.json', '.ts', '.tsx', '.scss'],
     modules: [
       path.resolve(__dirname, 'src'),
       path.resolve(__dirname, 'public'),
@@ -47,7 +48,8 @@ module.exports = {
     ]
   },
   stats: {
-    modules: true
+    modules: true,
+    errorDetails: true
   },
   optimization: {
     concatenateModules: true,
@@ -72,14 +74,20 @@ module.exports = {
       }),
     ],
     splitChunks: {
+      name: true,
       cacheGroups: {
         commons: {
+          chunks: 'initial',
+          minChunks: 2
+        },
+        vendors: {
           test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all'
+          chunks: 'all',
+          priority: -10
         }
       }
-    }
+    },
+    runtimeChunk: true
   },
   plugins: [
     new HtmlWebpackPlugin({

@@ -1,17 +1,33 @@
-import React from 'react'
+import * as React from 'react'
 import { connect } from 'react-redux'
-import { compose, pure, withHandlers } from 'recompose'
 import { flatten, map, pathOr } from 'ramda'
+import { compose, pure, withHandlers } from 'recompose'
 
-import { SearchInput } from 'components/SearchInput'
-import { Video } from '../Videos/index.ts' // !!!
+import { Conference } from '../../domain'
+import { SearchInput } from '../SearchInput'
+import { Video } from '../Videos/Video.tsx'
 
 import styles from './List.scss'
 
+// type Props = {
+//   filter: any
+//   setIsActive: any
+// }
+
+// type WithHandlers = {
+//   onInputChange: (e: any) => void
+// }
+
+// type State = {
+//   conferences: {[idx: string]: Conference}
+// }
+
+// type CombinedProps = Props & WithHandlers & State
+
 const ListInner = ({ conferences }) => {
-  const children = flatten(Object.keys(conferences).map((conference) => {
-    const conferenceProps = conferences[conference]
-    return map(video => <Video key={video} videoId={video} conferenceId={conference} />, pathOr([], ['videos'], conferenceProps))
+  const children = flatten(Object.keys(conferences).map((conferenceId) => {
+    const conferenceProps = conferences[conferenceId]
+    return map(video => <Video key={video} videoId={video} conferenceId={conferenceId} />, pathOr([], ['videos'], conferenceProps))
   }))
   const countVids = children.length
   const countVidsS = countVids === 1 ? 'video' : 'videos'
