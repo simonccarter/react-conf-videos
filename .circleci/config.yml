@@ -92,7 +92,6 @@ workflows:
             branches:
               only: 
                 - develop
-                - feature/ts
       - deploy-master:
           requires:
             - set-up
