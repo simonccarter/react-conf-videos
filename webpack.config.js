@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
+const { CheckerPlugin } = require('awesome-typescript-loader')
 
 module.exports = {
   mode: 'development',
@@ -10,7 +11,7 @@ module.exports = {
       'webpack-dev-server/client?http://localhost:8080',
       'webpack/hot/only-dev-server',
       'react-hot-loader/patch',
-      './src/index.js'
+      './src/index.tsx'
     ]
   },
   devtool: 'source-map',
@@ -18,12 +19,20 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[hash].js'
   },
+  stats: {
+    errorDetails: true
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
-        loader: 'babel-loader',
+        test: /\.(t|j)sx?$/,
+        loader: 'awesome-typescript-loader',
         exclude: /node_modules/
+      },
+      {
+        test: /\.js$/,
+        enforce: 'pre',
+        loader: 'source-map-loader'
       },
       {
         test: /\.scss$/,
@@ -42,6 +51,7 @@ module.exports = {
     ]
   },
   resolve: {
+    extensions: ['.js', '.json', '.ts', '.tsx', '.scss'],
     modules: [
       path.resolve(__dirname, 'src'),
       path.resolve(__dirname, 'public'),
@@ -49,8 +59,8 @@ module.exports = {
     ]
   },
   plugins: [
+    new CheckerPlugin(),
     new ProgressBarPlugin(),
-    new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: './public/index.html',

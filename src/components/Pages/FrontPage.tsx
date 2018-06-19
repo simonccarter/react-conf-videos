@@ -1,12 +1,15 @@
-import React from 'react'
+import * as React from 'react'
+import * as cn from 'classnames'
 import { connect } from 'react-redux'
 import { compose, pure } from 'recompose'
-import cn from 'classnames'
-import { List } from 'components/List'
+
+import { List } from  'components/List'
 
 import styles from './FrontPage.scss'
 
-const FrontPageInner = props => (
+type Props = { isActive: boolean }
+
+const FrontPageInner: React.SFC<Props> = props => (
   <main className={cn(styles.FrontPage, { [`${styles.isActive}`]: props.isActive })} >
     <div className={styles.header} >
       <div className={cn(styles.text, { [`${styles.isActive}`]: props.isActive })} >
@@ -19,11 +22,11 @@ const FrontPageInner = props => (
   </main>
 )
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state: any) => ({
   isActive: state.frontPage.isActive
 })
 
-const FrontPage = compose(
+const FrontPage = compose<Props, {}>(
   connect(mapStateToProps),
   pure
 )(FrontPageInner)

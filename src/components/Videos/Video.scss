@@ -5,7 +5,6 @@
   padding: 1rem 2rem;
   box-sizing: border-box;
   font-size: 1.6rem;
-  color: $text-color;
 
   .top {
     display: flex;
@@ -36,7 +35,6 @@
       margin: 1rem 0;
       background-color: black;
     }
-
   }
 
   .details {
@@ -54,5 +52,4 @@
     width: 100%;
     background-color: grey;
   }
-
 }

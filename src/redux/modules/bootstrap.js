@@ -1,14 +1,12 @@
 import Immutable from 'seamless-immutable'
-import { COPY_DATA } from 'redux/modules/data'
 import { combineEpics } from 'redux-observable'
 
 import JSONData from 'assets/conferenceVids.json'
 
+import { LOAD_DATA_END, LOAD_DATA_START, COPY_DATA } from './data'
+
 const BOOTSTRAP_START = 'BOOTSTRAP_START'
 const BOOTSTRAP_END = 'BOOTSTRAP_END'
-
-const LOAD_DATA_START = 'LOAD_DATA_START'
-export const LOAD_DATA_END = 'LOAD_DATA_END'
 
 const BOOTSTRAP_COMPLETE_ACTIONS = [LOAD_DATA_END, COPY_DATA]
 
@@ -25,7 +23,7 @@ export const bootstrapStartEpic = action$ =>
 // load json data into store
 export const loadJSONDataEpic = action$ =>
   action$.ofType(LOAD_DATA_START)
-    .mapTo(loadDataEnd(JSONData, null))
+    .map(() => loadDataEnd(JSONData, null))
 
 // end bookstrap process by listening for all actions in BOOTSTRAP_COMPLETE_ACTIONS
 export const boostrapEndEpic = action$ =>

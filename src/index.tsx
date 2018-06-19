@@ -1,9 +1,8 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import { Provider } from 'react-redux'
 import configureStore from 'redux/configureStore'
-// import registerServiceWorker from 'sw.js'
 
 import App from './app'
 
@@ -17,7 +16,6 @@ const render = () => {
     <AppContainer warnings={false}><Provider store={store}><App /></Provider></AppContainer>,
     document.getElementById('app__container')
   )
-  // registerServiceWorker()
 }
 
 render()
