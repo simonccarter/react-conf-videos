@@ -6,8 +6,8 @@ import conference from 'schemas/data'
 
 import { is, merge, ifElse, either, mapObjIndexed } from 'ramda'
 
-import { LOAD_DATA_END } from './bootstrap'
-
+export const LOAD_DATA_START = 'LOAD_DATA_START'
+export const LOAD_DATA_END = 'LOAD_DATA_END'
 export const COPY_DATA = 'data.COPY_DATA'
 
 const whiteListVideos = ['link', 'embeddableLink']

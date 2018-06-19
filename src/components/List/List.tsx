@@ -1,17 +1,32 @@
-import React from 'react'
+import * as React from 'react'
 import { connect } from 'react-redux'
-import { compose, pure, withHandlers } from 'recompose'
+import { compose, pure } from 'recompose'
 import { flatten, map, pathOr } from 'ramda'
 
-import Video from 'components/Videos/Video'
 import { SearchInput } from 'components/SearchInput'
+import { Video } from 'components/Videos'
 
 import styles from './List.scss'
 
-const ListInner = ({ conferences }) => {
-  const children = flatten(Object.keys(conferences).map((conference) => {
-    const conferenceProps = conferences[conference]
-    return map(video => <Video key={video} videoId={video} conferenceId={conference} />, pathOr([], ['videos'], conferenceProps))
+import { Conference } from '../../domain'
+
+type WithHandlers = {
+  onInputChange: (e: any) => void
+}
+
+type State = {
+  conferences: {[idx: string]: Conference}
+}
+
+type CombinedProps = WithHandlers & State
+
+const ListInner: React.SFC<CombinedProps> = ({ conferences }) => {
+  const children = flatten(Object.keys(conferences).map((conferenceId) => {
+    const conferenceProps = conferences[conferenceId]
+    return map(
+      (video: any) => {return (<Video key={video} videoId={video} conferenceId={conferenceId} />)}, 
+      pathOr([], ['videos'], conferenceProps)
+    )
   }))
   const countVids = children.length
   const countVidsS = countVids === 1 ? 'video' : 'videos'
@@ -32,19 +47,13 @@ const ListInner = ({ conferences }) => {
   )
 }
 
-const mapStateToProps = ({ frontPage }) => ({
+const mapStateToProps = ({ frontPage }: any) => ({
   conferences: frontPage.filteredConferences,
 })
 
-const List = compose(
+const List = compose<CombinedProps, {}>(
   connect(mapStateToProps),
-  pure,
-  withHandlers({
-    onInputChange: ({ filter, setIsActive }) => (e) => {
-      setIsActive(e.target.value !== '')
-      filter(e.target.value)
-    }
-  })
+  pure
 )(ListInner)
 
 export default List
