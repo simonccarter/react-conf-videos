@@ -1,14 +1,15 @@
 const path = require('path')
 const webpack = require('webpack')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 
 module.exports = {
+  mode: 'production',
   entry: {
     app: [
-      './src/index.js'
+      './src/index.tsx'
     ]
   },
   output: {
@@ -16,10 +17,10 @@ module.exports = {
     filename: '[name].[hash].js'
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.js$/,
-        loader: 'babel-loader',
+        test: /\.(t|j)sx?$/,
+        loader: 'awesome-typescript-loader',
         exclude: /node_modules/
       },
       {
@@ -39,17 +40,56 @@ module.exports = {
     ]
   },
   resolve: {
+    extensions: ['.js', '.json', '.ts', '.tsx', '.scss'],
     modules: [
       path.resolve(__dirname, 'src'),
       path.resolve(__dirname, 'public'),
       'node_modules'
     ]
   },
+  stats: {
+    modules: true,
+    errorDetails: true
+  },
+  optimization: {
+    concatenateModules: true,
+    minimizer: [
+      new UglifyJsPlugin({
+        uglifyOptions: {
+          unused: true,
+          evaluate: true,
+          warnings: false,
+          screw_ie8: true,
+          sequences: true,
+          dead_code: true,
+          if_return: true,
+          join_vars: true,
+          comparisons: true,
+          drop_console: true,
+          conditionals: true,
+          output: {
+            comments: false
+          }
+        }
+      }),
+    ],
+    splitChunks: {
+      name: true,
+      cacheGroups: {
+        commons: {
+          chunks: 'initial',
+          minChunks: 2
+        },
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          chunks: 'all',
+          priority: -10
+        }
+      }
+    },
+    runtimeChunk: true
+  },
   plugins: [
-    new ProgressBarPlugin(),
-    new webpack.optimize.ModuleConcatenationPlugin(),
-    // new webpack.NamedModulesPlugin(),
-    // new BundleAnalyzerPlugin(),
     new HtmlWebpackPlugin({
       template: './public/index.html',
       filename: 'index.html',
@@ -59,24 +99,6 @@ module.exports = {
         collapseInlineTagWhitespace: true,
         removeComments: true,
         removeRedundantAttributes: true
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false,
-        screw_ie8: true,
-        conditionals: true,
-        unused: true,
-        comparisons: true,
-        sequences: true,
-        dead_code: true,
-        evaluate: true,
-        if_return: true,
-        join_vars: true,
-        drop_console: true
-      },
-      output: {
-        comments: false
       }
     }),
     new ScriptExtHtmlWebpackPlugin({
