@@ -1,10 +1,10 @@
 import 'rxjs'
-import React from 'react'
+import * as React from 'react'
 import FrontPage from 'components/Pages/FrontPage'
 
-require('./app.scss')
+import './app.scss'
 
-const App = () => (
+const App: React.SFC<{}> = () => (
   <FrontPage />
 )
 

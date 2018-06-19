@@ -3,12 +3,12 @@ import { connect } from 'react-redux'
 import { compose, pure } from 'recompose'
 import { flatten, map, pathOr } from 'ramda'
 
-import { Conference } from '../../domain'
-
-const { SearchInput } = require('../SearchInput')
-const { Video } = require('../Videos')
+import { SearchInput } from 'components/SearchInput'
+import { Video } from 'components/Videos'
 
 import styles from './List.scss'
+
+import { Conference } from '../../domain'
 
 type WithHandlers = {
   onInputChange: (e: any) => void
@@ -35,7 +35,7 @@ const ListInner: React.SFC<CombinedProps> = ({ conferences }) => {
 
   return  (
     <div className={styles.root}>
-      <SearchInput x={1} />
+      <SearchInput />
       <p className={styles.resultsCount}>
         <span className={styles.resultsNumber}> {countVids} </span> {countVidsS}
         <span className={styles.resultsNumber}> {countConfs} </span> {countConfsS}

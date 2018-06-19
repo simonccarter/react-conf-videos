@@ -1,9 +1,9 @@
 import * as React from 'react'
+import * as cn from 'classnames'
 import { connect } from 'react-redux'
 import { compose, pure } from 'recompose'
-import * as cn from 'classnames'
 
-const List = require('../List').List
+import { List } from  'components/List'
 
 import styles from './FrontPage.scss'
 
@@ -18,7 +18,7 @@ const FrontPageInner: React.SFC<Props> = props => (
         <p className={styles.contribute}> Contribute <a href="https://github.com/simonccarter/react-conf-videos">here</a>.</p>
       </div>
     </div>
-    <List a={1} asdasd={1}/>
+    <List />
   </main>
 )
 
@@ -26,7 +26,7 @@ const mapStateToProps = (state: any) => ({
   isActive: state.frontPage.isActive
 })
 
-const FrontPage = compose<Props, void>(
+const FrontPage = compose<Props, {}>(
   connect(mapStateToProps),
   pure
 )(FrontPageInner)

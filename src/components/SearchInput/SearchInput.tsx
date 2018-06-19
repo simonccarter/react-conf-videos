@@ -1,9 +1,10 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
 import { compose, withHandlers, withStateHandlers, pure } from 'recompose'
-import { Conference } from '../../domain'
 
-const frontPageActions = require('../../redux/modules')
+import { frontPageActions } from 'redux/modules'
+
+import { Conference } from '../../domain'
 
 import styles from './SearchInput.scss'
 
@@ -14,7 +15,7 @@ type RedState = {
 }
 
 type WithState = {
-  ref: any
+  myRef: any
 }
 
 type WithStateHandlers = {
@@ -27,6 +28,11 @@ type WithHandlers = {
   onInputChange: (e: any) => void
 }
 
+type DispatchProps = {
+  filter: (s: string) => void
+  setIsActive: (b: boolean) => void
+}
+
 type CombinedProps = RedState & WithState & WithStateHandlers & WithHandlers
 
 const mapStateToProps: (x: any) => RedState = ({ frontPage }: any) => ({
@@ -37,7 +43,7 @@ const mapStateToProps: (x: any) => RedState = ({ frontPage }: any) => ({
 
 const mapDispatchToProps = {
   filter: frontPageActions.filter,
-  setIsActive: frontPageActions.setIsActive,
+  setIsActive: frontPageActions.setIsActive
 }
 
 const SearchInputInner: React.SFC<CombinedProps> = ({
@@ -58,13 +64,13 @@ const SearchInput = compose<CombinedProps, {}>(
   connect(mapStateToProps, mapDispatchToProps),
   pure,
   withStateHandlers<WithState, WithStateHandlers, RedState>(
-    { ref: null },
+    { myRef: null },
     {
-      setRef: () => ref => ({ ref }),
-      blurRef: ({ ref }) => () => ref.blur()
+      setRef: () => ref => ({ myRef: ref }),
+      blurRef: ({ myRef }) => () => myRef.blur()
     }
   ),
-  withHandlers<any, WithHandlers>({
+  withHandlers<DispatchProps & WithState & WithStateHandlers & RedState, WithHandlers>({
     onKeyUpHandlers: ({ blurRef }) => (e: any) => {
       if (e.keyCode === 13 || e.charCode === 13) {
         blurRef()

@@ -9,7 +9,7 @@ module.exports = {
   mode: 'production',
   entry: {
     app: [
-      './src/index.js'
+      './src/index.tsx'
     ]
   },
   output: {
