@@ -1,7 +1,8 @@
 import { combineEpics } from 'redux-observable'
 import { combineReducers } from 'redux'
-import bootstrapReducer, { bootstrapEpics } from './bootstrap'
+
 import dataReducer, { dataEpics } from './data'
+import bootstrapReducer, { bootstrapEpics } from './bootstrap'
 import frontPageReducer, { frontPageEpics } from './frontPage'
 
 export const rootEpic = combineEpics(
