@@ -28,7 +28,7 @@ type RedState = {
 
 type CombinedProps = Props & RecState & RedState & StateHandlers
 
-const VideoInner: React.SFC<CombinedProps> = ({
+export const VideoInner: React.SFC<CombinedProps> = ({
   video, speaker, videoId, conference, isOpen, toggleIsOpen
 }) => {
   const {

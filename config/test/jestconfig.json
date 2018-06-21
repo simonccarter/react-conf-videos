@@ -1,0 +1,17 @@
+
+{
+  "transform": {
+    "^.+\\.tsx?$": "ts-jest"
+  },
+  "rootDir": "../../",
+  "setupFiles": ["<rootDir>/config/test/setupEnzyme.ts"],
+  "moduleNameMapper": {
+      "\\.(scss)$": "<rootDir>/config/test/identityProxy.ts"
+  },
+  "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+  "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+  ]
+}

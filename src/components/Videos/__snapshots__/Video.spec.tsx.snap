@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Video renders correctly 1`] = `
+<div
+  className="root"
+  key="videoId1234"
+>
+  <div
+    className="top"
+    onClick={[MockFunction]}
+  >
+    <a
+      className="title"
+      href="a link"
+    >
+      test title
+    </a>
+    <span
+      className="right"
+    >
+      12:34
+    </span>
+  </div>
+  <div
+    className="videoWrapper"
+  />
+  <div
+    className="details"
+  >
+    <span>
+      Simon Carter
+    </span>
+    <span>
+      A conference
+    </span>
+  </div>
+</div>
+`;
