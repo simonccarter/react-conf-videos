@@ -18,7 +18,6 @@
     "react": "^16.3.0",
     "react-dom": "^16.2.0",
     "react-flip-move": "^2.10.0",
-    
     "react-lazy-load": "^3.0.13",
     "react-lazy-render": "^0.3.0",
     "react-redux": "^5.0.6",
@@ -35,7 +34,8 @@
     "start": "webpack-dev-server --config webpack.config.js",
     "clean": "rm -rf ./dist",
     "prod": "npm run clean & webpack --progress --config webpack.prod.js",
-    "test": "jest --watch --no-cache  --config=config/test/jestconfig.json",
+    "test": "jest --no-cache --coverage --config=config/test/jestconfig.json",
+    "test:dev": "jest --watch  --config=config/test/jestconfig.json",
     "lint": "eslint -c .eslintrc.json src/app.js"
   },
   "devDependencies": {
@@ -76,7 +76,6 @@
     "node-sass": "^4.7.2",
     "path": "^0.12.7",
     "progress-bar-webpack-plugin": "^1.11.0",
-    "react-test-renderer": "^16.4.1",
     "sass-loader": "^7.0.3",
     "source-map-loader": "^0.2.3",
     "style-loader": "^0.21.0",
