@@ -15,19 +15,21 @@ describe('SearchInputInner', () => {
         setRef={mockFN}
         isActive={true}
         myRef={null}
-        blurRef={jest.fn()}
+        blurRef={mockFN}
       />
     )
   }
 
-  it('renders correctly', () => {
+  it('should render', () => {
     const comp = shallowComp()
     expect(toJson(comp)).toMatchSnapshot()
   })
 
-  it('renders correctly', () => {
+  it('should call onKeyUpHandlers on onKeyUp with keyCode 13', () => {
     const comp = shallowComp()
-    comp.find('.root').simulate('click')
+    console.log(comp.find('.root').simulate)
+    comp.find('.root').simulate('keyUp', {keyCode: 13})
+    console.log('mockFN.mock.calls.length', mockFN.mock.calls.length)
     expect(mockFN).toHaveBeenCalled()
   })
 

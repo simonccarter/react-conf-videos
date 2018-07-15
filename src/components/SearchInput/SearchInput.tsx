@@ -68,7 +68,7 @@ const SearchInput = compose<CombinedProps, {}>(
   ),
   withHandlers<DispatchProps & WithState & WithStateHandlers & RedState, WithHandlers>({
     onKeyUpHandlers: ({ blurRef }) => (e: any) => {
-      if (e.keyCode === 13 || e.charCode === 13) {
+      if (e.keyCode === 13) {
         blurRef()
       }
     },

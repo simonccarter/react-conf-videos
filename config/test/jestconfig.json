@@ -7,16 +7,18 @@
     }
   },
   "transform": {
-    "^.+\\.tsx?$": "ts-jest"
+    "^.+\\.(j|t)sx?$": "ts-jest"
   },
   "setupFiles": ["<rootDir>/config/test/setupEnzyme.ts"],
   "moduleNameMapper": {
       "\\.(scss)$": "<rootDir>/config/test/identityProxy.ts"
   },
+  "moduleDirectories": ["node_modules", "src", "public"],
   "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
   "moduleFileExtensions": [
       "ts",
       "tsx",
-      "js"
+      "js",
+      "json"
   ]
 }
