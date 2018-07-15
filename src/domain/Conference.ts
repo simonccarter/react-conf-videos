@@ -5,3 +5,7 @@ export type Conference = {
   playlist: string
   videos: string[]
 }
+
+export type IndexedConferences = {
+  [idx: string]: Conference
+}

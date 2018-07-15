@@ -4,12 +4,9 @@ import { compose, withHandlers, withStateHandlers, pure } from 'recompose'
 
 import { frontPageActions } from 'redux/modules'
 
-import { Conference } from '../../domain'
-
 import styles from './SearchInput.scss'
 
 type RedState = {
-  conferences: {[idx: string]: Conference}
   filterValue: string
   isActive: boolean
 }
@@ -36,7 +33,6 @@ type DispatchProps = {
 type CombinedProps = RedState & WithState & WithStateHandlers & WithHandlers
 
 const mapStateToProps: (x: any) => RedState = ({ frontPage }: any) => ({
-  conferences: frontPage.filteredConferences,
   filterValue: frontPage.filterValue,
   isActive: frontPage.isActive
 })
@@ -46,7 +42,7 @@ const mapDispatchToProps = {
   setIsActive: frontPageActions.setIsActive
 }
 
-const SearchInputInner: React.SFC<CombinedProps> = ({
+export const SearchInputInner: React.SFC<CombinedProps> = ({
   filterValue, onInputChange, onKeyUpHandlers, setRef
 }) => (
   <input

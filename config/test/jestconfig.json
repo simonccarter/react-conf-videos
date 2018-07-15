@@ -1,9 +1,14 @@
 
 {
+  "rootDir": "../../",
+  "globals": {
+    "ts-jest": {
+      "useBabelrc": true
+    }
+  },
   "transform": {
     "^.+\\.tsx?$": "ts-jest"
   },
-  "rootDir": "../../",
   "setupFiles": ["<rootDir>/config/test/setupEnzyme.ts"],
   "moduleNameMapper": {
       "\\.(scss)$": "<rootDir>/config/test/identityProxy.ts"

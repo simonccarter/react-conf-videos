@@ -7,3 +7,7 @@ export type Video = {
   embeddableLink: string
 }
 
+export type IndexedVideos = {
+  [idx: string]: Video 
+}
+
