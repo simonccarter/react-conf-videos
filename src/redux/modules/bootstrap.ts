@@ -14,8 +14,8 @@ export type ReduxState = {
 
 import { LOAD_DATA_END, LOAD_DATA_START, COPY_DATA } from './data'
 
-const BOOTSTRAP_START = 'BOOTSTRAP_START'
-const BOOTSTRAP_END = 'BOOTSTRAP_END'
+export const BOOTSTRAP_START = 'BOOTSTRAP_START'
+export const BOOTSTRAP_END = 'BOOTSTRAP_END'
 
 const BOOTSTRAP_COMPLETE_ACTIONS = [LOAD_DATA_END, COPY_DATA]
 
@@ -35,7 +35,7 @@ export const loadJSONDataEpic: Epic<any, any> = action$ =>
     .map(() => loadDataEnd(JSONData))
 
 // end bookstrap process by listening for all actions in BOOTSTRAP_COMPLETE_ACTIONS
-export const boostrapEndEpic: Epic<any, any> = action$ =>
+export const bootstrapEndEpic: Epic<any, any> = action$ =>
   action$.ofType(...BOOTSTRAP_COMPLETE_ACTIONS)
     .bufferCount(BOOTSTRAP_COMPLETE_ACTIONS.length)
     .take(1)
@@ -56,7 +56,7 @@ export const boostrapEndRemoveLoaderEpic: Epic<any, any> = action$ =>
     .mapTo({ type: 'END_LOADER' })
 
 export const bootstrapEpics = combineEpics(
-  bootstrapStartEpic, loadJSONDataEpic, boostrapEndEpic, boostrapEndRemoveLoaderEpic
+  bootstrapStartEpic, loadJSONDataEpic, bootstrapEndEpic, boostrapEndRemoveLoaderEpic
 )
 
 // remove loader from html and render app on DOM
