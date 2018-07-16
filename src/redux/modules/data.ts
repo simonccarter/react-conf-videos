@@ -36,8 +36,8 @@ const recurseAction =
         e => action(e)
       )
 
-const lowerCase = (e: string) => e.toLowerCase()
-const lowerCaseAllValues = (obj: string[]) => recurseAction(lowerCase)(obj)
+export const lowerCase = (e: string) => e.toLowerCase()
+const lowerCaseAllValues = (whiteList: string[]) => recurseAction(lowerCase)(whiteList)
 const lowerCaseVideos = lowerCaseAllValues(whiteListVideos)
 const lowerCasePresenters = lowerCaseAllValues(whiteListVideos)
 
@@ -81,7 +81,7 @@ export const dataCopyEpic: Epic<any, Action<JSONInput>> = action$ =>
 
 export const dataEpics = combineEpics(dataCopyEpic)
 
-const initialState = Immutable<ReduxState>({
+export const initialState = Immutable<ReduxState>({
   presenters: {}, conferences: {}, videos: {}, videosLC: {}, presentersLC: {}
 })
 

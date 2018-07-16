@@ -12,8 +12,8 @@ import {
   IndexedConferences
 } from '../../domain'
 
-const INIT_SLICE = 'frontPage/INIT_SLICE'
-const FILTER = 'frontPage/FILTER'
+export const INIT_SLICE = 'frontPage/INIT_SLICE'
+export const FILTER = 'frontPage/FILTER'
 const SET_FILTERED_CONFERENCES = 'frontPage/SET_FILTERED_CONFERENCES'
 const SET_IS_ACTIVE = 'frontPage/SET_IS_ACTIVE' // active state changes display of components
 
@@ -40,11 +40,11 @@ export const initSliceEpic: Epic<Action<any>, any> = action$ =>
       }))
 
 // returns true if filterValue is found (includes()) within any element of termsToSearch
-const textInDetails = (filterValue: string, termsToSearch: [string, string]) =>
-  any((e:string ) => e.includes(filterValue), termsToSearch)
+export const textInDetails = (filterValue: string, termsToSearch: [string, string]) =>
+  any((phrase) => phrase.includes(filterValue), termsToSearch)
 
 // filters videos on a conference
-const filterVideos = (videos: IndexedVideos, presenters: IndexedPresenters, conferences: IndexedConferences, filterValue: string, conferenceKey: string) => {
+export const filterVideos = (videos: IndexedVideos, presenters: IndexedPresenters, conferences: IndexedConferences, filterValue: string, conferenceKey: string) => {
   const { videos: conferenceVideos } = conferences[conferenceKey]
   const matchedVideos = conferenceVideos.filter((videoKey: any) => {
     const { title, presenter } = videos[videoKey]
@@ -55,7 +55,7 @@ const filterVideos = (videos: IndexedVideos, presenters: IndexedPresenters, conf
 }
 
 // returns new conference object if videos exist on conference
-const createConference = (conferences: Immutable.Immutable<IndexedConferences>, conferenceKey: string, newConferences: any, matchedVideos: string[]) => {
+export const createConference = (conferences: Immutable.Immutable<IndexedConferences>, conferenceKey: string, newConferences: any, matchedVideos: string[]) => {
   if (!matchedVideos.length) {
     return newConferences
   }
@@ -65,7 +65,6 @@ const createConference = (conferences: Immutable.Immutable<IndexedConferences>, 
 
 // filter videos by title and or speaker
 const computeFilteredConferences = (filterValue: string, conferences: IndexedConferences, videos: IndexedVideos, presenters: IndexedPresenters) => {
-  const start = performance.now()
   // loop through all conferences, getting list of videos
   const newConferences = Object.keys(conferences).reduce((newConferencesAcc, conferenceKey) => {
     // filter videos on conference
@@ -73,8 +72,6 @@ const computeFilteredConferences = (filterValue: string, conferences: IndexedCon
     // return conference if it has any matched videos
     return createConference(conferences as Immutable.Immutable<IndexedConferences>, conferenceKey, newConferencesAcc, matchedVideos)
   }, {})
-  const end = performance.now()
-  console.log(`${end - start}ms`)
   return newConferences
 }
 
@@ -104,7 +101,7 @@ export const frontPageActions = {
 // conferences is a local copy, than can be used to reset filteredConferences when there is no search query
 // filteredConferences contains a filtered list of conferences, with videos filtered by search match
 // if a conference contains no videos that match, it is removed from the filter
-const initialState = Immutable<ReduxState>({
+export const initialState = Immutable<ReduxState>({
   conferences: {},
   filteredConferences: {},
   filterValue: '',

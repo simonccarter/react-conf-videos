@@ -27,9 +27,7 @@ describe('SearchInputInner', () => {
 
   it('should call onKeyUpHandlers on onKeyUp with keyCode 13', () => {
     const comp = shallowComp()
-    console.log(comp.find('.root').simulate)
     comp.find('.root').simulate('keyUp', {keyCode: 13})
-    console.log('mockFN.mock.calls.length', mockFN.mock.calls.length)
     expect(mockFN).toHaveBeenCalled()
   })
 

@@ -6,6 +6,10 @@
       "useBabelrc": true
     }
   },
+  "collectCoverageFrom": [
+    "**/src/**/.{js,jsx,ts,tsx}",
+    "**/src/**"
+  ],
   "transform": {
     "^.+\\.(j|t)sx?$": "ts-jest"
   },

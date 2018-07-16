@@ -1,39 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchInputInner renders correctly 1`] = `
-<input
-  className="root"
-  onChange={[MockFunction]}
-  onKeyUp={[MockFunction]}
-  placeholder="Search"
-  type="text"
-  value=""
-/>
-`;
-
 exports[`SearchInputInner should render 1`] = `
-<input
-  className="root"
-  onChange={[MockFunction]}
-  onKeyUp={[MockFunction]}
-  placeholder="Search"
-  type="text"
-  value=""
-/>
-`;
-
-exports[`SearchInputInner should render correctly 1`] = `
-<input
-  className="root"
-  onChange={[MockFunction]}
-  onKeyUp={[MockFunction]}
-  placeholder="Search"
-  type="text"
-  value=""
-/>
-`;
-
-exports[`SearchInputInner should renders correctly 1`] = `
 <input
   className="root"
   onChange={[MockFunction]}

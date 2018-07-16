@@ -17,7 +17,7 @@ import { LOAD_DATA_END, LOAD_DATA_START, COPY_DATA } from './data'
 export const BOOTSTRAP_START = 'BOOTSTRAP_START'
 export const BOOTSTRAP_END = 'BOOTSTRAP_END'
 
-const BOOTSTRAP_COMPLETE_ACTIONS = [LOAD_DATA_END, COPY_DATA]
+export const BOOTSTRAP_COMPLETE_ACTIONS = [LOAD_DATA_END, COPY_DATA]
 
 const loadDataEnd = (payload: JSONInput) => ({
   type: LOAD_DATA_END,
@@ -60,7 +60,7 @@ export const bootstrapEpics = combineEpics(
 )
 
 // remove loader from html and render app on DOM
-const initialState = Immutable<ReduxState>({ finished: false, data: null, error: false })
+export const initialState = Immutable<ReduxState>({ finished: false, data: null, error: false })
 
 const bootstrapReducer =  (state = initialState, action: Action<any>) => {
   switch (action.type) {
