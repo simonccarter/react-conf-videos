@@ -7,8 +7,8 @@ import { onError, mockStore } from '../../utils'
 
 import frontPageReducer, { 
   textInDetails, initSliceEpic, initialState,
-  INIT_SLICE, FILTER, filterEpic,
-  createConference
+  INIT_SLICE, FILTER, SET_FILTERED_CONFERENCES, 
+  SET_IS_ACTIVE, filterEpic, createConference
 } from './frontPage'
 
 describe('frontPage', () => {
@@ -125,14 +125,15 @@ describe('frontPage', () => {
 
     it('should initiate the slice with the payload', () => {
       // arrange 
-      const payload = 'filter value'
+      const payload = {'conferences': {'idx': {'title': 'lalala'}}}
+      const expectedResult = initialState.merge(payload)
       const action = { type: INIT_SLICE, payload }
       
       // act
       const result = frontPageReducer(initialState, action)
 
       // assert
-      expect(result).toEqual(payload)
+      expect(result).toEqual(expectedResult)
     })
 
     it('should set the filter value', () => {
@@ -149,8 +150,8 @@ describe('frontPage', () => {
 
     it('should set the filtered conferences', () => {
       // arrange 
-      const payload = 'filter value'
-      const action = { type: FILTER, payload }
+      const payload = {'idx': 'filtered conferences'}
+      const action = { type: SET_FILTERED_CONFERENCES, payload }
       
       // act
       const result = frontPageReducer(initialState, action)
@@ -162,7 +163,7 @@ describe('frontPage', () => {
     it('should set the isActive status', () => {
       // arrange 
       const payload = false
-      const action = { type: FILTER, payload }
+      const action = { type: SET_IS_ACTIVE, payload }
       
       // act
       const result = frontPageReducer(initialState, action)

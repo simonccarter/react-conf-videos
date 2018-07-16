@@ -14,8 +14,8 @@ import {
 
 export const INIT_SLICE = 'frontPage/INIT_SLICE'
 export const FILTER = 'frontPage/FILTER'
-const SET_FILTERED_CONFERENCES = 'frontPage/SET_FILTERED_CONFERENCES'
-const SET_IS_ACTIVE = 'frontPage/SET_IS_ACTIVE' // active state changes display of components
+export const SET_FILTERED_CONFERENCES = 'frontPage/SET_FILTERED_CONFERENCES'
+export const SET_IS_ACTIVE = 'frontPage/SET_IS_ACTIVE' // active state changes display of components
 
 const filter = (payload: string) => ({ type: FILTER, payload })
 const setIsActive = (payload: boolean) => ({ type: SET_IS_ACTIVE, payload })
