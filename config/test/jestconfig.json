@@ -1,4 +1,3 @@
-
 {
   "rootDir": "../../",
   "globals": {
@@ -9,6 +8,7 @@
   "collectCoverageFrom": [
     "**/src/**/.{js,jsx,ts,tsx}",
     "**/src/**",
+    "**/scripts/**",
     "!**/src/domain/**",
     "!**/__snapshots__/**",
     "!**/*index.{js,jsx,ts,tsx}",
@@ -21,7 +21,7 @@
   "moduleNameMapper": {
       "\\.(scss)$": "<rootDir>/config/test/identityProxy.ts"
   },
-  "moduleDirectories": ["node_modules", "src", "public"],
+  "moduleDirectories": ["node_modules", "src", "public", "scripts"],
   "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
   "moduleFileExtensions": [
       "ts",
