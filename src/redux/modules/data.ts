@@ -2,7 +2,7 @@ import * as Immutable from 'seamless-immutable'
 import { combineEpics, Epic } from 'redux-observable'
 
 import { normalize } from 'normalizr'
-import conference from 'schemas/data'
+import conference from 'schemas/data.bu'
 
 import { is, merge, ifElse, either, mapObjIndexed } from 'ramda'
 
@@ -54,7 +54,7 @@ const addEmbeddableLinksToVideos = (data: JSONInput): JSONInput => {
 }
 
 // normalize data
-const transformDataFromJson = (data: JSONInput): ReduxState => {
+export const transformDataFromJson = (data: JSONInput): ReduxState => {
   // add embeddable links to videos
   const dataWithEmbeddableLinks = addEmbeddableLinksToVideos(data)
 
@@ -77,7 +77,7 @@ const transformDataFromJson = (data: JSONInput): ReduxState => {
 // copy data into own slice
 export const dataCopyEpic: Epic<any, Action<JSONInput>> = action$ =>
   action$.ofType(LOAD_DATA_END)
-    .map(action => ({ type: COPY_DATA, payload: transformDataFromJson(action.payload) }))
+    .map(action => ({ type: COPY_DATA, payload: action.payload }))
 
 export const dataEpics = combineEpics(dataCopyEpic)
 
