@@ -10,17 +10,13 @@ import styles from './List.scss'
 
 import { Conference } from '../../domain'
 
-type WithHandlers = {
-  onInputChange: (e: any) => void
-}
-
 type State = {
   conferences: {[idx: string]: Conference}
 }
 
-type CombinedProps = WithHandlers & State
+type CombinedProps = State
 
-const ListInner: React.SFC<CombinedProps> = ({ conferences }) => {
+export const ListInner: React.SFC<State> = ({ conferences }) => {
   const children = flatten(Object.keys(conferences).map((conferenceId) => {
     const conferenceProps = conferences[conferenceId]
     return map(

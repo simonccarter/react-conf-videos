@@ -1,9 +1,13 @@
-import { Video } from './Video'
-import { Presenter } from './Presenter'
-import { Conference } from './Conference'
+import { Action } from './Action'
+import { Video, IndexedVideos } from './Video'
+import { Presenter, IndexedPresenters } from './Presenter'
+import { Conference, IndexedConferences } from './Conference'
+import { ConferenceInput, VideoInput, PresenterInput, JSONInput } from './InputJSON'
 
 export {
-  Video,
-  Presenter,
-  Conference
+  Action,
+  Video, IndexedVideos,
+  Presenter, IndexedPresenters,
+  Conference, IndexedConferences,
+  ConferenceInput, VideoInput, PresenterInput, JSONInput
 }

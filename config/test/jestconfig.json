@@ -1,0 +1,32 @@
+
+{
+  "rootDir": "../../",
+  "globals": {
+    "ts-jest": {
+      "useBabelrc": true
+    }
+  },
+  "collectCoverageFrom": [
+    "**/src/**/.{js,jsx,ts,tsx}",
+    "**/src/**",
+    "!**/src/domain/**",
+    "!**/__snapshots__/**",
+    "!**/*index.{js,jsx,ts,tsx}",
+    "!**/src/redux/modules/root.ts"
+  ],
+  "transform": {
+    "^.+\\.(j|t)sx?$": "ts-jest"
+  },
+  "setupFiles": ["<rootDir>/config/test/setupEnzyme.ts"],
+  "moduleNameMapper": {
+      "\\.(scss)$": "<rootDir>/config/test/identityProxy.ts"
+  },
+  "moduleDirectories": ["node_modules", "src", "public"],
+  "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+  "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+  ]
+}
