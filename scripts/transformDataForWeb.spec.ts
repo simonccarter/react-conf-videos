@@ -1,4 +1,4 @@
-import { lowerCase } from './transformDataForWeb'
+const { lowerCase } = require('./transformDataForWeb')
 
 describe('lowerCase', () => {
   it('should lowercase all chars', () => {

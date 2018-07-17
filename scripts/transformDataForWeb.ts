@@ -1,8 +1,8 @@
-import * as fs from 'fs'
-import { normalize } from 'normalizr'
-import { ifElse, either, is, mapObjIndexed, merge } from 'ramda'
+const fs = require('fs')
+const { normalize } = require('normalizr')
+const { ifElse, either, is, mapObjIndexed, merge } = require('ramda')
 
-import conferenceSchema from '../src/schemas/data.js'
+const conferenceSchema = require('../src/schemas/data.js')
 
 const args = process.argv
 
@@ -31,7 +31,7 @@ const recurseAction =
         (e: any) => action(e)
       )
 
-export const lowerCase = (e: string) => e.toLowerCase()
+const lowerCase = (e: string) => e.toLowerCase()
 const lowerCaseAllValues = (whiteList: string[]) => recurseAction(lowerCase)(whiteList)
 const lowerCaseVideos = lowerCaseAllValues(whiteListVideos)
 const lowerCasePresenters = lowerCaseAllValues(whiteListVideos)
@@ -49,7 +49,7 @@ const addEmbeddableLinksToVideos = (data: JSONInput): JSONInput => {
 }
 
 // normalize data
-export const transformDataFromJson = (data: JSONInput): ReduxState => {
+const transformDataFromJson = (data: JSONInput): ReduxState => {
   // add embeddable links to videos
   const dataWithEmbeddableLinks = addEmbeddableLinksToVideos(data)
 
@@ -80,4 +80,8 @@ const run = () => {
 
 if (args[2] && args[2].toLowerCase() === 'build') {
   run()
+}
+
+module.exports = {
+  lowerCase
 }
