@@ -69,6 +69,7 @@ const transformDataFromJson = (data: JSONInput): ReduxState => {
   })
 }
 
+/* istanbul ignore next */
 const run = () => {
   const data = JSON.parse(fs.readFileSync('./public/assets/conferenceVids.json', 'utf8'))
   const transformedJson = transformDataFromJson(data)
@@ -78,10 +79,12 @@ const run = () => {
   fs.writeFileSync(outFile, JSON.stringify(transformedJson))
 }
 
+/* istanbul ignore next */
 if (args[2] && args[2].toLowerCase() === 'build') {
   run()
 }
 
 module.exports = {
-  lowerCase
+  lowerCase,
+  transformDataFromJson
 }
