@@ -16,6 +16,7 @@ import { LOAD_DATA_END, LOAD_DATA_START, COPY_DATA } from './data'
 
 export const BOOTSTRAP_START = 'BOOTSTRAP_START'
 export const BOOTSTRAP_END = 'BOOTSTRAP_END'
+export const BOOTSTRAP_END_LOADER = 'END_LOADER'
 
 export const BOOTSTRAP_COMPLETE_ACTIONS = [LOAD_DATA_END, COPY_DATA]
 
@@ -53,7 +54,7 @@ export const boostrapEndRemoveLoaderEpic: Epic<any, any> = action$ =>
       // loader on initial html no longer visible. remove.
       (<HTMLElement>document.getElementById('loader')).remove()
     })
-    .mapTo({ type: 'END_LOADER' })
+    .mapTo({ type: BOOTSTRAP_END_LOADER})
 
 export const bootstrapEpics = combineEpics(
   bootstrapStartEpic, loadJSONDataEpic, bootstrapEndEpic, boostrapEndRemoveLoaderEpic

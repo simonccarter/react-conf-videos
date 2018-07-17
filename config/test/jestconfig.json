@@ -8,7 +8,11 @@
   },
   "collectCoverageFrom": [
     "**/src/**/.{js,jsx,ts,tsx}",
-    "**/src/**"
+    "**/src/**",
+    "!**/src/domain/**",
+    "!**/__snapshots__/**",
+    "!**/*index.{js,jsx,ts,tsx}",
+    "!**/src/redux/modules/root.ts"
   ],
   "transform": {
     "^.+\\.(j|t)sx?$": "ts-jest"

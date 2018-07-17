@@ -6,7 +6,7 @@ import { frontPageActions } from 'redux/modules'
 
 import styles from './SearchInput.scss'
 
-type RedState = {
+type ReduxState = {
   filterValue: string
   isActive: boolean
 }
@@ -30,9 +30,9 @@ type DispatchProps = {
   setIsActive: (b: boolean) => void
 }
 
-type CombinedProps = RedState & WithState & WithStateHandlers & WithHandlers
+type CombinedProps = ReduxState & WithState & WithStateHandlers & WithHandlers
 
-const mapStateToProps: (x: any) => RedState = ({ frontPage }: any) => ({
+const mapStateToProps: (x: any) => ReduxState = ({ frontPage }: any) => ({
   filterValue: frontPage.filterValue,
   isActive: frontPage.isActive
 })
@@ -59,14 +59,14 @@ export const SearchInputInner: React.SFC<CombinedProps> = ({
 const SearchInput = compose<CombinedProps, {}>(
   connect(mapStateToProps, mapDispatchToProps),
   pure,
-  withStateHandlers<WithState, WithStateHandlers, RedState>(
+  withStateHandlers<WithState, WithStateHandlers, ReduxState>(
     { myRef: null },
     {
       setRef: () => ref => ({ myRef: ref }),
       blurRef: ({ myRef }) => () => myRef.blur()
     }
   ),
-  withHandlers<DispatchProps & WithState & WithStateHandlers & RedState, WithHandlers>({
+  withHandlers<DispatchProps & WithState & WithStateHandlers & ReduxState, WithHandlers>({
     onKeyUpHandlers: ({ blurRef }) => (e: any) => {
       if (e.keyCode === 13) {
         blurRef()

@@ -1,6 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Video renders correctly 1`] = `
+exports[`Video Video should render and connect 1`] = `
+<pure(withStateHandlers(Component))
+  conference={
+    Object {
+      "title": "A conference",
+    }
+  }
+  conferenceId="yyy"
+  dispatch={[Function]}
+  speaker={
+    Object {
+      "name": "Simon Carter",
+    }
+  }
+  video={
+    Object {
+      "embeddableLink": "a link",
+      "length": "12:34",
+      "link": "a link",
+      "presenter": "aaa",
+      "title": "test title",
+    }
+  }
+  videoId="xxx"
+/>
+`;
+
+exports[`Video VideoInner renders correctly 1`] = `
 <div
   className="root"
   key="videoId1234"

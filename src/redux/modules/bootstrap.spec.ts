@@ -4,12 +4,12 @@ import { ActionsObservable } from 'redux-observable'
 import { Action } from 'domain/action'
 
 import bootstrapReducer, { 
-  BOOTSTRAP_START, BOOTSTRAP_END, BOOTSTRAP_COMPLETE_ACTIONS,
-  initialState, bootstrapStartEpic, bootstrapEndEpic, loadJSONDataEpic
+  BOOTSTRAP_START, BOOTSTRAP_END, 
+  BOOTSTRAP_COMPLETE_ACTIONS, BOOTSTRAP_END_LOADER,
+  initialState, bootstrapStartEpic, bootstrapEndEpic, 
+  loadJSONDataEpic, boostrapEndRemoveLoaderEpic
 } from './bootstrap'
 import { LOAD_DATA_END, LOAD_DATA_START } from './data'
-
-const JSONData = require('assets/conferenceVids.json')
 
 describe('bootstrap reducer', () => {
 
@@ -40,9 +40,28 @@ describe('bootstrap reducer', () => {
       // act
       loadJSONDataEpic(action$, mockStore(), null)
         .subscribe(
-          (action: Action<any>) => {
+          action => {
             // assert
             expect(action.type).toBe(LOAD_DATA_END)
+            done()
+          },
+          onError(done)
+        )
+    })
+  })
+
+  describe('boostrapEndRemoveLoaderEpic', () => {
+    it('should return the correct action', (done) => {
+      // arrange 
+      const action$ = ActionsObservable.of({type: BOOTSTRAP_END})
+
+      // act
+      boostrapEndRemoveLoaderEpic(action$, mockStore(), null)
+        .subscribe(
+          action => {
+            // assert
+            expect(action.type).toBe(BOOTSTRAP_END_LOADER)
+            expect(action.payload).toBeUndefined()
             done()
           },
           onError(done)
@@ -73,27 +92,26 @@ describe('bootstrap reducer', () => {
 
   describe('reducer', () => {
     it('should return the initial state', () => {
-      // arrange
       // act
-      const result = bootstrapReducer(initialState, {type: 'EEE'})
+      const result = bootstrapReducer(undefined, {type: 'EEE'})
       // assert
-      expect(result).toEqual(result)
+      expect(result).toEqual(initialState)
     })
 
     it('should set finished to false on BOOTSTRAP_START action', () => {
       // arrange
-      const action = {type: 'BOOTSTRAP_START'}
+      const action = {type: BOOTSTRAP_START}
       // act
-      const result = bootstrapReducer(initialState, action)
+      const result = bootstrapReducer(undefined, action)
       // assert
       expect(result.finished).toBe(false)
     })
 
     it('should set finished to true on BOOTSTRAP_END action', () => {
       // arrange
-      const action = {type: 'BOOTSTRAP_END'}
+      const action = {type: BOOTSTRAP_END}
       // act
-      const result = bootstrapReducer(initialState, action)
+      const result = bootstrapReducer(undefined, action)
       // assert
       expect(result.finished).toBe(true)
     })
@@ -102,9 +120,11 @@ describe('bootstrap reducer', () => {
       // arrange
       const payload = 'some data'
       const error = true
-      const action = {type: 'LOAD_DATA_END', payload, error }
+      const action = {type: LOAD_DATA_END, payload, error }
+
       // act
-      const result = bootstrapReducer(initialState, action)
+      const result = bootstrapReducer(undefined, action)
+
       // assert
       expect(result.finished).toBe(false)
       expect(result.data).toBe(payload)

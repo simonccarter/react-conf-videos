@@ -66,9 +66,9 @@ const mapStateToProps = (state: any, props: Props) => {
   const conference = conferences[conferenceId]
   const speaker = presenters[video.presenter]
   return {
-    video: videos[videoId],
     conference,
-    speaker
+    speaker,
+    video
   }
 }
 

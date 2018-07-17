@@ -116,11 +116,10 @@ describe('frontPage', () => {
 
   describe('reducer', () => {
     it('should return the initial state', () => {
-      // arrange
       // act
-      const result = frontPageReducer(initialState, {type: 'EEE'})
+      const result = frontPageReducer(undefined, {type: 'EEE'})
       // assert
-      expect(result).toEqual(result)
+      expect(result).toEqual(initialState)
     })
 
     it('should initiate the slice with the payload', () => {
@@ -130,7 +129,7 @@ describe('frontPage', () => {
       const action = { type: INIT_SLICE, payload }
       
       // act
-      const result = frontPageReducer(initialState, action)
+      const result = frontPageReducer(undefined, action)
 
       // assert
       expect(result).toEqual(expectedResult)
@@ -142,7 +141,7 @@ describe('frontPage', () => {
       const action = { type: FILTER, payload }
       
       // act
-      const result = frontPageReducer(initialState, action)
+      const result = frontPageReducer(undefined, action)
 
       // assert
       expect(result.filterValue).toEqual(payload)
@@ -154,7 +153,7 @@ describe('frontPage', () => {
       const action = { type: SET_FILTERED_CONFERENCES, payload }
       
       // act
-      const result = frontPageReducer(initialState, action)
+      const result = frontPageReducer(undefined, action)
 
       // assert
       expect(result.filteredConferences).toEqual(payload)
@@ -166,7 +165,7 @@ describe('frontPage', () => {
       const action = { type: SET_IS_ACTIVE, payload }
       
       // act
-      const result = frontPageReducer(initialState, action)
+      const result = frontPageReducer(undefined, action)
 
       // assert
       expect(result.isActive).toBe(false)

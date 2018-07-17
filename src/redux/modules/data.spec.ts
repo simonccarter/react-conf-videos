@@ -1,9 +1,8 @@
 import 'rxjs'
-import * as Immutable from 'seamless-immutable'
 import dataReducer, { 
   initialState,
   lowerCase,
-  COPY_DATA, LOAD_DATA_END
+  COPY_DATA
 } from './data'
 
 describe('data', () => {
@@ -33,7 +32,7 @@ describe('data', () => {
       const action = {type: 'EEE'}
 
       // act
-      const result = dataReducer(initialState, action)
+      const result = dataReducer(undefined, action)
       
       // expect
       expect(result).toBe(initialState)
@@ -45,7 +44,7 @@ describe('data', () => {
       const action = {type: COPY_DATA, payload}
       
       // act
-      const result = dataReducer(initialState, action)
+      const result = dataReducer(undefined, action)
       
       // expect
       expect(result).toEqual(payload)
