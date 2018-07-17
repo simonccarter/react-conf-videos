@@ -1,4 +1,3 @@
-
 const util = require('util')
 const mdtable2json = require('mdtable2json')
 const fs = require('fs')

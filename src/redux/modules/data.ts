@@ -1,11 +1,6 @@
 import * as Immutable from 'seamless-immutable'
 import { combineEpics, Epic } from 'redux-observable'
 
-import { normalize } from 'normalizr'
-import conference from 'schemas/data.bu'
-
-import { is, merge, ifElse, either, mapObjIndexed } from 'ramda'
-
 import { 
   Action, 
   JSONInput,
@@ -24,54 +19,6 @@ export type ReduxState = {
   presenters: IndexedPresenters, 
   videosLC: IndexedVideos, 
   videos: IndexedVideos
-}
-
-const whiteListVideos: string[] = ['link', 'embeddableLink']
-const recurseAction =
-  (action: (idx: string) => string) =>
-    (whiteList: string[]): any =>
-      ifElse(
-        either(is(Array), is(Object)),
-        mapObjIndexed((value, key) => whiteList.indexOf(key) > -1 ? value : recurseAction(action)(whiteList)(value)),
-        e => action(e)
-      )
-
-export const lowerCase = (e: string) => e.toLowerCase()
-const lowerCaseAllValues = (whiteList: string[]) => recurseAction(lowerCase)(whiteList)
-const lowerCaseVideos = lowerCaseAllValues(whiteListVideos)
-const lowerCasePresenters = lowerCaseAllValues(whiteListVideos)
-
-const addEmbeddableLinksToVideos = (data: JSONInput): JSONInput => {
-  const linkReg = /https:?\/\/www\.youtube\.com\/watch\?v=(.*?)\&.*$/
-  return data.map((conference) => {
-    const videos = conference.videos || []
-    const nVideos = videos.map((video) => {
-      const embeddableLink = video.link.replace(linkReg, 'https://www.youtube.com/embed/$1')
-      return Object.assign({}, video, { embeddableLink })
-    })
-    return Object.assign({}, conference, { videos: nVideos })
-  })
-}
-
-// normalize data
-export const transformDataFromJson = (data: JSONInput): ReduxState => {
-  // add embeddable links to videos
-  const dataWithEmbeddableLinks = addEmbeddableLinksToVideos(data)
-
-  // normalize
-  const normalized = normalize(dataWithEmbeddableLinks, conference)
-
-  // for quicker searching later
-  const lowerVideos = lowerCaseVideos(normalized.entities.videos)
-  const lowerSpeakerNames = lowerCasePresenters(normalized.entities.presenters)
-
-  // compute and rank ngrams
-  // computeNgrams(lowerVideos)
-
-  return merge(normalized.entities, {
-    videosLC: lowerVideos,
-    presentersLC: lowerSpeakerNames
-  })
 }
 
 // copy data into own slice

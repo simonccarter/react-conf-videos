@@ -355,5 +355,5 @@ List of react conference videos.
 To add a conference and it's videos, or to simply fix a typo: 
 
 1. edit `public/assets/conferenceVids.json`
-2. run `node json2readme > README.md`
+2. run `node ./scripts/json2readme > README.md`
 

@@ -13,4 +13,4 @@ const conference = new schema.Entity('conferences', {
 
 const conferenceSchema = new schema.Array(conference)
 
-module.exports = { conferenceSchema }
+export default conferenceSchema

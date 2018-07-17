@@ -16,7 +16,7 @@ const {
   forEachObjIndexed
 } = require('ramda')
 
-const conferenceVids = JSON.parse(fs.readFileSync('./public/assets/conferenceVids.json'))
+const conferenceVids = JSON.parse(fs.readFileSync('.../public/assets/conferenceVids.json'))
 
 const extratYearFromDDMMYY = date => date.split('-')[2]
 

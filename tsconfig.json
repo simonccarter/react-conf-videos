@@ -8,10 +8,7 @@
     "removeComments": true,
     "sourceMap": true,       
     "strictNullChecks": true,   
-    "module": "es6",            
-    "jsx": "react",             
-    "target": "es5",
-    "lib": ["es5", "es6", "dom"],
+    "target": "es6",
     "allowJs": true,            
     "moduleResolution": "node",
     "paths": {
