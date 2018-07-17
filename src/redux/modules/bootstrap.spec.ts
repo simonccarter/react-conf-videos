@@ -1,7 +1,7 @@
 import 'rxjs'
 import { onError, mockStore } from 'utils'
 import { ActionsObservable } from 'redux-observable'
-import { Action } from 'domain/action'
+import { Action } from 'domain/Action'
 
 import bootstrapReducer, { 
   BOOTSTRAP_START, BOOTSTRAP_END, 
