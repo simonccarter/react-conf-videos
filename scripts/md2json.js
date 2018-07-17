@@ -1,11 +1,9 @@
-
 const util = require('util')
 const mdtable2json = require('mdtable2json')
 const fs = require('fs')
 const { compose, ifElse, either, is, identity, map } = require('ramda')
 
 const args = process.argv
-console.log(args)
 
 // const x = `| Title | Link | Speaker | duration |
 // | ------------- |:-------------:| -----:|

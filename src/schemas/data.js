@@ -1,5 +1,5 @@
-import { schema } from 'normalizr'
-import hash from 'object-hash'
+const hash = require('object-hash')
+const { schema } = require('normalizr')
 
 const hashIdOpts = { idAttribute: v => hash(v) }
 
@@ -11,6 +11,6 @@ const conference = new schema.Entity('conferences', {
   videos: [video]
 }, hashIdOpts)
 
-const conferenceList = new schema.Array(conference)
+const conferenceSchema = new schema.Array(conference)
 
-export default conferenceList
+module.exports = conferenceSchema

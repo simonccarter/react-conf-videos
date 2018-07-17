@@ -4,7 +4,7 @@ import { combineEpics, Epic } from 'redux-observable'
 
 import { Action, JSONInput } from '../../domain'
 
-const JSONData = require('assets/conferenceVids.json')
+
 
 export type ReduxState = {
   finished: boolean,
@@ -19,6 +19,8 @@ export const BOOTSTRAP_END = 'BOOTSTRAP_END'
 export const BOOTSTRAP_END_LOADER = 'END_LOADER'
 
 export const BOOTSTRAP_COMPLETE_ACTIONS = [LOAD_DATA_END, COPY_DATA]
+
+const JSONData = require('assets/conferenceVidsCleaned.json')
 
 const loadDataEnd = (payload: JSONInput) => ({
   type: LOAD_DATA_END,
