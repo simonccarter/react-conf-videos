@@ -3,6 +3,8 @@ import { MiddlewareAPI } from 'redux'
 import { mount, shallow } from 'enzyme'
 import { ReactElement } from 'react'
 
+import { Conference } from '../domain'
+
 /** epics **/
 
 // fails test of error cb of subcribe is called
@@ -27,4 +29,12 @@ export const mountWithStore = <T>(storeP: T, component: ReactElement<any>) => {
   return mount<any, any>(component, { context: { store } })
 }
 
+/** Mock data */
 
+export const mockConference = (): Conference => ({
+  date: 'XX/YY/ZZZ',
+  title: 'fake conf title',
+  website: 'fake url',
+  playlist: 'day 1',
+  videos: ['aaa', 'bbb', 'ccc']
+})

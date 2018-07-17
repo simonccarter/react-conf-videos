@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List List should render and connect 1`] = `
+<pure(Component)
+  conferences={
+    Object {
+      "yyy": Object {
+        "date": "XX/YY/ZZZ",
+        "playlist": "day 1",
+        "title": "fake conf title",
+        "videos": Array [
+          "aaa",
+          "bbb",
+          "ccc",
+        ],
+        "website": "fake url",
+      },
+    }
+  }
+  dispatch={[Function]}
+/>
+`;
+
+exports[`List ListInner should render 1`] = `
+<div
+  className="root"
+>
+  <Connect(pure(withStateHandlers(withHandlers(Component)))) />
+  <p
+    className="resultsCount"
+  >
+    <span
+      className="resultsNumber"
+    >
+       
+      3
+       
+    </span>
+     
+    videos
+    <span
+      className="resultsNumber"
+    >
+       
+      1
+       
+    </span>
+     
+    conference
+  </p>
+  <section
+    className="results"
+  >
+    <Connect(pure(withStateHandlers(Component)))
+      conferenceId="yyy"
+      key="aaa"
+      videoId="aaa"
+    />
+    <Connect(pure(withStateHandlers(Component)))
+      conferenceId="yyy"
+      key="bbb"
+      videoId="bbb"
+    />
+    <Connect(pure(withStateHandlers(Component)))
+      conferenceId="yyy"
+      key="ccc"
+      videoId="ccc"
+    />
+  </section>
+</div>
+`;
