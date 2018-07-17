@@ -5,7 +5,7 @@
   "repository": {},
   "license": "MIT",
   "engines": {
-    "node": ">=6.11.5"
+    "node": ">=8.9.4"
   },
   "dependencies": {
     "awesome-typescript-loader": "^5.0.0",
@@ -34,7 +34,8 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js",
     "clean": "rm -rf ./dist",
-    "prod": "npm run clean & webpack --progress --config webpack.prod.js",
+    "buildData": "ts-node ./scripts/transformDataForWeb.ts build",
+    "prod": "npm run clean & npm run buildData & webpack --progress --config webpack.prod.js",
     "test": "jest --no-cache --coverage --config=config/test/jestconfig.json",
     "test:dev": "jest --watch  --config=config/test/jestconfig.json",
     "lint": "eslint -c .eslintrc.json src/app.js"
@@ -44,7 +45,7 @@
     "@types/enzyme": "^3.1.10",
     "@types/enzyme-adapter-react-16": "^1.0.2",
     "@types/jest": "^23.1.1",
-    "@types/node": "^10.3.3",
+    "@types/node": "^10.5.2",
     "@types/ramda": "^0.25.33",
     "@types/react": "16.3.13",
     "@types/react-dom": "16.0.6",
@@ -83,6 +84,7 @@
     "source-map-loader": "^0.2.3",
     "style-loader": "^0.21.0",
     "ts-jest": "^22.4.6",
+    "ts-node": "^7.0.0",
     "typescript": "^2.9.2",
     "webpack-bundle-analyzer": "^2.9.1",
     "webpack-cli": "^3.0.4",

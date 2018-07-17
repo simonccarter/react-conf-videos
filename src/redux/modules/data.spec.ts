@@ -1,30 +1,10 @@
 import 'rxjs'
 import dataReducer, { 
   initialState,
-  lowerCase,
   COPY_DATA
 } from './data'
 
 describe('data', () => {
-
-  describe('lowerCase', () => {
-    it('should lowercase all chars', () => {
-      // arrange
-      const input = 'AAAAAAAA'
-      const expectedResult = 'aaaaaaaa';
-
-      // act
-      const result = lowerCase(input)
-
-      // assert
-      expect(result).toEqual(expectedResult)
-    })
-  })
-
-  describe('dataCopyEpic', () => {
-    // it('should return the correct action', () => {
-    // })
-  })
 
   describe('reducer', () => {
     it('should return the intial state', () => {

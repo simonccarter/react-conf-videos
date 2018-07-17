@@ -15,7 +15,7 @@
     "allowJs": true,            
     "moduleResolution": "node",
     "paths": {
-      "*": ["src/*", "public/*", "*"]
+      "*": ["src/*", "*"]
     }
   },
   "exclude": ["dist", "build", "node_modules"]
