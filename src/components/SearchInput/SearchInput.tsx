@@ -4,12 +4,9 @@ import { compose, withHandlers, withStateHandlers, pure } from 'recompose'
 
 import { frontPageActions } from 'redux/modules'
 
-import { Conference } from '../../domain'
-
 import styles from './SearchInput.scss'
 
-type RedState = {
-  conferences: {[idx: string]: Conference}
+type ReduxState = {
   filterValue: string
   isActive: boolean
 }
@@ -33,10 +30,9 @@ type DispatchProps = {
   setIsActive: (b: boolean) => void
 }
 
-type CombinedProps = RedState & WithState & WithStateHandlers & WithHandlers
+type CombinedProps = ReduxState & WithState & WithStateHandlers & WithHandlers
 
-const mapStateToProps: (x: any) => RedState = ({ frontPage }: any) => ({
-  conferences: frontPage.filteredConferences,
+const mapStateToProps: (x: any) => ReduxState = ({ frontPage }: any) => ({
   filterValue: frontPage.filterValue,
   isActive: frontPage.isActive
 })
@@ -46,7 +42,7 @@ const mapDispatchToProps = {
   setIsActive: frontPageActions.setIsActive
 }
 
-const SearchInputInner: React.SFC<CombinedProps> = ({
+export const SearchInputInner: React.SFC<CombinedProps> = ({
   filterValue, onInputChange, onKeyUpHandlers, setRef
 }) => (
   <input
@@ -63,16 +59,16 @@ const SearchInputInner: React.SFC<CombinedProps> = ({
 const SearchInput = compose<CombinedProps, {}>(
   connect(mapStateToProps, mapDispatchToProps),
   pure,
-  withStateHandlers<WithState, WithStateHandlers, RedState>(
+  withStateHandlers<WithState, WithStateHandlers, ReduxState>(
     { myRef: null },
     {
       setRef: () => ref => ({ myRef: ref }),
       blurRef: ({ myRef }) => () => myRef.blur()
     }
   ),
-  withHandlers<DispatchProps & WithState & WithStateHandlers & RedState, WithHandlers>({
+  withHandlers<DispatchProps & WithState & WithStateHandlers & ReduxState, WithHandlers>({
     onKeyUpHandlers: ({ blurRef }) => (e: any) => {
-      if (e.keyCode === 13 || e.charCode === 13) {
+      if (e.keyCode === 13) {
         blurRef()
       }
     },

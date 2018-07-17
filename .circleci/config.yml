@@ -35,10 +35,14 @@ jobs:
       # build
       - run: yarn run prod
 
+      # save cache
       - save_cache:
           key: v1-repo-{{ .Branch }}-{{ .Revision }}
           paths:
             - .
+
+      # test
+      - run: yarn run test
 
   deploy-dev:
     <<: *container_config
@@ -92,6 +96,7 @@ workflows:
             branches:
               only: 
                 - develop
+                - feature/jest
       - deploy-master:
           requires:
             - set-up

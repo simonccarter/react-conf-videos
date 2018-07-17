@@ -9,8 +9,8 @@ import styles from './FrontPage.scss'
 
 type Props = { isActive: boolean }
 
-const FrontPageInner: React.SFC<Props> = props => (
-  <main className={cn(styles.FrontPage, { [`${styles.isActive}`]: props.isActive })} >
+export const FrontPageInner: React.SFC<Props> = props => (
+  <main className={cn(styles.frontPage, { [`${styles.isActive}`]: props.isActive })} >
     <div className={styles.header} >
       <div className={cn(styles.text, { [`${styles.isActive}`]: props.isActive })} >
         <h1> React.js Videos</h1>

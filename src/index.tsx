@@ -11,9 +11,9 @@ const store = configureStore()
 // start bootstrap process
 store.dispatch({ type: 'BOOTSTRAP_START' })
 
-const render = () => {
+export const render = () => {
   ReactDOM.render(
-    <AppContainer warnings={false}><Provider store={store}><App /></Provider></AppContainer>,
+    <AppContainer><Provider store={store}><App /></Provider></AppContainer>,
     document.getElementById('app__container')
   )
 }

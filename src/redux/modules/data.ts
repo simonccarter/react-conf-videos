@@ -1,30 +1,47 @@
-import Immutable from 'seamless-immutable'
-import { combineEpics } from 'redux-observable'
+import * as Immutable from 'seamless-immutable'
+import { combineEpics, Epic } from 'redux-observable'
 
 import { normalize } from 'normalizr'
 import conference from 'schemas/data'
 
 import { is, merge, ifElse, either, mapObjIndexed } from 'ramda'
 
+import { 
+  Action, 
+  JSONInput,
+  IndexedVideos,
+  IndexedPresenters,
+  IndexedConferences
+} from '../../domain'
+
 export const LOAD_DATA_START = 'LOAD_DATA_START'
 export const LOAD_DATA_END = 'LOAD_DATA_END'
 export const COPY_DATA = 'data.COPY_DATA'
 
-const whiteListVideos = ['link', 'embeddableLink']
+export type ReduxState = {
+  presentersLC: IndexedPresenters, 
+  conferences: IndexedConferences, 
+  presenters: IndexedPresenters, 
+  videosLC: IndexedVideos, 
+  videos: IndexedVideos
+}
+
+const whiteListVideos: string[] = ['link', 'embeddableLink']
 const recurseAction =
-  action =>
-    whiteList =>
+  (action: (idx: string) => string) =>
+    (whiteList: string[]): any =>
       ifElse(
         either(is(Array), is(Object)),
-        mapObjIndexed((value, key) => whiteList.includes(key) ? value : recurseAction(action)(whiteList)(value)),
+        mapObjIndexed((value, key) => whiteList.indexOf(key) > -1 ? value : recurseAction(action)(whiteList)(value)),
         e => action(e)
       )
 
-const lowerCaseAllValues = obj => recurseAction(e => e.toLowerCase())(obj)
+export const lowerCase = (e: string) => e.toLowerCase()
+const lowerCaseAllValues = (whiteList: string[]) => recurseAction(lowerCase)(whiteList)
 const lowerCaseVideos = lowerCaseAllValues(whiteListVideos)
 const lowerCasePresenters = lowerCaseAllValues(whiteListVideos)
 
-const addEmbeddableLinksToVideos = (data) => {
+const addEmbeddableLinksToVideos = (data: JSONInput): JSONInput => {
   const linkReg = /https:?\/\/www\.youtube\.com\/watch\?v=(.*?)\&.*$/
   return data.map((conference) => {
     const videos = conference.videos || []
@@ -37,7 +54,7 @@ const addEmbeddableLinksToVideos = (data) => {
 }
 
 // normalize data
-const transformDataFromJson = (data) => {
+const transformDataFromJson = (data: JSONInput): ReduxState => {
   // add embeddable links to videos
   const dataWithEmbeddableLinks = addEmbeddableLinksToVideos(data)
 
@@ -58,17 +75,17 @@ const transformDataFromJson = (data) => {
 }
 
 // copy data into own slice
-export const dataCopyEpic = action$ =>
+export const dataCopyEpic: Epic<any, Action<JSONInput>> = action$ =>
   action$.ofType(LOAD_DATA_END)
     .map(action => ({ type: COPY_DATA, payload: transformDataFromJson(action.payload) }))
 
 export const dataEpics = combineEpics(dataCopyEpic)
 
-const initialState = Immutable({
+export const initialState = Immutable<ReduxState>({
   presenters: {}, conferences: {}, videos: {}, videosLC: {}, presentersLC: {}
 })
 
-const dataReducer = (state = initialState, action) => {
+const dataReducer = (state = initialState, action: Action<any>) => {
   switch (action.type) {
     case COPY_DATA:
       return state.merge(action.payload)
