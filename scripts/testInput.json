@@ -1,0 +1,55 @@
+[
+  {
+    "title": "React Conf 2017",
+    "date": "13-03-2017",
+    "website": "http://conf.reactjs.org/",
+    "playlist": "https://www.youtube.com/playlist?list=PLb0IAmt7-GS3fZ46IGFirdqKTIxlws7e0",
+    "videos" : [
+      {
+        "title": "Keynote Part 1",
+        "link": "https://www.youtube.com/watch?v=7HSd1sk07uU&index=1&list=PLb0IAmt7-GS3fZ46IGFirdqKTIxlws7e0",
+        "presenter": {
+          "name": "Tom Occhino"
+        },
+        "length": "6:36",
+        "split" : "Day 1"
+      },
+      {
+        "title": "Keynote Part 2 - Incrementally Adopting React Native at Facebook",
+        "link": "https://www.youtube.com/watch?v=cSUxHv-kH7w&list=PLb0IAmt7-GS3fZ46IGFirdqKTIxlws7e0&index=2",
+        "presenter": {
+          "name": "Jing Chen"
+        },
+        "length": "14:13",
+        "split" : "Day 1"
+      }
+    ]
+  },
+  {
+    "title": "React Rally 2017",
+    "date": "24-08-2017",
+    "website": "http://www.reactrally.com/",
+    "playlist": "https://www.youtube.com/watch?v=2rhkgB8Cohc&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531",
+    "videos":   [
+      {
+        "title": "UNPKG: The CDN for everything on npm",
+        "link": "https://www.youtube.com/watch?v=2rhkgB8Cohc&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531",
+        "presenter": {
+          "name": "Michael Jackson"
+        },
+        "length": "31:46",
+        "split": "Day 1"
+      },
+      {
+        "title": "D3 & React",
+        "link": "https://www.youtube.com/watch?v=ladXdJ3KKd4&index=2&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531",
+        "presenter": {
+          "name": "Shirley Wu"
+        },
+        "length": "26:57",
+        "split": "Day 1"
+      }
+    ]
+  }
+]
+  

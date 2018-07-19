@@ -56,6 +56,14 @@ export const SearchInputInner: React.SFC<CombinedProps> = ({
   />
 )
 
+// for testing
+export const blurRef = ({myRef}: WithState) => () => myRef.blur()
+export const onKeyUpHandlers = ({blurRef}: WithStateHandlers) => (e: any) => {
+  if (e.keyCode === 13) {
+    blurRef()
+  }
+}
+
 const SearchInput = compose<CombinedProps, {}>(
   connect(mapStateToProps, mapDispatchToProps),
   pure,
@@ -63,15 +71,11 @@ const SearchInput = compose<CombinedProps, {}>(
     { myRef: null },
     {
       setRef: () => ref => ({ myRef: ref }),
-      blurRef: ({ myRef }) => () => myRef.blur()
+      blurRef
     }
   ),
   withHandlers<DispatchProps & WithState & WithStateHandlers & ReduxState, WithHandlers>({
-    onKeyUpHandlers: ({ blurRef }) => (e: any) => {
-      if (e.keyCode === 13) {
-        blurRef()
-      }
-    },
+    onKeyUpHandlers,
     onInputChange: ({ filter, setIsActive }) => (e: any) => {
       setIsActive(e.target.value !== '')
       filter(e.target.value)
