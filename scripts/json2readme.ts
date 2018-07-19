@@ -16,23 +16,28 @@ const {
   forEachObjIndexed
 } = require('ramda')
 
-const conferenceVids = JSON.parse(fs.readFileSync('.../public/assets/conferenceVids.json'))
+import { JSONInput, VideoInput } from '../src/domain'
 
-const extratYearFromDDMMYY = date => date.split('-')[2]
+const isTest = process.env.NODE_ENV === 'test'
+
+const conferenceVids = JSON.parse(fs.readFileSync('./public/assets/conferenceVids.json'))
+
+const extratYearFromDDMMYY = (date: string) => date.split('-')[2]
 
 const computePlaylistDetails = ifElse(
   is(String),
-  playlist => ` - [playlist](${playlist})`,
-  (playlist) => {
+  (playlist: string) => ` - [playlist](${playlist})`,
+  (playlist: any) => {
     let playlists = ''
-    forEachObjIndexed((val, key) => {
+    forEachObjIndexed((val: string, key: string) => {
       playlists += ` - [playlist: ${key}](${val})`
     }, playlist)
     return playlists
   }
 )
 
-const conferenceDetails = ({ title, website, playlist = '' }) => {
+type ConfDetails = { title: string, website: string, playlist: string}
+const conferenceDetails = ({ title, website, playlist = '' }: ConfDetails) => {
   let output = ''
   output += `\n### ${title}\n\n##### ${website ? `[website](${website})` : ''}`
   output += computePlaylistDetails(playlist)
@@ -41,8 +46,8 @@ const conferenceDetails = ({ title, website, playlist = '' }) => {
 
 const tableHeader = () => '\n| Title/Link        | Presenter  | Length |\n| ------------- |:-------------:| -----:|'
 
-const conferenceVideos = (videos) => {
-  const createTable = curry((title, videos) => {
+const conferenceVideos = (videos: VideoInput[]) => {
+  const createTable = curry((title: string, videos: VideoInput[]) => {
     let output = title ? `\n#### ${title}\n` : '\n'
     output += tableHeader()
     output += videos.reduce((acc, {
@@ -60,7 +65,7 @@ const conferenceVideos = (videos) => {
   if (!splits.length) {
     output = createTable('', videos)
   } else {
-    output = map(split => compose(
+    output = map((split: string) => compose(
       createTable(split),
       filter(propEq('split', split)) // extract out matching videos for split
     )(videos)
@@ -69,7 +74,7 @@ const conferenceVideos = (videos) => {
   return output
 }
 
-const createBody = conferenceVids => conferenceVids.reduce((acc, conference, idx, arr) => {
+const createBody = (conferenceVids: JSONInput) => conferenceVids.reduce((acc, conference, idx, arr) => {
   // output year if different to last one, or if first conference in list
   const { date } = conference
   const year = extratYearFromDDMMYY(date)
@@ -87,7 +92,18 @@ const createBody = conferenceVids => conferenceVids.reduce((acc, conference, idx
 const createHead = () => '# React.js Conference Videos\nList of react conference videos.\n' +
 '[www.reactjsvideos.com](https://www.reactjsvideos.com)'
 
-const createNavLinks = (conferenceVids) => {
+type TitlesAndYears = [string,string][]
+const computeLnks = (titlesAndYears: TitlesAndYears) => {
+return titlesAndYears.reduce((acc, [title, year], idx) => {
+  if (idx === 0 || year !== titlesAndYears[idx > 0 ? idx - 1 : 0][1]) {
+    acc += `\n* ${year}`
+  }
+  acc += `\n  * [${title}](#${title.replace(/\s/g, '-').replace(/\.+/g, '').toLowerCase()})`
+  return acc
+}, '')
+} 
+
+const createNavLinks = (conferenceVids: JSONInput) => {
   // produce nested arrays containing [[title, year], [title, year]...]
   const titlesAndYears = zip(
     pluck('title', conferenceVids),
@@ -97,16 +113,10 @@ const createNavLinks = (conferenceVids) => {
     )(conferenceVids)
   )
 
-  // create nav list over them a
-  const computeLinks = () => titlesAndYears.reduce((acc, [title, year], idx) => {
-    if (idx === 0 || year !== titlesAndYears[idx > 0 ? idx - 1 : 0][1]) {
-      acc += `\n* ${year}`
-    }
-    acc += `\n  * [${title}](#${title.replace(/\s/g, '-').replace(/\.+/g, '').toLowerCase()})`
-    return acc
-  }, '')
+  // create nav list
+  const computedLinks = computeLnks(titlesAndYears)
 
-  return `\n## Quick Links\n${computeLinks()}\n * [Contributing](#contributing)`
+  return `\n## Quick Links\n${computedLinks}\n * [Contributing](#contributing)`
 }
 
 // sort function by date
@@ -128,10 +138,10 @@ const createFooter = () => `
 To add a conference and it's videos, or to simply fix a typo: 
 
 1. edit \`public/assets/conferenceVids.json\`
-2. run \`node json2readme > README.md\`
+2. run \`yarn run createReadme > README.md\`
 `
 
-const run = (conferenceVids) => {
+const run = (conferenceVids: JSONInput) => {
   // should already be sorted, but in case not
   const sorted = sortJSONByDate(conferenceVids)
 
@@ -143,5 +153,10 @@ const run = (conferenceVids) => {
   return `${head}\n${navLinks}\n${body}\n${footer}`
 }
 
-console.log(run(conferenceVids))
+if (!isTest) {
+  console.log(run(conferenceVids))
+}
 
+module.exports = {
+  run
+}

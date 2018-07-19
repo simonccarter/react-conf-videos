@@ -60,9 +60,6 @@ const transformDataFromJson = (data: JSONInput): ReduxState => {
   const lowerVideos = lowerCaseVideos(normalized.entities.videos)
   const lowerSpeakerNames = lowerCasePresenters(normalized.entities.presenters)
 
-  // compute and rank ngrams
-  // computeNgrams(lowerVideos)
-
   return merge(normalized.entities, {
     videosLC: lowerVideos,
     presentersLC: lowerSpeakerNames
