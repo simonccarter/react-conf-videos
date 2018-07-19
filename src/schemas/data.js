@@ -1,7 +1,9 @@
-const hash = require('object-hash')
+const crypto = require('crypto')
 const { schema } = require('normalizr')
 
-const hashIdOpts = { idAttribute: v => hash(v) }
+const hashFunction = toHash => crypto.createHash('md5').update(JSON.stringify(toHash)).digest("hex")
+
+const hashIdOpts = { idAttribute: hashFunction }
 
 const presenter = new schema.Entity('presenters', {}, hashIdOpts)
 

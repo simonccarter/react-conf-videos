@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`json2reamd run should match snapshot 1`] = `
+"# React.js Conference Videos
+List of react conference videos.
+[www.reactjsvideos.com](https://www.reactjsvideos.com)
+
+## Quick Links
+
+* 2017
+  * [React Rally 2017](#react-rally-2017)
+  * [React Conf 2017](#react-conf-2017)
+ * [Contributing](#contributing)
+
+
+## 2017
+
+### React Rally 2017
+
+##### [website](http://www.reactrally.com/) - [playlist](https://www.youtube.com/watch?v=2rhkgB8Cohc&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531)
+
+#### Day 1
+
+| Title/Link        | Presenter  | Length |
+| ------------- |:-------------:| -----:|
+[UNPKG: The CDN for everything on npm](https://www.youtube.com/watch?v=2rhkgB8Cohc&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531) | Michael Jackson | 31:46
+[D3 & React](https://www.youtube.com/watch?v=ladXdJ3KKd4&index=2&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531) | Shirley Wu | 26:57
+
+### React Conf 2017
+
+##### [website](http://conf.reactjs.org/) - [playlist](https://www.youtube.com/playlist?list=PLb0IAmt7-GS3fZ46IGFirdqKTIxlws7e0)
+
+#### Day 1
+
+| Title/Link        | Presenter  | Length |
+| ------------- |:-------------:| -----:|
+[Keynote Part 1](https://www.youtube.com/watch?v=7HSd1sk07uU&index=1&list=PLb0IAmt7-GS3fZ46IGFirdqKTIxlws7e0) | Tom Occhino | 6:36
+[Keynote Part 2 - Incrementally Adopting React Native at Facebook](https://www.youtube.com/watch?v=cSUxHv-kH7w&list=PLb0IAmt7-GS3fZ46IGFirdqKTIxlws7e0&index=2) | Jing Chen | 14:13
+
+
+
+## Contributing
+
+To add a conference and it's videos, or to simply fix a typo: 
+
+1. edit \`public/assets/conferenceVids.json\`
+2. run \`yarn run createReadme > README.md\`
+"
+`;

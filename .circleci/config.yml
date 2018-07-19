@@ -96,7 +96,6 @@ workflows:
             branches:
               only: 
                 - develop
-                - feature/dataPrepOnBuild
       - deploy-master:
           requires:
             - set-up
