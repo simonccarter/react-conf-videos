@@ -33,8 +33,8 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js",
     "clean": "rm -rf ./dist",
-    "buildData": "ts-node ./scripts/transformDataForWeb.ts build",
-    "createReadme": "ts-node ./scripts/json2readme.ts",
+    "buildData": "ts-node --project ./scripts/tsconfig.json ./scripts/transformDataForWeb.ts build",
+    "createReadme": "ts-node --project ./scripts/tsconfig.json ./scripts/json2readme.ts > README.md",
     "prod": "npm run clean & npm run buildData & webpack --progress --config webpack.prod.js",
     "test": "jest --no-cache --coverage --config=config/test/jestconfig.json",
     "test:dev": "jest --watch  --config=config/test/jestconfig.json",

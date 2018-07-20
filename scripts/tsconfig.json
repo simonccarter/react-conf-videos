@@ -1,0 +1,22 @@
+
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "removeComments": true,
+    "sourceMap": true,       
+    "strictNullChecks": true,   
+    "module": "es6",            
+    "jsx": "react",             
+    "target": "es5",
+    "lib": ["es5", "es6"],
+    "moduleResolution": "node",
+    "paths": {
+      "*": ["src/*", "*"]
+    }
+  },
+  "exclude": ["dist", "build", "node_modules", "scripts"]
+}
