@@ -12,7 +12,8 @@
     "!**/src/domain/**",
     "!**/__snapshots__/**",
     "!**/*index.{js,jsx,ts,tsx}",
-    "!**/src/redux/modules/root.ts"
+    "!**/src/redux/modules/root.ts",
+    "!**/scripts/*.json"
   ],
   "transform": {
     "^.+\\.(j|t)sx?$": "ts-jest"

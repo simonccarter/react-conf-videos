@@ -2,7 +2,7 @@ const fs = require('fs')
 const { normalize } = require('normalizr')
 const { ifElse, either, is, mapObjIndexed, merge } = require('ramda')
 
-const conferenceSchema = require('../src/schemas/data.js')
+const conferenceSchema = require('./confSchema')
 
 const args = process.argv
 
