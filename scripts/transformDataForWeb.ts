@@ -2,7 +2,7 @@ const fs = require('fs')
 const { normalize } = require('normalizr')
 const { ifElse, either, is, mapObjIndexed, merge } = require('ramda')
 
-const conferenceSchema = require('../src/schemas/data.js')
+const conferenceSchema = require('./confSchema')
 
 const args = process.argv
 
@@ -60,15 +60,13 @@ const transformDataFromJson = (data: JSONInput): ReduxState => {
   const lowerVideos = lowerCaseVideos(normalized.entities.videos)
   const lowerSpeakerNames = lowerCasePresenters(normalized.entities.presenters)
 
-  // compute and rank ngrams
-  // computeNgrams(lowerVideos)
-
   return merge(normalized.entities, {
     videosLC: lowerVideos,
     presentersLC: lowerSpeakerNames
   })
 }
 
+/* istanbul ignore next */
 const run = () => {
   const data = JSON.parse(fs.readFileSync('./public/assets/conferenceVids.json', 'utf8'))
   const transformedJson = transformDataFromJson(data)
@@ -78,10 +76,12 @@ const run = () => {
   fs.writeFileSync(outFile, JSON.stringify(transformedJson))
 }
 
+/* istanbul ignore next */
 if (args[2] && args[2].toLowerCase() === 'build') {
   run()
 }
 
 module.exports = {
-  lowerCase
+  lowerCase,
+  transformDataFromJson
 }

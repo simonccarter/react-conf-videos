@@ -1,4 +1,5 @@
-const { lowerCase } = require('./transformDataForWeb')
+const fs = require('fs')
+const { lowerCase, transformDataFromJson } = require('./transformDataForWeb')
 
 describe('lowerCase', () => {
   it('should lowercase all chars', () => {
@@ -11,5 +12,18 @@ describe('lowerCase', () => {
 
     // assert
     expect(result).toEqual(expectedResult)
+  })
+})
+
+describe('transformDataFromJson', () => {
+  it('should match the snapshot', () => {
+    // arrange
+    const inputJSON = JSON.parse(fs.readFileSync('./scripts/testInput.json', 'utf8'))
+
+    // act
+    const result = transformDataFromJson(inputJSON)
+
+    // assert
+    expect(result).toMatchSnapshot()
   })
 })

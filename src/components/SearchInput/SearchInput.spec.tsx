@@ -4,7 +4,7 @@ import { createMockStore } from 'redux-test-utils'
 import toJSON from 'enzyme-to-json'
 
 import { shallowWithStore, mountWithStore } from 'utils'
-import SearchInput, { SearchInputInner } from './SearchInput'
+import SearchInput, { SearchInputInner, blurRef, onKeyUpHandlers } from './SearchInput'
 
 import { FILTER, SET_IS_ACTIVE } from '../../redux/modules/frontPage'
 
@@ -68,5 +68,46 @@ describe('SearchInput', () => {
     expect(store.isActionTypeDispatched(FILTER)).toBe(true)
     expect(store.isActionTypeDispatched(SET_IS_ACTIVE)).toBe(true)
   })
+})
 
+describe('blueRef', () => {
+  it('should call the blurRef method of the element', () => {
+    // arrange
+    const mockBlur = jest.fn()
+    const fakeElement = {myRef: {blur: mockBlur }}
+
+    // act 
+    blurRef(fakeElement)()
+
+    // assert
+    expect(mockBlur).toHaveBeenCalledTimes(1)
+  })
+})
+
+describe('onKeyUpHandlers', () => {
+  it('should call blurRef when keyCode is 13', () => {
+    // arrange
+    const blurRef = jest.fn()
+    const input = {blurRef, setRef: jest.fn()}
+    const mockEvent = {keyCode: 13}
+
+    // act 
+    onKeyUpHandlers(input)(mockEvent)
+
+    // assert
+    expect(blurRef).toHaveBeenCalledTimes(1)
+  })
+
+  it('should not call blurRef when keyCode is not 13', () => {
+    // arrange
+    const blurRef = jest.fn()
+    const input = {blurRef, setRef: jest.fn()}
+    const mockEvent = {keyCode: 14}
+
+    // act 
+    onKeyUpHandlers(input)(mockEvent)
+
+    // assert
+    expect(blurRef).toHaveBeenCalledTimes(0)
+  })
 })

@@ -1,6 +1,9 @@
 import { any } from 'ramda'
 import * as Immutable from 'seamless-immutable'
+import { push } from 'connected-react-router'
 import { combineEpics, Epic } from 'redux-observable'
+
+import { isFilterEmpty } from 'utils'
 
 import { COPY_DATA } from './data'
 
@@ -11,6 +14,7 @@ import {
   IndexedVideos,
   IndexedConferences
 } from '../../domain'
+
 
 export const INIT_SLICE = 'frontPage/INIT_SLICE'
 export const FILTER = 'frontPage/FILTER'
@@ -63,7 +67,7 @@ export const createConference = (conferences: Immutable.Immutable<IndexedConfere
   return Object.assign({}, newConferences, { [`${conferenceKey}`]: newConference })
 }
 
-// filter videos by title and or speaker
+// search functionality: filter videos by title and or speaker or conference
 const computeFilteredConferences = (filterValue: string, conferences: IndexedConferences, videos: IndexedVideos, presenters: IndexedPresenters) => {
   // loop through all conferences, getting list of videos
   const newConferences = Object.keys(conferences).reduce((newConferencesAcc, conferenceKey) => {
@@ -79,20 +83,31 @@ const computeFilteredConferences = (filterValue: string, conferences: IndexedCon
 export const filterEpic: Epic<Action<any>, any> = (action$, store) =>
   action$
     .ofType(FILTER)
-    .debounceTime(80)
+    .debounceTime(80) 
     .map((action) => {
       const { payload: filterValue = ''} = action
       const state = store.getState()
       const rAction: Action<IndexedConferences> = { type: SET_FILTERED_CONFERENCES }
       const { conferences, videosLC, presentersLC } = state.data
       // if no/empty query, return original set of videos
-      rAction.payload = filterValue.trim() === '' ?
+      rAction.payload = isFilterEmpty(filterValue) ?
         state.frontPage.conferences :
         computeFilteredConferences(filterValue.trim().toLowerCase(), conferences, videosLC, presentersLC)
       return rAction
     })
 
-export const frontPageEpics = combineEpics(initSliceEpic, filterEpic)
+// set url query string location based on filterValue
+export const routingEpic: Epic<Action<any>, any> = (action$, store) => 
+  action$
+    .ofType(FILTER)
+    .debounceTime(80)
+    .map((action: Action<any>) => {
+      const { payload: filterValue = ''} = action
+      const location = isFilterEmpty(filterValue) ? '/' : `/search?query=${filterValue}`
+      return push(location)
+    })
+
+export const frontPageEpics = combineEpics(initSliceEpic, filterEpic, routingEpic)
 export const frontPageActions = {
   filter,
   setIsActive
