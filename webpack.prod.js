@@ -28,7 +28,15 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]',
-          'sass-loader'
+          {
+            loader: "sass-loader",
+            options: { 
+              data: '@import "_colors";',
+              includePaths: [
+                path.resolve(__dirname, "./src/styles/")
+              ]
+            }
+          }
         ]
       },
       {
