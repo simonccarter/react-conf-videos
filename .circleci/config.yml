@@ -5,7 +5,6 @@
 version: 2.0
 
 references:
-
   container_config: &container_config
     docker:
       - image: circleci/node:7.10
@@ -20,10 +19,7 @@ references:
 
 jobs:
   set-up:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:7.10
-    working_directory: ~/repo
+    <<: *container_config
     steps:
       - *restore_repo
 
