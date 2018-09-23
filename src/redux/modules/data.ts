@@ -1,6 +1,8 @@
 import * as Immutable from 'seamless-immutable'
 import { combineEpics, Epic } from 'redux-observable'
 
+import 'rxjs/add/operator/map'
+
 import { 
   Action, 
   JSONInput,
