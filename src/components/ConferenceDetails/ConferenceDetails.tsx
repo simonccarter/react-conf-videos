@@ -9,7 +9,7 @@ type Props = {
 
 const ConferenceDetails: React.SFC<Props> = ({ title, date }) => (
   <section className={styles.root}>
-    <h1> { title + ' ' + date } </h1>
+    <h2 className={styles.details}> { title + ' ' + date } </h2>
   </section>
 )
 

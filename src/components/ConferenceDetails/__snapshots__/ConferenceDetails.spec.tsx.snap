@@ -4,10 +4,12 @@ exports[`ConferenceDetails should render and display the title and date 1`] = `
 <section
   className="root"
 >
-  <h1>
+  <h2
+    className="details"
+  >
      
     Fake Conf Title XX/XX/XXXX
      
-  </h1>
+  </h2>
 </section>
 `;

@@ -14,6 +14,6 @@ describe('ConferenceDetails', () => {
 
     // assert
     expect(toJSON(wrapper)).toMatchSnapshot()
-    expect(wrapper.find('h1').text().trim()).toEqual(expectedRenderString)
+    expect(wrapper.find('h2').text().trim()).toEqual(expectedRenderString)
   })
 })
