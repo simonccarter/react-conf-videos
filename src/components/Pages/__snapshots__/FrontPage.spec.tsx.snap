@@ -17,17 +17,22 @@ exports[`FrontPage FrontPageInner should render 1`] = `
     <div
       className="text isActive"
     >
-      <h1>
+      <h1
+        className="headerTitle"
+      >
          React.js Videos
       </h1>
-      <p>
+      <p
+        className="headerText"
+      >
          Search React.js conference videos. 
       </p>
       <p
-        className="contribute"
+        className="headerText contribute"
       >
          Contribute 
         <a
+          className="contributeLink"
           href="https://github.com/simonccarter/react-conf-videos"
         >
           here
