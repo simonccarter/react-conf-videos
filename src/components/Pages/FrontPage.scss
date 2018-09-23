@@ -17,12 +17,12 @@
     margin: 0 auto;
     padding: 2rem;
 
-    h1 {
+    .headerTitle {
       font-size: 3rem;
       margin: 0;
     }
 
-    p {
+    .headerText {
       margin-top: 0rem;
       font-weight: bold;
       margin-bottom: 0.2rem;
@@ -30,7 +30,7 @@
 
     .contribute {
       font-size: 1rem;
-      a {
+      .contributeLink {
         text-decoration: underline;
         font-style: italic;
       }

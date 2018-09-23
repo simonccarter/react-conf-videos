@@ -13,9 +13,9 @@ export const FrontPageInner: React.SFC<Props> = props => (
   <main className={cn(styles.frontPage, { [`${styles.isActive}`]: props.isActive })} >
     <div className={styles.header} >
       <div className={cn(styles.text, { [`${styles.isActive}`]: props.isActive })} >
-        <h1> React.js Videos</h1>
-        <p> Search React.js conference videos. </p>
-        <p className={styles.contribute}> Contribute <a href="https://github.com/simonccarter/react-conf-videos">here</a>.</p>
+        <h1 className={styles.headerTitle}> React.js Videos</h1>
+        <p className={styles.headerText}> Search React.js conference videos. </p>
+        <p className={cn(styles.headerText, styles.contribute)}> Contribute <a className={styles.contributeLink} href="https://github.com/simonccarter/react-conf-videos">here</a>.</p>
       </div>
     </div>
     <List />
