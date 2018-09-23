@@ -1,9 +1,11 @@
-import { any } from 'ramda'
 import * as Immutable from 'seamless-immutable'
+import { any } from 'ramda'
 import { push } from 'connected-react-router'
 import { combineEpics, Epic } from 'redux-observable'
-
 import { isFilterEmpty } from 'utils'
+
+import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/debounceTime'
 
 import { COPY_DATA } from './data'
 

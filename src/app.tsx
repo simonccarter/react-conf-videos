@@ -1,4 +1,3 @@
-import 'rxjs'
 import * as React from 'react'
 import FrontPage from 'components/Pages/FrontPage'
 

@@ -3,6 +3,13 @@ import * as Immutable from 'seamless-immutable'
 import { combineEpics, Epic } from 'redux-observable'
 import { Action, JSONInput } from '../../domain'
 
+import 'rxjs/add/operator/do'
+import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/take'
+import 'rxjs/add/operator/delay'
+import 'rxjs/add/operator/mapTo'
+import 'rxjs/add/operator/bufferCount'
+
 import { frontPageActions, SET_FILTERED_CONFERENCES } from './frontPage'
 
 export type ReduxState = {
