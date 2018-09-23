@@ -2,8 +2,6 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import { createEpicMiddleware } from 'redux-observable'
 import { rootEpic, rootReducer } from 'redux/modules/root'
 import { connectRouter, routerMiddleware } from 'connected-react-router'
-// import { combineReducers } from 'redux'
-
 import { createBrowserHistory } from 'history'
 
 const isProd = process.env.NODE_ENV === 'production'
