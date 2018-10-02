@@ -8,7 +8,8 @@ import {
   JSONInput,
   IndexedVideos,
   IndexedPresenters,
-  IndexedConferences
+  IndexedConferences,
+  ConferenceTitlesToIds
 } from '../../domain'
 
 export const LOAD_DATA_START = 'LOAD_DATA_START'
@@ -16,6 +17,7 @@ export const LOAD_DATA_END = 'LOAD_DATA_END'
 export const COPY_DATA = 'data.COPY_DATA'
 
 export type ReduxState = {
+  conferenceTitlesToIds: ConferenceTitlesToIds,
   presentersLC: IndexedPresenters, 
   conferences: IndexedConferences, 
   presenters: IndexedPresenters, 
@@ -31,7 +33,7 @@ export const dataCopyEpic: Epic<any, Action<JSONInput>> = action$ =>
 export const dataEpics = combineEpics(dataCopyEpic)
 
 export const initialState = Immutable<ReduxState>({
-  presenters: {}, conferences: {}, videos: {}, videosLC: {}, presentersLC: {}
+  presenters: {}, conferences: {}, videos: {}, videosLC: {}, presentersLC: {}, conferenceTitlesToIds: {}
 })
 
 const dataReducer = (state = initialState, action: Action<any>) => {

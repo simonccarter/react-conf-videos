@@ -2,11 +2,10 @@ import 'rxjs'
 import * as Immutable from 'seamless-immutable'
 import { ActionsObservable } from 'redux-observable'
 
-import { COPY_DATA } from './data'
 import { onError, mockStore } from '../../utils'
 
 import frontPageReducer, {
-  textInDetails, initSliceEpic, initialState,
+  textInDetails, initialState,
   INIT_SLICE, FILTER, SET_FILTERED_CONFERENCES,
   SET_IS_ACTIVE, filterEpic, createConference,
   routingEpic
@@ -71,28 +70,6 @@ describe('frontPage', () => {
 
       // assert
       expect(result).toEqual(expectedResult)
-    })
-  })
-
-  describe('initSliceEpic', () => {
-    it('should return the correct action', (done) => {
-      // arrange
-      const payload = { conferences: {} }
-      const action$ = ActionsObservable.of({ type: COPY_DATA, payload })
-      const expectedPayload = { conferences: {}, filteredConferences: {} }
-
-      // act
-      initSliceEpic(action$, mockStore(), null)
-        .subscribe(
-          action => {
-            // assert
-            expect(action.type).toEqual(INIT_SLICE)
-            expect(action.payload).toEqual(expectedPayload)
-            done()
-          },
-          onError(done)
-        )
-
     })
   })
 
@@ -216,7 +193,7 @@ describe('frontPage', () => {
       const result = frontPageReducer(undefined, action)
 
       // assert
-      expect(result.filteredConferences).toEqual(payload)
+      expect(result.conferences).toEqual(payload)
     })
 
     it('should set the isActive status', () => {
