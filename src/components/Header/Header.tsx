@@ -10,14 +10,13 @@ import { frontPageActions } from 'redux/modules'
 
 type DispatchProps = {
   filter: typeof frontPageActions.filter
-  setIsActive: typeof frontPageActions.setIsActive
 }
 
 type WithHandlers = {
   onClick: (e: any) => void
 }
 
-type CombinedProps = DispatchProps & WithHandlers
+// type CombinedProps = DispatchProps & WithHandlers
 
 const HeaderInner: React.SFC<WithHandlers> = ({onClick}) => (
   <div className={styles.header}>
@@ -34,16 +33,14 @@ const HeaderInner: React.SFC<WithHandlers> = ({onClick}) => (
 
 const mapDispatchToProps = {
   filter: frontPageActions.filter,
-  setIsActive: frontPageActions.setIsActive
 }
 
-const Header = compose<CombinedProps, {}>(
+const Header = compose<WithHandlers, {}>(
   connect(null, mapDispatchToProps),
   pure,
   withHandlers<DispatchProps, WithHandlers>({
-    onClick: ({ filter, setIsActive }) => (e: any) => {
+    onClick: ({ filter }) => (e: any) => {
       e.preventDefault()
-      setIsActive(false)
       filter('')
     }
   })
