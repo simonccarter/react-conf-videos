@@ -3,16 +3,12 @@ import { mapProps } from 'recompose'
 import { compose as rcompose, flatten, map, pathOr, toPairs } from 'ramda'
 
 import { Video } from 'components'
-
 import { Conference, IndexedConferences } from '../../domain'
 
-type Props = {
-  conferences: {[idx: string]: Conference}
-}
+import styles from './List.scss'
 
-type MapProps = {
-  videos: any[]
-}
+type Props = { conferences: {[idx: string]: Conference} }
+type MapProps = { videos: any[] }
 
 const mapConferenceIdOntoVideos = ([conferenceId, conference]: [string, Conference]) =>
   map(
@@ -28,7 +24,7 @@ const mapConferenceVideos = rcompose<IndexedConferences, any, any, any[]>(
 
 export const ListInner: React.SFC<MapProps> = ({ videos }) => {
   return (
-    <section>
+    <section className={styles.root}> 
       { videos }
     </section>
   )

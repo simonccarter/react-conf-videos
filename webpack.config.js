@@ -42,7 +42,6 @@ module.exports = {
           'css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]',
           {
             loader: "sass-loader",
-            exclude: /AnimationShell.scss$/,
             options: { 
               data: '@import "_colors";',
               includePaths: [

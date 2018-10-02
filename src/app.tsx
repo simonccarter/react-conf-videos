@@ -4,8 +4,10 @@ import { ConnectedRouter } from 'connected-react-router'
 import { TransitionGroup } from 'react-transition-group'
 import { Route, Switch } from 'react-router'
 import { AppContainer } from 'react-hot-loader'
-import configureStore from 'redux/configureStore'
+import { Redirect } from 'react-router-dom'
 import { Provider } from 'react-redux'
+
+import configureStore from 'redux/configureStore'
 import { AnimationShell, ConfPage, FrontPage } from 'components/Pages'
 
 import './index.scss'
@@ -22,7 +24,7 @@ const App = () => (
             <Switch>
               <Route path="/conference" component={AnimationShell(ConfPage)} />
               <Route path="/search" component={AnimationShell(FrontPage)} />
-              <Route path="/" component={AnimationShell(FrontPage)} />
+              <Route path="/" render={() => <Redirect to="/search" />} />
             </Switch>
           </TransitionGroup>
       </ConnectedRouter>

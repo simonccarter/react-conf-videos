@@ -1,0 +1,21 @@
+.logo {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  height: 4rem;
+  width: 4rem;
+
+  background-color: $text-color;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .logoLink {
+    color: $header-background-color;
+    margin-top: 0.1rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}

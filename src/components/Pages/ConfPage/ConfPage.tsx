@@ -2,10 +2,9 @@ import * as React from 'react'
 import { connect } from 'react-redux'
 import { compose, pure } from 'recompose'
 
-import { List, InnerLayoutContainer } from 'components'
+import { List, ConfPageHeader, InnerLayoutContainer } from 'components'
 
 import { Conference } from '../../../domain'
-import { ConferenceDetails } from 'components/ConferenceDetails'
 
 import styles from './ConfPage.scss'
 
@@ -16,11 +15,17 @@ type Props = {
 }
 
 const ConfPageInner: React.SFC<Props> = (props) => (
-  <InnerLayoutContainer className={styles.container}>
-    {props.transitionState}
-    <ConferenceDetails conference={props.conference} />
-    <List conferences={props.conferences} />
-  </InnerLayoutContainer>
+  <div>
+    <ConfPageHeader 
+      title={props.conference.title}
+      titleLink={props.conference.website}
+      tagline={`${props.conference.date} - ${props.conference.videos.length} ${props.conference.videos.length !== 1 ? 'videos' : 'video'} `}
+    />
+    <InnerLayoutContainer className={styles.container}>
+      {props.transitionState}
+      <List conferences={props.conferences} />
+    </InnerLayoutContainer>
+  </div>
 )
 
 const mapStateToProps = ({conferencePage}: any) => ({

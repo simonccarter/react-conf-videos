@@ -71,7 +71,6 @@ export const filterEpic: Epic<Action<any>, any> = (action$, store) =>
     .ofType(FILTER)
     .debounceTime(80) 
     .map((action) => {
-      console.log(action, action)
       const { payload: filterValue = ''} = action
       const { conferences, videosLC, presentersLC } = store.getState().data
       const rAction: Action<IndexedConferences> = { type: SET_FILTERED_CONFERENCES }
@@ -94,7 +93,7 @@ export const routingEpic: Epic<Action<any>, any> = (action$, store) =>
     })
     .map((action: Action<any>) => {
       const { payload: filterValue = ''} = action
-      const location = isFilterEmpty(filterValue) ? '/' : `/search?query=${filterValue}`
+      const location = isFilterEmpty(filterValue) ? '/search' : `/search?query=${filterValue}`
       return push(location)
     })
     

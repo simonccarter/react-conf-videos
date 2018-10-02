@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
 import { compose, pure } from 'recompose'
-import { List, ResultDetails } from 'components'
+import { Header, List, ResultDetails } from 'components'
 
 import { 
   SearchInput,
@@ -16,11 +16,14 @@ type ReduxProps = {
 type Props = ReduxProps
 
 export const FrontPageInner: React.SFC<Props> = props => (
-  <InnerLayoutContainer>
-    <SearchInput />
-    <ResultDetails conferences={props.conferences} />
-    <List conferences={props.conferences} />
-  </InnerLayoutContainer>
+  <div>
+    <Header />  
+    <InnerLayoutContainer>
+      <SearchInput />
+      <ResultDetails conferences={props.conferences} />
+      <List conferences={props.conferences} />
+    </InnerLayoutContainer>
+  </div>
 )
 
 const mapStateToProps = ({frontPage: {conferences}}: any) => ({
