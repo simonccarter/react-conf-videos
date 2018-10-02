@@ -46,18 +46,5 @@ describe('FrontPage', () => {
       // assert
       expect(toJson(wrapper)).toMatchSnapshot()
     })
-
-    it('should connect to the store and get the isActive prop', () => {
-      // arrange
-      const isActive = false
-      const store = {frontPage: {isActive}}
-
-      // act
-      const wrapper = shallowWithStore(store, <FrontPage />)
-
-      // assert
-      expect(wrapper.props().isActive).toBe(false)
-      expect(wrapper.props().isActive).toEqual(isActive)
-    })
   })
 })

@@ -29,7 +29,6 @@ export const mountWithStore = <T>(storeP: T, component: ReactElement<any>) => {
 }
 
 /** Mock data */
-
 export const mockConference = (): Conference => ({
   date: 'XX/YY/ZZZ',
   title: 'fake conf title',
