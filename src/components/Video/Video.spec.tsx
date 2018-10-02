@@ -33,6 +33,8 @@ describe('Video', () => {
           isOpen={isOpen}
           toggleIsOpen={toggleIsOpen}
           conference={conference as Conference}
+          goToConfPage={() => ({type: 'x', payload: 'x'})}
+          onConferenceClick={() => null}
         />
       )
     }

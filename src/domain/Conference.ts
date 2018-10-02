@@ -9,3 +9,7 @@ export type Conference = {
 export type IndexedConferences = {
   [idx: string]: Conference
 }
+
+export type ConferenceTitlesToIds = {
+  [idx: string]: string
+}

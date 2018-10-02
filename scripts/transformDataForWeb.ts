@@ -1,6 +1,6 @@
 const fs = require('fs')
 const { normalize } = require('normalizr')
-const { ifElse, either, is, mapObjIndexed, merge } = require('ramda')
+const { ifElse, either, is, mapObjIndexed, merge, map, toPairs, fromPairs, compose } = require('ramda')
 
 const conferenceSchema = require('./confSchema')
 
@@ -8,12 +8,15 @@ const args = process.argv
 
 import { 
   JSONInput,
+  Conference,
   IndexedVideos,
   IndexedPresenters,
-  IndexedConferences
+  IndexedConferences,
+  ConferenceTitlesToIds
 } from '../src/domain'
 
 export type ReduxState = {
+  conferenceTitlesToIds: ConferenceTitlesToIds,
   presentersLC: IndexedPresenters, 
   conferences: IndexedConferences, 
   presenters: IndexedPresenters, 
@@ -62,7 +65,8 @@ const transformDataFromJson = (data: JSONInput): ReduxState => {
 
   return merge(normalized.entities, {
     videosLC: lowerVideos,
-    presentersLC: lowerSpeakerNames
+    presentersLC: lowerSpeakerNames,
+    conferenceTitlesToIds
   })
 }
 

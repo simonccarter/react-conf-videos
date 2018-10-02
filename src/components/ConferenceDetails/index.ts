@@ -1,3 +1,5 @@
 import ConferenceDetails from './ConferenceDetails'
 
-export { ConferenceDetails }
+export {
+  ConferenceDetails
+}

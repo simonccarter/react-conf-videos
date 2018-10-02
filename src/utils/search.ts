@@ -1,3 +1,3 @@
-const isFilterEmpty = (filterValue: string) => filterValue.trim() === ''
+const isFilterEmpty = (filterValue: string = '') => filterValue.trim() === ''
 
 export { isFilterEmpty }
