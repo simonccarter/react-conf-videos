@@ -1,4 +1,3 @@
-import * as queryString from 'query-string'
 import * as Immutable from 'seamless-immutable'
 import { combineEpics, Epic } from 'redux-observable'
 import { Action, JSONInput } from '../../domain'
@@ -8,9 +7,9 @@ import 'rxjs/add/operator/map'
 import 'rxjs/add/operator/take'
 import 'rxjs/add/operator/delay'
 import 'rxjs/add/operator/mapTo'
+import 'rxjs/add/operator/switchMap'
+import 'rxjs/add/operator/takeWhile'
 import 'rxjs/add/operator/bufferCount'
-
-import { frontPageActions, SET_FILTERED_CONFERENCES } from './frontPage'
 
 export type ReduxState = {
   finished: boolean,
@@ -24,7 +23,8 @@ export const BOOTSTRAP_START = 'BOOTSTRAP_START'
 export const BOOTSTRAP_END = 'BOOTSTRAP_END'
 export const BOOTSTRAP_END_LOADER = 'END_LOADER'
 
-export const BOOTSTRAP_COMPLETE_ACTIONS = [SET_FILTERED_CONFERENCES]
+// export const BOOTSTRAP_COMPLETE_ACTIONS = [SET_FILTERED_CONFERENCES]
+export const BOOTSTRAP_COMPLETE_ACTIONS = [LOAD_DATA_END]
 
 const JSONData = require('assets/conferenceVidsCleaned.json')
 
@@ -42,21 +42,6 @@ export const bootstrapStartEpic: Epic<any, any> = action$ =>
 export const loadJSONDataEpic: Epic<any, any> = action$ =>
   action$.ofType(LOAD_DATA_START)
     .map(() => loadDataEnd(JSONData))
-
-// list for load data end, then apply filter if query present in query string
-export const filterVidesForBootstrapIfPresent: Epic<any, any> = (action$, store) => 
-  action$.ofType(LOAD_DATA_END)
-    .map(() => {
-      // get search query
-      const search = store.getState().router.location.search;
-      const parsed = queryString.parse(search)
-
-      // even if no query is present, send to filter, 
-      // which will handle setting the correct path
-      const query = parsed.query ? parsed.query : 
-                parsed['?query'] ? parsed['?query'] : ''
-      return frontPageActions.filter(query)
-    })
 
 // end bookstrap process by listening for all actions in BOOTSTRAP_COMPLETE_ACTIONS
 export const bootstrapEndEpic: Epic<any, any> = action$ =>
@@ -82,8 +67,8 @@ export const bootstrapEpics = combineEpics(
   bootstrapStartEpic, 
   loadJSONDataEpic, 
   bootstrapEndEpic, 
-  boostrapEndRemoveLoaderEpic, 
-  filterVidesForBootstrapIfPresent
+  boostrapEndRemoveLoaderEpic
+  // filterVideosForBootstrapIfPresent
 )
 
 // remove loader from html and render app on DOM

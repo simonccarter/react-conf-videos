@@ -1,0 +1,28 @@
+$time: 0.5s;
+
+.enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.enter.enterActive {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all $time linear;
+}
+.enterDone {
+  opacity: 1;
+}
+.exit {
+    opacity: 1.0;
+    transform: translateX(0);
+}
+.exit.exitActive {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: all $time linear;
+}
+.exit.exitDone{
+  opacity: 0;
+}
