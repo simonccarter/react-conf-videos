@@ -1,5 +1,5 @@
 
-import * as React from 'React'
+import * as React from 'react'
 
 const AnimationShell = (Page: React.ComponentClass<{}>) => (props: any) => (
   <div>

@@ -1,4 +1,4 @@
-import * as React from 'React'
+import * as React from 'react'
 import * as cn from 'classnames'
 import styles from './Header.scss'
 

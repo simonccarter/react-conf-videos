@@ -20,7 +20,6 @@ references:
 jobs:
   set-up:
     <<: *container_config
-    working_directory: ~/repo
     steps:
       - *restore_repo
 

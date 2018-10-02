@@ -11,6 +11,7 @@ import configureStore from 'redux/configureStore'
 import { AnimationShell, ConfPage, FrontPage } from 'components/Pages'
 
 import './index.scss'
+
 const { history, store, rootReducer } = configureStore()
 
 // start bootstrap process

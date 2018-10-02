@@ -2,7 +2,7 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 
 import { connectRouter } from 'connected-react-router'
-import App, { history, store, rootReducer } from 'App'
+import App, { history, store, rootReducer } from 'app'
 
 import './index.scss'
 
