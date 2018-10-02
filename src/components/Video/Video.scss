@@ -39,6 +39,10 @@
     display: flex;
     justify-content: space-between;
     font-size: 1.4rem;
+
+    .conferenceTitle {
+      cursor: pointer;
+    }
   }
 
   .divider {

@@ -10,10 +10,12 @@ import {
   JSONInput,
   IndexedVideos,
   IndexedPresenters,
-  IndexedConferences
+  IndexedConferences,
+  ConferenceTitlesToIds
 } from '../src/domain'
 
 export type ReduxState = {
+  conferenceTitlesToIds: ConferenceTitlesToIds,
   presentersLC: IndexedPresenters, 
   conferences: IndexedConferences, 
   presenters: IndexedPresenters, 

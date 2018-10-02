@@ -1,55 +1,38 @@
 import * as React from 'react'
-import { connect } from 'react-redux'
-import { compose, pure } from 'recompose'
-import { flatten, map, pathOr } from 'ramda'
+import { mapProps } from 'recompose'
+import { compose as rcompose, flatten, map, pathOr, toPairs } from 'ramda'
 
-import { SearchInput } from 'components/SearchInput'
-import { Video } from 'components/Videos'
+import { Video } from 'components'
+import { Conference, IndexedConferences } from '../../domain'
 
 import styles from './List.scss'
 
-import { Conference } from '../../domain'
+type Props = { conferences: {[idx: string]: Conference} }
+type MapProps = { videos: any[] }
 
-type State = {
-  conferences: {[idx: string]: Conference}
-}
+const mapConferenceIdOntoVideos = ([conferenceId, conference]: [string, Conference]) =>
+  map(
+    (video => (<Video key={video} videoId={video} conferenceId={conferenceId} />)), 
+    pathOr([], ['videos'], conference)
+  )
 
-type CombinedProps = State
+const mapConferenceVideos = rcompose<IndexedConferences, any, any, any[]>(
+  flatten,
+  map(mapConferenceIdOntoVideos),
+  toPairs
+)
 
-export const ListInner: React.SFC<State> = ({ conferences }) => {
-  const children = flatten(Object.keys(conferences).map((conferenceId) => {
-    const conferenceProps = conferences[conferenceId]
-    return map(
-      (video: any) => {return (<Video key={video} videoId={video} conferenceId={conferenceId} />)}, 
-      pathOr([], ['videos'], conferenceProps)
-    )
-  }))
-  const countVids = children.length
-  const countVidsS = countVids === 1 ? 'video' : 'videos'
-  const countConfs = Object.keys(conferences).length
-  const countConfsS = countConfs === 1 ? 'conference' : 'conferences'
-
-  return  (
-    <div className={styles.root}>
-      <SearchInput />
-      <p className={styles.resultsCount}>
-        <span className={styles.resultsNumber}> {countVids} </span> {countVidsS}
-        <span className={styles.resultsNumber}> {countConfs} </span> {countConfsS}
-      </p>
-      <section className={styles.results}>
-        { true && children }
-      </section>
-    </div>
+export const ListInner: React.SFC<MapProps> = ({ videos }) => {
+  return (
+    <section className={styles.root}> 
+      { videos }
+    </section>
   )
 }
 
-const mapStateToProps = ({ frontPage }: any) => ({
-  conferences: frontPage.filteredConferences,
-})
-
-const List = compose<CombinedProps, {}>(
-  connect(mapStateToProps),
-  pure
-)(ListInner)
+const List = mapProps<MapProps, Props>(({conferences}) => {
+    const videos = mapConferenceVideos(conferences);
+    return { videos }
+  })(ListInner)
 
 export default List

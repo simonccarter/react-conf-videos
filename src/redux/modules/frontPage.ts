@@ -7,8 +7,6 @@ import { isFilterEmpty } from 'utils'
 import 'rxjs/add/operator/map'
 import 'rxjs/add/operator/debounceTime'
 
-import { COPY_DATA } from './data'
-
 import { 
   Action, 
   Conference, 
@@ -16,7 +14,6 @@ import {
   IndexedVideos,
   IndexedConferences
 } from '../../domain'
-
 
 export const INIT_SLICE = 'frontPage/INIT_SLICE'
 export const FILTER = 'frontPage/FILTER'
@@ -28,22 +25,9 @@ const setIsActive = (payload: boolean) => ({ type: SET_IS_ACTIVE, payload })
 
 export type ReduxState = {
   conferences: {[idx: string]: Conference},
-  filteredConferences: {[idx: string]: Conference},
   filterValue: string,
   isActive: boolean
-} 
-
-// copy data into own slice
-export const initSliceEpic: Epic<Action<any>, any> = action$ =>
-  action$.ofType(COPY_DATA)
-    .map(action =>
-      ({
-        type: INIT_SLICE,
-        payload: {
-          conferences: action.payload.conferences,
-          filteredConferences: action.payload.conferences
-        }
-      }))
+}
 
 // returns true if filterValue is found (includes()) within any element of termsToSearch
 export const textInDetails = (filterValue: string, termsToSearch: [string, string]) =>
@@ -88,28 +72,33 @@ export const filterEpic: Epic<Action<any>, any> = (action$, store) =>
     .debounceTime(80) 
     .map((action) => {
       const { payload: filterValue = ''} = action
-      const state = store.getState()
+      const { conferences, videosLC, presentersLC } = store.getState().data
       const rAction: Action<IndexedConferences> = { type: SET_FILTERED_CONFERENCES }
-      const { conferences, videosLC, presentersLC } = state.data
-      // if no/empty query, return original set of videos
+      // if no/empty query, return original/all set of videos
       rAction.payload = isFilterEmpty(filterValue) ?
-        state.frontPage.conferences :
+        conferences :
         computeFilteredConferences(filterValue.trim().toLowerCase(), conferences, videosLC, presentersLC)
       return rAction
     })
 
 // set url query string location based on filterValue
+// https://stackoverflow.com/questions/45546401/wait-for-sequence-of-action-with-a-redux-observable
 export const routingEpic: Epic<Action<any>, any> = (action$, store) => 
   action$
     .ofType(FILTER)
-    .debounceTime(80)
+    .switchMap((action) => {
+      return action$.ofType(SET_FILTERED_CONFERENCES)
+        .take(1)
+        .map(() => action)
+    })
     .map((action: Action<any>) => {
       const { payload: filterValue = ''} = action
-      const location = isFilterEmpty(filterValue) ? '/' : `/search?query=${filterValue}`
+      const location = isFilterEmpty(filterValue) ? '/search' : `/search?query=${filterValue}`
       return push(location)
     })
+    
 
-export const frontPageEpics = combineEpics(initSliceEpic, filterEpic, routingEpic)
+export const frontPageEpics = combineEpics(filterEpic, routingEpic)
 export const frontPageActions = {
   filter,
   setIsActive
@@ -120,19 +109,16 @@ export const frontPageActions = {
 // if a conference contains no videos that match, it is removed from the filter
 export const initialState = Immutable<ReduxState>({
   conferences: {},
-  filteredConferences: {},
   filterValue: '',
   isActive: false
 })
 
 const frontPageReducer = (state = initialState, action: Action<any>) => {
   switch (action.type) {
-    case INIT_SLICE:
-      return state.merge(action.payload)
     case FILTER:
       return state.merge({ filterValue: action.payload })
     case SET_FILTERED_CONFERENCES:
-      return state.merge({ filteredConferences: action.payload })
+      return state.merge({ conferences: action.payload })
     case SET_IS_ACTIVE:
       return state.merge({ isActive: action.payload })
     default:
