@@ -12,6 +12,7 @@ describe('FrontPage', () => {
     const shallowComp = (isActive: boolean) => shallow<any>(
       <FrontPageInner
         conferences={{'x': mockConference()}}
+        filterValue=''
       />
     )
 

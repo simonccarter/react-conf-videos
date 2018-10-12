@@ -2,7 +2,7 @@ import * as React from 'react'
 import { connect } from 'react-redux'
 import { compose, pure } from 'recompose'
 
-import { List, ConfPageHeader, InnerLayoutContainer } from 'components'
+import { List, Meta, ConfPageHeader, InnerLayoutContainer } from 'components'
 
 import { Conference } from '../../../domain'
 
@@ -16,6 +16,7 @@ type Props = {
 
 const ConfPageInner: React.SFC<Props> = (props) => (
   <div>
+    <Meta title={props.conference.title} />
     <ConfPageHeader 
       title={props.conference.title}
       titleLink={props.conference.website}
