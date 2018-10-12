@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
 import { compose, pure } from 'recompose'
-import { Header, List, ResultDetails } from 'components'
+import { Header, List, Meta, ResultDetails } from 'components'
 
 import { 
   SearchInput,
@@ -11,13 +11,15 @@ import {
 import { IndexedConferences } from '../../../domain'
 
 type ReduxProps = { 
-  conferences: IndexedConferences
+  conferences: IndexedConferences,
+  filterValue: string
 }
 type Props = ReduxProps
 
 export const FrontPageInner: React.SFC<Props> = props => (
   <div>
-    <Header />  
+    <Meta title={props.filterValue} />
+    <Header />
     <InnerLayoutContainer>
       <SearchInput />
       <ResultDetails conferences={props.conferences} />
@@ -26,7 +28,8 @@ export const FrontPageInner: React.SFC<Props> = props => (
   </div>
 )
 
-const mapStateToProps = ({frontPage: {conferences}}: any) => ({
+const mapStateToProps = ({frontPage: {conferences, filterValue}}: any) => ({
+  filterValue,
   conferences
 })
 
