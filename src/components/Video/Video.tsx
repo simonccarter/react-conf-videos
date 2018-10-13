@@ -36,15 +36,13 @@ type ReduxState = {
 type CombinedProps = Props & State & ReduxState & StateHandlers & WithHandlers
 
 export const VideoInner: React.SFC<CombinedProps> = ({
-  video, speaker, videoId, conference, isOpen, toggleIsOpen, onConferenceClick, conferenceId
+  video: { title, length, embeddableLink },
+  speaker, videoId, conference, isOpen, toggleIsOpen, onConferenceClick, conferenceId
 }) => {
-  const {
-    title, length, link, embeddableLink
-  } = video
   return (
     <div className={styles.root} key={videoId} >
       <div className={styles.top} onClick={toggleIsOpen} >
-        <a className={styles.title} href={link}>{title}</a>
+        <span className={styles.title}>{title}</span>
         <span className={styles.right}>{length}</span>
       </div>
       <div className={cn(styles.videoWrapper, { [styles.open]: isOpen })}>

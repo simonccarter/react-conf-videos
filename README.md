@@ -1,6 +1,7 @@
 # React.js Conference Videos
 List of react conference videos.
-[www.reactjsvideos.com](https://www.reactjsvideos.com)
+[www.reactjsvideos.com](https://wwwDone in 3.53s.
+com)
 
 ## Quick Links
 
@@ -201,7 +202,7 @@ List of react conference videos.
 
 | Title/Link        | Presenter  | Length |
 | ------------- |:-------------:| -----:|
-[The Redux Journey](https://www.youtube.com/watch?v=uvAXVMwHJXU&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa) | Dan Abrmaov | 26:56
+[The Redux Journey](https://www.youtube.com/watch?v=uvAXVMwHJXU&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa) | Dan Abramov | 26:56
 [Native Navigation for Every Platform](https://www.youtube.com/watch?v=dOSwHABLvdM&index=2&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa) | Eric Vicenti | 27:25
 [A cartoon guide to performance](https://www.youtube.com/watch?v=-t8eOoRsJ7M&index=3&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa) | Lin Clark | 26:19
 [React Native ❤ 60FPS](https://www.youtube.com/watch?v=qgSMjYWqBk4&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa&index=4) | Krzysztof Magiera | 25:25
