@@ -1,7 +1,6 @@
 # React.js Conference Videos
 List of react conference videos.
-[www.reactjsvideos.com](https://wwwDone in 3.53s.
-com)
+[www.reactjsvideos.com](https://www.reactjsvideos.com)
 
 ## Quick Links
 
