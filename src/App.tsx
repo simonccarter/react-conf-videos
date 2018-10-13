@@ -1,14 +1,16 @@
 import * as React from 'react'
+import * as ReactGA from 'react-ga'
 
 import { ConnectedRouter } from 'connected-react-router'
-import { TransitionGroup } from 'react-transition-group'
 import { Route, Switch } from 'react-router'
 import { AppContainer } from 'react-hot-loader'
 import { Redirect } from 'react-router-dom'
 import { Provider } from 'react-redux'
 
+ReactGA.initialize('UA-111717324-1')
+
 import configureStore from 'redux/configureStore'
-import { AnimationShell, ConfPage, FrontPage } from 'components/Pages'
+import { Tracker, ConfPage, FrontPage } from 'components/Pages'
 
 import './index.scss'
 
@@ -21,13 +23,11 @@ const App = () => (
   <AppContainer>
     <Provider store={store}>
       <ConnectedRouter history={history}>
-          <TransitionGroup>
             <Switch>
-              <Route path="/conference" component={AnimationShell(ConfPage)} />
-              <Route path="/search" component={AnimationShell(FrontPage)} />
+              <Route path="/conference" component={Tracker(ConfPage)} />
+              <Route path="/search" component={Tracker(FrontPage)} />
               <Route path="/" render={() => <Redirect to="/search" />} />
             </Switch>
-          </TransitionGroup>
       </ConnectedRouter>
     </Provider>
   </AppContainer>
