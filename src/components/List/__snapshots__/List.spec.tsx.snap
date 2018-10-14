@@ -4,18 +4,21 @@ exports[`List ListInner should render 1`] = `
 <Component
   videos={
     Array [
-      <Connect(pure(withStateHandlers(withHandlers(Component))))
-        conferenceId="yyy"
-        videoId="aaa"
-      />,
-      <Connect(pure(withStateHandlers(withHandlers(Component))))
-        conferenceId="yyy"
-        videoId="bbb"
-      />,
-      <Connect(pure(withStateHandlers(withHandlers(Component))))
-        conferenceId="yyy"
-        videoId="ccc"
-      />,
+      Object {
+        "conferenceId": "yyy",
+        "key": "aaa",
+        "videoId": "aaa",
+      },
+      Object {
+        "conferenceId": "yyy",
+        "key": "bbb",
+        "videoId": "bbb",
+      },
+      Object {
+        "conferenceId": "yyy",
+        "key": "ccc",
+        "videoId": "ccc",
+      },
     ]
   }
 />

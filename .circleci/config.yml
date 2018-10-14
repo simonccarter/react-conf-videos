@@ -92,6 +92,7 @@ workflows:
             branches:
               only: 
                 - develop
+                - feature/virtualList
       - deploy-master:
           requires:
             - set-up
