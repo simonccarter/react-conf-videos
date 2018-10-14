@@ -56,7 +56,7 @@ export const boostrapEndRemoveLoaderEpic: Epic<any, any> = action$ =>
     .do(() => {
       (<HTMLElement>document.getElementById('loader')).classList.remove('fullscreen')
     })
-    .delay(3000)
+    .delay(300)
     .do(() => {
       // loader on initial html no longer visible. remove.
       (<HTMLElement>document.getElementById('loader')).remove()
@@ -66,7 +66,7 @@ export const boostrapEndRemoveLoaderEpic: Epic<any, any> = action$ =>
 export const bootstrapEpics = combineEpics(
   bootstrapStartEpic, 
   loadJSONDataEpic, 
-  bootstrapEndEpic, 
+  bootstrapEndEpic,
   boostrapEndRemoveLoaderEpic
   // filterVideosForBootstrapIfPresent
 )
