@@ -1,4 +1,5 @@
 import * as React from 'react'
+import VirtualList from 'react-virtual-list'
 import { mapProps } from 'recompose'
 import { compose as rcompose, flatten, map, pathOr, toPairs } from 'ramda'
 
@@ -12,7 +13,7 @@ type MapProps = { videos: any[] }
 
 const mapConferenceIdOntoVideos = ([conferenceId, conference]: [string, Conference]) =>
   map(
-    (video => (<Video key={video} videoId={video} conferenceId={conferenceId} />)), 
+    video => ({ key: video, videoId: video, conferenceId }),
     pathOr([], ['videos'], conference)
   )
 
@@ -22,10 +23,31 @@ const mapConferenceVideos = rcompose<IndexedConferences, any, any, any[]>(
   toPairs
 )
 
+const VirtualisedList = ({ virtual }: {virtual: any}): any => (
+  <div style={virtual.style}>
+    {virtual.items && virtual.items.map((item: any) => (
+      <Video {...item} />
+    ))}
+  </div>
+)
+
+const MyVirtualList = VirtualList({
+  firstItemIndex: 0, 
+  lastItemIndex: 20,
+  initialState: {
+    firstItemIndex: 0, 
+    lastItemIndex: 20,
+  }
+})(VirtualisedList);
+
 export const ListInner: React.SFC<MapProps> = ({ videos }) => {
   return (
     <section className={styles.root}> 
-      { videos }
+      {videos.length && <MyVirtualList
+        items={videos}
+        itemHeight={60}
+        itemBuffer={20}
+      /> }
     </section>
   )
 }

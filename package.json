@@ -28,6 +28,7 @@
     "react-router": "4.3.1",
     "react-router-dom": "4.3.1",
     "react-transition-group": "2.5.0",
+    "react-virtual-list": "^2.3.0",
     "recompose": "0.26.0",
     "redux": "3.7.2",
     "redux-observable": "0.17.0",
