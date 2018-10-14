@@ -43,7 +43,7 @@ const MyVirtualList = VirtualList({
 export const ListInner: React.SFC<MapProps> = ({ videos }) => {
   return (
     <section className={styles.root}> 
-      {videos.length && <MyVirtualList
+      {videos.length > 0 && <MyVirtualList
         items={videos}
         itemHeight={60}
         itemBuffer={20}
