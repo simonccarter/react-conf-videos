@@ -32,25 +32,25 @@ List of react conference videos.
 
 | Title/Link        | Presenter  | Length |
 | ------------- |:-------------:| -----:|
-[React Today and Tomorrow](https://www.youtube.com/watch?v=V-QO-KO90iQ&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ) | Sophie Alpert and Dan Abramov | 58:20
-[90% Cleaner React](https://www.youtube.com/watch?v=wXLf18DsV-I&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ) | Ryan Florence | 33:37
-[Building Todo The Game in a Cloud Only Dev Environment](https://www.youtube.com/watch?v=kVSTKD13gos&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ) | Christina Holland | 34:58
-[The Path to a Declaratively Animated Future](https://www.youtube.com/watch?v=1e07uPWpvzI&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ) | Matt Perry | 24:41
-[Lightening Talk - What's new in Create React App](https://www.youtube.com/watch?v=He-m9gd6WyM&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ) | Joe Haddard | 4:16
-[Lightening Talk - Components as Units of Work](https://www.youtube.com/watch?v=tlSbgrPe420&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ) | Bryce Kallow | 4:54
+[React Today and Tomorrow](https://www.youtube.com/watch?v=V-QO-KO90iQ&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=2) | Sophie Alpert and Dan Abramov | 58:20
+[90% Cleaner React](https://www.youtube.com/watch?v=wXLf18DsV-I&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=3) | Ryan Florence | 33:37
+[Building Todo The Game in a Cloud Only Dev Environment](https://www.youtube.com/watch?v=kVSTKD13gos&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=4) | Christina Holland | 34:58
+[The Path to a Declaratively Animated Future](https://www.youtube.com/watch?v=1e07uPWpvzI&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=5) | Matt Perry | 24:41
+[Lightening Talk - What's new in Create React App](https://www.youtube.com/watch?v=He-m9gd6WyM&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=6) | Joe Haddard | 4:16
+[Lightening Talk - Components as Units of Work](https://www.youtube.com/watch?v=tlSbgrPe420&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=7) | Bryce Kallow | 4:54
 [Lightening Talk - 5 Animations you Should Know and Use](https://www.youtube.com/watch?v=w9suOaHITtk&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=8) | Marcos Martins | 5:08
 [Lightening Talk - Render Props, PureComponent and Reactivity](https://www.youtube.com/watch?v=xmQjQmJXQK8&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=9) | Karl Dray | 5:33
 [Lightening Talk - Better living through Git Hooks](https://www.youtube.com/watch?v=m-uy_2xmIP4&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=10) | Leta Keane | 5:29
 [GraphQl without GraphQL](https://www.youtube.com/watch?v=YSEUAi1dAdk&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=11) | Conor Hastings | 27:49
 [Playing with Polyhedra Creating Beauty from Obsession](https://www.youtube.com/watch?v=Ew-UzGC8RqQ&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=12) | Nat Alison | 26:38
+[Cross Platform AR and VR apps using React Native](https://www.youtube.com/watch?v=jd6FBBK1paA&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=13) | Pulkit Kakkar | 26:16
+[Beyond Web Apps React, Javascript and WebAssembly](https://www.youtube.com/watch?v=6La7jSCnYyk&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=14) | Florian Rival | 30:01
+[React for Social Change](https://www.youtube.com/watch?v=tE-0xb2f44g&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=15) | Rodrigo Quezada | 18:58
 
 #### Day 2
 
 | Title/Link        | Presenter  | Length |
 | ------------- |:-------------:| -----:|
-[Cross Platform AR and VR apps using React Native](https://www.youtube.com/watch?v=jd6FBBK1paA&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=13) | Pulkit Kakkar | 26:16
-[Beyond Web Apps React, Javascript and WebAssembly](https://www.youtube.com/watch?v=6La7jSCnYyk&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=14) | Florian Rival | 30:01
-[React for Social Change](https://www.youtube.com/watch?v=tE-0xb2f44g&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=15) | Rodrigo Quezada | 18:58
 [Concurrent Rendering in React](https://www.youtube.com/watch?v=ByBPyMBTzM0&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=16) | Andrew Clark and Brian Vaughn | 42:13
 [Moving to Suspense](https://www.youtube.com/watch?v=SCQgE4mTnjU&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=17) | Jared Palmer | 30:50
 [SVG Illustrations as React Components](https://www.youtube.com/watch?v=1gG8rtm-rq4&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=18) | Elizabet Oliveira | 20:40
