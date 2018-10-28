@@ -260,6 +260,215 @@
     ]
   },
   {
+    "title": "Reactathon",
+    "date": "07-09-2018",
+    "website": "https://www.reactathon.com/",
+    "playlist": {
+      "Day 1": "https://www.youtube.com/playlist?list=PLRvKvw42Rc7N0QpX2Rc5CdrqGuxzwD_0H",
+      "Day 2": "https://www.youtube.com/playlist?list=PLRvKvw42Rc7Ne46QAjWNWFo1Jf0mQdnIW"
+    },
+    "videos" : [
+      {
+        "title": "Welcome to Reactathon",
+        "link": "https://www.youtube.com/watch?v=57hmk4GvJpk&index=2&t=0s&list=PLRvKvw42Rc7N0QpX2Rc5CdrqGuxzwD_0H",
+        "presenter": {
+          "name": "Brian Douglas"
+        },
+        "length": "6:16",
+        "split": "Day 1"
+      },
+      {
+        "title": "Building a self-documenting component library for your company",
+        "link": "https://www.youtube.com/watch?v=cIAE4bbYNsc&index=3&t=0s&list=PLRvKvw42Rc7N0QpX2Rc5CdrqGuxzwD_0H",
+        "presenter": {
+          "name": "David Wells"
+        },
+        "length": "36:33",
+        "split": "Day 1"
+      },
+      {
+        "title": "React, Powered by WebAssembly",
+        "link": "https://www.youtube.com/watch?v=s2ccNDxRqpo&index=4&t=0s&list=PLRvKvw42Rc7N0QpX2Rc5CdrqGuxzwD_0H",
+        "presenter": {
+          "name": "Jay Phelps"
+        },
+        "length": "36:33",
+        "split": "Day 1"
+      },
+      {
+        "title": "Sharing code between React and React Native",
+        "link": "https://www.youtube.com/watch?v=EwMqU_EF8Uw&index=5&t=0s&list=PLRvKvw42Rc7N0QpX2Rc5CdrqGuxzwD_0H",
+        "presenter": {
+          "name": "Erica Cooksey"
+        },
+        "length": "18:14",
+        "split": "Day 1"
+      },
+      {
+        "title": "The future of backend development: Serverless GraphQL",
+        "link": "https://www.youtube.com/watch?v=cS51Zv-x9-k&index=6&t=0s&list=PLRvKvw42Rc7N0QpX2Rc5CdrqGuxzwD_0H",
+        "presenter": {
+          "name": "Johannes Schickling"
+        },
+        "length": "35:29",
+        "split": "Day 1"
+      },
+      {
+        "title": "Vertical Redux Archictecture",
+        "link": "https://www.youtube.com/watch?v=2n5ms2Sksek&index=7&t=0s&list=PLRvKvw42Rc7N0QpX2Rc5CdrqGuxzwD_0H",
+        "presenter": {
+          "name": "Berkeley Martinez"
+        },
+        "length": "24:52",
+        "split": "Day 1"
+      },
+      {
+        "title": "Motion in Javascript",
+        "link": "https://www.youtube.com/watch?v=i03rQ0SiscQ&index=8&t=0s&list=PLRvKvw42Rc7N0QpX2Rc5CdrqGuxzwD_0H",
+        "presenter": {
+          "name": "Kaylie Kown"
+        },
+        "length": "23:01",
+        "split": "Day 1"
+      },
+      {
+        "title": "Zero Config GraphQL State Management",
+        "link": "https://www.youtube.com/watch?v=jFULzAMS-jI&t=0s&index=9&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle",
+        "presenter": {
+          "name": "Peggy Rayzis"
+        },
+        "length": "23:11",
+        "split": "Day 1"
+      },
+      {
+        "title": "Serverless-Side Rendering with AWS and Parcel.js",
+        "link": "https://www.youtube.com/watch?v=3rxj8TiN3K4&index=9&t=0s&list=PLRvKvw42Rc7N0QpX2Rc5CdrqGuxzwD_0H",
+        "presenter": {
+          "name": "Brian Leroux"
+        },
+        "length": "15:31",
+        "split": "Day 1"
+      },
+      {
+        "title": "Advanced Web Performance Optimizations",
+        "link": "https://www.youtube.com/watch?v=HQEotVfTXwk&index=10&t=0s&list=PLRvKvw42Rc7N0QpX2Rc5CdrqGuxzwD_0H",
+        "presenter": {
+          "name": "Kyle Mathews"
+        },
+        "length": "22:02",
+        "split": "Day 1"
+      },
+      {
+        "title": "GraphQL Outside the Box",
+        "link": "https://www.youtube.com/watch?v=rb8ccqm7R_8&index=11&t=0s&list=PLRvKvw42Rc7N0QpX2Rc5CdrqGuxzwD_0H",
+        "presenter": {
+          "name": "Tyler Martinez"
+        },
+        "length": "13:48",
+        "split": "Day 1"
+      },
+      {
+        "title": "Connecting a REact Front=end to an Ethereium Smart Contract",
+        "link": "https://www.youtube.com/watch?v=gd2RefIhISQ&index=12&t=0s&list=PLRvKvw42Rc7N0QpX2Rc5CdrqGuxzwD_0H",
+        "presenter": {
+          "name": "Zubair Ahmed"
+        },
+        "length": "14:50",
+        "split": "Day 1"
+      },
+      {
+        "title": "Day 2 Keynote",
+        "link": "https://www.youtube.com/watch?v=1hvQ8p8q0a0&t=6s&index=2&list=PLRvKvw42Rc7Ne46QAjWNWFo1Jf0mQdnIW",
+        "presenter": {
+          "name": "Parashuram Narasimhan"
+        },
+        "length": "27:00",
+        "split": "Day 2"
+      },
+      {
+        "title": "Charts fron Scratch in React",
+        "link": "https://www.youtube.com/watch?v=OWRW6u8puXs&t=0s&index=3&list=PLRvKvw42Rc7Ne46QAjWNWFo1Jf0mQdnIW",
+        "presenter": {
+          "name": "Christina Holland"
+        },
+        "length": "29:22",
+        "split": "Day 2"
+      },
+      {
+        "title": "A Postgres-backed GraphQL BAAS",
+        "link": "https://www.youtube.com/watch?v=neIZcc8y3B0&t=0s&index=4&list=PLRvKvw42Rc7Ne46QAjWNWFo1Jf0mQdnIW",
+        "presenter": {
+          "name": "Tanmai Gopal"
+        },
+        "length": "15:28",
+        "split": "Day 2"
+      },
+      {
+        "title": "Type-safe React with ReasonML",
+        "link": "https://www.youtube.com/watch?v=_thVZKhdgaM&t=0s&index=5&list=PLRvKvw42Rc7Ne46QAjWNWFo1Jf0mQdnIW",
+        "presenter": {
+          "name": "Jared Forsyth"
+        },
+        "length": "21:17",
+        "split": "Day 2"
+      },
+      {
+        "title": "React off the Grid!",
+        "link": "https://www.youtube.com/watch?v=1vUaW4sEa7U&t=0s&index=6&list=PLRvKvw42Rc7Ne46QAjWNWFo1Jf0mQdnIW",
+        "presenter": {
+          "name": "Sophia Shoemaker"
+        },
+        "length": "21:08",
+        "split": "Day 2"
+      },
+      {
+        "title": "Jest as a Platform",
+        "link": "https://www.youtube.com/watch?v=ZJ43STkmK-4&t=0s&index=7&list=PLRvKvw42Rc7Ne46QAjWNWFo1Jf0mQdnIW",
+        "presenter": {
+          "name": "Rogelio Guzman"
+        },
+        "length": "23:47",
+        "split": "Day 2"
+      },
+      {
+        "title": "Incremental Migration to GraphQL",
+        "link": "https://www.youtube.com/watch?v=UqL96doEAV4&t=0s&index=8&list=PLRvKvw42Rc7Ne46QAjWNWFo1Jf0mQdnIW",
+        "presenter": {
+          "name": "Sashko Stubailo"
+        },
+        "length": "24:08",
+        "split": "Day 2"
+      },
+      {
+        "title": "How to Hire Great Developers",
+        "link": "https://www.youtube.com/watch?v=ar8vgZhLmJI&t=0s&index=9&list=PLRvKvw42Rc7Ne46QAjWNWFo1Jf0mQdnIW",
+        "presenter": {
+          "name": "Suhayl Rouag"
+        },
+        "length": "18:50",
+        "split": "Day 2"
+      },
+      {
+        "title": "React-Based Content Management with Netlify CMS & Gatsby",
+        "link": "https://www.youtube.com/watch?v=YyRwMy59d4M&t=0s&index=10&list=PLRvKvw42Rc7Ne46QAjWNWFo1Jf0mQdnIW",
+        "presenter": {
+          "name": "Matt Biilmann"
+        },
+        "length": "27:35",
+        "split": "Day 2"
+      },
+      {
+        "title": "Front End Happy Hour Closing Panel",
+        "link": "https://www.youtube.com/watch?v=MRnqnt2ZJ7w&t=0s&index=11&list=PLRvKvw42Rc7Ne46QAjWNWFo1Jf0mQdnIW",
+        "presenter": {
+          "name": "Reactathon 2018"
+        },
+        "length": "32:07",
+        "split": "Day 2"
+      }
+    ]
+  },
+  {
     "title": "ReactFest 2018",
     "date": "09-03-2018",
     "website": "https://reactfest.com/",
