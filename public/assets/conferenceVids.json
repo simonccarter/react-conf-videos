@@ -260,6 +260,134 @@
     ]
   },
   {
+    "title": "ReactFest 2018",
+    "date": "09-03-2018",
+    "website": "https://reactfest.com/",
+    "playlist": "https://www.youtube.com/playlist?list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle",
+    "videos" : [
+      {
+        "title": "GraphQL Servers in the Browser",
+        "link": "https://www.youtube.com/watch?v=YOCrJ5vRCnw&t=1s&index=2&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle",
+        "presenter": {
+          "name": "David Gomes"
+        },
+        "length": "16:00"
+      },
+      {
+        "title": "Suspense!",
+        "link": "https://www.youtube.com/watch?v=6g3g0Q_XVb4&t=0s&index=3&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle",
+        "presenter": {
+          "name": "Dan Abramov"
+        },
+        "length": "31:33"
+      },
+      {
+        "title": "React + i18n - You Have No Excuse!",
+        "link": "https://www.youtube.com/watch?v=6NwgHUcom_8&t=0s&index=4&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle",
+        "presenter": {
+          "name": "Eli Schutze"
+        },
+        "length": "20:01"
+      },
+      {
+        "title": "Garbage Collection in Modern Web Applications",
+        "link": "https://www.youtube.com/watch?v=aaGacO-Yybs&t=0s&index=5&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle",
+        "presenter": {
+          "name": "Jan Monschke"
+        },
+        "length": "11:11"
+      },
+      {
+        "title": "State Management in a GraphQL Era",
+        "link": "https://www.youtube.com/watch?v=s-3k7O5rSFY&t=0s&index=6&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle",
+        "presenter": {
+          "name": "Kitze"
+        },
+        "length": "19:40"
+      },
+      {
+        "title": "Wait, What happens When My React Native Application Starts?",
+        "link": "https://www.youtube.com/watch?v=rReCzR6DMEM&t=0s&index=7&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle",
+        "presenter": {
+          "name": "Nicolas Couvrat"
+        },
+        "length": "11:38"
+      },
+      {
+        "title": "How to draw an Owl",
+        "link": "https://www.youtube.com/watch?v=53rifn77_bk&t=0s&index=8&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle",
+        "presenter": {
+          "name": "Marcel Cutts"
+        },
+        "length": "18:54"
+      },
+      {
+        "title": "Zero Config GraphQL State Management",
+        "link": "https://www.youtube.com/watch?v=jFULzAMS-jI&t=0s&index=9&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle",
+        "presenter": {
+          "name": "Peggy Rayzis"
+        },
+        "length": "23:11"
+      },
+      {
+        "title": "The Dark and Lonely Road to Styling in React",
+        "link": "https://www.youtube.com/watch?v=Q249u4W_IZQ&t=0s&index=10&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle",
+        "presenter": {
+          "name": "Sara Veira"
+        },
+        "length": "23:11"
+      },
+      {
+        "title": "Journey Through VR and AR with React",
+        "link": "https://www.youtube.com/watch?v=PJyZdxGztaY&t=0s&index=11&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle",
+        "presenter": {
+          "name": "Thomas Lakomy"
+        },
+        "length": "20:31"
+      },
+      {
+        "title": "An introduction to Redux Saga: Side Effects Made Easier",
+        "link": "https://www.youtube.com/watch?v=il9rXYOLWjA&t=0s&index=12&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle",
+        "presenter": {
+          "name": "Sophie Koonin"
+        },
+        "length": "10:58"
+      },
+      {
+        "title": "Productive React Development",
+        "link": "https://www.youtube.com/watch?v=avKBrgIQXzk&t=0s&index=13&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle",
+        "presenter": {
+          "name": "Stephanie Siaw"
+        },
+        "length": "14:48"
+      },
+      {
+        "title": "Taming the Beast How to Tame REact and GraphQL",
+        "link": "https://www.youtube.com/watch?v=5kCv8_A9yi8&t=0s&index=14&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle",
+        "presenter": {
+          "name": "Susanna Wong"
+        },
+        "length": "14:48"
+      },
+      {
+        "title": "ReactFest 2018 Experience",
+        "link": "https://www.youtube.com/watch?v=3JMrFGrvaNE&t=0s&index=15&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle",
+        "presenter": {
+          "name": "ReactFest"
+        },
+        "length": "1:41"
+      },
+      {
+        "title": "We Need to Talk About our Frontend Workflow",
+        "link": "https://www.youtube.com/watch?v=ByBPyMBTzM0&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=16",
+        "presenter": {
+          "name": "Siddharth Khestrapal"
+        },
+        "length": "20:00"
+      }
+    ]
+  },
+  {
     "title": "React Rally 2017",
     "date": "24-08-2017",
     "website": "http://www.reactrally.com/",
