@@ -39,6 +39,29 @@ describe('frontPage', () => {
       // assert
       expect(result).toEqual(false)
     })
+
+    it('should return true, when query includes diacritics, and phrases do not', () => {
+      // arrange
+      query = 'ä'
+
+      // act
+      const result = textInDetails(query, phrasesToSearchIn)
+
+      // assert
+      expect(result).toEqual(true)
+    })
+
+    it('should return true, when phrases include diacritics, and query does not', () => {
+      // arrange
+      phrasesToSearchIn = ['aaa', 'aaaö']
+      query = 'o'
+
+      // act
+      const result = textInDetails(query, phrasesToSearchIn)
+
+      // assert
+      expect(result).toEqual(true)
+    })
   })
 
   describe('filterVideos', () => { })

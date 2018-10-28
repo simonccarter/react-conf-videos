@@ -2,6 +2,7 @@ import * as Immutable from 'seamless-immutable'
 import { any } from 'ramda'
 import { push } from 'connected-react-router'
 import { combineEpics, Epic } from 'redux-observable'
+import { remove as removeDiacritics } from 'diacritics'
 import { isFilterEmpty } from 'utils'
 
 import 'rxjs/add/operator/map'
@@ -31,7 +32,7 @@ export type ReduxState = {
 
 // returns true if filterValue is found (includes()) within any element of termsToSearch
 export const textInDetails = (filterValue: string, termsToSearch: [string, string]) =>
-  any((phrase) => phrase.includes(filterValue), termsToSearch)
+  any(phrase => removeDiacritics(phrase).includes(removeDiacritics(filterValue)), termsToSearch)
 
 // filters videos on a conference
 export const filterVideos = (videos: IndexedVideos, presenters: IndexedPresenters, conferences: IndexedConferences, filterValue: string, conferenceKey: string) => {
