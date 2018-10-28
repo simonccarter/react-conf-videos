@@ -138,7 +138,7 @@ const createFooter = () => `
 To add a conference and it's videos, or to simply fix a typo: 
 
 1. edit \`public/assets/conferenceVids.json\`
-2. run \`yarn run createReadme 2> README.md\`
+2. run \`yarn run createReadme\`
 `
 
 const run = (conferenceVids: JSONInput) => {
