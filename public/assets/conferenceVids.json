@@ -260,6 +260,194 @@
     ]
   },
   {
+    "title": "React Rally 2018",
+    "date": "16-08-2018",
+    "website": "http://www.reactrally.com/",
+    "playlist": "https://www.youtube.com/playlist?list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo",
+    "videos": [
+      {
+        "title": "Data Visualizations",
+        "link": "https://www.youtube.com/watch?v=S1PDU2Ckt5w&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo",
+        "presenter": {
+          "name": "Shirley Wu"
+        },
+        "length": "34:14",
+        "split": "Day 1"
+      },
+      {
+        "title": "The \"Something\" statements",
+        "link": "https://www.youtube.com/watch?v=pvi0yUwSBec&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo",
+        "presenter": {
+          "name": "Sunil Pai"
+        },
+        "length": "21:54",
+        "split": "Day 1"
+      },
+      {
+        "title": "Why React is not Reactive",
+        "link": "https://www.youtube.com/watch?v=nyFHR0dDZo0&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo",
+        "presenter": {
+          "name": "Shawn Swyx Wang"
+        },
+        "length": "27:04",
+        "split": "Day 1"
+      },
+      {
+        "title": "React(ing) in a crisis",
+        "link": "https://www.youtube.com/watch?v=S1E6C8O7fk0&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo",
+        "presenter": {
+          "name": "Carrie Maxwell"
+        },
+        "length": "22:35",
+        "split": "Day 1"
+      },
+      {
+        "title": "Algebraic effects, Fibers, Coroutines Oh my!",
+        "link": "https://www.youtube.com/watch?v=7GcrT0SBSnI&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo",
+        "presenter": {
+          "name": "Brandon Dail"
+        },
+        "length": "29:43",
+        "split": "Day 1"
+      },
+      {
+        "title": "The Life Cycle Methods And The Wolf - A Musicological Romp",
+        "link": "https://www.youtube.com/watch?v=o4XxQl-1JJU&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo",
+        "presenter": {
+          "name": "Ryan Moore"
+        },
+        "length": "29:00",
+        "split": "Day 1"
+      },
+      {
+        "title": "Chaos Monkeys in Your Browser What Chaos Engineering Means For the Front End",
+        "link": "https://www.youtube.com/watch?v=A4_rRj-4Mv0&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo",
+        "presenter": {
+          "name": "Brian Holt"
+        },
+        "length": "26:38",
+        "split": "Day 1"
+      },
+      {
+        "title": "Explorable Explanations with React",
+        "link": "https://www.youtube.com/watch?v=XjFR9Jc-ras&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo",
+        "presenter": {
+          "name": "Joshua Comeau"
+        },
+        "length": "24:59",
+        "split": "Day 1"
+      },
+      {
+        "title": "AI for Everybody",
+        "link": "https://www.youtube.com/watch?v=Vbu7a2P_dQ4&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo",
+        "presenter": {
+          "name": "Feather"
+        },
+        "length": "24:38",
+        "split": "Day 1"
+      },
+      {
+        "title": "One Hundred Years of JavaScript",
+        "link": "https://www.youtube.com/watch?v=J7Cotg0DRsg&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo",
+        "presenter": {
+          "name": "Justine Falcone"
+        },
+        "length": "24:10",
+        "split": "Day 1"
+      },
+      {
+        "title": "ReasonML is Serious Business",
+        "link": "https://www.youtube.com/watch?v=lzEweA7RPi0&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo",
+        "presenter": {
+          "name": "Ken Wheeler"
+        },
+        "length": "30:00",
+        "split": "Day 2"
+      },
+      {
+        "title": "Swipe Left, Uncaught TypeError: Learning to Love Type Systems",
+        "link": "https://www.youtube.com/watch?v=y3uXazpAdwo&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo",
+        "presenter": {
+          "name": "Lauren Tan"
+        },
+        "length": "29:42",
+        "split": "Day 2"
+      },
+      {
+        "title": "Help me WebAssembly, you're my only hope!",
+        "link": "https://www.youtube.com/watch?v=6KeDFvdxRZk&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo",
+        "presenter": {
+          "name": "Jay Phelps"
+        },
+        "length": "21:05",
+        "split": "Day 2"
+      },
+      {
+        "title": "Hot Garbage Clean Code is Dead",
+        "link": "https://www.youtube.com/watch?v=-NP_upexPFg&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo",
+        "presenter": {
+          "name": "Michael Chan"
+        },
+        "length": "33:48",
+        "split": "Day 2"
+      },
+      {
+        "title": "React Off the Grid",
+        "link": "https://www.youtube.com/watch?v=UHNfv6k_1OQ&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo",
+        "presenter": {
+          "name": "Sophia Shoemaker"
+        },
+        "length": "17:03",
+        "split": "Day 2"
+      },
+      {
+        "title": "Through the Open Source Looking Glass",
+        "link": "https://www.youtube.com/watch?v=h0sfFX7WH1c&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo",
+        "presenter": {
+          "name": "Henry Zhu"
+        },
+        "length": "22:12",
+        "split": "Day 2"
+      },
+      {
+        "title": "Translating React",
+        "link": "https://www.youtube.com/watch?v=r33EWrP5EL4&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo",
+        "presenter": {
+          "name": "Jennifer Wong"
+        },
+        "length": "25:36",
+        "split": "Day 2"
+      },
+      {
+        "title": "Simply React",
+        "link": "https://www.youtube.com/watch?v=AiJ8tRRH0f8&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo",
+        "presenter": {
+          "name": "Kent C Dodds"
+        },
+        "length": "25:19",
+        "split": "Day 2"
+      },
+      {
+        "title": "Everything You Need to Know About GraphQL in 3 Components",
+        "link": "https://www.youtube.com/watch?v=F_M8v6MK0Sc&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo",
+        "presenter": {
+          "name": "Eve Porcello"
+        },
+        "length": "26:21",
+        "split": "Day 2"
+      },
+      {
+        "title": "Route Recalculating",
+        "link": "https://www.youtube.com/watch?v=X-kA8B2QzjY&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo",
+        "presenter": {
+          "name": "Ryan Florence"
+        },
+        "length": "42:39",
+        "split": "Day 2"
+      }      
+    ]
+  },
+  {
     "title": "Reactathon",
     "date": "07-09-2018",
     "website": "https://www.reactathon.com/",
