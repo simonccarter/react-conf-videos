@@ -6,17 +6,18 @@ List of react conference videos.
 
 * 2018
   * [React Conf 2018](#react-conf-2018)
-  * [ReactFest 2018](#reactfest-2018)
   * [Reactathon](#reactathon)
+  * [ReactFest 2018](#reactfest-2018)
+  * [React Rally 2018](#react-rally-2018)
 * 2017
-  * [React Europe 2017](#react-europe-2017)
   * [ReactiveConf 2017](#reactiveconf-2017)
   * [React Rally 2017](#react-rally-2017)
   * [ReactNext 2017](#reactnext-2017)
+  * [React Europe 2017](#react-europe-2017)
 * 2016
-  * [React Europe 2016](#react-europe-2016)
   * [React Amsterdam](#react-amsterdam)
   * [React Conf 2016](#react-conf-2016)
+  * [React Europe 2016](#react-europe-2016)
   * [React Rally 2016](#react-rally-2016)
   * [ReactiveConf 2016](#reactiveconf-2016)
 * 2015
@@ -68,29 +69,6 @@ List of react conference videos.
 [Building a Diverse and Inclusive Community](https://www.youtube.com/watch?v=xYI9N0memLc&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=28) | Eyitayo Alimi | 17:04
 [React for Designers with FramerX](https://www.youtube.com/watch?v=6DDdtt5zXPk&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=29) | Thomas Aylott | 28:41
 
-### ReactFest 2018
-
-##### [website](https://reactfest.com/) - [playlist](https://www.youtube.com/playlist?list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle)
-
-
-| Title/Link        | Presenter  | Length |
-| ------------- |:-------------:| -----:|
-[GraphQL Servers in the Browser](https://www.youtube.com/watch?v=YOCrJ5vRCnw&t=1s&index=2&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | David Gomes | 16:00
-[Suspense!](https://www.youtube.com/watch?v=6g3g0Q_XVb4&t=0s&index=3&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | Dan Abramov | 31:33
-[React + i18n - You Have No Excuse!](https://www.youtube.com/watch?v=6NwgHUcom_8&t=0s&index=4&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | Eli Schutze | 20:01
-[Garbage Collection in Modern Web Applications](https://www.youtube.com/watch?v=aaGacO-Yybs&t=0s&index=5&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | Jan Monschke | 11:11
-[State Management in a GraphQL Era](https://www.youtube.com/watch?v=s-3k7O5rSFY&t=0s&index=6&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | Kitze | 19:40
-[Wait, What happens When My React Native Application Starts?](https://www.youtube.com/watch?v=rReCzR6DMEM&t=0s&index=7&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | Nicolas Couvrat | 11:38
-[How to draw an Owl](https://www.youtube.com/watch?v=53rifn77_bk&t=0s&index=8&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | Marcel Cutts | 18:54
-[Zero Config GraphQL State Management](https://www.youtube.com/watch?v=jFULzAMS-jI&t=0s&index=9&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | Peggy Rayzis | 23:11
-[The Dark and Lonely Road to Styling in React](https://www.youtube.com/watch?v=Q249u4W_IZQ&t=0s&index=10&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | Sara Veira | 23:11
-[Journey Through VR and AR with React](https://www.youtube.com/watch?v=PJyZdxGztaY&t=0s&index=11&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | Thomas Lakomy | 20:31
-[An introduction to Redux Saga: Side Effects Made Easier](https://www.youtube.com/watch?v=il9rXYOLWjA&t=0s&index=12&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | Sophie Koonin | 10:58
-[Productive React Development](https://www.youtube.com/watch?v=avKBrgIQXzk&t=0s&index=13&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | Stephanie Siaw | 14:48
-[Taming the Beast How to Tame REact and GraphQL](https://www.youtube.com/watch?v=5kCv8_A9yi8&t=0s&index=14&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | Susanna Wong | 14:48
-[ReactFest 2018 Experience](https://www.youtube.com/watch?v=3JMrFGrvaNE&t=0s&index=15&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | ReactFest | 1:41
-[We Need to Talk About our Frontend Workflow](https://www.youtube.com/watch?v=ByBPyMBTzM0&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=16) | Siddharth Khestrapal | 20:00
-
 ### Reactathon
 
 ##### [website](https://www.reactathon.com/) - [playlist: Day 1](https://www.youtube.com/playlist?list=PLRvKvw42Rc7N0QpX2Rc5CdrqGuxzwD_0H) - [playlist: Day 2](https://www.youtube.com/playlist?list=PLRvKvw42Rc7Ne46QAjWNWFo1Jf0mQdnIW)
@@ -127,44 +105,65 @@ List of react conference videos.
 [React-Based Content Management with Netlify CMS & Gatsby](https://www.youtube.com/watch?v=YyRwMy59d4M&t=0s&index=10&list=PLRvKvw42Rc7Ne46QAjWNWFo1Jf0mQdnIW) | Matt Biilmann | 27:35
 [Front End Happy Hour Closing Panel](https://www.youtube.com/watch?v=MRnqnt2ZJ7w&t=0s&index=11&list=PLRvKvw42Rc7Ne46QAjWNWFo1Jf0mQdnIW) | Reactathon 2018 | 32:07
 
+### ReactFest 2018
 
-## 2017
+##### [website](https://reactfest.com/) - [playlist](https://www.youtube.com/playlist?list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle)
 
-### React Europe 2017
 
-##### [website](https://2017.react-europe.org/) - [playlist: Day 1](https://www.youtube.com/playlist?list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD) - [playlist: Day 2](https://www.youtube.com/playlist?list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH)
+| Title/Link        | Presenter  | Length |
+| ------------- |:-------------:| -----:|
+[GraphQL Servers in the Browser](https://www.youtube.com/watch?v=YOCrJ5vRCnw&t=1s&index=2&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | David Gomes | 16:00
+[Suspense!](https://www.youtube.com/watch?v=6g3g0Q_XVb4&t=0s&index=3&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | Dan Abramov | 31:33
+[React + i18n - You Have No Excuse!](https://www.youtube.com/watch?v=6NwgHUcom_8&t=0s&index=4&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | Eli Schutze | 20:01
+[Garbage Collection in Modern Web Applications](https://www.youtube.com/watch?v=aaGacO-Yybs&t=0s&index=5&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | Jan Monschke | 11:11
+[State Management in a GraphQL Era](https://www.youtube.com/watch?v=s-3k7O5rSFY&t=0s&index=6&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | Kitze | 19:40
+[Wait, What happens When My React Native Application Starts?](https://www.youtube.com/watch?v=rReCzR6DMEM&t=0s&index=7&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | Nicolas Couvrat | 11:38
+[How to draw an Owl](https://www.youtube.com/watch?v=53rifn77_bk&t=0s&index=8&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | Marcel Cutts | 18:54
+[Zero Config GraphQL State Management](https://www.youtube.com/watch?v=jFULzAMS-jI&t=0s&index=9&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | Peggy Rayzis | 23:11
+[The Dark and Lonely Road to Styling in React](https://www.youtube.com/watch?v=Q249u4W_IZQ&t=0s&index=10&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | Sara Veira | 23:11
+[Journey Through VR and AR with React](https://www.youtube.com/watch?v=PJyZdxGztaY&t=0s&index=11&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | Thomas Lakomy | 20:31
+[An introduction to Redux Saga: Side Effects Made Easier](https://www.youtube.com/watch?v=il9rXYOLWjA&t=0s&index=12&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | Sophie Koonin | 10:58
+[Productive React Development](https://www.youtube.com/watch?v=avKBrgIQXzk&t=0s&index=13&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | Stephanie Siaw | 14:48
+[Taming the Beast How to Tame REact and GraphQL](https://www.youtube.com/watch?v=5kCv8_A9yi8&t=0s&index=14&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | Susanna Wong | 14:48
+[ReactFest 2018 Experience](https://www.youtube.com/watch?v=3JMrFGrvaNE&t=0s&index=15&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle) | ReactFest | 1:41
+[We Need to Talk About our Frontend Workflow](https://www.youtube.com/watch?v=ByBPyMBTzM0&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=16) | Siddharth Khestrapal | 20:00
+
+### React Rally 2018
+
+##### [website](http://www.reactrally.com/) - [playlist](https://www.youtube.com/playlist?list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo)
 
 #### Day 1
 
 | Title/Link        | Presenter  | Length |
 | ------------- |:-------------:| -----:|
-[Keynote](https://www.youtube.com/watch?v=QW5TE4vrklU&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD) | Andrew Clark | 25:42
-[What I Learned Benchmarking React](https://www.youtube.com/watch?v=djOc1EK07Tk&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD&index=2) | Dominic Gannaway | 16:58
-[Building High-Quality JavaScript Tools](https://www.youtube.com/watch?v=qAZ3_xCHe48&index=3&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD) | Christoph Pojer | 24:38
-[La nouvelle vague](https://www.youtube.com/watch?v=yjVhjmM1FPc&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD&index=4) | Sunil Pai | 28:02
-[Worse is Better: The Upside of JavaScript Fatigue](https://www.youtube.com/watch?v=4mbipBIzY_g&index=5&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD) | Kevin Lacker | 22:56
-[What WebAssembly means for React](https://www.youtube.com/watch?v=3GHJ4cbxsVQ&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD&index=6) | Lin Clark | 33:07
-[Imperfection](https://www.youtube.com/watch?v=tCVXp6gFD8o&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD&index=7) | Cheng Lou Aka | 30:18
-[Practical Confidence: Using Types to Help Your Computer Help You](https://www.youtube.com/watch?v=ppYj1FFeyXw&index=8&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD) | Adam Perry | 28:24
-[Maximally Modular Apps with React Navigation](https://www.youtube.com/watch?v=1ZwXOqsdl4c&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD&index=9) | Eric Vicenti | 21:38
-[How Streaming Can Supercharge React](https://www.youtube.com/watch?v=UhdGiVy3_Nk&index=10&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD) | Sasha Aickin | 30:21
+[Data Visualizations](https://www.youtube.com/watch?v=S1PDU2Ckt5w&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo) | Shirley Wu | 34:14
+[The "Something" statements](https://www.youtube.com/watch?v=pvi0yUwSBec&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo) | Sunil Pai | 21:54
+[Why React is not Reactive](https://www.youtube.com/watch?v=nyFHR0dDZo0&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo) | Shawn Swyx Wang | 27:04
+[React(ing) in a crisis](https://www.youtube.com/watch?v=S1E6C8O7fk0&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo) | Carrie Maxwell | 22:35
+[Algebraic effects, Fibers, Coroutines Oh my!](https://www.youtube.com/watch?v=7GcrT0SBSnI&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo) | Brandon Dail | 29:43
+[The Life Cycle Methods And The Wolf - A Musicological Romp](https://www.youtube.com/watch?v=o4XxQl-1JJU&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo) | Ryan Moore | 29:00
+[Chaos Monkeys in Your Browser What Chaos Engineering Means For the Front End](https://www.youtube.com/watch?v=A4_rRj-4Mv0&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo) | Brian Holt | 26:38
+[Explorable Explanations with React](https://www.youtube.com/watch?v=XjFR9Jc-ras&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo) | Joshua Comeau | 24:59
+[AI for Everybody](https://www.youtube.com/watch?v=Vbu7a2P_dQ4&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo) | Feather | 24:38
+[One Hundred Years of JavaScript](https://www.youtube.com/watch?v=J7Cotg0DRsg&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo) | Justine Falcone | 24:10
 
 #### Day 2
 
 | Title/Link        | Presenter  | Length |
 | ------------- |:-------------:| -----:|
-[Next generation state management](https://www.youtube.com/watch?v=rwqwwn_46kA&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH) | Michel Weststrate | 24:47
-[Composition](https://www.youtube.com/watch?v=qJgff2spvzM&index=2&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH) | Nik Graf | 32:57
-[The making of Twitter Lite](https://www.youtube.com/watch?v=cc3rdiXl5eY&index=3&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH) | Nicolas Gallagher | 22:10
-[The runtimes of React VR and use at Oculus](https://www.youtube.com/watch?v=B8sP5SDpOdc&index=4&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH) | Mike Armstrong | 28:49
-[Functional && Reactive](https://www.youtube.com/watch?v=yYze0gCBtvY&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH&index=5) | Preethi Kasireddy | 31:16
-[Relay Modern](https://www.youtube.com/watch?v=OdsMz7h_Li0&index=6&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH) | Lee Byron | 27:32
-[React as a Platform: A path towards a truly cross-platform UI](https://www.youtube.com/watch?v=hNwQPJy-XZY&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH&index=7) | Leland Richardson | 27:18
-[Animating the Virtual DOM](https://www.youtube.com/watch?v=W5AdUcJDHo0&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH&index=8) | Sarah Drasner | 31:06
-[A Novel Approach to Declarative Animations in React Native](https://www.youtube.com/watch?v=3SITFIGz4xo&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH&index=10) | Joel Arvidsson | 22:18
-[Putting the fun in functional with Elm](https://www.youtube.com/watch?v=a0039_JRAQo&index=11&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH) | Tereza Sokol | 14:45
-[Integrating React Native with Native Infrastructure](https://www.youtube.com/watch?v=QOAoLF6FV7A&index=12&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH) | Mehdi Mulani | 13:02
-[Q&A Panel with Core team and speakers](https://www.youtube.com/watch?v=BvHxlVlse-g&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH&index=13) | n/a | undefined
+[ReasonML is Serious Business](https://www.youtube.com/watch?v=lzEweA7RPi0&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo) | Ken Wheeler | 30:00
+[Swipe Left, Uncaught TypeError: Learning to Love Type Systems](https://www.youtube.com/watch?v=y3uXazpAdwo&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo) | Lauren Tan | 29:42
+[Help me WebAssembly, you're my only hope!](https://www.youtube.com/watch?v=6KeDFvdxRZk&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo) | Jay Phelps | 21:05
+[Hot Garbage Clean Code is Dead](https://www.youtube.com/watch?v=-NP_upexPFg&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo) | Michael Chan | 33:48
+[React Off the Grid](https://www.youtube.com/watch?v=UHNfv6k_1OQ&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo) | Sophia Shoemaker | 17:03
+[Through the Open Source Looking Glass](https://www.youtube.com/watch?v=h0sfFX7WH1c&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo) | Henry Zhu | 22:12
+[Translating React](https://www.youtube.com/watch?v=r33EWrP5EL4&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo) | Jennifer Wong | 25:36
+[Simply React](https://www.youtube.com/watch?v=AiJ8tRRH0f8&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo) | Kent C Dodds | 25:19
+[Everything You Need to Know About GraphQL in 3 Components](https://www.youtube.com/watch?v=F_M8v6MK0Sc&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo) | Eve Porcello | 26:21
+[Route Recalculating](https://www.youtube.com/watch?v=X-kA8B2QzjY&list=PL2mV_hLb0CNAJSQLmKAWRou9fDiAVbsUo) | Ryan Florence | 42:39
+
+
+## 2017
 
 ### ReactiveConf 2017
 
@@ -241,42 +240,44 @@ List of react conference videos.
 [Detox — Graybox E2E Tests Library for React Native](https://www.youtube.com/watch?v=js9BihmW9ak&list=PLMYVq3z1QxSqCZmaqgTXLsrcJ8mZmBF7T&index=9) | Rotem Mizrachi-Meidan | 23:43
 [WebVR and React](https://www.youtube.com/watch?v=js9BihmW9ak&list=PLMYVq3z1QxSqCZmaqgTXLsrcJ8mZmBF7T&index=10) | Shay Keinan | 22:53
 
+### React Europe 2017
 
-## 2016
-
-### React Europe 2016
-
-##### [website](https://2016.react-europe.org/) - [playlist](https://www.youtube.com/playlist?list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa)
+##### [website](https://2017.react-europe.org/) - [playlist: Day 1](https://www.youtube.com/playlist?list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD) - [playlist: Day 2](https://www.youtube.com/playlist?list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH)
 
 #### Day 1
 
 | Title/Link        | Presenter  | Length |
 | ------------- |:-------------:| -----:|
-[The Redux Journey](https://www.youtube.com/watch?v=uvAXVMwHJXU&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa) | Dan Abramov | 26:56
-[Native Navigation for Every Platform](https://www.youtube.com/watch?v=dOSwHABLvdM&index=2&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa) | Eric Vicenti | 27:25
-[A cartoon guide to performance](https://www.youtube.com/watch?v=-t8eOoRsJ7M&index=3&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa) | Lin Clark | 26:19
-[React Native ❤ 60FPS](https://www.youtube.com/watch?v=qgSMjYWqBk4&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa&index=4) | Krzysztof Magiera | 25:25
-[Being Successful at Open Source](https://www.youtube.com/watch?v=nRF0OVQL9Nw&index=5&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa) | Christopher Chedeau | 28:38
-[GraphQL at Facebook](https://www.youtube.com/watch?v=etax3aEe2dA&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa&index=6) | Dan Schafer | 26:30
-[A Deepdive Into Flow](https://www.youtube.com/watch?v=VEaDsKyDxkY&index=7&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa) | Jeff Morrison | 27:52
-[Debugging flux applications in production](https://www.youtube.com/watch?v=cbXLohVbzNI&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa&index=8) | Mihail Diordiev | 19:52
-[On the Spectrum of Abstraction](https://www.youtube.com/watch?v=mVVNJKv9esE&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa&index=9) | Cheng Lou | 35:31
-[React Redux Analytics](https://www.youtube.com/watch?v=MBTgiMLujek&index=10&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa) | Bertrand Karerangabo & Evan Schultz | 26:54
+[Keynote](https://www.youtube.com/watch?v=QW5TE4vrklU&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD) | Andrew Clark | 25:42
+[What I Learned Benchmarking React](https://www.youtube.com/watch?v=djOc1EK07Tk&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD&index=2) | Dominic Gannaway | 16:58
+[Building High-Quality JavaScript Tools](https://www.youtube.com/watch?v=qAZ3_xCHe48&index=3&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD) | Christoph Pojer | 24:38
+[La nouvelle vague](https://www.youtube.com/watch?v=yjVhjmM1FPc&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD&index=4) | Sunil Pai | 28:02
+[Worse is Better: The Upside of JavaScript Fatigue](https://www.youtube.com/watch?v=4mbipBIzY_g&index=5&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD) | Kevin Lacker | 22:56
+[What WebAssembly means for React](https://www.youtube.com/watch?v=3GHJ4cbxsVQ&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD&index=6) | Lin Clark | 33:07
+[Imperfection](https://www.youtube.com/watch?v=tCVXp6gFD8o&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD&index=7) | Cheng Lou Aka | 30:18
+[Practical Confidence: Using Types to Help Your Computer Help You](https://www.youtube.com/watch?v=ppYj1FFeyXw&index=8&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD) | Adam Perry | 28:24
+[Maximally Modular Apps with React Navigation](https://www.youtube.com/watch?v=1ZwXOqsdl4c&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD&index=9) | Eric Vicenti | 21:38
+[How Streaming Can Supercharge React](https://www.youtube.com/watch?v=UhdGiVy3_Nk&index=10&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD) | Sasha Aickin | 30:21
 
 #### Day 2
 
 | Title/Link        | Presenter  | Length |
 | ------------- |:-------------:| -----:|
-[Evolving the Visual Programming Environment with React](https://www.youtube.com/watch?v=WjJdaDXN5Vs&list=PLCC436JpVnK0LTDKW3O_BGTZnrZ8dBAof) | Jonas Gebhardt | 29:27
-[React Native Retrospective](https://www.youtube.com/watch?v=-vl57brMWNg&index=2&list=PLCC436JpVnK0LTDKW3O_BGTZnrZ8dBAof) | Bonnie Eisenman | 25:35
-[The Evolution of React UI Development](https://www.youtube.com/watch?v=0IkWuXeKPV0&list=PLCC436JpVnK0LTDKW3O_BGTZnrZ8dBAof&index=3) | Max Stoiber & Nik Graf | 20:42
-[Recomposing your React application](https://www.youtube.com/watch?v=zD_judE-bXk&index=4&list=PLCC436JpVnK0LTDKW3O_BGTZnrZ8dBAof) | Andrew Clark | 29:55
-[JavaScript, React Native and Performance](https://www.youtube.com/watch?v=1oL_OJ3UePU&index=5&list=PLCC436JpVnK0LTDKW3O_BGTZnrZ8dBAof) | Tadeu Zagallo | 21:18
-[Falcor: One Model Everywhere](https://www.youtube.com/watch?v=nxQweyTUj5s&index=6&list=PLCC436JpVnK0LTDKW3O_BGTZnrZ8dBAof) | Jafar Husain | 27:51
-[Building li.st for Android with Exponent and React Native](https://www.youtube.com/watch?v=cI9bDvDEsYE&list=PLCC436JpVnK0LTDKW3O_BGTZnrZ8dBAof&index=7) | Brent Vatne | 32:44
-[GraphQL Future](https://www.youtube.com/watch?v=ViXL0YQnioU&index=8&list=PLCC436JpVnK0LTDKW3O_BGTZnrZ8dBAof) | Laney Kuenzel & Lee Byron | 32:17
-[Building native mobile apps with GraphQL](https://www.youtube.com/watch?v=z5rz3saDPJ8&list=PLCC436JpVnK0LTDKW3O_BGTZnrZ8dBAof&index=9) | Martijn Walraven | 23:55
-[Question and Answers with core team members](https://www.youtube.com/watch?v=5pMDd1t2thc&list=PLCC436JpVnK0LTDKW3O_BGTZnrZ8dBAof&index=10) | n/a | 57:27
+[Next generation state management](https://www.youtube.com/watch?v=rwqwwn_46kA&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH) | Michel Weststrate | 24:47
+[Composition](https://www.youtube.com/watch?v=qJgff2spvzM&index=2&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH) | Nik Graf | 32:57
+[The making of Twitter Lite](https://www.youtube.com/watch?v=cc3rdiXl5eY&index=3&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH) | Nicolas Gallagher | 22:10
+[The runtimes of React VR and use at Oculus](https://www.youtube.com/watch?v=B8sP5SDpOdc&index=4&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH) | Mike Armstrong | 28:49
+[Functional && Reactive](https://www.youtube.com/watch?v=yYze0gCBtvY&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH&index=5) | Preethi Kasireddy | 31:16
+[Relay Modern](https://www.youtube.com/watch?v=OdsMz7h_Li0&index=6&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH) | Lee Byron | 27:32
+[React as a Platform: A path towards a truly cross-platform UI](https://www.youtube.com/watch?v=hNwQPJy-XZY&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH&index=7) | Leland Richardson | 27:18
+[Animating the Virtual DOM](https://www.youtube.com/watch?v=W5AdUcJDHo0&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH&index=8) | Sarah Drasner | 31:06
+[A Novel Approach to Declarative Animations in React Native](https://www.youtube.com/watch?v=3SITFIGz4xo&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH&index=10) | Joel Arvidsson | 22:18
+[Putting the fun in functional with Elm](https://www.youtube.com/watch?v=a0039_JRAQo&index=11&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH) | Tereza Sokol | 14:45
+[Integrating React Native with Native Infrastructure](https://www.youtube.com/watch?v=QOAoLF6FV7A&index=12&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH) | Mehdi Mulani | 13:02
+[Q&A Panel with Core team and speakers](https://www.youtube.com/watch?v=BvHxlVlse-g&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH&index=13) | n/a | undefined
+
+
+## 2016
 
 ### React Amsterdam
 
@@ -323,6 +324,40 @@ List of react conference videos.
 [Speeding up Startup for Large React](https://www.youtube.com/watch?v=SnAq9tbeRm4&list=PLb0IAmt7-GS0M8Q95RIc2lOM6nc77q1IY&index=30) | Bhuwan Khattar | 31:20
 [Rethinking All Practices: Building Applications in Elm](https://www.youtube.com/watch?v=txxKx_I39a8&list=PLb0IAmt7-GS0M8Q95RIc2lOM6nc77q1IY&index=31) | Jamison Dance | 29:06
 [Optimising React Native: Tools and Tips](https://www.youtube.com/watch?v=0MlT74erp60&list=PLb0IAmt7-GS0M8Q95RIc2lOM6nc77q1IY&index=32) | Tadeu Zagallo | 24:12
+
+### React Europe 2016
+
+##### [website](https://2016.react-europe.org/) - [playlist](https://www.youtube.com/playlist?list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa)
+
+#### Day 1
+
+| Title/Link        | Presenter  | Length |
+| ------------- |:-------------:| -----:|
+[The Redux Journey](https://www.youtube.com/watch?v=uvAXVMwHJXU&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa) | Dan Abramov | 26:56
+[Native Navigation for Every Platform](https://www.youtube.com/watch?v=dOSwHABLvdM&index=2&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa) | Eric Vicenti | 27:25
+[A cartoon guide to performance](https://www.youtube.com/watch?v=-t8eOoRsJ7M&index=3&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa) | Lin Clark | 26:19
+[React Native ❤ 60FPS](https://www.youtube.com/watch?v=qgSMjYWqBk4&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa&index=4) | Krzysztof Magiera | 25:25
+[Being Successful at Open Source](https://www.youtube.com/watch?v=nRF0OVQL9Nw&index=5&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa) | Christopher Chedeau | 28:38
+[GraphQL at Facebook](https://www.youtube.com/watch?v=etax3aEe2dA&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa&index=6) | Dan Schafer | 26:30
+[A Deepdive Into Flow](https://www.youtube.com/watch?v=VEaDsKyDxkY&index=7&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa) | Jeff Morrison | 27:52
+[Debugging flux applications in production](https://www.youtube.com/watch?v=cbXLohVbzNI&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa&index=8) | Mihail Diordiev | 19:52
+[On the Spectrum of Abstraction](https://www.youtube.com/watch?v=mVVNJKv9esE&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa&index=9) | Cheng Lou | 35:31
+[React Redux Analytics](https://www.youtube.com/watch?v=MBTgiMLujek&index=10&list=PLCC436JpVnK09bZeayg-KeLuHfHgc-tDa) | Bertrand Karerangabo & Evan Schultz | 26:54
+
+#### Day 2
+
+| Title/Link        | Presenter  | Length |
+| ------------- |:-------------:| -----:|
+[Evolving the Visual Programming Environment with React](https://www.youtube.com/watch?v=WjJdaDXN5Vs&list=PLCC436JpVnK0LTDKW3O_BGTZnrZ8dBAof) | Jonas Gebhardt | 29:27
+[React Native Retrospective](https://www.youtube.com/watch?v=-vl57brMWNg&index=2&list=PLCC436JpVnK0LTDKW3O_BGTZnrZ8dBAof) | Bonnie Eisenman | 25:35
+[The Evolution of React UI Development](https://www.youtube.com/watch?v=0IkWuXeKPV0&list=PLCC436JpVnK0LTDKW3O_BGTZnrZ8dBAof&index=3) | Max Stoiber & Nik Graf | 20:42
+[Recomposing your React application](https://www.youtube.com/watch?v=zD_judE-bXk&index=4&list=PLCC436JpVnK0LTDKW3O_BGTZnrZ8dBAof) | Andrew Clark | 29:55
+[JavaScript, React Native and Performance](https://www.youtube.com/watch?v=1oL_OJ3UePU&index=5&list=PLCC436JpVnK0LTDKW3O_BGTZnrZ8dBAof) | Tadeu Zagallo | 21:18
+[Falcor: One Model Everywhere](https://www.youtube.com/watch?v=nxQweyTUj5s&index=6&list=PLCC436JpVnK0LTDKW3O_BGTZnrZ8dBAof) | Jafar Husain | 27:51
+[Building li.st for Android with Exponent and React Native](https://www.youtube.com/watch?v=cI9bDvDEsYE&list=PLCC436JpVnK0LTDKW3O_BGTZnrZ8dBAof&index=7) | Brent Vatne | 32:44
+[GraphQL Future](https://www.youtube.com/watch?v=ViXL0YQnioU&index=8&list=PLCC436JpVnK0LTDKW3O_BGTZnrZ8dBAof) | Laney Kuenzel & Lee Byron | 32:17
+[Building native mobile apps with GraphQL](https://www.youtube.com/watch?v=z5rz3saDPJ8&list=PLCC436JpVnK0LTDKW3O_BGTZnrZ8dBAof&index=9) | Martijn Walraven | 23:55
+[Question and Answers with core team members](https://www.youtube.com/watch?v=5pMDd1t2thc&list=PLCC436JpVnK0LTDKW3O_BGTZnrZ8dBAof&index=10) | n/a | 57:27
 
 ### React Rally 2016
 
