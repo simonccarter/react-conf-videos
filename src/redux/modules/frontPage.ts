@@ -73,12 +73,12 @@ export const filterEpic: Epic<Action<any>, any> = (action$, store) =>
     .debounceTime(80) 
     .map((action) => {
       const { payload: filterValue = ''} = action
-      const { conferences, videosLC, presentersLC } = store.getState().data
+      const { conferences, videosSearchable, presentersSearchable } = store.getState().data
       const rAction: Action<IndexedConferences> = { type: SET_FILTERED_CONFERENCES }
       // if no/empty query, return original/all set of videos
       rAction.payload = isFilterEmpty(filterValue) ?
         conferences :
-        computeFilteredConferences(filterValue.trim().toLowerCase(), conferences, videosLC, presentersLC)
+        computeFilteredConferences(filterValue.trim().toLowerCase(), conferences, videosSearchable, presentersSearchable)
       return rAction
     })
 
