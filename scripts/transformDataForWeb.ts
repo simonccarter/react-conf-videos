@@ -1,6 +1,7 @@
 const fs = require('fs')
 const { normalize } = require('normalizr')
-const { ifElse, either, is, mapObjIndexed, merge } = require('ramda')
+const { ifElse, either, is, mapObjIndexed, merge, pipe, toLower } = require('ramda')
+const removeDiacritics = require('diacritics').remove
 
 const conferenceSchema = require('./confSchema')
 
@@ -33,7 +34,7 @@ const recurseAction =
         (e: any) => action(e)
       )
 
-const lowerCase = (e: string) => e.toLowerCase()
+const lowerCase = (e: string) => pipe(removeDiacritics, toLower)(e)
 const lowerCaseAllValues = (whiteList: string[]) => recurseAction(lowerCase)(whiteList)
 const lowerCaseVideos = lowerCaseAllValues(whiteListVideos)
 const lowerCasePresenters = lowerCaseAllValues(whiteListVideos)
