@@ -32,7 +32,7 @@ export type ReduxState = {
 
 // returns true if filterValue is found (includes()) within any element of termsToSearch
 export const textInDetails = (filterValue: string, termsToSearch: [string, string]) =>
-  any((phrase) => phrase.includes(removeDiacritics(filterValue)), termsToSearch)
+  any((phrase) => phrase.includes(filterValue), termsToSearch)
 
 // filters videos on a conference
 export const filterVideos = (videos: IndexedVideos, presenters: IndexedPresenters, conferences: IndexedConferences, filterValue: string, conferenceKey: string) => {
@@ -78,7 +78,7 @@ export const filterEpic: Epic<Action<any>, any> = (action$, store) =>
       // if no/empty query, return original/all set of videos
       rAction.payload = isFilterEmpty(filterValue) ?
         conferences :
-        computeFilteredConferences(filterValue.trim().toLowerCase(), conferences, videosSearchable, presentersSearchable)
+        computeFilteredConferences(removeDiacritics(filterValue.trim().toLowerCase()), conferences, videosSearchable, presentersSearchable)
       return rAction
     })
 
