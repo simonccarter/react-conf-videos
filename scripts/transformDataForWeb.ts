@@ -17,10 +17,10 @@ import {
 
 export type ReduxState = {
   conferenceTitlesToIds: ConferenceTitlesToIds,
-  presentersLC: IndexedPresenters, 
+  presentersSearchable: IndexedPresenters, 
   conferences: IndexedConferences, 
   presenters: IndexedPresenters, 
-  videosLC: IndexedVideos, 
+  videosSearchable: IndexedVideos, 
   videos: IndexedVideos
 }
 
@@ -64,8 +64,8 @@ const transformDataFromJson = (data: JSONInput): ReduxState => {
   const harmonizedSpeakerNames = harmonizePresenters(normalized.entities.presenters)
 
   return merge(normalized.entities, {
-    videosLC: harmonizedVideos,
-    presentersLC: harmonizedSpeakerNames
+    videosSearchable: harmonizedVideos,
+    presentersSearchable: harmonizedSpeakerNames
   })
 }
 

@@ -18,10 +18,10 @@ export const COPY_DATA = 'data.COPY_DATA'
 
 export type ReduxState = {
   conferenceTitlesToIds: ConferenceTitlesToIds,
-  presentersLC: IndexedPresenters, 
+  presentersSearchable: IndexedPresenters, 
   conferences: IndexedConferences, 
   presenters: IndexedPresenters, 
-  videosLC: IndexedVideos, 
+  videosSearchable: IndexedVideos, 
   videos: IndexedVideos
 }
 
@@ -33,7 +33,7 @@ export const dataCopyEpic: Epic<any, Action<JSONInput>> = action$ =>
 export const dataEpics = combineEpics(dataCopyEpic)
 
 export const initialState = Immutable<ReduxState>({
-  presenters: {}, conferences: {}, videos: {}, videosLC: {}, presentersLC: {}, conferenceTitlesToIds: {}
+  presenters: {}, conferences: {}, videos: {}, videosSearchable: {}, presentersSearchable: {}, conferenceTitlesToIds: {}
 })
 
 const dataReducer = (state = initialState, action: Action<any>) => {

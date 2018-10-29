@@ -50,7 +50,7 @@ Object {
       "name": "Tomaš Kulich",
     },
   },
-  "presentersLC": Object {
+  "presentersSearchable": Object {
     "0987584bfb9534c15e44ccb086a56285": Object {
       "name": "tom occhino",
     },
@@ -109,7 +109,7 @@ Object {
       "title": "D3 & React",
     },
   },
-  "videosLC": Object {
+  "videosSearchable": Object {
     "69e8e781bb8f9f5bb551a8bc3d05350e": Object {
       "embeddableLink": "https://www.youtube.com/embed/cSUxHv-kH7w",
       "length": "14:13",
