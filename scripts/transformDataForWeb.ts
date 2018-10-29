@@ -1,6 +1,6 @@
 const fs = require('fs')
 const { normalize } = require('normalizr')
-const { ifElse, either, is, mapObjIndexed, merge, pipe, toLower } = require('ramda')
+const { ifElse, either, is, mapObjIndexed, merge, compose, toLower } = require('ramda')
 const removeDiacritics = require('diacritics').remove
 
 const conferenceSchema = require('./confSchema')
@@ -34,10 +34,10 @@ const recurseAction =
         (e: any) => action(e)
       )
 
-const lowerCase = (e: string) => pipe(removeDiacritics, toLower)(e)
-const lowerCaseAllValues = (whiteList: string[]) => recurseAction(lowerCase)(whiteList)
-const lowerCaseVideos = lowerCaseAllValues(whiteListVideos)
-const lowerCasePresenters = lowerCaseAllValues(whiteListVideos)
+const harmonizeString = compose(toLower, removeDiacritics)
+const harmonizeAllValues = (whiteList: string[]) => recurseAction(harmonizeString)(whiteList)
+const harmonizeVideos = harmonizeAllValues(whiteListVideos)
+const harmonizePresenters = harmonizeAllValues(whiteListVideos)
 
 const addEmbeddableLinksToVideos = (data: JSONInput): JSONInput => {
   const linkReg = /https:?\/\/www\.youtube\.com\/watch\?v=(.*?)\&.*$/
@@ -60,12 +60,12 @@ const transformDataFromJson = (data: JSONInput): ReduxState => {
   const normalized = normalize(dataWithEmbeddableLinks, conferenceSchema)
 
   // for quicker searching later
-  const lowerVideos = lowerCaseVideos(normalized.entities.videos)
-  const lowerSpeakerNames = lowerCasePresenters(normalized.entities.presenters)
+  const harmonizedVideos = harmonizeVideos(normalized.entities.videos)
+  const harmonizedSpeakerNames = harmonizePresenters(normalized.entities.presenters)
 
   return merge(normalized.entities, {
-    videosLC: lowerVideos,
-    presentersLC: lowerSpeakerNames
+    videosLC: harmonizedVideos,
+    presentersLC: harmonizedSpeakerNames
   })
 }
 
@@ -85,6 +85,6 @@ if (args[2] && args[2].toLowerCase() === 'build') {
 }
 
 module.exports = {
-  lowerCase,
+  harmonizeString,
   transformDataFromJson
 }
