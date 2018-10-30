@@ -1,14 +1,14 @@
 const fs = require('fs')
-const { harmonizeString, transformDataFromJson } = require('./transformDataForWeb')
+const { cleanString, transformDataFromJson } = require('./transformDataForWeb')
 
-describe('harmonizeString', () => {
+describe('cleanString', () => {
   it('should lowercase all chars', () => {
     // arrange
     const input = 'AAAAAAAA'
     const expectedResult = 'aaaaaaaa';
 
     // act
-    const result = harmonizeString(input)
+    const result = cleanString(input)
 
     // assert
     expect(result).toEqual(expectedResult)
@@ -20,7 +20,7 @@ describe('harmonizeString', () => {
     const expectedResult = 'aoun';
 
     // act
-    const result = harmonizeString(input)
+    const result = cleanString(input)
 
     // assert
     expect(result).toEqual(expectedResult)
