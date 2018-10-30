@@ -34,10 +34,10 @@ const recurseAction =
         (e: any) => action(e)
       )
 
-const harmonizeString = compose(toLower, removeDiacritics)
-const harmonizeAllValues = (whiteList: string[]) => recurseAction(harmonizeString)(whiteList)
-const harmonizeVideos = harmonizeAllValues(whiteListVideos)
-const harmonizePresenters = harmonizeAllValues(whiteListVideos)
+const cleanString = compose(toLower, removeDiacritics)
+const cleanAllValues = (whiteList: string[]) => recurseAction(cleanString)(whiteList)
+const cleanVideos = cleanAllValues(whiteListVideos)
+const cleanPresenters = cleanAllValues(whiteListVideos)
 
 const addEmbeddableLinksToVideos = (data: JSONInput): JSONInput => {
   const linkReg = /https:?\/\/www\.youtube\.com\/watch\?v=(.*?)\&.*$/
@@ -60,12 +60,12 @@ const transformDataFromJson = (data: JSONInput): ReduxState => {
   const normalized = normalize(dataWithEmbeddableLinks, conferenceSchema)
 
   // for quicker searching later
-  const harmonizedVideos = harmonizeVideos(normalized.entities.videos)
-  const harmonizedSpeakerNames = harmonizePresenters(normalized.entities.presenters)
+  const cleanedVideos = cleanVideos(normalized.entities.videos)
+  const cleanedSpeakerNames = cleanPresenters(normalized.entities.presenters)
 
   return merge(normalized.entities, {
-    videosSearchable: harmonizedVideos,
-    presentersSearchable: harmonizedSpeakerNames
+    videosSearchable: cleanedVideos,
+    presentersSearchable: cleanedSpeakerNames
   })
 }
 
@@ -85,6 +85,6 @@ if (args[2] && args[2].toLowerCase() === 'build') {
 }
 
 module.exports = {
-  harmonizeString,
+  cleanString,
   transformDataFromJson
 }
