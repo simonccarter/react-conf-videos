@@ -1,6 +1,7 @@
 const fs = require('fs')
 const { normalize } = require('normalizr')
-const { ifElse, either, is, mapObjIndexed, merge } = require('ramda')
+const { ifElse, either, is, mapObjIndexed, merge, compose, toLower } = require('ramda')
+const removeDiacritics = require('diacritics').remove
 
 const conferenceSchema = require('./confSchema')
 
@@ -16,10 +17,10 @@ import {
 
 export type ReduxState = {
   conferenceTitlesToIds: ConferenceTitlesToIds,
-  presentersLC: IndexedPresenters, 
+  presentersSearchable: IndexedPresenters, 
   conferences: IndexedConferences, 
   presenters: IndexedPresenters, 
-  videosLC: IndexedVideos, 
+  videosSearchable: IndexedVideos, 
   videos: IndexedVideos
 }
 
@@ -33,10 +34,10 @@ const recurseAction =
         (e: any) => action(e)
       )
 
-const lowerCase = (e: string) => e.toLowerCase()
-const lowerCaseAllValues = (whiteList: string[]) => recurseAction(lowerCase)(whiteList)
-const lowerCaseVideos = lowerCaseAllValues(whiteListVideos)
-const lowerCasePresenters = lowerCaseAllValues(whiteListVideos)
+const cleanString = compose(toLower, removeDiacritics)
+const cleanAllValues = (whiteList: string[]) => recurseAction(cleanString)(whiteList)
+const cleanVideos = cleanAllValues(whiteListVideos)
+const cleanPresenters = cleanAllValues(whiteListVideos)
 
 const addEmbeddableLinksToVideos = (data: JSONInput): JSONInput => {
   const linkReg = /https:?\/\/www\.youtube\.com\/watch\?v=(.*?)\&.*$/
@@ -59,12 +60,12 @@ const transformDataFromJson = (data: JSONInput): ReduxState => {
   const normalized = normalize(dataWithEmbeddableLinks, conferenceSchema)
 
   // for quicker searching later
-  const lowerVideos = lowerCaseVideos(normalized.entities.videos)
-  const lowerSpeakerNames = lowerCasePresenters(normalized.entities.presenters)
+  const cleanedVideos = cleanVideos(normalized.entities.videos)
+  const cleanedSpeakerNames = cleanPresenters(normalized.entities.presenters)
 
   return merge(normalized.entities, {
-    videosLC: lowerVideos,
-    presentersLC: lowerSpeakerNames
+    videosSearchable: cleanedVideos,
+    presentersSearchable: cleanedSpeakerNames
   })
 }
 
@@ -84,6 +85,6 @@ if (args[2] && args[2].toLowerCase() === 'build') {
 }
 
 module.exports = {
-  lowerCase,
+  cleanString,
   transformDataFromJson
 }

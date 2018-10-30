@@ -2,6 +2,7 @@ import * as Immutable from 'seamless-immutable'
 import { any } from 'ramda'
 import { push } from 'connected-react-router'
 import { combineEpics, Epic } from 'redux-observable'
+import { remove as removeDiacritics } from 'diacritics'
 import { isFilterEmpty } from 'utils'
 
 import 'rxjs/add/operator/map'
@@ -72,12 +73,12 @@ export const filterEpic: Epic<Action<any>, any> = (action$, store) =>
     .debounceTime(80) 
     .map((action) => {
       const { payload: filterValue = ''} = action
-      const { conferences, videosLC, presentersLC } = store.getState().data
+      const { conferences, videosSearchable, presentersSearchable } = store.getState().data
       const rAction: Action<IndexedConferences> = { type: SET_FILTERED_CONFERENCES }
       // if no/empty query, return original/all set of videos
       rAction.payload = isFilterEmpty(filterValue) ?
         conferences :
-        computeFilteredConferences(filterValue.trim().toLowerCase(), conferences, videosLC, presentersLC)
+        computeFilteredConferences(removeDiacritics(filterValue.trim().toLowerCase()), conferences, videosSearchable, presentersSearchable)
       return rAction
     })
 

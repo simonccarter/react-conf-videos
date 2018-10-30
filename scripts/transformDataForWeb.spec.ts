@@ -1,14 +1,26 @@
 const fs = require('fs')
-const { lowerCase, transformDataFromJson } = require('./transformDataForWeb')
+const { cleanString, transformDataFromJson } = require('./transformDataForWeb')
 
-describe('lowerCase', () => {
+describe('cleanString', () => {
   it('should lowercase all chars', () => {
     // arrange
     const input = 'AAAAAAAA'
     const expectedResult = 'aaaaaaaa';
 
     // act
-    const result = lowerCase(input)
+    const result = cleanString(input)
+
+    // assert
+    expect(result).toEqual(expectedResult)
+  })
+
+  it('should lowercase & normalize all diacritical chars', () => {
+    // arrange
+    const input = 'ÄÖÜÑ'
+    const expectedResult = 'aoun';
+
+    // act
+    const result = cleanString(input)
 
     // assert
     expect(result).toEqual(expectedResult)
