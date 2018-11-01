@@ -39,11 +39,11 @@ List of react conference videos.
 [90% Cleaner React](https://www.youtube.com/watch?v=wXLf18DsV-I&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=3) | Ryan Florence | 33:37
 [Building Todo The Game in a Cloud Only Dev Environment](https://www.youtube.com/watch?v=kVSTKD13gos&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=4) | Christina Holland | 34:58
 [The Path to a Declaratively Animated Future](https://www.youtube.com/watch?v=1e07uPWpvzI&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=5) | Matt Perry | 24:41
-[Lightening Talk - What's new in Create React App](https://www.youtube.com/watch?v=He-m9gd6WyM&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=6) | Joe Haddard | 4:16
-[Lightening Talk - Components as Units of Work](https://www.youtube.com/watch?v=tlSbgrPe420&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=7) | Bryce Kallow | 4:54
-[Lightening Talk - 5 Animations you Should Know and Use](https://www.youtube.com/watch?v=w9suOaHITtk&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=8) | Marcos Martins | 5:08
-[Lightening Talk - Render Props, PureComponent and Reactivity](https://www.youtube.com/watch?v=xmQjQmJXQK8&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=9) | Karl Dray | 5:33
-[Lightening Talk - Better living through Git Hooks](https://www.youtube.com/watch?v=m-uy_2xmIP4&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=10) | Leta Keane | 5:29
+[Lightning Talk - What's new in Create React App](https://www.youtube.com/watch?v=He-m9gd6WyM&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=6) | Joe Haddard | 4:16
+[Lightning Talk - Components as Units of Work](https://www.youtube.com/watch?v=tlSbgrPe420&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=7) | Bryce Kallow | 4:54
+[Lightning Talk - 5 Animations you Should Know and Use](https://www.youtube.com/watch?v=w9suOaHITtk&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=8) | Marcos Martins | 5:08
+[Lightning Talk - Render Props, PureComponent and Reactivity](https://www.youtube.com/watch?v=xmQjQmJXQK8&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=9) | Karl Dray | 5:33
+[Lightning Talk - Better living through Git Hooks](https://www.youtube.com/watch?v=m-uy_2xmIP4&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=10) | Leta Keane | 5:29
 [GraphQl without GraphQL](https://www.youtube.com/watch?v=YSEUAi1dAdk&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=11) | Conor Hastings | 27:49
 [Playing with Polyhedra Creating Beauty from Obsession](https://www.youtube.com/watch?v=Ew-UzGC8RqQ&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=12) | Nat Alison | 26:38
 [Cross Platform AR and VR apps using React Native](https://www.youtube.com/watch?v=jd6FBBK1paA&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=13) | Pulkit Kakkar | 26:16
@@ -59,10 +59,10 @@ List of react conference videos.
 [SVG Illustrations as React Components](https://www.youtube.com/watch?v=1gG8rtm-rq4&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=18) | Elizabet Oliveira | 20:40
 [The Missing Abstraction of Charting](https://www.youtube.com/watch?v=qqffsEHKMcM&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=19) | Chris Trevino | 28:03
 [Elsa AI conversational Agent](https://www.youtube.com/watch?v=eSwm1WZk7uA&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=20) | Damini Satya Kammakoma | 30:27
-[Lightening Talk - Context in React](https://www.youtube.com/watch?v=PaE-TfTY8TY&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=21) | Sophie Shoemaker | 5:40
-[Lightening Talk - Building a Better Country through Tech](https://www.youtube.com/watch?v=VKvKvWQI1i0&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=22) | Manuela Castrillon | 4:52
-[Lightening Talk - An Effective Code Review](https://www.youtube.com/watch?v=jtXgNTnVJUU&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=23) | Donavon West | 5:07
-[Lightening Talk - Syncing Component State Across Tabs with Service Workers](https://www.youtube.com/watch?v=tq4vXRT7TU0&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=24) | Tyler Clarke | 5:26
+[Lightning Talk - Context in React](https://www.youtube.com/watch?v=PaE-TfTY8TY&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=21) | Sophie Shoemaker | 5:40
+[Lightning Talk - Building a Better Country through Tech](https://www.youtube.com/watch?v=VKvKvWQI1i0&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=22) | Manuela Castrillon | 4:52
+[Lightning Talk - An Effective Code Review](https://www.youtube.com/watch?v=jtXgNTnVJUU&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=23) | Donavon West | 5:07
+[Lightning Talk - Syncing Component State Across Tabs with Service Workers](https://www.youtube.com/watch?v=tq4vXRT7TU0&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=24) | Tyler Clarke | 5:26
 [Block the Main Thread](https://www.youtube.com/watch?v=ZXqyaslyXUw&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=25) | James Long | 31:16
 [React Native's New Arhictecture](https://www.youtube.com/watch?v=UcqRXTriUVI&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=26) | Parashuram N | 31:16
 [Let React Speak your Language](https://www.youtube.com/watch?v=soAEB7ltQPk&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=27) | Tomáš Ehrlich | 29:30
