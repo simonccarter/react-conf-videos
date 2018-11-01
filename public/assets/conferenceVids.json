@@ -42,7 +42,7 @@
         "split" : "Day 1"
       },
       {
-        "title": "Lightening Talk - What's new in Create React App",
+        "title": "Lightning Talk - What's new in Create React App",
         "link": "https://www.youtube.com/watch?v=He-m9gd6WyM&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=6",
         "presenter": {
           "name": "Joe Haddard"
@@ -51,7 +51,7 @@
         "split" : "Day 1"
       },
       {
-        "title": "Lightening Talk - Components as Units of Work",
+        "title": "Lightning Talk - Components as Units of Work",
         "link": "https://www.youtube.com/watch?v=tlSbgrPe420&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=7",
         "presenter": {
           "name": "Bryce Kallow"
@@ -60,7 +60,7 @@
         "split" : "Day 1"
       },
       {
-        "title": "Lightening Talk - 5 Animations you Should Know and Use",
+        "title": "Lightning Talk - 5 Animations you Should Know and Use",
         "link": "https://www.youtube.com/watch?v=w9suOaHITtk&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=8",
         "presenter": {
           "name": "Marcos Martins"
@@ -69,7 +69,7 @@
         "split" : "Day 1"
       },
       {
-        "title": "Lightening Talk - Render Props, PureComponent and Reactivity",
+        "title": "Lightning Talk - Render Props, PureComponent and Reactivity",
         "link": "https://www.youtube.com/watch?v=xmQjQmJXQK8&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=9",
         "presenter": {
           "name": "Karl Dray"
@@ -78,7 +78,7 @@
         "split" : "Day 1"
       },
       {
-        "title": "Lightening Talk - Better living through Git Hooks",
+        "title": "Lightning Talk - Better living through Git Hooks",
         "link": "https://www.youtube.com/watch?v=m-uy_2xmIP4&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=10",
         "presenter": {
           "name": "Leta Keane"
@@ -177,7 +177,7 @@
         "split" : "Day 2"
       },
       {
-        "title": "Lightening Talk - Context in React",
+        "title": "Lightning Talk - Context in React",
         "link": "https://www.youtube.com/watch?v=PaE-TfTY8TY&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=21",
         "presenter": {
           "name": "Sophie Shoemaker"
@@ -186,7 +186,7 @@
         "split" : "Day 2"
       },
       {
-        "title": "Lightening Talk - Building a Better Country through Tech",
+        "title": "Lightning Talk - Building a Better Country through Tech",
         "link": "https://www.youtube.com/watch?v=VKvKvWQI1i0&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=22",
         "presenter": {
           "name": "Manuela Castrillon"
@@ -195,7 +195,7 @@
         "split" : "Day 2"
       },
       {
-        "title": "Lightening Talk - An Effective Code Review",
+        "title": "Lightning Talk - An Effective Code Review",
         "link": "https://www.youtube.com/watch?v=jtXgNTnVJUU&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=23",
         "presenter": {
           "name": "Donavon West"
@@ -204,7 +204,7 @@
         "split" : "Day 2"
       },
       {
-        "title": "Lightening Talk - Syncing Component State Across Tabs with Service Workers",
+        "title": "Lightning Talk - Syncing Component State Across Tabs with Service Workers",
         "link": "https://www.youtube.com/watch?v=tq4vXRT7TU0&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=24",
         "presenter": {
           "name": "Tyler Clarke"
