@@ -3,7 +3,7 @@ import { MiddlewareAPI } from 'redux'
 import { mount, shallow } from 'enzyme'
 import { ReactElement } from 'react'
 
-import { Conference } from '../domain'
+import { Conference, IndexedConferences } from '../domain'
 
 /** epics **/
 
@@ -35,4 +35,8 @@ export const mockConference = (): Conference => ({
   website: 'fake url',
   playlist: 'day 1',
   videos: ['aaa', 'bbb', 'ccc']
+})
+
+export const mockIndexedConferences = (): IndexedConferences => ({
+  ['XXXX']: mockConference()
 })

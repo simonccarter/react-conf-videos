@@ -4,14 +4,14 @@ import { ActionsObservable } from 'redux-observable'
 
 import { onError, mockStore } from '../../utils'
 
-import frontPageReducer, {
+import searchReducer, {
   textInDetails, initialState,
   INIT_SLICE, FILTER, SET_FILTERED_CONFERENCES,
   SET_IS_ACTIVE, filterEpic, createConference,
   routingEpic
-} from './frontPage'
+} from './search'
 
-describe('frontPage', () => {
+describe('search', () => {
   describe('textInDetails', () => {
     let phrasesToSearchIn: [string, string] = ['', '']
     let query = ''
@@ -154,7 +154,7 @@ describe('frontPage', () => {
   describe('reducer', () => {
     it('should return the initial state', () => {
       // act
-      const result = frontPageReducer(undefined, { type: 'EEE' })
+      const result = searchReducer(undefined, { type: 'EEE' })
       // assert
       expect(result).toEqual(initialState)
     })
@@ -165,7 +165,7 @@ describe('frontPage', () => {
       const action = { type: FILTER, payload }
 
       // act
-      const result = frontPageReducer(undefined, action)
+      const result = searchReducer(undefined, action)
 
       // assert
       expect(result.filterValue).toEqual(payload)
@@ -177,7 +177,7 @@ describe('frontPage', () => {
       const action = { type: SET_FILTERED_CONFERENCES, payload }
 
       // act
-      const result = frontPageReducer(undefined, action)
+      const result = searchReducer(undefined, action)
 
       // assert
       expect(result.conferences).toEqual(payload)
@@ -189,7 +189,7 @@ describe('frontPage', () => {
       const action = { type: SET_IS_ACTIVE, payload }
 
       // act
-      const result = frontPageReducer(undefined, action)
+      const result = searchReducer(undefined, action)
 
       // assert
       expect(result.isActive).toBe(false)
