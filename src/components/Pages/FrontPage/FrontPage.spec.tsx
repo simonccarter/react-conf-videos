@@ -1,11 +1,9 @@
 import * as React from 'react'
 import { shallow } from 'enzyme'
-import { shallowWithStore } from 'utils'
-import FrontPage, { FrontPageInner } from './FrontPage'
 import toJson from 'enzyme-to-json'
 
-import { searchActions } from 'redux/modules'
-import { mockConference } from 'utils'
+import { shallowWithStore, mockConference } from 'utils'
+import FrontPage, { FrontPageInner } from './FrontPage'
 
 describe('FrontPage', () => {
   describe.skip('FrontPageInner', () => {
@@ -14,7 +12,7 @@ describe('FrontPage', () => {
       <FrontPageInner
         conferences={{'x': mockConference()}}
         filterValue=''
-        filter={searchActions.filter}
+        navigateToSearchURL={jest.fn()}
         onInputChange={ () => null }
       />
     )

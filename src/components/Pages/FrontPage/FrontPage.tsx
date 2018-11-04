@@ -1,6 +1,9 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
 import { compose, pure, withHandlers } from 'recompose'
+
+import { routingActions } from 'redux/modules'
+
 import { 
   List, 
   Meta, 
@@ -11,22 +14,21 @@ import {
 } from 'components'
 
 import { IndexedConferences } from '../../../domain'
-import { searchActions } from 'redux/modules'
 
 type ReduxProps = { 
   conferences: IndexedConferences,
   filterValue: string
 }
 
+type DispatchpProps = {
+  navigateToSearchURL: typeof routingActions.navigateToSearchURL
+}
+
 type WithHandlers = {
   onInputChange: (e: any) => void
 }
 
-type DispatchProps = {
-  filter: typeof searchActions.filter
-}
-
-type Props = ReduxProps & WithHandlers & DispatchProps
+type Props = ReduxProps & DispatchpProps & WithHandlers
 
 export const FrontPageInner: React.SFC<Props> = props => (
   <div>
@@ -37,6 +39,7 @@ export const FrontPageInner: React.SFC<Props> = props => (
         filterValue={props.filterValue}
         onChange={props.onInputChange} 
       />
+      
       <ResultDetails conferences={props.conferences} />
       <List conferences={props.conferences} />
     </InnerLayoutContainer>
@@ -48,16 +51,17 @@ const mapStateToProps = ({search: {conferences, filterValue}}: any) => ({
   conferences
 })
 
-const mapDispatchToProps = {
-  filter: searchActions.filter,
-}
+const dispatchMap = ({
+  navigateToSearchURL: routingActions.navigateToSearchURL
+})
+
 
 const FrontPage = compose<Props, {}>(
-  connect(mapStateToProps, mapDispatchToProps),
+  connect(mapStateToProps, dispatchMap),
   pure,
-  withHandlers<ReduxProps & DispatchProps, WithHandlers>({
-    onInputChange: ({ filter }) => (e: any) => {
-      filter(e.target.value)
+  withHandlers<ReduxProps & DispatchpProps, WithHandlers>({
+    onInputChange: ({navigateToSearchURL}) => (e: any) => {
+      navigateToSearchURL(e.target.value)
     }
   })
 )(FrontPageInner)

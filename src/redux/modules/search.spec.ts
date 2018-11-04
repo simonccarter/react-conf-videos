@@ -7,8 +7,7 @@ import { onError, mockStore } from '../../utils'
 import searchReducer, {
   textInDetails, initialState,
   INIT_SLICE, FILTER, SET_FILTERED_CONFERENCES,
-  SET_IS_ACTIVE, filterEpic, createConference,
-  routingEpic
+  SET_IS_ACTIVE, filterEpic, createConference
 } from './search'
 
 describe('search', () => {
@@ -86,64 +85,6 @@ describe('search', () => {
             // assert
             expect(action.type).toEqual(INIT_SLICE)
             expect(action.payload).toEqual(expectedPayload)
-            done()
-          },
-          onError(done)
-        )
-    })
-  })
-
-  describe('routingEpic', () => {
-    it('should call return the correct action when a query string is present', (done) => {
-      // arrange
-      const payload = 'keynote'
-      const action$ = ActionsObservable.from([{ type: FILTER, payload }, {type: SET_FILTERED_CONFERENCES}])
-
-      // CALL_HISTORY_METHOD is dispatched by connected-react-router,
-      // though this is not displayed in redux dev tools. The below action
-      // won't match what you see in your redux dev logger.
-      const expectedAction = {
-        "payload": {
-          "args": [`/search?query=${payload}`],
-          "method": "push"
-        }, 
-        "type": "@@router/CALL_HISTORY_METHOD"
-      }
-
-      // act
-      routingEpic(action$, mockStore(), null)
-        .subscribe(
-          action => {
-            // assert 
-            expect(action).toEqual(expectedAction)
-            done()
-          },
-          onError(done)
-        )
-    })
-
-    it('should call return the correct action when the query string is empty', (done) => {
-      // arrange
-      const payload = ''
-      const action$ = ActionsObservable.from([{ type: FILTER, payload }, {type: SET_FILTERED_CONFERENCES}])
-
-      // CALL_HISTORY_METHOD is dispatched by connected-react-router,
-      // though this is not displayed in redux dev tools. The below action
-      // won't match what you see in your redux dev logger.
-      const expectedAction = {
-        "payload": {
-          "args": ['/search'],
-          "method": "push"
-        }, 
-        "type": "@@router/CALL_HISTORY_METHOD"
-      }
-
-      // act
-      routingEpic(action$, mockStore(), null)
-        .subscribe(
-          action => {
-            // assert 
-            expect(action).toEqual(expectedAction)
             done()
           },
           onError(done)
