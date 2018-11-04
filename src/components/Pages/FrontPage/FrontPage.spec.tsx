@@ -4,7 +4,6 @@ import { shallowWithStore } from 'utils'
 import FrontPage, { FrontPageInner } from './FrontPage'
 import toJson from 'enzyme-to-json'
 
-import { searchActions } from 'redux/modules'
 import { mockConference } from 'utils'
 
 describe('FrontPage', () => {
@@ -14,7 +13,7 @@ describe('FrontPage', () => {
       <FrontPageInner
         conferences={{'x': mockConference()}}
         filterValue=''
-        filter={searchActions.filter}
+        navigateToSearchURL={jest.fn()}
         onInputChange={ () => null }
       />
     )
