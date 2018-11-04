@@ -1,10 +1,9 @@
 import * as React from 'react'
 import { shallow } from 'enzyme'
-import { shallowWithStore } from 'utils'
-import FrontPage, { FrontPageInner } from './FrontPage'
 import toJson from 'enzyme-to-json'
 
-import { mockConference } from 'utils'
+import { shallowWithStore, mockConference } from 'utils'
+import FrontPage, { FrontPageInner } from './FrontPage'
 
 describe('FrontPage', () => {
   describe.skip('FrontPageInner', () => {

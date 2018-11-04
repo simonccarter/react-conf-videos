@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { compose, pure, withHandlers } from 'recompose'
 
 import { routingActions } from 'redux/modules'
-
 import { 
   List, 
   Meta, 

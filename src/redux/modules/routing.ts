@@ -13,11 +13,9 @@ export const navigateToSearchURL = (payload: string) => ({type: NAVIGATE_TO_SEAR
 
 const isSearchPage = (pathname: string) => pathname === "/" || pathname.includes('/search')
 
+// extract query from url
 const extractSearchPagePath = (search: string) => {
   const parsed = queryString.parse(search)
-
-  // even if no query is present, still send, as it's the front page,
-  // so requires all data to be loaded
   const query = parsed.query ? parsed.query : 
             parsed['?query'] ? parsed['?query'] : ''
   return query
