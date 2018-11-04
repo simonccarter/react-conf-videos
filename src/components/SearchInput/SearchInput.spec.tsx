@@ -1,77 +1,84 @@
 import * as React from 'react'
-import { shallow } from 'enzyme'
-import { createMockStore } from 'redux-test-utils'
+import { shallow, mount } from 'enzyme'
 import toJSON from 'enzyme-to-json'
 
-import { shallowWithStore, mountWithStore } from 'utils'
 import SearchInput, { SearchInputInner, blurRef, onKeyUpHandlers } from './SearchInput'
 
-import { FILTER, SET_IS_ACTIVE } from '../../redux/modules/search'
+describe('SearchInputInner', () => {
 
-describe('SearchInput', () => {
-  const mockFN = jest.fn()
-
-  const shallowComp = () => {
-    return shallow<any>(
+  const shallowComp = (mockFN?: typeof jest.fn, placeholder?: string) => {
+    return shallow(
       <SearchInputInner
         filterValue=''
-        onChange={mockFN}
-        onKeyUpHandlers={mockFN}
-        setRef={mockFN}
+        onChange={jest.fn()}
+        onKeyUpHandlers={mockFN ? mockFN : jest.fn()}
+        setRef={jest.fn()}
         myRef={null}
-        blurRef={mockFN}
+        blurRef={jest.fn()}
+        placeholder={placeholder}
       />
     )
   }
 
   it('should render', () => {
+    // arrange, act
     const comp = shallowComp()
+    // assert
     expect(toJSON(comp)).toMatchSnapshot()
   })
 
   it('should call onKeyUpHandlers on onKeyUp with keyCode 13', () => {
-    const comp = shallowComp()
+    // arrange
+    const mockFN = jest.fn()
+    const comp = shallowComp(mockFN)
+    
+    // act
     comp.find('.root').simulate('keyUp', {keyCode: 13})
+    
+    // assert
     expect(mockFN).toHaveBeenCalled()
+  })
+
+  it('should set placeholder if passed', () => {
+    // arrange
+    const mockFN = jest.fn()
+    const placeholder = 'test placeholder'
+
+    // act
+    const comp = shallowComp(mockFN, placeholder)
+
+    // assert
+    expect(toJSON(comp)).toMatchSnapshot()
   })
 })
 
 describe('SearchInput', () => {
-
-  const comp = () => 
-    <SearchInput 
-      onChange={jest.fn()}
-      filterValue=''
-    /> 
   
   it('should render and contain connected props', () => {
     // arrange
-    const isActive = false
-    const filterValue = ''
-    const store = {frontPage: {isActive, filterValue}}
+    const mockFN = jest.fn()
+    const comp = <SearchInput onChange={mockFN} filterValue='' /> 
 
     // act
-    const wrapper = shallowWithStore(store, comp())
+    const wrapper = shallow<any>(comp)
 
     // assert
     expect(toJSON(wrapper)).toMatchSnapshot()
-    expect(wrapper.props().isActive).toEqual(isActive)
-    expect(wrapper.props().filterValue).toEqual(filterValue)
+    expect(wrapper.props().filterValue).toEqual('')
   })
 
   it('should dispatch correct actions on change handler call', () => {
     // arrange
-    const store = createMockStore({frontPage: {isActive: false, filterValue: ''}})
-    const value = 'a search query'
+    const mockFN = jest.fn()
+    const value = 'search input'
+    const comp = <SearchInput onChange={mockFN} filterValue='' /> 
 
     // act
-    const wrapper = mountWithStore(store, comp())
-    wrapper.find('input').simulate('change', {target: { value}})
+    const wrapper = mount(comp)
+    wrapper.find('input').simulate('change', {target: { value }})
 
     // assert
-    expect(toJSON(wrapper)).toMatchSnapshot()
-    expect(store.isActionTypeDispatched(FILTER)).toBe(true)
-    expect(store.isActionTypeDispatched(SET_IS_ACTIVE)).toBe(true)
+    expect(mockFN).toHaveBeenCalled()
   })
 })
 
@@ -79,7 +86,7 @@ describe('blueRef', () => {
   it('should call the blurRef method of the element', () => {
     // arrange
     const mockBlur = jest.fn()
-    const fakeElement = {myRef: {blur: mockBlur }}
+    const fakeElement = {myRef: {blur: mockBlur}}
 
     // act 
     blurRef(fakeElement)()

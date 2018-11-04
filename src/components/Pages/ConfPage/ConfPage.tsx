@@ -65,7 +65,6 @@ const ConfPage = compose<Props, {}>(
   pure,
   withHandlers<ReduxProps & DispatchProps, WithHandlers>({
     onInputChange: ({ filter }) => (e: any) => {
-      console.log('confpage within inInputChange', e.target.value)
       filter(e.target.value)
     }
   })

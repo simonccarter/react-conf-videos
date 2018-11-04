@@ -42,7 +42,13 @@ describe('FrontPage', () => {
   describe('FrontPage', () => {
     it('should render', () => {
       // arrange
-      const store = {frontPage: {isActive: false}}
+      const store = {
+        frontPage: {isActive: false},
+        search: {
+          conferences: {'X': mockConference()},
+          filterValue: ''
+        }
+      }
 
       // act
       const wrapper = shallowWithStore(store, <FrontPage />)
