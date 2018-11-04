@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { compose, withHandlers, pure } from 'recompose'
 import { Logo } from 'components'
-import { frontPageActions } from 'redux/modules'
+import { searchActions } from 'redux/modules'
 
 type DispatchProps = {
-  filter: typeof frontPageActions.filter
+  filter: typeof searchActions.filter
 }
 
 type WithHandlers = {
@@ -32,7 +32,7 @@ const HeaderInner: React.SFC<WithHandlers> = ({onClick}) => (
 )
 
 const mapDispatchToProps = {
-  filter: frontPageActions.filter,
+  filter: searchActions.filter,
 }
 
 const Header = compose<WithHandlers, {}>(

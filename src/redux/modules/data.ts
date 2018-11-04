@@ -19,9 +19,9 @@ export const COPY_DATA = 'data.COPY_DATA'
 export type ReduxState = {
   conferenceTitlesToIds: ConferenceTitlesToIds,
   presentersSearchable: IndexedPresenters, 
+  videosSearchable: IndexedVideos, 
   conferences: IndexedConferences, 
   presenters: IndexedPresenters, 
-  videosSearchable: IndexedVideos, 
   videos: IndexedVideos
 }
 

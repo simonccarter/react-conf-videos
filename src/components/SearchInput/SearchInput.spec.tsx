@@ -6,19 +6,18 @@ import toJSON from 'enzyme-to-json'
 import { shallowWithStore, mountWithStore } from 'utils'
 import SearchInput, { SearchInputInner, blurRef, onKeyUpHandlers } from './SearchInput'
 
-import { FILTER, SET_IS_ACTIVE } from '../../redux/modules/frontPage'
+import { FILTER, SET_IS_ACTIVE } from '../../redux/modules/search'
 
-describe('SearchInputInner', () => {
+describe('SearchInput', () => {
   const mockFN = jest.fn()
 
   const shallowComp = () => {
     return shallow<any>(
       <SearchInputInner
         filterValue=''
-        onInputChange={mockFN}
+        onChange={mockFN}
         onKeyUpHandlers={mockFN}
         setRef={mockFN}
-        isActive={true}
         myRef={null}
         blurRef={mockFN}
       />
@@ -38,6 +37,12 @@ describe('SearchInputInner', () => {
 })
 
 describe('SearchInput', () => {
+
+  const comp = () => 
+    <SearchInput 
+      onChange={jest.fn()}
+      filterValue=''
+    /> 
   
   it('should render and contain connected props', () => {
     // arrange
@@ -46,7 +51,7 @@ describe('SearchInput', () => {
     const store = {frontPage: {isActive, filterValue}}
 
     // act
-    const wrapper = shallowWithStore(store, <SearchInput />)
+    const wrapper = shallowWithStore(store, comp())
 
     // assert
     expect(toJSON(wrapper)).toMatchSnapshot()
@@ -60,7 +65,7 @@ describe('SearchInput', () => {
     const value = 'a search query'
 
     // act
-    const wrapper = mountWithStore(store, <SearchInput />)
+    const wrapper = mountWithStore(store, comp())
     wrapper.find('input').simulate('change', {target: { value}})
 
     // assert

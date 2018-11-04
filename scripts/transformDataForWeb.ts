@@ -35,7 +35,7 @@ const recurseAction =
       )
 
 const cleanString = compose(toLower, removeDiacritics)
-const cleanAllValues = (whiteList: string[]) => recurseAction(cleanString)(whiteList)
+const cleanAllValues = recurseAction(cleanString)
 const cleanVideos = cleanAllValues(whiteListVideos)
 const cleanPresenters = cleanAllValues(whiteListVideos)
 

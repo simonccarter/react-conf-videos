@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { compose, pure, withHandlers, withStateHandlers } from 'recompose'
 
 import { Video as VideoProp, Presenter, Conference } from '../../domain'
-import { conferencePageActions } from 'redux/modules'
+import { searchActions, conferencePageActions } from 'redux/modules'
 import { sluggifyUrl } from 'utils'
 
 import styles from './Video.scss'
@@ -26,11 +26,12 @@ type StateHandlers = {
 type WithHandlers = { onConferenceClick: React.EventHandler<any> }
 
 type ReduxState = {
-  video: VideoProp
+  goToConfPage: typeof conferencePageActions.navigateToConferencePage
   conferenceId: string
   conference: Conference
   speaker: Presenter
-  goToConfPage: typeof conferencePageActions.navigateToConferencePage
+  filter: typeof searchActions.filter
+  video: VideoProp
 }
 
 type CombinedProps = Props & State & ReduxState & StateHandlers & WithHandlers
@@ -81,7 +82,8 @@ const mapStateToProps = (state: any, props: Props) => {
 }
 
 const mapDispatchToProps = {
-  goToConfPage: conferencePageActions.navigateToConferencePage
+  goToConfPage: conferencePageActions.navigateToConferencePage,
+  filter: searchActions.filter
 }
 
 const Video = compose<CombinedProps, Props>(
@@ -94,6 +96,7 @@ const Video = compose<CombinedProps, Props>(
     onConferenceClick: props => (e: any) => {
       e.preventDefault()
       props.goToConfPage(props.conferenceId)
+      props.filter('')
     }
   })
 )(VideoInner)
