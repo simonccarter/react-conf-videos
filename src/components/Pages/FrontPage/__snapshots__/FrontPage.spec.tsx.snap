@@ -17,8 +17,8 @@ exports[`FrontPage FrontPage should render 1`] = `
       },
     }
   }
-  filter={[Function]}
   filterValue=""
+  navigateToSearchURL={[Function]}
 />
 `;
 

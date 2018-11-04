@@ -2,10 +2,10 @@ import * as React from 'react'
 import * as cn from 'classnames'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { compose, pure, withHandlers, withStateHandlers } from 'recompose'
+import { compose, pure, withStateHandlers } from 'recompose'
 
 import { Video as VideoProp, Presenter, Conference } from '../../domain'
-import { searchActions, conferencePageActions } from 'redux/modules'
+import { searchActions } from 'redux/modules'
 import { sluggifyUrl } from 'utils'
 
 import styles from './Video.scss'
@@ -23,10 +23,7 @@ type StateHandlers = {
   toggleIsOpen: (e: any) => State
 }
 
-type WithHandlers = { onConferenceClick: React.EventHandler<any> }
-
 type ReduxState = {
-  goToConfPage: typeof conferencePageActions.navigateToConferencePage
   conferenceId: string
   conference: Conference
   speaker: Presenter
@@ -34,11 +31,11 @@ type ReduxState = {
   video: VideoProp
 }
 
-type CombinedProps = Props & State & ReduxState & StateHandlers & WithHandlers
+type CombinedProps = Props & State & ReduxState & StateHandlers
 
 export const VideoInner: React.SFC<CombinedProps> = ({
   video: { title, length, embeddableLink },
-  speaker, videoId, conference, isOpen, toggleIsOpen, onConferenceClick, conferenceId
+  speaker, videoId, conference, isOpen, toggleIsOpen, conferenceId
 }) => {
   return (
     <div className={styles.root} key={videoId} >
@@ -59,7 +56,7 @@ export const VideoInner: React.SFC<CombinedProps> = ({
       </div>
       <div className={styles.details}>
         <span>{speaker.name}</span>
-        <Link to={`/conference/${conferenceId}/${sluggifyUrl(conference.title)}`} onClick={onConferenceClick}>
+        <Link to={`/conference/${conferenceId}/${sluggifyUrl(conference.title)}`}>
           <span className={styles.conferenceTitle}>{conference.title}</span>
         </Link>
       </div>
@@ -81,23 +78,11 @@ const mapStateToProps = (state: any, props: Props) => {
   }
 }
 
-const mapDispatchToProps = {
-  goToConfPage: conferencePageActions.navigateToConferencePage,
-  filter: searchActions.filter
-}
-
 const Video = compose<CombinedProps, Props>(
-  connect(mapStateToProps, mapDispatchToProps),
+  connect(mapStateToProps),
   pure,
   withStateHandlers({ isOpen: false }, {
     toggleIsOpen: ({ isOpen }) => () => ({ isOpen: !isOpen })
-  }),
-  withHandlers<ReduxState & StateHandlers, WithHandlers>({
-    onConferenceClick: props => (e: any) => {
-      e.preventDefault()
-      props.goToConfPage(props.conferenceId)
-      props.filter('')
-    }
   })
 )(VideoInner)
 
