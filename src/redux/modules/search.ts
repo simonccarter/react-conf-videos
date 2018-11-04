@@ -1,6 +1,5 @@
 import * as Immutable from 'seamless-immutable'
 import { any } from 'ramda'
-import { push } from 'connected-react-router'
 import { combineEpics, Epic } from 'redux-observable'
 import { remove as removeDiacritics } from 'diacritics'
 import { isFilterEmpty } from 'utils'
@@ -97,25 +96,7 @@ export const filterEpic: Epic<Action<any>, any> = (action$, store) =>
       return rAction
     })
 
-// set url query string location based on filterValue
-// https://stackoverflow.com/questions/45546401/wait-for-sequence-of-action-with-a-redux-observable
-export const routingEpic: Epic<Action<any>, any> = (action$, store) => 
-  action$
-    .ofType(FILTER)
-    .switchMap((action) => {
-      return action$.ofType(SET_FILTERED_CONFERENCES)
-        .take(1)
-        .map(() => action)
-    })
-    .map((action: Action<any>) => {
-      const { payload: filterValue = ''} = action
-      const pathname = store.getState().router.location.pathname
-      const location = isFilterEmpty(filterValue) ? pathname : `${pathname}?query=${filterValue}`
-      return push(location)
-    })
-    
-
-export const searchEpics = combineEpics(filterEpic, routingEpic)
+export const searchEpics = combineEpics(filterEpic)
 export const searchActions = {
   filter,
   setIsActive

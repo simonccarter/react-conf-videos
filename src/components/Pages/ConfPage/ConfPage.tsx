@@ -2,6 +2,8 @@ import * as React from 'react'
 import { connect } from 'react-redux'
 import { compose, pure, withHandlers } from 'recompose'
 
+import { routingActions } from 'redux/modules'
+
 import { 
   List, 
   Meta, 
@@ -12,7 +14,6 @@ import {
 } from 'components'
 
 import { Conference, IndexedConferences } from '../../../domain'
-import { searchActions } from 'redux/modules'
 
 type ReduxProps = { 
   conference: Conference,
@@ -21,7 +22,7 @@ type ReduxProps = {
 }
 
 type DispatchProps = {
-  filter: typeof searchActions.filter
+  navigateToSearchURL: typeof routingActions.navigateToSearchURL
 }
 
 type WithHandlers = {
@@ -57,15 +58,15 @@ const mapStateToProps = ({ conferencePage, search }: any) => ({
 })
 
 const mapDispatchToProps = ({
-  filter: searchActions.filter
+  navigateToSearchURL: routingActions.navigateToSearchURL
 })
 
 const ConfPage = compose<Props, {}>(
   connect(mapStateToProps, mapDispatchToProps),
   pure,
   withHandlers<ReduxProps & DispatchProps, WithHandlers>({
-    onInputChange: ({ filter }) => (e: any) => {
-      filter(e.target.value)
+    onInputChange: ({ navigateToSearchURL }) => (e: any) => {
+      navigateToSearchURL(e.target.value)
     }
   })
 )(ConfPageInner)

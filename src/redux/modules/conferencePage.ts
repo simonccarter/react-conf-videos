@@ -1,8 +1,5 @@
 import * as Immutable from 'seamless-immutable'
-import { push } from 'connected-react-router'
 import { combineEpics, Epic } from 'redux-observable'
-
-import { sluggifyUrl } from 'utils'
 
 import 'rxjs/add/operator/map'
 
@@ -21,7 +18,6 @@ export const CONFERENCE_COPY_DATA = 'CONFERENCE_COPY_DATA'
 
 // actions
 export const setConferenceDetails = (payload: string) => ({type: SET_CONFERENCE_DETAILS, payload })
-export const navigateToConferencePage = (payload: string) => ({type: SET_CONFERENCE_DETAILS, payload })
 
 // copy and format data into local slice
 export const conferenceDataCopyEpic: Epic<Action<any>, any> = (action$, store: any) =>
@@ -34,20 +30,12 @@ export const conferenceDataCopyEpic: Epic<Action<any>, any> = (action$, store: a
       return { type: CONFERENCE_COPY_DATA, payload }
     })
 
-// once data is copied, move to page...
-export const navigateToConferencePageEpic: Epic<Action<any>, any> = (action$, store: any) =>
-  action$.ofType(CONFERENCE_COPY_DATA)
-    .map(({payload: {conference, selectedConferenceId}}) => 
-      push(`/conference/${selectedConferenceId}/${sluggifyUrl(conference.title)}`))
-
 export const conferenceEpics = combineEpics(
-  conferenceDataCopyEpic, 
-  navigateToConferencePageEpic
+  conferenceDataCopyEpic
 )
 
 export const conferencePageActions = {
-  setConferenceDetails,
-  navigateToConferencePage
+  setConferenceDetails
 }
 
 export const initialState = Immutable<ReduxState>({
