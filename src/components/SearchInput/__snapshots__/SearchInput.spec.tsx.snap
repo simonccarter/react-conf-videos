@@ -1,74 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchInput should dispatch correct actions on change handler call 1`] = `
-<Connect(pure(withStateHandlers(withHandlers(Component))))>
-  <pure(withStateHandlers(withHandlers(Component)))
-    filter={[Function]}
-    filterValue=""
-    isActive={false}
-    setIsActive={[Function]}
-  >
-    <withStateHandlers(withHandlers(Component))
-      filter={[Function]}
-      filterValue=""
-      isActive={false}
-      setIsActive={[Function]}
-    >
-      <withHandlers(Component)
-        blurRef={[Function]}
-        filter={[Function]}
-        filterValue=""
-        isActive={false}
-        myRef={
-          <input
-            class="root"
-            placeholder="Search"
-            type="text"
-            value=""
-          />
-        }
-        setIsActive={[Function]}
-        setRef={[Function]}
-      >
-        <Component
-          blurRef={[Function]}
-          filter={[Function]}
-          filterValue=""
-          isActive={false}
-          myRef={
-            <input
-              class="root"
-              placeholder="Search"
-              type="text"
-              value=""
-            />
-          }
-          onInputChange={[Function]}
-          onKeyUpHandlers={[Function]}
-          setIsActive={[Function]}
-          setRef={[Function]}
-        >
-          <input
-            className="root"
-            onChange={[Function]}
-            onKeyUp={[Function]}
-            placeholder="Search"
-            type="text"
-            value=""
-          />
-        </Component>
-      </withHandlers(Component)>
-    </withStateHandlers(withHandlers(Component))>
-  </pure(withStateHandlers(withHandlers(Component)))>
-</Connect(pure(withStateHandlers(withHandlers(Component))))>
-`;
-
 exports[`SearchInput should render and contain connected props 1`] = `
-<pure(withStateHandlers(withHandlers(Component)))
-  filter={[Function]}
+<withHandlers(Component)
+  blurRef={[Function]}
   filterValue=""
-  isActive={false}
-  setIsActive={[Function]}
+  myRef={null}
+  onChange={[MockFunction]}
+  setRef={[Function]}
 />
 `;
 
@@ -78,6 +16,17 @@ exports[`SearchInputInner should render 1`] = `
   onChange={[MockFunction]}
   onKeyUp={[MockFunction]}
   placeholder="Search"
+  type="text"
+  value=""
+/>
+`;
+
+exports[`SearchInputInner should set placeholder if passed 1`] = `
+<input
+  className="root"
+  onChange={[MockFunction]}
+  onKeyUp={[MockFunction]}
+  placeholder="test placeholder"
   type="text"
   value=""
 />

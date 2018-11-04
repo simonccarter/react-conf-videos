@@ -16,10 +16,10 @@ import {
   IndexedConferences
 } from '../../domain'
 
-export const INIT_SLICE = 'frontPage/INIT_SLICE'
-export const FILTER = 'frontPage/FILTER'
-export const SET_FILTERED_CONFERENCES = 'frontPage/SET_FILTERED_CONFERENCES'
-export const SET_IS_ACTIVE = 'frontPage/SET_IS_ACTIVE' // active state changes display of components
+export const INIT_SLICE = 'search/INIT_SLICE'
+export const FILTER = 'search/FILTER'
+export const SET_FILTERED_CONFERENCES = 'search/SET_FILTERED_CONFERENCES'
+export const SET_IS_ACTIVE = 'search/SET_IS_ACTIVE' // active state changes display of components
 
 const filter = (payload: string) => ({ type: FILTER, payload })
 const setIsActive = (payload: boolean) => ({ type: SET_IS_ACTIVE, payload })
@@ -70,15 +70,30 @@ const computeFilteredConferences = (filterValue: string, conferences: IndexedCon
 export const filterEpic: Epic<Action<any>, any> = (action$, store) =>
   action$
     .ofType(FILTER)
-    .debounceTime(80) 
+    .debounceTime(80)
     .map((action) => {
       const { payload: filterValue = ''} = action
-      const { conferences, videosSearchable, presentersSearchable } = store.getState().data
+      const { 
+        data: {
+          conferences, videosSearchable, presentersSearchable
+        },
+        conferencePage: { selectedConferenceId },
+        router
+      } = store.getState()
       const rAction: Action<IndexedConferences> = { type: SET_FILTERED_CONFERENCES }
+
+      // if on a conference page, only filter videos of that conference
+      let filteredConferences = conferences;
+      if (router.location.pathname.includes('conference')) {
+        filteredConferences = {
+          [selectedConferenceId]: conferences[selectedConferenceId]
+        }
+      }
+
       // if no/empty query, return original/all set of videos
       rAction.payload = isFilterEmpty(filterValue) ?
-        conferences :
-        computeFilteredConferences(removeDiacritics(filterValue.trim().toLowerCase()), conferences, videosSearchable, presentersSearchable)
+        filteredConferences :
+        computeFilteredConferences(removeDiacritics(filterValue.trim().toLowerCase()), filteredConferences, videosSearchable, presentersSearchable)
       return rAction
     })
 
@@ -94,13 +109,14 @@ export const routingEpic: Epic<Action<any>, any> = (action$, store) =>
     })
     .map((action: Action<any>) => {
       const { payload: filterValue = ''} = action
-      const location = isFilterEmpty(filterValue) ? '/search' : `/search?query=${filterValue}`
+      const pathname = store.getState().router.location.pathname
+      const location = isFilterEmpty(filterValue) ? pathname : `${pathname}?query=${filterValue}`
       return push(location)
     })
     
 
-export const frontPageEpics = combineEpics(filterEpic, routingEpic)
-export const frontPageActions = {
+export const searchEpics = combineEpics(filterEpic, routingEpic)
+export const searchActions = {
   filter,
   setIsActive
 }
@@ -114,7 +130,7 @@ export const initialState = Immutable<ReduxState>({
   isActive: false
 })
 
-const frontPageReducer = (state = initialState, action: Action<any>) => {
+const searchReducer = (state = initialState, action: Action<any>) => {
   switch (action.type) {
     case FILTER:
       return state.merge({ filterValue: action.payload })
@@ -127,4 +143,4 @@ const frontPageReducer = (state = initialState, action: Action<any>) => {
   }
 }
 
-export default frontPageReducer
+export default searchReducer

@@ -1,4 +1,4 @@
 import { conferencePageActions } from './conferencePage'
-import { frontPageActions } from './frontPage'
+import { searchActions } from './search'
 
-export { frontPageActions, conferencePageActions }
+export { searchActions, conferencePageActions }

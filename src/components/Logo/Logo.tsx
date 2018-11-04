@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { compose, withHandlers, pure } from 'recompose'
 
-import { frontPageActions } from 'redux/modules'
+import { searchActions } from 'redux/modules'
 
 import styles from './Logo.scss'
 
 type DispatchProps = {
-  filter: typeof frontPageActions.filter
+  filter: typeof searchActions.filter
 }
 
 type WithHandlers = {
@@ -20,12 +20,12 @@ type CombinedProps = DispatchProps & WithHandlers
 
 const LogoInner: React.SFC<CombinedProps> = ({onClick}) => (
   <div className={styles.logo}>
-    <Link to="/" onClick={onClick} className={styles.logoLink}>RV</Link>
+    <Link to="/search" onClick={onClick} className={styles.logoLink}>RV</Link>
   </div>
 )
 
 const mapDispatchToProps = {
-  filter: frontPageActions.filter
+  filter: searchActions.filter
 }
 
 const Logo = compose<CombinedProps, {}>(
@@ -33,7 +33,6 @@ const Logo = compose<CombinedProps, {}>(
   pure,
   withHandlers<DispatchProps, WithHandlers>({
     onClick: ({ filter }) => (e: any) => {
-      e.preventDefault()
       filter('')
     }
   })
