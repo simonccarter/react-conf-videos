@@ -8,6 +8,5 @@ export type Video = {
 }
 
 export type IndexedVideos = {
-  [idx: string]: Video 
+  [idx: string]: Video
 }
-

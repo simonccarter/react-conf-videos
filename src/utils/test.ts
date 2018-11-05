@@ -5,15 +5,11 @@ import { ReactElement } from 'react'
 
 import { Conference, IndexedConferences } from '../domain'
 
-/** epics **/
-
 // fails test of error cb of subcribe is called
 export const onError = (done: any) => (error: Error) => done(false)
 
 // mock empty store object
-export const mockStore = () => { return <MiddlewareAPI<void>>{} }
-
-/** Components **/
+export const mockStore = (): MiddlewareAPI<any> => createMockStore({})
 
 const isStore = (store: any) => store.hasOwnProperty('isActionTypeDispatched')
 

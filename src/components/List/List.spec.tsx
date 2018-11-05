@@ -11,7 +11,7 @@ describe('List', () => {
     it('should render', () => {
       // arrange
       const conf = mockConference()
-      const props = { conferences: {'yyy': conf}, displayConferenceDetails: true }
+      const props = { conferences: {yyy: conf}, displayConferenceDetails: true }
 
       // act
       const wrapper = shallow(<List {...props} />)

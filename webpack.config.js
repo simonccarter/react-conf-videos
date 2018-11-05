@@ -26,6 +26,11 @@ module.exports = {
   module: {
     rules: [
       {
+        enforce: 'pre',
+        test: /\.tsx?$/,
+        loader: 'tslint-loader'
+      },
+      {
         test: /\.(t|j)sx?$/,
         loader: 'awesome-typescript-loader',
         exclude: /node_modules/

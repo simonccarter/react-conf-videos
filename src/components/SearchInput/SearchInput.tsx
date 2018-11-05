@@ -1,3 +1,4 @@
+/* tslint:disable:no-shadowed-variable */
 import * as React from 'react'
 import { compose, withHandlers, withStateHandlers } from 'recompose'
 
@@ -5,8 +6,8 @@ import styles from './SearchInput.scss'
 
 type Props = {
   filterValue: string,
-  placeholder?: string, 
-  onChange: (e: any) => void 
+  placeholder?: string,
+  onChange: (e: any) => void
 }
 
 type WithState = { myRef: any }
@@ -48,7 +49,7 @@ const SearchInput = compose<CombinedProps, Props>(
   withStateHandlers<WithState, WithStateHandlers, Props>(
     { myRef: null },
     {
-      setRef: () => ref => ({ myRef: ref }),
+      setRef: () => (ref) => ({ myRef: ref }),
       blurRef
     }
   ),

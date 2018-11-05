@@ -51,7 +51,7 @@ export const VideoInner: React.SFC<CombinedProps> = ({
           height="360"
           src={embeddableLink}
           frameBorder="0"
-          allowFullScreen
+          allowFullScreen={true}
         /> }
       </div>
       <div className={styles.details}>

@@ -7,7 +7,7 @@ type Props = {
   className?: string
 }
 
-const InnerLayoutContainer: React.SFC<Props> = props => (
+const InnerLayoutContainer: React.SFC<Props> = (props) => (
   <div className={cn(styles.root, props.className)}>
     {props.children}
   </div>

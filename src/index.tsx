@@ -28,4 +28,3 @@ if (module.hot) {
     store.replaceReducer(connectRouter(history)(rootReducer))
   })
 }
-
