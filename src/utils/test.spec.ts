@@ -17,13 +17,14 @@ describe('utils/test', () => {
   })
 
   describe('mockStore', () => {
-    it('should return an empty object', () => {
+    it('should return a mockStore', () => {
       // arrange
       // act
       const result = mockStore()
 
       // assert
-      expect(result).toEqual({})
+      expect(result).toHaveProperty('dispatch')
+      expect(result).toHaveProperty('getState')
     })
   })
 })
