@@ -3,11 +3,11 @@ import { onError, mockStore } from './test'
 describe('utils/test', () => {
   describe('onError', () => {
     it('should call the callback with the supplied Error', () => {
-      // arrange 
+      // arrange
       const err = new Error('fake error')
       const cb = jest.fn()
 
-      // act 
+      // act
       onError(cb)(err)
 
       // assert
@@ -17,13 +17,14 @@ describe('utils/test', () => {
   })
 
   describe('mockStore', () => {
-    it('should return an empty object', () => {
-      // arrange 
-      // act 
+    it('should return a mockStore', () => {
+      // arrange
+      // act
       const result = mockStore()
 
       // assert
-      expect(result).toEqual({})
+      expect(result).toHaveProperty('dispatch')
+      expect(result).toHaveProperty('getState')
     })
   })
 })

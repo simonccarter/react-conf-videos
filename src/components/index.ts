@@ -10,7 +10,7 @@ import { Meta } from 'components/Meta'
 import { List } from 'components/List'
 import { Logo } from 'components/Logo'
 
-export { 
+export {
   Logo,
   List,
   Meta,

@@ -11,18 +11,18 @@ describe.skip('Video', () => {
   const getData = () => {
     const props = { videoId: 'xxx', conferenceId: 'yyy'}
     const video = {
+      link: 'a link',
       title: 'test title',
       length: '12:34',
-      link: 'a link',
+      presenter: 'aaa',
       embeddableLink: 'a link',
-      presenter: 'aaa'
     }
     const conference: Partial<Conference> = { title: 'A conference' }
     const speaker = { name: 'Simon Carter' }
-    const state = {data:{
-      videos: {'xxx': video},
-      presenters: {'aaa': speaker},
-      conferences: {'yyy' : conference}
+    const state = {data: {
+      videos: {xxx: video},
+      presenters: {aaa: speaker},
+      conferences: {yyy : conference}
     }}
     return { props, state, video, speaker, conference }
   }
@@ -54,5 +54,3 @@ describe.skip('Video', () => {
   })
 
 })
-
-

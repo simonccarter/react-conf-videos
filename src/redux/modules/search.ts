@@ -1,16 +1,15 @@
 import * as Immutable from 'seamless-immutable'
 import { any } from 'ramda'
 import { combineEpics, Epic } from 'redux-observable'
-import { remove as removeDiacritics } from 'diacritics'
-import { isFilterEmpty } from 'utils'
+import { isFilterEmpty, cleanQuery } from 'utils'
 
 import 'rxjs/add/operator/map'
 import 'rxjs/add/operator/debounceTime'
 
-import { 
-  Action, 
-  Conference, 
-  IndexedPresenters, 
+import {
+  Action,
+  Conference,
+  IndexedPresenters,
   IndexedVideos,
   IndexedConferences
 } from '../../domain'
@@ -34,7 +33,13 @@ export const textInDetails = (filterValue: string, termsToSearch: [string, strin
   any((phrase) => phrase.includes(filterValue), termsToSearch)
 
 // filters videos on a conference
-export const filterVideos = (videos: IndexedVideos, presenters: IndexedPresenters, conferences: IndexedConferences, filterValue: string, conferenceKey: string) => {
+export const filterVideos = (
+  videos: IndexedVideos,
+  presenters: IndexedPresenters,
+  conferences: IndexedConferences,
+  filterValue: string,
+  conferenceKey: string
+) => {
   const { videos: conferenceVideos } = conferences[conferenceKey]
   const matchedVideos = conferenceVideos.filter((videoKey: any) => {
     const { title, presenter } = videos[videoKey]
@@ -45,7 +50,12 @@ export const filterVideos = (videos: IndexedVideos, presenters: IndexedPresenter
 }
 
 // returns new conference object if videos exist on conference
-export const createConference = (conferences: Immutable.Immutable<IndexedConferences>, conferenceKey: string, newConferences: any, matchedVideos: string[]) => {
+export const createConference = (
+  conferences: Immutable.Immutable<IndexedConferences>,
+  conferenceKey: string,
+  newConferences: any,
+  matchedVideos: string[]
+) => {
   if (!matchedVideos.length) {
     return newConferences
   }
@@ -54,13 +64,23 @@ export const createConference = (conferences: Immutable.Immutable<IndexedConfere
 }
 
 // search functionality: filter videos by title and or speaker or conference
-const computeFilteredConferences = (filterValue: string, conferences: IndexedConferences, videos: IndexedVideos, presenters: IndexedPresenters) => {
+const computeFilteredConferences = (
+  filterValue: string,
+  conferences: IndexedConferences,
+  videos: IndexedVideos,
+  presenters: IndexedPresenters
+) => {
   // loop through all conferences, getting list of videos
   const newConferences = Object.keys(conferences).reduce((newConferencesAcc, conferenceKey) => {
     // filter videos on conference
     const matchedVideos = filterVideos(videos, presenters, conferences, filterValue, conferenceKey)
     // return conference if it has any matched videos
-    return createConference(conferences as Immutable.Immutable<IndexedConferences>, conferenceKey, newConferencesAcc, matchedVideos)
+    return createConference(
+      conferences as Immutable.Immutable<IndexedConferences>,
+      conferenceKey,
+      newConferencesAcc,
+      matchedVideos
+    )
   }, {})
   return newConferences
 }
@@ -72,7 +92,7 @@ export const filterEpic: Epic<Action<any>, any> = (action$, store) =>
     .debounceTime(80)
     .map((action) => {
       const { payload: filterValue = ''} = action
-      const { 
+      const {
         data: {
           conferences, videosSearchable, presentersSearchable
         },
@@ -92,7 +112,7 @@ export const filterEpic: Epic<Action<any>, any> = (action$, store) =>
       // if no/empty query, return original/all set of videos
       rAction.payload = isFilterEmpty(filterValue) ?
         filteredConferences :
-        computeFilteredConferences(removeDiacritics(filterValue.trim().toLowerCase()), filteredConferences, videosSearchable, presentersSearchable)
+        computeFilteredConferences(cleanQuery(filterValue), filteredConferences, videosSearchable, presentersSearchable)
       return rAction
     })
 

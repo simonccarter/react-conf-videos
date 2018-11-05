@@ -3,8 +3,8 @@ import { combineEpics, Epic } from 'redux-observable'
 
 import 'rxjs/add/operator/map'
 
-import { 
-  Action, 
+import {
+  Action,
   JSONInput,
   IndexedVideos,
   IndexedPresenters,
@@ -18,17 +18,17 @@ export const COPY_DATA = 'data.COPY_DATA'
 
 export type ReduxState = {
   conferenceTitlesToIds: ConferenceTitlesToIds,
-  presentersSearchable: IndexedPresenters, 
-  videosSearchable: IndexedVideos, 
-  conferences: IndexedConferences, 
-  presenters: IndexedPresenters, 
+  presentersSearchable: IndexedPresenters,
+  videosSearchable: IndexedVideos,
+  conferences: IndexedConferences,
+  presenters: IndexedPresenters,
   videos: IndexedVideos
 }
 
 // copy data into own slice
-export const dataCopyEpic: Epic<any, Action<JSONInput>> = action$ =>
+export const dataCopyEpic: Epic<any, Action<JSONInput>> = (action$) =>
   action$.ofType(LOAD_DATA_END)
-    .map(action => ({ type: COPY_DATA, payload: action.payload }))
+    .map((action) => ({ type: COPY_DATA, payload: action.payload }))
 
 export const dataEpics = combineEpics(dataCopyEpic)
 

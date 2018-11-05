@@ -20,7 +20,7 @@ describe('search', () => {
     }))
 
     it('should return true', () => {
-      // arrange 
+      // arrange
       // act
       const result = textInDetails(query, phrasesToSearchIn)
 
@@ -29,7 +29,7 @@ describe('search', () => {
     })
 
     it('should return false', () => {
-      // arrange 
+      // arrange
       query = 'x'
 
       // act
@@ -39,8 +39,6 @@ describe('search', () => {
       expect(result).toEqual(false)
     })
   })
-
-  describe('filterVideos', () => { })
 
   describe('createConference', () => {
     it('should return empty object given empty array of matched videos', () => {
@@ -60,7 +58,7 @@ describe('search', () => {
       const mVideos = ['ccc', 'ddd']
       const confIdx = 'idx'
 
-      const conferences = Immutable<any>({ 'idx': { videos } })
+      const conferences = Immutable<any>({ idx: { videos } })
       const newConferences = {}
       const expectedResult = conferences.setIn([confIdx], { videos: [...mVideos] })
 
@@ -81,7 +79,7 @@ describe('search', () => {
       // act
       filterEpic(action$, mockStore(), null)
         .subscribe(
-          action => {
+          (action) => {
             // assert
             expect(action.type).toEqual(INIT_SLICE)
             expect(action.payload).toEqual(expectedPayload)
@@ -101,7 +99,7 @@ describe('search', () => {
     })
 
     it('should set the filter value', () => {
-      // arrange 
+      // arrange
       const payload = 'filter value'
       const action = { type: FILTER, payload }
 
@@ -113,8 +111,8 @@ describe('search', () => {
     })
 
     it('should set the filtered conferences', () => {
-      // arrange 
-      const payload = { 'idx': 'filtered conferences' }
+      // arrange
+      const payload = { idx: 'filtered conferences' }
       const action = { type: SET_FILTERED_CONFERENCES, payload }
 
       // act
@@ -125,7 +123,7 @@ describe('search', () => {
     })
 
     it('should set the isActive status', () => {
-      // arrange 
+      // arrange
       const payload = false
       const action = { type: SET_IS_ACTIVE, payload }
 
@@ -135,8 +133,6 @@ describe('search', () => {
       // assert
       expect(result.isActive).toBe(false)
     })
-
-
 
   })
 

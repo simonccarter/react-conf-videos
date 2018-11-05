@@ -26,6 +26,7 @@ export const BOOTSTRAP_END_LOADER = 'END_LOADER'
 // export const BOOTSTRAP_COMPLETE_ACTIONS = [SET_FILTERED_CONFERENCES]
 export const BOOTSTRAP_COMPLETE_ACTIONS = [LOAD_DATA_END]
 
+// tslint:disable-next-line
 const JSONData = require('assets/conferenceVidsCleaned.json')
 
 const loadDataEnd = (payload: JSONInput) => ({
@@ -34,38 +35,38 @@ const loadDataEnd = (payload: JSONInput) => ({
 })
 
 // kick off bootstrap actions
-export const bootstrapStartEpic: Epic<any, any> = action$ =>
+export const bootstrapStartEpic: Epic<any, any> = (action$) =>
   action$.ofType(BOOTSTRAP_START)
     .mapTo({ type: LOAD_DATA_START })
 
 // load json data into store
-export const loadJSONDataEpic: Epic<any, any> = action$ =>
+export const loadJSONDataEpic: Epic<any, any> = (action$) =>
   action$.ofType(LOAD_DATA_START)
     .map(() => loadDataEnd(JSONData))
 
 // end bookstrap process by listening for all actions in BOOTSTRAP_COMPLETE_ACTIONS
-export const bootstrapEndEpic: Epic<any, any> = action$ =>
+export const bootstrapEndEpic: Epic<any, any> = (action$) =>
   action$.ofType(...BOOTSTRAP_COMPLETE_ACTIONS)
     .bufferCount(BOOTSTRAP_COMPLETE_ACTIONS.length)
     .take(1)
     .mapTo({ type: BOOTSTRAP_END })
 
 // listen to end bootstrap action, and remove loader on dom for seamless merge into app
-export const boostrapEndRemoveLoaderEpic: Epic<any, any> = action$ =>
+export const boostrapEndRemoveLoaderEpic: Epic<any, any> = (action$) =>
   action$.ofType(BOOTSTRAP_END)
     .do(() => {
-      (<HTMLElement>document.getElementById('loader')).classList.remove('fullscreen')
+      (document.getElementById('loader') as HTMLElement).classList.remove('fullscreen')
     })
     .delay(300)
     .do(() => {
       // loader on initial html no longer visible. remove.
-      (<HTMLElement>document.getElementById('loader')).remove()
+      (document.getElementById('loader') as HTMLElement).remove()
     })
     .mapTo({ type: BOOTSTRAP_END_LOADER})
 
 export const bootstrapEpics = combineEpics(
-  bootstrapStartEpic, 
-  loadJSONDataEpic, 
+  bootstrapStartEpic,
+  loadJSONDataEpic,
   bootstrapEndEpic,
   boostrapEndRemoveLoaderEpic
   // filterVideosForBootstrapIfPresent

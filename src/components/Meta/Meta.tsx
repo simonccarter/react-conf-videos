@@ -10,7 +10,7 @@ type Props = {
 const Meta: React.SFC<Props> = ({title, description = ''}) => (
   <Helmet>
    <title>{title && `${title + ' - '}`}React.js Videos</title>
-   <meta name='description' content={description} />
+   <meta name="description" content={description} />
   </Helmet>
 )
 
