@@ -3,10 +3,10 @@ import { onError, mockStore } from 'utils'
 import { ActionsObservable } from 'redux-observable'
 import { Action } from 'domain/Action'
 
-import bootstrapReducer, { 
-  BOOTSTRAP_START, BOOTSTRAP_END, 
+import bootstrapReducer, {
+  BOOTSTRAP_START, BOOTSTRAP_END,
   BOOTSTRAP_COMPLETE_ACTIONS, BOOTSTRAP_END_LOADER,
-  initialState, bootstrapStartEpic, bootstrapEndEpic, 
+  initialState, bootstrapStartEpic, bootstrapEndEpic,
   loadJSONDataEpic, boostrapEndRemoveLoaderEpic
 } from './bootstrap'
 import { LOAD_DATA_END, LOAD_DATA_START } from './data'
@@ -40,7 +40,7 @@ describe('bootstrap reducer', () => {
       // act
       loadJSONDataEpic(action$, mockStore(), null)
         .subscribe(
-          action => {
+          (action) => {
             // assert
             expect(action.type).toBe(LOAD_DATA_END)
             done()
@@ -52,13 +52,13 @@ describe('bootstrap reducer', () => {
 
   describe('boostrapEndRemoveLoaderEpic', () => {
     it('should return the correct action', (done) => {
-      // arrange 
+      // arrange
       const action$ = ActionsObservable.of({type: BOOTSTRAP_END})
 
       // act
       boostrapEndRemoveLoaderEpic(action$, mockStore(), null)
         .subscribe(
-          action => {
+          (action) => {
             // assert
             expect(action.type).toBe(BOOTSTRAP_END_LOADER)
             expect(action.payload).toBeUndefined()
@@ -73,7 +73,7 @@ describe('bootstrap reducer', () => {
     it('should return the correct action and payload', (done) => {
       // arrange
       const action$ = ActionsObservable.from(
-        BOOTSTRAP_COMPLETE_ACTIONS.map(type => ({type}))
+        BOOTSTRAP_COMPLETE_ACTIONS.map((type) => ({type}))
       )
 
       // act
@@ -134,4 +134,3 @@ describe('bootstrap reducer', () => {
   })
 
 })
-

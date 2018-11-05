@@ -9,9 +9,9 @@ import styles from './ResultDetails.scss'
 
 type Props = { conferences: IndexedConferences }
 type MappedProps = {
-  countVids: number, 
+  countVids: number,
   countConfs: number
-  countVidsS: string, 
+  countVidsS: string,
   countConfsS: string
 }
 
@@ -41,10 +41,10 @@ const ResultDetailsInner: React.SFC<MappedProps>  = ({
   </p>
 )
 
-const ResultDetails = mapProps<MappedProps, Props>( ({conferences}) => { 
+const ResultDetails = mapProps<MappedProps, Props>( ({conferences}) => {
   return {
     ...computeResultDetails(conferences)
-  } 
+  }
 })(ResultDetailsInner)
 
 export default ResultDetails

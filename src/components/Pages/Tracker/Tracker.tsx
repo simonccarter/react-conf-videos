@@ -5,8 +5,9 @@ import * as H from 'history'
 export default function withTracker(WrappedComponent: React.ComponentClass<any>, options = {}) {
   const trackPage = (page: string) => {
     // exit early if not live
-    if(window.location.hostname !== 'www.reactjsvideos.com')
+    if (window.location.hostname !== 'www.reactjsvideos.com') {
       return
+    }
     ReactGA.set({
       page,
       ...options
@@ -15,13 +16,13 @@ export default function withTracker(WrappedComponent: React.ComponentClass<any>,
   };
 
   const HOC = class extends React.Component<any> {
-    componentDidMount() {
+    public componentDidMount() {
       const page = this.props.location.pathname;
       const search = this.props.location.search;
       trackPage(`${page}${search}`);
     }
 
-    componentDidUpdate(prevProps: {location: H.Location}) {
+    public componentDidUpdate(prevProps: {location: H.Location}) {
       const prevPage = prevProps.location.pathname;
       const currentPage = this.props.location.pathname;
 
@@ -33,7 +34,7 @@ export default function withTracker(WrappedComponent: React.ComponentClass<any>,
       }
     }
 
-    render() {
+    public render() {
       return <WrappedComponent {...this.props} />;
     }
   };

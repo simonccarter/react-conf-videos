@@ -3,7 +3,7 @@ import { combineEpics, Epic } from 'redux-observable'
 
 import 'rxjs/add/operator/map'
 
-import { 
+import {
   Action,
   Conference
 } from '../../domain'
@@ -22,7 +22,7 @@ export const setConferenceDetails = (payload: string) => ({type: SET_CONFERENCE_
 // copy and format data into local slice
 export const conferenceDataCopyEpic: Epic<Action<any>, any> = (action$, store: any) =>
   action$.ofType(SET_CONFERENCE_DETAILS)
-    .map(action => {
+    .map((action) => {
       const payload = {
         selectedConferenceId: action.payload,
         conference: store.getState().data.conferences[action.payload]

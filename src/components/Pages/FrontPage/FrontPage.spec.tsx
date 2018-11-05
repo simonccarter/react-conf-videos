@@ -10,10 +10,10 @@ describe('FrontPage', () => {
 
     const shallowComp = (isActive: boolean) => shallow<any>(
       <FrontPageInner
-        conferences={{'x': mockConference()}}
-        filterValue=''
+        conferences={{x: mockConference()}}
+        filterValue=""
         navigateToSearchURL={jest.fn()}
-        onInputChange={ () => null }
+        onInputChange={() => null}
       />
     )
 
@@ -43,7 +43,7 @@ describe('FrontPage', () => {
       const store = {
         frontPage: {isActive: false},
         search: {
-          conferences: {'X': mockConference()},
+          conferences: {X: mockConference()},
           filterValue: ''
         }
       }

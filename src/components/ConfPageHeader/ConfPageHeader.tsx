@@ -19,10 +19,18 @@ const ConfPageHeader: React.SFC<Props> = ({title, titleLink, tagline}) => (
         <a href={titleLink} className={styles.link}>{title}</a>
       </h1>
       <p className={styles.headerText}> {tagline} </p>
-      <p className={cn(styles.headerText, styles.contribute)}> Contribute <a className={styles.contributeLink} href="https://github.com/simonccarter/react-conf-videos">here</a>.</p>
+      <p className={cn(styles.headerText, styles.contribute)}>
+        Contribute
+        <a
+          className={styles.contributeLink}
+          href="https://github.com/simonccarter/react-conf-videos"
+        >
+          here
+        </a>
+        .
+      </p>
     </div>
   </div >
 )
-
 
 export default ConfPageHeader

@@ -20,7 +20,7 @@ const ConferenceDetailsInner: React.SFC<Props> = ({
     <h2 className={styles.title}><a href={website}>{title}</a></h2>
     <p className={styles.details}>
       <span>{date}</span>
-      <span>{videos.length} { videos.length !== 1 ? 'videos' : 'video' }</span>
+      <span>{videos.length} {videos.length !== 1 ? 'videos' : 'video'}</span>
     </p>
   </div>
 )

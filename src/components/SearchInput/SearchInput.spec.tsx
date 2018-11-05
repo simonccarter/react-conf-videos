@@ -9,7 +9,7 @@ describe('SearchInputInner', () => {
   const shallowComp = (mockFN?: typeof jest.fn, placeholder?: string) => {
     return shallow(
       <SearchInputInner
-        filterValue=''
+        filterValue=""
         onChange={jest.fn()}
         onKeyUpHandlers={mockFN ? mockFN : jest.fn()}
         setRef={jest.fn()}
@@ -31,10 +31,10 @@ describe('SearchInputInner', () => {
     // arrange
     const mockFN = jest.fn()
     const comp = shallowComp(mockFN)
-    
+
     // act
     comp.find('.root').simulate('keyUp', {keyCode: 13})
-    
+
     // assert
     expect(mockFN).toHaveBeenCalled()
   })
@@ -53,11 +53,11 @@ describe('SearchInputInner', () => {
 })
 
 describe('SearchInput', () => {
-  
+
   it('should render and contain connected props', () => {
     // arrange
     const mockFN = jest.fn()
-    const comp = <SearchInput onChange={mockFN} filterValue='' /> 
+    const comp = <SearchInput onChange={mockFN} filterValue="" />
 
     // act
     const wrapper = shallow<any>(comp)
@@ -71,7 +71,7 @@ describe('SearchInput', () => {
     // arrange
     const mockFN = jest.fn()
     const value = 'search input'
-    const comp = <SearchInput onChange={mockFN} filterValue='' /> 
+    const comp = <SearchInput onChange={mockFN} filterValue="" />
 
     // act
     const wrapper = mount(comp)
@@ -88,7 +88,7 @@ describe('blueRef', () => {
     const mockBlur = jest.fn()
     const fakeElement = {myRef: {blur: mockBlur}}
 
-    // act 
+    // act
     blurRef(fakeElement)()
 
     // assert
@@ -99,11 +99,12 @@ describe('blueRef', () => {
 describe('onKeyUpHandlers', () => {
   it('should call blurRef when keyCode is 13', () => {
     // arrange
+    // tslint:disable-next-line
     const blurRef = jest.fn()
     const input = {blurRef, setRef: jest.fn()}
     const mockEvent = {keyCode: 13}
 
-    // act 
+    // act
     onKeyUpHandlers(input)(mockEvent)
 
     // assert
@@ -112,11 +113,12 @@ describe('onKeyUpHandlers', () => {
 
   it('should not call blurRef when keyCode is not 13', () => {
     // arrange
+    // tslint:disable-next-line
     const blurRef = jest.fn()
     const input = {blurRef, setRef: jest.fn()}
     const mockEvent = {keyCode: 14}
 
-    // act 
+    // act
     onKeyUpHandlers(input)(mockEvent)
 
     // assert

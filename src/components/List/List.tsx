@@ -13,7 +13,7 @@ type MapProps = { videos: any[] }
 
 const mapConferenceIdOntoVideos = ([conferenceId, conference]: [string, Conference]) =>
   map(
-    video => ({ key: video, videoId: video, conferenceId }),
+    (video) => ({ key: video, videoId: video, conferenceId }),
     pathOr([], ['videos'], conference)
   )
 
@@ -32,17 +32,17 @@ const VirtualisedList = ({ virtual }: {virtual: any}): any => (
 )
 
 const MyVirtualList = VirtualList({
-  firstItemIndex: 0, 
+  firstItemIndex: 0,
   lastItemIndex: 20,
   initialState: {
-    firstItemIndex: 0, 
+    firstItemIndex: 0,
     lastItemIndex: 20,
   }
 })(VirtualisedList);
 
 export const ListInner: React.SFC<MapProps> = ({ videos }) => {
   return (
-    <section className={styles.root}> 
+    <section className={styles.root}>
       {videos.length > 0 && <MyVirtualList
         items={videos}
         itemHeight={60}
@@ -52,7 +52,7 @@ export const ListInner: React.SFC<MapProps> = ({ videos }) => {
   )
 }
 
-const List = mapProps<MapProps, Props>(({conferences}) => 
+const List = mapProps<MapProps, Props>(({conferences}) =>
   ({ videos: mapConferenceVideos(conferences)})
 )(ListInner)
 

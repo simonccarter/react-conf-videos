@@ -1,5 +1,5 @@
 import 'rxjs'
-import dataReducer, { 
+import dataReducer, {
   initialState,
   COPY_DATA
 } from './data'
@@ -13,19 +13,19 @@ describe('data', () => {
 
       // act
       const result = dataReducer(undefined, action)
-      
+
       // expect
       expect(result).toBe(initialState)
     })
 
     it('should copy data to the slice', () => {
       // arrange
-      const payload = initialState.merge({presenters: {'idx': {'name': 'lalala'}}})
+      const payload = initialState.merge({presenters: {idx: {name: 'lalala'}}})
       const action = {type: COPY_DATA, payload}
-      
+
       // act
       const result = dataReducer(undefined, action)
-      
+
       // expect
       expect(result).toEqual(payload)
     })

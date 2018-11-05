@@ -19,11 +19,10 @@ export default function configureStore() {
     composeEnhancers(
       applyMiddleware(
         epicMiddleware,
-        routerMiddleware(history), 
+        routerMiddleware(history),
       )
     )
   )
-
 
   return { history, store, rootReducer }
 }
