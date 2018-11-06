@@ -465,5 +465,9 @@ To add a conference and it's videos, or to simply fix a typo:
 2. create a branch
 	1. if adding a conference, create a branch in the format `conf/confName`
 	2. otherwise, use `fix/` or `feature/` suffixes
-2. edit `public/assets/conferenceVids.json`
+3. edit `public/assets/conferenceVids.json`
+
+To see a version working locally, with your changes, run
+1. `yarn`
+2. `yarn start`
 
