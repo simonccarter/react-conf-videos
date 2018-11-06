@@ -92,7 +92,7 @@ const createBody = (conferenceVids: JSONInput) => conferenceVids.reduce((acc, co
 const createHead = () => '# React.js Conference Videos\nList of react conference videos.\n' +
 '[www.reactjsvideos.com](https://www.reactjsvideos.com)'
 
-type TitlesAndYears = [string,string][]
+type TitlesAndYears = Array<[string, string]>
 const computeLnks = (titlesAndYears: TitlesAndYears) => {
 return titlesAndYears.reduce((acc, [title, year], idx) => {
   if (idx === 0 || year !== titlesAndYears[idx > 0 ? idx - 1 : 0][1]) {
@@ -101,7 +101,7 @@ return titlesAndYears.reduce((acc, [title, year], idx) => {
   acc += `\n  * [${title}](#${title.replace(/\s/g, '-').replace(/\.+/g, '').toLowerCase()})`
   return acc
 }, '')
-} 
+}
 
 const createNavLinks = (conferenceVids: JSONInput) => {
   // produce nested arrays containing [[title, year], [title, year]...]
@@ -135,10 +135,16 @@ const createFooter = () => `
 
 ## Contributing
 
-To add a conference and it's videos, or to simply fix a typo: 
+To add a conference and it's videos, or to simply fix a typo:
+1. fork the repo
+2. create a branch
+	1. if adding a conference, create a branch in the format \`conf/confName\`
+	2. otherwise, use \`fix/\` or \`feature/\` suffixes
+3. edit \`public/assets/conferenceVids.json\`
 
-1. edit \`public/assets/conferenceVids.json\`
-2. run \`yarn run createReadme\`
+To see a version working locally, with your changes, run
+1. \`yarn\`
+2. \`yarn start\`
 `
 
 const run = (conferenceVids: JSONInput) => {
