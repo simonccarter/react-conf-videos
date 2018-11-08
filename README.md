@@ -460,8 +460,14 @@ List of react conference videos.
 
 ## Contributing
 
-To add a conference and it's videos, or to simply fix a typo: 
+To add a conference and it's videos, or to simply fix a typo:
+1. fork the repo
+2. create a branch
+	1. if adding a conference, create a branch in the format `conf/confName`
+	2. otherwise, use `fix/` or `feature/` suffixes
+3. edit `public/assets/conferenceVids.json`
 
-1. edit `public/assets/conferenceVids.json`
-2. run `yarn run createReadme`
+To see a version working locally, with your changes, run
+1. `yarn`
+2. `yarn start`
 
