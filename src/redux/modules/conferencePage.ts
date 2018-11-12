@@ -3,11 +3,8 @@ import { combineEpics, Epic } from 'redux-observable'
 
 import 'rxjs/add/operator/map'
 
-import {
-  Action,
-  Conference
-} from '../../domain'
 import { ApplicationState } from 'redux/modules'
+import { Action, Conference } from '../../domain'
 
 export type ReduxState = {
   selectedConferenceId: string,

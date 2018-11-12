@@ -1,7 +1,9 @@
 import * as Immutable from 'seamless-immutable'
 import { combineEpics, Epic } from 'redux-observable'
+
+import { ApplicationState } from 'redux/modules'
 import { Action, JSONInput } from '../../domain'
-import { ReduxState as DataSlice } from './data'
+import { ReduxState as DataSlice, LOAD_DATA_END, LOAD_DATA_START } from './data'
 
 import 'rxjs/add/operator/do'
 import 'rxjs/add/operator/map'
@@ -17,10 +19,6 @@ export type ReduxState = {
   data: DataSlice | null,
   error: boolean
 }
-
-import { ApplicationState } from 'redux/modules'
-
-import { LOAD_DATA_END, LOAD_DATA_START } from './data'
 
 export const BOOTSTRAP_START = 'BOOTSTRAP_START'
 export const BOOTSTRAP_END = 'BOOTSTRAP_END'

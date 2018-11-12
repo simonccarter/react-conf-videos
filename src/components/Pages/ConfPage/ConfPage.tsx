@@ -2,7 +2,6 @@ import * as React from 'react'
 import { connect } from 'react-redux'
 import { compose, pure, withHandlers } from 'recompose'
 
-import { routingActions, ApplicationState } from 'redux/modules'
 import {
   List,
   Meta,
@@ -11,8 +10,8 @@ import {
   ConfPageHeader,
   InnerLayoutContainer
 } from 'components'
-
 import { Conference, IndexedConferences } from '../../../domain'
+import { routingActions, ApplicationState } from 'redux/modules'
 
 type ReduxProps = {
   conference: Conference,
