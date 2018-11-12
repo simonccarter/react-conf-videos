@@ -2,8 +2,6 @@ import * as React from 'react'
 import { connect } from 'react-redux'
 import { compose, pure, withHandlers } from 'recompose'
 
-import { routingActions } from 'redux/modules'
-
 import {
   List,
   Meta,
@@ -12,8 +10,8 @@ import {
   ResultDetails,
   InnerLayoutContainer
 } from 'components'
-
 import { IndexedConferences } from '../../../domain'
+import { routingActions, ApplicationState } from 'redux/modules'
 
 type ReduxProps = {
   conferences: IndexedConferences,
@@ -25,7 +23,7 @@ type DispatchpProps = {
 }
 
 type WithHandlers = {
-  onInputChange: (e: any) => void
+  onInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 type Props = ReduxProps & DispatchpProps & WithHandlers
@@ -46,7 +44,7 @@ export const FrontPageInner: React.SFC<Props> = (props) => (
   </div>
 )
 
-const mapStateToProps = ({search: {conferences, filterValue}}: any) => ({
+const mapStateToProps = ({search: {conferences, filterValue}}: ApplicationState) => ({
   filterValue,
   conferences
 })
@@ -59,7 +57,7 @@ const FrontPage = compose<Props, {}>(
   connect(mapStateToProps, dispatchMap),
   pure,
   withHandlers<ReduxProps & DispatchpProps, WithHandlers>({
-    onInputChange: ({navigateToSearchURL}) => (e: any) => {
+    onInputChange: ({navigateToSearchURL}) => (e: React.ChangeEvent<HTMLInputElement>) => {
       navigateToSearchURL(e.target.value)
     }
   })

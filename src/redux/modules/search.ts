@@ -8,11 +8,11 @@ import 'rxjs/add/operator/debounceTime'
 
 import {
   Action,
-  Conference,
   IndexedPresenters,
   IndexedVideos,
   IndexedConferences
 } from '../../domain'
+import { ApplicationState } from 'redux/modules'
 
 export const INIT_SLICE = 'search/INIT_SLICE'
 export const FILTER = 'search/FILTER'
@@ -23,7 +23,7 @@ const filter = (payload: string) => ({ type: FILTER, payload })
 const setIsActive = (payload: boolean) => ({ type: SET_IS_ACTIVE, payload })
 
 export type ReduxState = {
-  conferences: {[idx: string]: Conference},
+  conferences: IndexedConferences,
   filterValue: string,
   isActive: boolean
 }
@@ -41,7 +41,7 @@ export const filterVideos = (
   conferenceKey: string
 ) => {
   const { videos: conferenceVideos } = conferences[conferenceKey]
-  const matchedVideos = conferenceVideos.filter((videoKey: any) => {
+  const matchedVideos = conferenceVideos.filter((videoKey: string) => {
     const { title, presenter } = videos[videoKey]
     const { name } = presenters[presenter]
     return textInDetails(filterValue, [name, title])
@@ -86,7 +86,7 @@ const computeFilteredConferences = (
 }
 
 // filter conferences/videos based of filterValue
-export const filterEpic: Epic<Action<any>, any> = (action$, store) =>
+export const filterEpic: Epic<Action<any>, ApplicationState> = (action$, store) =>
   action$
     .ofType(FILTER)
     .debounceTime(80)

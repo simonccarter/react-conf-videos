@@ -1,8 +1,12 @@
 import * as React from 'react'
 import * as ReactGA from 'react-ga'
-import * as H from 'history'
+import { Location } from 'history'
 
-export default function withTracker(WrappedComponent: React.ComponentClass<any>, options = {}) {
+type InnerProps = {
+  location: Location
+}
+
+export default function withTracker(WrappedComponent: React.ComponentClass<{}>, options = {}) {
   const trackPage = (page: string) => {
     // exit early if not live
     if (window.location.hostname !== 'www.reactjsvideos.com') {
@@ -15,14 +19,14 @@ export default function withTracker(WrappedComponent: React.ComponentClass<any>,
     ReactGA.pageview(page);
   };
 
-  const HOC = class extends React.Component<any> {
+  const HOC = class extends React.Component<InnerProps> {
     public componentDidMount() {
       const page = this.props.location.pathname;
       const search = this.props.location.search;
       trackPage(`${page}${search}`);
     }
 
-    public componentDidUpdate(prevProps: {location: H.Location}) {
+    public componentDidUpdate(prevProps: { location: Location }) {
       const prevPage = prevProps.location.pathname;
       const currentPage = this.props.location.pathname;
 

@@ -8,8 +8,14 @@ import { Conference, IndexedConferences } from '../../domain'
 
 import styles from './List.scss'
 
+type MappedVideo = {
+  key: string,
+  videoId: string,
+  conferenceId: string
+}
+
 type Props = { conferences: {[idx: string]: Conference} }
-type MapProps = { videos: any[] }
+type MapProps = { videos: MappedVideo[] }
 
 const mapConferenceIdOntoVideos = ([conferenceId, conference]: [string, Conference]) =>
   map(
@@ -17,13 +23,13 @@ const mapConferenceIdOntoVideos = ([conferenceId, conference]: [string, Conferen
     pathOr([], ['videos'], conference)
   )
 
-const mapConferenceVideos = rcompose<IndexedConferences, any, any, any[]>(
+const mapConferenceVideos = rcompose<IndexedConferences, any, any[], MappedVideo[]>(
   flatten,
   map(mapConferenceIdOntoVideos),
   toPairs
 )
 
-const VirtualisedList = ({ virtual }: {virtual: any}): any => (
+const VirtualisedList = ({ virtual }: {virtual: any}): React.ReactElement<{}> => (
   <div style={virtual.style}>
     {virtual.items && virtual.items.map((item: any) => (
       <Video {...item} />

@@ -7,7 +7,7 @@ const conferenceSchema = require('./confSchema')
 
 const args = process.argv
 
-import { 
+import {
   JSONInput,
   IndexedVideos,
   IndexedPresenters,
@@ -17,10 +17,10 @@ import {
 
 export type ReduxState = {
   conferenceTitlesToIds: ConferenceTitlesToIds,
-  presentersSearchable: IndexedPresenters, 
-  conferences: IndexedConferences, 
-  presenters: IndexedPresenters, 
-  videosSearchable: IndexedVideos, 
+  presentersSearchable: IndexedPresenters,
+  conferences: IndexedConferences,
+  presenters: IndexedPresenters,
+  videosSearchable: IndexedVideos,
   videos: IndexedVideos
 }
 
@@ -30,7 +30,10 @@ const recurseAction =
     (whiteList: string[]): any =>
       ifElse(
         either(is(Array), is(Object)),
-        mapObjIndexed((value: any, key: any) => whiteList.indexOf(key) > -1 ? value : recurseAction(action)(whiteList)(value)),
+        mapObjIndexed(
+          (value: any, key: any) =>
+            whiteList.indexOf(key) > -1 ? value : recurseAction(action)(whiteList)(value)
+        ),
         (e: any) => action(e)
       )
 
@@ -75,7 +78,6 @@ const run = () => {
   const transformedJson = transformDataFromJson(data)
 
   const outFile = './public/assets/conferenceVidsCleaned.json'
-  console.log(`writing cleaned file to ${outFile}`)
   fs.writeFileSync(outFile, JSON.stringify(transformedJson))
 }
 

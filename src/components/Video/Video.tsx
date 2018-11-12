@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { compose, pure, withStateHandlers } from 'recompose'
 
 import { Video as VideoProp, Presenter, Conference } from '../../domain'
-import { searchActions } from 'redux/modules'
+import { ApplicationState } from 'redux/modules'
 import { sluggifyUrl } from 'utils'
 
 import styles from './Video.scss'
@@ -20,14 +20,13 @@ type State = {
 }
 
 type StateHandlers = {
-  toggleIsOpen: (e: any) => State
+  toggleIsOpen: (e: React.MouseEvent<HTMLElement>) => State
 }
 
 type ReduxState = {
   conferenceId: string
   conference: Conference
   speaker: Presenter
-  filter: typeof searchActions.filter
   video: VideoProp
 }
 
@@ -64,7 +63,7 @@ export const VideoInner: React.SFC<CombinedProps> = ({
   )
 }
 
-const mapStateToProps = (state: any, props: Props) => {
+const mapStateToProps = (state: ApplicationState, props: Props) => {
   const { data: { videos, presenters, conferences } } = state
   const { videoId, conferenceId } = props
   const video = videos[videoId]

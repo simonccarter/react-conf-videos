@@ -6,12 +6,12 @@ import SearchInput, { SearchInputInner, blurRef, onKeyUpHandlers } from './Searc
 
 describe('SearchInputInner', () => {
 
-  const shallowComp = (mockFN?: typeof jest.fn, placeholder?: string) => {
+  const shallowComp = (mockFN = jest.fn(), placeholder?: string) => {
     return shallow(
       <SearchInputInner
         filterValue=""
         onChange={jest.fn()}
-        onKeyUpHandlers={mockFN ? mockFN : jest.fn()}
+        onKeyUpHandlers={mockFN}
         setRef={jest.fn()}
         myRef={null}
         blurRef={jest.fn()}
@@ -60,7 +60,7 @@ describe('SearchInput', () => {
     const comp = <SearchInput onChange={mockFN} filterValue="" />
 
     // act
-    const wrapper = shallow<any>(comp)
+    const wrapper = shallow(comp)
 
     // assert
     expect(toJSON(wrapper)).toMatchSnapshot()
@@ -102,7 +102,7 @@ describe('onKeyUpHandlers', () => {
     // tslint:disable-next-line
     const blurRef = jest.fn()
     const input = {blurRef, setRef: jest.fn()}
-    const mockEvent = {keyCode: 13}
+    const mockEvent = {keyCode: 13} as React.KeyboardEvent<HTMLInputElement>
 
     // act
     onKeyUpHandlers(input)(mockEvent)
@@ -116,7 +116,7 @@ describe('onKeyUpHandlers', () => {
     // tslint:disable-next-line
     const blurRef = jest.fn()
     const input = {blurRef, setRef: jest.fn()}
-    const mockEvent = {keyCode: 14}
+    const mockEvent = {keyCode: 14} as React.KeyboardEvent<HTMLInputElement>
 
     // act
     onKeyUpHandlers(input)(mockEvent)

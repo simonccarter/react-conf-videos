@@ -9,6 +9,7 @@
     "interface-over-type-literal": false,
     "jsx-no-lambda": false,
     "jsx-no-multiline-js": false,
-    "object-literal-sort-keys": false
+    "object-literal-sort-keys": false,
+    "no-shadowed-variable": false
   }
 }
