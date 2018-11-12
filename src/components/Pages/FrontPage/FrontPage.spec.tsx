@@ -8,7 +8,7 @@ import FrontPage, { FrontPageInner } from './FrontPage'
 describe('FrontPage', () => {
   describe.skip('FrontPageInner', () => {
 
-    const shallowComp = (isActive: boolean) => shallow<any>(
+    const shallowComp = (isActive: boolean) => shallow(
       <FrontPageInner
         conferences={{x: mockConference()}}
         filterValue=""

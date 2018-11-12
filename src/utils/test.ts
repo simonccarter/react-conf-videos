@@ -14,12 +14,12 @@ export const mockStore = (): MiddlewareAPI<any> => createMockStore({})
 const isStore = (store: any) => store.hasOwnProperty('isActionTypeDispatched')
 
 // shallow mount component with a store in context
-export const shallowWithStore = <T>(storeP: T, component: ReactElement<any>) => {
+export const shallowWithStore = (storeP: any, component: ReactElement<{}>) => {
   const store = isStore(storeP) ? storeP : createMockStore(storeP)
   return shallow<any, any>(component, { context: { store } })
 }
 
-export const mountWithStore = <T>(storeP: T, component: ReactElement<any>) => {
+export const mountWithStore = (storeP: any, component: ReactElement<{}>) => {
   const store = isStore(storeP) ? storeP : createMockStore(storeP)
   return mount<any, any>(component, { context: { store } })
 }

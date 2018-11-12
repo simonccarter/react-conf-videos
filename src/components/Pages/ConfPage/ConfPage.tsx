@@ -2,7 +2,7 @@ import * as React from 'react'
 import { connect } from 'react-redux'
 import { compose, pure, withHandlers } from 'recompose'
 
-import { routingActions } from 'redux/modules'
+import { routingActions, ApplicationState } from 'redux/modules'
 import {
   List,
   Meta,
@@ -25,7 +25,7 @@ type DispatchProps = {
 }
 
 type WithHandlers = {
-  onInputChange: (e: any) => void
+  onInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 type Props = ReduxProps & DispatchProps & WithHandlers
@@ -53,7 +53,7 @@ const ConfPageInner: React.SFC<Props> = (props) => (
   </div>
 )
 
-const mapStateToProps = ({ conferencePage, search }: any) => ({
+const mapStateToProps = ({ conferencePage, search }: ApplicationState) => ({
   filterValue: search.filterValue,
   conference: conferencePage.conference,
   conferences: search.conferences
@@ -67,7 +67,7 @@ const ConfPage = compose<Props, {}>(
   connect(mapStateToProps, mapDispatchToProps),
   pure,
   withHandlers<ReduxProps & DispatchProps, WithHandlers>({
-    onInputChange: ({ navigateToSearchURL }) => (e: any) => {
+    onInputChange: ({navigateToSearchURL}) => (e: React.ChangeEvent<HTMLInputElement>) => {
       navigateToSearchURL(e.target.value)
     }
   })

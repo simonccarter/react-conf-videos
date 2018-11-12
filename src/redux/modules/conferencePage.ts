@@ -7,6 +7,7 @@ import {
   Action,
   Conference
 } from '../../domain'
+import { ApplicationState } from 'redux/modules'
 
 export type ReduxState = {
   selectedConferenceId: string,
@@ -20,7 +21,7 @@ export const CONFERENCE_COPY_DATA = 'CONFERENCE_COPY_DATA'
 export const setConferenceDetails = (payload: string) => ({type: SET_CONFERENCE_DETAILS, payload })
 
 // copy and format data into local slice
-export const conferenceDataCopyEpic: Epic<Action<any>, any> = (action$, store: any) =>
+export const conferenceDataCopyEpic: Epic<Action<any>, ApplicationState> = (action$, store: any) =>
   action$.ofType(SET_CONFERENCE_DETAILS)
     .map((action) => {
       const payload = {

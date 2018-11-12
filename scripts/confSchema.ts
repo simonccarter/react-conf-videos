@@ -1,7 +1,7 @@
 const crypto = require('crypto')
 const { schema } = require('normalizr')
 
-const hashFunction = (toHash: any) => crypto.createHash('md5').update(JSON.stringify(toHash)).digest("hex")
+const hashFunction = (toHash: string) => crypto.createHash('md5').update(JSON.stringify(toHash)).digest('hex')
 
 const hashIdOpts = { idAttribute: hashFunction }
 

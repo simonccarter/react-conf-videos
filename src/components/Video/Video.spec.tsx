@@ -6,7 +6,7 @@ import { Conference } from '../../domain'
 
 import { MemoryRouter } from 'react-router'
 
-describe.skip('Video', () => {
+describe('Video', () => {
 
   const getData = () => {
     const props = { videoId: 'xxx', conferenceId: 'yyy'}

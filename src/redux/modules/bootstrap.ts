@@ -1,6 +1,7 @@
 import * as Immutable from 'seamless-immutable'
 import { combineEpics, Epic } from 'redux-observable'
 import { Action, JSONInput } from '../../domain'
+import { ReduxState as DataSlice } from './data'
 
 import 'rxjs/add/operator/do'
 import 'rxjs/add/operator/map'
@@ -13,9 +14,11 @@ import 'rxjs/add/operator/bufferCount'
 
 export type ReduxState = {
   finished: boolean,
-  data: any,
+  data: DataSlice | null,
   error: boolean
 }
+
+import { ApplicationState } from 'redux/modules'
 
 import { LOAD_DATA_END, LOAD_DATA_START } from './data'
 
@@ -35,24 +38,24 @@ const loadDataEnd = (payload: JSONInput) => ({
 })
 
 // kick off bootstrap actions
-export const bootstrapStartEpic: Epic<any, any> = (action$) =>
+export const bootstrapStartEpic: Epic<any, ApplicationState> = (action$) =>
   action$.ofType(BOOTSTRAP_START)
     .mapTo({ type: LOAD_DATA_START })
 
 // load json data into store
-export const loadJSONDataEpic: Epic<any, any> = (action$) =>
+export const loadJSONDataEpic: Epic<any, ApplicationState> = (action$) =>
   action$.ofType(LOAD_DATA_START)
     .map(() => loadDataEnd(JSONData))
 
 // end bookstrap process by listening for all actions in BOOTSTRAP_COMPLETE_ACTIONS
-export const bootstrapEndEpic: Epic<any, any> = (action$) =>
+export const bootstrapEndEpic: Epic<any, ApplicationState> = (action$) =>
   action$.ofType(...BOOTSTRAP_COMPLETE_ACTIONS)
     .bufferCount(BOOTSTRAP_COMPLETE_ACTIONS.length)
     .take(1)
     .mapTo({ type: BOOTSTRAP_END })
 
 // listen to end bootstrap action, and remove loader on dom for seamless merge into app
-export const boostrapEndRemoveLoaderEpic: Epic<any, any> = (action$) =>
+export const boostrapEndRemoveLoaderEpic: Epic<any, ApplicationState> = (action$) =>
   action$.ofType(BOOTSTRAP_END)
     .do(() => {
       (document.getElementById('loader') as HTMLElement).classList.remove('fullscreen')
@@ -69,7 +72,6 @@ export const bootstrapEpics = combineEpics(
   loadJSONDataEpic,
   bootstrapEndEpic,
   boostrapEndRemoveLoaderEpic
-  // filterVideosForBootstrapIfPresent
 )
 
 // remove loader from html and render app on DOM
