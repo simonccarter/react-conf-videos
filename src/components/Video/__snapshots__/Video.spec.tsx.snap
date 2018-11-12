@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Video should render and connect 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      Object {
+        "key": "xxxx",
+      },
+    ]
+  }
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "xxxx",
+            "pathname": "/",
+            "search": "",
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "xxxx",
+          "pathname": "/",
+          "search": "",
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Component
+      conference={
+        Object {
+          "date": "XX/YY/ZZZ",
+          "playlist": "day 1",
+          "title": "fake conf title",
+          "videos": Array [
+            "aaa",
+            "bbb",
+            "ccc",
+          ],
+          "website": "fake url",
+        }
+      }
+      conferenceId="yyy"
+      isOpen={false}
+      speaker={
+        Object {
+          "name": "Simon Carter",
+        }
+      }
+      toggleIsOpen={[MockFunction]}
+      video={
+        Object {
+          "embeddableLink": "a link",
+          "length": "12:34",
+          "link": "a link",
+          "presenter": "aaa",
+          "split": "",
+          "title": "test title",
+        }
+      }
+      videoId="xxx"
+    >
+      <div
+        className="root"
+        key="xxx"
+      >
+        <div
+          className="top"
+          onClick={[MockFunction]}
+        >
+          <span
+            className="title"
+          >
+            test title
+          </span>
+          <span
+            className="right"
+          >
+            12:34
+          </span>
+        </div>
+        <div
+          className="videoWrapper"
+        />
+        <div
+          className="details"
+        >
+          <span>
+            Simon Carter
+          </span>
+          <Link
+            replace={false}
+            to="/conference/yyy/fake-conf-title"
+          >
+            <a
+              href="/conference/yyy/fake-conf-title"
+              onClick={[Function]}
+            >
+              <span
+                className="conferenceTitle"
+              >
+                fake conf title
+              </span>
+            </a>
+          </Link>
+        </div>
+      </div>
+    </Component>
+  </Router>
+</MemoryRouter>
+`;

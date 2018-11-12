@@ -15,7 +15,7 @@ type MappedProps = {
   countConfsS: string
 }
 
-const getAllVideos = compose<any, any, any, any[]>(
+const getAllVideos = compose<any, any, any, string[]>(
   flatten,
   values,
   pluck('videos')

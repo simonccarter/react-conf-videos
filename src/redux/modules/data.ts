@@ -11,6 +11,7 @@ import {
   IndexedConferences,
   ConferenceTitlesToIds
 } from '../../domain'
+import { ApplicationState } from 'redux/modules'
 
 export const LOAD_DATA_START = 'LOAD_DATA_START'
 export const LOAD_DATA_END = 'LOAD_DATA_END'
@@ -26,7 +27,7 @@ export type ReduxState = {
 }
 
 // copy data into own slice
-export const dataCopyEpic: Epic<any, Action<JSONInput>> = (action$) =>
+export const dataCopyEpic: Epic<Action<JSONInput>, ApplicationState> = (action$) =>
   action$.ofType(LOAD_DATA_END)
     .map((action) => ({ type: COPY_DATA, payload: action.payload }))
 

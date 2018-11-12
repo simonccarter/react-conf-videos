@@ -1,7 +1,6 @@
 import 'rxjs'
 import { onError, mockStore } from 'utils'
 import { ActionsObservable } from 'redux-observable'
-import { Action } from 'domain/Action'
 
 import bootstrapReducer, {
   BOOTSTRAP_START, BOOTSTRAP_END,
@@ -21,7 +20,7 @@ describe('bootstrap reducer', () => {
       // act
       bootstrapStartEpic(action$, mockStore(), null)
         .subscribe(
-          (action: Action<any>) => {
+          (action) => {
             // assert
             expect(action.type).toBe(LOAD_DATA_START)
             done()
@@ -79,7 +78,7 @@ describe('bootstrap reducer', () => {
       // act
       bootstrapEndEpic(action$, mockStore(), null)
         .subscribe(
-          (action: Action<any>) => {
+          (action) => {
             // assert
             expect(action.type).toBe(BOOTSTRAP_END)
             expect(action.payload).toBeUndefined()

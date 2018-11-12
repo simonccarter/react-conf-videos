@@ -7,7 +7,7 @@ import styles from './SearchInput.scss'
 type Props = {
   filterValue: string,
   placeholder?: string,
-  onChange: (e: any) => void
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 type WithState = { myRef: any }
@@ -18,7 +18,7 @@ type WithStateHandlers = {
 }
 
 type WithHandlers = {
-  onKeyUpHandlers: (e: any) => void
+  onKeyUpHandlers: (e: React.KeyboardEvent<HTMLInputElement>) => void
 }
 
 type CombinedProps = Props & WithState & WithStateHandlers & WithHandlers
@@ -39,7 +39,7 @@ export const SearchInputInner: React.SFC<CombinedProps> = ({
 
 // for testing
 export const blurRef = ({myRef}: WithState) => () => myRef.blur()
-export const onKeyUpHandlers = ({blurRef}: WithStateHandlers) => (e: any) => {
+export const onKeyUpHandlers = ({blurRef}: WithStateHandlers) => (e: React.KeyboardEvent<HTMLElement>) => {
   if (e.keyCode === 13) {
     blurRef()
   }

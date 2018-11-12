@@ -6,6 +6,7 @@ import { Epic, combineEpics } from 'redux-observable'
 import { isFilterEmpty } from 'utils'
 import { LOAD_DATA_END } from './data'
 import { searchActions } from './search'
+import { ApplicationState } from 'redux/modules'
 import { conferencePageActions } from './conferencePage'
 
 export const NAVIGATE_TO_SEARCH_URL = 'routing/NAVIGATE_TO_SEARCH_URL'
@@ -21,14 +22,14 @@ const extractSearchPagePath = (search: string) => {
   return query
 }
 
-const getConferenceIdFromTitleFromPathname = (pathname: string, store: any) => {
+const getConferenceIdFromTitleFromPathname = (pathname: string) => {
   const match = pathname.match(/conference\/(.*?)\//)
   const id = match && match[1]
   return id as string
 }
 
 // load data in right place on initial page load
-export const loadDataForRoute: Epic<any, any> = (action$, store) =>
+export const loadDataForRoute: Epic<any, ApplicationState> = (action$, store) =>
   action$.ofType(LOAD_DATA_END, '@@router/LOCATION_CHANGE')
     .mergeMap(() => {
       const location = store.getState().router.location;
@@ -36,7 +37,7 @@ export const loadDataForRoute: Epic<any, any> = (action$, store) =>
       if (isSearchPage(pathname)) {
         return Observable.of(searchActions.filter(extractSearchPagePath(search)))
       } else {
-        const id = getConferenceIdFromTitleFromPathname(pathname, store)
+        const id = getConferenceIdFromTitleFromPathname(pathname)
         return Observable.concat([
           conferencePageActions.setConferenceDetails(id),
           searchActions.filter(extractSearchPagePath(search))
@@ -45,7 +46,7 @@ export const loadDataForRoute: Epic<any, any> = (action$, store) =>
     })
 
 // action to navigate to a url with a query string
-export const navigateToSearchResult: Epic<any, any> = (action$, store) =>
+export const navigateToSearchResult: Epic<any, ApplicationState> = (action$, store) =>
   action$.ofType(NAVIGATE_TO_SEARCH_URL)
     .map((action) => {
       // next location is based on current one
@@ -60,7 +61,7 @@ export const routingActions = {
   navigateToSearchURL
 }
 
-export const locationEpics = combineEpics(
+export const routingEpics = combineEpics(
   navigateToSearchResult,
   loadDataForRoute
 )
