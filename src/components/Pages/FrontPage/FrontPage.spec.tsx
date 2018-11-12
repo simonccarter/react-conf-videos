@@ -6,7 +6,7 @@ import { shallowWithStore, mockConference } from 'utils'
 import FrontPage, { FrontPageInner } from './FrontPage'
 
 describe('FrontPage', () => {
-  describe.skip('FrontPageInner', () => {
+  describe('FrontPageInner', () => {
 
     const shallowComp = (isActive: boolean) => shallow(
       <FrontPageInner

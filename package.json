@@ -99,7 +99,7 @@
     "node-sass": "4.7.2",
     "path": "0.12.7",
     "progress-bar-webpack-plugin": "1.11.0",
-    "redux-test-utils": "0.2.2",
+    "redux-test-utils": "0.3.0",
     "sass-loader": "7.0.3",
     "source-map-loader": "0.2.3",
     "style-loader": "0.21.0",

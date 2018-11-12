@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { compose, pure, withStateHandlers } from 'recompose'
 
 import { Video as VideoProp, Presenter, Conference } from '../../domain'
-import { searchActions, ApplicationState } from 'redux/modules'
+import { ApplicationState } from 'redux/modules'
 import { sluggifyUrl } from 'utils'
 
 import styles from './Video.scss'
@@ -27,7 +27,6 @@ type ReduxState = {
   conferenceId: string
   conference: Conference
   speaker: Presenter
-  filter: typeof searchActions.filter
   video: VideoProp
 }
 
