@@ -857,6 +857,197 @@
     ]
   },
   {
+    "title": "React Amsterdam 2018",
+    "date": "12-04-2018",
+    "website": "react.amsterdam",
+    "playlist": {
+      "General Track": "https://www.youtube.com/watch?v=smBND2pwdUE&index=2&t=0s&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm",
+      "React Native Track": "https://www.youtube.com/watch?v=N-X3Z5A-pW4&index=3&t=0s&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm"
+    },
+    "videos" : [
+      {
+        "title": "Reactive Programming Demystified: Drink the Kool-Aid",
+        "link": "https://www.youtube.com/watch?v=nlj3HkMpla4&index=4&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm&t=0s",
+        "presenter": {
+          "name": "Tracy Lee"
+        },
+        "length": "27:28",
+        "split": "General Track"
+      },
+      {
+        "title": "setState Machine",
+        "link": "https://www.youtube.com/watch?v=sZg3DoTfHLQ&index=5&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm&t=0s",
+        "presenter": {
+          "name": "Michele Bertoli"
+        },
+        "length": "27:38",
+        "split": "General Track"
+      },
+      {
+        "title": "There and back again: grokking state and data",
+        "link": "https://www.youtube.com/watch?v=Gyp2QDr7YkU&index=6&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm&t=0s",
+        "presenter": {
+          "name": "Michel Weststrate"
+        },
+        "length": "31:53",
+        "split": "General Track"
+      },
+      {
+        "title": "D3 and React, Together",
+        "link": "https://www.youtube.com/watch?v=zXBdNDnqV2Q&index=10&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm&t=0s",
+        "presenter": {
+          "name": "Shirley Wu"
+        },
+        "length": "31:40",
+        "split": "General Track"
+      },
+      {
+        "title": "Structure Your App's Story With Sagas and Selectors ",
+        "link": "https://www.youtube.com/watch?v=nLgHuxwIvQM&index=7&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm&t=0s",
+        "presenter": {
+          "name": "Rebecca Hill"
+        },
+        "length": "10:27",
+        "split": "General Track"
+      },
+      {
+        "title": "How to “Reactify” Your Existing UI Components",
+        "link": "https://www.youtube.com/watch?v=1w5ym9FOL7I&index=14&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm&t=0s",
+        "presenter": {
+          "name": "Olga Petrova"
+        },
+        "length": "8:14",
+        "split": "General Track"
+      },
+      {
+        "title": "Inclusive React: A Survival Guide",
+        "link": "https://www.youtube.com/watch?v=ahSyil5_Ghw&index=13&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm&t=0s",
+        "presenter": {
+          "name": "Almero Steyn"
+        },
+        "length": "10:36",
+        "split": "General Track"
+      },
+      {
+        "title": "React State Management In a GraphQL Era",
+        "link": "https://www.youtube.com/watch?v=Q54YDGC_t3Y&index=12&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm&t=0s",
+        "presenter": {
+          "name": "Kristijan Ristovski"
+        },
+        "length": "24:01",
+        "split": "General Track"
+      },
+      {
+        "title": "GraphQL at scale with AWS",
+        "link": "https://www.youtube.com/watch?v=P_mGa91wZ4o&index=15&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm&t=0s",
+        "presenter": {
+          "name": "Richard Threlkeld"
+        },
+        "length": "28:21",
+        "split": "General Track"
+      },
+      {
+        "title": "Rethinking With React 16",
+        "link": "https://www.youtube.com/watch?v=gb2gXX7xiAM&index=16&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm&t=0s",
+        "presenter": {
+          "name": "Manjula Dube"
+        },
+        "length": "29:52",
+        "split": "General Track"
+      },
+      {
+        "title": "Mixed Mode React",
+        "link": "https://www.youtube.com/watch?v=PBpugV5l90c&index=11&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm&t=0s",
+        "presenter": {
+          "name": "Ken Wheeler"
+        },
+        "length": "26:40",
+        "split": "General Track"
+      },
+      {
+        "title": "Cross-Language React",
+        "link": "https://www.youtube.com/watch?v=eR4LjL1h6cE&index=9&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm&t=0s",
+        "presenter": {
+          "name": "Leland Richardson"
+        },
+        "length": "34:29",
+        "split": "React Native Track"
+      },
+      {
+        "title": "React Navigation",
+        "link": "https://www.youtube.com/watch?v=wJJZ9Od8MjM&index=8&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm&t=0s",
+        "presenter": {
+          "name": "Brent Vatne"
+        },
+        "length": "26:14",
+        "split": "React Native Track"
+      },
+      {
+        "title": "Network Layer in React Native",
+        "link": "https://www.youtube.com/watch?v=oMsW85CoqGA&index=17&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm&t=0s",
+        "presenter": {
+          "name": "Alexey Kureev"
+        },
+        "length": "18:33",
+        "split": "React Native Track"
+      },
+      {
+        "title": "React Native VR + AR Made Simple",
+        "link": "https://www.youtube.com/watch?v=csgMNguUjDU&index=18&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm&t=0s",
+        "presenter": {
+          "name": "Nadir Dabit"
+        },
+        "length": "34:22",
+        "split": "React Native Track"
+      },
+      {
+        "title": "Making Programming for People",
+        "link": "https://www.youtube.com/watch?v=g6cC5YIlVns&index=19&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm&t=0s",
+        "presenter": {
+          "name": "Tereza Sokol"
+        },
+        "length": "25:26",
+        "split": "React Native Track"
+      },
+      {
+        "title": "Imperative is the new black",
+        "link": "https://www.youtube.com/watch?v=s-cFPqErdsw&index=20&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm&t=0s",
+        "presenter": {
+          "name": "Mike Grabowski"
+        },
+        "length": "29:25",
+        "split": "React Native Track"
+      },
+      {
+        "title": "Push Notifications with React Native",
+        "link": "https://www.youtube.com/watch?v=XCk31D5vY0U&index=21&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm&t=0s",
+        "presenter": {
+          "name": "Narendra Shetty"
+        },
+        "length": "31:14",
+        "split": "React Native Track"
+      },
+      {
+        "title": "Continuous Workflow for a Large React Native App: Mobile At Wix",
+        "link": "https://www.youtube.com/watch?v=MDab8HtQi3E&index=22&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm&t=0s",
+        "presenter": {
+          "name": "Rotem Mizrachi-Meidan and Shalom Yerushalmy"
+        },
+        "length": "23:51",
+        "split": "React Native Track"
+      },
+      {
+        "title": "Controlling Smart Homes With React Native",
+        "link": "https://www.youtube.com/watch?v=HW9zpD4q82E&index=23&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm&t=0s",
+        "presenter": {
+          "name": "Vladimir Novick"
+        },
+        "length": "32:56",
+        "split": "React Native Track"
+      }
+    ]
+  },
+  {
     "title": "ReactFest 2018",
     "date": "09-03-2018",
     "website": "https://reactfest.com/",
