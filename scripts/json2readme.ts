@@ -10,8 +10,10 @@ const {
   ifElse,
   sortBy,
   filter,
+  length,
   propEq,
   compose,
+  flatten,
   reverse,
   forEachObjIndexed
 } = require('ramda')
@@ -89,11 +91,20 @@ const createBody = (conferenceVids: JSONInput) => conferenceVids.reduce((acc, co
   return acc
 }, '')
 
-const createHead = () => '# React.js Conference Videos\nList of react conference videos.\n' +
-'[www.reactjsvideos.com](https://www.reactjsvideos.com)'
+const countVideos = compose(
+  length,
+  flatten,
+  pluck('videos')
+)
 
-type TitlesAndYears = Array<[string, string]>
-const computeLnks = (titlesAndYears: TitlesAndYears) => {
+const createHead = (conferenceVids: JSONInput) => `# React.js Conference Videos.
+[www.reactjsvideos.com](https://www.reactjsvideos.com)
+
+List of react conference videos.
+**${countVideos(conferenceVids)}** videos from **${conferenceVids.length}** Conferences.
+`
+
+const computeLnks = (titlesAndYears: Array<[string, string]>) => {
 return titlesAndYears.reduce((acc, [title, year], idx) => {
   if (idx === 0 || year !== titlesAndYears[idx > 0 ? idx - 1 : 0][1]) {
     acc += `\n* ${year}`
@@ -152,7 +163,7 @@ const run = (conferenceVids: JSONInput) => {
   // should already be sorted, but in case not
   const sorted = sortJSONByDate(conferenceVids)
 
-  const head = createHead()
+  const head = createHead(conferenceVids)
   const navLinks = createNavLinks(sorted)
   const body = createBody(sorted)
   const footer = createFooter()

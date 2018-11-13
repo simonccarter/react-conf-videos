@@ -1,9 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`json2reamd run should match snapshot 1`] = `
-"# React.js Conference Videos
-List of react conference videos.
+"# React.js Conference Videos.
 [www.reactjsvideos.com](https://www.reactjsvideos.com)
+
+List of react conference videos.
+**5** videos from **3** Conferences.
+
 
 ## Quick Links
 
