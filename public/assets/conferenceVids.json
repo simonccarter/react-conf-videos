@@ -260,6 +260,206 @@
     ]
   },
   {
+    "title": "ReactEurope 2018",
+    "date": "23-05-2018",
+    "website": "https://www.react-europe.org/",
+    "playlist": {
+      "day 1": "https://www.youtube.com/playlist?list=PLCC436JpVnK3xH_ArpIjdkYDGwWNkVa73",
+      "day 2": "https://www.youtube.com/playlist?list=PLCC436JpVnK1X7atG6EIz467Evs4TMX_5"
+    },
+    "videos": [
+      {
+        "title": "Bringing React Native Back to its Root",
+        "link": "https://www.youtube.com/watch?v=aOWIJ4Mgb2k&list=PLCC436JpVnK3xH_ArpIjdkYDGwWNkVa73&index=2&t=0s",
+        "presenter": {
+          "name": "Vincent Reimer"
+        },
+        "length": "27:17",
+        "split": "Day 1"
+      },
+      {
+        "title": "Do the Right (to Left) Thing: Directional Content in React",
+        "link": "https://www.youtube.com/watch?v=dZ9vQYSNVyo&list=PLCC436JpVnK3xH_ArpIjdkYDGwWNkVa73&index=3&t=0s",
+        "presenter": {
+          "name": "Maja Wichrowska"
+        },
+        "length": "29:04",
+        "split": "Day 1"
+      },
+      {
+        "title": "A Journey Through React Apollo",
+        "link": "https://www.youtube.com/watch?v=fCXYA3lZTbo&list=PLCC436JpVnK3xH_ArpIjdkYDGwWNkVa73&index=4&t=0s",
+        "presenter": {
+          "name": "Peggy Rayzis"
+        },
+        "length": "27:17",
+        "split": "Day 1"
+      },
+      {
+        "title": "Replicated Redux",
+        "link": "https://www.youtube.com/watch?v=Fr3vp0C22H0&list=PLCC436JpVnK3xH_ArpIjdkYDGwWNkVa73&index=5&t=0s",
+        "presenter": {
+          "name": "Jim Purbrick"
+        },
+        "length": "30:56",
+        "split": "Day 1"
+      },
+      {
+        "title": "The fun of runtime type systems (Or: \"Funtime type systems\")",
+        "link": "https://www.youtube.com/watch?v=010daBQPFmw&list=PLCC436JpVnK3xH_ArpIjdkYDGwWNkVa73&index=6&t=0s",
+        "presenter": {
+          "name": "Michel Weststrate"
+        },
+        "length": "29:49",
+        "split": "Day 1"
+      },
+      {
+        "title": "Up and Running with Universal Components",
+        "link": "https://www.youtube.com/watch?v=D1NkyO-J6B0&list=PLCC436JpVnK3xH_ArpIjdkYDGwWNkVa73&index=7&t=0s",
+        "presenter": {
+          "name": "Samantha Bretous and Kurtis Kemple"
+        },
+        "length": "26:58",
+        "split": "Day 1"
+      },
+      {
+        "title": "Keynote",
+        "link": "https://www.youtube.com/watch?v=QFk6YwMz8nc&list=PLCC436JpVnK3xH_ArpIjdkYDGwWNkVa73&index=8&t=0s",
+        "presenter": {
+          "name": "Ken Wheeler"
+        },
+        "length": "27:25",
+        "split": "Day 1"
+      },
+      {
+        "title": "The Case for Whimsy",
+        "link": "https://www.youtube.com/watch?v=Z2d9rw9RwyE&list=PLCC436JpVnK3xH_ArpIjdkYDGwWNkVa73&index=9&t=0s",
+        "presenter": {
+          "name": "Joshua Comeau"
+        },
+        "length": "29:37",
+        "split": "Day 1"
+      },
+      {
+        "title": "Subtyping is Overrated",
+        "link": "https://www.youtube.com/watch?v=M6MsDBFwa6Y&list=PLCC436JpVnK3xH_ArpIjdkYDGwWNkVa73&index=10&t=0s",
+        "presenter": {
+          "name": "Caleb Meredith"
+        },
+        "length": "29:37",
+        "split": "Day 1"
+      },
+      {
+        "title": "Declarative future of gestures and animations in React Native",
+        "link": "https://www.youtube.com/watch?v=kdq4z2708VM&list=PLCC436JpVnK3xH_ArpIjdkYDGwWNkVa73&index=11&t=0s",
+        "presenter": {
+          "name": "Krzysztof Magiera"
+        },
+        "length": "27:26",
+        "split": "Day 1"
+      },
+      {
+        "title": "Stop writing code",
+        "link": "https://www.youtube.com/watch?v=WYWVGQKnz5M&t=1s&index=2&list=PLCC436JpVnK1X7atG6EIz467Evs4TMX_5",
+        "presenter": {
+          "name": "Sunil Pai"
+        },
+        "length": "18:53",
+        "split": "Day 2"
+      },
+      {
+        "title": "ReasonReact and local state",
+        "link": "https://www.youtube.com/watch?v=qJnP-Vatp3M&t=0s&index=3&list=PLCC436JpVnK1X7atG6EIz467Evs4TMX_5",
+        "presenter": {
+          "name": "Cristiano Calcagno"
+        },
+        "length": "25:36",
+        "split": "Day 2"
+      },
+      {
+        "title": "Full Stack React Navigation",
+        "link": "https://www.youtube.com/watch?v=GzbravzRrBM&t=0s&index=4&list=PLCC436JpVnK1X7atG6EIz467Evs4TMX_5",
+        "presenter": {
+          "name": "Eric Vicenti"
+        },
+        "length": "23:55",
+        "split": "Day 2"
+      },
+      {
+        "title": "A year of CodeSandbox",
+        "link": "https://www.youtube.com/watch?v=qURPenhndYA&t=0s&index=5&list=PLCC436JpVnK1X7atG6EIz467Evs4TMX_5",
+        "presenter": {
+          "name": "Ives van Hoorne"
+        },
+        "length": "26:33",
+        "split": "Day 2"
+      },
+      {
+        "title": "Beyond React",
+        "link": "https://www.youtube.com/watch?v=HVwLOcllTfI&t=0s&index=6&list=PLCC436JpVnK1X7atG6EIz467Evs4TMX_5",
+        "presenter": {
+          "name": "Devin Abbott"
+        },
+        "length": "26:48",
+        "split": "Day 2"
+      },
+      {
+        "title": "Using lit APIs to make dope games with Expo",
+        "link": "https://www.youtube.com/watch?v=oHBGhHlVOI0&t=0s&index=7&list=PLCC436JpVnK1X7atG6EIz467Evs4TMX_5",
+        "presenter": {
+          "name": "Evan Bacon"
+        },
+        "length": "25:46",
+        "split": "Day 2"
+      },
+      {
+        "title": "Immutable Application Architecture",
+        "link": "https://www.youtube.com/watch?v=oTcDmnAXZ4E&t=0s&index=8&list=PLCC436JpVnK1X7atG6EIz467Evs4TMX_5",
+        "presenter": {
+          "name": "Lee Byron"
+        },
+        "length": "31:11",
+        "split": "Day 2"
+      },
+      {
+        "title": "SVGR or how a simple problem became a 2K stars library",
+        "link": "https://www.youtube.com/watch?v=geKCzi7ZPkA&t=0s&index=9&list=PLCC436JpVnK1X7atG6EIz467Evs4TMX_5",
+        "presenter": {
+          "name": "Greg Bergé"
+        },
+        "length": "21:08",
+        "split": "Day 2"
+      },
+      {
+        "title": "Type-safe React Native with ReasonML",
+        "link": "https://www.youtube.com/watch?v=mXvgZpgRJ6Y&t=0s&index=10&list=PLCC436JpVnK1X7atG6EIz467Evs4TMX_5",
+        "presenter": {
+          "name": "Jared Forsyth"
+        },
+        "length": "22:38",
+        "split": "Day 2"
+      },
+      {
+        "title": "ReactEurope 2018 Q&A Panel",
+        "link": "https://www.youtube.com/watch?v=vk4WuOjcH_Q&t=0s&index=11&list=PLCC436JpVnK1X7atG6EIz467Evs4TMX_5",
+        "presenter": {
+          "name": "N/A"
+        },
+        "length": "43:39",
+        "split": "Day 2"
+      },
+      {
+        "title": "WebAssembly becoming the biggest platform",
+        "link": "https://www.youtube.com/watch?v=zc31ES1KZtY&t=0s&index=12&list=PLCC436JpVnK1X7atG6EIz467Evs4TMX_5",
+        "presenter": {
+          "name": "Sven Sauleau"
+        },
+        "length": "14:28",
+        "split": "Day 2"
+      }
+    ]
+  },
+  {
     "title": "React Rally 2018",
     "date": "16-08-2018",
     "website": "http://www.reactrally.com/",
