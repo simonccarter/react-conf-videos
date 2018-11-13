@@ -264,8 +264,8 @@
     "date": "23-05-2018",
     "website": "https://www.react-europe.org/",
     "playlist": {
-      "day 1": "https://www.youtube.com/playlist?list=PLCC436JpVnK3xH_ArpIjdkYDGwWNkVa73",
-      "day 2": "https://www.youtube.com/playlist?list=PLCC436JpVnK1X7atG6EIz467Evs4TMX_5"
+      "Day 1": "https://www.youtube.com/playlist?list=PLCC436JpVnK3xH_ArpIjdkYDGwWNkVa73",
+      "Day 2": "https://www.youtube.com/playlist?list=PLCC436JpVnK1X7atG6EIz467Evs4TMX_5"
     },
     "videos": [
       {
@@ -861,8 +861,7 @@
     "date": "12-04-2018",
     "website": "react.amsterdam",
     "playlist": {
-      "General Track": "https://www.youtube.com/watch?v=smBND2pwdUE&index=2&t=0s&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm",
-      "React Native Track": "https://www.youtube.com/watch?v=N-X3Z5A-pW4&index=3&t=0s&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm"
+      "General and React Native Track": "https://www.youtube.com/watch?v=smBND2pwdUE&index=2&t=0s&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm"
     },
     "videos" : [
       {
@@ -1044,6 +1043,214 @@
         },
         "length": "32:56",
         "split": "React Native Track"
+      }
+    ]
+  },
+  {
+    "title": "Chain React 2018",
+    "date": "12-07-2018",
+    "website": "https://infinite.red/ChainReactConf",
+    "playlist": {
+      "Day 1 & 2": "https://www.youtube.com/playlist?list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle"
+    },
+    "videos" : [
+      {
+        "title": "Keynote: Simply React",
+        "link": "https://www.youtube.com/watch?v=M9X2qGddHkU&t=0s&list=PLFHvL21g9bk1skdjnKVGXREDmP_HVDj-u&index=2",
+        "presenter": {
+          "name": "Kent C. Dodds"
+        },
+        "length": "21:19",
+        "split": "Day 1"
+      },
+      {
+        "title": "All Together Now",
+        "link": "https://www.youtube.com/watch?v=p5ONpgb_e5w&t=0s&list=PLFHvL21g9bk1skdjnKVGXREDmP_HVDj-u&index=3",
+        "presenter": {
+          "name": "TC Davis"
+        },
+        "length": "23:14",
+        "split": "Day 1"
+      },
+      {
+        "title": "Debugging and Beyond with Reactotron",
+        "link": "https://www.youtube.com/watch?v=UiPo9A9k7xc&t=0s&list=PLFHvL21g9bk1skdjnKVGXREDmP_HVDj-u&index=4",
+        "presenter": {
+          "name": "Darin Wilson"
+        },
+        "length": "27:43",
+        "split": "Day 1"
+      },
+      {
+        "title": "From Sketch to Code: Designing a Component Kit",
+        "link": "https://www.youtube.com/watch?v=C6fqRieYRVw&t=0s&list=PLFHvL21g9bk1skdjnKVGXREDmP_HVDj-u&index=5",
+        "presenter": {
+          "name": "Samantha Bretous"
+        },
+        "length": "23:34",
+        "split": "Day 1"
+      },
+      {
+        "title": "Detox: A year in. Building it, Testing with it",
+        "link": "https://www.youtube.com/watch?v=aMheT1qL5Lk&t=0s&list=PLFHvL21g9bk1skdjnKVGXREDmP_HVDj-u&index=6",
+        "presenter": {
+          "name": "Rotem Mizrachi-Meidan"
+        },
+        "length": "30:05",
+        "split": "Day 1"
+      },
+      {
+        "title": "Learning React Native as a Junior Engineer",
+        "link": "https://www.youtube.com/watch?v=N9QAbH0JaD0&t=0s&list=PLFHvL21g9bk1skdjnKVGXREDmP_HVDj-u&index=7",
+        "presenter": {
+          "name": "Erin Fox"
+        },
+        "length": "10:42",
+        "split": "Day 1"
+      },
+      {
+        "title": "Machine Learning and React Native",
+        "link": "https://www.youtube.com/watch?v=LbcuLfrt8XA&t=0s&list=PLFHvL21g9bk1skdjnKVGXREDmP_HVDj-u&index=8",
+        "presenter": {
+          "name": "Ray Deck"
+        },
+        "length": "10:23",
+        "split": "Day 1"
+      },
+      {
+        "title": "Customize Your Boilerplate to Speed Up Development with Ignite",
+        "link": "https://www.youtube.com/watch?v=d822empRP6o&t=0s&list=PLFHvL21g9bk1skdjnKVGXREDmP_HVDj-u&index=9",
+        "presenter": {
+          "name": "Adrien Thiery"
+        },
+        "length": "11:21",
+        "split": "Day 1"
+      },
+      {
+        "title": "React Native at Eaze: Marijuana Delivered",
+        "link": "https://www.youtube.com/watch?v=wdRacNKZs7g&t=0s&list=PLFHvL21g9bk1skdjnKVGXREDmP_HVDj-u&index=10",
+        "presenter": {
+          "name": "Erica Cooksey"
+        },
+        "length": "10:27",
+        "split": "Day 1"
+      },
+      {
+        "title": "How TypeScript Ruined My Life (In a Good Way)",
+        "link": "https://www.youtube.com/watch?v=P_oXHZvooCo&t=0s&list=PLFHvL21g9bk1skdjnKVGXREDmP_HVDj-u&index=11",
+        "presenter": {
+          "name": "Andy Mockler"
+        },
+        "length": "12:06",
+        "split": "Day 1"
+      },
+      {
+        "title": "Building AR Apps with React Native",
+        "link": "https://www.youtube.com/watch?v=WYCZgWEnHkg&t=0s&list=PLFHvL21g9bk1skdjnKVGXREDmP_HVDj-u&index=12",
+        "presenter": {
+          "name": "Vladimir Novick"
+        },
+        "length": "37:09",
+        "split": "Day 1"
+      },
+      {
+        "title": "Be a React Native A11y",
+        "link": "https://www.youtube.com/watch?v=cfzFZIouydY&t=0s&list=PLFHvL21g9bk1skdjnKVGXREDmP_HVDj-u&index=13",
+        "presenter": {
+          "name": "Jen Luker"
+        },
+        "length": "26:20",
+        "split": "Day 1"
+      },
+      {
+        "title": "Organizing Code for Cross-Platform Web and Mobile Development",
+        "link": "https://www.youtube.com/watch?v=kZGaWefWVBs&t=0s&list=PLFHvL21g9bk1skdjnKVGXREDmP_HVDj-u&index=14",
+        "presenter": {
+          "name": "Robert Scarano"
+        },
+        "length": "29:20",
+        "split": "Day 1"
+      },
+      {
+        "title": "How Reactive Programming Makes Developer Lives Easier",
+        "link": "https://www.youtube.com/watch?v=Hl8d8-aKWGI&t=0s&list=PLFHvL21g9bk1skdjnKVGXREDmP_HVDj-u&index=15",
+        "presenter": {
+          "name": "Tracy Lee"
+        },
+        "length": "27:44",
+        "split": "Day 2"
+      },
+      {
+        "title": "The State of React Native",
+        "link": "https://www.youtube.com/watch?v=83ffAY-CmL4&t=0s&list=PLFHvL21g9bk1skdjnKVGXREDmP_HVDj-u&index=16",
+        "presenter": {
+          "name": "Ram N"
+        },
+        "length": "27:32",
+        "split": "Day 2"
+      },
+      {
+        "title": "GraphQL State Management for React Native",
+        "link": "https://www.youtube.com/watch?v=Lso6HbYNaLA&t=0s&list=PLFHvL21g9bk1skdjnKVGXREDmP_HVDj-u&index=17",
+        "presenter": {
+          "name": "Peggy Rayzis"
+        },
+        "length": "22:50",
+        "split": "Day 2"
+      },
+      {
+        "title": "Strategies For Using React Native In A Brownfield App",
+        "link": "https://www.youtube.com/watch?v=44YdvFAwQwA&t=0s&list=PLFHvL21g9bk1skdjnKVGXREDmP_HVDj-u&index=18",
+        "presenter": {
+          "name": "Harry Tormey"
+        },
+        "length": "30:08",
+        "split": "Day 2"
+      },
+      {
+        "title": "WebXR: A New Dimension For The Web",
+        "link": "https://www.youtube.com/watch?v=C9UdKyX1Si0&t=0s&list=PLFHvL21g9bk1skdjnKVGXREDmP_HVDj-u&index=19",
+        "presenter": {
+          "name": "Michaela Lehr"
+        },
+        "length": "33:10",
+        "split": "Day 2"
+      },
+      {
+        "title": "Panel",
+        "link": "https://www.youtube.com/watch?v=iV-1gYCNhkQ&t=0s&list=PLFHvL21g9bk1skdjnKVGXREDmP_HVDj-u&index=20",
+        "presenter": {
+          "name": "n/a"
+        },
+        "length": "1:02:38",
+        "split": "Day 2"
+      },
+      {
+        "title": "ReasonML and You - A Fireside Chat with Mike",
+        "link": "https://www.youtube.com/watch?v=HDIuUd52cmY&t=0s&list=PLFHvL21g9bk1skdjnKVGXREDmP_HVDj-u&index=21",
+        "presenter": {
+          "name": "Mike Grabowski"
+        },
+        "length": "33:13",
+        "split": "Day 2"
+      },
+      {
+        "title": "Using SVG in React Native",
+        "link": "https://www.youtube.com/watch?v=IU44A0Z4Yrw&t=0s&list=PLFHvL21g9bk1skdjnKVGXREDmP_HVDj-u&index=22",
+        "presenter": {
+          "name": "Ori Harel"
+        },
+        "length": "20:52",
+        "split": "Day 2"
+      },
+      {
+        "title": "Good Enough Still Isn't Good Enough",
+        "link": "https://www.youtube.com/watch?v=ZHARREDCwwo&t=0s&list=PLFHvL21g9bk1skdjnKVGXREDmP_HVDj-u&index=23",
+        "presenter": {
+          "name": "Jani Eväkallio"
+        },
+        "length": "31:46",
+        "split": "Day 2"
       }
     ]
   },
