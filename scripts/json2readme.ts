@@ -5,6 +5,7 @@ const {
   map,
   uniq,
   prop,
+  isNil,
   pluck,
   curry,
   ifElse,
@@ -12,6 +13,7 @@ const {
   filter,
   length,
   propEq,
+  reject,
   compose,
   flatten,
   reverse,
@@ -94,6 +96,7 @@ const createBody = (conferenceVids: JSONInput) => conferenceVids.reduce((acc, co
 const countVideos = compose(
   length,
   flatten,
+  reject(isNil),
   pluck('videos')
 )
 
