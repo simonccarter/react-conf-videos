@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultDetails should render 1`] = `
+<mapProps(ResultDetailsInner)
+  conferences={
+    Object {
+      "XXXX": Object {
+        "date": "XX/YY/ZZZ",
+        "playlist": "day 1",
+        "title": "fake conf title",
+        "videos": Array [
+          "aaa",
+          "bbb",
+          "ccc",
+        ],
+        "website": "fake url",
+      },
+    }
+  }
+>
+  <ResultDetailsInner
+    countConfs={1}
+    countConfsS="conference"
+    countVids={3}
+    countVidsS="videos"
+  >
+    <p
+      className="resultsCount"
+    >
+      <span
+        className="resultsNumber"
+      >
+         
+        3
+         
+      </span>
+       
+      videos
+      <span
+        className="resultsNumber"
+      >
+         
+        1
+         
+      </span>
+       
+      conference
+    </p>
+  </ResultDetailsInner>
+</mapProps(ResultDetailsInner)>
+`;

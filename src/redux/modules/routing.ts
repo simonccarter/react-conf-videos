@@ -12,13 +12,12 @@ import { conferencePageActions } from './conferencePage'
 export const NAVIGATE_TO_SEARCH_URL = 'routing/NAVIGATE_TO_SEARCH_URL'
 export const navigateToSearchURL = (payload: string) => ({type: NAVIGATE_TO_SEARCH_URL, payload})
 
-const isSearchPage = (pathname: string) => pathname === '/' || pathname.includes('/search')
+export const isSearchPage = (pathname: string) => pathname === '/' || pathname.includes('/search')
 
-// extract query from url
-const extractSearchPagePath = (search: string) => {
+// extract query value from search
+export const extractQueryFromSearch = (search: string) => {
   const parsed = queryString.parse(search)
-  const query = parsed.query ? parsed.query :
-            parsed['?query'] ? parsed['?query'] : ''
+  const query = parsed.query ? parsed.query : ''
   return query
 }
 
@@ -35,12 +34,12 @@ export const loadDataForRoute: Epic<any, ApplicationState> = (action$, store) =>
       const location = store.getState().router.location;
       const { search, pathname } = location
       if (isSearchPage(pathname)) {
-        return Observable.of(searchActions.filter(extractSearchPagePath(search)))
+        return Observable.of(searchActions.filter(extractQueryFromSearch(search)))
       } else {
         const id = getConferenceIdFromTitleFromPathname(pathname)
         return Observable.concat([
           conferencePageActions.setConferenceDetails(id),
-          searchActions.filter(extractSearchPagePath(search))
+          searchActions.filter(extractQueryFromSearch(search))
         ])
       }
     })
@@ -50,7 +49,7 @@ export const navigateToSearchResult: Epic<any, ApplicationState> = (action$, sto
   action$.ofType(NAVIGATE_TO_SEARCH_URL)
     .map((action) => {
       // next location is based on current one
-      const location = store.getState().router.location
+      const { location } = store.getState().router
       const filter = action.payload;
       const query = !isFilterEmpty(filter) ? `?query=${action.payload}` : ''
       const nextUrl = `${location.pathname}${query}`
