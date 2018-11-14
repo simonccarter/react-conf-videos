@@ -100,9 +100,9 @@ export const filterEpic: Epic<Action<any>, ApplicationState> = (action$, store) 
         router
       } = store.getState()
       const rAction: Action<IndexedConferences> = { type: SET_FILTERED_CONFERENCES }
+      let filteredConferences = conferences;
 
       // if on a conference page, only filter videos of that conference
-      let filteredConferences = conferences;
       if (router.location.pathname.includes('conference')) {
         filteredConferences = {
           [selectedConferenceId]: conferences[selectedConferenceId]

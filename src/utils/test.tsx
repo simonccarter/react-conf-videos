@@ -7,11 +7,7 @@ import { MemoryRouter } from 'react-router'
 
 import { Conference, IndexedConferences, Video } from '../domain'
 
-// fails test of error cb of subcribe is called
-export const onError = (done: any) => (error: Error) => done(false)
-
-// mock empty store object
-export const mockStore = (): MiddlewareAPI<any> => createMockStore({})
+export const mockStore = (state = {}): MiddlewareAPI<any> => createMockStore(state)
 
 const isStore = (store: any) => store.hasOwnProperty('isActionTypeDispatched')
 
@@ -54,4 +50,27 @@ export const mockConference = (): Conference => ({
 
 export const mockIndexedConferences = (): IndexedConferences => ({
   ['XXXX']: mockConference()
+})
+
+export const mockRouterState = (pathname = '/conference/8424e37df85b9eccbe48e9a55d93845e/react-conf-2018') => ({
+  router: {
+    location: {
+      pathname: '/conference/8424e37df85b9eccbe48e9a55d93845e/react-conf-2018',
+      search: '',
+      hash: ''
+    }
+  }
+})
+
+export const mockConferencePageSlice = () => ({
+  conferencePage: {
+    selectedConferenceId: 'XXXX',
+    conference: mockConference()
+  }
+})
+
+export const mockDataState = () => ({
+  data: {
+    conferences: mockIndexedConferences()
+  }
 })

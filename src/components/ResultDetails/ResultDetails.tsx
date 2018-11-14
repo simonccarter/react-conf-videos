@@ -21,7 +21,7 @@ const getAllVideos = compose<any, any, any, string[]>(
   pluck('videos')
 )
 
-const computeResultDetails = (conferences: IndexedConferences) => {
+export const computeResultDetails = (conferences: IndexedConferences) => {
   const confKeys = Object.keys(conferences)
   const videos = getAllVideos(conferences)
   return {

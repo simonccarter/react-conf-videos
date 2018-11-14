@@ -2,11 +2,14 @@ import 'rxjs'
 import * as Immutable from 'seamless-immutable'
 import { ActionsObservable } from 'redux-observable'
 
-import { onError, mockStore } from '../../utils'
+import {
+  mockStore, mockDataState,
+  mockConferencePageSlice, mockRouterState, mockIndexedConferences
+} from 'utils'
 
 import searchReducer, {
   textInDetails, initialState,
-  INIT_SLICE, FILTER, SET_FILTERED_CONFERENCES,
+  FILTER, SET_FILTERED_CONFERENCES,
   SET_IS_ACTIVE, filterEpic, createConference
 } from './search'
 
@@ -72,20 +75,27 @@ describe('search', () => {
 
   describe('filterEpic', () => {
     it('should return the correct action', (done) => {
+      jest.setTimeout(10000)
       // arrange
-      const payload = { conferences: {} }
+      const payload = ''
       const action$ = ActionsObservable.of({ type: FILTER, payload })
-      const expectedPayload = { conferences: {} }
+      const expectedPayload = mockIndexedConferences()
+
+      const store = {
+        ...mockDataState(),
+        ...mockRouterState(),
+        ...mockConferencePageSlice(),
+      }
+
       // act
-      filterEpic(action$, mockStore(), null)
+      filterEpic(action$, mockStore(store), null)
         .subscribe(
           (action) => {
             // assert
-            expect(action.type).toEqual(INIT_SLICE)
+            expect(action.type).toEqual(SET_FILTERED_CONFERENCES)
             expect(action.payload).toEqual(expectedPayload)
             done()
-          },
-          onError(done)
+          }
         )
     })
   })
@@ -94,6 +104,7 @@ describe('search', () => {
     it('should return the initial state', () => {
       // act
       const result = searchReducer(undefined, { type: 'EEE' })
+
       // assert
       expect(result).toEqual(initialState)
     })
