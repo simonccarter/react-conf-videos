@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logo should render 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      Object {
+        "key": "xxxx",
+      },
+    ]
+  }
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "xxxx",
+            "pathname": "/",
+            "search": "",
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "xxxx",
+          "pathname": "/",
+          "search": "",
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Logo>
+      <div
+        className="logo"
+      >
+        <Link
+          className="logoLink"
+          replace={false}
+          to="/search"
+        >
+          <a
+            className="logoLink"
+            href="/search"
+            onClick={[Function]}
+          >
+            RV
+          </a>
+        </Link>
+      </div>
+    </Logo>
+  </Router>
+</MemoryRouter>
+`;

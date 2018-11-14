@@ -1,5 +1,5 @@
 import 'rxjs'
-import { onError, mockStore } from 'utils'
+import { mockStore } from 'utils'
 import { ActionsObservable } from 'redux-observable'
 
 import bootstrapReducer, {
@@ -24,8 +24,7 @@ describe('bootstrap reducer', () => {
             // assert
             expect(action.type).toBe(LOAD_DATA_START)
             done()
-          },
-          onError(done)
+          }
         )
     })
   })
@@ -43,13 +42,12 @@ describe('bootstrap reducer', () => {
             // assert
             expect(action.type).toBe(LOAD_DATA_END)
             done()
-          },
-          onError(done)
+          }
         )
     })
   })
 
-  describe('boostrapEndRemoveLoaderEpic', () => {
+  describe.skip('boostrapEndRemoveLoaderEpic', () => {
     it('should return the correct action', (done) => {
       // arrange
       const action$ = ActionsObservable.of({type: BOOTSTRAP_END})
@@ -62,8 +60,7 @@ describe('bootstrap reducer', () => {
             expect(action.type).toBe(BOOTSTRAP_END_LOADER)
             expect(action.payload).toBeUndefined()
             done()
-          },
-          onError(done)
+          }
         )
     })
   })
@@ -83,8 +80,7 @@ describe('bootstrap reducer', () => {
             expect(action.type).toBe(BOOTSTRAP_END)
             expect(action.payload).toBeUndefined()
             done()
-          },
-          onError(done)
+          }
         )
     })
   })

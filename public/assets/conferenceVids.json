@@ -1576,7 +1576,8 @@
     "playlist": {
       "Day 1": "https://www.youtube.com/watch?v=X9iqnovPGyY",
       "Day 2": "https://www.youtube.com/watch?v=62xd25kEZ3o"
-    }
+    },
+    "videos": []
   },
   {
     "title": "React Europe 2017",

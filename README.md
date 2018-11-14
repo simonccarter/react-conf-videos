@@ -1,6 +1,9 @@
-# React.js Conference Videos
-List of react conference videos.
+# React.js Conference Videos.
 [www.reactjsvideos.com](https://www.reactjsvideos.com)
+
+List of react conference videos.
+**323** videos from **17** Conferences.
+
 
 ## Quick Links
 
@@ -237,7 +240,7 @@ List of react conference videos.
 
 ### ReactEurope 2018
 
-##### [website](https://www.react-europe.org/) - [playlist: day 1](https://www.youtube.com/playlist?list=PLCC436JpVnK3xH_ArpIjdkYDGwWNkVa73) - [playlist: day 2](https://www.youtube.com/playlist?list=PLCC436JpVnK1X7atG6EIz467Evs4TMX_5)
+##### [website](https://www.react-europe.org/) - [playlist: Day 1](https://www.youtube.com/playlist?list=PLCC436JpVnK3xH_ArpIjdkYDGwWNkVa73) - [playlist: Day 2](https://www.youtube.com/playlist?list=PLCC436JpVnK1X7atG6EIz467Evs4TMX_5)
 
 #### Day 1
 
@@ -383,6 +386,10 @@ List of react conference videos.
 ### ReactiveConf 2017
 
 ##### [website](https://reactiveconf.com/) - [playlist: Day 1](https://www.youtube.com/watch?v=X9iqnovPGyY) - [playlist: Day 2](https://www.youtube.com/watch?v=62xd25kEZ3o)
+
+
+| Title/Link        | Presenter  | Length |
+| ------------- |:-------------:| -----:|
 
 
 ## 2016

@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConfPageHeader should render 1`] = `
+<div
+  className="header"
+>
+  <Logo />
+  <div
+    className="text"
+  >
+    <h1
+      className="headerTitle"
+    >
+      <a
+        className="link"
+        href="www.alink.com"
+      >
+        React Conf 2018
+      </a>
+    </h1>
+    <p
+      className="headerText"
+    >
+       
+      a tagline
+       
+    </p>
+    <p
+      className="headerText contribute"
+    >
+      Contribute
+      <a
+        className="contributeLink"
+        href="https://github.com/simonccarter/react-conf-videos"
+      >
+        here
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;

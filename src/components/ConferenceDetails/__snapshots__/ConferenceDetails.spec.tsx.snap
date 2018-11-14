@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConferenceDetails should render 1`] = `
+<div
+  className="root"
+>
+  <h2
+    className="title"
+  >
+    <a
+      href="fake url"
+    >
+      fake conf title
+    </a>
+  </h2>
+  <p
+    className="details"
+  >
+    <span>
+      XX/YY/ZZZ
+    </span>
+    <span>
+      3
+       
+      videos
+    </span>
+  </p>
+</div>
+`;
