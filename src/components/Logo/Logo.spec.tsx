@@ -1,4 +1,4 @@
-import * as React from 'React'
+import * as React from 'react'
 
 import { mount } from 'enzyme'
 import toJSON from 'enzyme-to-json'
