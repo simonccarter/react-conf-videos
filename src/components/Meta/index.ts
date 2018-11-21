@@ -1,3 +1,1 @@
-import Meta from './Meta'
-
-export { Meta }
+export * from './Meta'

@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 
 import { shallowWithStore, mockConference } from 'utils'
-import FrontPage, { FrontPageInner } from './FrontPage'
+import { FrontPage, FrontPageInner } from './FrontPage'
 
 describe('FrontPage', () => {
   describe('FrontPageInner', () => {

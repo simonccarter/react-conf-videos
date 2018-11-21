@@ -42,11 +42,11 @@ exports[`Header should render 1`] = `
       }
     }
   >
-    <Header>
+    <Component>
       <div
         className="header"
       >
-        <Logo>
+        <Component>
           <div
             className="logo"
           >
@@ -64,7 +64,7 @@ exports[`Header should render 1`] = `
               </a>
             </Link>
           </div>
-        </Logo>
+        </Component>
         <div
           className="text"
         >
@@ -104,7 +104,7 @@ exports[`Header should render 1`] = `
           </p>
         </div>
       </div>
-    </Header>
+    </Component>
   </Router>
 </MemoryRouter>
 `;

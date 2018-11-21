@@ -1,5 +1,1 @@
-import ConferenceDetails from './ConferenceDetails'
-
-export {
-  ConferenceDetails
-}
+export * from './ConferenceDetails'

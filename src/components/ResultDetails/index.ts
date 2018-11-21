@@ -1,3 +1,1 @@
-import ResultDetails from './ResultDetails'
-
-export { ResultDetails }
+export * from './ResultDetails'

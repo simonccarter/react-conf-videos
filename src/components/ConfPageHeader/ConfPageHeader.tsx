@@ -11,7 +11,7 @@ type Props = {
   tagline: string
 }
 
-const ConfPageHeader: React.SFC<Props> = ({title, titleLink, tagline}) => (
+export const ConfPageHeader: React.SFC<Props> = ({title, titleLink, tagline}) => (
   <div className={styles.header}>
     <Logo />
     <div className={styles.text}>
@@ -32,5 +32,3 @@ const ConfPageHeader: React.SFC<Props> = ({title, titleLink, tagline}) => (
     </div>
   </div >
 )
-
-export default ConfPageHeader

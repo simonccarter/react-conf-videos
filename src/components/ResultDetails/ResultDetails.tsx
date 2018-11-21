@@ -41,10 +41,8 @@ const ResultDetailsInner: React.SFC<MappedProps>  = ({
   </p>
 )
 
-const ResultDetails = mapProps<MappedProps, Props>( ({conferences}) => {
+export const ResultDetails = mapProps<MappedProps, Props>( ({conferences}) => {
   return {
     ...computeResultDetails(conferences)
   }
 })(ResultDetailsInner)
-
-export default ResultDetails

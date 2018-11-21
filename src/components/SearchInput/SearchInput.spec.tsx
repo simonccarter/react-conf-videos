@@ -2,7 +2,7 @@ import * as React from 'react'
 import { shallow, mount } from 'enzyme'
 import toJSON from 'enzyme-to-json'
 
-import SearchInput, { SearchInputInner, blurRef, onKeyUpHandlers } from './SearchInput'
+import { SearchInput, SearchInputInner, blurRef, onKeyUpHandlers } from './SearchInput'
 
 describe('SearchInputInner', () => {
 

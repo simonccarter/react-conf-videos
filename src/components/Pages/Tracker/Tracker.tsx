@@ -6,7 +6,7 @@ type InnerProps = {
   location: Location
 }
 
-export default function withTracker(WrappedComponent: React.ComponentClass<{}>, options = {}) {
+export function Tracker(WrappedComponent: React.ComponentClass<{}>, options = {}) {
   const trackPage = (page: string) => {
     // exit early if not live
     if (window.location.hostname !== 'www.reactjsvideos.com') {

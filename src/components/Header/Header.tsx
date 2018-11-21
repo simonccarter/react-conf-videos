@@ -5,7 +5,7 @@ import styles from './Header.scss'
 import { Link } from 'react-router-dom'
 import { Logo } from 'components'
 
-const Header: React.SFC<{}> = () => (
+export const Header: React.SFC<{}> = () => (
   <div className={styles.header}>
     <Logo />
     <div className={styles.text}>
@@ -20,5 +20,3 @@ const Header: React.SFC<{}> = () => (
     </div>
   </div >
 )
-
-export default Header

@@ -4,7 +4,7 @@ import toJSON from 'enzyme-to-json'
 
 import { mockConference } from 'utils'
 
-import List from './List'
+import { List } from './List'
 
 describe('List', () => {
   describe('ListInner', () => {

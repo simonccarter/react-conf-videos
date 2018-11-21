@@ -4,7 +4,7 @@ exports[`ConfPageHeader should render 1`] = `
 <div
   className="header"
 >
-  <Logo />
+  <Component />
   <div
     className="text"
   >
