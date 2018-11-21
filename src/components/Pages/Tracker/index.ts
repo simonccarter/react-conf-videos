@@ -1,3 +1,1 @@
-import Tracker from './Tracker'
-
-export { Tracker }
+export * from './Tracker'

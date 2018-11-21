@@ -2,7 +2,7 @@ import * as React from 'react'
 import toJSON from 'enzyme-to-json'
 import { mount } from 'enzyme'
 
-import ResultDetails from './ResultDetails'
+import { ResultDetails } from './ResultDetails'
 import { mockIndexedConferences } from 'utils'
 
 describe('ResultDetails', () => {

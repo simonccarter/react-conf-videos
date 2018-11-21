@@ -77,12 +77,10 @@ const mapStateToProps = (state: ApplicationState, props: Props) => {
   }
 }
 
-const Video = compose<CombinedProps, Props>(
+export const Video = compose<CombinedProps, Props>(
   connect(mapStateToProps),
   pure,
   withStateHandlers({ isOpen: false }, {
     toggleIsOpen: ({ isOpen }) => () => ({ isOpen: !isOpen })
   })
 )(VideoInner)
-
-export { Video }

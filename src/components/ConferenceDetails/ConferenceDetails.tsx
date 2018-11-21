@@ -8,7 +8,7 @@ type Props = { conference: Conference }
 
 import styles from './ConferenceDetails.scss'
 
-const ConferenceDetailsInner: React.SFC<Props> = ({
+export const ConferenceDetails: React.SFC<Props> = ({
   conference: {
     title,
     date,
@@ -24,6 +24,3 @@ const ConferenceDetailsInner: React.SFC<Props> = ({
     </p>
   </div>
 )
-
-const ConferenceDetails = ConferenceDetailsInner
-export default ConferenceDetails

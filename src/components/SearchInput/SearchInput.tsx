@@ -45,7 +45,7 @@ export const onKeyUpHandlers = ({blurRef}: WithStateHandlers) => (e: React.Keybo
   }
 }
 
-const SearchInput = compose<CombinedProps, Props>(
+export const SearchInput = compose<CombinedProps, Props>(
   withStateHandlers<WithState, WithStateHandlers, Props>(
     { myRef: null },
     {
@@ -57,5 +57,3 @@ const SearchInput = compose<CombinedProps, Props>(
     onKeyUpHandlers
   })
 )(SearchInputInner)
-
-export default SearchInput
