@@ -33,6 +33,7 @@ export const textInDetails = (filterValue: string, termsToSearch: [string, strin
   any((phrase) => phrase.includes(filterValue), termsToSearch)
 
 // filters videos on a conference
+//
 export const filterVideos = (
   videos: IndexedVideos,
   presenters: IndexedPresenters,
@@ -63,17 +64,31 @@ export const createConference = (
   return Object.assign({}, newConferences, { [`${conferenceKey}`]: newConference })
 }
 
-// search functionality: filter videos by title and or speaker or conference
-const computeFilteredConferences = (
-  filterValue: string,
-  conferences: IndexedConferences,
+type ComputeFilteredConferences = {
   videos: IndexedVideos,
-  presenters: IndexedPresenters
-) => {
+  presenters: IndexedPresenters,
+  conferences: IndexedConferences,
+  filterValue: string
+}
+
+// search functionality: filter videos by title and or speaker or conference
+const computeFilteredConferences = ({
+  videos,
+  presenters,
+  conferences,
+  filterValue
+}: ComputeFilteredConferences) => {
   // loop through all conferences, getting list of videos
   const newConferences = Object.keys(conferences).reduce((newConferencesAcc, conferenceKey) => {
+    const { videos: conferenceVideos, title } = conferences[conferenceKey]
+
     // filter videos on conference
-    const matchedVideos = filterVideos(videos, presenters, conferences, filterValue, conferenceKey)
+    const matchedVideos =
+      // if we think user is searching for a conference, returns all it's videos
+      cleanQuery(title).includes(filterValue) ? conferenceVideos :
+      // otherwise just filter them
+      filterVideos(videos, presenters, conferences, filterValue, conferenceKey)
+
     // return conference if it has any matched videos
     return createConference(
       conferences as Immutable.Immutable<IndexedConferences>,
@@ -85,7 +100,7 @@ const computeFilteredConferences = (
   return newConferences
 }
 
-// filter conferences/videos based of filterValue
+// filter conferences/videos based
 export const filterEpic: Epic<Action<any>, ApplicationState> = (action$, store) =>
   action$
     .ofType(FILTER)
@@ -112,7 +127,12 @@ export const filterEpic: Epic<Action<any>, ApplicationState> = (action$, store) 
       // if no/empty query, return original/all set of videos
       rAction.payload = isFilterEmpty(filterValue) ?
         filteredConferences :
-        computeFilteredConferences(cleanQuery(filterValue), filteredConferences, videosSearchable, presentersSearchable)
+        computeFilteredConferences({
+          filterValue: cleanQuery(filterValue),
+          conferences: filteredConferences,
+          presenters: presentersSearchable,
+          videos: videosSearchable
+        })
       return rAction
     })
 

@@ -97,7 +97,9 @@ describe('search', () => {
             done()
           }
         )
+
     })
+
   })
 
   describe('reducer', () => {
