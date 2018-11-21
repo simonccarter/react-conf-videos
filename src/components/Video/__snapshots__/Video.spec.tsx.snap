@@ -69,7 +69,7 @@ exports[`Video should render and connect 1`] = `
           "embeddableLink": "a link",
           "length": "12:34",
           "link": "a link",
-          "presenter": "aaa",
+          "presenter": "siomn carter",
           "split": "",
           "title": "test title",
         }
