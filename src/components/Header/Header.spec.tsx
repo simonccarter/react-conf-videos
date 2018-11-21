@@ -2,7 +2,7 @@ import * as React from 'react'
 import toJSON from 'enzyme-to-json'
 import { mount } from 'enzyme'
 
-import Header from './Header'
+import { Header } from './Header'
 import { wrapWithMemoryRouter } from 'utils'
 
 describe('Header', () => {

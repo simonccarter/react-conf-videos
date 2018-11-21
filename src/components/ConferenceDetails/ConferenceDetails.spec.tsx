@@ -4,7 +4,7 @@ import toJSON from 'enzyme-to-json'
 import { shallow } from 'enzyme'
 
 import { mockConference } from 'utils'
-import ConferenceDetails from './ConferenceDetails'
+import { ConferenceDetails } from './ConferenceDetails'
 
 describe('ConferenceDetails', () => {
   it('should render', () => {

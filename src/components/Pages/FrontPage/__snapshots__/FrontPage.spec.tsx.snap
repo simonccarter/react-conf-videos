@@ -24,11 +24,11 @@ exports[`FrontPage FrontPage should render 1`] = `
 
 exports[`FrontPage FrontPageInner should render 1`] = `
 <div>
-  <Meta
+  <Component
     title=""
   />
-  <Header />
-  <InnerLayoutContainer>
+  <Component />
+  <Component>
     <withStateHandlers(withHandlers(Component))
       filterValue=""
       onChange={[Function]}
@@ -67,6 +67,6 @@ exports[`FrontPage FrontPageInner should render 1`] = `
         }
       }
     />
-  </InnerLayoutContainer>
+  </Component>
 </div>
 `;

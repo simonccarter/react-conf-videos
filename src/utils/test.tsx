@@ -1,11 +1,12 @@
 import * as React from 'react'
+import * as Immutable from 'seamless-immutable'
 import { createMockStore } from 'redux-test-utils'
-import { MiddlewareAPI } from 'redux'
 import { mount, shallow } from 'enzyme'
+import { MiddlewareAPI } from 'redux'
 import { ReactElement } from 'react'
 import { MemoryRouter } from 'react-router'
 
-import { Conference, IndexedConferences, Video } from '../domain'
+import { Conference, IndexedConferences, Video, IndexedPresenters, IndexedVideos, Presenter } from '../domain'
 
 export const mockStore = (state = {}): MiddlewareAPI<any> => createMockStore(state)
 
@@ -31,13 +32,28 @@ export const wrapWithMemoryRouter = (Component: React.ReactElement<any>) => (
 )
 
 /** Mock data */
-export const mockVideo = (): Video => ({
+export const mockVideo = (title = 'test title'): Video => ({
   link: 'a link',
   split: '',
-  title: 'test title',
+  title: title || 'test title',
   length: '12:34',
-  presenter: 'aaa',
+  presenter: 'siomn carter',
   embeddableLink: 'a link',
+})
+
+export const mockVideos = (): IndexedVideos => ({
+  aaa: mockVideo('aaa'),
+  bbb: mockVideo('bbb'),
+  ccc: mockVideo('ccc')
+})
+
+export const mockPresenter = (name = 'simon carter'): Presenter => ({
+  name
+})
+
+export const mockPresenters = (): IndexedPresenters => ({
+  xxx: mockPresenter(),
+  zzz: mockPresenter('zzz')
 })
 
 export const mockConference = (): Conference => ({
@@ -69,8 +85,10 @@ export const mockConferencePageSlice = () => ({
   }
 })
 
-export const mockDataState = () => ({
+export const mockDataState = () => Immutable({
   data: {
-    conferences: mockIndexedConferences()
+    conferences: mockIndexedConferences(),
+    presenters: mockPresenters(),
+    videos: mockVideos()
   }
 })

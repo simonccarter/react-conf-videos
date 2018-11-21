@@ -3,7 +3,7 @@ import * as React from 'react'
 import { mount } from 'enzyme'
 import toJSON from 'enzyme-to-json'
 
-import Logo from './Logo'
+import { Logo } from './Logo'
 import { wrapWithMemoryRouter } from 'utils'
 
 describe('Logo', () => {

@@ -58,8 +58,6 @@ export const ListInner: React.SFC<MapProps> = ({ videos }) => {
   )
 }
 
-const List = mapProps<MapProps, Props>(({conferences}) =>
+export const List = mapProps<MapProps, Props>(({conferences}) =>
   ({ videos: mapConferenceVideos(conferences)})
 )(ListInner)
-
-export default List

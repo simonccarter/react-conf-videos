@@ -1,3 +1,1 @@
-import ConfPageHeader from './ConfPageHeader'
-
-export { ConfPageHeader }
+export * from './ConfPageHeader'

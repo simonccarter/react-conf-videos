@@ -42,7 +42,7 @@ exports[`Logo should render 1`] = `
       }
     }
   >
-    <Logo>
+    <Component>
       <div
         className="logo"
       >
@@ -60,7 +60,7 @@ exports[`Logo should render 1`] = `
           </a>
         </Link>
       </div>
-    </Logo>
+    </Component>
   </Router>
 </MemoryRouter>
 `;

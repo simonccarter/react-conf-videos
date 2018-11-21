@@ -29,7 +29,7 @@ type WithHandlers = {
 
 type Props = ReduxProps & DispatchProps & WithHandlers
 
-const ConfPageInner: React.SFC<Props> = (props) => (
+export const ConfPageInner: React.SFC<Props> = (props) => (
   <div>
     <Meta title={props.conference.title} />
     <ConfPageHeader
@@ -62,7 +62,7 @@ const mapDispatchToProps = ({
   navigateToSearchURL: routingActions.navigateToSearchURL
 })
 
-const ConfPage = compose<Props, {}>(
+export const ConfPage = compose<Props, {}>(
   connect(mapStateToProps, mapDispatchToProps),
   pure,
   withHandlers<ReduxProps & DispatchProps, WithHandlers>({
@@ -71,5 +71,3 @@ const ConfPage = compose<Props, {}>(
     }
   })
 )(ConfPageInner)
-
-export default ConfPage

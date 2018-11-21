@@ -1,3 +1,1 @@
-import ConfPage from './ConfPage'
-
-export { ConfPage }
+export * from './ConfPage'

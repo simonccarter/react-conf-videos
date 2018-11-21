@@ -1,5 +1,1 @@
-import InnerLayoutContainer from './InnerLayoutContainer'
-
-export {
-  InnerLayoutContainer
-}
+export * from './InnerLayoutContainer'

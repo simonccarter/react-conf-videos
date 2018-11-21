@@ -53,7 +53,7 @@ const dispatchMap = ({
   navigateToSearchURL: routingActions.navigateToSearchURL
 })
 
-const FrontPage = compose<Props, {}>(
+export const FrontPage = compose<Props, {}>(
   connect(mapStateToProps, dispatchMap),
   pure,
   withHandlers<ReduxProps & DispatchpProps, WithHandlers>({
@@ -62,5 +62,3 @@ const FrontPage = compose<Props, {}>(
     }
   })
 )(FrontPageInner)
-
-export default FrontPage

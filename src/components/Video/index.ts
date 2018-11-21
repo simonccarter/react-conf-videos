@@ -1,5 +1,1 @@
-import { Video } from './Video'
-
-export {
-  Video
-}
+export * from './Video'
