@@ -16,7 +16,7 @@
     "lint:fix": "tslint -p tsconfig.json -e '**/*.js' -t stylish --fix",
     "prod": "npm run clean & npm run buildData & webpack --progress --config webpack.prod.js",
     "start": "npm run buildData & webpack-dev-server --config webpack.config.js",
-    "test": "cross-env NODE_ENV=test jest --no-cache --coverage --config=config/test/jestconfig.json",
+    "test": "cross-env NODE_ENV=test jest --no-cache --coverage --config=config/test/jestconfig.json --maxWorkers=2",
     "test:dev": "cross-env NODE_ENV=test jest --watch  --config=config/test/jestconfig.json",
     "types": "tsc --noEmit"
   },
@@ -81,7 +81,7 @@
     "@types/webpack-env": "1.13.6",
     "babel-cli": "7.0.0-beta.3",
     "babel-core": "7.0.0-bridge.0",
-    "babel-loader": "7.1.4",
+    "babel-loader": "8.0.4",
     "babel-preset-env": "1.7.0",
     "babel-preset-react": "6.24.1",
     "cross-env": "5.2.0",

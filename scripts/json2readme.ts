@@ -162,7 +162,7 @@ To see a version working locally, with your changes, run
 2. \`yarn start\`
 `
 
-const run = (conferenceVids: JSONInput) => {
+export const run = (conferenceVids: JSONInput) => {
   // should already be sorted, but in case not
   const sorted = sortJSONByDate(conferenceVids)
 
@@ -175,10 +175,6 @@ const run = (conferenceVids: JSONInput) => {
 }
 
 if (!isTest) {
-  // tslint: disable-next-line
+  // tslint:disable-next-line
   console.log(run(conferenceVids))
-}
-
-module.exports = {
-  run
 }
