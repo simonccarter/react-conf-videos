@@ -1,5 +1,5 @@
-const fs = require('fs')
-const { run } = require('./json2readme')
+import * as fs from 'fs'
+import { run } from './json2readme'
 
 describe('json2reamd', () => {
   describe('run', () => {

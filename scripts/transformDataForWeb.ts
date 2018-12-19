@@ -1,9 +1,9 @@
-const fs = require('fs')
-const { normalize } = require('normalizr')
-const { ifElse, either, is, mapObjIndexed, merge, compose, toLower } = require('ramda')
-const removeDiacritics = require('diacritics').remove
+import * as fs from 'fs'
+import { normalize } from 'normalizr'
+import { ifElse, either, is, mapObjIndexed, merge, compose, toLower } from 'ramda'
+import { remove as removeDiacritics } from 'diacritics'
 
-const conferenceSchema = require('./confSchema')
+import * as conferenceSchema from './confSchema'
 
 const args = process.argv
 
