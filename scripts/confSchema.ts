@@ -1,5 +1,5 @@
-const crypto = require('crypto')
-const { schema } = require('normalizr')
+import * as crypto from 'crypto'
+import { schema } from 'normalizr'
 
 const hashFunction = (toHash: string) => crypto.createHash('md5').update(JSON.stringify(toHash)).digest('hex')
 

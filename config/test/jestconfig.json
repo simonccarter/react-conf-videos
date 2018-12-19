@@ -1,10 +1,5 @@
 {
   "rootDir": "../../",
-  "globals": {
-    "ts-jest": {
-      "useBabelrc": true
-    }
-  },
   "collectCoverageFrom": [
     "**/src/**/.{js,jsx,ts,tsx}",
     "**/src/**",

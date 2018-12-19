@@ -175,6 +175,7 @@ const run = (conferenceVids: JSONInput) => {
 }
 
 if (!isTest) {
+  // tslint: disable-next-line
   console.log(run(conferenceVids))
 }
 
