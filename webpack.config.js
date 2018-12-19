@@ -2,8 +2,8 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
-const { CheckerPlugin } = require('awesome-typescript-loader')
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -26,13 +26,8 @@ module.exports = {
   module: {
     rules: [
       {
-        enforce: 'pre',
-        test: /\.tsx?$/,
-        loader: 'tslint-loader'
-      },
-      {
         test: /\.(t|j)sx?$/,
-        loader: 'awesome-typescript-loader',
+        loader: 'babel-loader',
         exclude: /node_modules/
       },
       {
@@ -73,7 +68,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CheckerPlugin(),
+    new ForkTsCheckerWebpackPlugin(),
     new ProgressBarPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({

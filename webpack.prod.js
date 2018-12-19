@@ -4,6 +4,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
 module.exports = {
   mode: 'production',
@@ -19,13 +20,8 @@ module.exports = {
   module: {
     rules: [
       {
-        enforce: 'pre',
-        test: /\.tsx?$/,
-        loader: 'tslint-loader'
-      },
-      {
         test: /\.(t|j)sx?$/,
-        loader: 'awesome-typescript-loader',
+        loader: 'babel-loader',
         exclude: /node_modules/
       },
       {
@@ -103,6 +99,7 @@ module.exports = {
     runtimeChunk: true
   },
   plugins: [
+    new ForkTsCheckerWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './public/index.html',
       filename: 'index.html',
