@@ -1,4 +1,4 @@
-import 'rxjs'
+import { take, toArray } from 'rxjs/operators'
 import { ActionsObservable } from 'redux-observable'
 
 import { mockStore, mockRouterState } from 'utils'
@@ -111,10 +111,12 @@ describe('loadDataForRoute', () => {
         const expectedResult1 = conferencePageActions.setConferenceDetails('8424e37df85b9eccbe48e9a55d93845e')
         const expectedResult2 = searchActions.filter(filter)
 
-          // act
+        // act
         loadDataForRoute(action$, mockStore(state), null)
-          .take(2)
-          .toArray()
+          .pipe(
+            take(2),
+            toArray()
+          )
           .subscribe(
             ([action1, action2]) => {
               // assert

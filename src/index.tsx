@@ -1,17 +1,27 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 
-import { connectRouter } from 'connected-react-router'
-import App, { history, store, rootReducer } from 'App'
+import { ConnectedRouter } from 'connected-react-router'
+import { Provider } from 'react-redux'
+
+import configureStore from 'redux/configureStore'
+import App from 'App'
 
 import './index.scss'
+
+const { history, store } = configureStore()
 
 // start bootstrap process
 store.dispatch({ type: 'BOOTSTRAP_START' })
 
 export const render = () => {
   ReactDOM.render(
-    <App />,
+    <Provider store={store}>
+      <ConnectedRouter history={history}>
+        <App />
+      </ConnectedRouter>
+    </Provider>
+    ,
     document.getElementById('app__container')
   )
 }
@@ -21,10 +31,5 @@ render()
 if (module.hot) {
   module.hot.accept('./App.tsx', () => {
     render()
-  })
-
-  // Reload reducers
-  module.hot.accept('./redux/modules/root', () => {
-    store.replaceReducer(connectRouter(history)(rootReducer))
   })
 }

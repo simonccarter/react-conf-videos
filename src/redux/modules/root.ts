@@ -9,11 +9,14 @@ import bootstrapReducer, { bootstrapEpics, ReduxState as BoostrapSlice } from '.
 import conferencePageReducer, { conferenceEpics, ReduxState as ConferencePageSlice } from './conferencePage'
 import { routingEpics } from './routing'
 
-export type ApplicationState = {
+export type ApplicationStateInner = {
   data: DataSlice,
   search: searchSlice,
   bootstrap: BoostrapSlice,
   conferencePage: ConferencePageSlice
+}
+
+export type ApplicationState = ApplicationStateInner & {
   router: RouterState
 }
 
@@ -21,7 +24,7 @@ export const rootEpic = combineEpics(
   dataEpics, bootstrapEpics, searchEpics, conferenceEpics, routingEpics
 )
 
-export const rootReducer = combineReducers<ApplicationState>({
+export const rootReducer = combineReducers({
   data: dataReducer,
   search: searchReducer,
   bootstrap: bootstrapReducer,

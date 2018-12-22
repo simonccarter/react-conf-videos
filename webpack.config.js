@@ -2,20 +2,15 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
-const { CheckerPlugin } = require('awesome-typescript-loader')
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
 module.exports = {
   mode: 'development',
   entry: {
-    app: [
-      'webpack-dev-server/client?http://localhost:8080',
-      'webpack/hot/only-dev-server',
-      'react-hot-loader/patch',
-      './src/index.tsx'
-    ]
+    app: './src/index.tsx'
   },
-  devtool: 'source-map',
+  devtool: 'eval-source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[hash].js'
@@ -26,13 +21,8 @@ module.exports = {
   module: {
     rules: [
       {
-        enforce: 'pre',
         test: /\.tsx?$/,
-        loader: 'tslint-loader'
-      },
-      {
-        test: /\.(t|j)sx?$/,
-        loader: 'awesome-typescript-loader',
+        loader: 'babel-loader',
         exclude: /node_modules/
       },
       {
@@ -65,7 +55,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.json', '.ts', '.tsx', '.scss'],
+    extensions: ['.js', '.ts', '.tsx', '.scss'],
     modules: [
       path.resolve(__dirname, 'src'),
       path.resolve(__dirname, 'public'),
@@ -73,7 +63,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CheckerPlugin(),
+    new ForkTsCheckerWebpackPlugin(),
     new ProgressBarPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
@@ -88,6 +78,7 @@ module.exports = {
   ],
   devServer: {
     hot: true,
+    open: true,
     historyApiFallback: true
   }
 }

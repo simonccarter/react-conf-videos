@@ -37,7 +37,6 @@ export const FrontPageInner: React.SFC<Props> = (props) => (
         filterValue={props.filterValue}
         onChange={props.onInputChange}
       />
-
       <ResultDetails conferences={props.conferences} />
       <List conferences={props.conferences} />
     </InnerLayoutContainer>

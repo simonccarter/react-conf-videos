@@ -1,6 +1,6 @@
 /* tslint:disable:no-shadowed-variable */
 import * as React from 'react'
-import { compose, withHandlers, withStateHandlers } from 'recompose'
+import { pure, compose, withHandlers, withStateHandlers } from 'recompose'
 
 import styles from './SearchInput.scss'
 
@@ -46,6 +46,7 @@ export const onKeyUpHandlers = ({blurRef}: WithStateHandlers) => (e: React.Keybo
 }
 
 export const SearchInput = compose<CombinedProps, Props>(
+  pure,
   withStateHandlers<WithState, WithStateHandlers, Props>(
     { myRef: null },
     {
