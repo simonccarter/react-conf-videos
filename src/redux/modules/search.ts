@@ -1,10 +1,9 @@
+
+import {map, debounceTime} from 'rxjs/operators';
 import * as Immutable from 'seamless-immutable'
 import { any } from 'ramda'
 import { combineEpics, Epic } from 'redux-observable'
 import { isFilterEmpty, cleanQuery } from 'utils'
-
-import 'rxjs/add/operator/map'
-import 'rxjs/add/operator/debounceTime'
 
 import {
   Action,
@@ -101,11 +100,11 @@ const computeFilteredConferences = ({
 }
 
 // filter conferences/videos based
-export const filterEpic: Epic<Action<any>, ApplicationState> = (action$, store) =>
+export const filterEpic: Epic<any, any, ApplicationState> = (action$, store) =>
   action$
-    .ofType(FILTER)
-    .debounceTime(80)
-    .map((action) => {
+    .ofType(FILTER).pipe(
+    debounceTime(80),
+    map((action) => {
       const { payload: filterValue = ''} = action
       const {
         data: {
@@ -113,7 +112,7 @@ export const filterEpic: Epic<Action<any>, ApplicationState> = (action$, store) 
         },
         conferencePage: { selectedConferenceId },
         router
-      } = store.getState()
+      } = store.value
       const rAction: Action<IndexedConferences> = { type: SET_FILTERED_CONFERENCES }
       let filteredConferences = conferences;
 
@@ -134,7 +133,7 @@ export const filterEpic: Epic<Action<any>, ApplicationState> = (action$, store) 
           videos: videosSearchable
         })
       return rAction
-    })
+    }), )
 
 export const searchEpics = combineEpics(filterEpic)
 export const searchActions = {

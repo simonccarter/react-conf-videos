@@ -1,9 +1,10 @@
 import * as React from 'react'
 import * as cn from 'classnames'
-import styles from './Header.scss'
-
 import { Link } from 'react-router-dom'
+
 import { Logo } from 'components'
+
+import styles from './Header.scss'
 
 export const Header: React.SFC<{}> = () => (
   <div className={styles.header}>

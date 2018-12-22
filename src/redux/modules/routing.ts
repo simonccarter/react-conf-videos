@@ -1,4 +1,6 @@
-import { Observable } from 'rxjs';
+
+import {map, mergeMap} from 'rxjs/operators';
+import { of, concat } from 'rxjs';
 import * as queryString from 'query-string'
 import { push } from 'connected-react-router'
 import { Epic, combineEpics } from 'redux-observable'
@@ -28,33 +30,35 @@ const getConferenceIdFromTitleFromPathname = (pathname: string) => {
 }
 
 // load data in right place on initial page load
-export const loadDataForRoute: Epic<any, ApplicationState> = (action$, store) =>
+export const loadDataForRoute: Epic<any, any, ApplicationState> = (action$, store) =>
   action$.ofType(LOAD_DATA_END, '@@router/LOCATION_CHANGE')
-    .mergeMap(() => {
-      const location = store.getState().router.location;
+    .pipe(
+    mergeMap(() => {
+      const location = store.value.router.location;
       const { search, pathname } = location
       if (isSearchPage(pathname)) {
-        return Observable.of(searchActions.filter(extractQueryFromSearch(search)))
+        return of(searchActions.filter(extractQueryFromSearch(search)))
       } else {
         const id = getConferenceIdFromTitleFromPathname(pathname)
-        return Observable.concat([
+        return concat([
           conferencePageActions.setConferenceDetails(id),
           searchActions.filter(extractQueryFromSearch(search))
         ])
       }
     })
+    )
 
 // action to navigate to a url with a query string
-export const navigateToSearchResult: Epic<any, ApplicationState> = (action$, store) =>
-  action$.ofType(NAVIGATE_TO_SEARCH_URL)
-    .map((action) => {
+export const navigateToSearchResult: Epic<any, any, ApplicationState> = (action$, store) =>
+  action$.ofType(NAVIGATE_TO_SEARCH_URL).pipe(
+    map((action) => {
       // next location is based on current one
-      const { location } = store.getState().router
+      const { location } = store.value.router
       const filter = action.payload;
       const query = !isFilterEmpty(filter) ? `?query=${action.payload}` : ''
       const nextUrl = `${location.pathname}${query}`
       return push(nextUrl)
-    })
+    }))
 
 export const routingActions = {
   navigateToSearchURL

@@ -20,7 +20,7 @@ describe('bootstrap reducer', () => {
       // act
       bootstrapStartEpic(action$, mockStore(), null)
         .subscribe(
-          (action) => {
+          (action: any) => {
             // assert
             expect(action.type).toBe(LOAD_DATA_START)
             done()
@@ -38,7 +38,7 @@ describe('bootstrap reducer', () => {
       // act
       loadJSONDataEpic(action$, mockStore(), null)
         .subscribe(
-          (action) => {
+          (action: any) => {
             // assert
             expect(action.type).toBe(LOAD_DATA_END)
             done()
@@ -55,7 +55,7 @@ describe('bootstrap reducer', () => {
       // act
       boostrapEndRemoveLoaderEpic(action$, mockStore(), null)
         .subscribe(
-          (action) => {
+          (action: any) => {
             // assert
             expect(action.type).toBe(BOOTSTRAP_END_LOADER)
             expect(action.payload).toBeUndefined()
@@ -75,7 +75,7 @@ describe('bootstrap reducer', () => {
       // act
       bootstrapEndEpic(action$, mockStore(), null)
         .subscribe(
-          (action) => {
+          (action: any) => {
             // assert
             expect(action.type).toBe(BOOTSTRAP_END)
             expect(action.payload).toBeUndefined()

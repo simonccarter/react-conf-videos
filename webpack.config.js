@@ -10,7 +10,7 @@ module.exports = {
   entry: {
     app: './src/index.tsx'
   },
-  devtool: 'cheap-eval-source-map',
+  devtool: 'eval-source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[hash].js'
