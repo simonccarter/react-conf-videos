@@ -4,6 +4,7 @@ import { ConferenceDetails } from 'components/ConferenceDetails'
 import { ConfPageHeader } from 'components/ConfPageHeader'
 import { ResultDetails } from 'components/ResultDetails'
 import { SearchInput } from 'components/SearchInput'
+import { ScrollToTop } from 'components/HOCS/ScrollToTop'
 import { Header } from 'components/Header'
 import { Video } from 'components/Video'
 import { Meta } from 'components/Meta'
@@ -18,6 +19,7 @@ export {
   Header,
   ConfPage,
   FrontPage,
+  ScrollToTop,
   SearchInput,
   ResultDetails,
   ConfPageHeader,
