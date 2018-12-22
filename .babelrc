@@ -1,8 +1,11 @@
 {
   "presets": [
-      ["@babel/preset-env", { "modules": false }],
+      ["@babel/preset-env", { 
+        "modules": false,
+        "targets": { "node": 6 }
+      }],
       "@babel/preset-typescript",
       "@babel/preset-react"
   ],
-  "plugins": ["react-hot-loader/babel"]
+  "plugins": ["react-hot-loader/babel", "ramda", "lodash"]
 }
