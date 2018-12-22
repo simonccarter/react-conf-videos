@@ -33,19 +33,19 @@ const getConferenceIdFromTitleFromPathname = (pathname: string) => {
 export const loadDataForRoute: Epic<any, any, ApplicationState> = (action$, store) =>
   action$.ofType(LOAD_DATA_END, '@@router/LOCATION_CHANGE')
     .pipe(
-    mergeMap(() => {
-      const location = store.value.router.location;
-      const { search, pathname } = location
-      if (isSearchPage(pathname)) {
-        return of(searchActions.filter(extractQueryFromSearch(search)))
-      } else {
-        const id = getConferenceIdFromTitleFromPathname(pathname)
-        return concat([
-          conferencePageActions.setConferenceDetails(id),
-          searchActions.filter(extractQueryFromSearch(search))
-        ])
-      }
-    })
+      mergeMap(() => {
+        const location = store.value.router.location;
+        const { search, pathname } = location
+        if (isSearchPage(pathname)) {
+          return of(searchActions.filter(extractQueryFromSearch(search)))
+        } else {
+          const id = getConferenceIdFromTitleFromPathname(pathname)
+          return concat([
+            conferencePageActions.setConferenceDetails(id),
+            searchActions.filter(extractQueryFromSearch(search))
+          ])
+        }
+      })
     )
 
 // action to navigate to a url with a query string

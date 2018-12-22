@@ -5,6 +5,7 @@ import { ConnectedRouter } from 'connected-react-router'
 import { Provider } from 'react-redux'
 
 import configureStore from 'redux/configureStore'
+import { ScrollToTop } from 'components'
 import App from 'App'
 
 import './index.scss'
@@ -18,7 +19,9 @@ export const render = () => {
   ReactDOM.render(
     <Provider store={store}>
       <ConnectedRouter history={history}>
-        <App />
+        <ScrollToTop>
+          <App />
+        </ScrollToTop>
       </ConnectedRouter>
     </Provider>
     ,

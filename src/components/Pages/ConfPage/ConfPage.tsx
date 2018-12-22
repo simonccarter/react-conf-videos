@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
 import { compose, pure, withHandlers } from 'recompose'
-
 import {
   List,
   Meta,
