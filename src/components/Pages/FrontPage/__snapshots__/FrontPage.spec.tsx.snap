@@ -29,7 +29,7 @@ exports[`FrontPage FrontPageInner should render 1`] = `
   />
   <Component />
   <Component>
-    <withStateHandlers(withHandlers(Component))
+    <pure(withStateHandlers(withHandlers(Component)))
       filterValue=""
       onChange={[Function]}
     />

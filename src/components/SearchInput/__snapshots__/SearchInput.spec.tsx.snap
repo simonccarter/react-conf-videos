@@ -1,12 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SearchInput should render and contain connected props 1`] = `
-<withHandlers(Component)
-  blurRef={[Function]}
+<withStateHandlers(withHandlers(Component))
   filterValue=""
-  myRef={null}
   onChange={[MockFunction]}
-  setRef={[Function]}
 />
 `;
 
