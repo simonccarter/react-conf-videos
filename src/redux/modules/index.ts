@@ -1,11 +1,11 @@
-import { routingActions } from './routing'
 import { conferencePageActions } from './conferencePage'
-import { searchActions } from './search'
 import { ApplicationState } from './root'
+import { routingActions } from './routing'
+import { searchActions } from './search'
 
 export {
   searchActions,
   routingActions,
-  conferencePageActions,
-  ApplicationState
+  ApplicationState,
+  conferencePageActions
 }

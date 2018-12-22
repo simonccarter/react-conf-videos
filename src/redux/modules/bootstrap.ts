@@ -1,18 +1,10 @@
 import * as Immutable from 'seamless-immutable'
 import { combineEpics, Epic } from 'redux-observable'
+import { delay, tap, mapTo, map, bufferCount, take } from 'rxjs/operators';
 
 import { ApplicationState } from 'redux/modules'
 import { Action, JSONInput } from '../../domain'
 import { ReduxState as DataSlice, LOAD_DATA_END, LOAD_DATA_START } from './data'
-
-import 'rxjs/add/operator/do'
-import 'rxjs/add/operator/map'
-import 'rxjs/add/operator/take'
-import 'rxjs/add/operator/delay'
-import 'rxjs/add/operator/mapTo'
-import 'rxjs/add/operator/switchMap'
-import 'rxjs/add/operator/takeWhile'
-import 'rxjs/add/operator/bufferCount'
 
 export type ReduxState = {
   finished: boolean,
@@ -36,34 +28,34 @@ const loadDataEnd = (payload: JSONInput) => ({
 })
 
 // kick off bootstrap actions
-export const bootstrapStartEpic: Epic<any, ApplicationState> = (action$) =>
-  action$.ofType(BOOTSTRAP_START)
-    .mapTo({ type: LOAD_DATA_START })
+export const bootstrapStartEpic: Epic<any, any, ApplicationState> = (action$) =>
+  action$.ofType(BOOTSTRAP_START).pipe(
+    mapTo({ type: LOAD_DATA_START }))
 
 // load json data into store
-export const loadJSONDataEpic: Epic<any, ApplicationState> = (action$) =>
-  action$.ofType(LOAD_DATA_START)
-    .map(() => loadDataEnd(JSONData))
+export const loadJSONDataEpic: Epic<any, any, ApplicationState> = (action$) =>
+  action$.ofType(LOAD_DATA_START).pipe(
+    map(() => loadDataEnd(JSONData)))
 
 // end bookstrap process by listening for all actions in BOOTSTRAP_COMPLETE_ACTIONS
-export const bootstrapEndEpic: Epic<any, ApplicationState> = (action$) =>
-  action$.ofType(...BOOTSTRAP_COMPLETE_ACTIONS)
-    .bufferCount(BOOTSTRAP_COMPLETE_ACTIONS.length)
-    .take(1)
-    .mapTo({ type: BOOTSTRAP_END })
+export const bootstrapEndEpic: Epic<any, any, ApplicationState> = (action$) =>
+  action$.ofType(...BOOTSTRAP_COMPLETE_ACTIONS).pipe(
+    bufferCount(BOOTSTRAP_COMPLETE_ACTIONS.length),
+    take(1),
+    mapTo({ type: BOOTSTRAP_END }))
 
 // listen to end bootstrap action, and remove loader on dom for seamless merge into app
-export const boostrapEndRemoveLoaderEpic: Epic<any, ApplicationState> = (action$) =>
-  action$.ofType(BOOTSTRAP_END)
-    .do(() => {
+export const boostrapEndRemoveLoaderEpic: Epic<any, any, ApplicationState> = (action$) =>
+  action$.ofType(BOOTSTRAP_END).pipe(
+    tap(() => {
       (document.getElementById('loader') as HTMLElement).classList.remove('fullscreen')
-    })
-    .delay(300)
-    .do(() => {
+    }),
+    delay(300),
+    tap(() => {
       // loader on initial html no longer visible. remove.
       (document.getElementById('loader') as HTMLElement).remove()
-    })
-    .mapTo({ type: BOOTSTRAP_END_LOADER})
+    }),
+    mapTo({ type: BOOTSTRAP_END_LOADER}), )
 
 export const bootstrapEpics = combineEpics(
   bootstrapStartEpic,

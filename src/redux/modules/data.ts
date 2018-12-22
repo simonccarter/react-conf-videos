@@ -1,11 +1,10 @@
-import * as Immutable from 'seamless-immutable'
-import { combineEpics, Epic } from 'redux-observable'
 
-import 'rxjs/add/operator/map'
+import * as Immutable from 'seamless-immutable'
+import { map } from 'rxjs/operators';
+import { combineEpics, Epic } from 'redux-observable'
 
 import {
   Action,
-  JSONInput,
   IndexedVideos,
   IndexedPresenters,
   IndexedConferences,
@@ -27,9 +26,9 @@ export type ReduxState = {
 }
 
 // copy data into own slice
-export const dataCopyEpic: Epic<Action<JSONInput>, ApplicationState> = (action$) =>
-  action$.ofType(LOAD_DATA_END)
-    .map((action) => ({ type: COPY_DATA, payload: action.payload }))
+export const dataCopyEpic: Epic<any, any, ApplicationState> = (action$) =>
+  action$.ofType(LOAD_DATA_END).pipe(
+    map((action) => ({ type: COPY_DATA, payload: action.payload })))
 
 export const dataEpics = combineEpics(dataCopyEpic)
 

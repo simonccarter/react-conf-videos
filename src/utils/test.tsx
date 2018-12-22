@@ -1,14 +1,17 @@
 import * as React from 'react'
 import * as Immutable from 'seamless-immutable'
-import { createMockStore } from 'redux-test-utils'
-import { mount, shallow } from 'enzyme'
-import { MiddlewareAPI } from 'redux'
+import { Subject } from 'rxjs'
 import { ReactElement } from 'react'
 import { MemoryRouter } from 'react-router'
+import { mount, shallow } from 'enzyme'
+import { createMockStore } from 'redux-test-utils'
+import { StateObservable } from 'redux-observable'
 
 import { Conference, IndexedConferences, Video, IndexedPresenters, IndexedVideos, Presenter } from '../domain'
+import { ApplicationState } from 'redux/modules';
 
-export const mockStore = (state = {}): MiddlewareAPI<any> => createMockStore(state)
+// cast to ApplicationState so TS doesn't complain when sending in partials to Epics for testing
+export const mockStore = (state = {}) => new StateObservable<ApplicationState>(new Subject(), state as ApplicationState)
 
 const isStore = (store: any) => store.hasOwnProperty('isActionTypeDispatched')
 
