@@ -15,9 +15,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[hash].js'
   },
-  stats: {
-    errorDetails: true
-  },
+  stats: "verbose",
   module: {
     rules: [
       {
@@ -71,7 +69,9 @@ module.exports = {
       filename: 'index.html',
       inject: 'body'
     }),
-    new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin({
+      openAnalyzer: false
+    }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
     })

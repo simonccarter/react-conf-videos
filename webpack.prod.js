@@ -3,15 +3,14 @@ const webpack = require('webpack')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
 module.exports = {
   mode: 'production',
   entry: {
-    app: [
-      './src/index.tsx'
-    ]
+    app: './src/index.tsx'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -22,7 +21,9 @@ module.exports = {
       {
         test: /\.tsx?$/,
         loader: 'babel-loader',
-        exclude: /node_modules/
+        exclude: [
+          /node_modules/
+        ]
       },
       {
         test: /\.scss$/,
@@ -57,8 +58,9 @@ module.exports = {
     ]
   },
   stats: {
-    modules: true,
-    errorDetails: true
+    maxModules: 40000,
+    exclude: undefined,
+    moduleTrace: true
   },
   optimization: {
     concatenateModules: true,
@@ -110,6 +112,9 @@ module.exports = {
         removeComments: true,
         removeRedundantAttributes: true
       }
+    }),
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'disabled'
     }),
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: 'defer'
