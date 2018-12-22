@@ -1,7 +1,7 @@
 
-import {map, mergeMap} from 'rxjs/operators';
-import { of, concat } from 'rxjs';
 import * as queryString from 'query-string'
+import { of, concat } from 'rxjs';
+import { map, mergeMap } from 'rxjs/operators';
 import { push } from 'connected-react-router'
 import { Epic, combineEpics } from 'redux-observable'
 

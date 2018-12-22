@@ -1,6 +1,6 @@
 
-import {map} from 'rxjs/operators';
 import * as Immutable from 'seamless-immutable'
+import { map } from 'rxjs/operators';
 import { combineEpics, Epic } from 'redux-observable'
 
 import { ApplicationState } from 'redux/modules'

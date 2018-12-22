@@ -28,7 +28,7 @@ describe('navigateToSearchResult', () => {
       // act
       navigateToSearchResult(action$, mockStore(mockRouterState()), null)
         .subscribe(
-          (action: any) => {
+          (action) => {
             // assert
             expect(action).toEqual(expectedResult)
             done()
@@ -51,7 +51,7 @@ describe('navigateToSearchResult', () => {
       // act
       navigateToSearchResult(action$, mockStore(mockRouterState()), null)
         .subscribe(
-          (action: any) => {
+          (action) => {
             // assert
             expect(action).toEqual(expectedResult)
             done()
@@ -72,7 +72,7 @@ describe('loadDataForRoute', () => {
         // act
         loadDataForRoute(action$, mockStore(state), null)
           .subscribe(
-            (action: any) => {
+            (action) => {
               // assert
               expect(action).toEqual(expectedResult)
               done()
@@ -92,7 +92,7 @@ describe('loadDataForRoute', () => {
         // act
         loadDataForRoute(action$, mockStore(state), null)
           .subscribe(
-            (action: any) => {
+            (action) => {
               // assert
               expect(action).toEqual(expectedResult)
               done()

@@ -1,7 +1,6 @@
-
-import {map, debounceTime} from 'rxjs/operators';
 import * as Immutable from 'seamless-immutable'
 import { any } from 'ramda'
+import { map, debounceTime } from 'rxjs/operators';
 import { combineEpics, Epic } from 'redux-observable'
 import { isFilterEmpty, cleanQuery } from 'utils'
 

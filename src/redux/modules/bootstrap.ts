@@ -1,7 +1,6 @@
-
-import {delay, tap, mapTo, map, bufferCount, take} from 'rxjs/operators';
 import * as Immutable from 'seamless-immutable'
 import { combineEpics, Epic } from 'redux-observable'
+import { delay, tap, mapTo, map, bufferCount, take } from 'rxjs/operators';
 
 import { ApplicationState } from 'redux/modules'
 import { Action, JSONInput } from '../../domain'
@@ -43,7 +42,7 @@ export const bootstrapEndEpic: Epic<any, any, ApplicationState> = (action$) =>
   action$.ofType(...BOOTSTRAP_COMPLETE_ACTIONS).pipe(
     bufferCount(BOOTSTRAP_COMPLETE_ACTIONS.length),
     take(1),
-    mapTo({ type: BOOTSTRAP_END }), )
+    mapTo({ type: BOOTSTRAP_END }))
 
 // listen to end bootstrap action, and remove loader on dom for seamless merge into app
 export const boostrapEndRemoveLoaderEpic: Epic<any, any, ApplicationState> = (action$) =>

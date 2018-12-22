@@ -49,7 +49,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.json', '.ts', '.tsx', '.scss'],
+    extensions: ['.js', '.ts', '.tsx', '.scss'],
     modules: [
       path.resolve(__dirname, 'src'),
       path.resolve(__dirname, 'public'),
