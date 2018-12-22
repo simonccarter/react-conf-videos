@@ -8,14 +8,9 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 module.exports = {
   mode: 'development',
   entry: {
-    app: [
-      'webpack-dev-server/client?http://localhost:8080',
-      'webpack/hot/only-dev-server',
-      'react-hot-loader/patch',
-      './src/index.tsx'
-    ]
+    app: './src/index.tsx'
   },
-  devtool: 'source-map',
+  devtool: 'cheap-eval-source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[hash].js'
