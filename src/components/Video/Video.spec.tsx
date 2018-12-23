@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import toJSON from 'enzyme-to-json'
 
-import { mountWithStore, mockConference, mockVideo, wrapWithMemoryRouter } from 'utils'
+import { mountWithStore, mockConference, mockVideo, wrapWithMemoryRouter } from 'utils/test'
 import { VideoInner } from './Video'
 import { Conference } from '../../domain'
 

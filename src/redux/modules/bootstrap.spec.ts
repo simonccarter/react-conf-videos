@@ -1,5 +1,5 @@
 import 'rxjs'
-import { mockStore } from 'utils'
+import { mockStore } from 'utils/test'
 import { ActionsObservable } from 'redux-observable'
 
 import bootstrapReducer, {

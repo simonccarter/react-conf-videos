@@ -3,7 +3,7 @@ import toJSON from 'enzyme-to-json'
 
 import { shallow } from 'enzyme'
 
-import { mockConference } from 'utils'
+import { mockConference } from 'utils/test'
 import { ConferenceDetails } from './ConferenceDetails'
 
 describe('ConferenceDetails', () => {

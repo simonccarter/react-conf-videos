@@ -1,7 +1,7 @@
 import { take, toArray } from 'rxjs/operators'
 import { ActionsObservable } from 'redux-observable'
 
-import { mockStore, mockRouterState } from 'utils'
+import { mockStore, mockRouterState } from 'utils/test'
 
 import { conferencePageActions } from './conferencePage'
 import { searchActions } from './search'

@@ -5,7 +5,7 @@ import { ActionsObservable } from 'redux-observable'
 import {
   mockStore, mockDataState,
   mockConferencePageSlice, mockRouterState, mockIndexedConferences
-} from 'utils'
+} from 'utils/test'
 
 import searchReducer, {
   textInDetails, initialState,
