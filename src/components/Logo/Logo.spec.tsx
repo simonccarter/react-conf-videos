@@ -4,7 +4,7 @@ import { mount } from 'enzyme'
 import toJSON from 'enzyme-to-json'
 
 import { Logo } from './Logo'
-import { wrapWithMemoryRouter } from 'utils'
+import { wrapWithMemoryRouter } from 'utils/test'
 
 describe('Logo', () => {
   it('should render', () => {

@@ -2,7 +2,7 @@ import * as React from 'react'
 import { shallow } from 'enzyme'
 import toJSON from 'enzyme-to-json'
 
-import { mockConference } from 'utils'
+import { mockConference } from 'utils/test'
 
 import { List } from './List'
 
