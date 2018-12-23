@@ -2,7 +2,7 @@ import * as React from 'react'
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 
-import { shallowWithStore, mockConference } from 'utils'
+import { shallowWithStore, mockConference } from 'utils/test'
 import { FrontPage, FrontPageInner } from './FrontPage'
 
 describe('FrontPage', () => {

@@ -3,7 +3,7 @@ import toJSON from 'enzyme-to-json'
 import { mount } from 'enzyme'
 
 import { Header } from './Header'
-import { wrapWithMemoryRouter } from 'utils'
+import { wrapWithMemoryRouter } from 'utils/test'
 
 describe('Header', () => {
   it('should render', () => {

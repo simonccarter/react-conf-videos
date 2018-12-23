@@ -3,7 +3,7 @@ import toJSON from 'enzyme-to-json'
 import { mount } from 'enzyme'
 
 import { ResultDetails } from './ResultDetails'
-import { mockIndexedConferences } from 'utils'
+import { mockIndexedConferences } from 'utils/test'
 
 describe('ResultDetails', () => {
   it('should render', () => {
