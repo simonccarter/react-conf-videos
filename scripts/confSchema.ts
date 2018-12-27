@@ -4,12 +4,7 @@ type ToHash = {
   title?: string
   name?: string
 }
-const hashFunction = (toHash: ToHash) => {
-  const key =
-    toHash.title ? toHash.title :
-      toHash.name ? toHash.name : toHash
-  return btoa(encodeURIComponent(JSON.stringify(key)))
-}
+const hashFunction = (toHash: ToHash) => btoa(encodeURIComponent(JSON.stringify(toHash)))
 
 const hashIdOpts = { idAttribute: hashFunction }
 
