@@ -20,7 +20,7 @@ export const BOOTSTRAP_END_LOADER = 'END_LOADER'
 export const BOOTSTRAP_COMPLETE_ACTIONS = [LOAD_DATA_END]
 
 // tslint:disable-next-line
-const JSONData = require('assets/conferenceVidsCleaned.json')
+const JSONData = require('assets/conferenceVids.json')
 
 const loadDataEnd = (payload: JSONInput) => ({
   type: LOAD_DATA_END,
@@ -30,7 +30,7 @@ const loadDataEnd = (payload: JSONInput) => ({
 // kick off bootstrap actions
 export const bootstrapStartEpic: Epic<any, any, ApplicationState> = (action$) =>
   action$.ofType(BOOTSTRAP_START).pipe(
-    mapTo({ type: LOAD_DATA_START }))
+    mapTo({ type: LOAD_DATA_START, payload: JSONData }))
 
 // load json data into store
 export const loadJSONDataEpic: Epic<any, any, ApplicationState> = (action$) =>
@@ -55,7 +55,7 @@ export const boostrapEndRemoveLoaderEpic: Epic<any, any, ApplicationState> = (ac
       // loader on initial html no longer visible. remove.
       (document.getElementById('loader') as HTMLElement).remove()
     }),
-    mapTo({ type: BOOTSTRAP_END_LOADER}), )
+    mapTo({ type: BOOTSTRAP_END_LOADER }))
 
 export const bootstrapEpics = combineEpics(
   bootstrapStartEpic,
@@ -67,7 +67,7 @@ export const bootstrapEpics = combineEpics(
 // remove loader from html and render app on DOM
 export const initialState = Immutable<ReduxState>({ finished: false, data: null, error: false })
 
-const bootstrapReducer =  (state = initialState, action: Action<any>) => {
+const bootstrapReducer = (state = initialState, action: Action<any>) => {
   switch (action.type) {
     case BOOTSTRAP_START:
       return state.merge({ finished: false })
