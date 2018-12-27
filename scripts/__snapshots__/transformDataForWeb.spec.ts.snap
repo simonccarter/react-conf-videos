@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`transformDataFromJson should match the snapshot 1`] = `
+Object {
+  "conferences": Object {
+    "4ac2e3d9fae08a6244acdcb6674241f5": Object {
+      "date": "26-10-2016",
+      "playlist": "https://www.youtube.com/watch?v=gbATtWPUfN0&list=PLa2ZZ09WYepMCRRGCRPhTYuTCat4TiDlX",
+      "title": "ReactiveConf 2016",
+      "videos": Array [
+        "e38a7477b4a32c60b4a4e335088fbb13",
+      ],
+      "website": "https://reactiveconf.com/2016/",
+    },
+    "7c326717c1d63a4e6c463bcb67282cb0": Object {
+      "date": "13-03-2017",
+      "playlist": "https://www.youtube.com/playlist?list=PLb0IAmt7-GS3fZ46IGFirdqKTIxlws7e0",
+      "title": "React Conf 2017",
+      "videos": Array [
+        "9bfe521a9d5efe1295fb067b782053d1",
+        "69e8e781bb8f9f5bb551a8bc3d05350e",
+      ],
+      "website": "http://conf.reactjs.org/",
+    },
+    "8cf7e530d626ed7ed861269c02584762": Object {
+      "date": "24-08-2017",
+      "playlist": "https://www.youtube.com/watch?v=2rhkgB8Cohc&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531",
+      "title": "React Rally 2017",
+      "videos": Array [
+        "6cd82a18676ecd3c6f82b87daf039034",
+        "f1f452fab14f3ca40842b66e75cf325c",
+      ],
+      "website": "http://www.reactrally.com/",
+    },
+  },
+  "presenters": Object {
+    "0987584bfb9534c15e44ccb086a56285": Object {
+      "name": "Tom Occhino",
+    },
+    "14812e351616b3d5b96188d95e638b62": Object {
+      "name": "Jing Chen",
+    },
+    "398aaf027085022305a87a80f4f9481d": Object {
+      "name": "Shirley Wu",
+    },
+    "73ba86b876d27e14d1bd333d942a15df": Object {
+      "name": "Michael Jackson",
+    },
+    "9769268b8b01cbb09da37dbb6d31e943": Object {
+      "name": "Tomaš Kulich",
+    },
+  },
+  "presentersSearchable": Object {
+    "0987584bfb9534c15e44ccb086a56285": Object {
+      "name": "tom occhino",
+    },
+    "14812e351616b3d5b96188d95e638b62": Object {
+      "name": "jing chen",
+    },
+    "398aaf027085022305a87a80f4f9481d": Object {
+      "name": "shirley wu",
+    },
+    "73ba86b876d27e14d1bd333d942a15df": Object {
+      "name": "michael jackson",
+    },
+    "9769268b8b01cbb09da37dbb6d31e943": Object {
+      "name": "tomas kulich",
+    },
+  },
+  "videos": Object {
+    "69e8e781bb8f9f5bb551a8bc3d05350e": Object {
+      "embeddableLink": "https://www.youtube.com/embed/cSUxHv-kH7w",
+      "length": "14:13",
+      "link": "https://www.youtube.com/watch?v=cSUxHv-kH7w&list=PLb0IAmt7-GS3fZ46IGFirdqKTIxlws7e0&index=2",
+      "presenter": "14812e351616b3d5b96188d95e638b62",
+      "split": "Day 1",
+      "title": "Keynote Part 2 - Incrementally Adopting React Native at Facebook",
+    },
+    "6cd82a18676ecd3c6f82b87daf039034": Object {
+      "embeddableLink": "https://www.youtube.com/embed/2rhkgB8Cohc",
+      "length": "31:46",
+      "link": "https://www.youtube.com/watch?v=2rhkgB8Cohc&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531",
+      "presenter": "73ba86b876d27e14d1bd333d942a15df",
+      "split": "Day 1",
+      "title": "UNPKG: The CDN for everything on npm",
+    },
+    "9bfe521a9d5efe1295fb067b782053d1": Object {
+      "embeddableLink": "https://www.youtube.com/embed/7HSd1sk07uU",
+      "length": "6:36",
+      "link": "https://www.youtube.com/watch?v=7HSd1sk07uU&index=1&list=PLb0IAmt7-GS3fZ46IGFirdqKTIxlws7e0",
+      "presenter": "0987584bfb9534c15e44ccb086a56285",
+      "split": "Day 1",
+      "title": "Keynote Part 1",
+    },
+    "e38a7477b4a32c60b4a4e335088fbb13": Object {
+      "embeddableLink": "https://www.youtube.com/embed/gZz-1OaMpqg",
+      "length": "35:43",
+      "link": "https://www.youtube.com/watch?v=gZz-1OaMpqg&index=29&list=PLa2ZZ09WYepMCRRGCRPhTYuTCat4TiDlX",
+      "presenter": "9769268b8b01cbb09da37dbb6d31e943",
+      "split": "Day 2",
+      "title": "Writing Sound Asynchronous Code with Coroutines",
+    },
+    "f1f452fab14f3ca40842b66e75cf325c": Object {
+      "embeddableLink": "https://www.youtube.com/embed/ladXdJ3KKd4",
+      "length": "26:57",
+      "link": "https://www.youtube.com/watch?v=ladXdJ3KKd4&index=2&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531",
+      "presenter": "398aaf027085022305a87a80f4f9481d",
+      "split": "Day 1",
+      "title": "D3 & React",
+    },
+  },
+  "videosSearchable": Object {
+    "69e8e781bb8f9f5bb551a8bc3d05350e": Object {
+      "embeddableLink": "https://www.youtube.com/embed/cSUxHv-kH7w",
+      "length": "14:13",
+      "link": "https://www.youtube.com/watch?v=cSUxHv-kH7w&list=PLb0IAmt7-GS3fZ46IGFirdqKTIxlws7e0&index=2",
+      "presenter": "14812e351616b3d5b96188d95e638b62",
+      "split": "day 1",
+      "title": "keynote part 2 - incrementally adopting react native at facebook",
+    },
+    "6cd82a18676ecd3c6f82b87daf039034": Object {
+      "embeddableLink": "https://www.youtube.com/embed/2rhkgB8Cohc",
+      "length": "31:46",
+      "link": "https://www.youtube.com/watch?v=2rhkgB8Cohc&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531",
+      "presenter": "73ba86b876d27e14d1bd333d942a15df",
+      "split": "day 1",
+      "title": "unpkg: the cdn for everything on npm",
+    },
+    "9bfe521a9d5efe1295fb067b782053d1": Object {
+      "embeddableLink": "https://www.youtube.com/embed/7HSd1sk07uU",
+      "length": "6:36",
+      "link": "https://www.youtube.com/watch?v=7HSd1sk07uU&index=1&list=PLb0IAmt7-GS3fZ46IGFirdqKTIxlws7e0",
+      "presenter": "0987584bfb9534c15e44ccb086a56285",
+      "split": "day 1",
+      "title": "keynote part 1",
+    },
+    "e38a7477b4a32c60b4a4e335088fbb13": Object {
+      "embeddableLink": "https://www.youtube.com/embed/gZz-1OaMpqg",
+      "length": "35:43",
+      "link": "https://www.youtube.com/watch?v=gZz-1OaMpqg&index=29&list=PLa2ZZ09WYepMCRRGCRPhTYuTCat4TiDlX",
+      "presenter": "9769268b8b01cbb09da37dbb6d31e943",
+      "split": "day 2",
+      "title": "writing sound asynchronous code with coroutines",
+    },
+    "f1f452fab14f3ca40842b66e75cf325c": Object {
+      "embeddableLink": "https://www.youtube.com/embed/ladXdJ3KKd4",
+      "length": "26:57",
+      "link": "https://www.youtube.com/watch?v=ladXdJ3KKd4&index=2&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531",
+      "presenter": "398aaf027085022305a87a80f4f9481d",
+      "split": "day 1",
+      "title": "d3 & react",
+    },
+  },
+}
+`;
