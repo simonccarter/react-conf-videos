@@ -1,15 +1,7 @@
+import * as crypto from 'crypto'
 import { schema } from 'normalizr'
 
-type ToHash = {
-  title?: string
-  name?: string
-}
-const hashFunction = (toHash: ToHash) => {
-  const key =
-    toHash.title ? toHash.title :
-      toHash.name ? toHash.name : toHash
-  return btoa(encodeURIComponent(JSON.stringify(key)))
-}
+const hashFunction = (toHash: string) => crypto.createHash('md5').update(JSON.stringify(toHash)).digest('hex')
 
 const hashIdOpts = { idAttribute: hashFunction }
 
@@ -21,4 +13,6 @@ const conference = new schema.Entity('conferences', {
   videos: [video]
 }, hashIdOpts)
 
-export const conferenceSchema = new schema.Array(conference)
+const conferenceSchema = new schema.Array(conference)
+
+module.exports = conferenceSchema
