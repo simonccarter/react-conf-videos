@@ -5,7 +5,8 @@ import { Route, Switch } from 'react-router'
 import { Redirect } from 'react-router-dom'
 import { hot } from 'react-hot-loader'
 
-import { Tracker, ConfPage, FrontPage } from 'components/Pages'
+import { Tracker } from 'components'
+import { ConfPage, FrontPage } from 'components/Pages'
 
 import './index.scss'
 

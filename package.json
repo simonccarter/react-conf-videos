@@ -8,14 +8,12 @@
     "node": ">=8.9.4"
   },
   "scripts": {
-    "buildData": "npm run buildIndex & npm run createReadme",
-    "buildIndex": "ts-node --project ./scripts/tsconfig.json ./scripts/transformDataForWeb.ts build",
     "clean": "rm -rf ./dist",
     "createReadme": "ts-node --project ./scripts/tsconfig.json ./scripts/json2readme.ts > README.md",
     "lint": "tslint -p tsconfig.json -e '**/*.js' -t stylish",
     "lint:fix": "tslint -p tsconfig.json -e '**/*.js' -t stylish --fix",
-    "prod": "npm run clean & npm run buildData & webpack --progress --config webpack.prod.js",
-    "start": "npm run buildData & webpack-dev-server --config webpack.config.js",
+    "prod": "npm run clean & npm run createReadme & webpack --progress --config webpack.prod.js",
+    "start": "npm run createReadme & webpack-dev-server --config webpack.config.js",
     "test": "cross-env NODE_ENV=test jest --no-cache --coverage --config=config/test/jestconfig.json --maxWorkers=2",
     "test:dev": "cross-env NODE_ENV=test jest --watch  --config=config/test/jestconfig.json",
     "types": "tsc --noEmit"
@@ -82,8 +80,8 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-loader": "8.0.4",
     "babel-plugin-lodash": "^3.3.4",
-    "babel-preset-env": "1.7.0",
     "babel-plugin-ramda": "^2.0.0",
+    "babel-preset-env": "1.7.0",
     "babel-preset-react": "6.24.1",
     "cross-env": "5.2.0",
     "css-loader": "0.28.11",
