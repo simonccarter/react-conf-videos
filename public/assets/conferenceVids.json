@@ -1,10 +1,182 @@
 [
   {
+    "title": "React Boston",
+    "date": "29-09-2018",
+    "website": "http://www.reactboston.com/",
+    "playlist": {
+      "Day 1 & 2": "https://www.youtube.com/watch?v=jvEFw0YpGgg&list=PLhBlV3WSUrT26VEZXlNdEIMQ3h3zKOtaj"
+    },
+    "videos": [
+      {
+        "title": "ReasonML (Opening Keynote)",
+        "link": "https://www.youtube.com/watch?v=jvEFw0YpGgg&list=PLhBlV3WSUrT26VEZXlNdEIMQ3h3zKOtaj",
+        "presenter": {
+          "name": "Ken Wheeler"
+        },
+        "length": "50:18",
+        "split": "Day 1"
+      },
+      {
+        "title": "React & GraphQL – Bringing Simplicity to Client Side Development",
+        "link": "https://www.youtube.com/watch?v=Qsoj4s_Ml6s&list=PLhBlV3WSUrT26VEZXlNdEIMQ3h3zKOtaj&index=2",
+        "presenter": {
+          "name": "Chris Toomey"
+        },
+        "length": "30:11",
+        "split": "Day 1"
+      },
+      {
+        "title": "Horror Stories From Hacking the DOM Into a Native Platform",
+        "link": "https://www.youtube.com/watch?v=dlIVDbn6eiQ&index=3&list=PLhBlV3WSUrT26VEZXlNdEIMQ3h3zKOtaj",
+        "presenter": {
+          "name": "Vincent Riemer"
+        },
+        "length": "36:10",
+        "split": "Day 1"
+      },
+      {
+        "title": "From Sketch to Code – Designing a Component Kit ",
+        "link": "https://www.youtube.com/watch?v=DTrWeUaZRJk&index=4&list=PLhBlV3WSUrT26VEZXlNdEIMQ3h3zKOtaj",
+        "presenter": {
+          "name": "Samantha Bretous"
+        },
+        "length": "28:26",
+        "split": "Day 1"
+      },
+      {
+        "title": "The State of Redux",
+        "link": "https://www.youtube.com/watch?v=zWsXFn5-xDU&index=5&list=PLhBlV3WSUrT26VEZXlNdEIMQ3h3zKOtaj",
+        "presenter": {
+          "name": "Mark Erikson"
+        },
+        "length": "25:28",
+        "split": "Day 1"
+      },
+      {
+        "title": "Lightning Talks: Day 1",
+        "link": "https://www.youtube.com/watch?v=30wOsJOluA4&list=PLhBlV3WSUrT26VEZXlNdEIMQ3h3zKOtaj&index=6",
+        "presenter": {
+          "name": "n/a"
+        },
+        "length": "33:49",
+        "split": "Day 1"
+      },
+      {
+        "title": "The Art of Humanizing Pull Requests",
+        "link": "https://www.youtube.com/watch?v=L6Mh2h5Tunw&list=PLhBlV3WSUrT26VEZXlNdEIMQ3h3zKOtaj&index=7",
+        "presenter": {
+          "name": "Ankita Kulkarni:"
+        },
+        "length": "25:26",
+        "split": "Day 1"
+      },
+      {
+        "title": "Custom CSS is the Path to Inconsistent UI",
+        "link": "https://www.youtube.com/watch?v=t5VTLwAias8&list=PLhBlV3WSUrT26VEZXlNdEIMQ3h3zKOtaj&index=8",
+        "presenter": {
+          "name": "Artem Sapegin"
+        },
+        "length": "23:23",
+        "split": "Day 1"
+      },
+      {
+        "title": "Streaming React for Faster UIs",
+        "link": "https://www.youtube.com/watch?v=lKG3nYpPgtM&index=9&list=PLhBlV3WSUrT26VEZXlNdEIMQ3h3zKOtaj",
+        "presenter": {
+          "name": "Tejas Kumar"
+        },
+        "length": "30:51",
+        "split": "Day 1"
+      },
+      {
+        "title": "Building AR Apps with React Native",
+        "link": "https://www.youtube.com/watch?v=lN1DnHhludY&index=10&list=PLhBlV3WSUrT26VEZXlNdEIMQ3h3zKOtaj",
+        "presenter": {
+          "name": "Vladimir Novick"
+        },
+        "length": "39:03",
+        "split": "Day 1"
+      },
+      {
+        "title": "The Case for Whimsy",
+        "link": "https://www.youtube.com/watch?v=-XU75AEBykk&list=PLhBlV3WSUrT26VEZXlNdEIMQ3h3zKOtaj&index=11",
+        "presenter": {
+          "name": "Joshua Comeau"
+        },
+        "length": "42:22",
+        "split": "Day 2"
+      },
+      {
+        "title": "Beyond Web-Apps – React, JavaScript to Port Legacy Native Apps",
+        "link": "https://www.youtube.com/watch?v=EdTLGUU4r-k&index=12&list=PLhBlV3WSUrT26VEZXlNdEIMQ3h3zKOtaj",
+        "presenter": {
+          "name": "Florian Rival"
+        },
+        "length": "32:52",
+        "split": "Day 2"
+      },
+      {
+        "title": "Progressive React",
+        "link": "https://www.youtube.com/watch?v=zSECXuCB8wg&list=PLhBlV3WSUrT26VEZXlNdEIMQ3h3zKOtaj&index=13",
+        "presenter": {
+          "name": "Houssein Djirdeh"
+        },
+        "length": "25:59",
+        "split": "Day 2"
+      },
+      {
+        "title": "Introducing Undux – Simple Typesafe State Management for React",
+        "link": "https://www.youtube.com/watch?v=CpOE-JrtAdc&index=14&list=PLhBlV3WSUrT26VEZXlNdEIMQ3h3zKOtaj",
+        "presenter": {
+          "name": "Boris Cherny"
+        },
+        "length": "21:24",
+        "split": "Day 2"
+      },
+      {
+        "title": "Lightning Talks: Day 2",
+        "link": "https://www.youtube.com/watch?v=TbLRvnyo53g&list=PLhBlV3WSUrT26VEZXlNdEIMQ3h3zKOtaj&index=15",
+        "presenter": {
+          "name": "n/a"
+        },
+        "length": "47:46",
+        "split": "Day 2"
+      },
+      {
+        "title": "Deterministic Mocking with GraphQL and Apollo",
+        "link": "https://www.youtube.com/watch?v=K445DtQ5oHY&index=16&list=PLhBlV3WSUrT26VEZXlNdEIMQ3h3zKOtaj",
+        "presenter": {
+          "name": "Hillary Bauer and Mark Faga"
+        },
+        "length": "38:05",
+        "split": "Day 2"
+      },
+      {
+        "title": "Large Scale Migrations – Using Recast and jscodeshift to Scale",
+        "link": "https://www.youtube.com/watch?v=zO07nFlibH0&index=17&list=PLhBlV3WSUrT26VEZXlNdEIMQ3h3zKOtaj",
+        "presenter": {
+          "name": "Francois Ward:"
+        },
+        "length": "28:41",
+        "split": "Day 2"
+      },
+      {
+        "title": "A Romance of Many Dimensions",
+        "link": "https://www.youtube.com/watch?v=Vx9BeQSCAnc&list=PLhBlV3WSUrT26VEZXlNdEIMQ3h3zKOtaj&index=18",
+        "presenter": {
+          "name": "Matt Hamil"
+        },
+        "length": "31:49",
+        "split": "Day 2"
+      }
+    ]
+  },
+  {
     "title": "React Conf 2018",
     "date": "25-10-2018",
     "website": "http://conf.reactjs.org/",
     "playlist": "https://www.youtube.com/playlist?list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ",
-    "videos" : [
+    "videos": [
       {
         "title": "React Today and Tomorrow",
         "link": "https://www.youtube.com/watch?v=V-QO-KO90iQ&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=2",
@@ -12,7 +184,7 @@
           "name": "Sophie Alpert and Dan Abramov"
         },
         "length": "58:20",
-        "split" : "Day 1"
+        "split": "Day 1"
       },
       {
         "title": "90% Cleaner React",
@@ -21,7 +193,7 @@
           "name": "Ryan Florence"
         },
         "length": "33:37",
-        "split" : "Day 1"
+        "split": "Day 1"
       },
       {
         "title": "Building Todo The Game in a Cloud Only Dev Environment",
@@ -30,7 +202,7 @@
           "name": "Christina Holland"
         },
         "length": "34:58",
-        "split" : "Day 1"
+        "split": "Day 1"
       },
       {
         "title": "The Path to a Declaratively Animated Future",
@@ -39,7 +211,7 @@
           "name": "Matt Perry"
         },
         "length": "24:41",
-        "split" : "Day 1"
+        "split": "Day 1"
       },
       {
         "title": "Lightning Talk - What's new in Create React App",
@@ -48,7 +220,7 @@
           "name": "Joe Haddard"
         },
         "length": "4:16",
-        "split" : "Day 1"
+        "split": "Day 1"
       },
       {
         "title": "Lightning Talk - Components as Units of Work",
@@ -57,7 +229,7 @@
           "name": "Bryce Kallow"
         },
         "length": "4:54",
-        "split" : "Day 1"
+        "split": "Day 1"
       },
       {
         "title": "Lightning Talk - 5 Animations you Should Know and Use",
@@ -66,7 +238,7 @@
           "name": "Marcos Martins"
         },
         "length": "5:08",
-        "split" : "Day 1"
+        "split": "Day 1"
       },
       {
         "title": "Lightning Talk - Render Props, PureComponent and Reactivity",
@@ -75,7 +247,7 @@
           "name": "Karl Dray"
         },
         "length": "5:33",
-        "split" : "Day 1"
+        "split": "Day 1"
       },
       {
         "title": "Lightning Talk - Better living through Git Hooks",
@@ -84,7 +256,7 @@
           "name": "Leta Keane"
         },
         "length": "5:29",
-        "split" : "Day 1"
+        "split": "Day 1"
       },
       {
         "title": "GraphQl without GraphQL",
@@ -93,7 +265,7 @@
           "name": "Conor Hastings"
         },
         "length": "27:49",
-        "split" : "Day 1"
+        "split": "Day 1"
       },
       {
         "title": "Playing with Polyhedra Creating Beauty from Obsession",
@@ -102,7 +274,7 @@
           "name": "Nat Alison"
         },
         "length": "26:38",
-        "split" : "Day 1"
+        "split": "Day 1"
       },
       {
         "title": "Cross Platform AR and VR apps using React Native",
@@ -111,7 +283,7 @@
           "name": "Pulkit Kakkar"
         },
         "length": "26:16",
-        "split" : "Day 1"
+        "split": "Day 1"
       },
       {
         "title": "Beyond Web Apps React, Javascript and WebAssembly",
@@ -120,7 +292,7 @@
           "name": "Florian Rival"
         },
         "length": "30:01",
-        "split" : "Day 1"
+        "split": "Day 1"
       },
       {
         "title": "React for Social Change",
@@ -129,7 +301,7 @@
           "name": "Rodrigo Quezada"
         },
         "length": "18:58",
-        "split" : "Day 1"
+        "split": "Day 1"
       },
       {
         "title": "Concurrent Rendering in React",
@@ -138,7 +310,7 @@
           "name": "Andrew Clark and Brian Vaughn"
         },
         "length": "42:13",
-        "split" : "Day 2"
+        "split": "Day 2"
       },
       {
         "title": "Moving to Suspense",
@@ -147,7 +319,7 @@
           "name": "Jared Palmer"
         },
         "length": "30:50",
-        "split" : "Day 2"
+        "split": "Day 2"
       },
       {
         "title": "SVG Illustrations as React Components",
@@ -156,7 +328,7 @@
           "name": "Elizabet Oliveira"
         },
         "length": "20:40",
-        "split" : "Day 2"
+        "split": "Day 2"
       },
       {
         "title": "The Missing Abstraction of Charting",
@@ -165,7 +337,7 @@
           "name": "Chris Trevino"
         },
         "length": "28:03",
-        "split" : "Day 2"
+        "split": "Day 2"
       },
       {
         "title": "Elsa AI conversational Agent",
@@ -174,7 +346,7 @@
           "name": "Damini Satya Kammakoma"
         },
         "length": "30:27",
-        "split" : "Day 2"
+        "split": "Day 2"
       },
       {
         "title": "Lightning Talk - Context in React",
@@ -183,7 +355,7 @@
           "name": "Sophie Shoemaker"
         },
         "length": "5:40",
-        "split" : "Day 2"
+        "split": "Day 2"
       },
       {
         "title": "Lightning Talk - Building a Better Country through Tech",
@@ -192,7 +364,7 @@
           "name": "Manuela Castrillon"
         },
         "length": "4:52",
-        "split" : "Day 2"
+        "split": "Day 2"
       },
       {
         "title": "Lightning Talk - An Effective Code Review",
@@ -201,7 +373,7 @@
           "name": "Donavon West"
         },
         "length": "5:07",
-        "split" : "Day 2"
+        "split": "Day 2"
       },
       {
         "title": "Lightning Talk - Syncing Component State Across Tabs with Service Workers",
@@ -210,7 +382,7 @@
           "name": "Tyler Clarke"
         },
         "length": "5:26",
-        "split" : "Day 2"
+        "split": "Day 2"
       },
       {
         "title": "Block the Main Thread",
@@ -219,7 +391,7 @@
           "name": "James Long"
         },
         "length": "31:16",
-        "split" : "Day 2"
+        "split": "Day 2"
       },
       {
         "title": "React Native's New Arhictecture",
@@ -228,7 +400,7 @@
           "name": "Parashuram N"
         },
         "length": "31:16",
-        "split" : "Day 2"
+        "split": "Day 2"
       },
       {
         "title": "Let React Speak your Language",
@@ -237,7 +409,7 @@
           "name": "Tomáš Ehrlich"
         },
         "length": "29:30",
-        "split" : "Day 2"
+        "split": "Day 2"
       },
       {
         "title": "Building a Diverse and Inclusive Community",
@@ -246,7 +418,7 @@
           "name": "Eyitayo Alimi"
         },
         "length": "17:04",
-        "split" : "Day 2"
+        "split": "Day 2"
       },
       {
         "title": "React for Designers with FramerX",
@@ -255,7 +427,7 @@
           "name": "Thomas Aylott"
         },
         "length": "28:41",
-        "split" : "Day 2"
+        "split": "Day 2"
       }
     ]
   },
@@ -644,7 +816,7 @@
         },
         "length": "42:39",
         "split": "Day 2"
-      }      
+      }
     ]
   },
   {
@@ -655,7 +827,7 @@
       "Day 1": "https://www.youtube.com/playlist?list=PLRvKvw42Rc7N0QpX2Rc5CdrqGuxzwD_0H",
       "Day 2": "https://www.youtube.com/playlist?list=PLRvKvw42Rc7Ne46QAjWNWFo1Jf0mQdnIW"
     },
-    "videos" : [
+    "videos": [
       {
         "title": "Welcome to Reactathon",
         "link": "https://www.youtube.com/watch?v=57hmk4GvJpk&index=2&t=0s&list=PLRvKvw42Rc7N0QpX2Rc5CdrqGuxzwD_0H",
@@ -863,7 +1035,7 @@
     "playlist": {
       "General and React Native Track": "https://www.youtube.com/watch?v=smBND2pwdUE&index=2&t=0s&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm"
     },
-    "videos" : [
+    "videos": [
       {
         "title": "Reactive Programming Demystified: Drink the Kool-Aid",
         "link": "https://www.youtube.com/watch?v=nlj3HkMpla4&index=4&list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm&t=0s",
@@ -1053,7 +1225,7 @@
     "playlist": {
       "Day 1 & 2": "https://www.youtube.com/playlist?list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle"
     },
-    "videos" : [
+    "videos": [
       {
         "title": "Keynote: Simply React",
         "link": "https://www.youtube.com/watch?v=M9X2qGddHkU&t=0s&list=PLFHvL21g9bk1skdjnKVGXREDmP_HVDj-u&index=2",
@@ -1259,7 +1431,7 @@
     "date": "09-03-2018",
     "website": "https://reactfest.com/",
     "playlist": "https://www.youtube.com/playlist?list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle",
-    "videos" : [
+    "videos": [
       {
         "title": "GraphQL Servers in the Browser",
         "link": "https://www.youtube.com/watch?v=YOCrJ5vRCnw&t=1s&index=2&list=PLRgweB8YtNRt-Sf-A0y446wTJNUaAAmle",
@@ -1387,7 +1559,7 @@
     "date": "24-08-2017",
     "website": "http://www.reactrally.com/",
     "playlist": "https://www.youtube.com/watch?v=2rhkgB8Cohc&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531",
-    "videos":   [
+    "videos": [
       {
         "title": "UNPKG: The CDN for everything on npm",
         "link": "https://www.youtube.com/watch?v=2rhkgB8Cohc&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531",
@@ -1792,8 +1964,8 @@
     "date": "10-09-2017",
     "website": "https://react-next.com/",
     "playlist": {
-      "Hall A" : "https://www.youtube.com/playlist?list=PLMYVq3z1QxSqq6D7jxVdqttOX7H_Brq8Z",
-      "Hall B" : "https://www.youtube.com/playlist?list=PLMYVq3z1QxSqCZmaqgTXLsrcJ8mZmBF7T"
+      "Hall A": "https://www.youtube.com/playlist?list=PLMYVq3z1QxSqq6D7jxVdqttOX7H_Brq8Z",
+      "Hall B": "https://www.youtube.com/playlist?list=PLMYVq3z1QxSqCZmaqgTXLsrcJ8mZmBF7T"
     },
     "videos": [
       {
@@ -1974,7 +2146,7 @@
     "date": "22-02-2016",
     "website": "http://conf2016.reactjs.org/",
     "playlist": "https://www.youtube.com/watch?v=2rhkgB8Cohc&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531",
-    "videos":   [
+    "videos": [
       {
         "title": "Keynote",
         "link": "https://www.youtube.com/watch?v=MGuKhcnrqGA&index=1&list=PLb0IAmt7-GS0M8Q95RIc2lOM6nc77q1IY",
@@ -2110,7 +2282,7 @@
     "date": "10-04-2016",
     "website": "https://react.amsterdam/2016/",
     "playlist": "https://www.youtube.com/playlist?list=PLNBNS7NRGKMG3uLrm5fgY02hJ87Wzb4IU&disable_polymer=true",
-    "videos":   [
+    "videos": [
       {
         "title": "Migrating Safely to React",
         "link": "https://www.youtube.com/watch?v=sXDZBxbRRag&index=1&list=PLNBNS7NRGKMG3uLrm5fgY02hJ87Wzb4IU",
@@ -2418,7 +2590,7 @@
     "date": "25-09-2016",
     "website": "http://www.reactrally.com/",
     "playlist": "https://www.youtube.com/playlist?list=PLUD4kD-wL_zYSfU3tIYsb4WqfFQzO_EjQ",
-    "videos":  [
+    "videos": [
       {
         "title": "Building React From Scratch",
         "link": "https://www.youtube.com/watch?v=_MAD4Oly9yg&list=PLUD4kD-wL_zYSfU3tIYsb4WqfFQzO_EjQ",
@@ -2586,7 +2758,7 @@
     "date": "26-10-2016",
     "website": "https://reactiveconf.com/2016/",
     "playlist": "https://www.youtube.com/watch?v=gbATtWPUfN0&list=PLa2ZZ09WYepMCRRGCRPhTYuTCat4TiDlX",
-    "videos":   [
+    "videos": [
       {
         "title": "ReactiveConf 2016 in a Nutshell",
         "link": "https://www.youtube.com/watch?v=gbATtWPUfN0&list=PLa2ZZ09WYepMCRRGCRPhTYuTCat4TiDlX",
@@ -2819,7 +2991,7 @@
     "date": "28-01-2015",
     "website": "http://conf2015.reactjs.org/",
     "playlist": "https://www.youtube.com/playlist?list=PLb0IAmt7-GS1cbw4qonlQztYV1TAW0sCr",
-    "videos":     [
+    "videos": [
       {
         "title": "Keynote - Introducing React Native",
         "link": "https://www.youtube.com/watch?v=KVZ-P-ZI6W4&index=1&list=PLb0IAmt7-GS1cbw4qonlQztYV1TAW0sCr",
