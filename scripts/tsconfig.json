@@ -1,7 +1,12 @@
-
 {
   "compilerOptions": {
     "baseUrl": "./",
-    "lib": ["es6"]
+    "lib": [
+      "es6"
+    ],
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitAny": false
   }
 }
