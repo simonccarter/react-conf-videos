@@ -1,5 +1,133 @@
 [
   {
+    "title": "React Day Berlin",
+    "date": "30-11-2018",
+    "website": "https://reactday.berlin/#intro",
+    "playlist": "https://www.youtube.com/playlist?list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC",
+    "videos": [
+      {
+        "title": "The New Hotness: An Exploration of Reacts Exciting New Features",
+        "link": "https://www.youtube.com/watch?v=p8v9X2TNQKA&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&t=0s&index=5",
+        "presenter": {
+          "name": "Ken Wheeler"
+        },
+        "length": "37:04"
+      },
+      {
+        "title": "Powering Code Reuse with Context and Render Props",
+        "link": "https://www.youtube.com/watch?v=9QateTvcT1k&index=5&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC",
+        "presenter": {
+          "name": "Forbes Lindsay"
+        },
+        "length": "21:34"
+      },
+      {
+        "title": "Feature Driven Architecture",
+        "link": "https://www.youtube.com/watch?v=BWAeYuWFHhs&index=6&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC",
+        "presenter": {
+          "name": "Oleg Isonen"
+        },
+        "length": "29:53"
+      },
+      {
+        "title": "Secrets to a Successful Design System",
+        "link": "https://www.youtube.com/watch?v=88TOxfKzkHw&index=7&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC",
+        "presenter": {
+          "name": "Monica Lent"
+        },
+        "length": "25:09"
+      },
+      {
+        "title": "Tip Top Testing in JavaScript",
+        "link": "https://www.youtube.com/watch?v=cB5WZgMwdpE&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=8",
+        "presenter": {
+          "name": "Jack Franklin"
+        },
+        "length": "26:12"
+      },
+      {
+        "title": "Lightning Talk - Evolution of UI/UX in blockchain",
+        "link": "https://www.youtube.com/watch?v=1oFZwomhMew&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=9",
+        "presenter": {
+          "name": "Max Kordek"
+        },
+        "length": "5:58"
+      },
+      {
+        "title": "Lightning Talk - Milliseconds Matter",
+        "link": "https://www.youtube.com/watch?v=GEsWmfIV0B0&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=11",
+        "presenter": {
+          "name": "Bård Farstad"
+        },
+        "length": "05:19"
+      },
+      {
+        "title": "Lightning Talk - Onboarding Mobile Developers to the Strange World of JS and React",
+        "link": "https://www.youtube.com/watch?v=I0qrrjNVsLg&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=12",
+        "presenter": {
+          "name": "Denis Washington"
+        },
+        "length": "06:08"
+      },
+      {
+        "title": "Lightning Talk - 3D Components in React Application",
+        "link": "https://www.youtube.com/watch?v=Xnwb9-3-NTE&index=13&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC",
+        "presenter": {
+          "name": "Denys Periel"
+        },
+        "length": "06:46"
+      },
+      {
+        "title": "GitNation Open Source Stage",
+        "link": "https://www.youtube.com/watch?v=Lzb28YoKSoc&index=14&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC",
+        "presenter": {
+          "name": "n/a"
+        },
+        "length": "23:56"
+      },
+      {
+        "title": "Navigating the Hype-Driven Frontend Development World Without Going Insane",
+        "link": "https://www.youtube.com/watch?v=QZ6aC6G0ufg&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=15",
+        "presenter": {
+          "name": "Kitze"
+        },
+        "length": "33:34"
+      },
+      {
+        "title": "Structure Your App's Story With Sagas and Selectors",
+        "link": "https://www.youtube.com/watch?v=Q1_RfF_qRMc&index=17&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC",
+        "presenter": {
+          "name": "Rebecca Hill"
+        },
+        "length": "28:46"
+      },
+      {
+        "title": "The Lonely and Dark Road to Styling in React",
+        "link": "https://www.youtube.com/watch?v=M3AceCsW0oM&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=19",
+        "presenter": {
+          "name": "Sara Vieira"
+        },
+        "length": "28:51"
+      },
+      {
+        "title": "Designing React Native Modules For Every Platform",
+        "link": "https://www.youtube.com/watch?v=QrBXCvtA9dU&index=21&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC",
+        "presenter": {
+          "name": "Vincent Riemer"
+        },
+        "length": "24:51"
+      },
+      {
+        "title": "Abstracting the Business Away with React+Redux",
+        "link": "https://www.youtube.com/watch?v=DpHdO7vxcZs&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=27",
+        "presenter": {
+          "name": "Elianne Schutze"
+        },
+        "length": "23:52"
+      }
+    ]
+  },
+  {
     "title": "ReactNext 2018",
     "date": "04-11-2018",
     "website": "https://2018.react-next.com/",
