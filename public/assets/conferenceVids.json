@@ -1,5 +1,141 @@
 [
   {
+    "title": "ReactNext 2018",
+    "date": "04-11-2018",
+    "website": "https://2018.react-next.com/",
+    "playlist": "https://www.youtube.com/playlist?list=PLMYVq3z1QxSr3ABOx2gwuD7jBDbWIUdw1",
+    "videos": [
+      {
+        "title": "React Responsively, Render Responsibly",
+        "link": "https://www.youtube.com/watch?v=O6pLZK3R2II&index=2&list=PLMYVq3z1QxSr3ABOx2gwuD7jBDbWIUdw1&t=0s",
+        "presenter": {
+          "name": "Yoav Niran"
+        },
+        "length": "16:51"
+      },
+      {
+        "title": "MonoRepos for the Masses",
+        "link": "https://www.youtube.com/watch?v=rdeBtjBNcDI&list=PLMYVq3z1QxSr3ABOx2gwuD7jBDbWIUdw1&index=2",
+        "presenter": {
+          "name": "Marcel Cutts"
+        },
+        "length": "30:37"
+      },
+      {
+        "title": "Breaking Down Your Web App",
+        "link": "https://www.youtube.com/watch?v=hN_UmUdEmuU&index=3&list=PLMYVq3z1QxSr3ABOx2gwuD7jBDbWIUdw1",
+        "presenter": {
+          "name": "Patrick Hund"
+        },
+        "length": "24:39"
+      },
+      {
+        "title": "Lessons Learned Reading the Source-Code of 18 React Libraries",
+        "link": "https://www.youtube.com/watch?v=9z_4gd5xH9M&list=PLMYVq3z1QxSr3ABOx2gwuD7jBDbWIUdw1&index=4",
+        "presenter": {
+          "name": "Yonatan Mevorach"
+        },
+        "length": "25:20"
+      },
+      {
+        "title": "Functional Programming Fundamentals",
+        "link": "https://www.youtube.com/watch?v=Pjc1AnBLG8c&list=PLMYVq3z1QxSr3ABOx2gwuD7jBDbWIUdw1&index=5",
+        "presenter": {
+          "name": "Matthew Gerstman"
+        },
+        "length": "30:02"
+      },
+      {
+        "title": "Immer, Immutability and the Wonderful World of Proxies",
+        "link": "https://www.youtube.com/watch?v=FKRVDfpQ9cw&index=6&list=PLMYVq3z1QxSr3ABOx2gwuD7jBDbWIUdw1",
+        "presenter": {
+          "name": "Michel Weststrate"
+        },
+        "length": "30:01"
+      },
+      {
+        "title": "Building a Maintainable UI with Storybook",
+        "link": "https://www.youtube.com/watch?v=9lQMmbITt0c&index=7&list=PLMYVq3z1QxSr3ABOx2gwuD7jBDbWIUdw1",
+        "presenter": {
+          "name": "Norbert de Langen"
+        },
+        "length": "27:06"
+      },
+      {
+        "title": "Advanced Patterns",
+        "link": "https://www.youtube.com/watch?v=GjkIxno8bik&list=PLMYVq3z1QxSr3ABOx2gwuD7jBDbWIUdw1&index=8",
+        "presenter": {
+          "name": "Robert Herbst"
+        },
+        "length": "30:02"
+      },
+      {
+        "title": "(Don't) Blame ot on React Native",
+        "link": "https://www.youtube.com/watch?v=U3uI7jHV458&list=PLMYVq3z1QxSr3ABOx2gwuD7jBDbWIUdw1&index=9",
+        "presenter": {
+          "name": "Ofir Dagan"
+        },
+        "length": "13:42"
+      },
+      {
+        "title": "Wiring TypeScript into React",
+        "link": "https://www.youtube.com/watch?v=nI6eD6pFGdA&list=PLMYVq3z1QxSr3ABOx2gwuD7jBDbWIUdw1&index=10",
+        "presenter": {
+          "name": "Gil Fink"
+        },
+        "length": "14:53"
+      },
+      {
+        "title": "Applying Microservices Design Patterns to Scale React App Development",
+        "link": "https://www.youtube.com/watch?v=k3ZJVN9Drmw&list=PLMYVq3z1QxSr3ABOx2gwuD7jBDbWIUdw1&index=11",
+        "presenter": {
+          "name": "Itay Maoz"
+        },
+        "length": "14:49"
+      },
+      {
+        "title": "Migrating from Angular to React",
+        "link": "https://www.youtube.com/watch?v=NbJy1ZPrVYE&index=12&list=PLMYVq3z1QxSr3ABOx2gwuD7jBDbWIUdw1",
+        "presenter": {
+          "name": "Maayan Glikser"
+        },
+        "length": "31:33"
+      },
+      {
+        "title": "State of the React Ecosystem",
+        "link": "https://www.youtube.com/watch?v=yOWzQOZIANU&list=PLMYVq3z1QxSr3ABOx2gwuD7jBDbWIUdw1&index=13",
+        "presenter": {
+          "name": "Ben Ilegbodu"
+        },
+        "length": "33:33"
+      },
+      {
+        "title": "How to Write Bad Code in Redux",
+        "link": "https://www.youtube.com/watch?v=5JALXEkft2E&list=PLMYVq3z1QxSr3ABOx2gwuD7jBDbWIUdw1&index=14",
+        "presenter": {
+          "name": "Adam Klein"
+        },
+        "length": "27:05"
+      },
+      {
+        "title": "Building React Native",
+        "link": "https://www.youtube.com/watch?v=FX_WBhuioGo&list=PLMYVq3z1QxSr3ABOx2gwuD7jBDbWIUdw1&index=15",
+        "presenter": {
+          "name": "Parashuram N"
+        },
+        "length": "28:48"
+      },
+      {
+        "title": "Motion in React",
+        "link": "https://www.youtube.com/watch?v=Jz7gpHR5Bf4&index=16&list=PLMYVq3z1QxSr3ABOx2gwuD7jBDbWIUdw1",
+        "presenter": {
+          "name": "Kaylie Kwon"
+        },
+        "length": "16:41"
+      }
+    ]
+  },
+  {
     "title": "React Boston",
     "date": "29-09-2018",
     "website": "http://www.reactboston.com/",
