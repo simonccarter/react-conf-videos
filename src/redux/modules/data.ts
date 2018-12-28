@@ -3,7 +3,7 @@ import * as Immutable from 'seamless-immutable'
 import { map } from 'rxjs/operators'
 import { normalize } from 'normalizr'
 import { combineEpics, Epic } from 'redux-observable'
-import { ifElse, either, is, mapObjIndexed, merge, compose, toLower } from 'ramda'
+import { sort, ifElse, either, is, mapObjIndexed, merge, compose, toLower } from 'ramda'
 
 import { conferenceSchema } from '../../../scripts/confSchema'
 import { remove as removeDiacritics } from 'diacritics'
@@ -12,6 +12,7 @@ import {
   Action,
   JSONInput,
   IndexedVideos,
+  ConferenceInput,
   IndexedPresenters,
   IndexedConferences,
   ConferenceTitlesToIds
@@ -65,10 +66,42 @@ const addEmbeddableLinksToVideos = (data: JSONInput): JSONInput => {
   })
 }
 
+export const sortByDate = sort((a: ConferenceInput, b: ConferenceInput) => {
+  const [aD, aM, aY] = a.date.split('-')
+  const [bD, bM, bY] = b.date.split('-')
+
+  // 1t first compare years for difference
+  if (parseFloat(aY) < parseFloat(bY)) {
+    return 1
+  } else if (parseFloat(aY) > parseFloat(bY)) {
+    return -1
+  }
+
+  // otherwise look at months
+  if (parseFloat(aM) < parseFloat(bM)) {
+    return 1
+  } else if (parseFloat(aM) > parseFloat(bM)) {
+    return -1
+  }
+
+  // finally look at days
+  if (parseFloat(aD) < parseFloat(bD)) {
+    return 1
+  } else if (parseFloat(aD) > parseFloat(bD)) {
+    return -1
+  }
+
+  // they are the same
+  return 0
+})
+
 // normalize data
 export const transformDataFromJson = (data: JSONInput): ReduxState => {
+  // sort confs by date
+  const confs = sortByDate(data)
+
   // add embeddable links to videos
-  const dataWithEmbeddableLinks = addEmbeddableLinksToVideos(data)
+  const dataWithEmbeddableLinks = addEmbeddableLinksToVideos(confs)
 
   // normalize
   const normalized = normalize(dataWithEmbeddableLinks, conferenceSchema)
