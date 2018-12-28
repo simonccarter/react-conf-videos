@@ -1,30 +1,30 @@
-const fs = require('fs')
-const {
+import * as fs from 'fs'
+import * as moment from 'moment'
+
+import {
   is,
   zip,
   map,
   uniq,
-  prop,
+  sort,
   isNil,
   pluck,
   curry,
   ifElse,
-  sortBy,
   filter,
   length,
   propEq,
   reject,
   compose,
   flatten,
-  reverse,
   forEachObjIndexed
-} = require('ramda')
+} from 'ramda'
 
-import { JSONInput, VideoInput } from '../src/domain'
+import { JSONInput, ConferenceInput, VideoInput } from '../src/domain'
 
 const isTest = process.env.NODE_ENV === 'test'
 
-const conferenceVids = JSON.parse(fs.readFileSync('./public/assets/conferenceVids.json'))
+const conferenceVids = JSON.parse(fs.readFileSync('./public/assets/conferenceVids.json', 'utf-8'))
 
 const extratYearFromDDMMYY = (date: string) => date.split('-')[2]
 
@@ -33,14 +33,14 @@ const computePlaylistDetails = ifElse(
   (playlist: string) => ` - [playlist](${playlist})`,
   (playlist: any) => {
     let playlists = ''
-    forEachObjIndexed((val: string, key: string) => {
+    forEachObjIndexed<string>((val, key) => {
       playlists += ` - [playlist: ${key}](${val})`
     }, playlist)
     return playlists
   }
 )
 
-type ConfDetails = { title: string, website: string, playlist: string}
+type ConfDetails = { title: string, website: string, playlist: string }
 const conferenceDetails = ({ title, website, playlist = '' }: ConfDetails) => {
   let output = ''
   output += `\n### ${title}\n\n##### ${website ? `[website](${website})` : ''}`
@@ -64,15 +64,20 @@ const conferenceVideos = (videos: VideoInput[]) => {
     return output
   })
 
-  const splits = compose(uniq, pluck('split'))(videos)
+  const splits = compose<VideoInput[], string[], string[]>(
+    uniq,
+    pluck('split')
+  )(videos)
+
   let output = ''
   if (!splits.length) {
     output = createTable('', videos)
   } else {
-    output = map((split: string) => compose(
-      createTable(split),
-      filter(propEq('split', split)) // extract out matching videos for split
-    )(videos)
+    output = map<string, string>((split: string) =>
+      compose<VideoInput[], VideoInput[], string>(
+        createTable(split),
+        filter(propEq('split', split)) // extract out matching videos for split
+      )(videos)
     )(splits).join('')
   }
   return output
@@ -93,7 +98,7 @@ const createBody = (conferenceVids: JSONInput) => conferenceVids.reduce((acc, co
   return acc
 }, '')
 
-const countVideos = compose(
+const countVideos = compose<JSONInput, VideoInput[][], VideoInput[], VideoInput[], number>(
   length,
   flatten,
   reject(isNil),
@@ -108,20 +113,20 @@ List of react conference videos.
 `
 
 const computeLnks = (titlesAndYears: Array<[string, string]>) => {
-return titlesAndYears.reduce((acc, [title, year], idx) => {
-  if (idx === 0 || year !== titlesAndYears[idx > 0 ? idx - 1 : 0][1]) {
-    acc += `\n* ${year}`
-  }
-  acc += `\n  * [${title}](#${title.replace(/\s/g, '-').replace(/\.+/g, '').toLowerCase()})`
-  return acc
-}, '')
+  return titlesAndYears.reduce((acc, [title, year], idx) => {
+    if (idx === 0 || year !== titlesAndYears[idx > 0 ? idx - 1 : 0][1]) {
+      acc += `\n* ${year}`
+    }
+    acc += `\n  * [${title}](#${title.replace(/\s/g, '-').replace(/\.+/g, '').toLowerCase()})`
+    return acc
+  }, '')
 }
 
 const createNavLinks = (conferenceVids: JSONInput) => {
   // produce nested arrays containing [[title, year], [title, year]...]
-  const titlesAndYears = zip(
+  const titlesAndYears: any = zip(
     pluck('title', conferenceVids),
-    compose(
+    compose<JSONInput, string[], string[]>(
       map(extratYearFromDDMMYY),
       pluck('date')
     )(conferenceVids)
@@ -134,16 +139,12 @@ const createNavLinks = (conferenceVids: JSONInput) => {
 }
 
 // sort function by date
-const sortByDate = sortBy(compose(
-  extratYearFromDDMMYY,
-  prop('date')
-))
-
-// sort vids and reverse so most recent are first within array
-const sortJSONByDate = compose(
-  reverse,
-  sortByDate
-)
+const sortByDate = sort((a: ConferenceInput, b: ConferenceInput) => {
+  const aD = moment(a.date, 'DD-MM-YYYY')
+  const bD = moment(b.date, 'DD-MM-YYYY')
+  const isBefore = moment(aD).isAfter(bD)
+  return isBefore ? -1 : 1
+})
 
 const createFooter = () => `
 
@@ -163,14 +164,16 @@ To see a version working locally, with your changes, run
 `
 
 export const run = (conferenceVids: JSONInput) => {
-  // should already be sorted, but in case not
-  const sorted = sortJSONByDate(conferenceVids)
+  // sort conferences by date
+  const sorted = sortByDate(conferenceVids)
 
+  // get strings for different sections of readme
   const head = createHead(conferenceVids)
   const navLinks = createNavLinks(sorted)
   const body = createBody(sorted)
   const footer = createFooter()
 
+  // return one string for readme
   return `${head}\n${navLinks}\n${body}\n${footer}`
 }
 
