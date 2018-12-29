@@ -1,6 +1,6 @@
 
 import * as Immutable from 'seamless-immutable'
-import { map } from 'rxjs/operators';
+import { map } from 'rxjs/operators'
 import { combineEpics, Epic } from 'redux-observable'
 
 import { ApplicationState } from 'redux/modules'
@@ -15,7 +15,7 @@ export const SET_CONFERENCE_DETAILS = 'SET_CONFERENCE_DETAILS'
 export const CONFERENCE_COPY_DATA = 'CONFERENCE_COPY_DATA'
 
 // actions
-export const setConferenceDetails = (payload: string) => ({type: SET_CONFERENCE_DETAILS, payload })
+export const setConferenceDetails = (payload: string) => ({ type: SET_CONFERENCE_DETAILS, payload })
 
 // copy and format data into local slice
 export const conferenceDataCopyEpic: Epic<any, any, ApplicationState> = (action$, store: any) =>
