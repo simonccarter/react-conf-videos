@@ -55,7 +55,8 @@ export const loadDataForRoute: Epic<any, any, ApplicationState> = (action$, stor
           return of(searchActions.filter(extractQueryFromSearch(search)))
         } else {
           let id = getConferenceIdFromPathname(pathname)
-          // check id exists; if doesn't try and find from name
+
+          // check id exists: if doesn't try and find from name
           if (!store.value.data.conferences[id]) {
             // can we find id from name ?
             const title = getConferenceNameFromPathname(pathname)

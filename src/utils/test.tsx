@@ -29,7 +29,7 @@ export const mountWithStore = (storeP: any, component: ReactElement<{}>) => {
 export const wrapWithMemoryRouter = (Component: React.ReactElement<any>) => (
   // key within location prop keeps changing, so manually set
   // so snapshorts are consistent
-  <MemoryRouter initialEntries={[{key: 'xxxx'}]} >
+  <MemoryRouter initialEntries={[{ key: 'xxxx' }]} >
     {Component}
   </MemoryRouter>
 )
@@ -74,7 +74,7 @@ export const mockIndexedConferences = (): IndexedConferences => ({
 export const mockRouterState = (pathname = '/conference/8424e37df85b9eccbe48e9a55d93845e/react-conf-2018') => ({
   router: {
     location: {
-      pathname: '/conference/8424e37df85b9eccbe48e9a55d93845e/react-conf-2018',
+      pathname,
       search: '',
       hash: ''
     }
