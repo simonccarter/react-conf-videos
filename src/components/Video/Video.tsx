@@ -51,7 +51,7 @@ export const VideoInner: React.SFC<CombinedProps> = ({
           src={embeddableLink}
           frameBorder="0"
           allowFullScreen={true}
-        /> }
+        />}
       </div>
       <div className={styles.details}>
         <span>{speaker.name}</span>

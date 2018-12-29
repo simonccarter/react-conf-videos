@@ -1,7 +1,7 @@
 import { take, toArray } from 'rxjs/operators'
 import { ActionsObservable } from 'redux-observable'
 
-import { mockStore, mockRouterState } from 'utils/test'
+import { mockStore, mockDataState, mockRouterState } from 'utils/test'
 
 import { conferencePageActions } from './conferencePage'
 import { searchActions } from './search'
@@ -12,7 +12,7 @@ import {
 } from './routing'
 
 describe('routing', () => {
-describe('navigateToSearchResult', () => {
+  describe('navigateToSearchResult', () => {
     it('should return the correct action', (done) => {
       // arrange
       const payload = 'fake filter'
@@ -21,7 +21,7 @@ describe('navigateToSearchResult', () => {
         type: '@@router/CALL_HISTORY_METHOD',
         payload: {
           method: 'push',
-          args: [ '/conference/8424e37df85b9eccbe48e9a55d93845e/react-conf-2018?query=fake filter' ]
+          args: ['/conference/8424e37df85b9eccbe48e9a55d93845e/react-conf-2018?query=fake filter']
         }
       }
 
@@ -44,7 +44,7 @@ describe('navigateToSearchResult', () => {
         type: '@@router/CALL_HISTORY_METHOD',
         payload: {
           method: 'push',
-          args: [ '/conference/8424e37df85b9eccbe48e9a55d93845e/react-conf-2018' ]
+          args: ['/conference/8424e37df85b9eccbe48e9a55d93845e/react-conf-2018']
         }
       }
 
@@ -60,11 +60,11 @@ describe('navigateToSearchResult', () => {
     })
   })
 
-describe('loadDataForRoute', () => {
+  describe('loadDataForRoute', () => {
     describe('search page locations', () => {
       it('should handle no query in url', (done) => {
         // arrange
-        const action$ = ActionsObservable.of({type: LOAD_DATA_END})
+        const action$ = ActionsObservable.of({ type: LOAD_DATA_END })
         const state = mockRouterState()
         state.router.location.pathname = '/search'
         const expectedResult = searchActions.filter('')
@@ -82,7 +82,7 @@ describe('loadDataForRoute', () => {
 
       it('should handle query in url', (done) => {
         // arrange
-        const action$ = ActionsObservable.of({type: LOAD_DATA_END})
+        const action$ = ActionsObservable.of({ type: LOAD_DATA_END })
         const state = mockRouterState()
         const filter = 'filter'
         state.router.location.pathname = '/search'
@@ -104,11 +104,15 @@ describe('loadDataForRoute', () => {
     describe('conference page locations', () => {
       it('should return the correct action', (done) => {
         // arrange
-        const action$ = ActionsObservable.of({type: LOAD_DATA_END})
-        const state = mockRouterState()
+        const action$ = ActionsObservable.of({ type: LOAD_DATA_END })
+        const state = Object.assign(
+          {},
+          mockRouterState('/conference/XXXX/react-conf-2018'),
+          mockDataState()
+        )
         const filter = 'filter'
         state.router.location.search = `?query=${filter}`
-        const expectedResult1 = conferencePageActions.setConferenceDetails('8424e37df85b9eccbe48e9a55d93845e')
+        const expectedResult1 = conferencePageActions.setConferenceDetails('XXXX')
         const expectedResult2 = searchActions.filter(filter)
 
         // act
@@ -129,7 +133,7 @@ describe('loadDataForRoute', () => {
     })
   })
 
-describe('extractQueryFromSearch', () => {
+  describe('extractQueryFromSearch', () => {
     it('should return empty string if no query present', () => {
       // arrange
       const search = ''
