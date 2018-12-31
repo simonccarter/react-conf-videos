@@ -3,6 +3,7 @@ export type Video = {
   title: string
   split: string
   length: string
+  lightning?: boolean
   presenter: string // id
   embeddableLink: string
 }

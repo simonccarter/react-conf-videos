@@ -3,6 +3,8 @@ import * as cn from 'classnames'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { compose, pure, withStateHandlers } from 'recompose'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBolt } from '@fortawesome/free-solid-svg-icons/faBolt'
 
 import { Video as VideoProp, Presenter, Conference } from '../../domain'
 import { ApplicationState } from 'redux/modules'
@@ -33,13 +35,15 @@ type ReduxState = {
 type CombinedProps = Props & State & ReduxState & StateHandlers
 
 export const VideoInner: React.SFC<CombinedProps> = ({
-  video: { title, length, embeddableLink },
+  video: { title, length, embeddableLink, lightning = false },
   speaker, videoId, conference, isOpen, toggleIsOpen, conferenceId
 }) => {
   return (
     <div className={styles.root} key={videoId} >
       <div className={styles.top} onClick={toggleIsOpen} >
-        <span className={styles.title}>{title}</span>
+        <span className={styles.title}>
+          {lightning && <FontAwesomeIcon icon={faBolt} color="#f5de1a" />} {title}
+        </span>
         <span className={styles.right}>{length}</span>
       </div>
       <div className={cn(styles.videoWrapper, { [styles.open]: isOpen })}>

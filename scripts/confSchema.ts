@@ -3,8 +3,15 @@ import { schema } from 'normalizr'
 type ToHash = {
   title?: string
   name?: string
+  videos?: any[]
 }
-const hashFunction = (toHash: ToHash) => btoa(encodeURIComponent(JSON.stringify(toHash)))
+const hashFunction = (toHash: ToHash) => {
+  const object = toHash
+  if (object.videos) {
+    delete object.videos
+  }
+  return btoa(encodeURIComponent(JSON.stringify(toHash)))
+}
 
 const hashIdOpts = { idAttribute: hashFunction }
 
