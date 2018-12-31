@@ -32,7 +32,7 @@ export type ReduxState = {
   videos: IndexedVideos
 }
 
-const whiteListVideos: string[] = ['link', 'embeddableLink', 'presenter']
+const whiteListVideos: string[] = ['link', 'embeddableLink', 'presenter', 'lightening']
 const recurseAction =
   (action: (idx: string) => string) =>
     (whiteList: string[]): any =>
@@ -42,7 +42,11 @@ const recurseAction =
           (value: any, key: any) =>
             whiteList.indexOf(key) > -1 ? value : recurseAction(action)(whiteList)(value)
         ),
-        (e: any) => action(e)
+        ifElse(
+          is(String),
+          (e: any) => action(e),
+          (e: any) => e
+        )
       )
 
 export const cleanString = compose(
