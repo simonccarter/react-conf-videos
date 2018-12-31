@@ -40,6 +40,7 @@ export const mockVideo = (title = 'test title'): Video => ({
   split: '',
   title: title || 'test title',
   length: '12:34',
+  lightning: false,
   presenter: 'siomn carter',
   embeddableLink: 'a link',
 })

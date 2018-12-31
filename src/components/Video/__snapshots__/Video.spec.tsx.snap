@@ -68,6 +68,7 @@ exports[`Video should render and connect 1`] = `
         Object {
           "embeddableLink": "a link",
           "length": "12:34",
+          "lightning": false,
           "link": "a link",
           "presenter": "siomn carter",
           "split": "",
@@ -87,6 +88,7 @@ exports[`Video should render and connect 1`] = `
           <span
             className="title"
           >
+             
             test title
           </span>
           <span

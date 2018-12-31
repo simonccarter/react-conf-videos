@@ -46,36 +46,40 @@
         "length": "26:12"
       },
       {
-        "title": "Lightning Talk - Evolution of UI/UX in blockchain",
+        "title": "Evolution of UI/UX in blockchain",
         "link": "https://www.youtube.com/watch?v=1oFZwomhMew&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=9",
         "presenter": {
           "name": "Max Kordek"
         },
-        "length": "5:58"
+        "length": "5:58",
+        "lightning": true
       },
       {
-        "title": "Lightning Talk - Milliseconds Matter",
+        "title": "Milliseconds Matter",
         "link": "https://www.youtube.com/watch?v=GEsWmfIV0B0&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=11",
         "presenter": {
           "name": "Bård Farstad"
         },
-        "length": "05:19"
+        "length": "05:19",
+        "lightning": true
       },
       {
-        "title": "Lightning Talk - Onboarding Mobile Developers to the Strange World of JS and React",
+        "title": "Onboarding Mobile Developers to the Strange World of JS and React",
         "link": "https://www.youtube.com/watch?v=I0qrrjNVsLg&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=12",
         "presenter": {
           "name": "Denis Washington"
         },
-        "length": "06:08"
+        "length": "06:08",
+        "lightning": true
       },
       {
-        "title": "Lightning Talk - 3D Components in React Application",
+        "title": "3D Components in React Application",
         "link": "https://www.youtube.com/watch?v=Xnwb9-3-NTE&index=13&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC",
         "presenter": {
           "name": "Denys Periel"
         },
-        "length": "06:46"
+        "length": "06:46",
+        "lightning": true
       },
       {
         "title": "GitNation Open Source Stage",
@@ -323,6 +327,7 @@
           "name": "n/a"
         },
         "length": "33:49",
+        "lightning": true,
         "split": "Day 1"
       },
       {
@@ -404,7 +409,8 @@
           "name": "n/a"
         },
         "length": "47:46",
-        "split": "Day 2"
+        "split": "Day 2",
+        "lightning": true
       },
       {
         "title": "Deterministic Mocking with GraphQL and Apollo",
@@ -484,7 +490,8 @@
           "name": "Joe Haddard"
         },
         "length": "4:16",
-        "split": "Day 1"
+        "split": "Day 1",
+        "lightning": true
       },
       {
         "title": "Lightning Talk - Components as Units of Work",
@@ -493,7 +500,8 @@
           "name": "Bryce Kallow"
         },
         "length": "4:54",
-        "split": "Day 1"
+        "split": "Day 1",
+        "lightning": true
       },
       {
         "title": "Lightning Talk - 5 Animations you Should Know and Use",
@@ -502,7 +510,8 @@
           "name": "Marcos Martins"
         },
         "length": "5:08",
-        "split": "Day 1"
+        "split": "Day 1",
+        "lightning": true
       },
       {
         "title": "Lightning Talk - Render Props, PureComponent and Reactivity",
@@ -511,7 +520,8 @@
           "name": "Karl Dray"
         },
         "length": "5:33",
-        "split": "Day 1"
+        "split": "Day 1",
+        "lightning": true
       },
       {
         "title": "Lightning Talk - Better living through Git Hooks",
@@ -520,7 +530,8 @@
           "name": "Leta Keane"
         },
         "length": "5:29",
-        "split": "Day 1"
+        "split": "Day 1",
+        "lightning": true
       },
       {
         "title": "GraphQl without GraphQL",
@@ -619,7 +630,8 @@
           "name": "Sophie Shoemaker"
         },
         "length": "5:40",
-        "split": "Day 2"
+        "split": "Day 2",
+        "lightning": true
       },
       {
         "title": "Lightning Talk - Building a Better Country through Tech",
@@ -628,7 +640,8 @@
           "name": "Manuela Castrillon"
         },
         "length": "4:52",
-        "split": "Day 2"
+        "split": "Day 2",
+        "lightning": true
       },
       {
         "title": "Lightning Talk - An Effective Code Review",
@@ -637,7 +650,8 @@
           "name": "Donavon West"
         },
         "length": "5:07",
-        "split": "Day 2"
+        "split": "Day 2",
+        "lightning": true
       },
       {
         "title": "Lightning Talk - Syncing Component State Across Tabs with Service Workers",
@@ -646,7 +660,8 @@
           "name": "Tyler Clarke"
         },
         "length": "5:26",
-        "split": "Day 2"
+        "split": "Day 2",
+        "lightning": true
       },
       {
         "title": "Block the Main Thread",
@@ -2002,6 +2017,201 @@
         },
         "length": "19:32",
         "split": "Day 2"
+      }
+    ]
+  },
+  {
+    "title": "React Amsterdam 2017",
+    "date": "21-04-2017",
+    "website": "https://react.amsterdam/",
+    "playlist": "https://www.youtube.com/playlist?list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M",
+    "videos": [
+      {
+        "title": "Testing & React Native: Lessons from the Battlefield",
+        "link": "https://www.youtube.com/watch?v=cUSUJXAvt6k&index=3&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M",
+        "presenter": {
+          "name": "Aaron Greenwald"
+        },
+        "length": "29:57"
+      },
+      {
+        "title": "Styling React/ReactNative Applications ",
+        "link": "https://www.youtube.com/watch?v=bIK2NwoK9xk&index=4&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M",
+        "presenter": {
+          "name": "Max Stoiber"
+        },
+        "length": "33:59"
+      },
+      {
+        "title": "Universal React",
+        "link": "https://www.youtube.com/watch?v=JEKmuf7PGXw&index=5&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M",
+        "presenter": {
+          "name": "Mike Grabowski"
+        },
+        "length": "28:46"
+      },
+      {
+        "title": "Complexity: Divide and Conquer!",
+        "link": "https://www.youtube.com/watch?v=3J9EJrvqOiM&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=6",
+        "presenter": {
+          "name": "Michel Weststrate"
+        },
+        "length": "27:03"
+      },
+      {
+        "title": "ow Pinterest Switched Their Template Rendering Engine to React",
+        "link": "https://www.youtube.com/watch?v=JyD0AUFHQTQ&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=7",
+        "presenter": {
+          "name": "Jessica Chan"
+        },
+        "length": "38:48"
+      },
+      {
+        "title": "Asynchronous & Offline Magic Tricks on React Native",
+        "link": "https://www.youtube.com/watch?v=PBNAz-yAxrY&index=8&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M",
+        "presenter": {
+          "name": "Woody Rousseau"
+        },
+        "length": "27:31"
+      },
+      {
+        "title": "Flow Typing a React Codebase",
+        "link": "https://www.youtube.com/watch?v=lk8o7ym29WM&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=9",
+        "presenter": {
+          "name": "Forbes Lindesay"
+        },
+        "length": "30:06"
+      },
+      {
+        "title": "A Real-World GraphQL Application in Production",
+        "link": "https://www.youtube.com/watch?v=6bRFElKG0a8&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=10",
+        "presenter": {
+          "name": "Stefano Masini"
+        },
+        "length": "28:06"
+      },
+      {
+        "title": "Introduction to ReactVR",
+        "link": "https://www.youtube.com/watch?v=eYTlTzrNVjw&index=11&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M",
+        "presenter": {
+          "name": "Nik Graf"
+        },
+        "length": "31:27"
+      },
+      {
+        "title": "Make Linting Great Again",
+        "link": "https://www.youtube.com/watch?v=GLdH9SMG97o&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=12",
+        "presenter": {
+          "name": "Andrey Okonetchnikov"
+        },
+        "length": "7:13",
+        "lightning": true
+      },
+      {
+        "title": "Navigating React Native Navigation",
+        "link": "https://www.youtube.com/watch?v=42ogpJVwtw0&index=13&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M",
+        "presenter": {
+          "name": "Kurtis Kemple"
+        },
+        "length": "31:58"
+      },
+      {
+        "title": "Demystifying GraphQL Clients",
+        "link": "https://www.youtube.com/watch?v=sxciVldf-ak&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=14",
+        "presenter": {
+          "name": "Cris Biscardi"
+        },
+        "length": "25:01"
+      },
+      {
+        "title": "Fun With Fiber Custom Renderers",
+        "link": "https://www.youtube.com/watch?v=oPofnLZZTwQ&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=15",
+        "presenter": {
+          "name": "Ken Wheeler"
+        },
+        "length": "27:14"
+      },
+      {
+        "title": "Sequencing Audio Using React and the Web Audio API ",
+        "link": "https://www.youtube.com/watch?v=LkzNk0qgW50&index=16&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M",
+        "presenter": {
+          "name": "Vincent Riemer & Bruce Lane"
+        },
+        "length": "31:13"
+      },
+      {
+        "title": "Generating your client validation rules",
+        "link": "https://www.youtube.com/watch?v=craV534x6Kw&index=17&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M",
+        "presenter": {
+          "name": "Ronald van der Kooy"
+        },
+        "length": "5:55",
+        "lightning": true
+      },
+      {
+        "title": "Building Applications for the Studio in the Cloud at Netflix",
+        "link": "https://www.youtube.com/watch?v=Ff5kBpx7pe8&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=18",
+        "presenter": {
+          "name": "Feather Knee"
+        },
+        "length": "5:54",
+        "lightning": true
+      },
+      {
+        "title": "Pushing Bugs to Prod Responsibly with React and Redux",
+        "link": "https://www.youtube.com/watch?v=Y-ZoZoOtvp8&index=19&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M",
+        "presenter": {
+          "name": "Alex Castillo"
+        },
+        "length": "31:51"
+      },
+      {
+        "title": "Test Like It's 2017",
+        "link": "https://www.youtube.com/watch?v=tRNL-WAPb98&t=0s&index=21&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M",
+        "presenter": {
+          "name": "Michele Bertoli"
+        },
+        "length": "29:27"
+      },
+      {
+        "title": "Coding Mobile with the Pros",
+        "link": "https://www.youtube.com/watch?v=ePfHYBzYLCk&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=21",
+        "presenter": {
+          "name": "Gant Laborde"
+        },
+        "length": "22:58"
+      },
+      {
+        "title": "Web Like Release Agility for React Native Apps",
+        "link": "https://www.youtube.com/watch?v=itDrJ5VWZ3k&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=22",
+        "presenter": {
+          "name": "Parashuram N"
+        },
+        "length": "40:16"
+      },
+      {
+        "title": "React Native Touch & Gesture",
+        "link": "https://www.youtube.com/watch?v=V8maYc4R2G0&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=23",
+        "presenter": {
+          "name": "Krzysztof Magiera"
+        },
+        "length": "27:43"
+      },
+      {
+        "title": "Advanced SSR Caching with React",
+        "link": "https://www.youtube.com/watch?v=4TOi9l6x-jo&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=24",
+        "presenter": {
+          "name": "Robert Haritonov"
+        },
+        "length": "8:17"
+      },
+      {
+        "title": "Performance Limitations of React Native and How to Overcome Them",
+        "link": "https://www.youtube.com/watch?v=OmiXlJ4ZzAo&index=25&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M",
+        "presenter": {
+          "name": "Tal Kol"
+        },
+        "length": "28:58"
       }
     ]
   },

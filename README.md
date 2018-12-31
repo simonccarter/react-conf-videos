@@ -2,7 +2,7 @@
 [www.reactjsvideos.com](https://www.reactjsvideos.com)
 
 List of react conference videos.
-**372** videos from **20** Conferences.
+**395** videos from **21** Conferences.
 
 
 ## Quick Links
@@ -23,6 +23,7 @@ List of react conference videos.
   * [ReactNext 2017](#reactnext-2017)
   * [React Rally 2017](#react-rally-2017)
   * [React Europe 2017](#react-europe-2017)
+  * [React Amsterdam 2017](#react-amsterdam-2017)
 * 2016
   * [ReactiveConf 2016](#reactiveconf-2016)
   * [React Rally 2016](#react-rally-2016)
@@ -48,10 +49,10 @@ List of react conference videos.
 [Feature Driven Architecture](https://www.youtube.com/watch?v=BWAeYuWFHhs&index=6&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC) | Oleg Isonen | 29:53
 [Secrets to a Successful Design System](https://www.youtube.com/watch?v=88TOxfKzkHw&index=7&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC) | Monica Lent | 25:09
 [Tip Top Testing in JavaScript](https://www.youtube.com/watch?v=cB5WZgMwdpE&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=8) | Jack Franklin | 26:12
-[Lightning Talk - Evolution of UI/UX in blockchain](https://www.youtube.com/watch?v=1oFZwomhMew&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=9) | Max Kordek | 5:58
-[Lightning Talk - Milliseconds Matter](https://www.youtube.com/watch?v=GEsWmfIV0B0&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=11) | Bård Farstad | 05:19
-[Lightning Talk - Onboarding Mobile Developers to the Strange World of JS and React](https://www.youtube.com/watch?v=I0qrrjNVsLg&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=12) | Denis Washington | 06:08
-[Lightning Talk - 3D Components in React Application](https://www.youtube.com/watch?v=Xnwb9-3-NTE&index=13&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC) | Denys Periel | 06:46
+[Evolution of UI/UX in blockchain](https://www.youtube.com/watch?v=1oFZwomhMew&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=9) | Max Kordek | 5:58
+[Milliseconds Matter](https://www.youtube.com/watch?v=GEsWmfIV0B0&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=11) | Bård Farstad | 05:19
+[Onboarding Mobile Developers to the Strange World of JS and React](https://www.youtube.com/watch?v=I0qrrjNVsLg&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=12) | Denis Washington | 06:08
+[3D Components in React Application](https://www.youtube.com/watch?v=Xnwb9-3-NTE&index=13&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC) | Denys Periel | 06:46
 [GitNation Open Source Stage](https://www.youtube.com/watch?v=Lzb28YoKSoc&index=14&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC) | n/a | 23:56
 [Navigating the Hype-Driven Frontend Development World Without Going Insane](https://www.youtube.com/watch?v=QZ6aC6G0ufg&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=15) | Kitze | 33:34
 [Structure Your App's Story With Sagas and Selectors](https://www.youtube.com/watch?v=Q1_RfF_qRMc&index=17&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC) | Rebecca Hill | 28:46
@@ -472,6 +473,37 @@ List of react conference videos.
 [Putting the fun in functional with Elm](https://www.youtube.com/watch?v=a0039_JRAQo&index=11&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH) | Tereza Sokol | 14:45
 [Integrating React Native with Native Infrastructure](https://www.youtube.com/watch?v=QOAoLF6FV7A&index=12&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH) | Mehdi Mulani | 13:02
 [Q&A Panel with Core team and speakers](https://www.youtube.com/watch?v=BvHxlVlse-g&list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH&index=13) | n/a | undefined
+
+### React Amsterdam 2017
+
+##### [website](https://react.amsterdam/) - [playlist](https://www.youtube.com/playlist?list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M)
+
+
+| Title/Link        | Presenter  | Length |
+| ------------- |:-------------:| -----:|
+[Testing & React Native: Lessons from the Battlefield](https://www.youtube.com/watch?v=cUSUJXAvt6k&index=3&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M) | Aaron Greenwald | 29:57
+[Styling React/ReactNative Applications ](https://www.youtube.com/watch?v=bIK2NwoK9xk&index=4&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M) | Max Stoiber | 33:59
+[Universal React](https://www.youtube.com/watch?v=JEKmuf7PGXw&index=5&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M) | Mike Grabowski | 28:46
+[Complexity: Divide and Conquer!](https://www.youtube.com/watch?v=3J9EJrvqOiM&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=6) | Michel Weststrate | 27:03
+[ow Pinterest Switched Their Template Rendering Engine to React](https://www.youtube.com/watch?v=JyD0AUFHQTQ&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=7) | Jessica Chan | 38:48
+[Asynchronous & Offline Magic Tricks on React Native](https://www.youtube.com/watch?v=PBNAz-yAxrY&index=8&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M) | Woody Rousseau | 27:31
+[Flow Typing a React Codebase](https://www.youtube.com/watch?v=lk8o7ym29WM&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=9) | Forbes Lindesay | 30:06
+[A Real-World GraphQL Application in Production](https://www.youtube.com/watch?v=6bRFElKG0a8&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=10) | Stefano Masini | 28:06
+[Introduction to ReactVR](https://www.youtube.com/watch?v=eYTlTzrNVjw&index=11&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M) | Nik Graf | 31:27
+[Make Linting Great Again](https://www.youtube.com/watch?v=GLdH9SMG97o&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=12) | Andrey Okonetchnikov | 7:13
+[Navigating React Native Navigation](https://www.youtube.com/watch?v=42ogpJVwtw0&index=13&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M) | Kurtis Kemple | 31:58
+[Demystifying GraphQL Clients](https://www.youtube.com/watch?v=sxciVldf-ak&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=14) | Cris Biscardi | 25:01
+[Fun With Fiber Custom Renderers](https://www.youtube.com/watch?v=oPofnLZZTwQ&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=15) | Ken Wheeler | 27:14
+[Sequencing Audio Using React and the Web Audio API ](https://www.youtube.com/watch?v=LkzNk0qgW50&index=16&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M) | Vincent Riemer & Bruce Lane | 31:13
+[Generating your client validation rules](https://www.youtube.com/watch?v=craV534x6Kw&index=17&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M) | Ronald van der Kooy | 5:55
+[Building Applications for the Studio in the Cloud at Netflix](https://www.youtube.com/watch?v=Ff5kBpx7pe8&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=18) | Feather Knee | 5:54
+[Pushing Bugs to Prod Responsibly with React and Redux](https://www.youtube.com/watch?v=Y-ZoZoOtvp8&index=19&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M) | Alex Castillo | 31:51
+[Test Like It's 2017](https://www.youtube.com/watch?v=tRNL-WAPb98&t=0s&index=21&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M) | Michele Bertoli | 29:27
+[Coding Mobile with the Pros](https://www.youtube.com/watch?v=ePfHYBzYLCk&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=21) | Gant Laborde | 22:58
+[Web Like Release Agility for React Native Apps](https://www.youtube.com/watch?v=itDrJ5VWZ3k&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=22) | Parashuram N | 40:16
+[React Native Touch & Gesture](https://www.youtube.com/watch?v=V8maYc4R2G0&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=23) | Krzysztof Magiera | 27:43
+[Advanced SSR Caching with React](https://www.youtube.com/watch?v=4TOi9l6x-jo&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=24) | Robert Haritonov | 8:17
+[Performance Limitations of React Native and How to Overcome Them](https://www.youtube.com/watch?v=OmiXlJ4ZzAo&index=25&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M) | Tal Kol | 28:58
 
 
 ## 2016
