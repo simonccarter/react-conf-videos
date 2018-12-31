@@ -27,7 +27,7 @@ List of react conference videos.
   * [ReactiveConf 2016](#reactiveconf-2016)
   * [React Rally 2016](#react-rally-2016)
   * [React Europe 2016](#react-europe-2016)
-  * [React 2016](#react-2016)
+  * [React Amsterdam 2016](#react-amsterdam-2016)
   * [React Conf 2016](#react-conf-2016)
 * 2015
   * [React.js Conf 2015](#reactjs-conf-2015)
@@ -577,7 +577,7 @@ List of react conference videos.
 [Building native mobile apps with GraphQL](https://www.youtube.com/watch?v=z5rz3saDPJ8&list=PLCC436JpVnK0LTDKW3O_BGTZnrZ8dBAof&index=9) | Martijn Walraven | 23:55
 [Question and Answers with core team members](https://www.youtube.com/watch?v=5pMDd1t2thc&list=PLCC436JpVnK0LTDKW3O_BGTZnrZ8dBAof&index=10) | n/a | 57:27
 
-### React 2016
+### React Amsterdam 2016
 
 ##### [website](https://react.amsterdam/2016/) - [playlist](https://www.youtube.com/playlist?list=PLNBNS7NRGKMG3uLrm5fgY02hJ87Wzb4IU&disable_polymer=true)
 
