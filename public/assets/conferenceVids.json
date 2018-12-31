@@ -46,36 +46,40 @@
         "length": "26:12"
       },
       {
-        "title": "Lightning Talk - Evolution of UI/UX in blockchain",
+        "title": "Evolution of UI/UX in blockchain",
         "link": "https://www.youtube.com/watch?v=1oFZwomhMew&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=9",
         "presenter": {
           "name": "Max Kordek"
         },
-        "length": "5:58"
+        "length": "5:58",
+        "lightning": true
       },
       {
-        "title": "Lightning Talk - Milliseconds Matter",
+        "title": "Milliseconds Matter",
         "link": "https://www.youtube.com/watch?v=GEsWmfIV0B0&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=11",
         "presenter": {
           "name": "Bård Farstad"
         },
-        "length": "05:19"
+        "length": "05:19",
+        "lightning": true
       },
       {
-        "title": "Lightning Talk - Onboarding Mobile Developers to the Strange World of JS and React",
+        "title": "Onboarding Mobile Developers to the Strange World of JS and React",
         "link": "https://www.youtube.com/watch?v=I0qrrjNVsLg&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=12",
         "presenter": {
           "name": "Denis Washington"
         },
-        "length": "06:08"
+        "length": "06:08",
+        "lightning": true
       },
       {
-        "title": "Lightning Talk - 3D Components in React Application",
+        "title": "3D Components in React Application",
         "link": "https://www.youtube.com/watch?v=Xnwb9-3-NTE&index=13&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC",
         "presenter": {
           "name": "Denys Periel"
         },
-        "length": "06:46"
+        "length": "06:46",
+        "lightning": true
       },
       {
         "title": "GitNation Open Source Stage",
@@ -323,6 +327,7 @@
           "name": "n/a"
         },
         "length": "33:49",
+        "lightning": true,
         "split": "Day 1"
       },
       {
@@ -404,7 +409,8 @@
           "name": "n/a"
         },
         "length": "47:46",
-        "split": "Day 2"
+        "split": "Day 2",
+        "lightning": true
       },
       {
         "title": "Deterministic Mocking with GraphQL and Apollo",
@@ -484,7 +490,8 @@
           "name": "Joe Haddard"
         },
         "length": "4:16",
-        "split": "Day 1"
+        "split": "Day 1",
+        "lightning": true
       },
       {
         "title": "Lightning Talk - Components as Units of Work",
@@ -493,7 +500,8 @@
           "name": "Bryce Kallow"
         },
         "length": "4:54",
-        "split": "Day 1"
+        "split": "Day 1",
+        "lightning": true
       },
       {
         "title": "Lightning Talk - 5 Animations you Should Know and Use",
@@ -502,7 +510,8 @@
           "name": "Marcos Martins"
         },
         "length": "5:08",
-        "split": "Day 1"
+        "split": "Day 1",
+        "lightning": true
       },
       {
         "title": "Lightning Talk - Render Props, PureComponent and Reactivity",
@@ -511,7 +520,8 @@
           "name": "Karl Dray"
         },
         "length": "5:33",
-        "split": "Day 1"
+        "split": "Day 1",
+        "lightning": true
       },
       {
         "title": "Lightning Talk - Better living through Git Hooks",
@@ -520,7 +530,8 @@
           "name": "Leta Keane"
         },
         "length": "5:29",
-        "split": "Day 1"
+        "split": "Day 1",
+        "lightning": true
       },
       {
         "title": "GraphQl without GraphQL",
@@ -619,7 +630,8 @@
           "name": "Sophie Shoemaker"
         },
         "length": "5:40",
-        "split": "Day 2"
+        "split": "Day 2",
+        "lightning": true
       },
       {
         "title": "Lightning Talk - Building a Better Country through Tech",
@@ -628,7 +640,8 @@
           "name": "Manuela Castrillon"
         },
         "length": "4:52",
-        "split": "Day 2"
+        "split": "Day 2",
+        "lightning": true
       },
       {
         "title": "Lightning Talk - An Effective Code Review",
@@ -637,7 +650,8 @@
           "name": "Donavon West"
         },
         "length": "5:07",
-        "split": "Day 2"
+        "split": "Day 2",
+        "lightning": true
       },
       {
         "title": "Lightning Talk - Syncing Component State Across Tabs with Service Workers",
@@ -646,7 +660,8 @@
           "name": "Tyler Clarke"
         },
         "length": "5:26",
-        "split": "Day 2"
+        "split": "Day 2",
+        "lightning": true
       },
       {
         "title": "Block the Main Thread",
@@ -2090,7 +2105,7 @@
           "name": "Andrey Okonetchnikov"
         },
         "length": "7:13",
-        "ligntning": true
+        "lightning": true
       },
       {
         "title": "Navigating React Native Navigation",
@@ -2131,7 +2146,7 @@
           "name": "Ronald van der Kooy"
         },
         "length": "5:55",
-        "ligntning": true
+        "lightning": true
       },
       {
         "title": "Building Applications for the Studio in the Cloud at Netflix",
@@ -2140,7 +2155,7 @@
           "name": "Feather Knee"
         },
         "length": "5:54",
-        "ligntning": true
+        "lightning": true
       },
       {
         "title": "Pushing Bugs to Prod Responsibly with React and Redux",

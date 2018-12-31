@@ -49,10 +49,10 @@ List of react conference videos.
 [Feature Driven Architecture](https://www.youtube.com/watch?v=BWAeYuWFHhs&index=6&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC) | Oleg Isonen | 29:53
 [Secrets to a Successful Design System](https://www.youtube.com/watch?v=88TOxfKzkHw&index=7&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC) | Monica Lent | 25:09
 [Tip Top Testing in JavaScript](https://www.youtube.com/watch?v=cB5WZgMwdpE&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=8) | Jack Franklin | 26:12
-[Lightning Talk - Evolution of UI/UX in blockchain](https://www.youtube.com/watch?v=1oFZwomhMew&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=9) | Max Kordek | 5:58
-[Lightning Talk - Milliseconds Matter](https://www.youtube.com/watch?v=GEsWmfIV0B0&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=11) | Bård Farstad | 05:19
-[Lightning Talk - Onboarding Mobile Developers to the Strange World of JS and React](https://www.youtube.com/watch?v=I0qrrjNVsLg&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=12) | Denis Washington | 06:08
-[Lightning Talk - 3D Components in React Application](https://www.youtube.com/watch?v=Xnwb9-3-NTE&index=13&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC) | Denys Periel | 06:46
+[Evolution of UI/UX in blockchain](https://www.youtube.com/watch?v=1oFZwomhMew&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=9) | Max Kordek | 5:58
+[Milliseconds Matter](https://www.youtube.com/watch?v=GEsWmfIV0B0&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=11) | Bård Farstad | 05:19
+[Onboarding Mobile Developers to the Strange World of JS and React](https://www.youtube.com/watch?v=I0qrrjNVsLg&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=12) | Denis Washington | 06:08
+[3D Components in React Application](https://www.youtube.com/watch?v=Xnwb9-3-NTE&index=13&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC) | Denys Periel | 06:46
 [GitNation Open Source Stage](https://www.youtube.com/watch?v=Lzb28YoKSoc&index=14&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC) | n/a | 23:56
 [Navigating the Hype-Driven Frontend Development World Without Going Insane](https://www.youtube.com/watch?v=QZ6aC6G0ufg&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC&index=15) | Kitze | 33:34
 [Structure Your App's Story With Sagas and Selectors](https://www.youtube.com/watch?v=Q1_RfF_qRMc&index=17&list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC) | Rebecca Hill | 28:46
