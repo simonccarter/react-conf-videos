@@ -38,9 +38,9 @@ const getConferenceNameFromPathname = (pathname: string) => {
 }
 
 const searchConferencesGivenUrlTitle = (title: string, conferences: IndexedConferences) => {
-  const matchedConferences = Object.keys(conferences).filter((confKey) => {
-    return sluggifyUrl(conferences[confKey].title) === title
-  })
+  const matchedConferences = Object.keys(conferences).filter((confKey) =>
+    sluggifyUrl(title) === title
+  )
   return matchedConferences[0]
 }
 
