@@ -8,11 +8,11 @@ List of react conference videos.
 ## Quick Links
 
 * 2018
-  * [React Day Berlin](#react-day-berlin)
+  * [React Day Berlin 2018](#react-day-berlin-2018)
   * [ReactNext 2018](#reactnext-2018)
   * [React Conf 2018](#react-conf-2018)
-  * [React Boston](#react-boston)
-  * [Reactathon](#reactathon)
+  * [React Boston 2018](#react-boston-2018)
+  * [Reactathon 2018](#reactathon-2018)
   * [React Rally 2018](#react-rally-2018)
   * [Chain React 2018](#chain-react-2018)
   * [ReactEurope 2018](#reacteurope-2018)
@@ -27,7 +27,7 @@ List of react conference videos.
   * [ReactiveConf 2016](#reactiveconf-2016)
   * [React Rally 2016](#react-rally-2016)
   * [React Europe 2016](#react-europe-2016)
-  * [React Amsterdam](#react-amsterdam)
+  * [React Amsterdam 2016](#react-amsterdam-2016)
   * [React Conf 2016](#react-conf-2016)
 * 2015
   * [React.js Conf 2015](#reactjs-conf-2015)
@@ -36,7 +36,7 @@ List of react conference videos.
 
 ## 2018
 
-### React Day Berlin
+### React Day Berlin 2018
 
 ##### [website](https://reactday.berlin/#intro) - [playlist](https://www.youtube.com/playlist?list=PL-3BrJ5CiIx7P1zDrQJM5FbdUjM1lTIFC)
 
@@ -125,7 +125,7 @@ List of react conference videos.
 [Building a Diverse and Inclusive Community](https://www.youtube.com/watch?v=xYI9N0memLc&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=28) | Eyitayo Alimi | 17:04
 [React for Designers with FramerX](https://www.youtube.com/watch?v=6DDdtt5zXPk&t=0s&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=29) | Thomas Aylott | 28:41
 
-### React Boston
+### React Boston 2018
 
 ##### [website](http://www.reactboston.com/) - [playlist: Day 1 & 2](https://www.youtube.com/watch?v=jvEFw0YpGgg&list=PLhBlV3WSUrT26VEZXlNdEIMQ3h3zKOtaj)
 
@@ -157,7 +157,7 @@ List of react conference videos.
 [Large Scale Migrations – Using Recast and jscodeshift to Scale](https://www.youtube.com/watch?v=zO07nFlibH0&index=17&list=PLhBlV3WSUrT26VEZXlNdEIMQ3h3zKOtaj) | Francois Ward: | 28:41
 [A Romance of Many Dimensions](https://www.youtube.com/watch?v=Vx9BeQSCAnc&list=PLhBlV3WSUrT26VEZXlNdEIMQ3h3zKOtaj&index=18) | Matt Hamil | 31:49
 
-### Reactathon
+### Reactathon 2018
 
 ##### [website](https://www.reactathon.com/) - [playlist: Day 1](https://www.youtube.com/playlist?list=PLRvKvw42Rc7N0QpX2Rc5CdrqGuxzwD_0H) - [playlist: Day 2](https://www.youtube.com/playlist?list=PLRvKvw42Rc7Ne46QAjWNWFo1Jf0mQdnIW)
 
@@ -577,7 +577,7 @@ List of react conference videos.
 [Building native mobile apps with GraphQL](https://www.youtube.com/watch?v=z5rz3saDPJ8&list=PLCC436JpVnK0LTDKW3O_BGTZnrZ8dBAof&index=9) | Martijn Walraven | 23:55
 [Question and Answers with core team members](https://www.youtube.com/watch?v=5pMDd1t2thc&list=PLCC436JpVnK0LTDKW3O_BGTZnrZ8dBAof&index=10) | n/a | 57:27
 
-### React Amsterdam
+### React Amsterdam 2016
 
 ##### [website](https://react.amsterdam/2016/) - [playlist](https://www.youtube.com/playlist?list=PLNBNS7NRGKMG3uLrm5fgY02hJ87Wzb4IU&disable_polymer=true)
 

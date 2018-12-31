@@ -55,7 +55,7 @@ export const VideoInner: React.SFC<CombinedProps> = ({
       </div>
       <div className={styles.details}>
         <span>{speaker.name}</span>
-        <Link to={`/conference/${conferenceId}/${sluggifyUrl(conference.title)}`}>
+        <Link to={`/conference/${sluggifyUrl(conference.title)}`}>
           <span className={styles.conferenceTitle}>{conference.title}</span>
         </Link>
       </div>

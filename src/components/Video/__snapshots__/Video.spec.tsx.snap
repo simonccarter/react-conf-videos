@@ -106,10 +106,10 @@ exports[`Video should render and connect 1`] = `
           </span>
           <Link
             replace={false}
-            to="/conference/yyy/fake-conf-title"
+            to="/conference/fake-conf-title"
           >
             <a
-              href="/conference/yyy/fake-conf-title"
+              href="/conference/fake-conf-title"
               onClick={[Function]}
             >
               <span
