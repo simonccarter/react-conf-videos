@@ -2,7 +2,7 @@
 [www.reactjsvideos.com](https://www.reactjsvideos.com)
 
 List of react conference videos.
-**441** videos from **23** Conferences.
+**461** videos from **24** Conferences.
 
 
 ## Quick Links
@@ -22,7 +22,8 @@ List of react conference videos.
   * [ReactiveConf 2017](#reactiveconf-2017)
   * [ReactNext 2017](#reactnext-2017)
   * [React Rally 2017](#react-rally-2017)
-  * [React Europe 2017](#react-europe-2017)
+  * [Chain React 2017](#chain-react-2017)
+  * [ReactEurope 2017](#reacteurope-2017)
   * [React Amsterdam 2017](#react-amsterdam-2017)
   * [React London 2017](#react-london-2017)
   * [React Conf 2017](#react-conf-2017)
@@ -440,7 +441,35 @@ List of react conference videos.
 [Start a conversation between browser windows](https://www.youtube.com/watch?v=c6_Cp-yfyko&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531&index=19) | Cara Kuei | 20:02
 [I want you to contribute to open source](https://www.youtube.com/watch?v=hwdeUG_gySI&index=20&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531) | Max Stoiber | 19:32
 
-### React Europe 2017
+### Chain React 2017
+
+##### [website](https://infinite.red/ChainReactConf) - [playlist](https://www.youtube.com/playlist?list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522)
+
+
+| Title/Link        | Presenter  | Length |
+| ------------- |:-------------:| -----:|
+[The Dark Art of Bundlers](https://www.youtube.com/watch?v=cz5BzwgATpc&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522&index=2&t=0s) | Mike Grabowski | 28:00
+[PayPal Checkout with React Native](https://www.youtube.com/watch?v=m-XaF3vAHrQ&index=2&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522) | Poornima Venkatakrishnan | 24:21
+[React Native + ES.Next](https://www.youtube.com/watch?v=nbtEwjRJXLo&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522&index=3) | Ben Ilegbodu | 38:20
+[JavaScript Futurism](https://www.youtube.com/watch?v=iCoYCAzx82g&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522&index=4) | Nader Dabit | 32:31
+[Mobile Payments with React Native ](https://www.youtube.com/watch?v=sTretbawbkg&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522&index=5) | Naoufal Kadhom | 17:33
+[Gestures Here. Gestures There. Gestures Everywhere!](https://www.youtube.com/watch?v=L_jzGn5b9H4&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522&index=6) | Kyle Poole & Thomas Bruketta | 33:44
+[Rewriting a Large Hybrid App with React Native](https://www.youtube.com/watch?v=eNRc0815pDs&index=7&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522) | Javier Cuevas | 30:29
+[Why we Need an App Browser](https://www.youtube.com/watch?v=WEQx3wz8QeY&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522&index=8) | Ken Wheeler | 23:31
+[Breaking Down Bridging in React Native](https://www.youtube.com/watch?v=GiUo88TGebs&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522&index=9) | Peggy Rayzis | 23:02
+[The Evolution of API Design](https://www.youtube.com/watch?v=DeKpgHK-bqw&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522&index=10) | Eric Baer | 30:15
+[React Native: Zero to DevOps](https://www.youtube.com/watch?v=f_-S0ZhVmvQ&index=11&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522) | Ram Narasimhan | 30:30
+[React as a Platform](https://www.youtube.com/watch?v=JaRtmgaNZos&index=12&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522) | Leland Richardson | 29:00
+[Building Serverless Backends with AWS Lambda for React Native Apps](https://www.youtube.com/watch?v=blGtyVCGNT4&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522&index=13) | Kevin Old | 30:07
+[When to go Native Over Javascript](https://www.youtube.com/watch?v=kFyaj5HmMEY&index=14&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522) | Harry Tormey | 24:02
+[Building stellar user experiences with React Native](https://www.youtube.com/watch?v=fjS5ssBn3fA&index=15&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522) | Alex Kotliarskyi | 23:42
+[From Idea to App Store: A Guide to Shipping React Native Apps](https://www.youtube.com/watch?v=W8X7t1qlT_w&index=16&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522) | Chris Ball | 33:53
+[React Native Sandpaper](https://www.youtube.com/watch?v=oBi3j33idW0&index=17&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522) | Brent Vatne | 35:40
+[React Native on the Apple TV Platform](https://www.youtube.com/watch?v=jDRXGqb9hno&index=18&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522) | Doug Lowder | 14:21
+[React Native Panel With Various Speakers](https://www.youtube.com/watch?v=zQhSuJwWy3k&index=19&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522) | n/a | 42:47
+[Realtime Event Processing, Streaming and Subscription for React Native using Cloud Services](https://www.youtube.com/watch?v=cf6-K6OQ4-g&index=20&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522) | Richard Threlkeld | 29:22
+
+### ReactEurope 2017
 
 ##### [website](https://2017.react-europe.org/) - [playlist: Day 1](https://www.youtube.com/playlist?list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD) - [playlist: Day 2](https://www.youtube.com/playlist?list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH)
 
@@ -550,7 +579,7 @@ List of react conference videos.
 [Building Applications for Studio in Cloud at Netflix](https://www.youtube.com/watch?v=7VV1HvVjrlU&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH&index=14) | Feather Knee | 4:16
 [React Native in the "Brown Field"](https://www.youtube.com/watch?v=tWitQoPgs8w&index=15&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH) | Leland Richardson | 27:56
 [Beyond Animations User Interactions @ 60 FPS in React Native](https://www.youtube.com/watch?v=mjsv8NJnt5k&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH&index=16) | Tal Kol | 26:38
-[ou Don't Need a Fancy Framework to Use GraphQL w/ React](https://www.youtube.com/watch?v=M4JqfZ-WaI0&index=17&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH) | Samer Buna | 5:25
+[You Don't Need a Fancy Framework to Use GraphQL w/ React](https://www.youtube.com/watch?v=M4JqfZ-WaI0&index=17&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH) | Samer Buna | 5:25
 [Cross Platform Data Viz with React + React Native](https://www.youtube.com/watch?v=lF-ztmPVWmo&index=18&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH) | Peggy Rayzis | 5:49
 [Using React for Anything but Website](https://www.youtube.com/watch?v=-VC7o6wZ_a8&index=19&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH) | Ken Wheeler | 5:51
 [React Everything, Render Everywhere](https://www.youtube.com/watch?v=4M1xQzAbesY&index=20&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH) | Dustan Kasten | 4:49
@@ -573,7 +602,7 @@ List of react conference videos.
 [The Great Convergence with React](https://www.youtube.com/watch?v=vsvyg0T40NU&index=11&list=PLb0IAmt7-GS1_fTtjoeSbiIXeia9aYxB1) | Aditya Punjani | 5:11
 [Learn Once, Route Anywhere](https://www.youtube.com/watch?v=Mf0Fy8iHp8k&index=12&list=PLb0IAmt7-GS1_fTtjoeSbiIXeia9aYxB1) | Michael Jackson & Ryan Florence | 13:50
 [Taming the Meta Language](https://www.youtube.com/watch?v=_0T5OSSzxms&list=PLb0IAmt7-GS1_fTtjoeSbiIXeia9aYxB1&index=13) | Cheng Lou | 36:46
-[Speaker Panel](https://www.youtube.com/watch?v=mewEG6lejdg&list=PLb0IAmt7-GS1_fTtjoeSbiIXeia9aYxB1&index=14) | Ben Alpert, Lin Clark, Sebastian Markbage, Leland Richardson | 42:46
+[Speaker Panel](https://www.youtube.com/watch?v=mewEG6lejdg&list=PLb0IAmt7-GS1_fTtjoeSbiIXeia9aYxB1&index=14) | Ben Alpert, Lin Clark, Sebastian Markbåge, Leland Richardson | 42:46
 
 
 ## 2016
