@@ -2,7 +2,7 @@
 [www.reactjsvideos.com](https://www.reactjsvideos.com)
 
 List of react conference videos.
-**395** videos from **21** Conferences.
+**406** videos from **22** Conferences.
 
 
 ## Quick Links
@@ -24,6 +24,7 @@ List of react conference videos.
   * [React Rally 2017](#react-rally-2017)
   * [React Europe 2017](#react-europe-2017)
   * [React Amsterdam 2017](#react-amsterdam-2017)
+  * [React London 2017](#react-london-2017)
 * 2016
   * [ReactiveConf 2016](#reactiveconf-2016)
   * [React Rally 2016](#react-rally-2016)
@@ -452,7 +453,7 @@ List of react conference videos.
 [La nouvelle vague](https://www.youtube.com/watch?v=yjVhjmM1FPc&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD&index=4) | Sunil Pai | 28:02
 [Worse is Better: The Upside of JavaScript Fatigue](https://www.youtube.com/watch?v=4mbipBIzY_g&index=5&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD) | Kevin Lacker | 22:56
 [What WebAssembly means for React](https://www.youtube.com/watch?v=3GHJ4cbxsVQ&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD&index=6) | Lin Clark | 33:07
-[Imperfection](https://www.youtube.com/watch?v=tCVXp6gFD8o&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD&index=7) | Cheng Lou Aka | 30:18
+[Imperfection](https://www.youtube.com/watch?v=tCVXp6gFD8o&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD&index=7) | Cheng Lou | 30:18
 [Practical Confidence: Using Types to Help Your Computer Help You](https://www.youtube.com/watch?v=ppYj1FFeyXw&index=8&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD) | Adam Perry | 28:24
 [Maximally Modular Apps with React Navigation](https://www.youtube.com/watch?v=1ZwXOqsdl4c&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD&index=9) | Eric Vicenti | 21:38
 [How Streaming Can Supercharge React](https://www.youtube.com/watch?v=UhdGiVy3_Nk&index=10&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD) | Sasha Aickin | 30:21
@@ -504,6 +505,25 @@ List of react conference videos.
 [React Native Touch & Gesture](https://www.youtube.com/watch?v=V8maYc4R2G0&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=23) | Krzysztof Magiera | 27:43
 [Advanced SSR Caching with React](https://www.youtube.com/watch?v=4TOi9l6x-jo&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M&index=24) | Robert Haritonov | 8:17
 [Performance Limitations of React Native and How to Overcome Them](https://www.youtube.com/watch?v=OmiXlJ4ZzAo&index=25&list=PLNBNS7NRGKMHxfm0CcYNuINLdRw7r4a9M) | Tal Kol | 28:58
+
+### React London 2017
+
+##### [website](https://react.london/) - [playlist](https://www.youtube.com/playlist?list=PLW6ORi0XZU0CFjdoYeC0f5QReBG-NeNKJ)
+
+
+| Title/Link        | Presenter  | Length |
+| ------------- |:-------------:| -----:|
+[The road to styled-components: CSS in component-based systems](https://www.youtube.com/watch?v=2j9rSur_mnk&t=0s&list=PLW6ORi0XZU0CFjdoYeC0f5QReBG-NeNKJ&index=2) | Max Stoiber | 31:01
+[Realtime Webpack - Pushing on-demand bundling to the limits](https://www.youtube.com/watch?v=mkUK2SZ8moY&index=2&list=PLW6ORi0XZU0CFjdoYeC0f5QReBG-NeNKJ) | Oliver Woodings | 15:40
+[What's in a language?](https://www.youtube.com/watch?v=24S5u_4gx7w&list=PLW6ORi0XZU0CFjdoYeC0f5QReBG-NeNKJ&index=3) | Cheng Lou | 36:06
+[Logux, a new approach to client-server communication](https://www.youtube.com/watch?v=3LecnX1hjyw&list=PLW6ORi0XZU0CFjdoYeC0f5QReBG-NeNKJ&index=4) | Andrey Sitnik | 34:02
+[Javascript code formatting](https://www.youtube.com/watch?v=0Q4kUNx85_4&list=PLW6ORi0XZU0CFjdoYeC0f5QReBG-NeNKJ&index=5) | Christopher Chedeau | 50:07
+[Snapshot testing](https://www.youtube.com/watch?v=sCbGfi40IWk&index=6&list=PLW6ORi0XZU0CFjdoYeC0f5QReBG-NeNKJ) | Anna Doubkova | 13:32
+[A tiny Fiber renderer](https://www.youtube.com/watch?v=U9zFfIww3Go&index=7&list=PLW6ORi0XZU0CFjdoYeC0f5QReBG-NeNKJ) | Dustan Kasten | 41:40
+[Next.js in production](https://www.youtube.com/watch?v=h6rETZH6Ym0&index=8&list=PLW6ORi0XZU0CFjdoYeC0f5QReBG-NeNKJ) | Jasdeep Lalli | 16:23
+[Weapons grade React](https://www.youtube.com/watch?v=O4k80BRLsvg&list=PLW6ORi0XZU0CFjdoYeC0f5QReBG-NeNKJ&index=9) | Ken Wheeler | 31:37
+[Offline for the greater good](https://www.youtube.com/watch?v=FbAPw8RUEmA&list=PLW6ORi0XZU0CFjdoYeC0f5QReBG-NeNKJ&index=10) | Jani Eväkallio | 17:36
+[React London 2017 panel discussion](https://www.youtube.com/watch?v=TMun9g5o7OA&list=PLW6ORi0XZU0CFjdoYeC0f5QReBG-NeNKJ&index=11) | Dan Abramov, Christopher Chadeau, Ben Alpert, Lee Bryon | 1:06:06
 
 
 ## 2016

@@ -2021,6 +2021,102 @@
     ]
   },
   {
+    "title": "React London 2017",
+    "date": "28-03-2017",
+    "website": "https://react.london/",
+    "playlist": "https://www.youtube.com/playlist?list=PLW6ORi0XZU0CFjdoYeC0f5QReBG-NeNKJ",
+    "videos": [
+      {
+        "title": "The road to styled-components: CSS in component-based systems",
+        "link": "https://www.youtube.com/watch?v=2j9rSur_mnk&t=0s&list=PLW6ORi0XZU0CFjdoYeC0f5QReBG-NeNKJ&index=2",
+        "presenter": {
+          "name": "Max Stoiber"
+        },
+        "length": "31:01"
+      },
+      {
+        "title": "Realtime Webpack - Pushing on-demand bundling to the limits",
+        "link": "https://www.youtube.com/watch?v=mkUK2SZ8moY&index=2&list=PLW6ORi0XZU0CFjdoYeC0f5QReBG-NeNKJ",
+        "presenter": {
+          "name": "Oliver Woodings"
+        },
+        "length": "15:40"
+      },
+      {
+        "title": "What's in a language?",
+        "link": "https://www.youtube.com/watch?v=24S5u_4gx7w&list=PLW6ORi0XZU0CFjdoYeC0f5QReBG-NeNKJ&index=3",
+        "presenter": {
+          "name": "Cheng Lou"
+        },
+        "length": "36:06"
+      },
+      {
+        "title": "Logux, a new approach to client-server communication",
+        "link": "https://www.youtube.com/watch?v=3LecnX1hjyw&list=PLW6ORi0XZU0CFjdoYeC0f5QReBG-NeNKJ&index=4",
+        "presenter": {
+          "name": "Andrey Sitnik"
+        },
+        "length": "34:02"
+      },
+      {
+        "title": "Javascript code formatting",
+        "link": "https://www.youtube.com/watch?v=0Q4kUNx85_4&list=PLW6ORi0XZU0CFjdoYeC0f5QReBG-NeNKJ&index=5",
+        "presenter": {
+          "name": "Christopher Chedeau"
+        },
+        "length": "50:07"
+      },
+      {
+        "title": "Snapshot testing",
+        "link": "https://www.youtube.com/watch?v=sCbGfi40IWk&index=6&list=PLW6ORi0XZU0CFjdoYeC0f5QReBG-NeNKJ",
+        "presenter": {
+          "name": "Anna Doubkova"
+        },
+        "length": "13:32"
+      },
+      {
+        "title": "A tiny Fiber renderer",
+        "link": "https://www.youtube.com/watch?v=U9zFfIww3Go&index=7&list=PLW6ORi0XZU0CFjdoYeC0f5QReBG-NeNKJ",
+        "presenter": {
+          "name": "Dustan Kasten"
+        },
+        "length": "41:40"
+      },
+      {
+        "title": "Next.js in production",
+        "link": "https://www.youtube.com/watch?v=h6rETZH6Ym0&index=8&list=PLW6ORi0XZU0CFjdoYeC0f5QReBG-NeNKJ",
+        "presenter": {
+          "name": "Jasdeep Lalli"
+        },
+        "length": "16:23"
+      },
+      {
+        "title": "Weapons grade React",
+        "link": "https://www.youtube.com/watch?v=O4k80BRLsvg&list=PLW6ORi0XZU0CFjdoYeC0f5QReBG-NeNKJ&index=9",
+        "presenter": {
+          "name": "Ken Wheeler"
+        },
+        "length": "31:37"
+      },
+      {
+        "title": "Offline for the greater good",
+        "link": "https://www.youtube.com/watch?v=FbAPw8RUEmA&list=PLW6ORi0XZU0CFjdoYeC0f5QReBG-NeNKJ&index=10",
+        "presenter": {
+          "name": "Jani Eväkallio"
+        },
+        "length": "17:36"
+      },
+      {
+        "title": "React London 2017 panel discussion",
+        "link": "https://www.youtube.com/watch?v=TMun9g5o7OA&list=PLW6ORi0XZU0CFjdoYeC0f5QReBG-NeNKJ&index=11",
+        "presenter": {
+          "name": "Dan Abramov, Ben Alpert, Lee Bryon, Christopher Chadeau"
+        },
+        "length": "1:06:06"
+      }
+    ]
+  },
+  {
     "title": "React Amsterdam 2017",
     "date": "21-04-2017",
     "website": "https://react.amsterdam/",
@@ -2292,7 +2388,7 @@
         "title": "Imperfection",
         "link": "https://www.youtube.com/watch?v=tCVXp6gFD8o&list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD&index=7",
         "presenter": {
-          "name": "Cheng Lou Aka"
+          "name": "Cheng Lou"
         },
         "length": "30:18",
         "split": "Day 1"
