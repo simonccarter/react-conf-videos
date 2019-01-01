@@ -2117,6 +2117,344 @@
     ]
   },
   {
+    "title": "React Conf 2017",
+    "date": "14-03-2017",
+    "website": "https://conf.reactjs.org/",
+    "playlist": "https://www.youtube.com/playlist?list=PLb0IAmt7-GS3fZ46IGFirdqKTIxlws7e0",
+    "videos": [
+      {
+        "title": "Keynote Part 1",
+        "link": "https://www.youtube.com/watch?v=7HSd1sk07uU&index=2&t=1s&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH",
+        "presenter": {
+          "name": "Tom Occhino"
+        },
+        "length": "6:36",
+        "split": "Day 1"
+      },
+      {
+        "title": "Incrementally Adopting React Native at Facebook - Keynote Part 2",
+        "link": "https://www.youtube.com/watch?v=cSUxHv-kH7w&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH&index=2",
+        "presenter": {
+          "name": "Jing Chen"
+        },
+        "length": "14:13",
+        "split": "Day 1"
+      },
+      {
+        "title": "React Performance End to End (React Fiber) - Keynote Part 3",
+        "link": "https://www.youtube.com/watch?v=bvFpe5j9-zQ&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH&index=3",
+        "presenter": {
+          "name": "Sebastian Markbåge"
+        },
+        "length": "18:51",
+        "split": "Day 1"
+      },
+      {
+        "title": "React Fiber, Create React App, and React Community - Keynote Part 4",
+        "link": "https://www.youtube.com/watch?v=5Wd5rxT7e1U&index=4&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH",
+        "presenter": {
+          "name": "Tom Occhino"
+        },
+        "length": "6:09",
+        "split": "Day 1"
+      },
+      {
+        "title": "A Cartoon Intro to Fiber",
+        "link": "https://www.youtube.com/watch?v=ZCuYPiUIONs&index=5&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH",
+        "presenter": {
+          "name": "Lin Clark"
+        },
+        "length": "31:47",
+        "split": "Day 1"
+      },
+      {
+        "title": "Next.js: Universal React Made Easy and Simple",
+        "link": "https://www.youtube.com/watch?v=evaMpdSiZKk&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH&index=6",
+        "presenter": {
+          "name": "Guillermo Rauch"
+        },
+        "length": "34:40",
+        "split": "Day 1"
+      },
+      {
+        "title": "React + ES next = ♥",
+        "link": "https://www.youtube.com/watch?v=jh_Qzi-yHU0&index=7&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH",
+        "presenter": {
+          "name": "Ben Ilegbodu"
+        },
+        "length": "35:52",
+        "split": "Day 1"
+      },
+      {
+        "title": "MobX vs Redux: Comparing the Opposing Paradigms",
+        "link": "https://www.youtube.com/watch?v=76FRrbY18Bs&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH&index=8",
+        "presenter": {
+          "name": "Preethi Kasireddy"
+        },
+        "length": "25:17",
+        "split": "Day 1"
+      },
+      {
+        "title": "Type Systems Will Make You a Better JavaScript Developer",
+        "link": "https://www.youtube.com/watch?v=V1po0BT7kac&index=9&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH",
+        "presenter": {
+          "name": "Jared Forsyth"
+        },
+        "length": "22:04",
+        "split": "Day 1"
+      },
+      {
+        "title": "Moving Fast with Nuclide and Flow",
+        "link": "https://www.youtube.com/watch?v=WRyk5ZVklFs&index=10&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH",
+        "presenter": {
+          "name": "Andres Suarez"
+        },
+        "length": "5:40",
+        "split": "Day 1",
+        "lightning": true
+      },
+      {
+        "title": "AWS Lambda + AWS Gateway + React = AWEsome",
+        "link": "https://www.youtube.com/watch?v=GuItxBkpIAQ&index=11&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH",
+        "presenter": {
+          "name": "Sophia Shoemaker"
+        },
+        "length": "6:02",
+        "split": "Day 1",
+        "lightning": true
+      },
+      {
+        "title": "React to Code",
+        "link": "https://www.youtube.com/watch?v=HqMMj-5PxW0&index=12&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH",
+        "presenter": {
+          "name": "Merrick Christensen"
+        },
+        "length": "5:15",
+        "split": "Day 1",
+        "lightning": true
+      },
+      {
+        "title": "The Road to Styled Components",
+        "link": "https://www.youtube.com/watch?v=jjN2yURa_uM&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH&index=13",
+        "presenter": {
+          "name": "Max Stoiber"
+        },
+        "length": "4:03",
+        "split": "Day 1",
+        "lightning": true
+      },
+      {
+        "title": "Building Applications for Studio in Cloud at Netflix",
+        "link": "https://www.youtube.com/watch?v=7VV1HvVjrlU&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH&index=14",
+        "presenter": {
+          "name": "Feather Knee"
+        },
+        "length": "4:16",
+        "split": "Day 1",
+        "lightning": true
+      },
+      {
+        "title": "React Native in the \"Brown Field\"",
+        "link": "https://www.youtube.com/watch?v=tWitQoPgs8w&index=15&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH",
+        "presenter": {
+          "name": "Leland Richardson"
+        },
+        "length": "27:56",
+        "split": "Day 1"
+      },
+      {
+        "title": "Beyond Animations User Interactions @ 60 FPS in React Native",
+        "link": "https://www.youtube.com/watch?v=mjsv8NJnt5k&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH&index=16",
+        "presenter": {
+          "name": "Tal Kol"
+        },
+        "length": "26:38",
+        "split": "Day 1"
+      },
+      {
+        "title": "You Don't Need a Fancy Framework to Use GraphQL w/ React",
+        "link": "https://www.youtube.com/watch?v=M4JqfZ-WaI0&index=17&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH",
+        "presenter": {
+          "name": "Samer Buna"
+        },
+        "length": "5:25",
+        "split": "Day 1",
+        "lightning": true
+      },
+      {
+        "title": "Cross Platform Data Viz with React + React Native",
+        "link": "https://www.youtube.com/watch?v=lF-ztmPVWmo&index=18&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH",
+        "presenter": {
+          "name": "Peggy Rayzis"
+        },
+        "length": "5:49",
+        "split": "Day 1",
+        "lightning": true
+      },
+      {
+        "title": "Using React for Anything but Website",
+        "link": "https://www.youtube.com/watch?v=-VC7o6wZ_a8&index=19&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH",
+        "presenter": {
+          "name": "Ken Wheeler"
+        },
+        "length": "5:51",
+        "split": "Day 1",
+        "lightning": true
+      },
+      {
+        "title": "React Everything, Render Everywhere",
+        "link": "https://www.youtube.com/watch?v=4M1xQzAbesY&index=20&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH",
+        "presenter": {
+          "name": "Dustan Kasten"
+        },
+        "length": "4:49",
+        "split": "Day 1",
+        "lightning": true
+      },
+      {
+        "title": "Create React Native App: 5 min. to \"Hello, World!\"",
+        "link": "https://www.youtube.com/watch?v=9baaVjGdBqs&index=21&list=PLb0IAmt7-GS0kj3saZuh4vzfldxEdH5RH",
+        "presenter": {
+          "name": "Adam Perry"
+        },
+        "length": "5:46",
+        "split": "Day 1",
+        "lightning": true
+      },
+      {
+        "title": "Goodbye Flatland! An Introduction to ReactVR",
+        "link": "https://www.youtube.com/watch?v=CtVo3z_o9Rw&list=PLb0IAmt7-GS1_fTtjoeSbiIXeia9aYxB1&t=41s&index=2",
+        "presenter": {
+          "name": "Michaela Lehr"
+        },
+        "length": "24:15",
+        "split": "Day 2"
+      },
+      {
+        "title": "Realtime React Apps with GraphQL",
+        "link": "https://www.youtube.com/watch?v=AYbVMNtO-ro&index=2&list=PLb0IAmt7-GS1_fTtjoeSbiIXeia9aYxB1",
+        "presenter": {
+          "name": "Robert Zhu"
+        },
+        "length": "23:59",
+        "split": "Day 2"
+      },
+      {
+        "title": "Jest Snapshots and Beyond",
+        "link": "https://www.youtube.com/watch?v=HAuXJVI_bUs&index=3&list=PLb0IAmt7-GS1_fTtjoeSbiIXeia9aYxB1",
+        "presenter": {
+          "name": "Rogelio Guzman"
+        },
+        "length": "26:33",
+        "split": "Day 2"
+      },
+      {
+        "title": "A Beginner's Guide to Code Splitting Your React App",
+        "link": "https://www.youtube.com/watch?v=bb6RCrDaxhw&list=PLb0IAmt7-GS1_fTtjoeSbiIXeia9aYxB1&index=4",
+        "presenter": {
+          "name": "Neehar Venugopal"
+        },
+        "length": "24:01",
+        "split": "Day 2"
+      },
+      {
+        "title": "Web Like Development and Release Agility for React Native",
+        "link": "https://www.youtube.com/watch?v=iMLpUVZseEg&index=5&list=PLb0IAmt7-GS1_fTtjoeSbiIXeia9aYxB1",
+        "presenter": {
+          "name": "Parashuram N"
+        },
+        "length": "35:20",
+        "split": "Day 2"
+      },
+      {
+        "title": "React Storybook: Design, Dev, Doc, Debug Components",
+        "link": "https://www.youtube.com/watch?v=PF0Vi-iIyoo&list=PLb0IAmt7-GS1_fTtjoeSbiIXeia9aYxB1&index=6",
+        "presenter": {
+          "name": "Marie-Laure Thuret"
+        },
+        "length": "24:16",
+        "split": "Day 2"
+      },
+      {
+        "title": "Extensible React",
+        "link": "https://www.youtube.com/watch?v=395ou6k6C6k&index=7&list=PLb0IAmt7-GS1_fTtjoeSbiIXeia9aYxB1",
+        "presenter": {
+          "name": "Cameron Westland"
+        },
+        "length": "19:13",
+        "split": "Day 2"
+      },
+      {
+        "title": "Building React Communities Outside of Your Circle",
+        "link": "https://www.youtube.com/watch?v=Y2xXUlkF-UM&list=PLb0IAmt7-GS1_fTtjoeSbiIXeia9aYxB1&index=8",
+        "presenter": {
+          "name": "Troy Connor"
+        },
+        "length": "2:58",
+        "split": "Day 2",
+        "lightning": true
+      },
+      {
+        "title": "A Prettier Printer (plus bonus clip!)",
+        "link": "https://www.youtube.com/watch?v=hkfBvpEfWdA&list=PLb0IAmt7-GS1_fTtjoeSbiIXeia9aYxB1&index=9",
+        "presenter": {
+          "name": "James Long"
+        },
+        "length": "8:13",
+        "split": "Day 2",
+        "lightning": true
+      },
+      {
+        "title": "How to React in the Slow Lane",
+        "link": "https://www.youtube.com/watch?v=pSr6sTRDdi4&list=PLb0IAmt7-GS1_fTtjoeSbiIXeia9aYxB1&index=10",
+        "presenter": {
+          "name": "Nicole Chung"
+        },
+        "length": "6:13",
+        "split": "Day 2",
+        "lightning": true
+      },
+      {
+        "title": "The Great Convergence with React",
+        "link": "https://www.youtube.com/watch?v=vsvyg0T40NU&index=11&list=PLb0IAmt7-GS1_fTtjoeSbiIXeia9aYxB1",
+        "presenter": {
+          "name": "Aditya Punjani"
+        },
+        "length": "5:11",
+        "split": "Day 2",
+        "lightning": true
+      },
+      {
+        "title": "Learn Once, Route Anywhere",
+        "link": "https://www.youtube.com/watch?v=Mf0Fy8iHp8k&index=12&list=PLb0IAmt7-GS1_fTtjoeSbiIXeia9aYxB1",
+        "presenter": {
+          "name": "Michael Jackson & Ryan Florence"
+        },
+        "length": "13:50",
+        "split": "Day 2",
+        "lightning": true
+      },
+      {
+        "title": "Taming the Meta Language",
+        "link": "https://www.youtube.com/watch?v=_0T5OSSzxms&list=PLb0IAmt7-GS1_fTtjoeSbiIXeia9aYxB1&index=13",
+        "presenter": {
+          "name": "Cheng Lou"
+        },
+        "length": "36:46",
+        "split": "Day 2"
+      },
+      {
+        "title": "Speaker Panel",
+        "link": "https://www.youtube.com/watch?v=mewEG6lejdg&list=PLb0IAmt7-GS1_fTtjoeSbiIXeia9aYxB1&index=14",
+        "presenter": {
+          "name": "Ben Alpert, Lin Clark, Sebastian Markbåge, Leland Richardson"
+        },
+        "length": "42:46",
+        "split": "Day 2"
+      }
+    ]
+  },
+  {
     "title": "React Amsterdam 2017",
     "date": "21-04-2017",
     "website": "https://react.amsterdam/",
