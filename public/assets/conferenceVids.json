@@ -2650,6 +2650,174 @@
     ]
   },
   {
+    "title": "Chain React 2017",
+    "date": "10-07-2017",
+    "website": "https://infinite.red/ChainReactConf",
+    "playlist": "https://www.youtube.com/playlist?list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522",
+    "videos": [
+      {
+        "title": "The Dark Art of Bundlers",
+        "link": "https://www.youtube.com/watch?v=cz5BzwgATpc&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522&index=2&t=0s",
+        "presenter": {
+          "name": "Mike Grabowski"
+        },
+        "length": "28:00"
+      },
+      {
+        "title": "PayPal Checkout with React Native",
+        "link": "https://www.youtube.com/watch?v=m-XaF3vAHrQ&index=2&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522",
+        "presenter": {
+          "name": "Poornima Venkatakrishnan"
+        },
+        "length": "24:21"
+      },
+      {
+        "title": "React Native + ES.Next",
+        "link": "https://www.youtube.com/watch?v=nbtEwjRJXLo&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522&index=3",
+        "presenter": {
+          "name": "Ben Ilegbodu"
+        },
+        "length": "38:20"
+      },
+      {
+        "title": "JavaScript Futurism",
+        "link": "https://www.youtube.com/watch?v=iCoYCAzx82g&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522&index=4",
+        "presenter": {
+          "name": "Nader Dabit"
+        },
+        "length": "32:31"
+      },
+      {
+        "title": "Mobile Payments with React Native ",
+        "link": "https://www.youtube.com/watch?v=sTretbawbkg&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522&index=5",
+        "presenter": {
+          "name": "Naoufal Kadhom"
+        },
+        "length": "17:33"
+      },
+      {
+        "title": "Gestures Here. Gestures There. Gestures Everywhere!",
+        "link": "https://www.youtube.com/watch?v=L_jzGn5b9H4&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522&index=6",
+        "presenter": {
+          "name": "Kyle Poole & Thomas Bruketta"
+        },
+        "length": "33:44"
+      },
+      {
+        "title": "Rewriting a Large Hybrid App with React Native",
+        "link": "https://www.youtube.com/watch?v=eNRc0815pDs&index=7&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522",
+        "presenter": {
+          "name": "Javier Cuevas"
+        },
+        "length": "30:29"
+      },
+      {
+        "title": "Why we Need an App Browser",
+        "link": "https://www.youtube.com/watch?v=WEQx3wz8QeY&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522&index=8",
+        "presenter": {
+          "name": "Ken Wheeler"
+        },
+        "length": "23:31"
+      },
+      {
+        "title": "Breaking Down Bridging in React Native",
+        "link": "https://www.youtube.com/watch?v=GiUo88TGebs&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522&index=9",
+        "presenter": {
+          "name": "Peggy Rayzis"
+        },
+        "length": "23:02"
+      },
+      {
+        "title": "The Evolution of API Design",
+        "link": "https://www.youtube.com/watch?v=DeKpgHK-bqw&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522&index=10",
+        "presenter": {
+          "name": "Eric Baer"
+        },
+        "length": "30:15"
+      },
+      {
+        "title": "React Native: Zero to DevOps",
+        "link": "https://www.youtube.com/watch?v=f_-S0ZhVmvQ&index=11&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522",
+        "presenter": {
+          "name": "Ram Narasimhan"
+        },
+        "length": "30:30"
+      },
+      {
+        "title": "React as a Platform",
+        "link": "https://www.youtube.com/watch?v=JaRtmgaNZos&index=12&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522",
+        "presenter": {
+          "name": "Leland Richardson"
+        },
+        "length": "29:00"
+      },
+      {
+        "title": "Building Serverless Backends with AWS Lambda for React Native Apps",
+        "link": "https://www.youtube.com/watch?v=blGtyVCGNT4&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522&index=13",
+        "presenter": {
+          "name": "Kevin Old"
+        },
+        "length": "30:07"
+      },
+      {
+        "title": "When to go Native Over Javascript",
+        "link": "https://www.youtube.com/watch?v=kFyaj5HmMEY&index=14&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522",
+        "presenter": {
+          "name": "Harry Tormey"
+        },
+        "length": "24:02"
+      },
+      {
+        "title": "Building stellar user experiences with React Native",
+        "link": "https://www.youtube.com/watch?v=fjS5ssBn3fA&index=15&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522",
+        "presenter": {
+          "name": "Alex Kotliarskyi"
+        },
+        "length": "23:42"
+      },
+      {
+        "title": "From Idea to App Store: A Guide to Shipping React Native Apps",
+        "link": "https://www.youtube.com/watch?v=W8X7t1qlT_w&index=16&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522",
+        "presenter": {
+          "name": "Chris Ball"
+        },
+        "length": "33:53"
+      },
+      {
+        "title": "React Native Sandpaper",
+        "link": "https://www.youtube.com/watch?v=oBi3j33idW0&index=17&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522",
+        "presenter": {
+          "name": "Brent Vatne"
+        },
+        "length": "35:40"
+      },
+      {
+        "title": "React Native on the Apple TV Platform",
+        "link": "https://www.youtube.com/watch?v=jDRXGqb9hno&index=18&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522",
+        "presenter": {
+          "name": "Doug Lowder"
+        },
+        "length": "14:21"
+      },
+      {
+        "title": "React Native Panel With Various Speakers",
+        "link": "https://www.youtube.com/watch?v=zQhSuJwWy3k&index=19&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522",
+        "presenter": {
+          "name": "n/a"
+        },
+        "length": "42:47"
+      },
+      {
+        "title": "Realtime Event Processing, Streaming and Subscription for React Native using Cloud Services",
+        "link": "https://www.youtube.com/watch?v=cf6-K6OQ4-g&index=20&list=PLFHvL21g9bk3RxJ1Ut5nR_uTZFVOxu522",
+        "presenter": {
+          "name": "Richard Threlkeld"
+        },
+        "length": "29:22"
+      }
+    ]
+  },
+  {
     "title": "ReactiveConf 2017",
     "date": "25-10-2017",
     "website": "https://reactiveconf.com/",
@@ -2660,7 +2828,7 @@
     "videos": []
   },
   {
-    "title": "React Europe 2017",
+    "title": "ReactEurope 2017",
     "date": "16-05-2017",
     "website": "https://2017.react-europe.org/",
     "playlist": {
