@@ -1,16 +1,16 @@
-import { mockStore } from './test'
+import { mockStore } from './test';
 
 describe('utils/test', () => {
   describe('mockStore', () => {
     it('should contain empty object as state', () => {
       // arrange
       // act
-      const result = mockStore()
+      const result = mockStore();
 
       // assert
-      expect(result).toHaveProperty('value')
-      expect(result.value).toEqual({})
-    })
+      expect(result).toHaveProperty('value');
+      expect(result.value).toEqual({});
+    });
 
     it('should contain object passed to it under value', () => {
       // arrange
@@ -19,13 +19,13 @@ describe('utils/test', () => {
         kkk: {
           v: 'v'
         }
-      }
+      };
       // act
-      const result = mockStore(mockState)
+      const result = mockStore(mockState);
 
       // assert
-      expect(result).toHaveProperty('value')
-      expect(result.value).toEqual(mockState)
-    })
-  })
-})
+      expect(result).toHaveProperty('value');
+      expect(result.value).toEqual(mockState);
+    });
+  });
+});

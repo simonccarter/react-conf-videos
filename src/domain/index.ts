@@ -1,13 +1,29 @@
-import { Action } from './Action'
-import { Video, IndexedVideos } from './Video'
-import { Presenter, IndexedPresenters } from './Presenter'
-import { Conference, IndexedConferences, ConferenceTitlesToIds } from './Conference'
-import { ConferenceInput, VideoInput, PresenterInput, JSONInput } from './InputJSON'
+import { Action } from './Action';
+import {
+  Conference,
+  ConferenceTitlesToIds,
+  IndexedConferences
+} from './Conference';
+import {
+  ConferenceInput,
+  JSONInput,
+  PresenterInput,
+  VideoInput
+} from './InputJSON';
+import { IndexedPresenters, Presenter } from './Presenter';
+import { IndexedVideos, Video } from './Video';
 
 export {
   Action,
-  Video, IndexedVideos,
-  Presenter, IndexedPresenters,
-  Conference, IndexedConferences, ConferenceTitlesToIds,
-  ConferenceInput, VideoInput, PresenterInput, JSONInput
-}
+  Video,
+  IndexedVideos,
+  Presenter,
+  IndexedPresenters,
+  Conference,
+  IndexedConferences,
+  ConferenceTitlesToIds,
+  ConferenceInput,
+  VideoInput,
+  PresenterInput,
+  JSONInput
+};

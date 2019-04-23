@@ -1,131 +1,126 @@
-import 'rxjs'
-import { mockStore } from 'utils/test'
-import { ActionsObservable } from 'redux-observable'
+import { ActionsObservable } from 'redux-observable';
+import 'rxjs';
+import { mockStore } from 'utils/test';
 
 import bootstrapReducer, {
-  BOOTSTRAP_START, BOOTSTRAP_END,
-  BOOTSTRAP_COMPLETE_ACTIONS, BOOTSTRAP_END_LOADER,
-  initialState, bootstrapStartEpic, bootstrapEndEpic,
-  loadJSONDataEpic, boostrapEndRemoveLoaderEpic
-} from './bootstrap'
-import { LOAD_DATA_END, LOAD_DATA_START } from './data'
+  boostrapEndRemoveLoaderEpic,
+  BOOTSTRAP_COMPLETE_ACTIONS,
+  BOOTSTRAP_END,
+  BOOTSTRAP_END_LOADER,
+  BOOTSTRAP_START,
+  bootstrapEndEpic,
+  bootstrapStartEpic,
+  initialState,
+  loadJSONDataEpic
+} from './bootstrap';
+import { LOAD_DATA_END, LOAD_DATA_START } from './data';
 
 describe('bootstrap reducer', () => {
-
   describe('bootstrapStartEpic', () => {
-    it('should return the correct action', (done) => {
+    it('should return the correct action', done => {
       // arrange
-      const action$ = ActionsObservable.of({type: BOOTSTRAP_START})
+      const action$ = ActionsObservable.of({ type: BOOTSTRAP_START });
 
       // act
-      bootstrapStartEpic(action$, mockStore(), null)
-        .subscribe(
-          (action) => {
-            // assert
-            expect(action.type).toBe(LOAD_DATA_START)
-            done()
-          }
-        )
-    })
-  })
+      bootstrapStartEpic(action$, mockStore(), null).subscribe(action => {
+        // assert
+        expect(action.type).toBe(LOAD_DATA_START);
+        done();
+      });
+    });
+  });
 
   describe('loadJSONDataEpic', () => {
-    it('should return the correct action and payload', (done) => {
+    it('should return the correct action and payload', done => {
       // arrange
-      const payload = 'random data'
-      const action$ = ActionsObservable.of({type: LOAD_DATA_START, payload})
+      const payload = 'random data';
+      const action$ = ActionsObservable.of({
+        type: LOAD_DATA_START,
+        payload
+      });
 
       // act
-      loadJSONDataEpic(action$, mockStore(), null)
-        .subscribe(
-          (action) => {
-            // assert
-            expect(action.type).toBe(LOAD_DATA_END)
-            done()
-          }
-        )
-    })
-  })
+      loadJSONDataEpic(action$, mockStore(), null).subscribe(action => {
+        // assert
+        expect(action.type).toBe(LOAD_DATA_END);
+        done();
+      });
+    });
+  });
 
   describe.skip('boostrapEndRemoveLoaderEpic', () => {
-    it('should return the correct action', (done) => {
+    it('should return the correct action', done => {
       // arrange
-      const action$ = ActionsObservable.of({type: BOOTSTRAP_END})
+      const action$ = ActionsObservable.of({ type: BOOTSTRAP_END });
 
       // act
-      boostrapEndRemoveLoaderEpic(action$, mockStore(), null)
-        .subscribe(
-          (action) => {
-            // assert
-            expect(action.type).toBe(BOOTSTRAP_END_LOADER)
-            expect(action.payload).toBeUndefined()
-            done()
-          }
-        )
-    })
-  })
+      boostrapEndRemoveLoaderEpic(action$, mockStore(), null).subscribe(
+        action => {
+          // assert
+          expect(action.type).toBe(BOOTSTRAP_END_LOADER);
+          expect(action.payload).toBeUndefined();
+          done();
+        }
+      );
+    });
+  });
 
   describe('bootstrapEndEpic', () => {
-    it('should return the correct action and payload', (done) => {
+    it('should return the correct action and payload', done => {
       // arrange
       const action$ = ActionsObservable.from(
-        BOOTSTRAP_COMPLETE_ACTIONS.map((type) => ({type}))
-      )
+        BOOTSTRAP_COMPLETE_ACTIONS.map(type => ({ type }))
+      );
 
       // act
-      bootstrapEndEpic(action$, mockStore(), null)
-        .subscribe(
-          (action) => {
-            // assert
-            expect(action.type).toBe(BOOTSTRAP_END)
-            expect(action.payload).toBeUndefined()
-            done()
-          }
-        )
-    })
-  })
+      bootstrapEndEpic(action$, mockStore(), null).subscribe(action => {
+        // assert
+        expect(action.type).toBe(BOOTSTRAP_END);
+        expect(action.payload).toBeUndefined();
+        done();
+      });
+    });
+  });
 
   describe('reducer', () => {
     it('should return the initial state', () => {
       // act
-      const result = bootstrapReducer(undefined, {type: 'EEE'})
+      const result = bootstrapReducer(undefined, { type: 'EEE' });
       // assert
-      expect(result).toEqual(initialState)
-    })
+      expect(result).toEqual(initialState);
+    });
 
     it('should set finished to false on BOOTSTRAP_START action', () => {
       // arrange
-      const action = {type: BOOTSTRAP_START}
+      const action = { type: BOOTSTRAP_START };
       // act
-      const result = bootstrapReducer(undefined, action)
+      const result = bootstrapReducer(undefined, action);
       // assert
-      expect(result.finished).toBe(false)
-    })
+      expect(result.finished).toBe(false);
+    });
 
     it('should set finished to true on BOOTSTRAP_END action', () => {
       // arrange
-      const action = {type: BOOTSTRAP_END}
+      const action = { type: BOOTSTRAP_END };
       // act
-      const result = bootstrapReducer(undefined, action)
+      const result = bootstrapReducer(undefined, action);
       // assert
-      expect(result.finished).toBe(true)
-    })
+      expect(result.finished).toBe(true);
+    });
 
     it('should set data on LOAD_DATA_END action', () => {
       // arrange
-      const payload = 'some data'
-      const error = true
-      const action = {type: LOAD_DATA_END, payload, error }
+      const payload = 'some data';
+      const error = true;
+      const action = { type: LOAD_DATA_END, payload, error };
 
       // act
-      const result = bootstrapReducer(undefined, action)
+      const result = bootstrapReducer(undefined, action);
 
       // assert
-      expect(result.finished).toBe(false)
-      expect(result.data).toBe(payload)
-      expect(result.error).toBe(error)
-    })
-
-  })
-
-})
+      expect(result.finished).toBe(false);
+      expect(result.data).toBe(payload);
+      expect(result.error).toBe(error);
+    });
+  });
+});

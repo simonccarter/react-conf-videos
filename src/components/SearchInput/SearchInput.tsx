@@ -1,6 +1,6 @@
 /* tslint:disable:no-shadowed-variable */
 import * as React from 'react'
-import { pure, compose, withHandlers, withStateHandlers } from 'recompose'
+import { compose, pure, withHandlers, withStateHandlers } from 'recompose'
 
 import styles from './SearchInput.scss'
 

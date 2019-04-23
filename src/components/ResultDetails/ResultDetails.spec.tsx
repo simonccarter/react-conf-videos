@@ -1,9 +1,9 @@
-import * as React from 'react'
-import toJSON from 'enzyme-to-json'
 import { mount } from 'enzyme'
+import toJSON from 'enzyme-to-json'
+import * as React from 'react'
 
-import { ResultDetails } from './ResultDetails'
 import { mockIndexedConferences } from 'utils/test'
+import { ResultDetails } from './ResultDetails'
 
 describe('ResultDetails', () => {
   it('should render', () => {

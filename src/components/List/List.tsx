@@ -1,7 +1,7 @@
+import { compose as rcompose, flatten, map, pathOr, toPairs } from 'ramda'
 import * as React from 'react'
 import VirtualList from 'react-virtual-list'
 import { mapProps } from 'recompose'
-import { compose as rcompose, flatten, map, pathOr, toPairs } from 'ramda'
 
 import { Video } from 'components'
 import { Conference, IndexedConferences } from '../../domain'
@@ -14,7 +14,7 @@ type MappedVideo = {
   conferenceId: string
 }
 
-type Props = { conferences: {[idx: string]: Conference} }
+type Props = { conferences: { [idx: string]: Conference } }
 type MapProps = { videos: MappedVideo[] }
 
 const mapConferenceIdOntoVideos = ([conferenceId, conference]: [string, Conference]) =>
@@ -29,7 +29,7 @@ const mapConferenceVideos = rcompose<IndexedConferences, any, any[], MappedVideo
   toPairs
 )
 
-const VirtualisedList = ({ virtual }: {virtual: any}): React.ReactElement<{}> => (
+const VirtualisedList = ({ virtual }: { virtual: any }): React.ReactElement<{}> => (
   <div style={virtual.style}>
     {virtual.items && virtual.items.map((item: any) => (
       <Video {...item} />
@@ -53,11 +53,11 @@ export const ListInner: React.SFC<MapProps> = ({ videos }) => {
         items={videos}
         itemHeight={60}
         itemBuffer={20}
-      /> }
+      />}
     </section>
   )
 }
 
-export const List = mapProps<MapProps, Props>(({conferences}) =>
-  ({ videos: mapConferenceVideos(conferences)})
+export const List = mapProps<MapProps, Props>(({ conferences }) =>
+  ({ videos: mapConferenceVideos(conferences) })
 )(ListInner)

@@ -1,1 +1,1 @@
-export * from './ConfPage'
+export * from './ConfPage';

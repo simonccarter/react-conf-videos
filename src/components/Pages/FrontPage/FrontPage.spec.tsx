@@ -1,58 +1,59 @@
-import * as React from 'react'
-import { shallow } from 'enzyme'
-import toJson from 'enzyme-to-json'
+import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
+import * as React from 'react';
 
-import { shallowWithStore, mockConference } from 'utils/test'
-import { FrontPage, FrontPageInner } from './FrontPage'
+import { mockConference, shallowWithStore } from 'utils/test';
+import { FrontPage, FrontPageInner } from './FrontPage';
 
 describe('FrontPage', () => {
   describe('FrontPageInner', () => {
-
-    const shallowComp = (isActive: boolean) => shallow(
-      <FrontPageInner
-        conferences={{x: mockConference()}}
-        filterValue=""
-        navigateToSearchURL={jest.fn()}
-        onInputChange={() => null}
-      />
-    )
+    const NOOP = () => null;
+    const shallowComp = (isActive: boolean) =>
+      shallow(
+        <FrontPageInner
+          conferences={{ x: mockConference() }}
+          filterValue=""
+          navigateToSearchURL={jest.fn()}
+          onInputChange={NOOP}
+        />
+      );
 
     it('should render', () => {
       // arrange
       // act
-      const wrapper = shallowComp(true)
+      const wrapper = shallowComp(true);
 
       // expect
-      expect(toJson(wrapper)).toMatchSnapshot()
-    })
+      expect(toJson(wrapper)).toMatchSnapshot();
+    });
 
     it('should not have the isActive classes if isActive is false', () => {
       // arrange
       // act
-      const wrapper = shallowComp(false)
+      const wrapper = shallowComp(false);
 
       // assert
-      expect(wrapper.find('.frontPage.isActive').length).toBe(0)
-      expect(wrapper.find('.text.isActive').length).toBe(0)
-    })
-  })
+      expect(wrapper.find('.frontPage.isActive').length).toBe(0);
+      expect(wrapper.find('.text.isActive').length).toBe(0);
+    });
+  });
 
   describe('FrontPage', () => {
     it('should render', () => {
       // arrange
       const store = {
-        frontPage: {isActive: false},
+        frontPage: { isActive: false },
         search: {
-          conferences: {X: mockConference()},
+          conferences: { X: mockConference() },
           filterValue: ''
         }
-      }
+      };
 
       // act
-      const wrapper = shallowWithStore(store, <FrontPage />)
+      const wrapper = shallowWithStore(store, <FrontPage />);
 
       // assert
-      expect(toJson(wrapper)).toMatchSnapshot()
-    })
-  })
-})
+      expect(toJson(wrapper)).toMatchSnapshot();
+    });
+  });
+});

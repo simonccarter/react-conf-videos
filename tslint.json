@@ -1,14 +1,9 @@
 {
-  "extends": ["tslint:recommended", "tslint-react"],
+  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
   "rules": {
     // override tslint-react rules here
-    "semicolon": false,
-    "trailing-comma": false,
-    "quotemark": [true, "single", "jsx-double"],
-    "ordered-imports": false,
+    "ordered-imports": true,
     "interface-over-type-literal": false,
-    "jsx-no-lambda": false,
-    "jsx-no-multiline-js": false,
     "object-literal-sort-keys": false,
     "no-shadowed-variable": false
   }
