@@ -1,14 +1,14 @@
-import * as React from 'react'
-import * as cn from 'classnames'
-import { Link } from 'react-router-dom'
-import { connect } from 'react-redux'
-import { compose, pure, withStateHandlers } from 'recompose'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBolt } from '@fortawesome/free-solid-svg-icons/faBolt'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import * as cn from 'classnames'
+import * as React from 'react'
+import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { compose, pure, withStateHandlers } from 'recompose'
 
-import { Video as VideoProp, Presenter, Conference } from '../../domain'
 import { ApplicationState } from 'redux/modules'
 import { sluggifyUrl } from 'utils'
+import { Conference, Presenter, Video as VideoProp } from '../../domain'
 
 import styles from './Video.scss'
 

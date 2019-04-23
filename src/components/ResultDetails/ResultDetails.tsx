@@ -1,7 +1,7 @@
 import * as React from 'react'
 
+import { compose, flatten, pluck, values } from 'ramda'
 import { mapProps } from 'recompose'
-import { compose, flatten, values, pluck } from 'ramda'
 
 import { IndexedConferences } from '../../domain'
 

@@ -1,19 +1,19 @@
-import * as React from 'react'
-import * as ReactDOM from 'react-dom'
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 
-import { ConnectedRouter } from 'connected-react-router'
-import { Provider } from 'react-redux'
+import { ConnectedRouter } from 'connected-react-router';
+import { Provider } from 'react-redux';
 
-import configureStore from 'redux/configureStore'
-import { ScrollToTop } from 'components'
-import App from 'App'
+import App from 'App';
+import { ScrollToTop } from 'components';
+import configureStore from 'redux/configureStore';
 
-import './index.scss'
+import './index.scss';
 
-const { history, store } = configureStore()
+const { history, store } = configureStore();
 
 // start bootstrap process
-store.dispatch({ type: 'BOOTSTRAP_START' })
+store.dispatch({ type: 'BOOTSTRAP_START' });
 
 export const render = () => {
   ReactDOM.render(
@@ -23,16 +23,15 @@ export const render = () => {
           <App />
         </ScrollToTop>
       </ConnectedRouter>
-    </Provider>
-    ,
+    </Provider>,
     document.getElementById('app__container')
-  )
-}
+  );
+};
 
-render()
+render();
 
 if (module.hot) {
   module.hot.accept('./App.tsx', () => {
-    render()
-  })
+    render();
+  });
 }

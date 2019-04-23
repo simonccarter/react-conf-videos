@@ -1,1 +1,1 @@
-export * from './ConfPageHeader'
+export * from './ConfPageHeader';

@@ -1,16 +1,16 @@
+import {
+  ConfPageHeader,
+  InnerLayoutContainer,
+  List,
+  Meta,
+  ResultDetails,
+  SearchInput
+} from 'components'
 import * as React from 'react'
 import { connect } from 'react-redux'
 import { compose, pure, withHandlers } from 'recompose'
-import {
-  List,
-  Meta,
-  SearchInput,
-  ResultDetails,
-  ConfPageHeader,
-  InnerLayoutContainer
-} from 'components'
+import { ApplicationState, routingActions } from 'redux/modules'
 import { Conference, IndexedConferences } from '../../../domain'
-import { routingActions, ApplicationState } from 'redux/modules'
 
 type ReduxProps = {
   conference: Conference,

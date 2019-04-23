@@ -1,34 +1,34 @@
-import * as React from 'react'
-import { connect } from 'react-redux'
-import { compose, pure, withHandlers } from 'recompose'
+import * as React from 'react';
+import { connect } from 'react-redux';
+import { compose, pure, withHandlers } from 'recompose';
 
 import {
+  Header,
+  InnerLayoutContainer,
   List,
   Meta,
-  Header,
-  SearchInput,
   ResultDetails,
-  InnerLayoutContainer
-} from 'components'
-import { IndexedConferences } from '../../../domain'
-import { routingActions, ApplicationState } from 'redux/modules'
+  SearchInput
+} from 'components';
+import { ApplicationState, routingActions } from 'redux/modules';
+import { IndexedConferences } from '../../../domain';
 
 type ReduxProps = {
-  conferences: IndexedConferences,
-  filterValue: string
-}
+  conferences: IndexedConferences;
+  filterValue: string;
+};
 
 type DispatchpProps = {
-  navigateToSearchURL: typeof routingActions.navigateToSearchURL
-}
+  navigateToSearchURL: typeof routingActions.navigateToSearchURL;
+};
 
 type WithHandlers = {
-  onInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-}
+  onInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+};
 
-type Props = ReduxProps & DispatchpProps & WithHandlers
+type Props = ReduxProps & DispatchpProps & WithHandlers;
 
-export const FrontPageInner: React.SFC<Props> = (props) => (
+export const FrontPageInner: React.SFC<Props> = props => (
   <div>
     <Meta title={props.filterValue} />
     <Header />
@@ -41,23 +41,30 @@ export const FrontPageInner: React.SFC<Props> = (props) => (
       <List conferences={props.conferences} />
     </InnerLayoutContainer>
   </div>
-)
+);
 
-const mapStateToProps = ({search: {conferences, filterValue}}: ApplicationState) => ({
+const mapStateToProps = ({
+  search: { conferences, filterValue }
+}: ApplicationState) => ({
   filterValue,
   conferences
-})
+});
 
-const dispatchMap = ({
+const dispatchMap = {
   navigateToSearchURL: routingActions.navigateToSearchURL
-})
+};
 
 export const FrontPage = compose<Props, {}>(
-  connect(mapStateToProps, dispatchMap),
+  connect(
+    mapStateToProps,
+    dispatchMap
+  ),
   pure,
   withHandlers<ReduxProps & DispatchpProps, WithHandlers>({
-    onInputChange: ({navigateToSearchURL}) => (e: React.ChangeEvent<HTMLInputElement>) => {
-      navigateToSearchURL(e.target.value)
+    onInputChange: ({ navigateToSearchURL }) => (
+      e: React.ChangeEvent<HTMLInputElement>
+    ) => {
+      navigateToSearchURL(e.target.value);
     }
   })
-)(FrontPageInner)
+)(FrontPageInner);

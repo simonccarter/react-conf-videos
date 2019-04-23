@@ -1,8 +1,8 @@
-import * as React from 'react'
-import { shallow, mount } from 'enzyme'
+import { mount, shallow } from 'enzyme'
 import toJSON from 'enzyme-to-json'
+import * as React from 'react'
 
-import { SearchInput, SearchInputInner, blurRef, onKeyUpHandlers } from './SearchInput'
+import { blurRef, onKeyUpHandlers, SearchInput, SearchInputInner } from './SearchInput'
 
 describe('SearchInputInner', () => {
 
