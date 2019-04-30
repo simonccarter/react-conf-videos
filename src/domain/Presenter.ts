@@ -1,7 +1,7 @@
 export type Presenter = {
-  name: string
-}
+  name: string;
+};
 
 export type IndexedPresenters = {
-  [idx: string]: Presenter
-}
+  [idx: string]: Presenter;
+};

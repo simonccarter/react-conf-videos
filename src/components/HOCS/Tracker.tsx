@@ -1,6 +1,6 @@
+import { Location } from 'history'
 import * as React from 'react'
 import * as ReactGA from 'react-ga'
-import { Location } from 'history'
 
 type InnerProps = {
   location: Location

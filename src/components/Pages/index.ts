@@ -1,7 +1,4 @@
-import { ConfPage } from './ConfPage'
-import { FrontPage } from './FrontPage'
+import { ConfPage } from './ConfPage';
+import { FrontPage } from './FrontPage';
 
-export {
-  ConfPage,
-  FrontPage
-}
+export { ConfPage, FrontPage };

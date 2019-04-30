@@ -65,7 +65,7 @@ To add a conference and it's videos, or to simply fix a typo:
 	1. if adding a conference, create a branch in the format \`conf/confName\`
 	2. otherwise, use \`fix/\` or \`feature/\` suffixes
 3. edit \`public/assets/conferenceVids.json\`
-4. run \`yarn run buildData\`
+4. run \`yarn run createReadme\`
 
 To see a version working locally, with your changes, run
 1. \`yarn\`
