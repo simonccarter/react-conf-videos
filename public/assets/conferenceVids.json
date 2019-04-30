@@ -1,5 +1,204 @@
 [
   {
+    "title": "App.js Conf 2019",
+    "date": "04-04-2019",
+    "website": "www.appjs.co",
+    "playlist": {
+      "Day 1": "https://www.youtube.com/watch?v=gpDQRY0sfpY"
+    },
+    "videos": [
+      {
+        "title": "Opening",
+        "link": "https://www.youtube.com/watch?v=gpDQRY0sfpY&t=19s",
+        "presenter": {
+          "name": "Brent Vatne"
+        },
+        "length": "",
+        "split": "Day 1"
+      },
+      {
+        "title": "The State of the Expo",
+        "link": "https://www.youtube.com/watch?v=gpDQRY0sfpY&t=174s",
+        "presenter": {
+          "name": "Charlie Cheever"
+        },
+        "length": "",
+        "split": "Day 1"
+      },
+      {
+        "title": "Expo for web",
+        "link": "https://www.youtube.com/watch?v=gpDQRY0sfpY&t=1766s",
+        "presenter": {
+          "name": "Evan Bacon"
+        },
+        "length": "",
+        "split": "Day 1"
+      },
+      {
+        "title": "Make your React Native apps accessible",
+        "link": "https://www.youtube.com/watch?v=gpDQRY0sfpY&t=3599s",
+        "presenter": {
+          "name": "Ankita Kulkarni"
+        },
+        "length": "",
+        "split": "Day 1"
+      },
+      {
+        "title": "Can it be done in React Native",
+        "link": "https://www.youtube.com/watch?v=gpDQRY0sfpY&t=5383s",
+        "presenter": {
+          "name": "William Candillon"
+        },
+        "length": "",
+        "split": "Day 1"
+      },
+      {
+        "title": "Building Expo apps without writing code with Drafbit",
+        "link": "https://www.youtube.com/watch?v=gpDQRY0sfpY&t=6712s",
+        "presenter": {
+          "name": "Peter Piekarczyk"
+        },
+        "length": "",
+        "split": "Day 1"
+      },
+      {
+        "title": "Just use platforms",
+        "link": "https://www.youtube.com/watch?v=gpDQRY0sfpY&t=8489s",
+        "presenter": {
+          "name": "Krzysztof Magiera"
+        },
+        "length": "",
+        "split": "Day 1"
+      },
+      {
+        "title": "How to publish a React Native component library",
+        "link": "https://www.youtube.com/watch?v=gpDQRY0sfpY&t=10589s",
+        "presenter": {
+          "name": "Satyajit Sahoo"
+        },
+        "length": "",
+        "split": "Day 1"
+      },
+      {
+        "title": "A Custom Build System",
+        "link": "https://www.youtube.com/watch?v=gpDQRY0sfpY&t=13062s",
+        "presenter": {
+          "name": "Quinlan Jung"
+        },
+        "length": "",
+        "split": "Day 1"
+      },
+      {
+        "title": "CSS Gradients in React Native",
+        "link": "https://www.youtube.com/watch?v=gpDQRY0sfpY&t=14442s",
+        "presenter": {
+          "name": "Catalin Miron"
+        },
+        "length": "",
+        "split": "Day 1"
+      },
+      {
+        "title": "React Native newcomers built first app – vod.pl app case study",
+        "link": "https://www.youtube.com/watch?v=gpDQRY0sfpY&t=16006s",
+        "presenter": {
+          "name": "Michał Czernek & Tomasz Sochacki"
+        },
+        "length": "",
+        "split": "Day 1"
+      },
+      {
+        "title": "Automated CI/CD with Expo at Cameo",
+        "link": "https://www.youtube.com/watch?v=gpDQRY0sfpY&t=18856s",
+        "presenter": {
+          "name": "Tom von Geldern"
+        },
+        "length": "",
+        "split": "Day 1"
+      },
+      {
+        "title": "Upgrading Expo — The What, The How & The Why",
+        "link": "https://www.youtube.com/watch?v=gpDQRY0sfpY&t=19453s",
+        "presenter": {
+          "name": "Stanisław Chmiela"
+        },
+        "length": "",
+        "split": "Day 1"
+      },
+      {
+        "title": "React Native fundamentals for brownfield iOS apps",
+        "link": "https://www.youtube.com/watch?v=gpDQRY0sfpY&t=20238s",
+        "presenter": {
+          "name": "Karan Thakkar"
+        },
+        "length": "",
+        "split": "Day 1"
+      },
+      {
+        "title": "Some breaking news from React Native world",
+        "link": "https://www.youtube.com/watch?v=gpDQRY0sfpY&t=21129s",
+        "presenter": {
+          "name": "Tomasz Sapeta"
+        },
+        "length": "",
+        "split": "Day 1"
+      },
+      {
+        "title": "What's new in Expo CLI",
+        "link": "https://www.youtube.com/watch?v=gpDQRY0sfpY&t=22126s",
+        "presenter": {
+          "name": "Ville Immonen"
+        },
+        "length": "",
+        "split": "Day 1"
+      },
+      {
+        "title": "React Native Deployments with MS App Center",
+        "link": "https://www.youtube.com/watch?v=gpDQRY0sfpY&t=22868s",
+        "presenter": {
+          "name": "Betty Pierce"
+        },
+        "length": "",
+        "split": "Day 1"
+      },
+      {
+        "title": "Using React Native to ship fast and navigate performance improvements",
+        "link": "https://www.youtube.com/watch?v=gpDQRY0sfpY&t=24553s",
+        "presenter": {
+          "name": "Josh Hargreaves"
+        },
+        "length": "",
+        "split": "Day 1"
+      },
+      {
+        "title": "Reactive Data on the Full Stack",
+        "link": "https://www.youtube.com/watch?v=gpDQRY0sfpY&t=26390s",
+        "presenter": {
+          "name": "Eric Vicenti"
+        },
+        "length": "",
+        "split": "Day 1"
+      },
+      {
+        "title": "Reasonable React Native Apps",
+        "link": "https://www.youtube.com/watch?v=gpDQRY0sfpY&t=28292s",
+        "presenter": {
+          "name": "Cem Turan"
+        },
+        "length": "",
+        "split": "Day 1"
+      },
+      {
+        "title": "Closing word",
+        "link": "https://www.youtube.com/watch?v=gpDQRY0sfpY&t=30657s",
+        "presenter": {
+          "name": "Brent Vatne, Charlie Cheever, Krzysztof Magiera"
+        },
+        "length": "",
+        "split": "Day 1"
+      }
+    ]
+  },
+  {
     "title": "Reactathon 2019",
     "date": "30-03-2019",
     "website": "https://www.reactathon.com/",

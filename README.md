@@ -2,12 +2,13 @@
 [www.reactjsvideos.com](https://www.reactjsvideos.com)
 
 List of react conference videos.
-**476** videos from **25** Conferences.
+**497** videos from **26** Conferences.
 
 
 ## Quick Links
 
 * 2019
+  * [App.js Conf 2019](#appjs-conf-2019)
   * [Reactathon 2019](#reactathon-2019)
 * 2018
   * [React Day Berlin 2018](#react-day-berlin-2018)
@@ -41,6 +42,36 @@ List of react conference videos.
 
 
 ## 2019
+
+### App.js Conf 2019
+
+##### [website](www.appjs.co) - [playlist: Day 1](https://www.youtube.com/watch?v=gpDQRY0sfpY)
+
+#### Day 1
+
+| Title/Link        | Presenter  | Length |
+| ------------- |:-------------:| -----:|
+[Opening](https://www.youtube.com/watch?v=gpDQRY0sfpY&t=19s) | Brent Vatne | 
+[The State of the Expo](https://www.youtube.com/watch?v=gpDQRY0sfpY&t=174s) | Charlie Cheever | 
+[Expo for web](https://www.youtube.com/watch?v=gpDQRY0sfpY&t=1766s) | Evan Bacon | 
+[Make your React Native apps accessible](https://www.youtube.com/watch?v=gpDQRY0sfpY&t=3599s) | Ankita Kulkarni | 
+[Can it be done in React Native](https://www.youtube.com/watch?v=gpDQRY0sfpY&t=5383s) | William Candillon | 
+[Building Expo apps without writing code with Drafbit](https://www.youtube.com/watch?v=gpDQRY0sfpY&t=6712s) | Peter Piekarczyk | 
+[Just use platforms](https://www.youtube.com/watch?v=gpDQRY0sfpY&t=8489s) | Krzysztof Magiera | 
+[How to publish a React Native component library](https://www.youtube.com/watch?v=gpDQRY0sfpY&t=10589s) | Satyajit Sahoo | 
+[A Custom Build System](https://www.youtube.com/watch?v=gpDQRY0sfpY&t=13062s) | Quinlan Jung | 
+[CSS Gradients in React Native](https://www.youtube.com/watch?v=gpDQRY0sfpY&t=14442s) | Catalin Miron | 
+[React Native newcomers built first app – vod.pl app case study](https://www.youtube.com/watch?v=gpDQRY0sfpY&t=16006s) | Michał Czernek & Tomasz Sochacki | 
+[Automated CI/CD with Expo at Cameo](https://www.youtube.com/watch?v=gpDQRY0sfpY&t=18856s) | Tom von Geldern | 
+[Upgrading Expo — The What, The How & The Why](https://www.youtube.com/watch?v=gpDQRY0sfpY&t=19453s) | Stanisław Chmiela | 
+[React Native fundamentals for brownfield iOS apps](https://www.youtube.com/watch?v=gpDQRY0sfpY&t=20238s) | Karan Thakkar | 
+[Some breaking news from React Native world](https://www.youtube.com/watch?v=gpDQRY0sfpY&t=21129s) | Tomasz Sapeta | 
+[What's new in Expo CLI](https://www.youtube.com/watch?v=gpDQRY0sfpY&t=22126s) | Ville Immonen | 
+[React Native Deployments with MS App Center](https://www.youtube.com/watch?v=gpDQRY0sfpY&t=22868s) | Betty Pierce | 
+[Using React Native to ship fast and navigate performance improvements](https://www.youtube.com/watch?v=gpDQRY0sfpY&t=24553s) | Josh Hargreaves | 
+[Reactive Data on the Full Stack](https://www.youtube.com/watch?v=gpDQRY0sfpY&t=26390s) | Eric Vicenti | 
+[Reasonable React Native Apps](https://www.youtube.com/watch?v=gpDQRY0sfpY&t=28292s) | Cem Turan | 
+[Closing word](https://www.youtube.com/watch?v=gpDQRY0sfpY&t=30657s) | Brent Vatne, Charlie Cheever, Krzysztof Magiera | 
 
 ### Reactathon 2019
 
