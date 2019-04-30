@@ -1,126 +1,142 @@
-import * as fs from 'fs'
-import * as moment from 'moment'
+import * as fs from 'fs';
+import * as moment from 'moment';
 
 import {
-  is,
-  zip,
-  map,
-  uniq,
-  sort,
-  isNil,
-  pluck,
+  compose,
   curry,
-  ifElse,
   filter,
+  flatten,
+  forEachObjIndexed,
+  ifElse,
+  is,
+  isNil,
   length,
+  map,
+  pluck,
   propEq,
   reject,
-  compose,
-  flatten,
-  forEachObjIndexed
-} from 'ramda'
+  sort,
+  uniq,
+  zip
+} from 'ramda';
 
-import { JSONInput, ConferenceInput, VideoInput } from '../src/domain'
+import { ConferenceInput, JSONInput, VideoInput } from '../src/domain';
 
-const isTest = process.env.NODE_ENV === 'test'
+const isTest = process.env.NODE_ENV === 'test';
 
-const conferenceVids = JSON.parse(fs.readFileSync('./public/assets/conferenceVids.json', 'utf-8'))
+const conferenceVids = JSON.parse(
+  fs.readFileSync('./public/assets/conferenceVids.json', 'utf-8')
+);
 
-const extratYearFromDDMMYY = (date: string) => date.split('-')[2]
+const extratYearFromDDMMYY = (date: string) => date.split('-')[2];
 
 const computePlaylistDetails = ifElse(
   is(String),
   (playlist: string) => ` - [playlist](${playlist})`,
   (playlist: any) => {
-    let playlists = ''
+    let playlists = '';
     forEachObjIndexed<string>((val, key) => {
-      playlists += ` - [playlist: ${key}](${val})`
-    }, playlist)
-    return playlists
+      playlists += ` - [playlist: ${key}](${val})`;
+    }, playlist);
+    return playlists;
   }
-)
+);
 
-type ConfDetails = { title: string, website: string, playlist: string }
+type ConfDetails = { title: string; website: string; playlist: string };
 const conferenceDetails = ({ title, website, playlist = '' }: ConfDetails) => {
-  let output = ''
-  output += `\n### ${title}\n\n##### ${website ? `[website](${website})` : ''}`
-  output += computePlaylistDetails(playlist)
-  return `${output}\n`
-}
+  let output = '';
+  output += `\n### ${title}\n\n##### ${website ? `[website](${website})` : ''}`;
+  output += computePlaylistDetails(playlist);
+  return `${output}\n`;
+};
 
-const tableHeader = () => '\n| Title/Link        | Presenter  | Length |\n| ------------- |:-------------:| -----:|'
+const tableHeader = () =>
+  '\n| Title/Link        | Presenter  | Length |\n| ------------- |:-------------:| -----:|';
 
 const conferenceVideos = (videos: VideoInput[]) => {
   const createTable = curry((title: string, videos: VideoInput[]) => {
-    let output = title ? `\n#### ${title}\n` : '\n'
-    output += tableHeader()
-    output += videos.reduce((acc, {
-      title, link, presenter: { name }, length
-    }) => {
-      acc += `\n[${title}](${link}) | ${name} | ${length}`
-      return acc
-    }, '')
-    output += '\n'
-    return output
-  })
+    let output = title ? `\n#### ${title}\n` : '\n';
+    output += tableHeader();
+    output += videos.reduce(
+      (acc, { title, link, presenter: { name }, length }) => {
+        acc += `\n[${title}](${link}) | ${name} | ${length}`;
+        return acc;
+      },
+      ''
+    );
+    output += '\n';
+    return output;
+  });
 
   const splits = compose<VideoInput[], string[], string[]>(
     uniq,
     pluck('split')
-  )(videos)
+  )(videos);
 
-  let output = ''
+  let output = '';
   if (!splits.length) {
-    output = createTable('', videos)
+    output = createTable('', videos);
   } else {
     output = map<string, string>((split: string) =>
       compose<VideoInput[], VideoInput[], string>(
         createTable(split),
         filter(propEq('split', split)) // extract out matching videos for split
       )(videos)
-    )(splits).join('')
+    )(splits).join('');
   }
-  return output
-}
+  return output;
+};
 
-const createBody = (conferenceVids: JSONInput) => conferenceVids.reduce((acc, conference, idx, arr) => {
-  // output year if different to last one, or if first conference in list
-  const { date } = conference
-  const year = extratYearFromDDMMYY(date)
-  const pYear = extratYearFromDDMMYY(arr[idx ? idx - 1 : 0].date)
-  if (idx === 0 || year !== pYear) {
-    acc += `\n\n## ${year}\n`
-  }
-  // conf details
-  acc += conferenceDetails(conference)
-  // video table(s)
-  acc += conference.videos ? conferenceVideos(conference.videos) : ''
-  return acc
-}, '')
+const createBody = (conferenceVids: JSONInput) =>
+  conferenceVids.reduce((acc, conference, idx, arr) => {
+    // output year if different to last one, or if first conference in list
+    const { date } = conference;
+    const year = extratYearFromDDMMYY(date);
+    const pYear = extratYearFromDDMMYY(arr[idx ? idx - 1 : 0].date);
+    if (idx === 0 || year !== pYear) {
+      acc += `\n\n## ${year}\n`;
+    }
+    // conf details
+    acc += conferenceDetails(conference);
+    // video table(s)
+    acc += conference.videos ? conferenceVideos(conference.videos) : '';
+    return acc;
+  }, '');
 
-const countVideos = compose<JSONInput, VideoInput[][], VideoInput[], VideoInput[], number>(
+const countVideos = compose<
+  JSONInput,
+  VideoInput[][],
+  VideoInput[],
+  VideoInput[],
+  number
+>(
   length,
   flatten,
   reject(isNil),
   pluck('videos')
-)
+);
 
 const createHead = (conferenceVids: JSONInput) => `# React.js Conference Videos.
 [www.reactjsvideos.com](https://www.reactjsvideos.com)
 
 List of react conference videos.
-**${countVideos(conferenceVids)}** videos from **${conferenceVids.length}** Conferences.
-`
+**${countVideos(conferenceVids)}** videos from **${
+  conferenceVids.length
+}** Conferences.
+`;
 
 const computeLnks = (titlesAndYears: Array<[string, string]>) => {
   return titlesAndYears.reduce((acc, [title, year], idx) => {
     if (idx === 0 || year !== titlesAndYears[idx > 0 ? idx - 1 : 0][1]) {
-      acc += `\n* ${year}`
+      acc += `\n* ${year}`;
     }
-    acc += `\n  * [${title}](#${title.replace(/\s/g, '-').replace(/\.+/g, '').toLowerCase()})`
-    return acc
-  }, '')
-}
+    acc += `\n  * [${title}](#${title
+      .replace(/\s/g, '-')
+      .replace(/\.+/g, '')
+      .toLowerCase()})`;
+    return acc;
+  }, '');
+};
 
 const createNavLinks = (conferenceVids: JSONInput) => {
   // produce nested arrays containing [[title, year], [title, year]...]
@@ -130,21 +146,21 @@ const createNavLinks = (conferenceVids: JSONInput) => {
       map(extratYearFromDDMMYY),
       pluck('date')
     )(conferenceVids)
-  )
+  );
 
   // create nav list
-  const computedLinks = computeLnks(titlesAndYears)
+  const computedLinks = computeLnks(titlesAndYears);
 
-  return `\n## Quick Links\n${computedLinks}\n * [Contributing](#contributing)`
-}
+  return `\n## Quick Links\n${computedLinks}\n * [Contributing](#contributing)`;
+};
 
 // sort function by date
 const sortByDate = sort((a: ConferenceInput, b: ConferenceInput) => {
-  const aD = moment(a.date, 'DD-MM-YYYY')
-  const bD = moment(b.date, 'DD-MM-YYYY')
-  const isBefore = moment(aD).isAfter(bD)
-  return isBefore ? -1 : 1
-})
+  const aD = moment(a.date, 'DD-MM-YYYY');
+  const bD = moment(b.date, 'DD-MM-YYYY');
+  const isBefore = moment(aD).isAfter(bD);
+  return isBefore ? -1 : 1;
+});
 
 const createFooter = () => `
 
@@ -156,28 +172,28 @@ To add a conference and it's videos, or to simply fix a typo:
 	1. if adding a conference, create a branch in the format \`conf/confName\`
 	2. otherwise, use \`fix/\` or \`feature/\` suffixes
 3. edit \`public/assets/conferenceVids.json\`
-4. run \`yarn run buildData\`
+4. run \`yarn run createReadme\`
 
 To see a version working locally, with your changes, run
 1. \`yarn\`
 2. \`yarn start\`
-`
+`;
 
 export const run = (conferenceVids: JSONInput) => {
   // sort conferences by date
-  const sorted = sortByDate(conferenceVids)
+  const sorted = sortByDate(conferenceVids);
 
   // get strings for different sections of readme
-  const head = createHead(conferenceVids)
-  const navLinks = createNavLinks(sorted)
-  const body = createBody(sorted)
-  const footer = createFooter()
+  const head = createHead(conferenceVids);
+  const navLinks = createNavLinks(sorted);
+  const body = createBody(sorted);
+  const footer = createFooter();
 
   // return one string for readme
-  return `${head}\n${navLinks}\n${body}\n${footer}`
-}
+  return `${head}\n${navLinks}\n${body}\n${footer}`;
+};
 
 if (!isTest) {
   // tslint:disable-next-line
-  console.log(run(conferenceVids))
+  console.log(run(conferenceVids));
 }
