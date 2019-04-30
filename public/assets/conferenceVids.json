@@ -1,5 +1,157 @@
 [
   {
+    "title": "Reactathon 2019",
+    "date": "30-03-2019",
+    "website": "https://www.reactathon.com/",
+    "playlist": {
+      "Day 2": "https://www.youtube.com/watch?v=mtjHxwUQUs0",
+      "Lightning Talks": "https://www.youtube.com/watch?v=Wt4kuspJIxY"
+    },
+    "videos": [
+      {
+        "title": "Keynote Part 1: The State of the React Ecosystem",
+        "link": "https://www.youtube.com/watch?v=mtjHxwUQUs0&t=252s",
+        "presenter": {
+          "name": "Ben Ilegbodu"
+        },
+        "length": "",
+        "split": "Day 2"
+      },
+      {
+        "title": "Keynote Part 2: The State of Redux",
+        "link": "https://www.youtube.com/watch?v=mtjHxwUQUs0&t=3257s",
+        "presenter": {
+          "name": "Mark Erikson"
+        },
+        "length": "",
+        "split": "Day 2"
+      },
+      {
+        "title": "Reactive Data for the Full Stack",
+        "link": "https://www.youtube.com/watch?v=mtjHxwUQUs0&t=6486s",
+        "presenter": {
+          "name": "Eric Vicenti"
+        },
+        "length": "",
+        "split": "Day 2"
+      },
+      {
+        "title": "Building Design Systems in React",
+        "link": "https://www.youtube.com/watch?v=mtjHxwUQUs0&t=8047s",
+        "presenter": {
+          "name": "Emily Plummer"
+        },
+        "length": "",
+        "split": "Day 2"
+      },
+      {
+        "title": "Transform for Good -- Using Babel Macros",
+        "link": "https://www.youtube.com/watch?v=mtjHxwUQUs0&t=9332s",
+        "presenter": {
+          "name": "Jesse Tomchak"
+        },
+        "length": "",
+        "split": "Day 2"
+      },
+      {
+        "title": "Type-safe forms in React",
+        "link": "https://www.youtube.com/watch?v=mtjHxwUQUs0&t=10629s",
+        "presenter": {
+          "name": "Zach Gotsch"
+        },
+        "length": "",
+        "split": "Day 2"
+      },
+      {
+        "title": "Everything I Know About React I Learned from Twitter",
+        "link": "https://www.youtube.com/watch?v=mtjHxwUQUs0&t=11823s",
+        "presenter": {
+          "name": "Jenn Creighton"
+        },
+        "length": "",
+        "split": "Day 2"
+      },
+      {
+        "title": "We're gunna program like it's 1999",
+        "link": "https://www.youtube.com/watch?v=mtjHxwUQUs0&t=13824s",
+        "presenter": {
+          "name": "Lee Byron"
+        },
+        "length": "",
+        "split": "Day 2"
+      },
+      {
+        "title": "Syntax.fm live",
+        "link": "https://www.youtube.com/watch?v=mtjHxwUQUs0&t=15805s",
+        "presenter": {
+          "name": "Wes Bos & Scott Tolinski"
+        },
+        "length": "",
+        "split": "Day 2"
+      },
+      {
+        "title": "Renderless components, Now with 9000% more hooks",
+        "link": "https://www.youtube.com/watch?v=Wt4kuspJIxY&t=271s",
+        "presenter": {
+          "name": "Ken Wheeler"
+        },
+        "length": "",
+        "split": "Lightning Talks",
+        "lightning": true
+      },
+      {
+        "title": "A11Y & Accessibility",
+        "link": "https://www.youtube.com/watch?v=Wt4kuspJIxY&t=1072s",
+        "presenter": {
+          "name": "Jen Luker"
+        },
+        "length": "",
+        "split": "Lightning Talks",
+        "lightning": true
+      },
+      {
+        "title": "10 Things About WebAssembly You Need To Know",
+        "link": "https://www.youtube.com/watch?v=Wt4kuspJIxY&t=1771s",
+        "presenter": {
+          "name": "Jay Phelps"
+        },
+        "length": "",
+        "split": "Lightning Talks",
+        "lightning": true
+      },
+      {
+        "title": "Move over Electron - Native-compiled React for the Desktop with ReasonML",
+        "link": "https://www.youtube.com/watch?v=Wt4kuspJIxY&t=2645s",
+        "presenter": {
+          "name": "Jared Forsyth"
+        },
+        "length": "",
+        "split": "Lightning Talks",
+        "lightning": true
+      },
+      {
+        "title": "Getting Closure on Hooks",
+        "link": "https://www.youtube.com/watch?v=Wt4kuspJIxY&t=3235s",
+        "presenter": {
+          "name": "Shawn Swyx Wang"
+        },
+        "length": "",
+        "split": "Lightning Talks",
+        "lightning": true
+      },
+      {
+        "title": "Redux-style backends with GraphQL & Serverless Functions",
+        "link": "https://www.youtube.com/watch?v=Wt4kuspJIxY&t=3973s",
+        "presenter": {
+          "name": "Tanmai Gopal"
+        },
+        "length": "",
+        "split": "Lightning Talks",
+        "lightning": true
+      }
+    ]
+  },
+  {
     "title": "React Day Berlin 2018",
     "date": "30-11-2018",
     "website": "https://reactday.berlin/#intro",

@@ -2,11 +2,13 @@
 [www.reactjsvideos.com](https://www.reactjsvideos.com)
 
 List of react conference videos.
-**461** videos from **24** Conferences.
+**476** videos from **25** Conferences.
 
 
 ## Quick Links
 
+* 2019
+  * [Reactathon 2019](#reactathon-2019)
 * 2018
   * [React Day Berlin 2018](#react-day-berlin-2018)
   * [ReactNext 2018](#reactnext-2018)
@@ -36,6 +38,38 @@ List of react conference videos.
 * 2015
   * [React.js Conf 2015](#reactjs-conf-2015)
  * [Contributing](#contributing)
+
+
+## 2019
+
+### Reactathon 2019
+
+##### [website](https://www.reactathon.com/) - [playlist: Day 2](https://www.youtube.com/watch?v=mtjHxwUQUs0) - [playlist: Lightning Talks](https://www.youtube.com/watch?v=Wt4kuspJIxY)
+
+#### Day 2
+
+| Title/Link        | Presenter  | Length |
+| ------------- |:-------------:| -----:|
+[Keynote Part 1: The State of the React Ecosystem](https://www.youtube.com/watch?v=mtjHxwUQUs0&t=252s) | Ben Ilegbodu | 
+[Keynote Part 2: The State of Redux](https://www.youtube.com/watch?v=mtjHxwUQUs0&t=3257s) | Mark Erikson | 
+[Reactive Data for the Full Stack](https://www.youtube.com/watch?v=mtjHxwUQUs0&t=6486s) | Eric Vicenti | 
+[Building Design Systems in React](https://www.youtube.com/watch?v=mtjHxwUQUs0&t=8047s) | Emily Plummer | 
+[Transform for Good -- Using Babel Macros](https://www.youtube.com/watch?v=mtjHxwUQUs0&t=9332s) | Jesse Tomchak | 
+[Type-safe forms in React](https://www.youtube.com/watch?v=mtjHxwUQUs0&t=10629s) | Zach Gotsch | 
+[Everything I Know About React I Learned from Twitter](https://www.youtube.com/watch?v=mtjHxwUQUs0&t=11823s) | Jenn Creighton | 
+[We're gunna program like it's 1999](https://www.youtube.com/watch?v=mtjHxwUQUs0&t=13824s) | Lee Byron | 
+[Syntax.fm live](https://www.youtube.com/watch?v=mtjHxwUQUs0&t=15805s) | Wes Bos & Scott Tolinski | 
+
+#### Lightning Talks
+
+| Title/Link        | Presenter  | Length |
+| ------------- |:-------------:| -----:|
+[Renderless components, Now with 9000% more hooks](https://www.youtube.com/watch?v=Wt4kuspJIxY&t=271s) | Ken Wheeler | 
+[A11Y & Accessibility](https://www.youtube.com/watch?v=Wt4kuspJIxY&t=1072s) | Jen Luker | 
+[10 Things About WebAssembly You Need To Know](https://www.youtube.com/watch?v=Wt4kuspJIxY&t=1771s) | Jay Phelps | 
+[Move over Electron - Native-compiled React for the Desktop with ReasonML](https://www.youtube.com/watch?v=Wt4kuspJIxY&t=2645s) | Jared Forsyth | 
+[Getting Closure on Hooks](https://www.youtube.com/watch?v=Wt4kuspJIxY&t=3235s) | Shawn Swyx Wang | 
+[Redux-style backends with GraphQL & Serverless Functions](https://www.youtube.com/watch?v=Wt4kuspJIxY&t=3973s) | Tanmai Gopal | 
 
 
 ## 2018
@@ -794,7 +828,7 @@ To add a conference and it's videos, or to simply fix a typo:
 	1. if adding a conference, create a branch in the format `conf/confName`
 	2. otherwise, use `fix/` or `feature/` suffixes
 3. edit `public/assets/conferenceVids.json`
-4. run `yarn run buildData`
+4. run `yarn run createReadme`
 
 To see a version working locally, with your changes, run
 1. `yarn`
