@@ -1,5 +1,223 @@
 [
   {
+    "title": "ReactAmsterdam 2019",
+    "date": "12-04-2019",
+    "website": "https://react.amsterdam/",
+    "playlist": {
+      "General Track": "https://www.youtube.com/watch?v=gpDQRY0sfpY",
+      "React Native Track": "https://www.youtube.com/watch?v=NCLkLCvpwm4"
+    },
+    "videos": [
+      {
+        "title": "Requisite React ",
+        "link": "https://www.youtube.com/watch?v=4KfAS3zrvX8&t=1405s",
+        "presenter": {
+          "name": "Kent C Dodds"
+        },
+        "length": "",
+        "split": "General Track"
+      },
+      {
+        "title": "Refactoring React",
+        "link": "https://www.youtube.com/watch?v=4KfAS3zrvX8&t=3268s",
+        "presenter": {
+          "name": "Siddharth Kshetrapal"
+        },
+        "length": "",
+        "split": "General Track"
+      },
+      {
+        "title": "A Common Design Language",
+        "link": "https://www.youtube.com/watch?v=4KfAS3zrvX8&t=6900s",
+        "presenter": {
+          "name": "Andrey Okonetchnikov"
+        },
+        "length": "",
+        "split": "General Track"
+      },
+      {
+        "title": "Designing with React",
+        "link": "https://www.youtube.com/watch?v=4KfAS3zrvX8&t=8562s",
+        "presenter": {
+          "name": "Mark Dalgleish"
+        },
+        "length": "",
+        "split": "General Track"
+      },
+      {
+        "title": "Next for Next.js",
+        "link": "https://www.youtube.com/watch?v=4KfAS3zrvX8&t=10427s",
+        "presenter": {
+          "name": "Tim Neutkens"
+        },
+        "length": "",
+        "split": "General Track"
+      },
+      {
+        "title": "Lightning fast SSR React",
+        "link": "https://www.youtube.com/watch?v=4KfAS3zrvX8&t=10991s",
+        "presenter": {
+          "name": "Håkon Gullord Krogh"
+        },
+        "length": "",
+        "split": "General Track"
+      },
+      {
+        "title": "Speeding up React SSR",
+        "link": "https://www.youtube.com/watch?v=4KfAS3zrvX8&t=11452s",
+        "presenter": {
+          "name": "David Mark Clements"
+        },
+        "length": "",
+        "split": "General Track"
+      },
+      {
+        "title": "Demystifying server-rendered React",
+        "link": "https://www.youtube.com/watch?v=4KfAS3zrvX8&t=11870s",
+        "presenter": {
+          "name": "Fernando Porazzi"
+        },
+        "length": "",
+        "split": "General Track"
+      },
+      {
+        "title": "Tech Regrets at Spectrum",
+        "link": "https://www.youtube.com/watch?v=4KfAS3zrvX8&t=17600s",
+        "presenter": {
+          "name": "Max Stoiber"
+        },
+        "length": "",
+        "split": "General Track"
+      },
+      {
+        "title": "Scaling Application with Microfrontends",
+        "link": "https://www.youtube.com/watch?v=4KfAS3zrvX8&t=18683s",
+        "presenter": {
+          "name": "Max Gallo"
+        },
+        "length": "",
+        "split": "General Track"
+      },
+      {
+        "title": "An SVG's Tale",
+        "link": "https://www.youtube.com/watch?v=4KfAS3zrvX8&t=21167s",
+        "presenter": {
+          "name": "Elizabet Oliveira"
+        },
+        "length": "",
+        "split": "General Track"
+      },
+      {
+        "title": "The GraphQL Devleoper Experience",
+        "link": "https://www.youtube.com/watch?v=4KfAS3zrvX8&t=26013s",
+        "presenter": {
+          "name": "Peggy Rayzis"
+        },
+        "length": "",
+        "split": "General Track"
+      },
+      {
+        "title": "Ashi Krishnan",
+        "link": "https://www.youtube.com/watch?v=4KfAS3zrvX8&t=28230s",
+        "presenter": {
+          "name": "Painting pixels with WebGL with Hooks"
+        },
+        "length": "",
+        "split": "General Track"
+      },
+      {
+        "title": "Building React Native",
+        "link": "https://www.youtube.com/watch?v=NCLkLCvpwm4&t=934s",
+        "presenter": {
+          "name": "Parashuram N"
+        },
+        "length": "",
+        "split": "React Native Track"
+      },
+      {
+        "title": "Practical Performance for React (Native) ",
+        "link": "https://www.youtube.com/watch?v=NCLkLCvpwm4&t=2844s",
+        "presenter": {
+          "name": "Anna Doubková"
+        },
+        "length": "",
+        "split": "React Native Track"
+      },
+      {
+        "title": "Sharing Code Between React and React Native: What Not to Share",
+        "link": "https://www.youtube.com/watch?v=NCLkLCvpwm4&t=6291s",
+        "presenter": {
+          "name": "Ben Ellerby"
+        },
+        "length": "",
+        "split": "React Native Track"
+      },
+      {
+        "title": "Building for a Bigger World Than Mobile",
+        "link": "https://www.youtube.com/watch?v=NCLkLCvpwm4&t=8150s",
+        "presenter": {
+          "name": "Wouter van den Broek"
+        },
+        "length": "",
+        "split": "React Native Track"
+      },
+      {
+        "title": "Advice Lounge Panel Discussion",
+        "link": "https://www.youtube.com/watch?v=NCLkLCvpwm4&t=9801s",
+        "presenter": {
+          "name": "n/a"
+        },
+        "length": "",
+        "split": "React Native Track"
+      },
+      {
+        "title": "Make Your React Native Apps Accessible",
+        "link": "https://www.youtube.com/watch?v=NCLkLCvpwm4&t=17234s",
+        "presenter": {
+          "name": "Ankita Kulkarni"
+        },
+        "length": "",
+        "split": "React Native Track"
+      },
+      {
+        "title": "Native Web Apps: React and WebAssembly to Rewrite Native Apps",
+        "link": "https://www.youtube.com/watch?v=NCLkLCvpwm4&t=18906s",
+        "presenter": {
+          "name": "Florian Rival"
+        },
+        "length": "",
+        "split": "React Native Track"
+      },
+      {
+        "title": "Full-stack React Native in the Era of Serverless Computing",
+        "link": "https://www.youtube.com/watch?v=NCLkLCvpwm4&t=20715s",
+        "presenter": {
+          "name": "Nader Dabit"
+        },
+        "length": "",
+        "split": "React Native Track"
+      },
+      {
+        "title": "Demystifying Complex Animations Creation Process in React Native",
+        "link": "https://www.youtube.com/watch?v=NCLkLCvpwm4&t=25644s",
+        "presenter": {
+          "name": "Vladimir Novick"
+        },
+        "length": "",
+        "split": "React Native Track"
+      },
+      {
+        "title": "React Native App Rollout - an Alternative Approach",
+        "link": "https://www.youtube.com/watch?v=NCLkLCvpwm4&t=27212s",
+        "presenter": {
+          "name": "Adam Terlson"
+        },
+        "length": "",
+        "split": "React Native Track"
+      }
+    ]
+  },
+  {
     "title": "App.js Conf 2019",
     "date": "04-04-2019",
     "website": "www.appjs.co",

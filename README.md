@@ -2,12 +2,13 @@
 [www.reactjsvideos.com](https://www.reactjsvideos.com)
 
 List of react conference videos.
-**497** videos from **26** Conferences.
+**520** videos from **27** Conferences.
 
 
 ## Quick Links
 
 * 2019
+  * [ReactAmsterdam 2019](#reactamsterdam-2019)
   * [App.js Conf 2019](#appjs-conf-2019)
   * [Reactathon 2019](#reactathon-2019)
 * 2018
@@ -42,6 +43,43 @@ List of react conference videos.
 
 
 ## 2019
+
+### ReactAmsterdam 2019
+
+##### [website](https://react.amsterdam/) - [playlist: General Track](https://www.youtube.com/watch?v=gpDQRY0sfpY) - [playlist: React Native Track](https://www.youtube.com/watch?v=NCLkLCvpwm4)
+
+#### General Track
+
+| Title/Link        | Presenter  | Length |
+| ------------- |:-------------:| -----:|
+[Requisite React ](https://www.youtube.com/watch?v=4KfAS3zrvX8&t=1405s) | Kent C Dodds | 
+[Refactoring React](https://www.youtube.com/watch?v=4KfAS3zrvX8&t=3268s) | Siddharth Kshetrapal | 
+[A Common Design Language](https://www.youtube.com/watch?v=4KfAS3zrvX8&t=6900s) | Andrey Okonetchnikov | 
+[Designing with React](https://www.youtube.com/watch?v=4KfAS3zrvX8&t=8562s) | Mark Dalgleish | 
+[Next for Next.js](https://www.youtube.com/watch?v=4KfAS3zrvX8&t=10427s) | Tim Neutkens | 
+[Lightning fast SSR React](https://www.youtube.com/watch?v=4KfAS3zrvX8&t=10991s) | Håkon Gullord Krogh | 
+[Speeding up React SSR](https://www.youtube.com/watch?v=4KfAS3zrvX8&t=11452s) | David Mark Clements | 
+[Demystifying server-rendered React](https://www.youtube.com/watch?v=4KfAS3zrvX8&t=11870s) | Fernando Porazzi | 
+[Tech Regrets at Spectrum](https://www.youtube.com/watch?v=4KfAS3zrvX8&t=17600s) | Max Stoiber | 
+[Scaling Application with Microfrontends](https://www.youtube.com/watch?v=4KfAS3zrvX8&t=18683s) | Max Gallo | 
+[An SVG's Tale](https://www.youtube.com/watch?v=4KfAS3zrvX8&t=21167s) | Elizabet Oliveira | 
+[The GraphQL Devleoper Experience](https://www.youtube.com/watch?v=4KfAS3zrvX8&t=26013s) | Peggy Rayzis | 
+[Ashi Krishnan](https://www.youtube.com/watch?v=4KfAS3zrvX8&t=28230s) | Painting pixels with WebGL with Hooks | 
+
+#### React Native Track
+
+| Title/Link        | Presenter  | Length |
+| ------------- |:-------------:| -----:|
+[Building React Native](https://www.youtube.com/watch?v=NCLkLCvpwm4&t=934s) | Parashuram N | 
+[Practical Performance for React (Native) ](https://www.youtube.com/watch?v=NCLkLCvpwm4&t=2844s) | Anna Doubková | 
+[Sharing Code Between React and React Native: What Not to Share](https://www.youtube.com/watch?v=NCLkLCvpwm4&t=6291s) | Ben Ellerby | 
+[Building for a Bigger World Than Mobile](https://www.youtube.com/watch?v=NCLkLCvpwm4&t=8150s) | Wouter van den Broek | 
+[Advice Lounge Panel Discussion](https://www.youtube.com/watch?v=NCLkLCvpwm4&t=9801s) | n/a | 
+[Make Your React Native Apps Accessible](https://www.youtube.com/watch?v=NCLkLCvpwm4&t=17234s) | Ankita Kulkarni | 
+[Native Web Apps: React and WebAssembly to Rewrite Native Apps](https://www.youtube.com/watch?v=NCLkLCvpwm4&t=18906s) | Florian Rival | 
+[Full-stack React Native in the Era of Serverless Computing](https://www.youtube.com/watch?v=NCLkLCvpwm4&t=20715s) | Nader Dabit | 
+[Demystifying Complex Animations Creation Process in React Native](https://www.youtube.com/watch?v=NCLkLCvpwm4&t=25644s) | Vladimir Novick | 
+[React Native App Rollout - an Alternative Approach](https://www.youtube.com/watch?v=NCLkLCvpwm4&t=27212s) | Adam Terlson | 
 
 ### App.js Conf 2019
 
