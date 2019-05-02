@@ -12,11 +12,18 @@
     "jsx": "react",
     "target": "es5",
     "lib": ["es5", "es6", "dom"],
-    "allowJs": true,
+    "allowJs": false,
     "moduleResolution": "node",
     "paths": {
       "*": ["src/*", "*"]
     }
   },
-  "exclude": ["dist", "build", "node_modules", "scripts"]
+  "exclude": [
+    "dist",
+    "build",
+    "node_modules",
+    "scripts",
+    "coverage",
+    "webpack*"
+  ]
 }
