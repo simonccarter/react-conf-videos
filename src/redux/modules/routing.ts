@@ -25,7 +25,7 @@ export const isSearchPage = (pathname: string) =>
 export const extractQueryFromSearch = (search: string) => {
   const parsed = queryString.parse(search);
   const query = parsed.query ? parsed.query : '';
-  return query;
+  return query as string;
 };
 
 const getConferenceIdFromPathname = (pathname: string) => {
