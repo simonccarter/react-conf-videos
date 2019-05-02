@@ -48,7 +48,6 @@ exports[`Logo should render 1`] = `
       >
         <Link
           className="logoLink"
-          replace={false}
           to="/search"
         >
           <a

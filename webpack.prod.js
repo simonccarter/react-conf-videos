@@ -1,11 +1,11 @@
-const path = require('path')
-const webpack = require('webpack')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
-const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
+const path = require('path');
+const webpack = require('webpack');
+const TerserPlugin = require('terser-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -21,9 +21,7 @@ module.exports = {
       {
         test: /\.tsx?$/,
         loader: 'babel-loader',
-        exclude: [
-          /node_modules/
-        ]
+        exclude: [/node_modules/]
       },
       {
         test: /\.scss$/,
@@ -31,21 +29,17 @@ module.exports = {
           'style-loader',
           'css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]',
           {
-            loader: "sass-loader",
-            options: { 
+            loader: 'sass-loader',
+            options: {
               data: '@import "_colors";',
-              includePaths: [
-                path.resolve(__dirname, "./src/styles/")
-              ]
+              includePaths: [path.resolve(__dirname, './src/styles/')]
             }
           }
         ]
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          'file-loader'
-        ]
+        use: ['file-loader']
       }
     ]
   },
@@ -65,24 +59,16 @@ module.exports = {
   optimization: {
     concatenateModules: true,
     minimizer: [
-      new UglifyJsPlugin({
-        uglifyOptions: {
-          unused: true,
-          evaluate: true,
-          warnings: false,
-          screw_ie8: true,
-          sequences: true,
-          dead_code: true,
-          if_return: true,
-          join_vars: true,
-          comparisons: true,
-          drop_console: true,
-          conditionals: true,
+      new TerserPlugin({
+        parallel: true,
+        terserOptions: {
+          ie8: false,
           output: {
             comments: false
-          }
+          },
+          ecma: 6
         }
-      }),
+      })
     ],
     splitChunks: {
       name: true,
@@ -124,4 +110,4 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify('production')
     })
   ]
-}
+};

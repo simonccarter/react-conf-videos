@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 import styles from './Header.scss';
 
-export const Header: React.SFC<{}> = () => (
+export const Header: React.FunctionComponent<{}> = () => (
   <div className={styles.header}>
     <Logo />
     <div className={styles.text}>

@@ -22,7 +22,7 @@ type WithHandlers = {
 
 type CombinedProps = Props & WithState & WithStateHandlers & WithHandlers;
 
-export const SearchInputInner: React.SFC<CombinedProps> = ({
+export const SearchInputInner: React.FunctionComponent<CombinedProps> = ({
   filterValue,
   onChange,
   onKeyUpHandlers,

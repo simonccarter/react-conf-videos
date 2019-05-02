@@ -34,7 +34,7 @@ type ReduxState = {
 
 type CombinedProps = Props & State & ReduxState & StateHandlers;
 
-export const VideoInner: React.SFC<CombinedProps> = ({
+export const VideoInner: React.FunctionComponent<CombinedProps> = ({
   video: { title, length, embeddableLink, lightning = false },
   speaker,
   videoId,

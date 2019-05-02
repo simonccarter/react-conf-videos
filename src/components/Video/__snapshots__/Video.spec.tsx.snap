@@ -107,7 +107,6 @@ exports[`Video should render and connect 1`] = `
             Simon Carter
           </span>
           <Link
-            replace={false}
             to="/conference/fake-conf-title"
           >
             <a

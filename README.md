@@ -8,7 +8,7 @@ List of react conference videos.
 ## Quick Links
 
 * 2019
-  * [ReactAmsterdam 2019](#reactamsterdam-2019)
+  * [React Amsterdam 2019](#react-amsterdam-2019)
   * [App.js Conf 2019](#appjs-conf-2019)
   * [Reactathon 2019](#reactathon-2019)
 * 2018
@@ -44,7 +44,7 @@ List of react conference videos.
 
 ## 2019
 
-### ReactAmsterdam 2019
+### React Amsterdam 2019
 
 ##### [website](https://react.amsterdam/) - [playlist: General Track](https://www.youtube.com/watch?v=gpDQRY0sfpY) - [playlist: React Native Track](https://www.youtube.com/watch?v=NCLkLCvpwm4)
 

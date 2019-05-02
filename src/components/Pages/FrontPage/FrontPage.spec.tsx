@@ -2,8 +2,8 @@ import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import * as React from 'react';
 
-import { mockConference, shallowWithStore } from 'utils/test';
-import { FrontPage, FrontPageInner } from './FrontPage';
+import { mockConference } from 'utils/test';
+import { FrontPageInner } from './FrontPage';
 
 describe('FrontPage', () => {
   describe('FrontPageInner', () => {
@@ -35,25 +35,6 @@ describe('FrontPage', () => {
       // assert
       expect(wrapper.find('.frontPage.isActive').length).toBe(0);
       expect(wrapper.find('.text.isActive').length).toBe(0);
-    });
-  });
-
-  describe('FrontPage', () => {
-    it('should render', () => {
-      // arrange
-      const store = {
-        frontPage: { isActive: false },
-        search: {
-          conferences: { X: mockConference() },
-          filterValue: ''
-        }
-      };
-
-      // act
-      const wrapper = shallowWithStore(store, <FrontPage />);
-
-      // assert
-      expect(toJson(wrapper)).toMatchSnapshot();
     });
   });
 });
