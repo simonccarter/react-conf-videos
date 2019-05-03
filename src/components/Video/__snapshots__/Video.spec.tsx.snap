@@ -117,9 +117,11 @@ exports[`Video should render and connect 1`] = `
             Simon Carter
           </span>
           <Link
+            aria-label="See all videos for conference fake conf title"
             to="/conference/fake-conf-title"
           >
             <a
+              aria-label="See all videos for conference fake conf title"
               href="/conference/fake-conf-title"
               onClick={[Function]}
             >

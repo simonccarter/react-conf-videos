@@ -43,22 +43,24 @@ exports[`Logo should render 1`] = `
     }
   >
     <Component>
-      <div
-        className="logo"
+      <Link
+        aria-label="Reactjs Videos Homepage"
+        className="logoLink"
+        to="/search"
       >
-        <Link
+        <a
+          aria-label="Reactjs Videos Homepage"
           className="logoLink"
-          to="/search"
+          href="/search"
+          onClick={[Function]}
         >
-          <a
-            className="logoLink"
-            href="/search"
-            onClick={[Function]}
+          <div
+            className="logo"
           >
             RV
-          </a>
-        </Link>
-      </div>
+          </div>
+        </a>
+      </Link>
     </Component>
   </Router>
 </MemoryRouter>
