@@ -28,7 +28,7 @@ exports[`FrontPage FrontPageInner should render 1`] = `
         }
       }
     />
-    <mapProps(Component)
+    <mapProps(withStateHandlers(Component))
       conferences={
         Object {
           "x": Object {
