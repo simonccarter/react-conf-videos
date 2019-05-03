@@ -28,7 +28,7 @@ type WithHandlers = {
 
 type Props = ReduxProps & DispatchpProps & WithHandlers;
 
-export const FrontPageInner: React.SFC<Props> = props => (
+export const FrontPageInner: React.FunctionComponent<Props> = props => (
   <div>
     <Meta title={props.filterValue} />
     <Header />

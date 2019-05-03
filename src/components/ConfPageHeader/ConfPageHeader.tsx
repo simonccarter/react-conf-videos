@@ -1,22 +1,28 @@
-import * as cn from 'classnames'
-import * as React from 'react'
+import * as cn from 'classnames';
+import * as React from 'react';
 
-import { Logo } from 'components'
+import { Logo } from 'components';
 
-import styles from './ConfPageHeader.scss'
+import styles from './ConfPageHeader.scss';
 
 type Props = {
-  title: string
-  titleLink: string
-  tagline: string
-}
+  title: string;
+  titleLink: string;
+  tagline: string;
+};
 
-export const ConfPageHeader: React.SFC<Props> = ({title, titleLink, tagline}) => (
+export const ConfPageHeader: React.FunctionComponent<Props> = ({
+  title,
+  titleLink,
+  tagline
+}) => (
   <div className={styles.header}>
     <Logo />
     <div className={styles.text}>
       <h1 className={styles.headerTitle}>
-        <a href={titleLink} className={styles.link}>{title}</a>
+        <a href={titleLink} className={styles.link}>
+          {title}
+        </a>
       </h1>
       <p className={styles.headerText}> {tagline} </p>
       <p className={cn(styles.headerText, styles.contribute)}>
@@ -24,11 +30,12 @@ export const ConfPageHeader: React.SFC<Props> = ({title, titleLink, tagline}) =>
         <a
           className={styles.contributeLink}
           href="https://github.com/simonccarter/react-conf-videos"
+          aria-label="Contribute at our github repo"
         >
-          here
+          at our github repo
         </a>
         .
       </p>
     </div>
-  </div >
-)
+  </div>
+);

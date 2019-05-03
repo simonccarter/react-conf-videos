@@ -81,24 +81,34 @@ exports[`Video should render and connect 1`] = `
         className="root"
         key="xxx"
       >
-        <div
-          className="top"
-          onClick={[MockFunction]}
+        <h3
+          className="heading"
         >
-          <span
-            className="title"
+          <button
+            aria-controls="content-xxx"
+            aria-expanded={false}
+            className="top"
+            id="accordion-xxx"
+            onClick={[Function]}
           >
-             
-            test title
-          </span>
-          <span
-            className="right"
-          >
-            12:34
-          </span>
-        </div>
+            <span
+              className="title"
+            >
+               
+              test title
+            </span>
+            <span
+              className="right"
+            >
+              12:34
+            </span>
+          </button>
+        </h3>
         <div
+          aria-hidden={true}
+          aria-labelledby="accordion-xxx"
           className="videoWrapper"
+          id="content-xxx"
         />
         <div
           className="details"
@@ -107,10 +117,11 @@ exports[`Video should render and connect 1`] = `
             Simon Carter
           </span>
           <Link
-            replace={false}
+            aria-label="See all videos for conference fake conf title"
             to="/conference/fake-conf-title"
           >
             <a
+              aria-label="See all videos for conference fake conf title"
               href="/conference/fake-conf-title"
               onClick={[Function]}
             >

@@ -1,3 +1,5 @@
+import { connectRouter } from 'connected-react-router';
+import { History } from 'history';
 import { combineReducers } from 'redux';
 import { combineEpics } from 'redux-observable';
 
@@ -37,9 +39,11 @@ export const rootEpic = combineEpics(
   routingEpics
 );
 
-export const rootReducer = combineReducers({
-  data: dataReducer,
-  search: searchReducer,
-  bootstrap: bootstrapReducer,
-  conferencePage: conferencePageReducer
-});
+export const createRootReducer = (history: History) =>
+  combineReducers({
+    router: connectRouter(history),
+    data: dataReducer,
+    search: searchReducer,
+    bootstrap: bootstrapReducer,
+    conferencePage: conferencePageReducer
+  });

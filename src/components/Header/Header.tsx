@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 import styles from './Header.scss';
 
-export const Header: React.SFC<{}> = () => (
+export const Header: React.FunctionComponent<{}> = () => (
   <div className={styles.header}>
     <Logo />
     <div className={styles.text}>
@@ -21,8 +21,9 @@ export const Header: React.SFC<{}> = () => (
         <a
           className={styles.contributeLink}
           href="https://github.com/simonccarter/react-conf-videos"
+          aria-label="Contribute at our github repo"
         >
-          here
+          at our github repo
         </a>
         .
       </p>

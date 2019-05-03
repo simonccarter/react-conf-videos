@@ -5,6 +5,7 @@
     "ordered-imports": true,
     "interface-over-type-literal": false,
     "object-literal-sort-keys": false,
-    "no-shadowed-variable": false
+    "no-shadowed-variable": false,
+    "jsx-no-lambda": false
   }
 }

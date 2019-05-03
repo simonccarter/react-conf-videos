@@ -95,7 +95,7 @@ export const mockRouterState = (
 
 export const mockConferencePageSlice = () => ({
   conferencePage: {
-    selectedConferenceId: "XXXX",
+    selectedConferenceId: 'XXXX',
     conference: mockConference()
   }
 });
