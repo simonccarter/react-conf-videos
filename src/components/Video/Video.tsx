@@ -74,7 +74,10 @@ export const VideoInner: React.FunctionComponent<CombinedProps> = ({
       </div>
       <div className={styles.details}>
         <span>{speaker.name}</span>
-        <Link to={`/conference/${sluggifyUrl(conference.title)}`}>
+        <Link
+          to={`/conference/${sluggifyUrl(conference.title)}`}
+          aria-label={`See all videos for conference ${conference.title}`}
+        >
           <span className={styles.conferenceTitle}>{conference.title}</span>
         </Link>
       </div>
