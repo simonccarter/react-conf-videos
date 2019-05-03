@@ -4,7 +4,7 @@ import * as cn from 'classnames';
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { compose, pure, withStateHandlers } from 'recompose';
+import { compose, pure } from 'recompose';
 
 import { ApplicationState } from 'redux/modules';
 import { sluggifyUrl } from 'utils';
@@ -15,14 +15,8 @@ import styles from './Video.scss';
 type Props = {
   videoId: string;
   conferenceId: string;
-};
-
-type State = {
   isOpen: boolean;
-};
-
-type StateHandlers = {
-  toggleIsOpen: (e: React.MouseEvent<HTMLDivElement>) => State;
+  toggleIsOpen: (e: string | null) => { open: string | null };
 };
 
 type ReduxState = {
@@ -32,7 +26,7 @@ type ReduxState = {
   video: VideoProp;
 };
 
-type CombinedProps = Props & State & ReduxState & StateHandlers;
+type CombinedProps = Props & ReduxState;
 
 export const VideoInner: React.FunctionComponent<CombinedProps> = ({
   video: { title, length, embeddableLink, lightning = false },
@@ -45,14 +39,27 @@ export const VideoInner: React.FunctionComponent<CombinedProps> = ({
 }) => {
   return (
     <div className={styles.root} key={videoId}>
-      <div className={styles.top} onClick={toggleIsOpen}>
-        <span className={styles.title}>
-          {lightning && <FontAwesomeIcon icon={faBolt} color="#f5de1a" />}{' '}
-          {title}
-        </span>
-        <span className={styles.right}>{length}</span>
-      </div>
-      <div className={cn(styles.videoWrapper, { [styles.open]: isOpen })}>
+      <h3 className={styles.heading}>
+        <button
+          id={`accordion-${videoId}`}
+          className={styles.top}
+          onClick={() => toggleIsOpen(!isOpen ? videoId : null)}
+          aria-expanded={isOpen}
+          aria-controls={`content-${videoId}`}
+        >
+          <span className={styles.title}>
+            {lightning && <FontAwesomeIcon icon={faBolt} color="#f5de1a" />}{' '}
+            {title}
+          </span>
+          <span className={styles.right}>{length}</span>
+        </button>
+      </h3>
+      <div
+        id={`content-${videoId}`}
+        aria-labelledby={`accordion-${videoId}`}
+        className={cn(styles.videoWrapper, { [styles.open]: isOpen })}
+        aria-hidden={!isOpen}
+      >
         {isOpen && (
           <iframe
             title="videoPlayer"
@@ -67,7 +74,10 @@ export const VideoInner: React.FunctionComponent<CombinedProps> = ({
       </div>
       <div className={styles.details}>
         <span>{speaker.name}</span>
-        <Link to={`/conference/${sluggifyUrl(conference.title)}`}>
+        <Link
+          to={`/conference/${sluggifyUrl(conference.title)}`}
+          aria-label={`See all videos for conference ${conference.title}`}
+        >
           <span className={styles.conferenceTitle}>{conference.title}</span>
         </Link>
       </div>
@@ -93,11 +103,5 @@ const mapStateToProps = (state: ApplicationState, props: Props) => {
 
 export const Video = compose<CombinedProps, Props>(
   connect(mapStateToProps),
-  pure,
-  withStateHandlers(
-    { isOpen: false },
-    {
-      toggleIsOpen: ({ isOpen }) => () => ({ isOpen: !isOpen })
-    }
-  )
+  pure
 )(VideoInner);

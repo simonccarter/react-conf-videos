@@ -1,7 +1,7 @@
 import { compose as rcompose, flatten, map, pathOr, toPairs } from 'ramda';
 import * as React from 'react';
 import VirtualList from 'react-virtual-list';
-import { mapProps } from 'recompose';
+import { compose, mapProps, withStateHandlers } from 'recompose';
 
 import { Video } from 'components';
 import { Conference, IndexedConferences } from '../../domain';
@@ -16,6 +16,12 @@ type MappedVideo = {
 
 type Props = { conferences: { [idx: string]: Conference } };
 type MapProps = { videos: MappedVideo[] };
+type State = { open: string | null };
+type StateHandlers = {
+  toggleIsOpen: (open: string | null) => State;
+};
+
+type CombinedProps = MapProps & State & StateHandlers;
 
 const mapConferenceIdOntoVideos = ([conferenceId, conference]: [
   string,
@@ -33,13 +39,19 @@ const mapConferenceVideos = rcompose<
   MappedVideo[]
 >(flatten, map(mapConferenceIdOntoVideos), toPairs);
 
-const VirtualisedList = ({
-  virtual
-}: {
-  virtual: any;
-}): React.ReactElement<{}> => (
+const VirtualisedList: React.FunctionComponent<
+  { virtual: any } & CombinedProps
+> = ({ virtual, open, toggleIsOpen }) => (
   <div style={virtual.style}>
-    {virtual.items && virtual.items.map((item: any) => <Video {...item} />)}
+    {virtual.items &&
+      virtual.items.map((item: MappedVideo, index: number) => (
+        <Video
+          key={index}
+          {...item}
+          isOpen={item.videoId === open}
+          toggleIsOpen={toggleIsOpen}
+        />
+      ))}
   </div>
 );
 
@@ -52,16 +64,36 @@ const MyVirtualList = VirtualList({
   }
 })(VirtualisedList);
 
-export const ListInner: React.FunctionComponent<MapProps> = ({ videos }) => {
+export const ListInner: React.FunctionComponent<CombinedProps> = ({
+  videos,
+  open,
+  toggleIsOpen
+}) => {
   return (
     <section className={styles.root}>
       {videos.length > 0 && (
-        <MyVirtualList items={videos} itemHeight={60} itemBuffer={20} />
+        <MyVirtualList
+          items={videos}
+          itemHeight={60}
+          itemBuffer={20}
+          open={open}
+          toggleIsOpen={toggleIsOpen}
+        />
       )}
     </section>
   );
 };
 
-export const List = mapProps<MapProps, Props>(({ conferences }) => ({
-  videos: mapConferenceVideos(conferences)
-}))(ListInner);
+export const List = compose<CombinedProps, Props>(
+  mapProps<MapProps, Props>(({ conferences }) => ({
+    videos: mapConferenceVideos(conferences)
+  })),
+  withStateHandlers<State, StateHandlers>(
+    { open: null },
+    {
+      toggleIsOpen: () => videoId => {
+        return { open: videoId };
+      }
+    }
+  )
+)(ListInner);

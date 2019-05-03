@@ -1,21 +1,21 @@
-.logo {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-  height: 4rem;
-  width: 4rem;
+.logoLink {
+  color: $header-background-color;
+  margin-top: 0.1rem;
+  font-weight: bold;
+  text-decoration: none;
 
-  background-color: $text-color;
-  border-radius: 50%;
+  .logo {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    height: 4rem;
+    width: 4rem;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-color: $text-color;
+    border-radius: 50%;
 
-  .logoLink {
-    color: $header-background-color;
-    margin-top: 0.1rem;
-    font-weight: bold;
-    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

@@ -21,8 +21,9 @@ export const Header: React.FunctionComponent<{}> = () => (
         <a
           className={styles.contributeLink}
           href="https://github.com/simonccarter/react-conf-videos"
+          aria-label="Contribute at our github repo"
         >
-          here
+          at our github repo
         </a>
         .
       </p>
