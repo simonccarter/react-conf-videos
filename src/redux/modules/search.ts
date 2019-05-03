@@ -51,7 +51,7 @@ export const filterVideos = (
 
 // returns new conference object if videos exist on conference
 export const createConference = (
-  conferences: Immutable.Immutable<IndexedConferences>,
+  conferences: IndexedConferences,
   conferenceKey: string,
   newConferences: any,
   matchedVideos: string[]
@@ -103,7 +103,7 @@ const computeFilteredConferences = ({
 
       // return conference if it has any matched videos
       return createConference(
-        conferences as Immutable.Immutable<IndexedConferences>,
+        conferences,
         conferenceKey,
         newConferencesAcc,
         matchedVideos

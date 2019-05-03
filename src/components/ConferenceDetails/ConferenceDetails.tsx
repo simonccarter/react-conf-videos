@@ -1,26 +1,23 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import {
-  Conference
-} from '../../domain'
+import { Conference } from '../../domain';
 
-type Props = { conference: Conference }
+type Props = { conference: Conference };
 
-import styles from './ConferenceDetails.scss'
+import styles from './ConferenceDetails.scss';
 
-export const ConferenceDetails: React.SFC<Props> = ({
-  conference: {
-    title,
-    date,
-    website,
-    videos
-  }
+export const ConferenceDetails: React.FunctionComponent<Props> = ({
+  conference: { title, date, website, videos }
 }) => (
   <div className={styles.root}>
-    <h2 className={styles.title}><a href={website}>{title}</a></h2>
+    <h2 className={styles.title}>
+      <a href={website}>{title}</a>
+    </h2>
     <p className={styles.details}>
       <span>{date}</span>
-      <span>{videos.length} {videos.length !== 1 ? 'videos' : 'video'}</span>
+      <span>
+        {videos.length} {videos.length !== 1 ? 'videos' : 'video'}
+      </span>
     </p>
   </div>
-)
+);

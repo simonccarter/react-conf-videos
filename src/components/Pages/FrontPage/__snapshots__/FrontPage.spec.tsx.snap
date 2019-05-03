@@ -1,27 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FrontPage FrontPage should render 1`] = `
-<pure(withHandlers(Component))
-  conferences={
-    Object {
-      "X": Object {
-        "date": "XX/YY/ZZZ",
-        "playlist": "day 1",
-        "title": "fake conf title",
-        "videos": Array [
-          "aaa",
-          "bbb",
-          "ccc",
-        ],
-        "website": "fake url",
-      },
-    }
-  }
-  filterValue=""
-  navigateToSearchURL={[Function]}
-/>
-`;
-
 exports[`FrontPage FrontPageInner should render 1`] = `
 <div>
   <Component

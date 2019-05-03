@@ -1,61 +1,69 @@
-import { faBolt } from '@fortawesome/free-solid-svg-icons/faBolt'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import * as cn from 'classnames'
-import * as React from 'react'
-import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
-import { compose, pure, withStateHandlers } from 'recompose'
+import { faBolt } from '@fortawesome/free-solid-svg-icons/faBolt';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import * as cn from 'classnames';
+import * as React from 'react';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { compose, pure, withStateHandlers } from 'recompose';
 
-import { ApplicationState } from 'redux/modules'
-import { sluggifyUrl } from 'utils'
-import { Conference, Presenter, Video as VideoProp } from '../../domain'
+import { ApplicationState } from 'redux/modules';
+import { sluggifyUrl } from 'utils';
+import { Conference, Presenter, Video as VideoProp } from '../../domain';
 
-import styles from './Video.scss'
+import styles from './Video.scss';
 
 type Props = {
-  videoId: string
-  conferenceId: string
-}
+  videoId: string;
+  conferenceId: string;
+};
 
 type State = {
-  isOpen: boolean
-}
+  isOpen: boolean;
+};
 
 type StateHandlers = {
-  toggleIsOpen: (e: React.MouseEvent<HTMLElement>) => State
-}
+  toggleIsOpen: (e: React.MouseEvent<HTMLDivElement>) => State;
+};
 
 type ReduxState = {
-  conferenceId: string
-  conference: Conference
-  speaker: Presenter
-  video: VideoProp
-}
+  conferenceId: string;
+  conference: Conference;
+  speaker: Presenter;
+  video: VideoProp;
+};
 
-type CombinedProps = Props & State & ReduxState & StateHandlers
+type CombinedProps = Props & State & ReduxState & StateHandlers;
 
-export const VideoInner: React.SFC<CombinedProps> = ({
+export const VideoInner: React.FunctionComponent<CombinedProps> = ({
   video: { title, length, embeddableLink, lightning = false },
-  speaker, videoId, conference, isOpen, toggleIsOpen, conferenceId
+  speaker,
+  videoId,
+  conference,
+  isOpen,
+  toggleIsOpen,
+  conferenceId
 }) => {
   return (
-    <div className={styles.root} key={videoId} >
-      <div className={styles.top} onClick={toggleIsOpen} >
+    <div className={styles.root} key={videoId}>
+      <div className={styles.top} onClick={toggleIsOpen}>
         <span className={styles.title}>
-          {lightning && <FontAwesomeIcon icon={faBolt} color="#f5de1a" />} {title}
+          {lightning && <FontAwesomeIcon icon={faBolt} color="#f5de1a" />}{' '}
+          {title}
         </span>
         <span className={styles.right}>{length}</span>
       </div>
       <div className={cn(styles.videoWrapper, { [styles.open]: isOpen })}>
-        {isOpen && <iframe
-          title="videoPlayer"
-          id="ytplayer"
-          width="410"
-          height="360"
-          src={embeddableLink}
-          frameBorder="0"
-          allowFullScreen={true}
-        />}
+        {isOpen && (
+          <iframe
+            title="videoPlayer"
+            id="ytplayer"
+            width="410"
+            height="360"
+            src={embeddableLink}
+            frameBorder="0"
+            allowFullScreen={true}
+          />
+        )}
       </div>
       <div className={styles.details}>
         <span>{speaker.name}</span>
@@ -64,27 +72,32 @@ export const VideoInner: React.SFC<CombinedProps> = ({
         </Link>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const mapStateToProps = (state: ApplicationState, props: Props) => {
-  const { data: { videos, presenters, conferences } } = state
-  const { videoId, conferenceId } = props
-  const video = videos[videoId]
-  const conference = conferences[conferenceId]
-  const speaker = presenters[video.presenter]
+  const {
+    data: { videos, presenters, conferences }
+  } = state;
+  const { videoId, conferenceId } = props;
+  const video = videos[videoId];
+  const conference = conferences[conferenceId];
+  const speaker = presenters[video.presenter];
   return {
     conferenceId,
     conference,
     speaker,
     video
-  }
-}
+  };
+};
 
 export const Video = compose<CombinedProps, Props>(
   connect(mapStateToProps),
   pure,
-  withStateHandlers({ isOpen: false }, {
-    toggleIsOpen: ({ isOpen }) => () => ({ isOpen: !isOpen })
-  })
-)(VideoInner)
+  withStateHandlers(
+    { isOpen: false },
+    {
+      toggleIsOpen: ({ isOpen }) => () => ({ isOpen: !isOpen })
+    }
+  )
+)(VideoInner);

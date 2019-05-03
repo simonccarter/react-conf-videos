@@ -130,7 +130,7 @@ export const transformDataFromJson = (data: JSONInput): ReduxState => {
   return merge(normalized.entities, {
     videosSearchable: cleanedVideos,
     presentersSearchable: cleanedSpeakerNames
-  });
+  }) as ReduxState;
 };
 
 // normalize data and apply transforms (e.g. lowercase, diacritics)

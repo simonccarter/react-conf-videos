@@ -52,7 +52,6 @@ exports[`Header should render 1`] = `
           >
             <Link
               className="logoLink"
-              replace={false}
               to="/search"
             >
               <a
@@ -73,7 +72,6 @@ exports[`Header should render 1`] = `
           >
             <Link
               className="link"
-              replace={false}
               to="/search"
             >
               <a

@@ -4,12 +4,12 @@ import configureStore from './configureStore';
 describe('configureStore', () => {
   it('should return a store object on call', () => {
     // act
-    const { store, history, rootReducer } = configureStore();
+    const { store, history, createRootReducer } = configureStore();
 
     // assert
     expect(store).toBeDefined();
     expect(history).toBeDefined();
-    expect(rootReducer).toBeDefined();
+    expect(createRootReducer).toBeDefined();
 
     expect(store.hasOwnProperty('getState')).toBe(true);
     expect(store.hasOwnProperty('dispatch')).toBe(true);

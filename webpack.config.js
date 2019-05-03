@@ -1,9 +1,9 @@
-const path = require('path')
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ProgressBarPlugin = require('progress-bar-webpack-plugin')
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -15,7 +15,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[hash].js'
   },
-  stats: "verbose",
   module: {
     rules: [
       {
@@ -34,21 +33,17 @@ module.exports = {
           'style-loader',
           'css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]',
           {
-            loader: "sass-loader",
-            options: { 
+            loader: 'sass-loader',
+            options: {
               data: '@import "_colors";',
-              includePaths: [
-                path.resolve(__dirname, "./src/styles/")
-              ]
+              includePaths: [path.resolve(__dirname, './src/styles/')]
             }
           }
         ]
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          'file-loader'
-        ]
+        use: ['file-loader']
       }
     ]
   },
@@ -81,4 +76,4 @@ module.exports = {
     open: true,
     historyApiFallback: true
   }
-}
+};

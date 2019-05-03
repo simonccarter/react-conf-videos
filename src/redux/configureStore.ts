@@ -1,8 +1,12 @@
-import { connectRouter, routerMiddleware } from 'connected-react-router';
+import { routerMiddleware } from 'connected-react-router';
 import { createHashHistory } from 'history';
 import { applyMiddleware, compose, createStore } from 'redux';
 import { createEpicMiddleware } from 'redux-observable';
-import { ApplicationState, rootEpic, rootReducer } from 'redux/modules/root';
+import {
+  ApplicationState,
+  createRootReducer,
+  rootEpic
+} from 'redux/modules/root';
 
 const isProd = process.env.NODE_ENV === 'production';
 const isTest = process.env.NODE_ENV === 'test';
@@ -19,11 +23,11 @@ export default function configureStore() {
   const history = createHashHistory();
 
   const store = createStore(
-    connectRouter(history)(rootReducer),
+    createRootReducer(history),
     composeEnhancers(applyMiddleware(epicMiddleware, routerMiddleware(history)))
   );
 
   epicMiddleware.run(rootEpic);
 
-  return { history, store, rootReducer };
+  return { history, store, createRootReducer };
 }
