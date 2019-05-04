@@ -15,7 +15,6 @@ ReactGA.initialize('UA-111717324-1');
 const FrontPageTracked = Tracker(FrontPage);
 const ConfPageTracked = Tracker(ConfPage);
 
-/* tslint:disable */
 const App = () => (
   <Switch>
     <Route
@@ -26,6 +25,5 @@ const App = () => (
     <Route path="/" render={() => <Redirect to="/search" />} />
   </Switch>
 );
-/* tslint:enable */
 
 export default hot(module)(App);

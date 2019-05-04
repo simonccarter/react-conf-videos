@@ -7,7 +7,7 @@ import { Action, Conference } from '../../domain';
 
 export type ReduxState = {
   selectedConferenceId: string;
-  conference: Partial<Conference>;
+  conference: Conference;
 };
 
 export const SET_CONFERENCE_DETAILS = 'SET_CONFERENCE_DETAILS';
@@ -42,7 +42,13 @@ export const conferencePageActions = {
 
 export const initialState = Immutable<ReduxState>({
   selectedConferenceId: '',
-  conference: {}
+  conference: {
+    title: '',
+    date: '',
+    website: '',
+    videos: [],
+    playlist: ''
+  }
 });
 
 const conferencePageReducer = (state = initialState, action: Action<any>) => {

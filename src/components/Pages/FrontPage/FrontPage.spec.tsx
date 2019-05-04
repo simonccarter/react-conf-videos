@@ -7,14 +7,12 @@ import { FrontPageInner } from './FrontPage';
 
 describe('FrontPage', () => {
   describe('FrontPageInner', () => {
-    const NOOP = () => null;
     const shallowComp = (isActive: boolean) =>
       shallow(
         <FrontPageInner
           conferences={{ x: mockConference() }}
           filterValue=""
           navigateToSearchURL={jest.fn()}
-          onInputChange={NOOP}
         />
       );
 

@@ -7,20 +7,17 @@ import { mockConference } from 'utils/test';
 import { List } from './List';
 
 describe('List', () => {
-  describe('ListInner', () => {
-    it('should render', () => {
-      // arrange
-      const conf = mockConference();
-      const props = {
-        conferences: { yyy: conf },
-        displayConferenceDetails: true
-      };
+  it('should render', () => {
+    // arrange
+    const conf = mockConference();
+    const props = {
+      conferences: { yyy: conf }
+    };
 
-      // act
-      const wrapper = shallow(<List {...props} />);
+    // act
+    const wrapper = shallow(<List {...props} />);
 
-      // assert
-      expect(toJSON(wrapper)).toMatchSnapshot();
-    });
+    // assert
+    expect(toJSON(wrapper)).toMatchSnapshot();
   });
 });
