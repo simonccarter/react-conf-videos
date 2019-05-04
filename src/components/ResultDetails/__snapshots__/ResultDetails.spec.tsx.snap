@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ResultDetails should render 1`] = `
-<mapProps(ResultDetailsInner)
+<Component
   conferences={
     Object {
       "XXXX": Object {
@@ -18,34 +18,27 @@ exports[`ResultDetails should render 1`] = `
     }
   }
 >
-  <ResultDetailsInner
-    countConfs={1}
-    countConfsS="conference"
-    countVids={3}
-    countVidsS="videos"
+  <p
+    className="resultsCount"
   >
-    <p
-      className="resultsCount"
+    <span
+      className="resultsNumber"
     >
-      <span
-        className="resultsNumber"
-      >
-         
-        3
-         
-      </span>
        
-      videos
-      <span
-        className="resultsNumber"
-      >
-         
-        1
-         
-      </span>
+      3
        
-      conference
-    </p>
-  </ResultDetailsInner>
-</mapProps(ResultDetailsInner)>
+    </span>
+     
+    videos
+    <span
+      className="resultsNumber"
+    >
+       
+      1
+       
+    </span>
+     
+    conference
+  </p>
+</Component>
 `;
