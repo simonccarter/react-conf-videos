@@ -15,14 +15,9 @@
   },
   "setupFiles": ["<rootDir>/config/test/setupEnzyme.ts"],
   "moduleNameMapper": {
-      "\\.(scss)$": "<rootDir>/config/test/identityProxy.ts"
+    "\\.(scss)$": "<rootDir>/config/test/identityProxy.ts"
   },
   "moduleDirectories": ["node_modules", "src", "public", "scripts"],
   "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-  "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json"
-  ]
+  "moduleFileExtensions": ["ts", "tsx", "js", "json"]
 }

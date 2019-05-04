@@ -7,11 +7,11 @@ exports[`FrontPage FrontPageInner should render 1`] = `
   />
   <Component />
   <Component>
-    <pure(withStateHandlers(withHandlers(Component)))
+    <Component
       filterValue=""
       onChange={[Function]}
     />
-    <mapProps(ResultDetailsInner)
+    <Component
       conferences={
         Object {
           "x": Object {
@@ -28,7 +28,7 @@ exports[`FrontPage FrontPageInner should render 1`] = `
         }
       }
     />
-    <mapProps(withStateHandlers(Component))
+    <Component
       conferences={
         Object {
           "x": Object {

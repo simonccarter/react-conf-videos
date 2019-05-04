@@ -1,25 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`List ListInner should render 1`] = `
-<withStateHandlers(Component)
-  videos={
-    Array [
-      Object {
-        "conferenceId": "yyy",
-        "key": "aaa",
-        "videoId": "aaa",
-      },
-      Object {
-        "conferenceId": "yyy",
-        "key": "bbb",
-        "videoId": "bbb",
-      },
-      Object {
-        "conferenceId": "yyy",
-        "key": "ccc",
-        "videoId": "ccc",
-      },
-    ]
-  }
-/>
+exports[`List should render 1`] = `
+<section
+  className="root"
+>
+  <vlist
+    itemBuffer={20}
+    itemHeight={60}
+    items={
+      Array [
+        Object {
+          "conferenceId": "yyy",
+          "key": "aaa",
+          "videoId": "aaa",
+        },
+        Object {
+          "conferenceId": "yyy",
+          "key": "bbb",
+          "videoId": "bbb",
+        },
+        Object {
+          "conferenceId": "yyy",
+          "key": "ccc",
+          "videoId": "ccc",
+        },
+      ]
+    }
+  />
+</section>
 `;

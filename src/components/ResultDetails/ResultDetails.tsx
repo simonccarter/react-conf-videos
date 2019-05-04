@@ -1,19 +1,12 @@
 import * as React from 'react';
 
 import { compose, flatten, pluck, values } from 'ramda';
-import { mapProps } from 'recompose';
 
 import { IndexedConferences } from '../../domain';
 
 import styles from './ResultDetails.scss';
 
 type Props = { conferences: IndexedConferences };
-type MappedProps = {
-  countVids: number;
-  countConfs: number;
-  countVidsS: string;
-  countConfsS: string;
-};
 
 const getAllVideos = compose<any, any, any, string[]>(
   flatten,
@@ -32,20 +25,19 @@ export const computeResultDetails = (conferences: IndexedConferences) => {
   };
 };
 
-const ResultDetailsInner: React.FunctionComponent<MappedProps> = ({
-  countVids,
-  countConfs,
-  countVidsS,
-  countConfsS
-}) => (
-  <p className={styles.resultsCount}>
-    <span className={styles.resultsNumber}> {countVids} </span> {countVidsS}
-    <span className={styles.resultsNumber}> {countConfs} </span> {countConfsS}
-  </p>
-);
-
-export const ResultDetails = mapProps<MappedProps, Props>(({ conferences }) => {
-  return {
-    ...computeResultDetails(conferences)
-  };
-})(ResultDetailsInner);
+export const ResultDetails: React.FunctionComponent<Props> = ({
+  conferences
+}) => {
+  const {
+    countVids,
+    countConfs,
+    countVidsS,
+    countConfsS
+  } = computeResultDetails(conferences);
+  return (
+    <p className={styles.resultsCount}>
+      <span className={styles.resultsNumber}> {countVids} </span> {countVidsS}
+      <span className={styles.resultsNumber}> {countConfs} </span> {countConfsS}
+    </p>
+  );
+};

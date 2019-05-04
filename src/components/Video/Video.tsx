@@ -4,7 +4,6 @@ import * as cn from 'classnames';
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { compose, pure } from 'recompose';
 
 import { ApplicationState } from 'redux/modules';
 import { sluggifyUrl } from 'utils';
@@ -16,7 +15,7 @@ type Props = {
   videoId: string;
   conferenceId: string;
   isOpen: boolean;
-  toggleIsOpen: (e: string | null) => { open: string | null };
+  toggleIsOpen: (e: string | null) => void;
 };
 
 type ReduxState = {
@@ -101,7 +100,4 @@ const mapStateToProps = (state: ApplicationState, props: Props) => {
   };
 };
 
-export const Video = compose<CombinedProps, Props>(
-  connect(mapStateToProps),
-  pure
-)(VideoInner);
+export const Video = connect(mapStateToProps)(React.memo(VideoInner));

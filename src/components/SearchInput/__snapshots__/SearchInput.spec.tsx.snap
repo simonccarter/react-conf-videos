@@ -1,28 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchInput should render and contain connected props 1`] = `
-<withStateHandlers(withHandlers(Component))
-  filterValue=""
-  onChange={[MockFunction]}
-/>
-`;
-
-exports[`SearchInputInner should render 1`] = `
+exports[`SearchInput should render 1`] = `
 <input
   className="root"
   onChange={[MockFunction]}
-  onKeyUp={[MockFunction]}
   placeholder="Search"
   type="text"
   value=""
 />
 `;
 
-exports[`SearchInputInner should set placeholder if passed 1`] = `
+exports[`SearchInput should set placeholder if passed 1`] = `
 <input
   className="root"
   onChange={[MockFunction]}
-  onKeyUp={[MockFunction]}
   placeholder="test placeholder"
   type="text"
   value=""
