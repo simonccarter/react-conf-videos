@@ -8,12 +8,13 @@
     "node": ">=8.9.4"
   },
   "scripts": {
-    "build": "npm run clean & npm run createReadme & webpack --progress --config webpack.prod.js",
+    "build": "npm run clean & npm run createReadme & npm run sitemap & webpack --progress --config webpack.prod.js",
     "clean": "rm -rf ./dist",
     "createReadme": "ts-node --project ./scripts/tsconfig.json ./scripts/json2readme.ts > README.md",
     "lint": "tslint -p tsconfig.json -e '**/*.js'",
     "lint:fix": "tslint -p tsconfig.json -e '**/*.js' --fix",
     "prettier": "prettier 'src/**/*.{ts, tsx}' --write",
+    "sitemap": "ts-node --project ./scripts/tsconfig.json ./scripts/sitemapBuilder.ts > public/sitemap.txt",
     "start": "npm run createReadme & webpack-dev-server --config webpack.config.js",
     "test": "cross-env NODE_ENV=test jest --no-cache --coverage --config=config/test/jestconfig.json --maxWorkers=2",
     "test:dev": "cross-env NODE_ENV=test jest --watch --config=config/test/jestconfig.json",
@@ -65,6 +66,7 @@
     "@types/jest": "24.0.12",
     "@types/moment": "^2.13.0",
     "@types/node": "11.13.8",
+    "@types/normalizr": "^2.0.18",
     "@types/query-string": "6.3.0",
     "@types/ramda": "0.26.8",
     "@types/react": "16.8.15",
