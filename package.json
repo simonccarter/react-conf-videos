@@ -5,7 +5,7 @@
   "repository": {},
   "license": "MIT",
   "engines": {
-    "node": ">=8.9.4"
+    "node": ">=10.15.3"
   },
   "scripts": {
     "build": "npm run clean & npm run createReadme & npm run sitemap & webpack --progress --config webpack.prod.js",

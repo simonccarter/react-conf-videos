@@ -1,7 +1,89 @@
 [
   {
+    "title": "ReactJS Girls Conference",
+    "date": "03-05-2019",
+    "website": "https://reactjsgirls.com/",
+    "playlist": {
+      "Day 1": "https://www.youtube.com/watch?v=dkl6sYff2C8"
+    },
+    "videos": [
+      {
+        "title": "Building a Design System with React",
+        "link": "https://www.youtube.com/watch?v=ropAuzI7MtA",
+        "presenter": {
+          "name": "Emma Wedekind"
+        },
+        "length": "17:27"
+      },
+      {
+        "title": "The How and Why of Flexible React",
+        "link": "https://www.youtube.com/watch?v=vot0nJJ2Qdo",
+        "presenter": {
+          "name": "Jenn Creighton"
+        },
+        "length": "26:48"
+      },
+      {
+        "title": "Storybook: A React Native Love Story",
+        "link": "https://www.youtube.com/watch?v=vYI1riChSj4",
+        "presenter": {
+          "name": "Erin Fox"
+        },
+        "length": "13:33"
+      },
+      {
+        "title": "How to Automate Your React Workflow",
+        "link": "https://www.youtube.com/watch?v=kaOrLfyCrlQ",
+        "presenter": {
+          "name": "Monica Powell"
+        },
+        "length": "18:09"
+      },
+      {
+        "title": "Empathy Driven Development: A Live Accessibility Audit with React JS",
+        "link": "https://www.youtube.com/watch?v=xVmUvMkBHas",
+        "presenter": {
+          "name": "Marcy Sutton"
+        },
+        "length": "20:45"
+      },
+      {
+        "title": "Life is Hard and So is Learning GraphQL",
+        "link": "https://www.youtube.com/watch?v=ADudeU3agu0",
+        "presenter": {
+          "name": "Carolyn Stransky"
+        },
+        "length": "20:29"
+      },
+      {
+        "title": "Architecture your Culture like you Architecture your Code",
+        "link": "https://www.youtube.com/watch?v=pG1tOvtFCg4",
+        "presenter": {
+          "name": "Kate Beard"
+        },
+        "length": "20:12"
+      },
+      {
+        "title": "Functional Programming with ReactJS",
+        "link": "https://www.youtube.com/watch?v=gG4ygtDtxUM",
+        "presenter": {
+          "name": "Marta Fernandes"
+        },
+        "length": "15:58"
+      },
+      {
+        "title": "React Hooks: A Hype Driven Development in React",
+        "link": "https://www.youtube.com/watch?v=qX5zj037iVU",
+        "presenter": {
+          "name": "Manjula Dube"
+        },
+        "length": "16:47"
+      }
+    ]
+  },
+  {
     "title": "React Finland 2019",
-    "date": "12-05-2019",
+    "date": "23-04-2019",
     "website": "https://react-finland.fi/",
     "playlist": {
       "Day 1": "https://www.youtube.com/watch?v=gDkUpx0dVc0&t=8s",

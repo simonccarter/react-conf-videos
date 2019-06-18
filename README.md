@@ -2,12 +2,13 @@
 [www.reactjsvideos.com](https://www.reactjsvideos.com)
 
 List of react conference videos.
-**520** videos from **28** Conferences.
+**529** videos from **29** Conferences.
 
 
 ## Quick Links
 
 * 2019
+  * [ReactJS Girls Conference](#reactjs-girls-conference)
   * [React Finland 2019](#react-finland-2019)
   * [React Amsterdam 2019](#react-amsterdam-2019)
   * [App.js Conf 2019](#appjs-conf-2019)
@@ -44,6 +45,23 @@ List of react conference videos.
 
 
 ## 2019
+
+### ReactJS Girls Conference
+
+##### [website](https://reactjsgirls.com/) - [playlist: Day 1](https://www.youtube.com/watch?v=dkl6sYff2C8)
+
+
+| Title/Link        | Presenter  | Length |
+| ------------- |:-------------:| -----:|
+[Building a Design System with React](https://www.youtube.com/watch?v=ropAuzI7MtA) | Emma Wedekind | 17:27
+[The How and Why of Flexible React](https://www.youtube.com/watch?v=vot0nJJ2Qdo) | Jenn Creighton | 26:48
+[Storybook: A React Native Love Story](https://www.youtube.com/watch?v=vYI1riChSj4) | Erin Fox | 13:33
+[How to Automate Your React Workflow](https://www.youtube.com/watch?v=kaOrLfyCrlQ) | Monica Powell | 18:09
+[Empathy Driven Development: A Live Accessibility Audit with React JS](https://www.youtube.com/watch?v=xVmUvMkBHas) | Marcy Sutton | 20:45
+[Life is Hard and So is Learning GraphQL](https://www.youtube.com/watch?v=ADudeU3agu0) | Carolyn Stransky | 20:29
+[Architecture your Culture like you Architecture your Code](https://www.youtube.com/watch?v=pG1tOvtFCg4) | Kate Beard | 20:12
+[Functional Programming with ReactJS](https://www.youtube.com/watch?v=gG4ygtDtxUM) | Marta Fernandes | 15:58
+[React Hooks: A Hype Driven Development in React](https://www.youtube.com/watch?v=qX5zj037iVU) | Manjula Dube | 16:47
 
 ### React Finland 2019
 
