@@ -1,5 +1,5 @@
 import {
-  ConfPageHeader,
+  Header,
   InnerLayoutContainer,
   List,
   Meta,
@@ -36,7 +36,7 @@ export const ConfPageInner: React.FunctionComponent<Props> = ({
   return (
     <div>
       <Meta title={conference.title} />
-      <ConfPageHeader
+      <Header
         title={conference.title}
         titleLink={conference.website}
         tagline={`
