@@ -8,7 +8,7 @@ List of react conference videos.
 ## Quick Links
 
 * 2019
-  * [<React.NotAConf />](#<reactnotaconf-/>)
+  * [<React.NotAConf />](#reactnotaconf-)
   * [ReactJS Girls Conference](#reactjs-girls-conference)
   * [React Finland 2019](#react-finland-2019)
   * [React Amsterdam 2019](#react-amsterdam-2019)
