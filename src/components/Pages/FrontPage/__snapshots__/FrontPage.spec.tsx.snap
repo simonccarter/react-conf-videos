@@ -5,7 +5,11 @@ exports[`FrontPage FrontPageInner should render 1`] = `
   <Component
     title=""
   />
-  <Component />
+  <Component
+    tagline="Search React.js conference videos."
+    title="React.js Videos"
+    titleLink="/#/search"
+  />
   <Component>
     <Component
       filterValue=""
