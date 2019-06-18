@@ -34,7 +34,11 @@ export const FrontPageInner: React.FunctionComponent<Props> = ({
   return (
     <div>
       <Meta title={filterValue} />
-      <Header />
+      <Header
+        title="React.js Videos"
+        titleLink="/#/search"
+        tagline="Search React.js conference videos."
+      />
       <InnerLayoutContainer>
         <SearchInput filterValue={filterValue} onChange={onInputChange} />
         <ResultDetails conferences={conferences} />

@@ -93,6 +93,7 @@ workflows:
               only:
                 - develop
                 - fix/circleci
+                - fix/spacing
       - deploy-master:
           requires:
             - set-up
