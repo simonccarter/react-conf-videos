@@ -7,7 +7,7 @@ version: 2.0
 references:
   container_config: &container_config
     docker:
-      - image: circleci/node:8.9.4-stretch
+      - image: circleci/node:10.15.3-stretch
     working_directory: ~/repo
 
   restore_repo: &restore_repo

@@ -1,5 +1,186 @@
 [
   {
+    "title": "<React.NotAConf />",
+    "date": "11-05-2019",
+    "website": "http://react-not-a-conf.com/",
+    "playlist": {
+      "Day 1": "https://www.youtube.com/watch?v=3ctNyxoDNsc&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=2"
+    },
+    "videos": [
+      {
+        "title": "Opening",
+        "link": "https://www.youtube.com/watch?v=yCB0rJ3F5Co&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=1",
+        "presenter": {
+          "name": "Janet Todorova"
+        },
+        "length": "3:59"
+      },
+      {
+        "title": "The evolution of React APIs",
+        "link": "https://www.youtube.com/watch?v=3ctNyxoDNsc&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=2",
+        "presenter": {
+          "name": "Mihail Mikov"
+        },
+        "length": "41:24"
+      },
+      {
+        "title": "An SVG’s Tale",
+        "link": "https://www.youtube.com/watch?v=vMHHsREvAiE&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=3",
+        "presenter": {
+          "name": "Elizabet Oliveira"
+        },
+        "length": "31:20"
+      },
+      {
+        "title": "Conversational sign up with chatbot-like experience with React and Redux",
+        "link": "https://www.youtube.com/watch?v=06oBhxzQpj8&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=4",
+        "presenter": {
+          "name": "Ilona Demidenko"
+        },
+        "length": "29:20"
+      },
+      {
+        "title": "Write better React with ReasonML",
+        "link": "https://www.youtube.com/watch?v=pS1YSew89Gg&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=5",
+        "presenter": {
+          "name": "David Kopal"
+        },
+        "length": "50:47"
+      },
+      {
+        "title": "How not to hate your life when dealing with forms",
+        "link": "https://www.youtube.com/watch?v=kIi9OV338c4&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=6",
+        "presenter": {
+          "name": "Radoslav Stankov"
+        },
+        "length": "46:17"
+      },
+      {
+        "title": "Serverless: a backend thing that gives superpowers to frontend developers",
+        "link": "https://www.youtube.com/watch?v=zgCiii0wWE8&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=7",
+        "presenter": {
+          "name": "Slobodan Stojanovic"
+        },
+        "length": "51:14"
+      },
+      {
+        "title": "Building resilient frontend architecture",
+        "link": "https://www.youtube.com/watch?v=W3HQII-l8Tk&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=8",
+        "presenter": {
+          "name": "Monica Lent"
+        },
+        "length": "43:59"
+      },
+      {
+        "title": "Architecting React plugins",
+        "link": "https://www.youtube.com/watch?v=hNDsPrYE_CE&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=9",
+        "presenter": {
+          "name": "Martin Chaov"
+        },
+        "length": "41:29"
+      },
+      {
+        "title": "Nadcast Panel and Closing",
+        "link": "https://www.youtube.com/watch?v=iUzIiT9tdUU&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=10",
+        "presenter": {
+          "name": "n/a"
+        },
+        "length": "36:53"
+      }
+    ]
+  },
+  {
+    "title": "ReactJS Girls Conference",
+    "date": "03-05-2019",
+    "website": "https://reactjsgirls.com/",
+    "playlist": {
+      "Day 1": "https://www.youtube.com/watch?v=dkl6sYff2C8"
+    },
+    "videos": [
+      {
+        "title": "Building a Design System with React",
+        "link": "https://www.youtube.com/watch?v=ropAuzI7MtA",
+        "presenter": {
+          "name": "Emma Wedekind"
+        },
+        "length": "17:27"
+      },
+      {
+        "title": "The How and Why of Flexible React",
+        "link": "https://www.youtube.com/watch?v=vot0nJJ2Qdo",
+        "presenter": {
+          "name": "Jenn Creighton"
+        },
+        "length": "26:48"
+      },
+      {
+        "title": "Storybook: A React Native Love Story",
+        "link": "https://www.youtube.com/watch?v=vYI1riChSj4",
+        "presenter": {
+          "name": "Erin Fox"
+        },
+        "length": "13:33"
+      },
+      {
+        "title": "How to Automate Your React Workflow",
+        "link": "https://www.youtube.com/watch?v=kaOrLfyCrlQ",
+        "presenter": {
+          "name": "Monica Powell"
+        },
+        "length": "18:09"
+      },
+      {
+        "title": "Empathy Driven Development: A Live Accessibility Audit with React JS",
+        "link": "https://www.youtube.com/watch?v=xVmUvMkBHas",
+        "presenter": {
+          "name": "Marcy Sutton"
+        },
+        "length": "20:45"
+      },
+      {
+        "title": "Life is Hard and So is Learning GraphQL",
+        "link": "https://www.youtube.com/watch?v=ADudeU3agu0",
+        "presenter": {
+          "name": "Carolyn Stransky"
+        },
+        "length": "20:29"
+      },
+      {
+        "title": "Architecture your Culture like you Architecture your Code",
+        "link": "https://www.youtube.com/watch?v=pG1tOvtFCg4",
+        "presenter": {
+          "name": "Kate Beard"
+        },
+        "length": "20:12"
+      },
+      {
+        "title": "Functional Programming with ReactJS",
+        "link": "https://www.youtube.com/watch?v=gG4ygtDtxUM",
+        "presenter": {
+          "name": "Marta Fernandes"
+        },
+        "length": "15:58"
+      },
+      {
+        "title": "React Hooks: A Hype Driven Development in React",
+        "link": "https://www.youtube.com/watch?v=qX5zj037iVU",
+        "presenter": {
+          "name": "Manjula Dube"
+        },
+        "length": "16:47"
+      }
+    ]
+  },
+  {
+    "title": "React Finland 2019",
+    "date": "23-04-2019",
+    "website": "https://react-finland.fi/",
+    "playlist": {
+      "Day 1": "https://www.youtube.com/watch?v=gDkUpx0dVc0&t=8s",
+      "Day 2": "https://www.youtube.com/watch?v=d_BtZ8bv0sw&t=5s"
+    }
+  },
+  {
     "title": "React Amsterdam 2019",
     "date": "12-04-2019",
     "website": "https://react.amsterdam/",

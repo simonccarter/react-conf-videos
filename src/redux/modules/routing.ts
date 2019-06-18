@@ -35,7 +35,7 @@ const getConferenceIdFromPathname = (pathname: string) => {
 };
 
 const getConferenceNameFromPathname = (pathname: string) => {
-  const match = pathname.match(/conference\/?.*?\/(.*?)$/);
+  const match = pathname.match(/conference\/(.*?)$/);
   const title = match && match[1] ? match[1] : '';
   return title;
 };
