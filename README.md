@@ -2,12 +2,13 @@
 [www.reactjsvideos.com](https://www.reactjsvideos.com)
 
 List of react conference videos.
-**520** videos from **27** Conferences.
+**520** videos from **28** Conferences.
 
 
 ## Quick Links
 
 * 2019
+  * [React Finland 2019](#react-finland-2019)
   * [React Amsterdam 2019](#react-amsterdam-2019)
   * [App.js Conf 2019](#appjs-conf-2019)
   * [Reactathon 2019](#reactathon-2019)
@@ -43,6 +44,10 @@ List of react conference videos.
 
 
 ## 2019
+
+### React Finland 2019
+
+##### [website](https://react-finland.fi/) - [playlist: Day 1](https://www.youtube.com/watch?v=gDkUpx0dVc0&t=8s) - [playlist: Day 2](https://www.youtube.com/watch?v=d_BtZ8bv0sw&t=5s)
 
 ### React Amsterdam 2019
 
