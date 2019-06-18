@@ -1,5 +1,95 @@
 [
   {
+    "title": "<React.NotAConf />",
+    "date": "11-05-2019",
+    "website": "http://react-not-a-conf.com/",
+    "playlist": {
+      "Day 1": "https://www.youtube.com/watch?v=3ctNyxoDNsc&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=2"
+    },
+    "videos": [
+      {
+        "title": "Opening",
+        "link": "https://www.youtube.com/watch?v=yCB0rJ3F5Co&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=1",
+        "presenter": {
+          "name": "Janet Todorova"
+        },
+        "length": "3:59"
+      },
+      {
+        "title": "The evolution of React APIs",
+        "link": "https://www.youtube.com/watch?v=3ctNyxoDNsc&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=2",
+        "presenter": {
+          "name": "Mihail Mikov"
+        },
+        "length": "41:24"
+      },
+      {
+        "title": "An SVG’s Tale",
+        "link": "https://www.youtube.com/watch?v=vMHHsREvAiE&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=3",
+        "presenter": {
+          "name": "Elizabet Oliveira"
+        },
+        "length": "31:20"
+      },
+      {
+        "title": "Conversational sign up with chatbot-like experience with React and Redux",
+        "link": "https://www.youtube.com/watch?v=06oBhxzQpj8&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=4",
+        "presenter": {
+          "name": "Ilona Demidenko"
+        },
+        "length": "29:20"
+      },
+      {
+        "title": "Write better React with ReasonML",
+        "link": "https://www.youtube.com/watch?v=pS1YSew89Gg&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=5",
+        "presenter": {
+          "name": "David Kopal"
+        },
+        "length": "50:47"
+      },
+      {
+        "title": "How not to hate your life when dealing with forms",
+        "link": "https://www.youtube.com/watch?v=kIi9OV338c4&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=6",
+        "presenter": {
+          "name": "Radoslav Stankov"
+        },
+        "length": "46:17"
+      },
+      {
+        "title": "Serverless: a backend thing that gives superpowers to frontend developers",
+        "link": "https://www.youtube.com/watch?v=zgCiii0wWE8&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=7",
+        "presenter": {
+          "name": "Slobodan Stojanovic"
+        },
+        "length": "51:14"
+      },
+      {
+        "title": "Building resilient frontend architecture",
+        "link": "https://www.youtube.com/watch?v=W3HQII-l8Tk&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=8",
+        "presenter": {
+          "name": "Monica Lent"
+        },
+        "length": "43:59"
+      },
+      {
+        "title": "Architecting React plugins",
+        "link": "https://www.youtube.com/watch?v=hNDsPrYE_CE&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=9",
+        "presenter": {
+          "name": "Martin Chaov"
+        },
+        "length": "41:29"
+      },
+      {
+        "title": "Nadcast Panel and Closing",
+        "link": "https://www.youtube.com/watch?v=iUzIiT9tdUU&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=10",
+        "presenter": {
+          "name": "n/a"
+        },
+        "length": "36:53"
+      }
+    ]
+  },
+  {
     "title": "ReactJS Girls Conference",
     "date": "03-05-2019",
     "website": "https://reactjsgirls.com/",
