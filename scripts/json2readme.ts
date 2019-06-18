@@ -132,7 +132,7 @@ const computeLnks = (titlesAndYears: Array<[string, string]>) => {
     }
     acc += `\n  * [${title}](#${title
       .replace(/\s/g, '-')
-      .replace(/\.+/g, '')
+      .replace(/[\.<>\/\\]+/g, '')
       .toLowerCase()})`;
     return acc;
   }, '');

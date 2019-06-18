@@ -2,13 +2,13 @@
 [www.reactjsvideos.com](https://www.reactjsvideos.com)
 
 List of react conference videos.
-**539** videos from **30** Conferences.
+**568** videos from **30** Conferences.
 
 
 ## Quick Links
 
 * 2019
-  * [<React.NotAConf />](#<reactnotaconf-/>)
+  * [<React.NotAConf />](#reactnotaconf-)
   * [ReactJS Girls Conference](#reactjs-girls-conference)
   * [React Finland 2019](#react-finland-2019)
   * [React Amsterdam 2019](#react-amsterdam-2019)
@@ -84,7 +84,40 @@ List of react conference videos.
 
 ### React Finland 2019
 
-##### [website](https://react-finland.fi/) - [playlist: Day 1](https://www.youtube.com/watch?v=gDkUpx0dVc0&t=8s) - [playlist: Day 2](https://www.youtube.com/watch?v=d_BtZ8bv0sw&t=5s)
+##### [website](https://react-finland.fi/) - [playlist: Day 1](https://www.youtube.com/watch?v=IqbOPkCwxlw&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a)
+
+
+| Title/Link        | Presenter  | Length |
+| ------------- |:-------------:| -----:|
+[Opening ceremonies](https://www.youtube.com/watch?v=IqbOPkCwxlw&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=1) | n/a | 13:42
+[MobX The Journey](https://www.youtube.com/watch?v=MIh1qSHi_Fc&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=2) | Michel Weststrate | 27:58
+[Append only development with React](https://www.youtube.com/watch?v=cXuvCMG21Ss&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=3) | Luca Matteis | 26:04
+[Mind Reading with Adaptive and Intelligent UIs in React](https://www.youtube.com/watch?v=ppvi09LIUnU&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=4) | David Khourshid | 25:01
+[Abstract component modeling in React](https://www.youtube.com/watch?v=AVb5dURO6q0&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=5) | Farzad Yz | 12:35
+[A Common Design Language Let Designers and Developers talk to each other](https://www.youtube.com/watch?v=a6DtiGhKMdk&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=6) | Andrey Okonetchnikov | 20:57
+[A practical guide to building your design system infrastructure](https://www.youtube.com/watch?v=5_lYTicLUbk&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=7) | Varya Stepanova | 27:18
+[CICD for React Native](https://www.youtube.com/watch?v=Lid-2xFU4vg&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=8) | Juha Linnanen | 27:05
+[Intersection of Automation and Exploratory Testing](https://www.youtube.com/watch?v=Dg4JawCeNhs&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=9) | Maaret Pyhäjärvi | 23:10
+[12 Tips For More Accessible React Apps](https://www.youtube.com/watch?v=NL6XKcX4sxc&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=10) | Manuel Matuzović | 23:10
+[All aboard the type train](https://www.youtube.com/watch?v=PkdESWmNZ9o&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=11) | Kadi Kraman | 16:22
+[Drawing the line between 3rd party and handcrafted components](https://www.youtube.com/watch?v=EdUJQYDYdPQ&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=12) | Glenn Reyes | 11:34
+[Gatsby and Themes The Future of Gatsby](https://www.youtube.com/watch?v=SV2zu9FvUTw&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=13) | Dustin Schau | 20:00
+[Delightful UI animations by understanding the brain](https://www.youtube.com/watch?v=TszRBCc6DQ4&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=14) | Bruno Lourenço | 25:43
+[Unpopular Opinions](https://www.youtube.com/watch?v=c9YtmMi-5rM&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=15) | Nik Graf | 27:49
+[Building a Community Around Ignite](https://www.youtube.com/watch?v=gTG8_9Zv0YI&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=16) | Jamon Holmgren | 31:51
+[The Untouchable Web](https://www.youtube.com/watch?v=LhKglxQT4sU&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=17) | Rick Hanlon | 17:44
+[React Standard Library](https://www.youtube.com/watch?v=6A9GeBXhPWY&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=18) | Ville Immonen | 21:55
+[Custom CSS is the path to inconsistent UI](https://www.youtube.com/watch?v=_CsBRkRTzIA&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=19) | Artem Sapegin | 18:07
+[Creating layouts that last](https://www.youtube.com/watch?v=_HrXUB97xQs&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=20) | Artem Zakharchenko | 24:28
+[Scalable Design Systems with TypeScript](https://www.youtube.com/watch?v=ZsBW4S8hYMU&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=21) | Tejas Kumar | 34:57
+[Codecrumbs in React](https://www.youtube.com/watch?v=S_1-1jzLxm4&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=22) | Bohdan Liashenko | 12:14
+[React Union Write once, plug anywhere](https://www.youtube.com/watch?v=gGzGzpaNlx4&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=23) | Tomáš Konrády | 30:28
+[Releasing a library written in TypeScript on NPM](https://www.youtube.com/watch?v=T_4CCdkN468&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=24) | Christoffer Niska | 9:56
+[Practical Performance for React Native](https://www.youtube.com/watch?v=W2a5_Qn2jVI&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=25) | Anna Doubková | 23:16
+[WebAssembly The Next Big Platform](https://www.youtube.com/watch?v=8xhLsVVqchg&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=26) | Sven Sauleau | 13:52
+[Building resilient frontend architecture](https://www.youtube.com/watch?v=brMZLmZ1HR0&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=27) | Monica Lent | 33:08
+[Intuitive Tooling](https://www.youtube.com/watch?v=nBy8y39Pvp4&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=28) | Carolyn Stransky | 25:15
+[Closing ceremonies](https://www.youtube.com/watch?v=HlJovLP9gMk&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=29) | n/a | 18:32
 
 ### React Amsterdam 2019
 
@@ -94,7 +127,7 @@ List of react conference videos.
 
 | Title/Link        | Presenter  | Length |
 | ------------- |:-------------:| -----:|
-[Requisite React ](https://www.youtube.com/watch?v=4KfAS3zrvX8&t=1405s) | Kent C Dodds | 
+[Requisite React](https://www.youtube.com/watch?v=4KfAS3zrvX8&t=1405s) | Kent C Dodds | 
 [Refactoring React](https://www.youtube.com/watch?v=4KfAS3zrvX8&t=3268s) | Siddharth Kshetrapal | 
 [A Common Design Language](https://www.youtube.com/watch?v=4KfAS3zrvX8&t=6900s) | Andrey Okonetchnikov | 
 [Designing with React](https://www.youtube.com/watch?v=4KfAS3zrvX8&t=8562s) | Mark Dalgleish | 
