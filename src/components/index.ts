@@ -1,5 +1,4 @@
 import { ConferenceDetails } from 'components/ConferenceDetails';
-import { ConfPageHeader } from 'components/ConfPageHeader';
 import { Header } from 'components/Header';
 import { ScrollToTop } from 'components/HOCS/ScrollToTop';
 import { Tracker } from 'components/HOCS/Tracker';
@@ -24,7 +23,6 @@ export {
   ScrollToTop,
   SearchInput,
   ResultDetails,
-  ConfPageHeader,
   ConferenceDetails,
   InnerLayoutContainer
 };

@@ -2,20 +2,29 @@ import * as cn from 'classnames';
 import * as React from 'react';
 
 import { Logo } from 'components';
-import { Link } from 'react-router-dom';
 
 import styles from './Header.scss';
 
-export const Header: React.FunctionComponent<{}> = () => (
+type Props = {
+  title: string;
+  titleLink: string;
+  tagline: string;
+};
+
+export const Header: React.FunctionComponent<Props> = ({
+  title,
+  titleLink,
+  tagline
+}) => (
   <div className={styles.header}>
     <Logo />
     <div className={styles.text}>
       <h1 className={styles.headerTitle}>
-        <Link to="/search" className={styles.link}>
-          React.js Videos
-        </Link>
+        <a href={titleLink} className={styles.link}>
+          {title}
+        </a>
       </h1>
-      <p className={styles.headerText}> Search React.js conference videos. </p>
+      <p className={styles.headerText}> {tagline} </p>
       <p className={cn(styles.headerText, styles.contribute)}>
         Contribute
         <a
@@ -23,6 +32,7 @@ export const Header: React.FunctionComponent<{}> = () => (
           href="https://github.com/simonccarter/react-conf-videos"
           aria-label="Contribute at our github repo"
         >
+          {' '}
           at our github repo
         </a>
         .

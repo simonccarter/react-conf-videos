@@ -42,7 +42,11 @@ exports[`Header should render 1`] = `
       }
     }
   >
-    <Component>
+    <Component
+      tagline="A tagline"
+      title="A title"
+      titleLink="/a-link"
+    >
       <div
         className="header"
       >
@@ -72,23 +76,19 @@ exports[`Header should render 1`] = `
           <h1
             className="headerTitle"
           >
-            <Link
+            <a
               className="link"
-              to="/search"
+              href="/a-link"
             >
-              <a
-                className="link"
-                href="/search"
-                onClick={[Function]}
-              >
-                React.js Videos
-              </a>
-            </Link>
+              A title
+            </a>
           </h1>
           <p
             className="headerText"
           >
-             Search React.js conference videos. 
+             
+            A tagline
+             
           </p>
           <p
             className="headerText contribute"
@@ -99,6 +99,7 @@ exports[`Header should render 1`] = `
               className="contributeLink"
               href="https://github.com/simonccarter/react-conf-videos"
             >
+               
               at our github repo
             </a>
             .
