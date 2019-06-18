@@ -1,4 +1,7 @@
 https://www.reactjsvideos.com/#/search
+https://www.reactjsvideos.com/#/conference/<react.notaconf-/>
+https://www.reactjsvideos.com/#/conference/reactjs-girls-conference
+https://www.reactjsvideos.com/#/conference/react-finland-2019
 https://www.reactjsvideos.com/#/conference/react-amsterdam-2019
 https://www.reactjsvideos.com/#/conference/app.js-conf-2019
 https://www.reactjsvideos.com/#/conference/reactathon-2019

@@ -176,9 +176,242 @@
     "date": "23-04-2019",
     "website": "https://react-finland.fi/",
     "playlist": {
-      "Day 1": "https://www.youtube.com/watch?v=gDkUpx0dVc0&t=8s",
-      "Day 2": "https://www.youtube.com/watch?v=d_BtZ8bv0sw&t=5s"
-    }
+      "Day 1": "https://www.youtube.com/watch?v=IqbOPkCwxlw&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a"
+    },
+    "videos": [
+      {
+        "title": "Opening ceremonies",
+        "link": "https://www.youtube.com/watch?v=IqbOPkCwxlw&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=1",
+        "presenter": {
+          "name": "n/a"
+        },
+        "length": "13:42"
+      },
+      {
+        "title": "MobX The Journey",
+        "link": "https://www.youtube.com/watch?v=MIh1qSHi_Fc&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=2",
+        "presenter": {
+          "name": "Michel Weststrate"
+        },
+        "length": "27:58"
+      },
+      {
+        "title": "Append only development with React",
+        "link": "https://www.youtube.com/watch?v=cXuvCMG21Ss&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=3",
+        "presenter": {
+          "name": "Luca Matteis"
+        },
+        "length": "26:04"
+      },
+      {
+        "title": "Mind Reading with Adaptive and Intelligent UIs in React",
+        "link": "https://www.youtube.com/watch?v=ppvi09LIUnU&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=4",
+        "presenter": {
+          "name": "David Khourshid"
+        },
+        "length": "25:01"
+      },
+      {
+        "title": "Abstract component modeling in React",
+        "link": "https://www.youtube.com/watch?v=AVb5dURO6q0&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=5",
+        "presenter": {
+          "name": "Farzad Yz"
+        },
+        "length": "12:35"
+      },
+      {
+        "title": "A Common Design Language Let Designers and Developers talk to each other",
+        "link": "https://www.youtube.com/watch?v=a6DtiGhKMdk&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=6",
+        "presenter": {
+          "name": "Andrey Okonetchnikov"
+        },
+        "length": "20:57"
+      },
+      {
+        "title": "A practical guide to building your design system infrastructure",
+        "link": "https://www.youtube.com/watch?v=5_lYTicLUbk&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=7",
+        "presenter": {
+          "name": "Varya Stepanova"
+        },
+        "length": "27:18"
+      },
+      {
+        "title": "CICD for React Native",
+        "link": "https://www.youtube.com/watch?v=Lid-2xFU4vg&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=8",
+        "presenter": {
+          "name": "Juha Linnanen"
+        },
+        "length": "27:05"
+      },
+      {
+        "title": "Intersection of Automation and Exploratory Testing",
+        "link": "https://www.youtube.com/watch?v=Dg4JawCeNhs&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=9",
+        "presenter": {
+          "name": "Maaret Pyhäjärvi"
+        },
+        "length": "23:10"
+      },
+      {
+        "title": "12 Tips For More Accessible React Apps",
+        "link": "https://www.youtube.com/watch?v=NL6XKcX4sxc&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=10",
+        "presenter": {
+          "name": "Manuel Matuzović"
+        },
+        "length": "23:10"
+      },
+      {
+        "title": "All aboard the type train",
+        "link": "https://www.youtube.com/watch?v=PkdESWmNZ9o&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=11",
+        "presenter": {
+          "name": "Kadi Kraman"
+        },
+        "length": "16:22"
+      },
+      {
+        "title": "Drawing the line between 3rd party and handcrafted components",
+        "link": "https://www.youtube.com/watch?v=EdUJQYDYdPQ&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=12",
+        "presenter": {
+          "name": "Glenn Reyes"
+        },
+        "length": "11:34"
+      },
+      {
+        "title": "Gatsby and Themes The Future of Gatsby",
+        "link": "https://www.youtube.com/watch?v=SV2zu9FvUTw&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=13",
+        "presenter": {
+          "name": "Dustin Schau"
+        },
+        "length": "20:00"
+      },
+      {
+        "title": "Delightful UI animations by understanding the brain",
+        "link": "https://www.youtube.com/watch?v=TszRBCc6DQ4&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=14",
+        "presenter": {
+          "name": "Bruno Lourenço"
+        },
+        "length": "25:43"
+      },
+      {
+        "title": "Unpopular Opinions",
+        "link": "https://www.youtube.com/watch?v=c9YtmMi-5rM&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=15",
+        "presenter": {
+          "name": "Nik Graf"
+        },
+        "length": "27:49"
+      },
+      {
+        "title": "Building a Community Around Ignite",
+        "link": "https://www.youtube.com/watch?v=gTG8_9Zv0YI&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=16",
+        "presenter": {
+          "name": "Jamon Holmgren"
+        },
+        "length": "31:51"
+      },
+      {
+        "title": "The Untouchable Web",
+        "link": "https://www.youtube.com/watch?v=LhKglxQT4sU&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=17",
+        "presenter": {
+          "name": "Rick Hanlon"
+        },
+        "length": "17:44"
+      },
+      {
+        "title": "React Standard Library",
+        "link": "https://www.youtube.com/watch?v=6A9GeBXhPWY&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=18",
+        "presenter": {
+          "name": "Ville Immonen"
+        },
+        "length": "21:55"
+      },
+      {
+        "title": "Custom CSS is the path to inconsistent UI",
+        "link": "https://www.youtube.com/watch?v=_CsBRkRTzIA&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=19",
+        "presenter": {
+          "name": "Artem Sapegin"
+        },
+        "length": "18:07"
+      },
+      {
+        "title": "Creating layouts that last",
+        "link": "https://www.youtube.com/watch?v=_HrXUB97xQs&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=20",
+        "presenter": {
+          "name": "Artem Zakharchenko"
+        },
+        "length": "24:28"
+      },
+      {
+        "title": "Scalable Design Systems with TypeScript",
+        "link": "https://www.youtube.com/watch?v=ZsBW4S8hYMU&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=21",
+        "presenter": {
+          "name": "Tejas Kumar"
+        },
+        "length": "34:57"
+      },
+      {
+        "title": "Codecrumbs in React",
+        "link": "https://www.youtube.com/watch?v=S_1-1jzLxm4&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=22",
+        "presenter": {
+          "name": "Bohdan Liashenko"
+        },
+        "length": "12:14"
+      },
+      {
+        "title": "React Union Write once, plug anywhere",
+        "link": "https://www.youtube.com/watch?v=gGzGzpaNlx4&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=23",
+        "presenter": {
+          "name": "Tomáš Konrády"
+        },
+        "length": "30:28"
+      },
+      {
+        "title": "Releasing a library written in TypeScript on NPM",
+        "link": "https://www.youtube.com/watch?v=T_4CCdkN468&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=24",
+        "presenter": {
+          "name": "Christoffer Niska"
+        },
+        "length": "9:56"
+      },
+      {
+        "title": "Practical Performance for React Native",
+        "link": "https://www.youtube.com/watch?v=W2a5_Qn2jVI&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=25",
+        "presenter": {
+          "name": "Anna Doubková"
+        },
+        "length": "23:16"
+      },
+      {
+        "title": "WebAssembly The Next Big Platform",
+        "link": "https://www.youtube.com/watch?v=8xhLsVVqchg&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=26",
+        "presenter": {
+          "name": "Sven Sauleau"
+        },
+        "length": "13:52"
+      },
+      {
+        "title": "Building resilient frontend architecture",
+        "link": "https://www.youtube.com/watch?v=brMZLmZ1HR0&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=27",
+        "presenter": {
+          "name": "Monica Lent"
+        },
+        "length": "33:08"
+      },
+      {
+        "title": "Intuitive Tooling",
+        "link": "https://www.youtube.com/watch?v=nBy8y39Pvp4&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=28",
+        "presenter": {
+          "name": "Carolyn Stransky"
+        },
+        "length": "25:15"
+      },
+      {
+        "title": "Closing ceremonies",
+        "link": "https://www.youtube.com/watch?v=HlJovLP9gMk&list=PL-a9lBflNu2oW1lU7fUvW0oAnbj-mxk2a&index=29",
+        "presenter": {
+          "name": "n/a"
+        },
+        "length": "18:32"
+      }
+    ]
   },
   {
     "title": "React Amsterdam 2019",
@@ -190,7 +423,7 @@
     },
     "videos": [
       {
-        "title": "Requisite React ",
+        "title": "Requisite React",
         "link": "https://www.youtube.com/watch?v=4KfAS3zrvX8&t=1405s",
         "presenter": {
           "name": "Kent C Dodds"
