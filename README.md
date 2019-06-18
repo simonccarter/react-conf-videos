@@ -2,12 +2,13 @@
 [www.reactjsvideos.com](https://www.reactjsvideos.com)
 
 List of react conference videos.
-**529** videos from **29** Conferences.
+**539** videos from **30** Conferences.
 
 
 ## Quick Links
 
 * 2019
+  * [<React.NotAConf />](#<reactnotaconf-/>)
   * [ReactJS Girls Conference](#reactjs-girls-conference)
   * [React Finland 2019](#react-finland-2019)
   * [React Amsterdam 2019](#react-amsterdam-2019)
@@ -45,6 +46,24 @@ List of react conference videos.
 
 
 ## 2019
+
+### <React.NotAConf />
+
+##### [website](http://react-not-a-conf.com/) - [playlist: Day 1](https://www.youtube.com/watch?v=3ctNyxoDNsc&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=2)
+
+
+| Title/Link        | Presenter  | Length |
+| ------------- |:-------------:| -----:|
+[Opening](https://www.youtube.com/watch?v=yCB0rJ3F5Co&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=1) | Janet Todorova | 3:59
+[The evolution of React APIs](https://www.youtube.com/watch?v=3ctNyxoDNsc&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=2) | Mihail Mikov | 41:24
+[An SVG’s Tale](https://www.youtube.com/watch?v=vMHHsREvAiE&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=3) | Elizabet Oliveira | 31:20
+[Conversational sign up with chatbot-like experience with React and Redux](https://www.youtube.com/watch?v=06oBhxzQpj8&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=4) | Ilona Demidenko | 29:20
+[Write better React with ReasonML](https://www.youtube.com/watch?v=pS1YSew89Gg&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=5) | David Kopal | 50:47
+[How not to hate your life when dealing with forms](https://www.youtube.com/watch?v=kIi9OV338c4&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=6) | Radoslav Stankov | 46:17
+[Serverless: a backend thing that gives superpowers to frontend developers](https://www.youtube.com/watch?v=zgCiii0wWE8&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=7) | Slobodan Stojanovic | 51:14
+[Building resilient frontend architecture](https://www.youtube.com/watch?v=W3HQII-l8Tk&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=8) | Monica Lent | 43:59
+[Architecting React plugins](https://www.youtube.com/watch?v=hNDsPrYE_CE&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=9) | Martin Chaov | 41:29
+[Nadcast Panel and Closing](https://www.youtube.com/watch?v=iUzIiT9tdUU&list=PLOEJ0eNOcZeosJfuT0dRcRWvNz4pru7SD&index=10) | n/a | 36:53
 
 ### ReactJS Girls Conference
 
