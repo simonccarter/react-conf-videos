@@ -10,6 +10,7 @@
 }
 
 .text {
+  position: relative;
   height: 100%;
   max-width: 450px;
   margin: 0 auto;
@@ -20,11 +21,14 @@
     margin: 0;
 
     .link {
+      position: relative;
+      display: inline-block;
       text-decoration: none;
     }
   }
 
   .headerText {
+    position: relative;
     margin-top: 0rem;
     font-weight: bold;
     margin-bottom: 0.2rem;
