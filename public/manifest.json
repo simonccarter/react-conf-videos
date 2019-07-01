@@ -1,8 +1,8 @@
 {
   "short_name": "React Vids",
   "name": "React Conferences Videos",
-  "background_color": "#195B6C",
-  "theme_color": "#195B6C",
+  "background_color": "#F5DD1A",
+  "theme_color": "#F5DD1A",
   "start_url": "/index.html",
   "display": "standalone",
   "orientation": "portrait",
