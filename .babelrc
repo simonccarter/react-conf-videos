@@ -1,11 +1,14 @@
 {
   "presets": [
-      ["@babel/preset-env", { 
-        "modules": false,
-        "targets": { "node": 6 }
-      }],
-      "@babel/preset-typescript",
-      "@babel/preset-react"
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "entry",
+        "corejs": 3
+      }
+    ],
+    "@babel/preset-typescript",
+    "@babel/preset-react"
   ],
   "plugins": ["react-hot-loader/babel", "ramda", "lodash"]
 }
