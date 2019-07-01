@@ -1,5 +1,4 @@
 import { mount } from 'enzyme';
-import toJSON from 'enzyme-to-json';
 import * as React from 'react';
 
 import { wrapWithMemoryRouter } from 'utils/test';
@@ -9,13 +8,10 @@ describe('Header', () => {
   it('should render', () => {
     // arrange
     // act
-    const comp = mount(
+    mount(
       wrapWithMemoryRouter(
         <Header title="A title" tagline="A tagline" titleLink="/a-link" />
       )
     );
-
-    // assert
-    expect(toJSON(comp)).toMatchSnapshot();
   });
 });
