@@ -9,45 +9,11 @@ import bootstrapReducer, {
   BOOTSTRAP_END_LOADER,
   BOOTSTRAP_START,
   bootstrapEndEpic,
-  bootstrapStartEpic,
-  initialState,
-  loadJSONDataEpic
+  initialState
 } from './bootstrap';
-import { LOAD_DATA_END, LOAD_DATA_START } from './data';
+import { LOAD_DATA_END } from './data';
 
 describe('bootstrap reducer', () => {
-  describe('bootstrapStartEpic', () => {
-    it('should return the correct action', done => {
-      // arrange
-      const action$ = ActionsObservable.of({ type: BOOTSTRAP_START });
-
-      // act
-      bootstrapStartEpic(action$, mockStore(), null).subscribe(action => {
-        // assert
-        expect(action.type).toBe(LOAD_DATA_START);
-        done();
-      });
-    });
-  });
-
-  describe('loadJSONDataEpic', () => {
-    it('should return the correct action and payload', done => {
-      // arrange
-      const payload = 'random data';
-      const action$ = ActionsObservable.of({
-        type: LOAD_DATA_START,
-        payload
-      });
-
-      // act
-      loadJSONDataEpic(action$, mockStore(), null).subscribe(action => {
-        // assert
-        expect(action.type).toBe(LOAD_DATA_END);
-        done();
-      });
-    });
-  });
-
   describe.skip('boostrapEndRemoveLoaderEpic', () => {
     it('should return the correct action', done => {
       // arrange

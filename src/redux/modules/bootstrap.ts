@@ -1,14 +1,19 @@
 import { combineEpics, Epic } from 'redux-observable';
-import { bufferCount, delay, map, mapTo, take, tap } from 'rxjs/operators';
+import { ajax } from 'rxjs/ajax';
+import {
+  bufferCount,
+  delay,
+  map,
+  mapTo,
+  mergeMap,
+  take,
+  tap
+} from 'rxjs/operators';
 import * as Immutable from 'seamless-immutable';
 
 import { ApplicationState } from 'redux/modules';
 import { Action, JSONInput } from '../../domain';
-import {
-  LOAD_DATA_END,
-  LOAD_DATA_START,
-  ReduxState as DataSlice
-} from './data';
+import { LOAD_DATA_END, ReduxState as DataSlice } from './data';
 
 export type ReduxState = {
   finished: boolean;
@@ -20,26 +25,23 @@ export const BOOTSTRAP_START = 'BOOTSTRAP_START';
 export const BOOTSTRAP_END = 'BOOTSTRAP_END';
 export const BOOTSTRAP_END_LOADER = 'END_LOADER';
 
-// export const BOOTSTRAP_COMPLETE_ACTIONS = [SET_FILTERED_CONFERENCES]
 export const BOOTSTRAP_COMPLETE_ACTIONS = [LOAD_DATA_END];
-
-// tslint:disable-next-line
-const JSONData = require('assets/conferenceVids.json');
 
 const loadDataEnd = (payload: JSONInput) => ({
   type: LOAD_DATA_END,
   payload
 });
 
-// kick off bootstrap actions
-export const bootstrapStartEpic: Epic<any, any, ApplicationState> = action$ =>
-  action$
-    .ofType(BOOTSTRAP_START)
-    .pipe(mapTo({ type: LOAD_DATA_START, payload: JSONData }));
-
-// load json data into store
+// kick off bootstrap actions by loading json data into store
 export const loadJSONDataEpic: Epic<any, any, ApplicationState> = action$ =>
-  action$.ofType(LOAD_DATA_START).pipe(map(() => loadDataEnd(JSONData)));
+  action$.ofType(BOOTSTRAP_START).pipe(
+    mergeMap(() =>
+      ajax.get('/assets/conferenceVids.json', {
+        'Content-Type': 'application/json'
+      })
+    ),
+    map(res => loadDataEnd(res.response))
+  );
 
 // end bookstrap process by listening for all actions in BOOTSTRAP_COMPLETE_ACTIONS
 export const bootstrapEndEpic: Epic<any, any, ApplicationState> = action$ =>
@@ -70,7 +72,6 @@ export const boostrapEndRemoveLoaderEpic: Epic<
   );
 
 export const bootstrapEpics = combineEpics(
-  bootstrapStartEpic,
   loadJSONDataEpic,
   bootstrapEndEpic,
   boostrapEndRemoveLoaderEpic
