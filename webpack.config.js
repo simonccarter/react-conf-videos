@@ -75,6 +75,7 @@ module.exports = {
     host: '0.0.0.0',
     hot: true,
     open: true,
-    historyApiFallback: true
+    historyApiFallback: true,
+    contentBase: path.join(__dirname, 'public')
   }
 };

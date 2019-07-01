@@ -27,7 +27,6 @@ import {
   JSONInput
 } from '../../domain';
 
-export const LOAD_DATA_START = 'LOAD_DATA_START';
 export const LOAD_DATA_END = 'LOAD_DATA_END';
 export const COPY_DATA = 'data.COPY_DATA';
 
