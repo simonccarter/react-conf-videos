@@ -4,7 +4,7 @@ import { take, toArray } from 'rxjs/operators';
 import { mockDataState, mockRouterState, mockStore } from 'utils/test';
 
 import { conferencePageActions } from './conferencePage';
-import { LOAD_DATA_END } from './data';
+import { COPY_DATA } from './data';
 import {
   extractQueryFromSearch,
   loadDataForRoute,
@@ -76,7 +76,7 @@ describe('routing', () => {
     describe('search page locations', () => {
       it('should handle no query in url', done => {
         // arrange
-        const action$ = ActionsObservable.of({ type: LOAD_DATA_END });
+        const action$ = ActionsObservable.of({ type: COPY_DATA });
         const state = mockRouterState();
         state.router.location.pathname = '/search';
         const expectedResult = searchActions.filter('');
@@ -91,7 +91,7 @@ describe('routing', () => {
 
       it('should handle query in url', done => {
         // arrange
-        const action$ = ActionsObservable.of({ type: LOAD_DATA_END });
+        const action$ = ActionsObservable.of({ type: COPY_DATA });
         const state = mockRouterState();
         const filter = 'filter';
         state.router.location.pathname = '/search';
@@ -110,7 +110,7 @@ describe('routing', () => {
     describe('conference page locations', () => {
       it('should return the correct action', done => {
         // arrange
-        const action$ = ActionsObservable.of({ type: LOAD_DATA_END });
+        const action$ = ActionsObservable.of({ type: COPY_DATA });
         const state = Object.assign(
           {},
           mockRouterState('/conference/XXXX/react-conf-2018'),
