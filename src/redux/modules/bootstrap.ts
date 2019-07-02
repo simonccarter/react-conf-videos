@@ -13,7 +13,7 @@ import * as Immutable from 'seamless-immutable';
 
 import { ApplicationState } from 'redux/modules';
 import { Action, JSONInput } from '../../domain';
-import { LOAD_DATA_END, ReduxState as DataSlice } from './data';
+import { COPY_DATA, LOAD_DATA_END, ReduxState as DataSlice } from './data';
 
 export type ReduxState = {
   finished: boolean;
@@ -25,7 +25,7 @@ export const BOOTSTRAP_START = 'BOOTSTRAP_START';
 export const BOOTSTRAP_END = 'BOOTSTRAP_END';
 export const BOOTSTRAP_END_LOADER = 'END_LOADER';
 
-export const BOOTSTRAP_COMPLETE_ACTIONS = [LOAD_DATA_END];
+export const BOOTSTRAP_COMPLETE_ACTIONS = [COPY_DATA];
 
 const loadDataEnd = (payload: JSONInput) => ({
   type: LOAD_DATA_END,
