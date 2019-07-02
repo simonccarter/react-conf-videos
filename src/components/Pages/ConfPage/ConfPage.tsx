@@ -35,14 +35,18 @@ export const ConfPageInner: React.FunctionComponent<Props> = ({
   };
   return (
     <div>
-      <Meta title={conference.title} />
+      <Meta title={conference.title || ''} />
       <Header
-        title={conference.title}
-        titleLink={conference.website}
+        title={conference.title || ''}
+        titleLink={conference.website || ''}
         tagline={`
-        ${conference.date} \-
-        ${conference.videos.length} \
-        ${conference.videos.length !== 1 ? 'videos' : 'video'} `}
+        ${conference.date || ''} \-
+        ${conference.videos && conference.videos.length} \
+        ${
+          conference.videos && conference.videos.length !== 1
+            ? 'videos'
+            : 'video'
+        } `}
       />
       <InnerLayoutContainer>
         <SearchInput
@@ -59,7 +63,7 @@ export const ConfPageInner: React.FunctionComponent<Props> = ({
 
 const mapStateToProps = ({ conferencePage, search }: ApplicationState) => ({
   filterValue: search.filterValue,
-  conference: conferencePage.conference,
+  conference: conferencePage.conference || {},
   conferences: search.conferences
 });
 

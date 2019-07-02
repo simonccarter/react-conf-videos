@@ -9,7 +9,7 @@ import { sluggifyUrl } from 'utils';
 import { isFilterEmpty } from 'utils';
 import { IndexedConferences } from '../../domain';
 import { conferencePageActions } from './conferencePage';
-import { LOAD_DATA_END } from './data';
+import { COPY_DATA } from './data';
 import { searchActions } from './search';
 
 export const NAVIGATE_TO_SEARCH_URL = 'routing/NAVIGATE_TO_SEARCH_URL';
@@ -55,7 +55,7 @@ export const loadDataForRoute: Epic<any, any, ApplicationState> = (
   action$,
   store
 ) =>
-  action$.ofType(LOAD_DATA_END, '@@router/LOCATION_CHANGE').pipe(
+  action$.ofType(COPY_DATA, '@@router/LOCATION_CHANGE').pipe(
     mergeMap(() => {
       const location = store.value.router.location;
       const { search, pathname } = location;
