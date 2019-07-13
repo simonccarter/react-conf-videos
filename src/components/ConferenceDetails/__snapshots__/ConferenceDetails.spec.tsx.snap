@@ -10,7 +10,7 @@ exports[`ConferenceDetails should render 1`] = `
     <a
       href="fake url"
     >
-      fake conf title
+      react conf 2018
     </a>
   </h2>
   <p

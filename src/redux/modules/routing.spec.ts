@@ -113,7 +113,7 @@ describe('routing', () => {
         const action$ = ActionsObservable.of({ type: COPY_DATA });
         const state = Object.assign(
           {},
-          mockRouterState('/conference/XXXX/react-conf-2018'),
+          mockRouterState('/conference/react-conf-2018'),
           mockDataState()
         );
         const filter = 'filter';

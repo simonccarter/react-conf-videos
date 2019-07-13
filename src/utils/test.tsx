@@ -71,7 +71,7 @@ export const mockPresenters = (): IndexedPresenters => ({
 
 export const mockConference = (): Conference => ({
   date: 'XX/YY/ZZZ',
-  title: 'fake conf title',
+  title: 'react conf 2018',
   website: 'fake url',
   playlist: 'day 1',
   videos: ['aaa', 'bbb', 'ccc']
