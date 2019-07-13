@@ -108,12 +108,12 @@ describe('routing', () => {
     });
 
     describe('conference page locations', () => {
-      it('should return the correct action', done => {
+      it.only('should return the correct action', done => {
         // arrange
         const action$ = ActionsObservable.of({ type: COPY_DATA });
         const state = Object.assign(
           {},
-          mockRouterState('/conference/XXXX/react-conf-2018'),
+          mockRouterState('/conference/react-conf-2018'),
           mockDataState()
         );
         const filter = 'filter';

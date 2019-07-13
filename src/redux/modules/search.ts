@@ -114,7 +114,7 @@ const computeFilteredConferences = ({
   return newConferences;
 };
 
-// filter conferences/videos based
+// filter conferences/videos
 export const filterEpic: Epic<any, any, ApplicationState> = (action$, store) =>
   action$.ofType(FILTER).pipe(
     debounceTime(80),
@@ -125,6 +125,9 @@ export const filterEpic: Epic<any, any, ApplicationState> = (action$, store) =>
         conferencePage: { selectedConferenceId },
         router
       } = store.value;
+      if (Object.keys(store.value.data.conferences).length === 0) {
+        return { type: '' };
+      }
       const rAction: Action<IndexedConferences> = {
         type: SET_FILTERED_CONFERENCES
       };

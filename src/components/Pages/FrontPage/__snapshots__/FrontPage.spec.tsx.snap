@@ -21,7 +21,7 @@ exports[`FrontPage FrontPageInner should render 1`] = `
           "x": Object {
             "date": "XX/YY/ZZZ",
             "playlist": "day 1",
-            "title": "fake conf title",
+            "title": "react conf 2018",
             "videos": Array [
               "aaa",
               "bbb",
@@ -38,7 +38,7 @@ exports[`FrontPage FrontPageInner should render 1`] = `
           "x": Object {
             "date": "XX/YY/ZZZ",
             "playlist": "day 1",
-            "title": "fake conf title",
+            "title": "react conf 2018",
             "videos": Array [
               "aaa",
               "bbb",

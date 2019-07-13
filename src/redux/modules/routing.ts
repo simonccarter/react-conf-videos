@@ -28,14 +28,8 @@ export const extractQueryFromSearch = (search: string) => {
   return query as string;
 };
 
-const getConferenceIdFromPathname = (pathname: string) => {
-  const match = pathname.match(/conference\/(.*?)\//);
-  const id = match && match[1] ? match[1] : '';
-  return id;
-};
-
 const getConferenceNameFromPathname = (pathname: string) => {
-  const match = pathname.match(/conference\/(.*?)$/);
+  const match = pathname.match(/conference\/(?:.*?\/)?(.{4,}?)$/);
   const title = match && match[1] ? match[1] : '';
   return title;
 };
@@ -62,18 +56,11 @@ export const loadDataForRoute: Epic<any, any, ApplicationState> = (
       if (isSearchPage(pathname)) {
         return of(searchActions.filter(extractQueryFromSearch(search)));
       } else {
-        let id = getConferenceIdFromPathname(pathname);
-
-        // check id exists: if doesn't try and find from name
-        if (!store.value.data.conferences[id]) {
-          // can we find id from name ?
-          const title = getConferenceNameFromPathname(pathname);
-          id = searchConferencesGivenUrlTitle(
-            title,
-            store.value.data.conferences
-          );
-        }
-
+        const title = getConferenceNameFromPathname(pathname);
+        const id = searchConferencesGivenUrlTitle(
+          title,
+          store.value.data.conferences
+        );
         return concat([
           conferencePageActions.setConferenceDetails(id),
           searchActions.filter(extractQueryFromSearch(search))
