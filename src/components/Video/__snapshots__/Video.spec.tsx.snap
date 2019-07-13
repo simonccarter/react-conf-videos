@@ -47,7 +47,7 @@ exports[`Video should render and connect 1`] = `
         Object {
           "date": "XX/YY/ZZZ",
           "playlist": "day 1",
-          "title": "fake conf title",
+          "title": "react conf 2018",
           "videos": Array [
             "aaa",
             "bbb",
@@ -117,18 +117,18 @@ exports[`Video should render and connect 1`] = `
             Simon Carter
           </span>
           <Link
-            aria-label="See all videos for conference fake conf title"
-            to="/conference/fake-conf-title"
+            aria-label="See all videos for conference react conf 2018"
+            to="/conference/react-conf-2018"
           >
             <a
-              aria-label="See all videos for conference fake conf title"
-              href="/conference/fake-conf-title"
+              aria-label="See all videos for conference react conf 2018"
+              href="/conference/react-conf-2018"
               onClick={[Function]}
             >
               <span
                 className="conferenceTitle"
               >
-                fake conf title
+                react conf 2018
               </span>
             </a>
           </Link>
