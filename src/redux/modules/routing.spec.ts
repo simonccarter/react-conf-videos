@@ -108,7 +108,7 @@ describe('routing', () => {
     });
 
     describe('conference page locations', () => {
-      it.only('should return the correct action', done => {
+      it('should return the correct action', done => {
         // arrange
         const action$ = ActionsObservable.of({ type: COPY_DATA });
         const state = Object.assign(
