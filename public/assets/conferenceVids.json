@@ -1,5 +1,151 @@
 [
   {
+    "title": "React Conf Armenia 2019",
+    "date": "25-05-2019",
+    "website": "https://reactconf.am/",
+    "playlist": {
+      "Day 1": "https://www.youtube.com/playlist?list=UUgiKInacwAT27zf7eM6ohXQ"
+    },
+    "videos": [
+      {
+        "title": "An SVG’s Tale",
+        "link": "https://www.youtube.com/watch?v=fki_A1a97us&list=UUgiKInacwAT27zf7eM6ohXQ&index=16",
+        "presenter": {
+          "name": "Elizabet Oliveira"
+        },
+        "length": "23:04"
+      },
+      {
+        "title": "Server-side Rendering with ReactJS: Win or Lose",
+        "link": "https://www.youtube.com/watch?v=X4JylrTENvs&list=UUgiKInacwAT27zf7eM6ohXQ&index=15",
+        "presenter": {
+          "name": "Lilit Tadevosyan"
+        },
+        "length": "24:55"
+      },
+      {
+        "title": "Monorepo: React Web & React Native",
+        "link": "https://www.youtube.com/watch?v=VrkkaHYshI0&list=UUgiKInacwAT27zf7eM6ohXQ&index=10",
+        "presenter": {
+          "name": "Eugene Zharkov"
+        },
+        "length": "33:31"
+      },
+      {
+        "title": "Dynamic Styling Systems with React",
+        "link": "https://www.youtube.com/watch?v=57HAY4EfqHU&list=UUgiKInacwAT27zf7eM6ohXQ&index=12",
+        "presenter": {
+          "name": "Khachatur Virabyan"
+        },
+        "length": "29:50"
+      },
+      {
+        "title": "A Reasonable Web",
+        "link": "https://www.youtube.com/watch?v=eJ4_HrI0hnU&list=UUgiKInacwAT27zf7eM6ohXQ&index=13",
+        "presenter": {
+          "name": "Leandro Ostera "
+        },
+        "length": "46:27"
+      },
+      {
+        "title": "Let’s manage our local state with GraphQL",
+        "link": "https://www.youtube.com/watch?v=C6avio1VNyg&list=UUgiKInacwAT27zf7eM6ohXQ&index=2",
+        "presenter": {
+          "name": "Sara Vieira"
+        },
+        "length": "27:26"
+      },
+      {
+        "title": "Testing React Ecosystem: Do's and Don'ts",
+        "link": "https://www.youtube.com/watch?v=vL2lDR59w-I&list=UUgiKInacwAT27zf7eM6ohXQ&index=9",
+        "presenter": {
+          "name": "Taguhi Asatryan"
+        },
+        "length": "20:58"
+      },
+      {
+        "title": "Handling Large-Scale State-Management with Context and Hooks",
+        "link": "https://www.youtube.com/watch?v=GxjDRjpoMJg&list=UUgiKInacwAT27zf7eM6ohXQ&index=17",
+        "presenter": {
+          "name": "Roy Derks"
+        },
+        "length": "34:31"
+      },
+      {
+        "title": "React to the Need for Speed ",
+        "link": "https://www.youtube.com/watch?v=IG0K6vy1TzQ&list=UUgiKInacwAT27zf7eM6ohXQ&index=8",
+        "presenter": {
+          "name": "Cristian Oliveira da Rosa"
+        },
+        "length": "29:21"
+      },
+      {
+        "title": "Turning an Application UI into an API",
+        "link": "https://www.youtube.com/watch?v=HnhhvUppvm4&list=UUgiKInacwAT27zf7eM6ohXQ&index=14",
+        "presenter": {
+          "name": "Narendra Shetty"
+        },
+        "length": "27:33"
+      },
+      {
+        "title": "Production Ready React with GatsbyJS",
+        "link": "https://www.youtube.com/watch?v=T1_i7XWV4Gc&list=UUgiKInacwAT27zf7eM6ohXQ&index=7",
+        "presenter": {
+          "name": "Jesse Martin"
+        },
+        "length": "29:28"
+      },
+      {
+        "title": "From Design Systems to Component Libraries",
+        "link": "https://www.youtube.com/watch?v=qE8-jgdv2-0&list=UUgiKInacwAT27zf7eM6ohXQ&index=6",
+        "presenter": {
+          "name": "Gagik Arustamyan"
+        },
+        "length": "24:37"
+      },
+      {
+        "title": "Photorealistic 3Dgraphics on the Web with ReactJS, WebGL and Unity3D",
+        "link": "https://www.youtube.com/watch?v=BQc9Nh0Nr0U&list=UUgiKInacwAT27zf7eM6ohXQ&index=11",
+        "presenter": {
+          "name": "Denis Radin"
+        },
+        "length": "31:29"
+      },
+      {
+        "title": "Let's Make a Photo-booth in React!",
+        "link": "https://www.youtube.com/watch?v=jNswQlvX0rQ&list=UUgiKInacwAT27zf7eM6ohXQ&index=5",
+        "presenter": {
+          "name": "Radoslaw Malecki"
+        },
+        "length": "22:22"
+      },
+      {
+        "title": "Creating a Design System that People Actually Use",
+        "link": "https://www.youtube.com/watch?v=kIpIO5l08Vg&list=UUgiKInacwAT27zf7eM6ohXQ&index=3",
+        "presenter": {
+          "name": "Rebecca Hill"
+        },
+        "length": "29:14"
+      },
+      {
+        "title": "Testing React in a Right Way",
+        "link": "https://www.youtube.com/watch?v=adEqBL53mlk&list=UUgiKInacwAT27zf7eM6ohXQ&index=4",
+        "presenter": {
+          "name": "Varik Matevosyan"
+        },
+        "length": "18:05"
+      },
+      {
+        "title": "Q&A Session",
+        "link": "https://www.youtube.com/watch?v=uFG2XNYT1cI&list=UUgiKInacwAT27zf7eM6ohXQ&index=2&t=0s",
+        "presenter": {
+          "name": "Dan Abramov and Sara Vieira"
+        },
+        "length": "54:02"
+      }
+    ]
+  },
+  {
     "title": "React Europe 2019",
     "date": "20-05-2019",
     "website": "www.react-europe.org",
