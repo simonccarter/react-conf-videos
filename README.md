@@ -2,12 +2,13 @@
 [www.reactjsvideos.com](https://www.reactjsvideos.com)
 
 List of react conference videos.
-**568** videos from **30** Conferences.
+**590** videos from **31** Conferences.
 
 
 ## Quick Links
 
 * 2019
+  * [React Europe 2019](#react-europe-2019)
   * [<React.NotAConf />](#reactnotaconf-)
   * [ReactJS Girls Conference](#reactjs-girls-conference)
   * [React Finland 2019](#react-finland-2019)
@@ -46,6 +47,42 @@ List of react conference videos.
 
 
 ## 2019
+
+### React Europe 2019
+
+##### [website](www.react-europe.org) - [playlist: Day 1](https://www.youtube.com/playlist?list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D) - [playlist: Day 2](https://www.youtube.com/playlist?list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y)
+
+#### Day 1
+
+| Title/Link        | Presenter  | Length |
+| ------------- |:-------------:| -----:|
+[The State of React](https://www.youtube.com/watch?v=u_0ZMiQZr0k&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=2&t=0s) | Jared Palmer | 26:12
+[Saving the Web, 16ms at a Time](https://www.youtube.com/watch?v=viPhwbusWuE&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=2) | Joshua Comeau | 25:09
+[React-spring: on animations and hooks](https://www.youtube.com/watch?v=5QCYBiANRYs&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=3) | Alec Larson | 30:35
+[Designing a Rich Content Editor for 1 Third of the Web](https://www.youtube.com/watch?v=c6zQbrFDskM&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=4) | Ella van Durpe | 20:10
+[A Hitchhiker’s Guide to the new ReasonReact](https://www.youtube.com/watch?v=VxJnNeHpUzc&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=5) | Nik Graf | 29:59
+[Totally Native React with Revery](https://www.youtube.com/watch?v=K3JqNaw0-Us&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=6) | Bryan Phelps | 33:45
+[Move fast with confidence](https://www.youtube.com/watch?v=ikn_dBSski8&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=7) | Paul Armstrong | 29:28
+[Skip](https://www.youtube.com/watch?v=zXqrxQ5AL6I&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=8) | Julien Vergalet | 31:25
+[Coders are the new Rock Stars](https://www.youtube.com/watch?v=NJdBm9CkANw&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=9) | Dan Stein | 31:20
+[Magic Move transitions in React-native](https://www.youtube.com/watch?v=Uj7aWfrtey8&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=10) | Hein Rutjes | 25:03
+[Combining GraphQL + mobx-state-tree](https://www.youtube.com/watch?v=Sq2M00vghqY&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=11) | Michel Weststrate | 29:02
+
+#### Day 2
+
+| Title/Link        | Presenter  | Length |
+| ------------- |:-------------:| -----:|
+[FBT: An i18n Framework for Complex Grammar & UI](https://www.youtube.com/watch?v=7XW3SkWsaKo&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=2&t=0s) | John Watson | 23:57
+[A year of CodeSandbox, tech edition](https://www.youtube.com/watch?v=8Zi6UxKFu2o&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=2) | Ives van Hoorne | 23:54
+[Scheduling is the Future of React](https://www.youtube.com/watch?v=Iyrf52cwxQI&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=3) | Brandon Dail | 25:20
+[Security and Data in React](https://www.youtube.com/watch?v=1N0lNLHYGVs&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=4) | Richard Threlkeld | 29:13
+[Build forms with GraphQL](https://www.youtube.com/watch?v=Ovg9CYwWFBM&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=5) | Charly Poly | 27:05
+[The Future of the Web](https://www.youtube.com/watch?v=NcAYsC_TKCA&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=6) | Lee Byron | 29:12
+[Universal App Development](https://www.youtube.com/watch?v=UcjCuWy81YM&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=7) | Evan Bacon | 21:13
+[Accessibility 360 - Web to Mobile](https://www.youtube.com/watch?v=X_3tnSwXLls&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=8) | Ankita Kulkarni | 27:03
+[Yarn 2 - Reinventing package management](https://www.youtube.com/watch?v=SU0N4y8S1Qc&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=9) | Maël Nison | 22:09
+[What's coming to Next.js 9](https://www.youtube.com/watch?v=WKJVXN2kMS8&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=10) | Tim Neutkens | 24:04
+[Q&A Session](https://www.youtube.com/watch?v=eYF4wnXCDjg&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=11) | n/a | 36:13
 
 ### <React.NotAConf />
 
