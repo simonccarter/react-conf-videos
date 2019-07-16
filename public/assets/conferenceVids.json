@@ -1,5 +1,214 @@
 [
   {
+    "title": "React Europe 2019",
+    "date": "20-05-2019",
+    "website": "www.react-europe.org",
+    "playlist": {
+      "Day 1": "https://www.youtube.com/playlist?list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D",
+      "Day 2": "https://www.youtube.com/playlist?list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y"
+    },
+    "videos": [
+      {
+        "title": "The State of React",
+        "link": "https://www.youtube.com/watch?v=u_0ZMiQZr0k&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=2&t=0s",
+        "presenter": {
+          "name": "Jared Palmer"
+        },
+        "split": "Day 1",
+        "length": "26:12"
+      },
+      {
+        "title": "Saving the Web, 16ms at a Time",
+        "link": "https://www.youtube.com/watch?v=viPhwbusWuE&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=2",
+        "presenter": {
+          "name": "Joshua Comeau"
+        },
+        "split": "Day 1",
+        "length": "25:09"
+      },
+      {
+        "title": "React-spring: on animations and hooks",
+        "link": "https://www.youtube.com/watch?v=5QCYBiANRYs&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=3",
+        "presenter": {
+          "name": "Alec Larson"
+        },
+        "split": "Day 1",
+        "length": "30:35"
+      },
+      {
+        "title": "Designing a Rich Content Editor for 1 Third of the Web",
+        "link": "https://www.youtube.com/watch?v=c6zQbrFDskM&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=4",
+        "presenter": {
+          "name": "Ella van Durpe"
+        },
+        "split": "Day 1",
+        "length": "20:10"
+      },
+      {
+        "title": "A Hitchhiker’s Guide to the new ReasonReact",
+        "link": "https://www.youtube.com/watch?v=VxJnNeHpUzc&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=5",
+        "presenter": {
+          "name": "Nik Graf"
+        },
+        "split": "Day 1",
+        "length": "29:59"
+      },
+      {
+        "title": "Totally Native React with Revery",
+        "link": "https://www.youtube.com/watch?v=K3JqNaw0-Us&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=6",
+        "presenter": {
+          "name": "Bryan Phelps"
+        },
+        "split": "Day 1",
+        "length": "33:45"
+      },
+      {
+        "title": "Move fast with confidence",
+        "link": "https://www.youtube.com/watch?v=ikn_dBSski8&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=7",
+        "presenter": {
+          "name": "Paul Armstrong"
+        },
+        "split": "Day 1",
+        "length": "29:28"
+      },
+      {
+        "title": "Skip",
+        "link": "https://www.youtube.com/watch?v=zXqrxQ5AL6I&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=8",
+        "presenter": {
+          "name": "Julien Vergalet"
+        },
+        "split": "Day 1",
+        "length": "31:25"
+      },
+      {
+        "title": "Coders are the new Rock Stars",
+        "link": "https://www.youtube.com/watch?v=NJdBm9CkANw&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=9",
+        "presenter": {
+          "name": "Dan Stein"
+        },
+        "split": "Day 1",
+        "length": "31:20"
+      },
+      {
+        "title": "Magic Move transitions in React-native",
+        "link": "https://www.youtube.com/watch?v=Uj7aWfrtey8&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=10",
+        "presenter": {
+          "name": "Hein Rutjes"
+        },
+        "split": "Day 1",
+        "length": "25:03"
+      },
+      {
+        "title": "Combining GraphQL + mobx-state-tree",
+        "link": "https://www.youtube.com/watch?v=Sq2M00vghqY&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=11",
+        "presenter": {
+          "name": "Michel Weststrate"
+        },
+        "split": "Day 1",
+        "length": "29:02"
+      },
+      {
+        "title": "FBT: An i18n Framework for Complex Grammar & UI",
+        "link": "https://www.youtube.com/watch?v=7XW3SkWsaKo&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=2&t=0s",
+        "presenter": {
+          "name": "John Watson"
+        },
+        "split": "Day 2",
+        "length": "23:57"
+      },
+      {
+        "title": "A year of CodeSandbox, tech edition",
+        "link": "https://www.youtube.com/watch?v=8Zi6UxKFu2o&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=2",
+        "presenter": {
+          "name": "Ives van Hoorne"
+        },
+        "split": "Day 2",
+        "length": "23:54"
+      },
+      {
+        "title": "Scheduling is the Future of React",
+        "link": "https://www.youtube.com/watch?v=Iyrf52cwxQI&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=3",
+        "presenter": {
+          "name": "Brandon Dail"
+        },
+        "split": "Day 2",
+        "length": "25:20"
+      },
+      {
+        "title": "Security and Data in React",
+        "link": "https://www.youtube.com/watch?v=1N0lNLHYGVs&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=4",
+        "presenter": {
+          "name": "Richard Threlkeld"
+        },
+        "split": "Day 2",
+        "length": "29:13"
+      },
+      {
+        "title": "Build forms with GraphQL",
+        "link": "https://www.youtube.com/watch?v=Ovg9CYwWFBM&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=5",
+        "presenter": {
+          "name": "Charly Poly"
+        },
+        "split": "Day 2",
+        "length": "27:05"
+      },
+      {
+        "title": "The Future of the Web",
+        "link": "https://www.youtube.com/watch?v=NcAYsC_TKCA&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=6",
+        "presenter": {
+          "name": "Lee Byron"
+        },
+        "split": "Day 2",
+        "length": "29:12"
+      },
+      {
+        "title": "Universal App Development",
+        "link": "https://www.youtube.com/watch?v=UcjCuWy81YM&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=7",
+        "presenter": {
+          "name": "Evan Bacon"
+        },
+        "split": "Day 2",
+        "length": "21:13"
+      },
+      {
+        "title": "Accessibility 360 - Web to Mobile",
+        "link": "https://www.youtube.com/watch?v=X_3tnSwXLls&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=8",
+        "presenter": {
+          "name": "Ankita Kulkarni"
+        },
+        "split": "Day 2",
+        "length": "27:03"
+      },
+      {
+        "title": "Yarn 2 - Reinventing package management",
+        "link": "https://www.youtube.com/watch?v=SU0N4y8S1Qc&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=9",
+        "presenter": {
+          "name": "Maël Nison"
+        },
+        "split": "Day 2",
+        "length": "22:09"
+      },
+      {
+        "title": "What's coming to Next.js 9",
+        "link": "https://www.youtube.com/watch?v=WKJVXN2kMS8&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=10",
+        "presenter": {
+          "name": "Tim Neutkens"
+        },
+        "split": "Day 2",
+        "length": "24:04"
+      },
+      {
+        "title": "Q&A Session",
+        "link": "https://www.youtube.com/watch?v=eYF4wnXCDjg&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=11",
+        "presenter": {
+          "name": "n/a"
+        },
+        "split": "Day 2",
+        "length": "36:13"
+      }
+    ]
+  },
+  {
     "title": "<React.NotAConf />",
     "date": "11-05-2019",
     "website": "http://react-not-a-conf.com/",
