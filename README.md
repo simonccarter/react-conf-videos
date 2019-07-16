@@ -2,12 +2,13 @@
 [www.reactjsvideos.com](https://www.reactjsvideos.com)
 
 List of react conference videos.
-**590** videos from **31** Conferences.
+**607** videos from **32** Conferences.
 
 
 ## Quick Links
 
 * 2019
+  * [React Conf Armenia 2019](#react-conf-armenia-2019)
   * [React Europe 2019](#react-europe-2019)
   * [<React.NotAConf />](#reactnotaconf-)
   * [ReactJS Girls Conference](#reactjs-girls-conference)
@@ -47,6 +48,31 @@ List of react conference videos.
 
 
 ## 2019
+
+### React Conf Armenia 2019
+
+##### [website](www.react-europe.org) - [playlist: Day 1](https://www.youtube.com/playlist?list=UUgiKInacwAT27zf7eM6ohXQ)
+
+
+| Title/Link        | Presenter  | Length |
+| ------------- |:-------------:| -----:|
+[Q&A Session](https://www.youtube.com/watch?v=uFG2XNYT1cI&list=UUgiKInacwAT27zf7eM6ohXQ&index=2&t=0s) | Dan Abramov and Sara Vieira | 54:02
+[Let’s manage our local state with GraphQL](https://www.youtube.com/watch?v=C6avio1VNyg&list=UUgiKInacwAT27zf7eM6ohXQ&index=2) | Sara Vieira | 27:26
+[Creating a Design System that People Actually Use](https://www.youtube.com/watch?v=kIpIO5l08Vg&list=UUgiKInacwAT27zf7eM6ohXQ&index=3) | Rebecca Hill | 29:14
+[Testing React in a Right Way](https://www.youtube.com/watch?v=adEqBL53mlk&list=UUgiKInacwAT27zf7eM6ohXQ&index=4) | Varik Matevosyan | 18:05
+[Let's Make a Photo-booth in React!](https://www.youtube.com/watch?v=jNswQlvX0rQ&list=UUgiKInacwAT27zf7eM6ohXQ&index=5) | Radoslaw Malecki | 22:22
+[From Design Systems to Component Libraries](https://www.youtube.com/watch?v=qE8-jgdv2-0&list=UUgiKInacwAT27zf7eM6ohXQ&index=6) | Gagik Arustamyan | 24:37
+[Production Ready React with GatsbyJS](https://www.youtube.com/watch?v=T1_i7XWV4Gc&list=UUgiKInacwAT27zf7eM6ohXQ&index=7) | Jesse Martin | 29:28
+[React to the Need for Speed ](https://www.youtube.com/watch?v=IG0K6vy1TzQ&list=UUgiKInacwAT27zf7eM6ohXQ&index=8) | Cristian Oliveira da Rosa | 29:21
+[Testing React Ecosystem: Do's and Don'ts](https://www.youtube.com/watch?v=vL2lDR59w-I&list=UUgiKInacwAT27zf7eM6ohXQ&index=9) | Taguhi Asatryan | 20:58
+[Monorepo: React Web & React Native](https://www.youtube.com/watch?v=VrkkaHYshI0&list=UUgiKInacwAT27zf7eM6ohXQ&index=10) | Eugene Zharkov | 33:31
+[Photorealistic 3Dgraphics on the Web with ReactJS, WebGL and Unity3D](https://www.youtube.com/watch?v=BQc9Nh0Nr0U&list=UUgiKInacwAT27zf7eM6ohXQ&index=11) | Denis Radin | 31:29
+[Dynamic Styling Systems with React](https://www.youtube.com/watch?v=57HAY4EfqHU&list=UUgiKInacwAT27zf7eM6ohXQ&index=12) | Khachatur Virabyan | 29:50
+[A Reasonable Web](https://www.youtube.com/watch?v=eJ4_HrI0hnU&list=UUgiKInacwAT27zf7eM6ohXQ&index=13) | Leandro Ostera  | 46:27
+[Turning an Application UI into an API](https://www.youtube.com/watch?v=HnhhvUppvm4&list=UUgiKInacwAT27zf7eM6ohXQ&index=14) | Narendra Shetty | 27:33
+[Server-side Rendering with ReactJS: Win or Lose](https://www.youtube.com/watch?v=X4JylrTENvs&list=UUgiKInacwAT27zf7eM6ohXQ&index=15) | Lilit Tadevosyan | 24:55
+[An SVG’s Tale](https://www.youtube.com/watch?v=fki_A1a97us&list=UUgiKInacwAT27zf7eM6ohXQ&index=16) | Elizabet Oliveira | 23:04
+[Handling Large-Scale State-Management with Context and Hooks](https://www.youtube.com/watch?v=GxjDRjpoMJg&list=UUgiKInacwAT27zf7eM6ohXQ&index=17) | Roy Derks | 34:31
 
 ### React Europe 2019
 
