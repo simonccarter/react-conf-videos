@@ -1,11 +1,161 @@
 [
   {
+    "title": "ReactNext 2019",
+    "date": "11-06-2019",
+    "website": "https://react-next.com/",
+    "playlist": "https://www.youtube.com/playlist?list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU",
+    "videos": [
+      {
+        "title": "I’m With Web Components and Web Components Are With Me",
+        "link": "https://www.youtube.com/watch?v=LbTJ8y4XWX0&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=3&t=0s",
+        "presenter": {
+          "name": "Gil Fink"
+        },
+        "length": "20:27"
+      },
+      {
+        "title": "State Management in a World of Hooks",
+        "link": "https://www.youtube.com/watch?v=oy-6urveWzo&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=3",
+        "presenter": {
+          "name": "Adam Klein and Maayan Glikser"
+        },
+        "length": "22:10"
+      },
+      {
+        "title": "Build React Apps Fast Using Storybook, DDD, and Atomic Design",
+        "link": "https://www.youtube.com/watch?v=gLJvbrwv67c&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=4",
+        "presenter": {
+          "name": "Alon Valadji"
+        },
+        "length": "24:24"
+      },
+      {
+        "title": "Handle All Async Events in Redux-Sagas",
+        "link": "https://www.youtube.com/watch?v=FsC4CF40__I&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=5",
+        "presenter": {
+          "name": "André Kovac"
+        },
+        "length": "31:07"
+      },
+      {
+        "title": "Cross-Platform React – from Web to Mobile",
+        "link": "https://www.youtube.com/watch?v=mmNRXYEGRdU&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=6",
+        "presenter": {
+          "name": "Anna Doubková"
+        },
+        "length": "27:50"
+      },
+      {
+        "title": "The Anatomy of a Click",
+        "link": "https://www.youtube.com/watch?v=pGSYpKPjD6I&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=7",
+        "presenter": {
+          "name": "Benjamin Gruenbaum"
+        },
+        "length": "20:28"
+      },
+      {
+        "title": "How to use Functional Programming in your React app",
+        "link": "https://www.youtube.com/watch?v=y4lhyluAedw&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=8",
+        "presenter": {
+          "name": "Netta Bondy and Dafna Rosenblum"
+        },
+        "length": "27:32"
+      },
+      {
+        "title": "React Native - Under the Bridge",
+        "link": "https://www.youtube.com/watch?v=UkfJT9PuLgo&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=9",
+        "presenter": {
+          "name": "Chen Feldman"
+        },
+        "length": "33:13"
+      },
+      {
+        "title": "Formal Forms with State Machines",
+        "link": "https://www.youtube.com/watch?v=hiT4Q1ntvzg&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=10",
+        "presenter": {
+          "name": "David Khourshid"
+        },
+        "length": "31:47"
+      },
+      {
+        "title": "Web Delivery Experience for React Native",
+        "link": "https://www.youtube.com/watch?v=skAvHVyfwmo&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=11",
+        "presenter": {
+          "name": "Elad Bezalel and Elad Aviv"
+        },
+        "length": "10:21"
+      },
+      {
+        "title": "Ready for Concurrent Mode?",
+        "link": "https://www.youtube.com/watch?v=V1Ly-8Z1wQA&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=12",
+        "presenter": {
+          "name": "Flarnie Marchan"
+        },
+        "length": "25:40"
+      },
+      {
+        "title": "Modern React - The Essentials",
+        "link": "https://www.youtube.com/watch?v=sjjaGxs3e1c&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=13",
+        "presenter": {
+          "name": "Liad Yosef"
+        },
+        "length": "30:40"
+      },
+      {
+        "title": "Reconciliation: The Root of Performant Applications",
+        "link": "https://www.youtube.com/watch?v=I4yDcWWuf14&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=14",
+        "presenter": {
+          "name": "Jesse Kipp"
+        },
+        "length": "20:24"
+      },
+      {
+        "title": "Micro-frontends: Is it a Silver Bullet?",
+        "link": "https://www.youtube.com/watch?v=asqgKaUMXq0&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=15",
+        "presenter": {
+          "name": "Liron Cohen"
+        },
+        "length": "14:24"
+      },
+      {
+        "title": "Build an AI-Driven Chatbot",
+        "link": "https://www.youtube.com/watch?v=qEJRiTn8oto&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=16",
+        "presenter": {
+          "name": "Sebastian Witalec"
+        },
+        "length": "31:58"
+      },
+      {
+        "title": "Technical SEO 101 for React Developers",
+        "link": "https://www.youtube.com/watch?v=3B7gBVTsEaE&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=17",
+        "presenter": {
+          "name": "Martin Splitt"
+        },
+        "length": "28:19"
+      },
+      {
+        "title": "A Deep Dive into React-Redux",
+        "link": "https://www.youtube.com/watch?v=yOZ4Ml9LlWE&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=18",
+        "presenter": {
+          "name": "Mark Erikson"
+        },
+        "length": "31:28"
+      },
+      {
+        "title": "Managing Animations (Sanely) in (Insanely) Complex Apps",
+        "link": "https://www.youtube.com/watch?v=eh2dtvX2nbg&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=19",
+        "presenter": {
+          "name": "Opher Vishnia"
+        },
+        "length": "35:07"
+      }
+    ]
+  },
+  {
     "title": "React Conf Armenia 2019",
     "date": "25-05-2019",
     "website": "https://reactconf.am/",
-    "playlist": {
-      "Day 1": "https://www.youtube.com/playlist?list=UUgiKInacwAT27zf7eM6ohXQ"
-    },
+    "playlist": "https://www.youtube.com/playlist?list=UUgiKInacwAT27zf7eM6ohXQ",
     "videos": [
       {
         "title": "An SVG’s Tale",
