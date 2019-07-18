@@ -1,5 +1,614 @@
 [
   {
+    "title": "React Loop 2019",
+    "date": "21-06-2019",
+    "website": "https://reactloop.com/",
+    "playlist": "https://www.youtube.com/playlist?list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu",
+    "videos": [
+      {
+        "title": "Composing Behavior in React or Why React Hooks are Awesome",
+        "link": "https://www.youtube.com/watch?v=nUzLlHFVXx0&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=2&t=0s",
+        "presenter": {
+          "name": "Michael Jackson"
+        },
+        "length": "31:55"
+      },
+      {
+        "title": "An Introduction to React Testing Library",
+        "link": "https://www.youtube.com/watch?v=9cHlYCS4mAs&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=2",
+        "presenter": {
+          "name": "Elizabeth Funk"
+        },
+        "length": "22:27"
+      },
+      {
+        "title": "One Codebase to Rule Them All - Using React Native Everywhere",
+        "link": "https://www.youtube.com/watch?v=nr2tnoyWB7w&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=3",
+        "presenter": {
+          "name": "Jesse Weigel"
+        },
+        "length": "29:45"
+      },
+      {
+        "title": "Progressive React",
+        "link": "https://www.youtube.com/watch?v=UtjbwpsWFyk&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=4",
+        "presenter": {
+          "name": "Houssein Djirdeh"
+        },
+        "length": "23:42"
+      },
+      {
+        "title": "TypeScript: Seeing Past the Hype",
+        "link": "https://www.youtube.com/watch?v=veXkJq0Z2Qk&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=5",
+        "presenter": {
+          "name": "Matthew Gerstman"
+        },
+        "length": "26:30"
+      },
+      {
+        "title": "A React Developer’s Guide to Tech Interviews",
+        "link": "https://www.youtube.com/watch?v=kS3CHGnqcIc&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=6",
+        "presenter": {
+          "name": "Adrianna Valdivia"
+        },
+        "length": "15:42"
+      },
+      {
+        "title": "We'll do it live: Underhanded Debugging Tactics",
+        "link": "https://www.youtube.com/watch?v=Gv0G9Vmo4IU&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=7",
+        "presenter": {
+          "name": "Saimon Sharif"
+        },
+        "length": "26:50"
+      },
+      {
+        "title": "React 360: Creating 3D User Experiences with React",
+        "link": "https://www.youtube.com/watch?v=7idBFx7erWA&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=8",
+        "presenter": {
+          "name": "Taelur Alexis"
+        },
+        "length": "13:52"
+      },
+      {
+        "title": "State Management with React Hooks",
+        "link": "https://www.youtube.com/watch?v=HuCWWvgizDg&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=9",
+        "presenter": {
+          "name": "Eric Bishard"
+        },
+        "length": "26:56"
+      },
+      {
+        "title": "Moving to React at CodePen",
+        "link": "https://www.youtube.com/watch?v=ALYzDeMdZug&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=10",
+        "presenter": {
+          "name": "Cassidy Williams"
+        },
+        "length": "22:44"
+      },
+      {
+        "title": "React to Web Workers",
+        "link": "https://www.youtube.com/watch?v=pcYuOOe-kbw&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=11",
+        "presenter": {
+          "name": "Tyler Clark"
+        },
+        "length": "28:35"
+      },
+      {
+        "title": "Why React Hooks?",
+        "link": "https://www.youtube.com/watch?v=3hCge6XFju8&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=12",
+        "presenter": {
+          "name": "Tyler McGinnis"
+        },
+        "length": "17:41"
+      }
+    ]
+  },
+  {
+    "title": "ReactNext 2019",
+    "date": "11-06-2019",
+    "website": "https://react-next.com/",
+    "playlist": "https://www.youtube.com/playlist?list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU",
+    "videos": [
+      {
+        "title": "I’m With Web Components and Web Components Are With Me",
+        "link": "https://www.youtube.com/watch?v=LbTJ8y4XWX0&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=3&t=0s",
+        "presenter": {
+          "name": "Gil Fink"
+        },
+        "length": "20:27"
+      },
+      {
+        "title": "State Management in a World of Hooks",
+        "link": "https://www.youtube.com/watch?v=oy-6urveWzo&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=3",
+        "presenter": {
+          "name": "Adam Klein and Maayan Glikser"
+        },
+        "length": "22:10"
+      },
+      {
+        "title": "Build React Apps Fast Using Storybook, DDD, and Atomic Design",
+        "link": "https://www.youtube.com/watch?v=gLJvbrwv67c&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=4",
+        "presenter": {
+          "name": "Alon Valadji"
+        },
+        "length": "24:24"
+      },
+      {
+        "title": "Handle All Async Events in Redux-Sagas",
+        "link": "https://www.youtube.com/watch?v=FsC4CF40__I&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=5",
+        "presenter": {
+          "name": "André Kovac"
+        },
+        "length": "31:07"
+      },
+      {
+        "title": "Cross-Platform React – from Web to Mobile",
+        "link": "https://www.youtube.com/watch?v=mmNRXYEGRdU&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=6",
+        "presenter": {
+          "name": "Anna Doubková"
+        },
+        "length": "27:50"
+      },
+      {
+        "title": "The Anatomy of a Click",
+        "link": "https://www.youtube.com/watch?v=pGSYpKPjD6I&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=7",
+        "presenter": {
+          "name": "Benjamin Gruenbaum"
+        },
+        "length": "20:28"
+      },
+      {
+        "title": "How to use Functional Programming in your React app",
+        "link": "https://www.youtube.com/watch?v=y4lhyluAedw&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=8",
+        "presenter": {
+          "name": "Netta Bondy and Dafna Rosenblum"
+        },
+        "length": "27:32"
+      },
+      {
+        "title": "React Native - Under the Bridge",
+        "link": "https://www.youtube.com/watch?v=UkfJT9PuLgo&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=9",
+        "presenter": {
+          "name": "Chen Feldman"
+        },
+        "length": "33:13"
+      },
+      {
+        "title": "Formal Forms with State Machines",
+        "link": "https://www.youtube.com/watch?v=hiT4Q1ntvzg&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=10",
+        "presenter": {
+          "name": "David Khourshid"
+        },
+        "length": "31:47"
+      },
+      {
+        "title": "Web Delivery Experience for React Native",
+        "link": "https://www.youtube.com/watch?v=skAvHVyfwmo&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=11",
+        "presenter": {
+          "name": "Elad Bezalel and Elad Aviv"
+        },
+        "length": "10:21"
+      },
+      {
+        "title": "Ready for Concurrent Mode?",
+        "link": "https://www.youtube.com/watch?v=V1Ly-8Z1wQA&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=12",
+        "presenter": {
+          "name": "Flarnie Marchan"
+        },
+        "length": "25:40"
+      },
+      {
+        "title": "Modern React - The Essentials",
+        "link": "https://www.youtube.com/watch?v=sjjaGxs3e1c&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=13",
+        "presenter": {
+          "name": "Liad Yosef"
+        },
+        "length": "30:40"
+      },
+      {
+        "title": "Reconciliation: The Root of Performant Applications",
+        "link": "https://www.youtube.com/watch?v=I4yDcWWuf14&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=14",
+        "presenter": {
+          "name": "Jesse Kipp"
+        },
+        "length": "20:24"
+      },
+      {
+        "title": "Micro-frontends: Is it a Silver Bullet?",
+        "link": "https://www.youtube.com/watch?v=asqgKaUMXq0&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=15",
+        "presenter": {
+          "name": "Liron Cohen"
+        },
+        "length": "14:24"
+      },
+      {
+        "title": "Build an AI-Driven Chatbot",
+        "link": "https://www.youtube.com/watch?v=qEJRiTn8oto&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=16",
+        "presenter": {
+          "name": "Sebastian Witalec"
+        },
+        "length": "31:58"
+      },
+      {
+        "title": "Technical SEO 101 for React Developers",
+        "link": "https://www.youtube.com/watch?v=3B7gBVTsEaE&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=17",
+        "presenter": {
+          "name": "Martin Splitt"
+        },
+        "length": "28:19"
+      },
+      {
+        "title": "A Deep Dive into React-Redux",
+        "link": "https://www.youtube.com/watch?v=yOZ4Ml9LlWE&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=18",
+        "presenter": {
+          "name": "Mark Erikson"
+        },
+        "length": "31:28"
+      },
+      {
+        "title": "Managing Animations (Sanely) in (Insanely) Complex Apps",
+        "link": "https://www.youtube.com/watch?v=eh2dtvX2nbg&list=PLMYVq3z1QxSrtc-VmYeAoBwVJZFYMkovU&index=19",
+        "presenter": {
+          "name": "Opher Vishnia"
+        },
+        "length": "35:07"
+      }
+    ]
+  },
+  {
+    "title": "React Conf Armenia 2019",
+    "date": "25-05-2019",
+    "website": "https://reactconf.am/",
+    "playlist": "https://www.youtube.com/playlist?list=UUgiKInacwAT27zf7eM6ohXQ",
+    "videos": [
+      {
+        "title": "An SVG’s Tale",
+        "link": "https://www.youtube.com/watch?v=fki_A1a97us&list=UUgiKInacwAT27zf7eM6ohXQ&index=16",
+        "presenter": {
+          "name": "Elizabet Oliveira"
+        },
+        "length": "23:04"
+      },
+      {
+        "title": "Server-side Rendering with ReactJS: Win or Lose",
+        "link": "https://www.youtube.com/watch?v=X4JylrTENvs&list=UUgiKInacwAT27zf7eM6ohXQ&index=15",
+        "presenter": {
+          "name": "Lilit Tadevosyan"
+        },
+        "length": "24:55"
+      },
+      {
+        "title": "Monorepo: React Web & React Native",
+        "link": "https://www.youtube.com/watch?v=VrkkaHYshI0&list=UUgiKInacwAT27zf7eM6ohXQ&index=10",
+        "presenter": {
+          "name": "Eugene Zharkov"
+        },
+        "length": "33:31"
+      },
+      {
+        "title": "Dynamic Styling Systems with React",
+        "link": "https://www.youtube.com/watch?v=57HAY4EfqHU&list=UUgiKInacwAT27zf7eM6ohXQ&index=12",
+        "presenter": {
+          "name": "Khachatur Virabyan"
+        },
+        "length": "29:50"
+      },
+      {
+        "title": "A Reasonable Web",
+        "link": "https://www.youtube.com/watch?v=eJ4_HrI0hnU&list=UUgiKInacwAT27zf7eM6ohXQ&index=13",
+        "presenter": {
+          "name": "Leandro Ostera "
+        },
+        "length": "46:27"
+      },
+      {
+        "title": "Let’s manage our local state with GraphQL",
+        "link": "https://www.youtube.com/watch?v=C6avio1VNyg&list=UUgiKInacwAT27zf7eM6ohXQ&index=2",
+        "presenter": {
+          "name": "Sara Vieira"
+        },
+        "length": "27:26"
+      },
+      {
+        "title": "Testing React Ecosystem: Do's and Don'ts",
+        "link": "https://www.youtube.com/watch?v=vL2lDR59w-I&list=UUgiKInacwAT27zf7eM6ohXQ&index=9",
+        "presenter": {
+          "name": "Taguhi Asatryan"
+        },
+        "length": "20:58"
+      },
+      {
+        "title": "Handling Large-Scale State-Management with Context and Hooks",
+        "link": "https://www.youtube.com/watch?v=GxjDRjpoMJg&list=UUgiKInacwAT27zf7eM6ohXQ&index=17",
+        "presenter": {
+          "name": "Roy Derks"
+        },
+        "length": "34:31"
+      },
+      {
+        "title": "React to the Need for Speed ",
+        "link": "https://www.youtube.com/watch?v=IG0K6vy1TzQ&list=UUgiKInacwAT27zf7eM6ohXQ&index=8",
+        "presenter": {
+          "name": "Cristian Oliveira da Rosa"
+        },
+        "length": "29:21"
+      },
+      {
+        "title": "Turning an Application UI into an API",
+        "link": "https://www.youtube.com/watch?v=HnhhvUppvm4&list=UUgiKInacwAT27zf7eM6ohXQ&index=14",
+        "presenter": {
+          "name": "Narendra Shetty"
+        },
+        "length": "27:33"
+      },
+      {
+        "title": "Production Ready React with GatsbyJS",
+        "link": "https://www.youtube.com/watch?v=T1_i7XWV4Gc&list=UUgiKInacwAT27zf7eM6ohXQ&index=7",
+        "presenter": {
+          "name": "Jesse Martin"
+        },
+        "length": "29:28"
+      },
+      {
+        "title": "From Design Systems to Component Libraries",
+        "link": "https://www.youtube.com/watch?v=qE8-jgdv2-0&list=UUgiKInacwAT27zf7eM6ohXQ&index=6",
+        "presenter": {
+          "name": "Gagik Arustamyan"
+        },
+        "length": "24:37"
+      },
+      {
+        "title": "Photorealistic 3Dgraphics on the Web with ReactJS, WebGL and Unity3D",
+        "link": "https://www.youtube.com/watch?v=BQc9Nh0Nr0U&list=UUgiKInacwAT27zf7eM6ohXQ&index=11",
+        "presenter": {
+          "name": "Denis Radin"
+        },
+        "length": "31:29"
+      },
+      {
+        "title": "Let's Make a Photo-booth in React!",
+        "link": "https://www.youtube.com/watch?v=jNswQlvX0rQ&list=UUgiKInacwAT27zf7eM6ohXQ&index=5",
+        "presenter": {
+          "name": "Radoslaw Malecki"
+        },
+        "length": "22:22"
+      },
+      {
+        "title": "Creating a Design System that People Actually Use",
+        "link": "https://www.youtube.com/watch?v=kIpIO5l08Vg&list=UUgiKInacwAT27zf7eM6ohXQ&index=3",
+        "presenter": {
+          "name": "Rebecca Hill"
+        },
+        "length": "29:14"
+      },
+      {
+        "title": "Testing React in a Right Way",
+        "link": "https://www.youtube.com/watch?v=adEqBL53mlk&list=UUgiKInacwAT27zf7eM6ohXQ&index=4",
+        "presenter": {
+          "name": "Varik Matevosyan"
+        },
+        "length": "18:05"
+      },
+      {
+        "title": "Q&A Session",
+        "link": "https://www.youtube.com/watch?v=uFG2XNYT1cI&list=UUgiKInacwAT27zf7eM6ohXQ&index=2&t=0s",
+        "presenter": {
+          "name": "Dan Abramov and Sara Vieira"
+        },
+        "length": "54:02"
+      }
+    ]
+  },
+  {
+    "title": "React Europe 2019",
+    "date": "20-05-2019",
+    "website": "www.react-europe.org",
+    "playlist": {
+      "Day 1": "https://www.youtube.com/playlist?list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D",
+      "Day 2": "https://www.youtube.com/playlist?list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y"
+    },
+    "videos": [
+      {
+        "title": "The State of React",
+        "link": "https://www.youtube.com/watch?v=u_0ZMiQZr0k&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=2&t=0s",
+        "presenter": {
+          "name": "Jared Palmer"
+        },
+        "split": "Day 1",
+        "length": "26:12"
+      },
+      {
+        "title": "Saving the Web, 16ms at a Time",
+        "link": "https://www.youtube.com/watch?v=viPhwbusWuE&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=2",
+        "presenter": {
+          "name": "Joshua Comeau"
+        },
+        "split": "Day 1",
+        "length": "25:09"
+      },
+      {
+        "title": "React-spring: on animations and hooks",
+        "link": "https://www.youtube.com/watch?v=5QCYBiANRYs&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=3",
+        "presenter": {
+          "name": "Alec Larson"
+        },
+        "split": "Day 1",
+        "length": "30:35"
+      },
+      {
+        "title": "Designing a Rich Content Editor for 1 Third of the Web",
+        "link": "https://www.youtube.com/watch?v=c6zQbrFDskM&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=4",
+        "presenter": {
+          "name": "Ella van Durpe"
+        },
+        "split": "Day 1",
+        "length": "20:10"
+      },
+      {
+        "title": "A Hitchhiker’s Guide to the new ReasonReact",
+        "link": "https://www.youtube.com/watch?v=VxJnNeHpUzc&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=5",
+        "presenter": {
+          "name": "Nik Graf"
+        },
+        "split": "Day 1",
+        "length": "29:59"
+      },
+      {
+        "title": "Totally Native React with Revery",
+        "link": "https://www.youtube.com/watch?v=K3JqNaw0-Us&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=6",
+        "presenter": {
+          "name": "Bryan Phelps"
+        },
+        "split": "Day 1",
+        "length": "33:45"
+      },
+      {
+        "title": "Move fast with confidence",
+        "link": "https://www.youtube.com/watch?v=ikn_dBSski8&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=7",
+        "presenter": {
+          "name": "Paul Armstrong"
+        },
+        "split": "Day 1",
+        "length": "29:28"
+      },
+      {
+        "title": "Skip",
+        "link": "https://www.youtube.com/watch?v=zXqrxQ5AL6I&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=8",
+        "presenter": {
+          "name": "Julien Vergalet"
+        },
+        "split": "Day 1",
+        "length": "31:25"
+      },
+      {
+        "title": "Coders are the new Rock Stars",
+        "link": "https://www.youtube.com/watch?v=NJdBm9CkANw&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=9",
+        "presenter": {
+          "name": "Dan Stein"
+        },
+        "split": "Day 1",
+        "length": "31:20"
+      },
+      {
+        "title": "Magic Move transitions in React-native",
+        "link": "https://www.youtube.com/watch?v=Uj7aWfrtey8&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=10",
+        "presenter": {
+          "name": "Hein Rutjes"
+        },
+        "split": "Day 1",
+        "length": "25:03"
+      },
+      {
+        "title": "Combining GraphQL + mobx-state-tree",
+        "link": "https://www.youtube.com/watch?v=Sq2M00vghqY&list=PLCC436JpVnK3kcTnPyhcs7QnHK2PKl33D&index=11",
+        "presenter": {
+          "name": "Michel Weststrate"
+        },
+        "split": "Day 1",
+        "length": "29:02"
+      },
+      {
+        "title": "FBT: An i18n Framework for Complex Grammar & UI",
+        "link": "https://www.youtube.com/watch?v=7XW3SkWsaKo&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=2&t=0s",
+        "presenter": {
+          "name": "John Watson"
+        },
+        "split": "Day 2",
+        "length": "23:57"
+      },
+      {
+        "title": "A year of CodeSandbox, tech edition",
+        "link": "https://www.youtube.com/watch?v=8Zi6UxKFu2o&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=2",
+        "presenter": {
+          "name": "Ives van Hoorne"
+        },
+        "split": "Day 2",
+        "length": "23:54"
+      },
+      {
+        "title": "Scheduling is the Future of React",
+        "link": "https://www.youtube.com/watch?v=Iyrf52cwxQI&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=3",
+        "presenter": {
+          "name": "Brandon Dail"
+        },
+        "split": "Day 2",
+        "length": "25:20"
+      },
+      {
+        "title": "Security and Data in React",
+        "link": "https://www.youtube.com/watch?v=1N0lNLHYGVs&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=4",
+        "presenter": {
+          "name": "Richard Threlkeld"
+        },
+        "split": "Day 2",
+        "length": "29:13"
+      },
+      {
+        "title": "Build forms with GraphQL",
+        "link": "https://www.youtube.com/watch?v=Ovg9CYwWFBM&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=5",
+        "presenter": {
+          "name": "Charly Poly"
+        },
+        "split": "Day 2",
+        "length": "27:05"
+      },
+      {
+        "title": "The Future of the Web",
+        "link": "https://www.youtube.com/watch?v=NcAYsC_TKCA&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=6",
+        "presenter": {
+          "name": "Lee Byron"
+        },
+        "split": "Day 2",
+        "length": "29:12"
+      },
+      {
+        "title": "Universal App Development",
+        "link": "https://www.youtube.com/watch?v=UcjCuWy81YM&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=7",
+        "presenter": {
+          "name": "Evan Bacon"
+        },
+        "split": "Day 2",
+        "length": "21:13"
+      },
+      {
+        "title": "Accessibility 360 - Web to Mobile",
+        "link": "https://www.youtube.com/watch?v=X_3tnSwXLls&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=8",
+        "presenter": {
+          "name": "Ankita Kulkarni"
+        },
+        "split": "Day 2",
+        "length": "27:03"
+      },
+      {
+        "title": "Yarn 2 - Reinventing package management",
+        "link": "https://www.youtube.com/watch?v=SU0N4y8S1Qc&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=9",
+        "presenter": {
+          "name": "Maël Nison"
+        },
+        "split": "Day 2",
+        "length": "22:09"
+      },
+      {
+        "title": "What's coming to Next.js 9",
+        "link": "https://www.youtube.com/watch?v=WKJVXN2kMS8&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=10",
+        "presenter": {
+          "name": "Tim Neutkens"
+        },
+        "split": "Day 2",
+        "length": "24:04"
+      },
+      {
+        "title": "Q&A Session",
+        "link": "https://www.youtube.com/watch?v=eYF4wnXCDjg&list=PLCC436JpVnK3H8Gm28TuFn2wjL9sj_q_Y&index=11",
+        "presenter": {
+          "name": "n/a"
+        },
+        "split": "Day 2",
+        "length": "36:13"
+      }
+    ]
+  },
+  {
     "title": "<React.NotAConf />",
     "date": "11-05-2019",
     "website": "http://react-not-a-conf.com/",
