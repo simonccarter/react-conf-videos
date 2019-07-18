@@ -2,12 +2,13 @@
 [www.reactjsvideos.com](https://www.reactjsvideos.com)
 
 List of react conference videos.
-**625** videos from **33** Conferences.
+**637** videos from **34** Conferences.
 
 
 ## Quick Links
 
 * 2019
+  * [React Loop 2019](#react-loop-2019)
   * [ReactNext 2019](#reactnext-2019)
   * [React Conf Armenia 2019](#react-conf-armenia-2019)
   * [React Europe 2019](#react-europe-2019)
@@ -49,6 +50,26 @@ List of react conference videos.
 
 
 ## 2019
+
+### React Loop 2019
+
+##### [website](https://reactloop.com/) - [playlist](https://www.youtube.com/playlist?list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu)
+
+
+| Title/Link        | Presenter  | Length |
+| ------------- |:-------------:| -----:|
+[Composing Behavior in React or Why React Hooks are Awesome](https://www.youtube.com/watch?v=nUzLlHFVXx0&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=2&t=0s) | Michael Jackson | 31:55
+[An Introduction to React Testing Library](https://www.youtube.com/watch?v=9cHlYCS4mAs&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=2) | Elizabeth Funk | 22:27
+[One Codebase to Rule Them All - Using React Native Everywhere](https://www.youtube.com/watch?v=nr2tnoyWB7w&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=3) | Jesse Weigel | 29:45
+[Progressive React](https://www.youtube.com/watch?v=UtjbwpsWFyk&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=4) | Houssein Djirdeh | 23:42
+[TypeScript: Seeing Past the Hype](https://www.youtube.com/watch?v=veXkJq0Z2Qk&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=5) | Matthew Gerstman | 26:30
+[A React Developer’s Guide to Tech Interviews](https://www.youtube.com/watch?v=kS3CHGnqcIc&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=6) | Adrianna Valdivia | 15:42
+[We'll do it live: Underhanded Debugging Tactics](https://www.youtube.com/watch?v=Gv0G9Vmo4IU&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=7) | Saimon Sharif | 26:50
+[React 360: Creating 3D User Experiences with React](https://www.youtube.com/watch?v=7idBFx7erWA&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=8) | Taelur Alexis | 13:52
+[State Management with React Hooks](https://www.youtube.com/watch?v=HuCWWvgizDg&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=9) | Eric Bishard | 26:56
+[Moving to React at CodePen](https://www.youtube.com/watch?v=ALYzDeMdZug&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=10) | Cassidy Williams | 22:44
+[React to Web Workers](https://www.youtube.com/watch?v=pcYuOOe-kbw&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=11) | Tyler Clark | 28:35
+[Why React Hooks?](https://www.youtube.com/watch?v=3hCge6XFju8&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=12) | Tyler McGinnis | 17:41
 
 ### ReactNext 2019
 
