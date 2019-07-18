@@ -1,5 +1,109 @@
 [
   {
+    "title": "React Loop 2019",
+    "date": "21-06-2019",
+    "website": "https://reactloop.com/",
+    "playlist": "https://www.youtube.com/playlist?list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu",
+    "videos": [
+      {
+        "title": "Composing Behavior in React or Why React Hooks are Awesome",
+        "link": "https://www.youtube.com/watch?v=nUzLlHFVXx0&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=2&t=0s",
+        "presenter": {
+          "name": "Michael Jackson"
+        },
+        "length": "31:55"
+      },
+      {
+        "title": "An Introduction to React Testing Library",
+        "link": "https://www.youtube.com/watch?v=9cHlYCS4mAs&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=2",
+        "presenter": {
+          "name": "Elizabeth Funk"
+        },
+        "length": "22:27"
+      },
+      {
+        "title": "One Codebase to Rule Them All - Using React Native Everywhere",
+        "link": "https://www.youtube.com/watch?v=nr2tnoyWB7w&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=3",
+        "presenter": {
+          "name": "Jesse Weigel"
+        },
+        "length": "29:45"
+      },
+      {
+        "title": "Progressive React",
+        "link": "https://www.youtube.com/watch?v=UtjbwpsWFyk&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=4",
+        "presenter": {
+          "name": "Houssein Djirdeh"
+        },
+        "length": "23:42"
+      },
+      {
+        "title": "TypeScript: Seeing Past the Hype",
+        "link": "https://www.youtube.com/watch?v=veXkJq0Z2Qk&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=5",
+        "presenter": {
+          "name": "Matthew Gerstman"
+        },
+        "length": "26:30"
+      },
+      {
+        "title": "A React Developer’s Guide to Tech Interviews",
+        "link": "https://www.youtube.com/watch?v=kS3CHGnqcIc&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=6",
+        "presenter": {
+          "name": "Adrianna Valdivia"
+        },
+        "length": "15:42"
+      },
+      {
+        "title": "We'll do it live: Underhanded Debugging Tactics",
+        "link": "https://www.youtube.com/watch?v=Gv0G9Vmo4IU&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=7",
+        "presenter": {
+          "name": "Saimon Sharif"
+        },
+        "length": "26:50"
+      },
+      {
+        "title": "React 360: Creating 3D User Experiences with React",
+        "link": "https://www.youtube.com/watch?v=7idBFx7erWA&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=8",
+        "presenter": {
+          "name": "Taelur Alexis"
+        },
+        "length": "13:52"
+      },
+      {
+        "title": "State Management with React Hooks",
+        "link": "https://www.youtube.com/watch?v=HuCWWvgizDg&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=9",
+        "presenter": {
+          "name": "Eric Bishard"
+        },
+        "length": "26:56"
+      },
+      {
+        "title": "Moving to React at CodePen",
+        "link": "https://www.youtube.com/watch?v=ALYzDeMdZug&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=10",
+        "presenter": {
+          "name": "Cassidy Williams"
+        },
+        "length": "22:44"
+      },
+      {
+        "title": "React to Web Workers",
+        "link": "https://www.youtube.com/watch?v=pcYuOOe-kbw&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=11",
+        "presenter": {
+          "name": "Tyler Clark"
+        },
+        "length": "28:35"
+      },
+      {
+        "title": "Why React Hooks?",
+        "link": "https://www.youtube.com/watch?v=3hCge6XFju8&list=PLha5lSFLEhMPLJDDgUDysXDbHoioCjYuu&index=12",
+        "presenter": {
+          "name": "Tyler McGinnis"
+        },
+        "length": "17:41"
+      }
+    ]
+  },
+  {
     "title": "ReactNext 2019",
     "date": "11-06-2019",
     "website": "https://react-next.com/",
