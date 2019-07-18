@@ -2,8 +2,7 @@ import * as React from 'react';
 import * as ReactGA from 'react-ga';
 
 import { hot } from 'react-hot-loader';
-import { Route, Switch } from 'react-router';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router';
 
 import { Tracker } from 'components';
 import { ConfPage, FrontPage } from 'components/Pages';
@@ -17,8 +16,9 @@ const ConfPageTracked = Tracker(ConfPage);
 
 const App = () => (
   <Switch>
+    <Redirect from="/#/conference/:name" to="/conference/:name" />
     <Route
-      path="/conference"
+      path="/conference/*"
       render={props => <ConfPageTracked {...props} />}
     />
     <Route path="/search" render={props => <FrontPageTracked {...props} />} />

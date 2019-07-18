@@ -1,16 +1,19 @@
-import { Location } from 'history'
-import * as React from 'react'
-import * as ReactGA from 'react-ga'
+import { Location } from 'history';
+import * as React from 'react';
+import * as ReactGA from 'react-ga';
 
 type InnerProps = {
-  location: Location
-}
+  location: Location;
+};
 
-export function Tracker(WrappedComponent: React.ComponentClass<{}>, options = {}) {
+export function Tracker(
+  WrappedComponent: React.ComponentClass<{}>,
+  options = {}
+) {
   const trackPage = (page: string) => {
     // exit early if not live
     if (window.location.hostname !== 'www.reactjsvideos.com') {
-      return
+      return;
     }
     ReactGA.set({
       page,
