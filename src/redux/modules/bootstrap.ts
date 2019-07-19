@@ -37,10 +37,7 @@ export const loadJSONDataEpic: Epic<any, any, ApplicationState> = action$ =>
   action$.ofType(BOOTSTRAP_START).pipe(
     mergeMap(() =>
       ajax.get('/assets/conferenceVids.json', {
-        'Content-Type': 'application/json',
-        headers: {
-          'Access-Control-Allow-Origin': '*'
-        }
+        'Content-Type': 'application/json'
       })
     ),
     map(res => loadDataEnd(res.response))
@@ -66,7 +63,7 @@ export const boostrapEndRemoveLoaderEpic: Epic<
         'fullscreen'
       );
     }),
-    delay(100),
+    delay(300), // matches animation duration on index.html
     tap(() => {
       // loader on initial html no longer visible. remove.
       (document.getElementById('loader') as HTMLElement).remove();

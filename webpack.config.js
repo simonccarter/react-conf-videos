@@ -77,6 +77,7 @@ module.exports = {
     open: true,
     historyApiFallback: true,
     contentBase: path.join(__dirname, 'public'),
-    publicPath: '/'
+    publicPath: '/',
+    watchContentBase: true
   }
 };
