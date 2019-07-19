@@ -29,7 +29,7 @@ export const Header: React.FunctionComponent<Props> = ({
   useChain([titleRef, taglineRef], [0, 0.2]);
 
   return (
-    <div className={styles.header}>
+    <header className={styles.header}>
       <Logo />
       <div className={styles.text}>
         <h1 className={styles.headerTitle}>
@@ -58,6 +58,6 @@ export const Header: React.FunctionComponent<Props> = ({
           .
         </p>
       </div>
-    </div>
+    </header>
   );
 };
