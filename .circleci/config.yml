@@ -85,18 +85,18 @@ workflows:
   build_and_test_deploy:
     jobs:
       - set-up
-      - deploy-dev:
-          requires:
-            - set-up
-          filters:
-            branches:
-              only:
-                - develop
-                - fix/circleci
-      - deploy-master:
-          requires:
-            - set-up
-          filters:
-            branches:
-              only:
-                - master
+      # - deploy-dev:
+      #     requires:
+      #       - set-up
+      #     filters:
+      #       branches:
+      #         only:
+      #           - develop
+      #           - fix/circleci
+      # - deploy-master:
+      #     requires:
+      #       - set-up
+      #     filters:
+      #       branches:
+      #         only:
+      #           - master

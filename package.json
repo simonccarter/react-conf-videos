@@ -15,11 +15,12 @@
     "lint:fix": "tslint -p tsconfig.json -e '**/*.js' --fix",
     "prettier": "prettier 'src/**/*.{ts, tsx}' --write",
     "sitemap": "ts-node --project ./scripts/tsconfig.json ./scripts/sitemapBuilder.ts > public/sitemap.txt",
-    "start": "npm run createReadme & webpack-dev-server --config webpack.config.js",
+    "start": "npm run createReadme & webpack-dev-server --config webpack.config.js --progress",
     "test": "cross-env NODE_ENV=test jest --no-cache --coverage --config=config/test/jestconfig.json --maxWorkers=2",
     "test:dev": "cross-env NODE_ENV=test jest --watch --config=config/test/jestconfig.json",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
-    "types": "tsc --noEmit"
+    "types": "tsc --noEmit",
+    "serve": "serve -s dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
