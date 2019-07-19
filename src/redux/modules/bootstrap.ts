@@ -66,7 +66,7 @@ export const boostrapEndRemoveLoaderEpic: Epic<
         'fullscreen'
       );
     }),
-    delay(300),
+    delay(300), // matches animation duration on index.html
     tap(() => {
       // loader on initial html no longer visible. remove.
       (document.getElementById('loader') as HTMLElement).remove();
