@@ -1,6 +1,5 @@
 import { Header } from 'components/Header';
 import { ScrollToTop } from 'components/HOCS/ScrollToTop';
-import { Tracker } from 'components/HOCS/Tracker';
 import { InnerLayoutContainer } from 'components/InnerLayoutContainer';
 import { List } from 'components/List';
 import { Logo } from 'components/Logo';
@@ -16,7 +15,6 @@ export {
   Meta,
   Video,
   Header,
-  Tracker,
   ConfPage,
   FrontPage,
   ScrollToTop,

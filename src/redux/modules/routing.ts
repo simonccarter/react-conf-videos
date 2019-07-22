@@ -1,8 +1,15 @@
 import { push } from 'connected-react-router';
 import * as queryString from 'query-string';
+import * as ReactGA from 'react-ga';
 import { combineEpics, Epic } from 'redux-observable';
 import { concat, of } from 'rxjs';
-import { map, mergeMap } from 'rxjs/operators';
+import {
+  debounceTime,
+  ignoreElements,
+  map,
+  mergeMap,
+  tap
+} from 'rxjs/operators';
 
 import { ApplicationState } from 'redux/modules';
 import { sluggifyUrl } from 'utils';
@@ -69,6 +76,24 @@ export const loadDataForRoute: Epic<any, any, ApplicationState> = (
     })
   );
 
+export const trackingForRoute: Epic<any, any, ApplicationState> = (
+  action$,
+  store
+) =>
+  action$.ofType('@@router/LOCATION_CHANGE').pipe(
+    debounceTime(300),
+    tap(_ => {
+      if (window.location.hostname !== 'www.reactjsvideos.com') {
+        return;
+      }
+      const { pathname, search } = store.value.router.location;
+      const page = `${pathname}${search}`;
+      ReactGA.set({ page });
+      ReactGA.pageview(page);
+    }),
+    ignoreElements()
+  );
+
 // action to navigate to a url with a query string
 export const navigateToSearchResult: Epic<any, any, ApplicationState> = (
   action$,
@@ -91,5 +116,6 @@ export const routingActions = {
 
 export const routingEpics = combineEpics(
   navigateToSearchResult,
-  loadDataForRoute
+  loadDataForRoute,
+  trackingForRoute
 );
