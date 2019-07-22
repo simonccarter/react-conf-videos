@@ -1,4 +1,6 @@
 .root {
+  display: block; // for ie 11
   max-width: 450px;
   margin: 0 auto;
+  transform: translateY(-25px);
 }

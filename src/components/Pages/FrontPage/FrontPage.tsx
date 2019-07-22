@@ -32,7 +32,7 @@ export const FrontPageInner: React.FunctionComponent<Props> = ({
     navigateToSearchURL(e.target.value);
   };
   return (
-    <div>
+    <>
       <Meta title={filterValue} />
       <Header
         title="React.js Videos"
@@ -44,7 +44,7 @@ export const FrontPageInner: React.FunctionComponent<Props> = ({
         <ResultDetails conferences={conferences} />
         <List conferences={conferences} />
       </InnerLayoutContainer>
-    </div>
+    </>
   );
 };
 

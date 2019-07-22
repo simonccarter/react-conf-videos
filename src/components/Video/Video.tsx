@@ -37,14 +37,14 @@ export const VideoInner: React.FunctionComponent<CombinedProps> = ({
   conferenceId
 }) => {
   return (
-    <div className={styles.root} key={videoId}>
+    <li className={styles.root} key={videoId}>
       <h3 className={styles.heading}>
         <button
-          id={`accordion-${videoId}`}
+          id={`accordion-${title}`}
           className={styles.top}
           onClick={() => toggleIsOpen(!isOpen ? videoId : null)}
           aria-expanded={isOpen}
-          aria-controls={`content-${videoId}`}
+          aria-controls={`content-${title}`}
         >
           <span className={styles.title}>
             {lightning && <FontAwesomeIcon icon={faBolt} color="#f5de1a" />}{' '}
@@ -54,8 +54,8 @@ export const VideoInner: React.FunctionComponent<CombinedProps> = ({
         </button>
       </h3>
       <div
-        id={`content-${videoId}`}
-        aria-labelledby={`accordion-${videoId}`}
+        id={`content-${title}`}
+        aria-labelledby={`accordion-${title}`}
         className={cn(styles.videoWrapper, { [styles.open]: isOpen })}
         aria-hidden={!isOpen}
       >
@@ -71,16 +71,17 @@ export const VideoInner: React.FunctionComponent<CombinedProps> = ({
           />
         )}
       </div>
-      <div className={styles.details}>
-        <span>{speaker.name}</span>
+      <span className={styles.details}>
+        {speaker.name}
         <Link
           to={`/conference/${sluggifyUrl(conference.title)}`}
           aria-label={`See all videos for conference ${conference.title}`}
+          className={styles.conferenceTitle}
         >
-          <span className={styles.conferenceTitle}>{conference.title}</span>
+          {conference.title}
         </Link>
-      </div>
-    </div>
+      </span>
+    </li>
   );
 };
 

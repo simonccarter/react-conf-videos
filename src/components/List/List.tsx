@@ -35,7 +35,7 @@ const VirtualisedList: React.FunctionComponent<{ virtual: any }> = ({
 }) => {
   const [open, toggleIsOpen] = React.useState<string | null>(null);
   return (
-    <div style={virtual.style}>
+    <ol className={styles.root} style={virtual.style}>
       {virtual.items &&
         virtual.items.map((item: MappedVideo, index: number) => (
           <Video
@@ -45,7 +45,7 @@ const VirtualisedList: React.FunctionComponent<{ virtual: any }> = ({
             toggleIsOpen={toggleIsOpen}
           />
         ))}
-    </div>
+    </ol>
   );
 };
 
@@ -60,12 +60,11 @@ const MyVirtualList = VirtualList({
 
 export const List: React.FunctionComponent<Props> = ({ conferences }) => {
   const videos = mapConferenceVideos(conferences);
-
   return (
-    <section className={styles.root}>
+    <>
       {videos.length > 0 && (
         <MyVirtualList items={videos} itemHeight={60} itemBuffer={20} />
       )}
-    </section>
+    </>
   );
 };

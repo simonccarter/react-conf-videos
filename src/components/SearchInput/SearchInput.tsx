@@ -9,15 +9,14 @@ type Props = {
 };
 
 export const SearchInput: React.FunctionComponent<Props> = React.memo(
-  ({ filterValue, onChange, placeholder = 'Search' }) => {
-    return (
-      <input
-        type="text"
-        value={filterValue}
-        onChange={onChange}
-        className={styles.root}
-        placeholder={placeholder}
-      />
-    );
-  }
+  ({ filterValue, onChange, placeholder = 'Search' }) => (
+    <input
+      type="text"
+      value={filterValue}
+      onChange={onChange}
+      className={styles.root}
+      placeholder={placeholder}
+      aria-label={placeholder + ` videos`}
+    />
+  )
 );

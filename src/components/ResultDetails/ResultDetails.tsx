@@ -36,8 +36,8 @@ export const ResultDetails: React.FunctionComponent<Props> = ({
   } = computeResultDetails(conferences);
   return (
     <p className={styles.resultsCount}>
-      <span className={styles.resultsNumber}> {countVids} </span> {countVidsS}
-      <span className={styles.resultsNumber}> {countConfs} </span> {countConfsS}
+      <strong> {countVids} </strong> {countVidsS}
+      <strong> {countConfs} </strong> {countConfsS}
     </p>
   );
 };

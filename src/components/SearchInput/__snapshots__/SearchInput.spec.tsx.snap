@@ -2,6 +2,7 @@
 
 exports[`SearchInput should render 1`] = `
 <input
+  aria-label="Search videos"
   className="root"
   onChange={[MockFunction]}
   placeholder="Search"
@@ -12,6 +13,7 @@ exports[`SearchInput should render 1`] = `
 
 exports[`SearchInput should set placeholder if passed 1`] = `
 <input
+  aria-label="test placeholder videos"
   className="root"
   onChange={[MockFunction]}
   placeholder="test placeholder"
