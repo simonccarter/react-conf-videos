@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`List should render 1`] = `
-<section
-  className="root"
->
+<Fragment>
   <vlist
     itemBuffer={20}
     itemHeight={60}
@@ -27,5 +25,5 @@ exports[`List should render 1`] = `
       ]
     }
   />
-</section>
+</Fragment>
 `;

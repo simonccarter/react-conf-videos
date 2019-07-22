@@ -77,7 +77,7 @@ exports[`Video should render and connect 1`] = `
       }
       videoId="xxx"
     >
-      <div
+      <li
         className="root"
         key="xxx"
       >
@@ -85,10 +85,10 @@ exports[`Video should render and connect 1`] = `
           className="heading"
         >
           <button
-            aria-controls="content-xxx"
+            aria-controls="content-test title"
             aria-expanded={false}
             className="top"
-            id="accordion-xxx"
+            id="accordion-test title"
             onClick={[Function]}
           >
             <span
@@ -106,34 +106,30 @@ exports[`Video should render and connect 1`] = `
         </h3>
         <div
           aria-hidden={true}
-          aria-labelledby="accordion-xxx"
+          aria-labelledby="accordion-test title"
           className="videoWrapper"
-          id="content-xxx"
+          id="content-test title"
         />
-        <div
+        <span
           className="details"
         >
-          <span>
-            Simon Carter
-          </span>
+          Simon Carter
           <Link
             aria-label="See all videos for conference react conf 2018"
+            className="conferenceTitle"
             to="/conference/react-conf-2018"
           >
             <a
               aria-label="See all videos for conference react conf 2018"
+              className="conferenceTitle"
               href="/conference/react-conf-2018"
               onClick={[Function]}
             >
-              <span
-                className="conferenceTitle"
-              >
-                react conf 2018
-              </span>
+              react conf 2018
             </a>
           </Link>
-        </div>
-      </div>
+        </span>
+      </li>
     </Component>
   </Router>
 </MemoryRouter>

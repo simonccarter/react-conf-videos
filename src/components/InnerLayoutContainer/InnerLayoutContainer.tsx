@@ -8,5 +8,5 @@ type Props = {
 };
 
 export const InnerLayoutContainer: React.FunctionComponent<Props> = props => (
-  <div className={cn(styles.root, props.className)}>{props.children}</div>
+  <main className={cn(styles.root, props.className)}>{props.children}</main>
 );

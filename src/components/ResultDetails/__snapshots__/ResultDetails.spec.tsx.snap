@@ -21,22 +21,18 @@ exports[`ResultDetails should render 1`] = `
   <p
     className="resultsCount"
   >
-    <span
-      className="resultsNumber"
-    >
+    <strong>
        
       3
        
-    </span>
+    </strong>
      
     videos
-    <span
-      className="resultsNumber"
-    >
+    <strong>
        
       1
        
-    </span>
+    </strong>
      
     conference
   </p>

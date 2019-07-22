@@ -37,10 +37,7 @@ export const loadJSONDataEpic: Epic<any, any, ApplicationState> = action$ =>
   action$.ofType(BOOTSTRAP_START).pipe(
     mergeMap(() =>
       ajax.get('/assets/conferenceVids.json', {
-        'Content-Type': 'application/json',
-        headers: {
-          'Access-Control-Allow-Origin': '*'
-        }
+        'Content-Type': 'application/json'
       })
     ),
     map(res => loadDataEnd(res.response))
