@@ -22,9 +22,9 @@
     "types": "tsc --noEmit",
     "serve": "serve -s dist"
   },
-  "resolutions": { 
+  "resolutions": {
     "**/**/lodash": "^4.17.13",
-    "**/**/set-value": "^2.0.1",  
+    "**/**/set-value": "^2.0.1",
     "**/**/handlebars": "4.5.3",
     "**/**/braces": "2.3.1",
     "**/**/tar": "4.4.2",
@@ -102,6 +102,7 @@
     "core-js": "3",
     "cross-env": "5.2.0",
     "css-loader": "2.1.1",
+    "cypress": "^3.7.0",
     "enzyme": "3.9.0",
     "enzyme-adapter-react-16": "1.12.1",
     "enzyme-to-json": "3.3.5",
