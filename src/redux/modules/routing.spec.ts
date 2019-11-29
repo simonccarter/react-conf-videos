@@ -27,7 +27,7 @@ describe('routing', () => {
         payload: {
           method: 'push',
           args: [
-            '/conference/8424e37df85b9eccbe48e9a55d93845e/react-conf-2018?query=fake filter'
+            '/conference/8424e37df85b9eccbe48e9a55d93845e/react-conf-2018?query=fake%20filter'
           ]
         }
       };
