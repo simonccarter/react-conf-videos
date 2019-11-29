@@ -105,7 +105,7 @@ export const navigateToSearchResult: Epic<any, any, ApplicationState> = (
       const { location } = store.value.router;
       const filter = action.payload;
       const query = !isFilterEmpty(filter) ? `?query=${action.payload}` : '';
-      const nextUrl = `${location.pathname}${query}`;
+      const nextUrl = encodeURI(`${location.pathname}${query}`);
       return push(nextUrl);
     })
   );

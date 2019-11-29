@@ -25,6 +25,9 @@ jobs:
 
       - checkout
 
+      # yarn checksum issue
+      - run: yarn --update-checksums
+
       # install repo
       - run: yarn install
 
