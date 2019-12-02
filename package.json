@@ -18,13 +18,16 @@
     "start": "yarn run createReadme & webpack-dev-server --config webpack.config.js --progress",
     "test": "cross-env NODE_ENV=test jest --no-cache --coverage --config=config/test/jestconfig.json --maxWorkers=2",
     "test:dev": "cross-env NODE_ENV=test jest --watch --config=config/test/jestconfig.json",
+    "test:e": "yarn run cypress open",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "types": "tsc --noEmit",
-    "serve": "serve -s dist"
+    "server": "npx serve -s dist -l 8080",
+    "cy": "npx wait-on -v http://localhost:8080 && npx cypress run",
+    "e2e": "yarn run server & yarn run cy"
   },
-  "resolutions": { 
+  "resolutions": {
     "**/**/lodash": "^4.17.13",
-    "**/**/set-value": "^2.0.1",  
+    "**/**/set-value": "^2.0.1",
     "**/**/handlebars": "4.5.3",
     "**/**/braces": "2.3.1",
     "**/**/tar": "4.4.2",
@@ -102,6 +105,7 @@
     "core-js": "3",
     "cross-env": "5.2.0",
     "css-loader": "2.1.1",
+    "cypress": "^3.7.0",
     "enzyme": "3.9.0",
     "enzyme-adapter-react-16": "1.12.1",
     "enzyme-to-json": "3.3.5",
@@ -118,6 +122,7 @@
     "progress-bar-webpack-plugin": "1.12.1",
     "redux-test-utils": "0.3.0",
     "sass-loader": "7.1.0",
+    "serve": "^11.2.0",
     "source-map-loader": "0.2.4",
     "style-loader": "0.23.1",
     "terser-webpack-plugin": "^1.2.3",
@@ -128,6 +133,7 @@
     "tslint-loader": "^3.5.4",
     "tslint-react": "^4.0.0",
     "typescript": "3.4.5",
+    "wait-on": "^3.3.0",
     "webpack-bundle-analyzer": "3.3.2",
     "webpack-cli": "3.3.1",
     "webpack-dev-server": "3.3.1"
