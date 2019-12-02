@@ -17,6 +17,7 @@ export const SearchInput: React.FunctionComponent<Props> = React.memo(
       className={styles.root}
       placeholder={placeholder}
       aria-label={placeholder + ` videos`}
+      data-cy="search-input"
     />
   )
 );

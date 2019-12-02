@@ -18,6 +18,7 @@
     "start": "yarn run createReadme & webpack-dev-server --config webpack.config.js --progress",
     "test": "cross-env NODE_ENV=test jest --no-cache --coverage --config=config/test/jestconfig.json --maxWorkers=2",
     "test:dev": "cross-env NODE_ENV=test jest --watch --config=config/test/jestconfig.json",
+    "test:e": "yarn run cypress open",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "types": "tsc --noEmit",
     "serve": "serve -s dist"
@@ -129,6 +130,7 @@
     "tslint-loader": "^3.5.4",
     "tslint-react": "^4.0.0",
     "typescript": "3.4.5",
+    "wait-on": "^3.3.0",
     "webpack-bundle-analyzer": "3.3.2",
     "webpack-cli": "3.3.1",
     "webpack-dev-server": "3.3.1"

@@ -35,7 +35,7 @@ const VirtualisedList: React.FunctionComponent<{ virtual: any }> = ({
 }) => {
   const [open, toggleIsOpen] = React.useState<string | null>(null);
   return (
-    <ol className={styles.root} style={virtual.style}>
+    <ol className={styles.root} style={virtual.style} data-cy="results-list">
       {virtual.items &&
         virtual.items.map((item: MappedVideo, index: number) => (
           <Video
