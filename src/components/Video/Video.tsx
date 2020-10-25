@@ -37,7 +37,7 @@ export const VideoInner: React.FunctionComponent<CombinedProps> = ({
   conferenceId
 }) => {
   return (
-    <li className={styles.root} key={videoId}>
+    <li className={styles.root} key={videoId} data-cy="result">
       <h3 className={styles.heading}>
         <button
           id={`accordion-${title}`}
@@ -77,6 +77,7 @@ export const VideoInner: React.FunctionComponent<CombinedProps> = ({
           to={`/conference/${sluggifyUrl(conference.title)}`}
           aria-label={`See all videos for conference ${conference.title}`}
           className={styles.conferenceTitle}
+          data-cy="conference-link"
         >
           {conference.title}
         </Link>

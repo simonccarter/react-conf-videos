@@ -79,6 +79,7 @@ exports[`Video should render and connect 1`] = `
     >
       <li
         className="root"
+        data-cy="result"
         key="xxx"
       >
         <h3
@@ -117,11 +118,13 @@ exports[`Video should render and connect 1`] = `
           <Link
             aria-label="See all videos for conference react conf 2018"
             className="conferenceTitle"
+            data-cy="conference-link"
             to="/conference/react-conf-2018"
           >
             <a
               aria-label="See all videos for conference react conf 2018"
               className="conferenceTitle"
+              data-cy="conference-link"
               href="/conference/react-conf-2018"
               onClick={[Function]}
             >

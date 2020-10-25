@@ -7,7 +7,7 @@ version: 2.0
 references:
   container_config: &container_config
     docker:
-      - image: circleci/node:10.15.3-stretch
+      - image: cypress/included:3.2.0
     working_directory: ~/repo
 
   restore_repo: &restore_repo
@@ -18,10 +18,10 @@ references:
         - v1-repo
 
 jobs:
-  set-up:
+  test:
     <<: *container_config
     steps:
-      # - *restore_repo
+      - *restore_repo
 
       - checkout
 
@@ -29,7 +29,7 @@ jobs:
       - run: yarn --update-checksums
 
       # install repo
-      - run: yarn install
+      - run: yarn install --prod=false
 
       # build
       - run: yarn run build
@@ -39,67 +39,16 @@ jobs:
           key: v1-repo-{{ .Branch }}-{{ .Revision }}
           paths:
             - .
+            - /root/.cache/Cypress
 
-      # test
+      # unit test
       - run: yarn run test
 
-  deploy-dev:
-    <<: *container_config
-    steps:
-      - *restore_repo
-
-      # install awscli
-      - run:
-          working_directory: ~/
-          name: 'install awscli'
-          command: |
-            sudo apt-get -y -qq update
-            sudo apt-get -y -qq install python3-dev
-            curl -O https://bootstrap.pypa.io/get-pip.py
-            python3 get-pip.py --user
-            .local/bin/pip install awscli --upgrade --user
-
-      - deploy:
-          working_directory: ~/
-          command: .local/bin/aws s3 sync repo/dist/ s3://dev-reactjsvideos.com --delete
-
-  deploy-master:
-    <<: *container_config
-    steps:
-      - *restore_repo
-
-      # install awscli
-      - run:
-          working_directory: ~/
-          name: 'install awscli'
-          command: |
-            sudo apt-get -y -qq update
-            sudo apt-get -y -qq install python3-dev
-            curl -O https://bootstrap.pypa.io/get-pip.py
-            python3 get-pip.py --user
-            .local/bin/pip install awscli --upgrade --user
-
-      - deploy:
-          working_directory: ~/
-          command: .local/bin/aws s3 sync repo/dist/ s3://www.reactjsvideos.com --delete
+      # e2e test
+      - run: yarn run e2e
 
 workflows:
   version: 2
   build_and_test_deploy:
     jobs:
-      - set-up
-      # - deploy-dev:
-      #     requires:
-      #       - set-up
-      #     filters:
-      #       branches:
-      #         only:
-      #           - develop
-      #           - fix/circleci
-      # - deploy-master:
-      #     requires:
-      #       - set-up
-      #     filters:
-      #       branches:
-      #         only:
-      #           - master
+      - test
