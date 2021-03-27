@@ -1,67 +1,73 @@
 import * as React from 'react';
 
-import toJSON from 'enzyme-to-json';
-
 import {
+  fireEvent,
   mockConference,
   mockVideo,
-  mountWithStore,
-  wrapWithMemoryRouter
+  render,
+  screen,
+  waitFor
 } from 'utils/test';
-import { Conference } from '../../domain';
 import { VideoInner } from './Video';
+import { ConferenceTransformed } from '../../domain/TransformedJSON';
 
 describe('Video', () => {
   const getData = () => {
     const video = mockVideo();
-    const conference: Conference = mockConference();
-    const speaker = { name: 'Simon Carter' };
-    const state = {
-      data: {
-        videos: { xxx: video },
-        presenters: { aaa: speaker },
-        conferences: { yyy: conference }
-      }
-    };
-    const isOpen = false;
+    const conference: ConferenceTransformed = mockConference();
+    const presenter = { name: 'Simon Carter' };
+
     const props = {
       videoId: 'xxx',
       conferenceId: 'yyy',
       video,
-      speaker,
-      conference,
-      isOpen,
-      toggleIsOpen: jest.fn()
+      presenter,
+      conference
     };
-    return { props, state };
+    return { props };
   };
 
-  it('should render and connect', () => {
+  it('should render', () => {
     // arrange
-    const { props, state } = getData();
+    const { props } = getData();
 
     // act
-    const wrapper = mountWithStore(
-      state,
-      wrapWithMemoryRouter(<VideoInner {...props} />)
-    );
+    render(<VideoInner {...props} />);
 
-    // assert
-    expect(toJSON(wrapper)).toMatchSnapshot();
+    expect(screen.getByRole('listitem'));
   });
 
-  it('should toggle the isOpen state prop on click', () => {
+  it('should show and hide the video on click', async () => {
     // arrange
-    const { props, state } = getData();
+    const { props } = getData();
 
     // act
-    const wrapper = mountWithStore(
-      state,
-      wrapWithMemoryRouter(<VideoInner {...props} />)
-    );
-    wrapper.find('.top').simulate('click');
+    render(<VideoInner {...props} />);
 
-    // assert
-    expect(props.toggleIsOpen).toHaveBeenCalled();
+    fireEvent(
+      screen.getByRole('button'),
+      new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true
+      })
+    );
+
+    await waitFor(async () => {
+      expect(screen.getByRole('listitem')).toContainElement(
+        screen.getByTitle('videoPlayer')
+      );
+
+      fireEvent(
+        screen.getByRole('button'),
+        new MouseEvent('click', {
+          bubbles: true,
+          cancelable: true
+        })
+      );
+
+      await waitFor(() => {
+        expect(screen.queryByTitle('videoPlayer')).toBeNull();
+      });
+    });
   });
 });

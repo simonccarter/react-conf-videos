@@ -1,65 +1,41 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
 
 import {
   Header,
   InnerLayoutContainer,
-  List,
   Meta,
   ResultDetails,
-  SearchInput
+  SearchInput,
+  List
 } from 'components';
-import { ApplicationState, routingActions } from 'redux/modules';
-import { IndexedConferences } from '../../../domain';
+import useSearch from '../../../hooks/useSearch';
 
-type ReduxProps = {
-  conferences: IndexedConferences;
-  filterValue: string;
-};
+export const FrontPage: React.FC<any> = () => {
+  const {
+    query,
+    localQuery,
+    filteredList,
+    onInputChange,
+    numberOfVideos,
+    numberOfConferences
+  } = useSearch();
 
-type DispatchpProps = {
-  navigateToSearchURL: typeof routingActions.navigateToSearchURL;
-};
-
-type Props = ReduxProps & DispatchpProps;
-
-export const FrontPageInner: React.FunctionComponent<Props> = ({
-  filterValue,
-  conferences,
-  navigateToSearchURL
-}) => {
-  const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    navigateToSearchURL(e.target.value);
-  };
   return (
     <>
-      <Meta title={filterValue} />
+      <Meta title={query} />
       <Header
         title="React.js Videos"
         titleLink="/#/search"
         tagline="Search React.js conference videos."
       />
       <InnerLayoutContainer>
-        <SearchInput filterValue={filterValue} onChange={onInputChange} />
-        <ResultDetails conferences={conferences} />
-        <List conferences={conferences} />
+        <SearchInput filterValue={localQuery} onChange={onInputChange} />
+        <ResultDetails
+          numberOfVideos={numberOfVideos}
+          numberOfConferences={numberOfConferences}
+        />
+        <List conferences={filteredList} />
       </InnerLayoutContainer>
     </>
   );
 };
-
-const mapStateToProps = ({
-  search: { conferences, filterValue }
-}: ApplicationState) => ({
-  filterValue,
-  conferences
-});
-
-const dispatchMap = {
-  navigateToSearchURL: routingActions.navigateToSearchURL
-};
-
-export const FrontPage = connect(
-  mapStateToProps,
-  dispatchMap
-)(React.memo(FrontPageInner));

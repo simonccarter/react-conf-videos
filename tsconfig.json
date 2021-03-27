@@ -11,12 +11,12 @@
     "module": "es6",
     "jsx": "react",
     "target": "es5",
-    "lib": ["es5", "es6", "dom"],
+    "lib": ["es5", "es6", "es2019", "dom"],
     "allowJs": false,
     "moduleResolution": "node",
     "paths": {
       "*": ["src/*", "*"]
-    }
+    },
   },
   "exclude": [
     "dist",

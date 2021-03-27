@@ -6,7 +6,6 @@ import {
   curry,
   filter,
   flatten,
-  forEachObjIndexed,
   ifElse,
   is,
   isNil,
@@ -20,9 +19,9 @@ import {
   zip
 } from 'ramda';
 
-import { ConferenceInput, JSONInput, VideoInput } from '../src/domain';
+import { ConferenceInput, JSONInput, VideoInput } from '../src/domain/InputJSON'
 
-const isTest = process.env.NODE_ENV === 'test';
+const isTest = process.env.NODE_ENV === 'test'; 
 
 const conferenceVids = JSON.parse(
   fs.readFileSync('./public/assets/conferenceVids.json', 'utf-8')
@@ -33,11 +32,11 @@ const extratYearFromDDMMYY = (date: string) => date.split('-')[2];
 const computePlaylistDetails = ifElse(
   is(String),
   (playlist: string) => ` - [playlist](${playlist})`,
-  (playlist: any) => {
+  (playlist: {[idx:string]: string}) => {
     let playlists = '';
-    forEachObjIndexed<string>((val, key) => {
-      playlists += ` - [playlist: ${key}](${val})`;
-    }, playlist);
+    Object.keys(playlist).map((key) => {
+      playlists += ` - [playlist: ${key}](${playlist[key]})`;
+    })
     return playlists;
   }
 );
@@ -73,16 +72,16 @@ const conferenceVideos = (videos: VideoInput[]) => {
     pluck('split')
   )(videos);
 
+  const createTableForSplit = (_split: string) => compose<VideoInput[], any, any>(
+    createTable(_split),
+    filter(propEq('split', _split)) // extract out matching videos for split
+  )(videos)
+
   let output = '';
   if (!splits.length) {
-    output = createTable('', videos);
+    output = createTable('', videos) as unknown as string;
   } else {
-    output = map<string, string>((split: string) =>
-      compose<VideoInput[], VideoInput[], string>(
-        createTable(split),
-        filter(propEq('split', split)) // extract out matching videos for split
-      )(videos)
-    )(splits).join('');
+    output = map((split: string) => createTableForSplit(split))(splits).join('');
   }
   return output;
 };
@@ -120,9 +119,8 @@ const createHead = (conferenceVids: JSONInput) => `# React.js Conference Videos.
 [www.reactjsvideos.com](https://www.reactjsvideos.com)
 
 List of react conference videos.
-**${countVideos(conferenceVids)}** videos from **${
-  conferenceVids.length
-}** Conferences.
+**${countVideos(conferenceVids)}** videos from **${conferenceVids.length
+  }** Conferences.
 `;
 
 const computeLnks = (titlesAndYears: Array<[string, string]>) => {

@@ -713,7 +713,7 @@ List of react conference videos.
 
 | Title/Link        | Presenter  | Length |
 | ------------- |:-------------:| -----:|
-[ReacTex: using React Native and Neural Networks to recognize handwritten equations](https://www.youtube.com/watch?v=r9InNdOLKX8&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531&index=7) | Bonnie Milian | Bonnie Milian
+[ReacTex: using React Native and Neural Networks to recognize handwritten equations](https://www.youtube.com/watch?v=r9InNdOLKX8&list=PLUqJuYVCz-7eHxPEPz8hJCz2pW6N0H531&index=7) | Bonnie Milian | 18:58
 
 #### Day 2
 

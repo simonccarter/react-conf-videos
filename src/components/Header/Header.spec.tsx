@@ -1,17 +1,28 @@
-import { mount } from 'enzyme';
 import * as React from 'react';
 
-import { wrapWithMemoryRouter } from 'utils/test';
+import { render, waitFor, screen } from '../../utils/test';
+
 import { Header } from './Header';
 
 describe('Header', () => {
-  it('should render', () => {
+  it('should render props', async () => {
     // arrange
+    const props = {
+      title: 'A title',
+      tagline: 'A tagline',
+      titleLink: '/a-link'
+    };
+
     // act
-    mount(
-      wrapWithMemoryRouter(
-        <Header title="A title" tagline="A tagline" titleLink="/a-link" />
-      )
-    );
+    render(<Header {...props} />);
+
+    await waitFor(() => {
+      expect(screen.getByText(props.title)).toBeInTheDocument();
+      expect(screen.getByText(props.tagline)).toBeInTheDocument();
+      expect(screen.getByText(props.title)).toHaveAttribute(
+        'href',
+        props.titleLink
+      );
+    });
   });
 });

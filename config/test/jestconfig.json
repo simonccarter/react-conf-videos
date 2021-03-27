@@ -13,9 +13,10 @@
   "transform": {
     "^.+\\.(j|t)sx?$": "ts-jest"
   },
-  "setupFiles": ["<rootDir>/config/test/setupEnzyme.ts"],
+  "testEnvironment": "jsdom",
+  "setupFilesAfterEnv": ["<rootDir>/config/test/jest-setup.ts"],
   "moduleNameMapper": {
-    "\\.(scss)$": "<rootDir>/config/test/identityProxy.ts"
+    "\\.(css|scss)$": "<rootDir>/config/test/identityProxy.ts"
   },
   "moduleDirectories": ["node_modules", "src", "public", "scripts"],
   "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",

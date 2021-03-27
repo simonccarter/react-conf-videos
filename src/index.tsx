@@ -2,30 +2,23 @@ import './polyfills';
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-
-import { ConnectedRouter } from 'connected-react-router';
-import { Provider } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
 
 import App from 'App';
 import { ScrollToTop } from 'components';
-import configureStore from 'redux/configureStore';
 
 import './index.scss';
 
-const { history, store } = configureStore();
-
-// start bootstrap process
-store.dispatch({ type: 'BOOTSTRAP_START' });
-
 export const render = () => {
   ReactDOM.render(
-    <Provider store={store}>
-      <ConnectedRouter history={history}>
+    <Router>
+      <RecoilRoot>
         <ScrollToTop>
           <App />
         </ScrollToTop>
-      </ConnectedRouter>
-    </Provider>,
+      </RecoilRoot>
+    </Router>,
     document.getElementById('app__container')
   );
 };

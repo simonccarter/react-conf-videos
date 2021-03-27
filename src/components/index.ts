@@ -10,8 +10,8 @@ import { SearchInput } from 'components/SearchInput';
 import { Video } from 'components/Video';
 
 export {
-  Logo,
   List,
+  Logo,
   Meta,
   Video,
   Header,
