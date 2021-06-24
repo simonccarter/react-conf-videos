@@ -36,6 +36,7 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               data: '@import "_colors";',
+              implementation: require("sass"),
               includePaths: [path.resolve(__dirname, './src/styles/')]
             }
           }

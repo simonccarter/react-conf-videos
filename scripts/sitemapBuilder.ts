@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { JSONInput } from '../src/domain';
+import { JSONInput } from '../src/domain/InputJSON';
 import { sluggifyUrl } from '../src/utils';
 
 // load in file

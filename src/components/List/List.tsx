@@ -1,53 +1,27 @@
-import { compose as rcompose, flatten, map, pathOr, toPairs } from 'ramda';
 import * as React from 'react';
 import VirtualList from 'react-virtual-list';
 
 import { Video } from 'components';
-import { Conference, IndexedConferences } from '../../domain';
+import {
+  ConferenceTransformed,
+  VideoTransformed
+} from '../../domain/TransformedJSON';
 
 import styles from './List.scss';
 
-type MappedVideo = {
-  key: string;
-  videoId: string;
-  conferenceId: string;
+type Props = {
+  conferences: ConferenceTransformed[];
 };
-type Props = { conferences: { [idx: string]: Conference } };
 
-const mapConferenceIdOntoVideos = ([conferenceId, conference]: [
-  string,
-  Conference
-]) =>
-  map(
-    video => ({ key: video, videoId: video, conferenceId }),
-    pathOr([], ['videos'], conference)
-  );
-
-const mapConferenceVideos = rcompose<
-  IndexedConferences,
-  any,
-  any[],
-  MappedVideo[]
->(flatten, map(mapConferenceIdOntoVideos), toPairs);
-
-const VirtualisedList: React.FunctionComponent<{ virtual: any }> = ({
-  virtual
-}) => {
-  const [open, toggleIsOpen] = React.useState<string | null>(null);
-  return (
-    <ol className={styles.root} style={virtual.style} data-cy="results-list">
-      {virtual.items &&
-        virtual.items.map((item: MappedVideo, index: number) => (
-          <Video
-            key={index}
-            {...item}
-            isOpen={item.videoId === open}
-            toggleIsOpen={toggleIsOpen}
-          />
-        ))}
-    </ol>
-  );
-};
+const VirtualisedList: React.FC<{
+  virtual: { items: VideoTransformed[]; style: React.CSSProperties };
+}> = ({ virtual }) => (
+  <ol className={styles.root} style={virtual.style} data-cy="results-list">
+    {virtual.items.map((item: VideoTransformed, index: number) => (
+      <Video video={item} key={index} />
+    ))}
+  </ol>
+);
 
 const MyVirtualList = VirtualList({
   firstItemIndex: 0,
@@ -58,8 +32,8 @@ const MyVirtualList = VirtualList({
   }
 })(VirtualisedList);
 
-export const List: React.FunctionComponent<Props> = ({ conferences }) => {
-  const videos = mapConferenceVideos(conferences);
+export const List: React.FC<Props> = ({ conferences }) => {
+  const videos = conferences.map(conference => conference.videos).flat();
   return (
     <>
       {videos.length > 0 && (
