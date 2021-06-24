@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 
-// https://reacttraining.com/react-router/web/guides/scroll-restoration
-class ScrollToTopInner extends React.Component<{ location: Location }> {
+type Props = { location: Location };
+
+class ScrollToTopInner extends React.Component<Props> {
   public componentDidUpdate(prevProps: { location: Location }) {
     if (this.props.location !== prevProps.location) {
       window.scrollTo(0, 0);
@@ -14,4 +15,4 @@ class ScrollToTopInner extends React.Component<{ location: Location }> {
   }
 }
 
-export const ScrollToTop = withRouter<any>(ScrollToTopInner);
+export const ScrollToTop = withRouter<any, any>(ScrollToTopInner);

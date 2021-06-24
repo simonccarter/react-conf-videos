@@ -1,48 +1,24 @@
 import { faBolt } from '@fortawesome/free-solid-svg-icons/faBolt';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as cn from 'classnames';
+import { VideoTransformed } from 'domain/TransformedJSON';
 import * as React from 'react';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-
-import { ApplicationState } from 'redux/modules';
 import { sluggifyUrl } from 'utils';
-import { Conference, Presenter, Video as VideoProp } from '../../domain';
 
 import styles from './Video.scss';
 
-type Props = {
-  videoId: string;
-  conferenceId: string;
-  isOpen: boolean;
-  toggleIsOpen: (e: string | null) => void;
-};
-
-type ReduxState = {
-  conferenceId: string;
-  conference: Conference;
-  speaker: Presenter;
-  video: VideoProp;
-};
-
-type CombinedProps = Props & ReduxState;
-
-export const VideoInner: React.FunctionComponent<CombinedProps> = ({
-  video: { title, length, embeddableLink, lightning = false },
-  speaker,
-  videoId,
-  conference,
-  isOpen,
-  toggleIsOpen,
-  conferenceId
-}) => {
+export const VideoInner: React.FC<{video: VideoTransformed}> = ({ video }) => {
+  const { title, length, embeddableLink, lightning = false, presenter, conference } = video
+  const [isOpen, toggleIsOpen] = React.useState(false);
+  
   return (
-    <li className={styles.root} key={videoId} data-cy="result">
+    <li className={styles.root} data-cy="result">
       <h3 className={styles.heading}>
         <button
           id={`accordion-${title}`}
           className={styles.top}
-          onClick={() => toggleIsOpen(!isOpen ? videoId : null)}
+          onClick={() => toggleIsOpen(open => !open)}
           aria-expanded={isOpen}
           aria-controls={`content-${title}`}
         >
@@ -55,6 +31,7 @@ export const VideoInner: React.FunctionComponent<CombinedProps> = ({
       </h3>
       <div
         id={`content-${title}`}
+        data-testid={`content-${title}`}
         aria-labelledby={`accordion-${title}`}
         className={cn(styles.videoWrapper, { [styles.open]: isOpen })}
         aria-hidden={!isOpen}
@@ -72,34 +49,18 @@ export const VideoInner: React.FunctionComponent<CombinedProps> = ({
         )}
       </div>
       <span className={styles.details}>
-        {speaker.name}
+        {presenter?.name}
         <Link
-          to={`/conference/${sluggifyUrl(conference.title)}`}
-          aria-label={`See all videos for conference ${conference.title}`}
+          to={`/conference/${sluggifyUrl(conference?.title ?? '')}`}
+          aria-label={`See all videos for conference ${conference?.title}`}
           className={styles.conferenceTitle}
           data-cy="conference-link"
         >
-          {conference.title}
+          {conference?.title}
         </Link>
       </span>
     </li>
   );
 };
 
-const mapStateToProps = (state: ApplicationState, props: Props) => {
-  const {
-    data: { videos, presenters, conferences }
-  } = state;
-  const { videoId, conferenceId } = props;
-  const video = videos[videoId];
-  const conference = conferences[conferenceId];
-  const speaker = presenters[video.presenter];
-  return {
-    conferenceId,
-    conference,
-    speaker,
-    video
-  };
-};
-
-export const Video = connect(mapStateToProps)(React.memo(VideoInner));
+export const Video = VideoInner;
