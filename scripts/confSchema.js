@@ -9,15 +9,15 @@ const { schema } = require('normalizr')
 // }
 const hashFunction = (toHash) => {
   const object = toHash
-  delete object?.videos
-  delete object?.title
-  delete object?.name
-  delete object?.length
-  delete object?.playlist
-  delete object?.website
-  delete object?.embeddableLink
-  delete object?.presenter
-  delete object?.length
+  delete object.videos
+  delete object.title
+  delete object.name
+  delete object.length
+  delete object.playlist
+  delete object.website
+  delete object.embeddableLink
+  delete object.presenter
+  delete object.length
 
   const id = crypto.createHash('md5').update(JSON.stringify(object)).digest("hex");
   return id;
