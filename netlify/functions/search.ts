@@ -1,5 +1,5 @@
-import Redis from 'ioredis';
 import { Handler } from '@netlify/functions';
+import Redis from 'ioredis';
 
 const REDIS_PREFIX = process.env.REDIS_PREFIX
 
@@ -49,7 +49,7 @@ const conferencesToObject = (data: any[]) => {
   }, [])
 }
 
-const videosToObject = (data: any[]) => {
+const videosToObject = (data: any[]): Array<{id: string, video: VideoType}> => {
   data.splice(0,1);
   return data.reduce((acc, key, index) => {
     if(index%2 === 0){
@@ -66,16 +66,17 @@ const videosToObject = (data: any[]) => {
 }
 
 const searchConferences = async (event: Event) => {
-  const conferenceResults = await redis.send_command('FT.SEARCH', `${REDIS_PREFIX}:idx:conference`, event.queryStringParameters?.query as string, "HIGHLIGHT")
-  if (!conferenceResults) return null;
+  const query = event.queryStringParameters?.query ?? '';
+  const conferenceResults = await redis.send_command('FT.SEARCH', `${REDIS_PREFIX}:idx:conference`, query, "HIGHLIGHT")
+  if (!conferenceResults) { return null; }
 
   const conferencesAsObjects = conferencesToObject(conferenceResults)
 
   // and get all videos for conferences that matched...
   const queries: string[]= []
   const pipeline = redis.pipeline();
-  for(let conference of conferencesAsObjects){
-    for(let videoId of conference.conference.videos){
+  for(const conference of conferencesAsObjects){
+    for(const videoId of conference.conference.videos){
       queries.push(`video:${videoId}`)
       pipeline.hgetall(`video:${videoId}`)
     }
@@ -89,7 +90,7 @@ const searchConferences = async (event: Event) => {
     }
   })
 
-  for(let conference of conferencesAsObjects){
+  for(const conference of conferencesAsObjects){
     conference.conference.videos = conference.conference.videos.map((videoId: string) => {
       const video = newResults.find((video: any) => video.id === `video:${videoId}`)
       return video?.video
@@ -100,20 +101,27 @@ const searchConferences = async (event: Event) => {
 }
 
 const searchVideos = async (event: Event) => {
-  const videoResults = await redis.send_command('FT.SEARCH', `${REDIS_PREFIX}:idx:video`, event.queryStringParameters?.query as string);
-  if(!videoResults) return null;
+  const query = event.queryStringParameters?.query ?? '';
+  const conferenceId = event.queryStringParameters?.conference 
+  const redisSearch = `(@title:${query} | @presenter:${query})${!!conferenceId ? ` & @conferenceId:${conferenceId}` : ''}`;
+
+  const videoResults = await redis.send_command('FT.SEARCH', `${REDIS_PREFIX}:idx:video`, redisSearch, 'HIGHLIGHT');
+
+  if(!videoResults) { return null; }
 
   const videosAsObjects = videosToObject(videoResults)
+  const conferenceIds = new Set(videosAsObjects.map(video => video.video.conferenceId))
 
   // now get conferences for these videos, replacing their videos object with the callee
-  const queries: string[]= []
+  const queries: string[] = []
   const pipeline = redis.pipeline();
-  for(let video of videosAsObjects){
-    queries.push(video.video.conferenceId)
-    pipeline.hgetall(video.video.conferenceId)
+  for (const conferenceId of Array.from(conferenceIds)) {
+    queries.push(conferenceId)
+    pipeline.hgetall(conferenceId)
   } 
 
   const results = await pipeline.exec() as Array<[Error, any]>
+
   const newResults = results.map(([_, result]: [Error, any], index: number) => {
     return {
       id: queries[index],
@@ -122,12 +130,12 @@ const searchVideos = async (event: Event) => {
   })
 
   const conferenceMap = new Map()
-  for(let conference of newResults){
+  for(const conference of newResults){
     delete conference.conference.videos
     conferenceMap.set(conference.id, conference.conference)
   }
 
-  for(let video of videosAsObjects){
+  for(const video of videosAsObjects){
     const conference = conferenceMap.get(video.video.conferenceId)
     if(conference.videos){
       conference.videos.push(video.video)
@@ -157,7 +165,7 @@ type ProcessedResultType = Array<{
 
 const mergeResults = (conferenceResults: ProcessedResultType, videoResults: ProcessedResultType) => {
   const results = [...conferenceResults]
-  for(let conf of videoResults){
+  for(const conf of videoResults){
     const found = results.findIndex(_conf => conf.id === _conf.id)
     if(found === -1){
       results.push(conf)
@@ -171,12 +179,19 @@ const handler: Handler = async (event, context) => {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
-  if (event.queryStringParameters?.query === undefined){
+  if (event.queryStringParameters?.query === undefined && event.queryStringParameters?.conferenceId === undefined){
     return { statusCode: 400, body: 'Invalid Request' };
   }
 
+  if(event.queryStringParameters?.conferenceId !== undefined && event.queryStringParameters?.query === undefined){
+    event.queryStringParameters.query = ' '
+  }
+
   try {
-    const conferenceResults = await searchConferences(event)
+    let conferenceResults;
+    if(!!event.queryStringParameters?.conferenceId){
+      conferenceResults = await searchConferences(event)
+    }
     const videoResults = await searchVideos(event)
 
     const results = !!conferenceResults && !!videoResults ? mergeResults(conferenceResults, videoResults) : conferenceResults || videoResults

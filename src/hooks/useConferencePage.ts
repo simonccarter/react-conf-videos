@@ -15,9 +15,9 @@ const useSearch = (routeMatch?: string) => {
     const [localQuery, setLocalQuery] = React.useState(query)
     const debouncedQuery = useDebounce(localQuery)
 
-    const match = useRouteMatch<{ name?: string }>(routeMatch ?? '')
-
     const list = useRecoilValue(listState);
+
+    const match = useRouteMatch<{ name?: string }>(routeMatch ?? '')
 
     // const list = useRecoilValue(filteredListState(match?.params?.name ?? ''));
     // const filteredList = useRecoilValue(filteredListState(match?.params?.name ?? ''));

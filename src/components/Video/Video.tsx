@@ -49,7 +49,7 @@ export const VideoInner: React.FC<{video: VideoTransformed}> = ({ video }) => {
         )}
       </div>
       <span className={styles.details}>
-        {presenter?.name}
+        {presenter}
         <Link
           to={`/conference/${sluggifyUrl(conference?.title ?? '')}`}
           aria-label={`See all videos for conference ${conference?.title}`}

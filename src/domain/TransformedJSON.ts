@@ -1,12 +1,13 @@
-import { ConferenceInput, PresenterInput } from "./InputJSON";
+import { ConferenceInput } from "./InputJSON";
 
 export type VideoTransformed = {
+    id: string;
     title: string;
     link: string;
     length: string;
     split: string;
     lightning?: boolean;
-    presenter: PresenterInput;
+    presenter: string;
     embeddableLink: string;
     conference?: Omit<ConferenceInput, "videos">
 };

@@ -1,14 +1,12 @@
 /* Definitions for input JSON file read in */
-export type PresenterInput = {
-  name: string;
-};
 
 export type VideoInput = {
   title: string;
   link: string;
   length: string;
   split: string;
-  presenter: PresenterInput;
+  presenter: string;
+  id: string;
 };
 
 export type ConferenceInput = {

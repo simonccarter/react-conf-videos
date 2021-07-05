@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { JSONInput, ConferenceInput, VideoInput } from 'domain/InputJSON';
+import { ConferenceInput, JSONInput, VideoInput } from 'domain/InputJSON';
 import { Conferences } from 'domain/TransformedJSON';
 import { omit, sort } from 'ramda';
 

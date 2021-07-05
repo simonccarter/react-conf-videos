@@ -3,10 +3,10 @@ import * as React from 'react';
 import {
   Header,
   InnerLayoutContainer,
+  List,
   Meta,
   ResultDetails,
   SearchInput,
-  List
 } from 'components';
 import useSearch from '../../../hooks/useSearch';
 
@@ -14,7 +14,7 @@ export const FrontPage: React.FC<any> = () => {
   const {
     query,
     localQuery,
-    filteredList,
+    list,
     onInputChange,
     numberOfVideos,
     numberOfConferences
@@ -34,7 +34,7 @@ export const FrontPage: React.FC<any> = () => {
           numberOfVideos={numberOfVideos}
           numberOfConferences={numberOfConferences}
         />
-        <List conferences={filteredList} />
+        <List conferences={list} />
       </InnerLayoutContainer>
     </>
   );

@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { useSetRecoilState } from 'recoil';
-import { loadData } from 'state/transformers';
+import { getList } from '../services/web';
 import { listState } from '../state';
 
 const useBootstrap = () => {
   const setList = useSetRecoilState(listState);
   React.useLayoutEffect(() => {
     const getData = async () => {
-      const data = await loadData();
+      const data = await getList({start: 0})
       setList(data);
 
       // remove loader from dom

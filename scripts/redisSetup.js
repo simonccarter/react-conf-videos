@@ -1,11 +1,10 @@
 const fs = require('fs')
 const path = require('path');
-const { exit } = require('process');
 const Redis = require('ioredis');
+
 require('dotenv').config();
 
 const transformDataFromJson = require('./json2redis.js');
-const { pipe } = require('ramda');
 
 const REDIS_PREFIX = process.env.REDIS_PREFIX
 
@@ -43,7 +42,7 @@ const toArray = (obj) => {
 }
 
 const createMapOfVideosToConferences = () => {
-    let map = new Map() // video => conference
+    let map = new Map() 
     for(let conferenceId in transformedData.conferences){
         if (!transformedData.conferences[conferenceId].videos.length){
             continue;
@@ -52,14 +51,12 @@ const createMapOfVideosToConferences = () => {
         for(let videoId of transformedData.conferences[conferenceId].videos){
             map.set(videoId, conferenceId)
         }
-
     }
     return map
 }
 
 const storeVideos = async () => {
     const mappedVideosToConferences = createMapOfVideosToConferences(transformedData)
-
     const pipeline = client.pipeline()
 
     for (let videoId in transformedData.videos){
@@ -124,7 +121,7 @@ const clearAll = async () => {
 
 const createIndexes = async () => {
     await client.send_command('FT.CREATE', `${REDIS_PREFIX}:idx:conference ON HASH PREFIX 1 ${REDIS_PREFIX}:conference: SCHEMA title TEXT SORTABLE`.split(' '))
-    await client.send_command('FT.CREATE', `${REDIS_PREFIX}:idx:video ON HASH PREFIX 1 ${REDIS_PREFIX}:video: SCHEMA title TEXT SORTABLE presenter TEXT SORTABLE`.split(' '))
+    await client.send_command('FT.CREATE', `${REDIS_PREFIX}:idx:video ON HASH PREFIX 1 ${REDIS_PREFIX}:video: SCHEMA title TEXT SORTABLE presenter TEXT SORTABLE conferenceId TEXT SORTABLE`.split(' '))
 }
 
 const main = async () => {

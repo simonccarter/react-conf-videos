@@ -1,13 +1,14 @@
-import * as React from 'react';
 import {
     Header,
     InnerLayoutContainer,
+    List,
     Meta,
     ResultDetails,
-    SearchInput,
-    List
+    SearchInput
 } from 'components';
+import * as React from 'react';
 import useSearch from '../../../hooks/useSearch';
+onferencePage';
 
 export const ConfPage: React.FC<any> = () => {
     const {
@@ -17,7 +18,7 @@ export const ConfPage: React.FC<any> = () => {
         onInputChange,
         numberOfVideos,
         numberOfConferences
-    } = useSearch("/conference/:name")
+    } = useConferencePage("/conference/:name")
     return (
         <div>
             <Meta title={conference?.title || ''} />

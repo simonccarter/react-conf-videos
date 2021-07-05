@@ -2,8 +2,11 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
+
+console.log('__dirname', __dirname)
 
 module.exports = {
   mode: 'development',
@@ -57,6 +60,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new Dotenv(),
     new ForkTsCheckerWebpackPlugin(),
     new ProgressBarPlugin(),
     new webpack.HotModuleReplacementPlugin(),
@@ -65,9 +69,9 @@ module.exports = {
       filename: 'index.html',
       inject: 'body'
     }),
-    new BundleAnalyzerPlugin({
-      openAnalyzer: false
-    }),
+    // new BundleAnalyzerPlugin({
+    //   openAnalyzer: false
+    // }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
     })

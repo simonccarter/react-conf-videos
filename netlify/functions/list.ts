@@ -1,5 +1,5 @@
-import Redis from 'ioredis';
 import { Handler } from '@netlify/functions';
+import Redis from 'ioredis';
 
 const REDIS_PREFIX = process.env.REDIS_PREFIX
 
@@ -15,20 +15,24 @@ type VideoType = {
   presenter: string;
   split?: string;
   length: string;
+  id: string;
 };
 
-const videosToObject = (data: [Error | null, VideoType][], queries: string[]) => {
+const videosToObject = (data: Array<[Error | null, Omit<VideoType, 'id'>]>, queries: string[]) => {
   return data.reduce(
     (acc, [error, video], index) => {
       return [
         ...acc,
         {
           id: queries[index],
-          video
+          video: {
+            ...video,
+            id: queries[index],
+          }
         }
       ];
     },
-    [] as { id: string; video: VideoType }[]
+    [] as Array<{ id: string; video: VideoType }>
   );
 };
 
@@ -41,8 +45,8 @@ const getVideoIds = async ({
   stop?: number;
   page?: number;
 }) => {
-  let START = start || 0;
-  let STOP = stop || (START ? START + 20 : 20);
+  const START = start || 0;
+  const STOP = stop || (START ? START + 20 : 20);
 
   // get video ids
   const videoResults = await redis.zrange(`${REDIS_PREFIX}:videos:videos_by_date`, START, STOP);
@@ -52,19 +56,19 @@ const getVideoIds = async ({
 const getVideoHashes = async (videos: string[]) => {
   const queries: string[] = [];
   const pipeline = redis.pipeline();
-  for (let video of videos) {
+  for (const video of videos) {
     queries.push(video);
     pipeline.hgetall(video);
   }
-  const results: [Error | null, VideoType][] = await pipeline.exec();
+  const results: Array<[Error | null, VideoType]> = await pipeline.exec();
   return videosToObject(results, queries);
 };
 
-const getConferences = async (videos: any[]) => {
+const getConferences = async (videos: Array<{id: string, video: VideoType}>) => {
   const queries: string[] = [];
   const pipeline = redis.pipeline();
   const conferenceSet = new Set(videos.map(video => video.video.conferenceId));
-  for (let conferenceId of Array.from(conferenceSet)) {
+  for (const conferenceId of Array.from(conferenceSet)) {
     queries.push(conferenceId);
     pipeline.hgetall(conferenceId);
   }
@@ -78,12 +82,12 @@ const getConferences = async (videos: any[]) => {
   });
 
   const conferenceMap = new Map();
-  for (let conference of newResults) {
+  for (const conference of newResults) {
     delete conference.conference.videos;
     conferenceMap.set(conference.id, conference.conference);
   }
 
-  for (let video of videos) {
+  for (const video of videos) {
     const conference = conferenceMap.get(video.video.conferenceId);
     if (conference.videos) {
       conference.videos.push(video.video);
@@ -92,7 +96,7 @@ const getConferences = async (videos: any[]) => {
     }
   }
 
-  return newResults;
+  return newResults.map(conference => conference.conference);
 };
 
 const getVideos = async (event: Event) => {
@@ -101,7 +105,8 @@ const getVideos = async (event: Event) => {
     start: Number(event.queryStringParameters?.start),
     stop: Number(event.queryStringParameters?.stop),
   });
-  if (!videoResults) return null;
+  
+  if (!videoResults) { return null; }
 
   // now get video hashes
   const videos = await getVideoHashes(videoResults);

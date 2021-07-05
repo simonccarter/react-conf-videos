@@ -1,3 +1,12 @@
+# sample dev block in the toml
+# note: each of these fields are OPTIONAL and should only be used if you need an override
+[dev]
+  framework = "#custom"
+  command = "yarn start"
+  port = 9000 # The port that the netlify dev will be accessible on
+  targetPort = 8080 # port started by webpack-dev-server
+  publish = "./"
+
 [context.production.environment]
     REDIS_PREFIX = "prod"
 
