@@ -6,8 +6,10 @@ import { sluggifyUrl } from '../utils'
 import { useDebounce } from './useDebounce'
 
 import * as queryString from 'query-string';
+import { search } from 'services/web'
+import { ConferenceTransformed } from '../domain/TransformedJSON'
 
-const useSearch = (routeMatch?: string) => {
+const useConference = (routeMatch?: string) => {
     const history = useHistory();
     const location = useLocation()
     
@@ -15,7 +17,7 @@ const useSearch = (routeMatch?: string) => {
     const [localQuery, setLocalQuery] = React.useState(query)
     const debouncedQuery = useDebounce(localQuery)
 
-    const list = useRecoilValue(listState);
+    const [list, setList] = useRecoilState(listState);
 
     const match = useRouteMatch<{ name?: string }>(routeMatch ?? '')
 
@@ -23,7 +25,21 @@ const useSearch = (routeMatch?: string) => {
     // const filteredList = useRecoilValue(filteredListState(match?.params?.name ?? ''));
     
     const { numberOfVideos, numberOfConferences } = useRecoilValue(computedResultDetails)
-    // const [conference, setConference] = React.useState<ConferenceTransformed | undefined>(filteredList?.[0])
+    const [conference, setConference] = React.useState<ConferenceTransformed | undefined>(list?.[0])
+
+    // search over conference based off conference name
+    React.useEffect(() => {
+        const getVideos = async () => {
+            if(match?.params?.name){
+                const result = await search({
+                    conference: match.params.name,
+                    query
+                })
+                setList(result)
+            }
+        }
+        getVideos()
+    }, [match?.params?.name, query])
 
     // debounce
     React.useEffect(() => {
@@ -33,17 +49,17 @@ const useSearch = (routeMatch?: string) => {
     }, [debouncedQuery]);
 
     // set conference details for conference/:name pages
-    // React.useEffect(() => {
-    //     if (filteredList.length) {
-    //         setConference(filteredList[0])
-    //     }
-    // }, [filteredList])
+    React.useEffect(() => {
+        if (list.length) {
+            setConference(list[0])
+        }
+    }, [list?.[0]?.title])
 
     // set query state on load based off of url
     React.useEffect(() => {
         const search = queryString.parse(location.search)
         if (search?.query && search.query !== '') {
-            setLocalQuery(search.query as string) // :/
+            setLocalQuery(search.query as string) 
         }
     }, [])
 
@@ -61,7 +77,7 @@ const useSearch = (routeMatch?: string) => {
     return {
         query,
         localQuery,
-        // conference,
+        conference,
         list,
         onInputChange,
         numberOfVideos,
@@ -69,4 +85,4 @@ const useSearch = (routeMatch?: string) => {
     }
 }
 
-export default useSearch
+export default useConference

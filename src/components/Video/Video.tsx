@@ -24,7 +24,7 @@ export const VideoInner: React.FC<{video: VideoTransformed}> = ({ video }) => {
         >
           <span className={styles.title}>
             {lightning && <FontAwesomeIcon icon={faBolt} color="#f5de1a" />}{' '}
-            {title}
+            <span dangerouslySetInnerHTML={{__html: title}} />            
           </span>
           <span className={styles.right}>{length}</span>
         </button>
@@ -51,13 +51,12 @@ export const VideoInner: React.FC<{video: VideoTransformed}> = ({ video }) => {
       <span className={styles.details}>
         {presenter}
         <Link
-          to={`/conference/${sluggifyUrl(conference?.title ?? '')}`}
-          aria-label={`See all videos for conference ${conference?.title}`}
+          to={`/conference/${conference?.title?.replace(/(<([^>]+)>)/gi, "")?? ''}`}
+          aria-label={`See all videos for conference ${conference?.title?.replace(/(<([^>]+)>)/gi, "")}`}
           className={styles.conferenceTitle}
           data-cy="conference-link"
-        >
-          {conference?.title}
-        </Link>
+          dangerouslySetInnerHTML={{__html: conference?.title ?? ''}}
+        />
       </span>
     </li>
   );

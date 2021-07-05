@@ -1,4 +1,4 @@
-import { atom, selector, selectorFamily } from 'recoil';
+import { atom, selector } from 'recoil';
 import { Conferences } from '../domain/TransformedJSON';
 
 export const listState = atom<Conferences>({
@@ -34,7 +34,6 @@ export const computedResultDetails = selector({
   key: 'computedResultDetails',
   get: ({ get }) => {
     const list = get(listState);
-    console.log('list', list)
     const numberOfVideos = list.reduce((numberOfVideos, conference) => {
       numberOfVideos += conference.videos.length;
       return numberOfVideos;

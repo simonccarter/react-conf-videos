@@ -7,6 +7,7 @@ require('dotenv').config();
 const transformDataFromJson = require('./json2redis.js');
 
 const REDIS_PREFIX = process.env.REDIS_PREFIX
+const DELIMITER = "_"
 
 // FT.CREATE idx:conference ON HASH PREFIX 1 "conference:" SCHEMA title TEXT SORTABLE
 // FT.CREATE idx:video ON HASH PREFIX 1 "video:" SCHEMA title TEXT SORTABLE presenter TEXT SORTABLE
@@ -63,10 +64,10 @@ const storeVideos = async () => {
         const originalVideo = transformedData.videos[videoId]
         const video = {
             ...originalVideo,
-            conferenceId: `${REDIS_PREFIX}:conference:${mappedVideosToConferences.get(videoId)}`
+            conferenceId: `${REDIS_PREFIX}${DELIMITER}conference${DELIMITER}${mappedVideosToConferences.get(videoId)}`
         }
 
-        pipeline.hmset(`${REDIS_PREFIX}:video:${videoId}`, toArray(video))
+        pipeline.hmset(`${REDIS_PREFIX}${DELIMITER}video${DELIMITER}${videoId}`, toArray(video))
     }
     await pipeline.exec()
 
@@ -80,7 +81,7 @@ const storeConferences = async (data) => {
             continue;
         }
 
-        key = `${REDIS_PREFIX}:conference:${conferenceId}`
+        key = `${REDIS_PREFIX}${DELIMITER}conference${DELIMITER}${conferenceId}`
         conference = transformedData.conferences[conferenceId];
         conference.videos = conference.videos.join(' ||| ');
         delete conference.playlist
@@ -96,32 +97,31 @@ const storeVideosSortedByDate = async (data) => {
     const queries = [];
     let score = 0;
     for (let videoId in transformedData.videos){
-        queries.push(...[score, `${REDIS_PREFIX}:video:${videoId}`])
+        queries.push(...[score, `${REDIS_PREFIX}${DELIMITER}video${DELIMITER}${videoId}`])
         score++
     }
 
-    await client.zadd(`${REDIS_PREFIX}:videos:videos_by_date`, queries);
+    await client.zadd(`${REDIS_PREFIX}${DELIMITER}videos${DELIMITER}videos_by_date`, queries);
     return;
 }
 
 const clearAll = async () => {
-    const keys = await client.keys(`${REDIS_PREFIX}:*`);
+    const keys = await client.keys(`${REDIS_PREFIX}${DELIMITER}*`);
     const pipeline = client.pipeline()
     for(let key of keys){
         pipeline.del(key)
     }
 
-    pipeline.send_command('FT.DROPINDEX', `${REDIS_PREFIX}:idx:conference`)
-    pipeline.send_command('FT.DROPINDEX', `${REDIS_PREFIX}:idx:video`)
+    pipeline.send_command('FT.DROPINDEX', `${REDIS_PREFIX}${DELIMITER}idx${DELIMITER}conference`)
+    pipeline.send_command('FT.DROPINDEX', `${REDIS_PREFIX}${DELIMITER}idx${DELIMITER}video`)
     
-    const result = await pipeline.exec()
-    console.log(result[result.length-2], result[result.length-1])
+    await pipeline.exec()
     return;
 }
 
 const createIndexes = async () => {
-    await client.send_command('FT.CREATE', `${REDIS_PREFIX}:idx:conference ON HASH PREFIX 1 ${REDIS_PREFIX}:conference: SCHEMA title TEXT SORTABLE`.split(' '))
-    await client.send_command('FT.CREATE', `${REDIS_PREFIX}:idx:video ON HASH PREFIX 1 ${REDIS_PREFIX}:video: SCHEMA title TEXT SORTABLE presenter TEXT SORTABLE conferenceId TEXT SORTABLE`.split(' '))
+    await client.send_command('FT.CREATE', `${REDIS_PREFIX}${DELIMITER}idx${DELIMITER}conference ON HASH PREFIX 1 ${REDIS_PREFIX}${DELIMITER}conference${DELIMITER} SCHEMA title TEXT SORTABLE`.split(' '))
+    await client.send_command('FT.CREATE', `${REDIS_PREFIX}${DELIMITER}idx${DELIMITER}video ON HASH PREFIX 1 ${REDIS_PREFIX}${DELIMITER}video${DELIMITER} SCHEMA title TEXT SORTABLE presenter TEXT SORTABLE conferenceId TEXT SORTABLE`.split(' '))
 }
 
 const main = async () => {

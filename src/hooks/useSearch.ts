@@ -1,11 +1,12 @@
 import * as React from 'react'
-import { useHistory, useLocation, useRouteMatch } from 'react-router-dom'
+import { useHistory, useLocation } from 'react-router-dom'
 import { useRecoilState, useRecoilValue } from 'recoil'
 import { computedResultDetails, listState, queryState } from '../state'
 import { sluggifyUrl } from '../utils'
 import { useDebounce } from './useDebounce'
 
 import * as queryString from 'query-string';
+import { getList, search } from '../services/web'
 
 const useSearch = (routeMatch?: string) => {
     const history = useHistory();
@@ -14,16 +15,9 @@ const useSearch = (routeMatch?: string) => {
     const [query, setQuery] = useRecoilState(queryState)
     const [localQuery, setLocalQuery] = React.useState(query)
     const debouncedQuery = useDebounce(localQuery)
+    const [list, setList] = useRecoilState(listState);
 
-    const match = useRouteMatch<{ name?: string }>(routeMatch ?? '')
-
-    const list = useRecoilValue(listState);
-
-    // const list = useRecoilValue(filteredListState(match?.params?.name ?? ''));
-    // const filteredList = useRecoilValue(filteredListState(match?.params?.name ?? ''));
-    
     const { numberOfVideos, numberOfConferences } = useRecoilValue(computedResultDetails)
-    // const [conference, setConference] = React.useState<ConferenceTransformed | undefined>(filteredList?.[0])
 
     // debounce
     React.useEffect(() => {
@@ -32,16 +26,9 @@ const useSearch = (routeMatch?: string) => {
         }
     }, [debouncedQuery]);
 
-    // set conference details for conference/:name pages
-    // React.useEffect(() => {
-    //     if (filteredList.length) {
-    //         setConference(filteredList[0])
-    //     }
-    // }, [filteredList])
-
     // set query state on load based off of url
     React.useEffect(() => {
-        const search = queryString.parse(location.search)
+        const search = queryString.parse(location.search);
         if (search?.query && search.query !== '') {
             setLocalQuery(search.query as string) // :/
         }
@@ -53,6 +40,19 @@ const useSearch = (routeMatch?: string) => {
         history.push(encodeURI(url));
     }, [query])
 
+    // update list based on search
+    React.useEffect(() => {
+            const getVideos = async () => {
+                if(!!query){
+                    const result = await search({query})
+                    setList(result)
+                }else{
+                    const data = await getList({start: 0})
+                    setList(data);
+                }
+            }
+            getVideos()
+    }, [query])
 
     const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setLocalQuery(e.target.value)
@@ -61,7 +61,6 @@ const useSearch = (routeMatch?: string) => {
     return {
         query,
         localQuery,
-        // conference,
         list,
         onInputChange,
         numberOfVideos,

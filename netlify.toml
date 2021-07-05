@@ -7,6 +7,9 @@
   targetPort = 8080 # port started by webpack-dev-server
   publish = "./"
 
+[context.dev.environment]
+    REDIS_PREFIX = "local"
+
 [context.production.environment]
     REDIS_PREFIX = "prod"
 
@@ -16,7 +19,5 @@
 [context.deploy-preview.environment]
     REDIS_PREFIX = "deploy-preview"
 
-[context.branch-deploy.environment]
-    REDIS_PREFIX = "feature-branch"
 
     

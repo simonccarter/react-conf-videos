@@ -6,15 +6,14 @@ import {
     ResultDetails,
     SearchInput
 } from 'components';
+import useConferencePage from 'hooks/useConferencePage';
 import * as React from 'react';
-import useSearch from '../../../hooks/useSearch';
-onferencePage';
 
 export const ConfPage: React.FC<any> = () => {
     const {
         localQuery,
         conference,
-        filteredList,
+        list,
         onInputChange,
         numberOfVideos,
         numberOfConferences
@@ -40,7 +39,7 @@ export const ConfPage: React.FC<any> = () => {
                     placeholder={`Search ${conference?.title}`}
                 />
                 <ResultDetails numberOfVideos={numberOfVideos} numberOfConferences={numberOfConferences} />
-                <List conferences={filteredList} />
+                <List conferences={list} />
             </InnerLayoutContainer>
         </div>
     );

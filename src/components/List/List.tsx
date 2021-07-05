@@ -15,11 +15,11 @@ type Props = {
 
 export const List: React.FC<Props> = ({ conferences }) => {
   const videos = conferences.map(conference => conference.videos).flat();
-  const videosToConferencesMap = new Map()
+  const videosToConferencesMap = new Map();
 
-  for(const conference of conferences) {
-    for(const video of videos) {
-      videosToConferencesMap.set(video.id, conference)
+  for (const conference of conferences) {
+    for (const video of conference.videos) {
+      videosToConferencesMap.set(video.id, conference);
     }
   }
 
@@ -28,11 +28,14 @@ export const List: React.FC<Props> = ({ conferences }) => {
   }> = ({ virtual }) => (
     <ol className={styles.root} style={virtual.style} data-cy="results-list">
       {virtual.items.map((item: VideoTransformed, index: number) => (
-        <Video video={{...item, conference: videosToConferencesMap.get(item.id) }} key={index} />
+        <Video
+          video={{ ...item, conference: videosToConferencesMap.get(item.id) }}
+          key={index}
+        />
       ))}
     </ol>
   );
-  
+
   const MyVirtualList = VirtualList({
     firstItemIndex: 0,
     lastItemIndex: 20,

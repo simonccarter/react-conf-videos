@@ -1,0 +1,27 @@
+local_video_016174044d310661b600584b5f4a002f
+Video search with conference
+FT.SEARCH local_idx_video "@title|presenter:(react) @conferenceId:local_conference_86c265ce6820d53d9513a949a930ddb2"
+
+3)	local_video_5a3b7d8a5834c5ba8e77df91fe03ca71
+5)	local_video_195f3bf9050496450797af4b88f77e4f
+7)	local_video_3f6a787044a23d818bc39d3a0a957692
+9)	local_video_fa491326767d7cda7dd0e1f2721de30d
+11)	local_video_68ffbfe1d1c625a5bcd2339e9336904f
+13)	local_video_8277cd80338956875e52a6618db60e59
+15)	local_video_9d4237990a973eac48d148a2dae28b55
+17)	local_video_da42278cae2dc90b70357af2b3aad0bc
+
+Video search without conference:
+
+
+FT.SEARCH local_idx_video "@title|presenter:(react)"
+1)	local_video_1927b3d00811293cb4967a66eaca1e5d
+3)	local_video_5888d07635de4084ee800b578fff7153
+5)	local_video_327309b4686c3bb4204bf223c699c0be
+7)	local_video_23fac552ba2ee03aa513e4f56820d679
+9)	local_video_016174044d310661b600584b5f4a002f
+11)	local_video_ca29f18fb4054ea94a7a67577ed2ce42
+13)	local_video_ce98c0154d98341a8452f544dc763ff4
+15)	local_video_9c6546ceefeda1d50574ad091d131d9d
+17)	local_video_f8c4d8c3f310dfbf37a8a7d71e4cea68
+19)	local_video_9da1f46d69b7306f73e8fa83734cfd5f
