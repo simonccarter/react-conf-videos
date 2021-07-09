@@ -119,7 +119,7 @@
     "mdtable2json": "0.1.0",
     "netlify-cli": "^3.39.4",
     "path": "0.12.7",
-    "prettier": "1.17.0",
+    "prettier": "^2.3.2",
     "progress-bar-webpack-plugin": "1.12.1",
     "redux-test-utils": "0.3.0",
     "sass": "^1.34.1",
