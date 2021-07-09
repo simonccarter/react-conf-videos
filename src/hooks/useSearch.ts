@@ -17,6 +17,7 @@ const useSearch = (routeMatch?: string) => {
 
   const [query, setQuery] = useRecoilState(queryState);
   const [localQuery, setLocalQuery] = React.useState(query);
+  const [isLoading, setIsLoading] = React.useState(true);
   const debouncedQuery = useDebounce(localQuery);
   const [list, setList] = useRecoilState(listState);
 
@@ -30,6 +31,7 @@ const useSearch = (routeMatch?: string) => {
   // search over conference based off conference name
   React.useEffect(() => {
     const getVideos = async () => {
+      setIsLoading(true);
       if (match?.params?.name) {
         const result = await search({
           conference: match.params.name,
@@ -43,6 +45,7 @@ const useSearch = (routeMatch?: string) => {
         const data = await getList({ start: 0 });
         setList(data);
       }
+      setIsLoading(false);
     };
     getVideos();
   }, [match?.params?.name, query]);
@@ -79,11 +82,13 @@ const useSearch = (routeMatch?: string) => {
   }, [query]);
 
   const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setIsLoading(true);
     setLocalQuery(e.target.value);
   };
 
   return {
     conference,
+    isLoading,
     list,
     localQuery,
     numberOfConferences,

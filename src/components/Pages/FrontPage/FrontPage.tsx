@@ -4,20 +4,23 @@ import {
   Header,
   InnerLayoutContainer,
   List,
+  Loader,
   Meta,
   ResultDetails,
   SearchInput,
 } from 'components';
+
 import useSearch from '../../../hooks/useSearch';
 
 export const FrontPage: React.FC<any> = () => {
   const {
-    query,
-    localQuery,
+    isLoading,
     list,
-    onInputChange,
+    localQuery,
+    numberOfConferences,
     numberOfVideos,
-    numberOfConferences
+    onInputChange,
+    query,
   } = useSearch();
 
   return (
@@ -34,7 +37,8 @@ export const FrontPage: React.FC<any> = () => {
           numberOfVideos={numberOfVideos}
           numberOfConferences={numberOfConferences}
         />
-        <List conferences={list} />
+        {!isLoading && <List conferences={list} />}
+        {isLoading && <Loader />}
       </InnerLayoutContainer>
     </>
   );

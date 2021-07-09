@@ -2,6 +2,7 @@ import {
   Header,
   InnerLayoutContainer,
   List,
+  Loader,
   Meta,
   ResultDetails,
   SearchInput,
@@ -11,12 +12,13 @@ import * as React from 'react';
 
 export const ConfPage: React.FC<any> = () => {
   const {
-    localQuery,
     conference,
+    isLoading,
     list,
-    onInputChange,
-    numberOfVideos,
+    localQuery,
     numberOfConferences,
+    numberOfVideos,
+    onInputChange,
   } = useSearch('/conference/:name');
   return (
     <div>
@@ -40,6 +42,8 @@ export const ConfPage: React.FC<any> = () => {
           numberOfConferences={numberOfConferences}
         />
         <List conferences={list} />
+        {!isLoading && <List conferences={list} />}
+        {isLoading && <Loader />}
       </InnerLayoutContainer>
     </div>
   );

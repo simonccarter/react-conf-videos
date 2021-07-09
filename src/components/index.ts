@@ -8,17 +8,19 @@ import { ConfPage, FrontPage } from 'components/Pages';
 import { ResultDetails } from 'components/ResultDetails';
 import { SearchInput } from 'components/SearchInput';
 import { Video } from 'components/Video';
+import { Loader } from 'components/Loader';
 
 export {
-  List,
-  Logo,
-  Meta,
-  Video,
-  Header,
   ConfPage,
   FrontPage,
+  Header,
+  InnerLayoutContainer,
+  List,
+  Loader,
+  Logo,
+  Meta,
+  ResultDetails,
   ScrollToTop,
   SearchInput,
-  ResultDetails,
-  InnerLayoutContainer
+  Video,
 };
