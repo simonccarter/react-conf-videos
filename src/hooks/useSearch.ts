@@ -29,10 +29,9 @@ const useSearch = (routeMatch?: string) => {
     ConferenceTransformed | undefined
   >(list?.[0]);
 
-  const searchQuery = queryString.parse(location.search);
-
   // search over conference based off conference name
   React.useEffect(() => {
+    const searchQuery = queryString.parse(location.search);
     const getVideos = async () => {
       setIsLoading(true);
       if (match?.params?.name) {
@@ -56,10 +55,11 @@ const useSearch = (routeMatch?: string) => {
     getVideos();
   }, [match?.params?.name, query]);
 
-  // listen to back presses
+  // listen to back presses from conf pages ...
   history.listen((location) => {
+    const searchQuery = queryString.parse(location.search);
     if (history.action === 'POP') {
-      setLocalQuery((searchQuery.query as string) ?? '');
+      // setLocalQuery((searchQuery.query as string) ?? '');
     }
   });
 
