@@ -1,4 +1,4 @@
-const Redis = require('ioredis');
+import Redis from 'ioredis';
 require('dotenv').config();
 
 const client = new Redis(process.env.DBPATH);
@@ -23,7 +23,7 @@ const clearAll = async () => {
     return;
 }
 
-const main = async (data) => {
+const main = async () => {
     console.log('flushing redis')
     await clearAll()
 

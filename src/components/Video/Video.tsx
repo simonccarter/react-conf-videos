@@ -4,27 +4,36 @@ import * as cn from 'classnames';
 import { VideoTransformed } from 'domain/TransformedJSON';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import { sluggifyUrl } from 'utils';
 
 import styles from './Video.scss';
 
-export const VideoInner: React.FC<{video: VideoTransformed}> = ({ video }) => {
-  const { title, length, embeddableLink, lightning = false, presenter, conference } = video
+export const VideoInner = React.forwardRef<
+  HTMLLIElement,
+  { video: VideoTransformed }
+>(({ video }, ref) => {
+  const {
+    title,
+    length,
+    embeddableLink,
+    lightning = false,
+    presenter,
+    conference,
+  } = video;
   const [isOpen, toggleIsOpen] = React.useState(false);
-  
+
   return (
-    <li className={styles.root} data-cy="result">
+    <li className={styles.root} data-cy="result" ref={ref}>
       <h3 className={styles.heading}>
         <button
           id={`accordion-${title}`}
           className={styles.top}
-          onClick={() => toggleIsOpen(open => !open)}
+          onClick={() => toggleIsOpen((open) => !open)}
           aria-expanded={isOpen}
           aria-controls={`content-${title}`}
         >
           <span className={styles.title}>
             {lightning && <FontAwesomeIcon icon={faBolt} color="#f5de1a" />}{' '}
-            <span dangerouslySetInnerHTML={{__html: title}} />            
+            <span dangerouslySetInnerHTML={{ __html: title }} />
           </span>
           <span className={styles.right}>{length}</span>
         </button>
@@ -51,15 +60,20 @@ export const VideoInner: React.FC<{video: VideoTransformed}> = ({ video }) => {
       <span className={styles.details}>
         {presenter}
         <Link
-          to={`/conference/${conference?.title?.replace(/(<([^>]+)>)/gi, "")?? ''}`}
-          aria-label={`See all videos for conference ${conference?.title?.replace(/(<([^>]+)>)/gi, "")}`}
+          to={`/conference/${
+            conference?.title?.replace(/(<([^>]+)>)/gi, '') ?? ''
+          }`}
+          aria-label={`See all videos for conference ${conference?.title?.replace(
+            /(<([^>]+)>)/gi,
+            ''
+          )}`}
           className={styles.conferenceTitle}
           data-cy="conference-link"
-          dangerouslySetInnerHTML={{__html: conference?.title ?? ''}}
+          dangerouslySetInnerHTML={{ __html: conference?.title ?? '' }}
         />
       </span>
     </li>
   );
-};
+});
 
 export const Video = VideoInner;

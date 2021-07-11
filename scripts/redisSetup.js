@@ -1,6 +1,6 @@
-const fs = require('fs')
-const path = require('path');
-const Redis = require('ioredis');
+import fs from 'fs';
+import path from 'path';
+import Redis from 'ioredis';
 
 require('dotenv').config();
 

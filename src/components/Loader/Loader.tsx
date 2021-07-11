@@ -11,8 +11,8 @@ export const Loader = () => (
       xmlns="http://www.w3.org/2000/svg"
       stroke="#f5de1a"
     >
-      <g fill="#f5de1a" fill-rule="evenodd">
-        <g transform="translate(1 1)" stroke-width="2">
+      <g fill="#f5de1a" fillRule="evenodd">
+        <g transform="translate(1 1)" strokeWidth="2">
           <circle cx="5" cy="50" r="5">
             <animate
               attributeName="cy"

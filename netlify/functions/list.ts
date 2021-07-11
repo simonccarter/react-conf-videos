@@ -1,10 +1,10 @@
 import { Handler } from '@netlify/functions';
 import Redis from 'ioredis';
 
-const REDIS_PREFIX = process.env.REDIS_PREFIX
+const REDIS_PREFIX = process.env.REDIS_PREFIX;
 const DELIMITER = '_';
 
-type Event = Parameters<Handler>[0]
+type Event = Parameters<Handler>[0];
 
 const redis = new Redis(process.env.DBPATH);
 
@@ -19,45 +19,45 @@ type VideoType = {
   id: string;
 };
 
-type ProcessedResultType = MappedConference[]
+type ProcessedResultType = MappedConference[];
 
 type MappedConference = {
   id: string;
-  website: string,
-  date: string,
-  videos:  VideoType[]
-  title: string,
-}
+  website: string;
+  date: string;
+  videos: VideoType[];
+  title: string;
+};
 
 type UnmappedConference = {
-  website: string,
-  date: string,
-  videos: string,
-  title: string,
-}
+  website: string;
+  date: string;
+  videos: string;
+  title: string;
+};
 
-const videosToObject = (data: Array<[Error | null, Omit<VideoType, 'id'>]>, queries: string[]) => {
-  return data.reduce(
-    (acc, [error, video], index) => {
-      return [
-        ...acc,
-        {
+const videosToObject = (
+  data: Array<[Error | null, Omit<VideoType, 'id'>]>,
+  queries: string[]
+) => {
+  return data.reduce((acc, [error, video], index) => {
+    return [
+      ...acc,
+      {
+        id: queries[index],
+        video: {
+          ...video,
           id: queries[index],
-          video: {
-            ...video,
-            id: queries[index],
-          }
-        }
-      ];
-    },
-    [] as Array<{ id: string; video: VideoType }>
-  );
+        },
+      },
+    ];
+  }, [] as Array<{ id: string; video: VideoType }>);
 };
 
 const getVideoIds = async ({
   start,
   stop,
-  page
+  page,
 }: {
   start?: number;
   stop?: number;
@@ -67,7 +67,11 @@ const getVideoIds = async ({
   const STOP = stop || (START ? START + 20 : 20);
 
   // get video ids
-  const videoResults = await redis.zrange(`${REDIS_PREFIX}${DELIMITER}videos${DELIMITER}videos_by_date`, START, STOP);
+  const videoResults = await redis.zrange(
+    `${REDIS_PREFIX}${DELIMITER}videos${DELIMITER}videos_by_date`,
+    START,
+    STOP
+  );
   return !videoResults ? null : videoResults;
 };
 
@@ -82,10 +86,14 @@ const getVideos = async (videos: string[]) => {
   return videosToObject(results, queries);
 };
 
-const getConferences = async (videos: Array<{id: string, video: VideoType}>) => {
+const getConferences = async (
+  videos: Array<{ id: string; video: VideoType }>
+) => {
   const queries: string[] = [];
   const pipeline = redis.pipeline();
-  const conferenceSet = new Set(videos.map(video => video.video.conferenceId));
+  const conferenceSet = new Set(
+    videos.map((video) => video.video.conferenceId)
+  );
   for (const conferenceId of Array.from(conferenceSet)) {
     queries.push(conferenceId);
     pipeline.hgetall(conferenceId);
@@ -95,18 +103,20 @@ const getConferences = async (videos: Array<{id: string, video: VideoType}>) => 
 
   const newResults = results.map(([_, result], index) => {
     return {
-        ...result,
-        id: queries[index]
-      }
+      ...result,
+      id: queries[index],
+    };
   });
 
   const conferenceMap = new Map();
-  const conferencesWithVideos:ProcessedResultType = newResults.map(conference => {
-    return {
-      ...conference,
-      videos: []
+  const conferencesWithVideos: ProcessedResultType = newResults.map(
+    (conference) => {
+      return {
+        ...conference,
+        videos: [],
+      };
     }
-  })
+  );
   for (const conference of conferencesWithVideos) {
     conferenceMap.set(conference.id, conference);
   }
@@ -116,7 +126,7 @@ const getConferences = async (videos: Array<{id: string, video: VideoType}>) => 
     conference.videos.push(video.video);
   }
 
-  return conferencesWithVideos
+  return conferencesWithVideos;
 };
 
 const getList = async (event: Event) => {
@@ -125,8 +135,10 @@ const getList = async (event: Event) => {
     start: Number(event.queryStringParameters?.start),
     stop: Number(event.queryStringParameters?.stop),
   });
-  
-  if (!videoResults) { return null; }
+
+  if (!videoResults) {
+    return null;
+  }
 
   // now get videos
   const videos = await getVideos(videoResults);
@@ -142,12 +154,18 @@ const handler: Handler = async (event) => {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
-  if(event.queryStringParameters?.start && isNaN(Number(event.queryStringParameters.start))){
-    return { statusCode: 400, body: 'Invalid Request'}; 
+  if (
+    event.queryStringParameters?.start &&
+    isNaN(Number(event.queryStringParameters.start))
+  ) {
+    return { statusCode: 400, body: 'Invalid Request' };
   }
 
-  if(event.queryStringParameters?.stop && isNaN(Number(event.queryStringParameters.stop))){
-    return { statusCode: 400, body: 'Invalid Request'}; 
+  if (
+    event.queryStringParameters?.stop &&
+    isNaN(Number(event.queryStringParameters.stop))
+  ) {
+    return { statusCode: 400, body: 'Invalid Request' };
   }
 
   try {
@@ -155,12 +173,12 @@ const handler: Handler = async (event) => {
 
     return {
       statusCode: 200,
-      body: JSON.stringify(results, null, 2)
+      body: JSON.stringify(results, null, 2),
     };
   } catch (e) {
     return {
       statusCode: 500,
-      body: e
+      body: e,
     };
   }
 };

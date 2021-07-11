@@ -7,8 +7,6 @@ type GetListProps = {
   end?: number;
 };
 
-
-
 export const getList = async (
   props: GetListProps = {}
 ): Promise<Conferences> => {
@@ -16,7 +14,7 @@ export const getList = async (
     props.start = 0;
   }
   if (!props.end) {
-    props.end = 19;
+    props.end = props.start + 19;
   }
   const queryStrings = queryString.stringify(props);
   const url = `/.netlify/functions/list?${queryStrings}`;
