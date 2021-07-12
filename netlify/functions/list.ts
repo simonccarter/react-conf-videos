@@ -1,10 +1,10 @@
 import { Handler } from '@netlify/functions';
 import Redis from 'ioredis';
 
+import { Event } from './utils/models';
+
 const REDIS_PREFIX = process.env.REDIS_PREFIX;
 const DELIMITER = '_';
-
-type Event = Parameters<Handler>[0];
 
 const redis = new Redis(process.env.DBPATH);
 
@@ -40,7 +40,7 @@ const videosToObject = (
   data: Array<[Error | null, Omit<VideoType, 'id'>]>,
   queries: string[]
 ) => {
-  return data.reduce((acc, [error, video], index) => {
+  return data.reduce((acc, [_, video], index) => {
     return [
       ...acc,
       {
@@ -57,7 +57,6 @@ const videosToObject = (
 const getVideoIds = async ({
   start,
   stop,
-  page,
 }: {
   start?: number;
   stop?: number;
@@ -156,14 +155,14 @@ const handler: Handler = async (event) => {
 
   if (
     event.queryStringParameters?.start &&
-    isNaN(Number(event.queryStringParameters.start))
+    Number.isNaN(Number(event.queryStringParameters.start))
   ) {
     return { statusCode: 400, body: 'Invalid Request' };
   }
 
   if (
     event.queryStringParameters?.stop &&
-    isNaN(Number(event.queryStringParameters.stop))
+    Number.isNaN(Number(event.queryStringParameters.stop))
   ) {
     return { statusCode: 400, body: 'Invalid Request' };
   }

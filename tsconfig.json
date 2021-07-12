@@ -17,6 +17,7 @@
     "paths": {
       "*": ["src/*", "*"]
     },
+    "allowSyntheticDefaultImports": true,
   },
   "exclude": [
     "dist",

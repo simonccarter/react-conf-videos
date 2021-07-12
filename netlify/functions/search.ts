@@ -1,57 +1,21 @@
 import { Handler } from '@netlify/functions';
 import Redis from 'ioredis';
 
+import {
+  Event,
+  MappedConference,
+  MappedVideo,
+  MapperConferenceInner,
+  ProcessedResultType,
+  RedisResponseData,
+  UnmappedConference,
+  VideoType,
+} from './utils/models';
+
 const REDIS_PREFIX = process.env.REDIS_PREFIX;
 const DELIMITER = '_';
 
-type Event = Parameters<Handler>[0];
-
 const redis = new Redis(process.env.DBPATH);
-
-type VideoType = {
-  id: string;
-  embeddableLink: string;
-  title: string;
-  link: string;
-  conferenceId: string;
-  presenter: string;
-  split: string;
-  length: string;
-};
-
-type MappedVideo = {
-  id: string;
-  video: Omit<VideoType, 'id'>;
-};
-
-type MapperConferenceInner = {
-  title: string;
-  website: string;
-  date: string;
-  videos: string[];
-};
-
-type MappedConference = {
-  id: string;
-  conference: MapperConferenceInner;
-};
-
-type UnmappedConference = {
-  website: string;
-  date: string;
-  videos: string;
-  title: string;
-};
-
-type ProcessedResultType = Array<{
-  id: string;
-  website: string;
-  date: string;
-  title: string;
-  videos: VideoType[];
-}>;
-
-type RedisResponseData = [number, ...Array<string | string[]>];
 
 const toObject = <T>(data: string[]): T => {
   return data.reduce((acc, key, index) => {
@@ -60,7 +24,7 @@ const toObject = <T>(data: string[]): T => {
       if (key === 'videos') {
         value = data[index + 1].split(' ||| ');
       }
-      acc = {
+      return {
         ...acc,
         [key]: value,
       };
@@ -71,9 +35,9 @@ const toObject = <T>(data: string[]): T => {
 
 const conferencesToObject = (data: RedisResponseData) => {
   data.splice(0, 1);
-  return data.reduce((acc, key, index) => {
+  return data.reduce<MappedConference[]>((acc, key, index) => {
     if (index % 2 === 0) {
-      acc = [
+      return [
         ...acc,
         {
           id: key as string,
@@ -84,14 +48,14 @@ const conferencesToObject = (data: RedisResponseData) => {
       ];
     }
     return acc;
-  }, [] as MappedConference[]);
+  }, []);
 };
 
 const videosToObject = (data: RedisResponseData): MappedVideo[] => {
   data.splice(0, 1);
   return data.reduce((acc, key, index) => {
     if (index % 2 === 0) {
-      acc = [
+      return [
         ...acc,
         {
           id: key as string,
@@ -108,11 +72,7 @@ const getConference = async (event: Event) => {
   const query = `@title:${conference}`;
 
   try {
-    const conferenceResults: RedisResponseData = await redis.send_command(
-      'FT.SEARCH',
-      `${REDIS_PREFIX}${DELIMITER}idx${DELIMITER}conference`,
-      query
-    );
+    const conferenceResults = getConference(query);
 
     if (
       !conferenceResults ||
@@ -207,9 +167,9 @@ const searchConferences = async (event: Event) => {
 const searchVideos = async (event: Event, conference?: MappedConference) => {
   const query = event.queryStringParameters?.query ?? '';
   const AND = query && !!conference ? ' & ' : '';
-  const redisSearch = `${
-    !!query ? `(@title|presenter:(${query}))` : ''
-  } ${AND} ${!!conference?.id ? `@conferenceId:${conference.id}` : ''}`;
+  const redisSearch = `${query ? `(@title|presenter:(${query}))` : ''} ${AND} ${
+    conference?.id ? `@conferenceId:${conference.id}` : ''
+  }`;
 
   try {
     const videoResults = await redis.send_command(
@@ -312,35 +272,39 @@ const mergeResults = (
   return results;
 };
 
-const handler: Handler = async (event, context) => {
+const handler: Handler = async (event) => {
   if (event.httpMethod !== 'GET') {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
+  const updatedEvent = { ...event };
+
   if (
-    event.queryStringParameters?.query === undefined &&
-    event.queryStringParameters?.conference === undefined
+    updatedEvent.queryStringParameters?.query === undefined &&
+    updatedEvent.queryStringParameters?.conference === undefined
   ) {
     return { statusCode: 400, body: 'Invalid Request' };
   }
 
   if (
-    event.queryStringParameters?.conference !== undefined &&
-    event.queryStringParameters?.query === undefined
+    updatedEvent.queryStringParameters?.conference !== undefined &&
+    updatedEvent.queryStringParameters?.query === undefined
   ) {
-    event.queryStringParameters.query = '';
+    updatedEvent.queryStringParameters.query = '';
   }
 
   try {
     let conference: MappedConference | undefined;
     let conferenceResults: ProcessedResultType | null | undefined;
-    if (!!event.queryStringParameters?.conference) {
-      conference = await getConference(event);
+    if (updatedEvent.queryStringParameters?.conference) {
+      conference = await getConference(updatedEvent);
     } else {
-      conferenceResults = await searchConferences(event);
+      conferenceResults = await searchConferences(updatedEvent);
     }
 
-    const videoResults = await searchVideos(event, conference);
+    console.log('conference', conference);
+    const videoResults = await searchVideos(updatedEvent, conference);
+    console.log('videoResults', videoResults);
 
     const results =
       !!conferenceResults && !!videoResults

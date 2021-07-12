@@ -1,15 +1,13 @@
 import * as React from 'react';
 import { useHistory, useLocation, useRouteMatch } from 'react-router-dom';
 import { useRecoilState, useRecoilValue } from 'recoil';
-import { computedResultDetails, listState, queryState } from '../state';
-import { sluggifyUrl } from '../utils';
-import { useDebounce } from './useDebounce';
-
 import * as queryString from 'query-string';
-import { getList, search } from '../services/web';
 import { ConferenceTransformed } from 'domain/TransformedJSON';
+import { computedResultDetails, listState, queryState } from '../state';
+import useDebounce from './useDebounce';
+import { getList, search } from '../services/web';
 
-const useSearch = (routeMatch?: string) => {
+export default (routeMatch?: string) => {
   const history = useHistory();
   const location = useLocation();
 
@@ -29,7 +27,23 @@ const useSearch = (routeMatch?: string) => {
     ConferenceTransformed | undefined
   >(list?.[0]);
 
-  // search over conference based off conference name
+  // set query state on load based off of url
+  React.useEffect(() => {
+    const searchParams = queryString.parse(location.search);
+    const queryValue = searchParams.query ? (searchParams.query as string) : '';
+    setLocalQuery(queryValue);
+  }, [location.search, setQuery]);
+
+  React.useEffect(() => {
+    const newURL = query
+      ? `${window.location.pathname}?query=${query}`
+      : `${window.location.pathname}`;
+    const existingURL = `${window.location.pathname}?${window.location.search}`;
+    if (query && newURL !== existingURL) {
+      history.push(newURL);
+    }
+  }, [query, history]);
+
   React.useEffect(() => {
     const searchQuery = queryString.parse(location.search);
     const getVideos = async () => {
@@ -41,7 +55,7 @@ const useSearch = (routeMatch?: string) => {
         });
         setList(result);
         setPage(1);
-      } else if (!!query) {
+      } else if (query) {
         const result = await search({ query });
         setList(result);
         setPage(0);
@@ -53,46 +67,22 @@ const useSearch = (routeMatch?: string) => {
       setIsLoading(false);
     };
     getVideos();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [match?.params?.name, query]);
 
-  // listen to back presses from conf pages ...
-  history.listen((location) => {
-    const searchQuery = queryString.parse(location.search);
-    if (history.action === 'POP') {
-      // setLocalQuery((searchQuery.query as string) ?? '');
-    }
-  });
-
-  // debounce
+  // debounce query input
   React.useEffect(() => {
     if (debouncedQuery || debouncedQuery === '') {
       setQuery(debouncedQuery);
     }
-  }, [debouncedQuery]);
+  }, [debouncedQuery, setQuery]);
 
   // set conference details for conference/:name pages
   React.useEffect(() => {
     if (list.length) {
       setConference(list[0]);
     }
-  }, [list?.[0]?.title]);
-
-  // set query state on load based off of url
-  React.useEffect(() => {
-    const search = queryString.parse(location.search);
-    if (search?.query && search.query !== '') {
-      setLocalQuery(search.query as string); // :/
-    }
-  }, []);
-
-  // set url based off query state
-  React.useEffect(() => {
-    const url =
-      query === ''
-        ? location.pathname
-        : `${location.pathname}?query=${sluggifyUrl(query)}`;
-    history.push(encodeURI(url));
-  }, [query]);
+  }, [list]);
 
   // remove page loader
   React.useEffect(() => {
@@ -109,7 +99,7 @@ const useSearch = (routeMatch?: string) => {
   const infiniteLoader = async () => {
     const data = await getList({ start: page });
     setList([...list, ...data]);
-    setPage((page) => page + 1);
+    setPage((_page) => _page + 1);
   };
 
   const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -129,5 +119,3 @@ const useSearch = (routeMatch?: string) => {
     query,
   };
 };
-
-export default useSearch;

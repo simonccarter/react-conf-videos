@@ -3,6 +3,7 @@ import { ConferenceInput, JSONInput, VideoInput } from 'domain/InputJSON';
 import { Conferences } from 'domain/TransformedJSON';
 import { omit, sort } from 'ramda';
 
+/* eslint-disable no-else-return */
 const sortByDate = sort<ConferenceInput>(
   (a: ConferenceInput, b: ConferenceInput) => {
     const [aD, aM, aY] = a.date.split('-');
@@ -35,7 +36,7 @@ const sortByDate = sort<ConferenceInput>(
 );
 
 const addEmbeddableLinksToVideos = (data: JSONInput): Conferences => {
-  const linkReg = /https:?\/\/www\.youtube\.com\/watch\?v=(.*?)\&.*$/;
+  const linkReg = /https:?\/\/www\.youtube\.com\/watch\?v=(.*?)&.*$/;
   return data.map((conference: ConferenceInput) => {
     const videos = conference.videos || [];
     const nVideos = videos.map((video: VideoInput) => {
@@ -43,24 +44,23 @@ const addEmbeddableLinksToVideos = (data: JSONInput): Conferences => {
         linkReg,
         'https://www.youtube.com/embed/$1'
       );
-      return Object.assign({}, video, { embeddableLink });
+      return { ...video, embeddableLink };
     });
-    return Object.assign({}, conference, { videos: nVideos });
+    return { ...conference, videos: nVideos };
   });
 };
 
-const mapConferenceDetailsOntoVideo = (conference: ConferenceInput) => (
-  video: VideoInput
-) => ({
-  ...video,
-  conference: omit(['videos'], conference)
-});
+const mapConferenceDetailsOntoVideo =
+  (conference: ConferenceInput) => (video: VideoInput) => ({
+    ...video,
+    conference: omit(['videos'], conference),
+  });
 
 const addConferenceDetails = (data: Conferences): Conferences => {
-  return data.map(conference => {
+  return data.map((conference) => {
     const videos = conference.videos || [];
     const nVideos = videos.map(mapConferenceDetailsOntoVideo(conference));
-    return Object.assign({}, conference, { videos: nVideos });
+    return { ...conference, videos: nVideos };
   });
 };
 

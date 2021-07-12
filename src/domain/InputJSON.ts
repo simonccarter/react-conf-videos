@@ -7,6 +7,7 @@ export type VideoInput = {
   split: string;
   presenter: string;
   id: string;
+  embeddableLink: string;
 };
 
 export type ConferenceInput = {

@@ -1,5 +1,3 @@
-# sample dev block in the toml
-# note: each of these fields are OPTIONAL and should only be used if you need an override
 [dev]
   framework = "#custom"
   command = "yarn start"

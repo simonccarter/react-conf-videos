@@ -28,6 +28,7 @@ export const VideoInner = React.forwardRef<
           id={`accordion-${title}`}
           className={styles.top}
           onClick={() => toggleIsOpen((open) => !open)}
+          type="button"
           aria-expanded={isOpen}
           aria-controls={`content-${title}`}
         >
@@ -53,16 +54,19 @@ export const VideoInner = React.forwardRef<
             height="360"
             src={embeddableLink}
             frameBorder="0"
-            allowFullScreen={true}
+            allowFullScreen
           />
         )}
       </div>
       <span className={styles.details}>
         {presenter}
         <Link
-          to={`/conference/${
-            conference?.title?.replace(/(<([^>]+)>)/gi, '') ?? ''
-          }`}
+          to={{
+            pathname: `/conference/${
+              conference?.title?.replace(/(<([^>]+)>)/gi, '') ?? ''
+            }`,
+            search: '',
+          }}
           aria-label={`See all videos for conference ${conference?.title?.replace(
             /(<([^>]+)>)/gi,
             ''

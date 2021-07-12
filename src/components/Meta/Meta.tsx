@@ -7,12 +7,13 @@ type Props = {
   description?: string;
 };
 
+// eslint-disable-next-line import/prefer-default-export
 export const Meta: React.FunctionComponent<Props> = ({
   title,
-  description = ''
+  description = '',
 }) => (
   <Helmet>
-    <title>{title && `${title + ' - '}`}React.js Videos</title>
+    {title !== '' && <title>{`${title} - `}React.js Videos</title>}
     <meta name="description" content={description} />
   </Helmet>
 );

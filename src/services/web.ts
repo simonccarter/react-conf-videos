@@ -10,11 +10,12 @@ type GetListProps = {
 export const getList = async (
   props: GetListProps = {}
 ): Promise<Conferences> => {
-  if (!props.start) {
-    props.start = 0;
+  const newParams = { ...props };
+  if (!newParams.start) {
+    newParams.start = 0;
   }
-  if (!props.end) {
-    props.end = props.start + 19;
+  if (!newParams.end) {
+    newParams.end = newParams.start + 19;
   }
   const queryStrings = queryString.stringify(props);
   const url = `/.netlify/functions/list?${queryStrings}`;
@@ -31,7 +32,7 @@ type SearchProps = {
   conference?: string;
 };
 
-export const search = async (props: SearchProps = {}): Promise<any> => {
+export const search = async (props: SearchProps = {}): Promise<Conferences> => {
   const queryStrings = queryString.stringify(props);
   const url = `/.netlify/functions/search?${queryStrings}`;
   try {
