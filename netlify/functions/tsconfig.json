@@ -3,5 +3,5 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
   },
-  "include": ["netlify/*", "./*"],
+  "include": ["netlify/*", "./*", "/**/*"],
 }

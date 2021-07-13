@@ -2,32 +2,25 @@ import { Handler } from '@netlify/functions';
 
 export type Event = Parameters<Handler>[0];
 
-export type VideoType = {
-  id: string;
-  embeddableLink: string;
-  title: string;
-  link: string;
+export type VideoTypeResponse = {
   conferenceId: string;
-  presenter: string;
-  split: string;
+  embeddableLink: string;
   length: string;
+  link: string;
+  presenter: string;
+  split?: string;
+  title: string;
 };
 
-export type MappedVideo = {
+export type VideoType = VideoTypeResponse & {
   id: string;
-  video: Omit<VideoType, 'id'>;
 };
 
-export type MapperConferenceInner = {
+export type MappedConferenceInner = {
   title: string;
   website: string;
   date: string;
   videos: string[];
-};
-
-export type MappedConference = {
-  id: string;
-  conference: MapperConferenceInner;
 };
 
 export type UnmappedConference = {
@@ -37,12 +30,33 @@ export type UnmappedConference = {
   title: string;
 };
 
-export type ProcessedResultType = Array<{
+export type RedisResponseData = [number, ...Array<string | string[]>];
+
+type RedisBaseResponse<T extends Record<string, unknown>> = Array<
+  [Error | null, T]
+>;
+
+export type RedisGetVideosResponse = RedisBaseResponse<VideoTypeResponse>;
+export type RedisGetConferencesResponse = RedisBaseResponse<UnmappedConference>;
+
+// intermediate representations
+export type MappedVideo = {
+  id: string;
+  video: VideoType;
+};
+
+export type MappedConferenceWithoutVideos = {
+  id: string;
+  conference: MappedConferenceInner;
+};
+
+// result format
+export type ResultConference = {
   id: string;
   website: string;
   date: string;
   title: string;
   videos: VideoType[];
-}>;
+};
 
-export type RedisResponseData = [number, ...Array<string | string[]>];
+export type ProcessedResultType = ResultConference[];

@@ -1,45 +1,17 @@
 import { Handler } from '@netlify/functions';
-import Redis from 'ioredis';
+import {
+  Event,
+  MappedVideo,
+  RedisGetVideosResponse,
+  ResultConference,
+} from './utils/models';
+import * as Services from './utils/services';
 
-import { Event } from './utils/models';
-
-const REDIS_PREFIX = process.env.REDIS_PREFIX;
-const DELIMITER = '_';
-
-const redis = new Redis(process.env.DBPATH);
-
-type VideoType = {
-  embeddableLink: string;
-  title: string;
-  link: string;
-  conferenceId: string;
-  presenter: string;
-  split?: string;
-  length: string;
-  id: string;
-};
-
-type ProcessedResultType = MappedConference[];
-
-type MappedConference = {
-  id: string;
-  website: string;
-  date: string;
-  videos: VideoType[];
-  title: string;
-};
-
-type UnmappedConference = {
-  website: string;
-  date: string;
-  videos: string;
-  title: string;
-};
-
+// FIX TYPES
 const videosToObject = (
-  data: Array<[Error | null, Omit<VideoType, 'id'>]>,
+  data: RedisGetVideosResponse,
   queries: string[]
-) => {
+): MappedVideo[] => {
   return data.reduce((acc, [_, video], index) => {
     return [
       ...acc,
@@ -51,7 +23,7 @@ const videosToObject = (
         },
       },
     ];
-  }, [] as Array<{ id: string; video: VideoType }>);
+  }, [] as MappedVideo[]);
 };
 
 const getVideoIds = async ({
@@ -65,42 +37,19 @@ const getVideoIds = async ({
   const START = start || 0;
   const STOP = stop || (START ? START + 20 : 20);
 
-  // get video ids
-  const videoResults = await redis.zrange(
-    `${REDIS_PREFIX}${DELIMITER}videos${DELIMITER}videos_by_date`,
-    START,
-    STOP
-  );
-  return !videoResults ? null : videoResults;
+  const videoResults = await Services.getVideoIds(START, STOP);
+  return !videoResults || !videoResults.length ? [] : videoResults;
 };
 
 const getVideos = async (videos: string[]) => {
-  const queries: string[] = [];
-  const pipeline = redis.pipeline();
-  for (const video of videos) {
-    queries.push(video);
-    pipeline.hgetall(video);
-  }
-  const results: Array<[Error | null, VideoType]> = await pipeline.exec();
+  const [queries, results] = await Services.getVideos(videos);
   return videosToObject(results, queries);
 };
 
-const getConferences = async (
-  videos: Array<{ id: string; video: VideoType }>
-) => {
-  const queries: string[] = [];
-  const pipeline = redis.pipeline();
-  const conferenceSet = new Set(
-    videos.map((video) => video.video.conferenceId)
-  );
-  for (const conferenceId of Array.from(conferenceSet)) {
-    queries.push(conferenceId);
-    pipeline.hgetall(conferenceId);
-  }
+const getConferences = async (videos: MappedVideo[]) => {
+  const [queries, results] = await Services.getConferences(videos);
 
-  const results = (await pipeline.exec()) as Array<[Error, UnmappedConference]>;
-
-  const newResults = results.map(([_, result], index) => {
+  const newResults = results.map(([, result], index) => {
     return {
       ...result,
       id: queries[index],
@@ -108,14 +57,13 @@ const getConferences = async (
   });
 
   const conferenceMap = new Map();
-  const conferencesWithVideos: ProcessedResultType = newResults.map(
-    (conference) => {
-      return {
-        ...conference,
-        videos: [],
-      };
-    }
+  const conferencesWithVideos: ResultConference[] = newResults.map(
+    (conference) => ({
+      ...conference,
+      videos: [],
+    })
   );
+
   for (const conference of conferencesWithVideos) {
     conferenceMap.set(conference.id, conference);
   }
@@ -136,7 +84,7 @@ const getList = async (event: Event) => {
   });
 
   if (!videoResults) {
-    return null;
+    return [];
   }
 
   // now get videos

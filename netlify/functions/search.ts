@@ -3,76 +3,27 @@ import Redis from 'ioredis';
 
 import {
   Event,
-  MappedConference,
-  MappedVideo,
-  MapperConferenceInner,
+  MappedConferenceWithoutVideos,
   ProcessedResultType,
-  RedisResponseData,
-  UnmappedConference,
   VideoType,
 } from './utils/models';
+
+import { conferencesToObject, videosToObject } from './utils/transformers';
+import { logger } from './utils/logger';
+
+import * as Services from './utils/services';
 
 const REDIS_PREFIX = process.env.REDIS_PREFIX;
 const DELIMITER = '_';
 
 const redis = new Redis(process.env.DBPATH);
 
-const toObject = <T>(data: string[]): T => {
-  return data.reduce((acc, key, index) => {
-    if (index % 2 === 0) {
-      let value: string | string[] = data[index + 1];
-      if (key === 'videos') {
-        value = data[index + 1].split(' ||| ');
-      }
-      return {
-        ...acc,
-        [key]: value,
-      };
-    }
-    return acc;
-  }, {} as T);
-};
-
-const conferencesToObject = (data: RedisResponseData) => {
-  data.splice(0, 1);
-  return data.reduce<MappedConference[]>((acc, key, index) => {
-    if (index % 2 === 0) {
-      return [
-        ...acc,
-        {
-          id: key as string,
-          conference: toObject<MapperConferenceInner>(
-            data[index + 1] as string[]
-          ),
-        },
-      ];
-    }
-    return acc;
-  }, []);
-};
-
-const videosToObject = (data: RedisResponseData): MappedVideo[] => {
-  data.splice(0, 1);
-  return data.reduce((acc, key, index) => {
-    if (index % 2 === 0) {
-      return [
-        ...acc,
-        {
-          id: key as string,
-          video: toObject<VideoType>(data[index + 1] as string[]),
-        },
-      ];
-    }
-    return acc;
-  }, [] as MappedVideo[]);
-};
-
 const getConference = async (event: Event) => {
   const conference = event.queryStringParameters?.conference;
   const query = `@title:${conference}`;
 
   try {
-    const conferenceResults = getConference(query);
+    const conferenceResults = await Services.getConference(query);
 
     if (
       !conferenceResults ||
@@ -84,10 +35,11 @@ const getConference = async (event: Event) => {
 
     // return conference id
     const conferences = conferencesToObject(conferenceResults);
+
     return conferences[0];
   } catch (error) {
-    console.error(error);
-    console.error('QUERY::', query);
+    logger.error(error);
+    logger.error('QUERY::', query);
     error.statusCode = 404;
     throw error;
   }
@@ -96,13 +48,8 @@ const getConference = async (event: Event) => {
 const searchConferences = async (event: Event) => {
   const query = event.queryStringParameters?.query ?? '';
   try {
-    const conferenceResults = await redis.send_command(
-      'FT.SEARCH',
-      `${REDIS_PREFIX}${DELIMITER}idx${DELIMITER}conference`,
-      query,
-      'HIGHLIGHT',
-      ...'TAGS <b><i> </i></b>'.split(' ')
-    );
+    const conferenceResults = await Services.searchConferences(query);
+
     if (!conferenceResults) {
       return null;
     }
@@ -150,37 +97,30 @@ const searchConferences = async (event: Event) => {
                 video.id ===
                 `${REDIS_PREFIX}${DELIMITER}video${DELIMITER}${videoId}`
             );
+
             return video as VideoType;
           }),
       };
       processedResults.push(newConference);
     }
+
     return processedResults;
   } catch (error) {
-    console.error(error);
-    console.error('QUERY::', query);
+    logger.error(error);
+    logger.error('QUERY::', query);
     throw error;
   }
 };
 
 // high limit based on
-const searchVideos = async (event: Event, conference?: MappedConference) => {
+const searchVideos = async (
+  event: Event,
+  conference?: MappedConferenceWithoutVideos
+) => {
   const query = event.queryStringParameters?.query ?? '';
-  const AND = query && !!conference ? ' & ' : '';
-  const redisSearch = `${query ? `(@title|presenter:(${query}))` : ''} ${AND} ${
-    conference?.id ? `@conferenceId:${conference.id}` : ''
-  }`;
 
   try {
-    const videoResults = await redis.send_command(
-      'FT.SEARCH',
-      `${REDIS_PREFIX}${DELIMITER}idx${DELIMITER}video`,
-      redisSearch,
-      'HIGHLIGHT',
-      ...'FIELDS 2 title presenter'.split(' '),
-      ...'TAGS <i> </i>'.split(' '),
-      ...'LIMIT 0 10000'.split(' ')
-    );
+    const videoResults = await Services.searchVideos(query, conference);
 
     if (!videoResults) {
       return null;
@@ -188,22 +128,9 @@ const searchVideos = async (event: Event, conference?: MappedConference) => {
 
     const videosAsObjects = videosToObject(videoResults);
 
-    const conferenceIds = new Set(
-      videosAsObjects.map((video) => video.video.conferenceId)
-    );
+    const [queries, results] = await Services.getConferences(videosAsObjects);
 
-    // now get conferences for these videos, replacing their videos object with the callee
-    const queries: string[] = [];
-    const pipeline = redis.pipeline();
-    for (const conferenceId of Array.from(conferenceIds)) {
-      queries.push(conferenceId);
-      pipeline.hgetall(conferenceId);
-    }
-
-    const results = (await pipeline.exec()) as Array<
-      [Error | null, UnmappedConference]
-    >;
-    const newResults = results.map(([_, result], index: number) => {
+    const newResults = results.map(([, result], index: number) => {
       return {
         id: queries[index],
         conference: result,
@@ -225,15 +152,13 @@ const searchVideos = async (event: Event, conference?: MappedConference) => {
     for (const video of videosAsObjects) {
       const conference = conferenceMap.get(video.video.conferenceId);
       conference.videos.push({
-        id: video.id,
         ...video.video,
       });
     }
 
     return newNewResults;
   } catch (error) {
-    console.error(error);
-    console.error('QUERY::', redisSearch);
+    logger.error(error);
     throw error;
   }
 };
@@ -250,6 +175,7 @@ const mergeResults = (
     const matchingConference = videoResults.find(
       (conference) => conference.id === conf.id
     );
+
     // if there is a matching conference, replace matching videos...
     if (matchingConference) {
       for (const video of matchingConference.videos) {
@@ -269,6 +195,7 @@ const mergeResults = (
       results.push(conf);
     }
   }
+
   return results;
 };
 
@@ -294,7 +221,7 @@ const handler: Handler = async (event) => {
   }
 
   try {
-    let conference: MappedConference | undefined;
+    let conference: MappedConferenceWithoutVideos | undefined;
     let conferenceResults: ProcessedResultType | null | undefined;
     if (updatedEvent.queryStringParameters?.conference) {
       conference = await getConference(updatedEvent);
@@ -302,9 +229,7 @@ const handler: Handler = async (event) => {
       conferenceResults = await searchConferences(updatedEvent);
     }
 
-    console.log('conference', conference);
     const videoResults = await searchVideos(updatedEvent, conference);
-    console.log('videoResults', videoResults);
 
     const results =
       !!conferenceResults && !!videoResults
@@ -316,7 +241,8 @@ const handler: Handler = async (event) => {
       body: JSON.stringify(results, null, 2),
     };
   } catch (e) {
-    console.error(e);
+    logger.error(e);
+
     return {
       statusCode: e.statusCode || 500,
       body: e.toString(),
