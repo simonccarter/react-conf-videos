@@ -35,14 +35,16 @@ const getVideoIds = async ({
   page?: number;
 }) => {
   const START = start || 0;
-  const STOP = stop || (START ? START + 20 : 20);
+  const STOP = stop || (START ? START + 19 : 19);
 
   const videoResults = await Services.getVideoIds(START, STOP);
+
   return !videoResults || !videoResults.length ? [] : videoResults;
 };
 
 const getVideos = async (videos: string[]) => {
   const [queries, results] = await Services.getVideos(videos);
+
   return videosToObject(results, queries);
 };
 

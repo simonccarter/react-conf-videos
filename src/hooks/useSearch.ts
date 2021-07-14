@@ -97,9 +97,9 @@ export default (routeMatch?: string) => {
   }, []);
 
   const infiniteLoader = async () => {
-    const data = await getList({ start: page });
+    const data = await getList({ start: page * 20 });
     setList([...list, ...data]);
-    setPage((_page) => _page + 1);
+    setPage((page) => page + 1);
   };
 
   const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
