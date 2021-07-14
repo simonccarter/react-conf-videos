@@ -21,6 +21,7 @@ export const getList = async (
   const url = `/.netlify/functions/list?${queryStrings}`;
   try {
     const result = await axios.get(url);
+
     return result.data;
   } catch (error) {
     return error;
@@ -35,10 +36,7 @@ type SearchProps = {
 export const search = async (props: SearchProps = {}): Promise<Conferences> => {
   const queryStrings = queryString.stringify(props);
   const url = `/.netlify/functions/search?${queryStrings}`;
-  try {
-    const result = await axios.get(url);
-    return result.data;
-  } catch (error) {
-    return error;
-  }
+  const result = await axios.get(url);
+
+  return result.data;
 };

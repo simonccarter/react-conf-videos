@@ -48,24 +48,30 @@ export default (routeMatch?: string) => {
     const searchQuery = queryString.parse(location.search);
     const getVideos = async () => {
       setIsLoading(true);
-      if (match?.params?.name) {
-        const result = await search({
-          conference: match.params.name,
-          query,
-        });
-        setList(result);
-        setPage(1);
-      } else if (query) {
-        const result = await search({ query });
-        setList(result);
-        setPage(0);
-      } else if (!searchQuery.search) {
-        const data = await getList({ start: 0 });
-        setList(data);
-        setPage(1);
+      try {
+        if (match?.params?.name) {
+          const result = await search({
+            conference: match.params.name,
+            query,
+          });
+          setList(result);
+          setPage(1);
+        } else if (query) {
+          const result = await search({ query });
+          setList(result);
+          setPage(0);
+        } else if (!searchQuery.search) {
+          const data = await getList({ start: 0 });
+          setList(data);
+          setPage(1);
+        }
+      } catch (error) {
+        // redirect to errror page with message and a link...
+        // or just show error ...
       }
       setIsLoading(false);
     };
+
     getVideos();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [match?.params?.name, query]);
@@ -115,7 +121,7 @@ export default (routeMatch?: string) => {
     numberOfConferences,
     numberOfVideos,
     onInputChange,
-    InfiniteLoader: infiniteLoader,
+    infiniteLoader,
     query,
   };
 };

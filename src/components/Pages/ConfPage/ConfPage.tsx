@@ -20,6 +20,7 @@ export const ConfPage: React.FC<any> = () => {
     numberOfVideos,
     onInputChange,
   } = useSearch('/conference/:name');
+
   return (
     <div>
       <Meta title={conference?.title || ''} />
@@ -41,7 +42,6 @@ export const ConfPage: React.FC<any> = () => {
           numberOfVideos={numberOfVideos}
           numberOfConferences={numberOfConferences}
         />
-        <List conferences={list} />
         {!isLoading && <List conferences={list} />}
         {isLoading && <Loader />}
       </InnerLayoutContainer>

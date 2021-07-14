@@ -20,11 +20,11 @@ export const FrontPage: React.FC<any> = () => {
     numberOfConferences,
     numberOfVideos,
     onInputChange,
-    InfiniteLoader: _infiniteLoader,
+    infiniteLoader,
     query,
   } = useSearch();
 
-  const infiniteLoader = () => !query && _infiniteLoader();
+  const infiniteLoaderHandler = () => !query && infiniteLoader();
 
   return (
     <>
@@ -41,7 +41,7 @@ export const FrontPage: React.FC<any> = () => {
           numberOfConferences={numberOfConferences}
         />
         {!isLoading && (
-          <List conferences={list} infiniteLoader={infiniteLoader} />
+          <List conferences={list} infiniteLoader={infiniteLoaderHandler} />
         )}
         {isLoading && <Loader />}
       </InnerLayoutContainer>

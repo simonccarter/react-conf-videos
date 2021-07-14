@@ -53,7 +53,7 @@ export const List: React.FC<Props> = ({ conferences, infiniteLoader }) => {
     <ol className={styles.root} style={virtual.style} data-cy="results-list">
       {virtual.items.map((item: VideoTransformed, index: number) => (
         <VideoWrapper
-          key={index}
+          key={item.link}
           item={{ ...item, conference: videosToConferencesMap.get(item.id) }}
           isLast={index === virtual.items.length - 1}
           infiniteLoader={infiniteLoader}
