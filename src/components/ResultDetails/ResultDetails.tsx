@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 import styles from './ResultDetails.scss';
 
@@ -6,7 +6,7 @@ type Props = { numberOfVideos: number; numberOfConferences: number };
 
 export const ResultDetails: React.FunctionComponent<Props> = ({
   numberOfVideos,
-  numberOfConferences
+  numberOfConferences,
 }) => (
   <p className={styles.resultsCount}>
     <strong> {numberOfVideos} </strong>{' '}

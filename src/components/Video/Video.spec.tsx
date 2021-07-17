@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 import {
   fireEvent,
@@ -6,7 +6,7 @@ import {
   mockVideo,
   render,
   screen,
-  waitFor
+  waitFor,
 } from 'utils/test';
 import { VideoInner } from './Video';
 import { ConferenceTransformed } from '../../domain/TransformedJSON';
@@ -22,7 +22,7 @@ describe('Video', () => {
       conferenceId: 'yyy',
       video,
       presenter,
-      conference
+      conference,
     };
     return { props };
   };
@@ -48,7 +48,7 @@ describe('Video', () => {
       screen.getByRole('button'),
       new MouseEvent('click', {
         bubbles: true,
-        cancelable: true
+        cancelable: true,
       })
     );
 
@@ -61,7 +61,7 @@ describe('Video', () => {
         screen.getByRole('button'),
         new MouseEvent('click', {
           bubbles: true,
-          cancelable: true
+          cancelable: true,
         })
       );
 

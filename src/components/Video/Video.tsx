@@ -1,8 +1,8 @@
+import React from 'react';
+import cn from 'classnames';
 import { faBolt } from '@fortawesome/free-solid-svg-icons/faBolt';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import * as cn from 'classnames';
 import { VideoTransformed } from 'domain/TransformedJSON';
-import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 import styles from './Video.scss';
@@ -59,7 +59,7 @@ export const VideoInner = React.forwardRef<
         )}
       </div>
       <span className={styles.details}>
-        {presenter}
+        <span dangerouslySetInnerHTML={{ __html: presenter }} />
         <Link
           to={{
             pathname: `/conference/${
@@ -73,7 +73,9 @@ export const VideoInner = React.forwardRef<
           )}`}
           className={styles.conferenceTitle}
           data-cy="conference-link"
-          dangerouslySetInnerHTML={{ __html: conference?.title ?? '' }}
+          dangerouslySetInnerHTML={{
+            __html: conference?.title ?? '',
+          }}
         />
       </span>
     </li>

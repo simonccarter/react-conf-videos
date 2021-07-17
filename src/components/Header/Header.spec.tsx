@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 import { render, waitFor, screen } from '../../utils/test';
 
@@ -10,7 +10,7 @@ describe('Header', () => {
     const props = {
       title: 'A title',
       tagline: 'A tagline',
-      titleLink: '/a-link'
+      titleLink: '/a-link',
     };
 
     // act

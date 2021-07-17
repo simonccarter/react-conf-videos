@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { render, screen } from 'utils/test';
 
 import { ResultDetails } from './ResultDetails';
@@ -8,7 +8,7 @@ describe('ResultDetails', () => {
     // arrange
     const props = {
       numberOfVideos: 5,
-      numberOfConferences: 13
+      numberOfConferences: 13,
     };
 
     // act

@@ -1,5 +1,5 @@
-import crypto from 'crypto'
-import { schema } from 'normalizr'
+const crypto = require('crypto')
+const { schema } = require('normalizr')
 
 
 // type ToHash = {

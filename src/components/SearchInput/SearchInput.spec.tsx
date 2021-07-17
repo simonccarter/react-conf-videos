@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { fireEvent, render, screen } from 'utils/test';
 
 import { SearchInput } from './SearchInput';
@@ -37,7 +37,7 @@ describe('SearchInput', () => {
     render(<SearchInput onChange={mockFN} filterValue="" />);
 
     fireEvent.change(screen.getByPlaceholderText('Search'), {
-      target: { value: '$23.0' }
+      target: { value: '$23.0' },
     });
 
     // assert

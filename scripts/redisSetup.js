@@ -1,6 +1,8 @@
-import fs from 'fs';
-import path from 'path';
-import Redis from 'ioredis';
+const fs = require('fs');
+const path = require('path');
+const Redis = require('ioredis');
+
+const he = require('he');
 
 require('dotenv').config();
 
@@ -37,6 +39,7 @@ const toArray = (obj) => {
         if(key === "presenter"){
             value = obj.presenter.name
         }
+        value = typeof value === 'string' ? he.encode(value) : value
         return [key, value]
     }).flat();
     return transformed;

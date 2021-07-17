@@ -1,17 +1,26 @@
-import * as React from 'react';
+import React from 'react';
 import { useHistory, useLocation, useRouteMatch } from 'react-router-dom';
-import { useRecoilState, useRecoilValue } from 'recoil';
+import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
 import * as queryString from 'query-string';
 import { ConferenceTransformed } from 'domain/TransformedJSON';
-import { computedResultDetails, listState, queryState } from '../state';
+import {
+  computedResultDetails,
+  errorState,
+  listState,
+  queryState,
+} from '../state';
 import useDebounce from './useDebounce';
 import { getList, search } from '../services/web';
+
+import useRemoveLoader from './useRemoveLoader';
 
 export default (routeMatch?: string) => {
   const history = useHistory();
   const location = useLocation();
 
   const match = useRouteMatch<{ name?: string }>(routeMatch ?? '');
+
+  const setErrorState = useSetRecoilState(errorState);
 
   const [page, setPage] = React.useState(1);
   const [query, setQuery] = useRecoilState(queryState);
@@ -26,6 +35,8 @@ export default (routeMatch?: string) => {
   const [conference, setConference] = React.useState<
     ConferenceTransformed | undefined
   >(list?.[0]);
+
+  useRemoveLoader();
 
   // set query state on load based off of url
   React.useEffect(() => {
@@ -66,8 +77,12 @@ export default (routeMatch?: string) => {
           setPage(1);
         }
       } catch (error) {
-        // redirect to errror page with message and a link...
-        // or just show error ...
+        setErrorState({
+          isError: true,
+          message: error.message,
+          error,
+          statusCode: 404,
+        });
       }
       setIsLoading(false);
     };
@@ -89,18 +104,6 @@ export default (routeMatch?: string) => {
       setConference(list[0]);
     }
   }, [list]);
-
-  // remove page loader
-  React.useEffect(() => {
-    // remove loader from dom
-    const element = document.getElementById('loader') as HTMLElement;
-    if (element) {
-      element.classList.remove('fullscreen');
-      setTimeout(() => {
-        element.remove();
-      }, 300);
-    }
-  }, []);
 
   const infiniteLoader = async () => {
     const data = await getList({ start: page * 20 });

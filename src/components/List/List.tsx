@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import VirtualList from 'react-virtual-list';
 import { useInView } from 'react-intersection-observer';
 
