@@ -1,7 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import { fireEvent, render, screen } from 'utils/test';
 
-import { SearchInput } from './SearchInput';
+import SearchInput from './SearchInput';
 
 describe('SearchInput', () => {
   it('should render', () => {

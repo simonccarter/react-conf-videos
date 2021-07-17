@@ -5,7 +5,7 @@ type ErrorState = {
   isError: boolean;
   error?: Error;
   message?: string;
-  statusCode?: number;
+  statusCode: number;
 };
 
 export const errorState = atom<ErrorState>({
@@ -13,6 +13,7 @@ export const errorState = atom<ErrorState>({
   default: {
     isError: false,
     message: '',
+    statusCode: 0,
   },
 });
 

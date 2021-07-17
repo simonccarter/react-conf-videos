@@ -8,6 +8,8 @@ import {
   VideoType,
 } from './utils/models';
 
+import { cleanInputs } from './utils/cleanInputs';
+
 import { conferencesToObject, videosToObject } from './utils/transformers';
 import { logger } from './utils/logger';
 
@@ -204,21 +206,23 @@ const handler: Handler = async (event) => {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
-  const updatedEvent = { ...event };
+  const updatedEvent = {
+    ...event,
+    queryStringParameters: event.queryStringParameters
+      ? event.queryStringParameters
+      : {},
+  };
 
   if (
-    updatedEvent.queryStringParameters?.query === undefined &&
-    updatedEvent.queryStringParameters?.conference === undefined
+    event.queryStringParameters?.query === undefined &&
+    event.queryStringParameters?.conference === undefined
   ) {
     return { statusCode: 400, body: 'Invalid Request' };
   }
 
-  if (
-    updatedEvent.queryStringParameters?.conference !== undefined &&
-    updatedEvent.queryStringParameters?.query === undefined
-  ) {
-    updatedEvent.queryStringParameters.query = '';
-  }
+  updatedEvent.queryStringParameters.query = cleanInputs(
+    updatedEvent.queryStringParameters.query ?? ''
+  );
 
   try {
     let conference: MappedConferenceWithoutVideos | undefined;

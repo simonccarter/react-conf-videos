@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import {
   fireEvent,
@@ -8,7 +8,7 @@ import {
   screen,
   waitFor,
 } from 'utils/test';
-import { VideoInner } from './Video';
+import Video from './Video';
 import { ConferenceTransformed } from '../../domain/TransformedJSON';
 
 describe('Video', () => {
@@ -32,7 +32,7 @@ describe('Video', () => {
     const { props } = getData();
 
     // act
-    render(<VideoInner {...props} />);
+    render(<Video {...props} />);
 
     expect(screen.getByRole('listitem'));
   });
@@ -42,7 +42,7 @@ describe('Video', () => {
     const { props } = getData();
 
     // act
-    render(<VideoInner {...props} />);
+    render(<Video {...props} />);
 
     fireEvent(
       screen.getByRole('button'),

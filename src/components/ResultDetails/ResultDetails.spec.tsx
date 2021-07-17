@@ -1,7 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import { render, screen } from 'utils/test';
 
-import { ResultDetails } from './ResultDetails';
+import ResultDetails from './ResultDetails';
 
 describe('ResultDetails', () => {
   it('should render', () => {

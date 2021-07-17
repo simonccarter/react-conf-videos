@@ -1,14 +1,12 @@
-import React from 'react';
+import * as React from 'react';
 import { render, RenderOptions } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
-import { ScrollToTop } from 'components/HOCS/ScrollToTop';
+import ScrollToTop from 'components/HOCS/ScrollToTop';
 import {
   ConferenceTransformed,
   VideoTransformed,
 } from '../domain/TransformedJSON';
-
-// import { stringify } from 'query-string';
 
 export const mockVideo = (title = 'test title'): VideoTransformed => ({
   id: 'SOME_RANDOM_VIDEO_ID',

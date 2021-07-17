@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import VirtualList from 'react-virtual-list';
 import { useInView } from 'react-intersection-observer';
 
@@ -37,7 +37,7 @@ const VideoWrapper: React.FC<VideoInnerProps> = ({
   return <Video ref={ref} video={item} />;
 };
 
-export const List: React.FC<Props> = ({ conferences, infiniteLoader }) => {
+const List: React.FC<Props> = ({ conferences, infiniteLoader }) => {
   const videos = conferences.map((conference) => conference.videos).flat();
   const videosToConferencesMap = new Map();
 
@@ -79,3 +79,5 @@ export const List: React.FC<Props> = ({ conferences, infiniteLoader }) => {
     </>
   );
 };
+
+export default List;

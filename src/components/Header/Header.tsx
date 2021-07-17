@@ -1,5 +1,5 @@
 import * as cn from 'classnames';
-import React from 'react';
+import * as React from 'react';
 import { animated, useChain, useSpring } from 'react-spring/web.cjs'; // https://github.com/react-spring/react-spring/issues/552
 
 import { Logo } from 'components';
@@ -17,7 +17,7 @@ const transition = {
   to: { top: 0, opacity: 1 },
 };
 
-export const Header: React.FunctionComponent<Props> = ({
+const Header: React.FunctionComponent<Props> = ({
   title,
   titleLink,
   tagline,
@@ -61,3 +61,5 @@ export const Header: React.FunctionComponent<Props> = ({
     </header>
   );
 };
+
+export default Header;

@@ -37,6 +37,7 @@ const sortByDate = sort<ConferenceInput>(
 
 const addEmbeddableLinksToVideos = (data: JSONInput): Conferences => {
   const linkReg = /https:?\/\/www\.youtube\.com\/watch\?v=(.*?)&.*$/;
+
   return data.map((conference: ConferenceInput) => {
     const videos = conference.videos || [];
     const nVideos = videos.map((video: VideoInput) => {
@@ -44,8 +45,10 @@ const addEmbeddableLinksToVideos = (data: JSONInput): Conferences => {
         linkReg,
         'https://www.youtube.com/embed/$1'
       );
+
       return { ...video, embeddableLink };
     });
+
     return { ...conference, videos: nVideos };
   });
 };
@@ -60,6 +63,7 @@ const addConferenceDetails = (data: Conferences): Conferences => {
   return data.map((conference) => {
     const videos = conference.videos || [];
     const nVideos = videos.map(mapConferenceDetailsOntoVideo(conference));
+
     return { ...conference, videos: nVideos };
   });
 };
@@ -71,10 +75,12 @@ export const transformDataFromJson = (data: JSONInput): Conferences => {
   // add embeddable links to videos
   const dataWithEmbeddableLinks = addEmbeddableLinksToVideos(confs);
   const withConferenceDetails = addConferenceDetails(dataWithEmbeddableLinks);
+
   return withConferenceDetails;
 };
 
 export const loadData = async () => {
   const response = await axios.get('/assets/conferenceVids.json');
+
   return transformDataFromJson(response.data);
 };

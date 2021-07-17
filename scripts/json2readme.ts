@@ -1,5 +1,5 @@
-import fs from 'fs';
-import moment from 'moment';
+import * as fs from 'fs';
+import * as moment from 'moment';
 
 import {
   compose,
@@ -60,13 +60,10 @@ const conferenceVideos = (videos: VideoInput[]) => {
   const createTable = curry((title: string, videos: VideoInput[]) => {
     let output = title ? `\n#### ${title}\n` : '\n';
     output += tableHeader();
-    output += videos.reduce(
-      (acc, { title, link, presenter: { name }, length }) => {
-        acc += `\n[${title}](${link}) | ${name} | ${length}`;
-        return acc;
-      },
-      ''
-    );
+    output += videos.reduce((acc, { title, link, presenter, length }) => {
+      acc += `\n[${title}](${link}) | ${presenter} | ${length}`;
+      return acc;
+    }, '');
     output += '\n';
     return output;
   });

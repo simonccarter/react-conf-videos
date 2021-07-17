@@ -19,13 +19,9 @@ export const getList = async (
   }
   const queryStrings = queryString.stringify(props);
   const url = `/.netlify/functions/list?${queryStrings}`;
-  try {
-    const result = await axios.get(url);
+  const result = await axios.get(url);
 
-    return result.data;
-  } catch (error) {
-    return error;
-  }
+  return result.data;
 };
 
 type SearchProps = {

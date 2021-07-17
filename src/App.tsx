@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import * as ReactGA from 'react-ga';
 
 import { hot } from 'react-hot-loader';

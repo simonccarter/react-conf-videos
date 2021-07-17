@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {
   Header,
   InnerLayoutContainer,
@@ -8,7 +8,7 @@ import {
   ResultDetails,
   SearchInput,
 } from 'components';
-import { with404 } from 'components/HOCS/with404';
+import withNetworkError from 'components/HOCS/withNetworkError';
 import useSearch from 'hooks/useSearch';
 
 const ConfPage: React.FC = () => {
@@ -52,4 +52,4 @@ const ConfPage: React.FC = () => {
   );
 };
 
-export default with404(ConfPage);
+export default withNetworkError(ConfPage);

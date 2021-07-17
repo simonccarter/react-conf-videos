@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import styles from './SearchInput.scss';
 
@@ -8,7 +8,7 @@ type Props = {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-export const SearchInput: React.FunctionComponent<Props> = React.memo(
+const SearchInput: React.FunctionComponent<Props> = React.memo(
   ({ filterValue, onChange, placeholder = 'Search' }) => (
     <input
       type="text"
@@ -16,8 +16,10 @@ export const SearchInput: React.FunctionComponent<Props> = React.memo(
       onChange={onChange}
       className={styles.root}
       placeholder={placeholder}
-      aria-label={placeholder + ` videos`}
+      aria-label={`${placeholder} videos`}
       data-cy="search-input"
     />
   )
 );
+
+export default SearchInput;

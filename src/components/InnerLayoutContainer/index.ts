@@ -1,1 +1,1 @@
-export * from './InnerLayoutContainer';
+export { default } from './InnerLayoutContainer';

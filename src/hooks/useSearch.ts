@@ -1,8 +1,9 @@
-import React from 'react';
+import * as React from 'react';
 import { useHistory, useLocation, useRouteMatch } from 'react-router-dom';
 import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
 import * as queryString from 'query-string';
 import { ConferenceTransformed } from 'domain/TransformedJSON';
+import { unSluggifyUrl } from 'utils';
 import {
   computedResultDetails,
   errorState,
@@ -12,8 +13,16 @@ import {
 import useDebounce from './useDebounce';
 import { getList, search } from '../services/web';
 
-import useRemoveLoader from './useRemoveLoader';
-import { unSluggifyUrl } from 'utils';
+const removeLoader = () => {
+  // remove loader from dom
+  const element = document.getElementById('loader') as HTMLElement;
+  if (element) {
+    element.classList.remove('fullscreen');
+    setTimeout(() => {
+      element.remove();
+    }, 300);
+  }
+};
 
 export default (routeMatch?: string) => {
   const history = useHistory();
@@ -29,6 +38,8 @@ export default (routeMatch?: string) => {
   const [isLoading, setIsLoading] = React.useState(true);
   const debouncedQuery = useDebounce(localQuery);
   const [list, setList] = useRecoilState(listState);
+  const [mounted, setMounted] = React.useState(false);
+  const [isFirstQuery, setIsFirstQuery] = React.useState(true);
 
   const { numberOfVideos, numberOfConferences } = useRecoilValue(
     computedResultDetails
@@ -37,29 +48,33 @@ export default (routeMatch?: string) => {
     ConferenceTransformed | undefined
   >(list?.[0]);
 
-  useRemoveLoader();
-
   // set query state on load based off of url
   React.useEffect(() => {
     const searchParams = queryString.parse(location.search);
     const queryValue = searchParams.query ? (searchParams.query as string) : '';
     setLocalQuery(queryValue);
-  }, [location.search, setQuery]);
+    setMounted(true);
+  }, [location.search]);
 
   React.useEffect(() => {
     const newURL = query
       ? `${window.location.pathname}?query=${query}`
       : `${window.location.pathname}`;
     const existingURL = `${window.location.pathname}?${window.location.search}`;
-    if (query && newURL !== existingURL) {
+    if (mounted && newURL !== existingURL) {
       history.push(newURL);
     }
-  }, [query, history]);
+  }, [mounted, query, history]);
 
+  // query api
   React.useEffect(() => {
     const searchQuery = queryString.parse(location.search);
     const getVideos = async () => {
       setIsLoading(true);
+      setErrorState({
+        isError: false,
+        statusCode: 0,
+      });
       try {
         if (match?.params?.name) {
           const result = await search({
@@ -82,9 +97,13 @@ export default (routeMatch?: string) => {
           isError: true,
           message: error.message,
           error,
-          statusCode: 404,
+          statusCode: error.response.status,
         });
       }
+      if (isFirstQuery) {
+        removeLoader();
+      }
+      setIsFirstQuery(false);
       setIsLoading(false);
     };
 
@@ -107,9 +126,18 @@ export default (routeMatch?: string) => {
   }, [list]);
 
   const infiniteLoader = async () => {
-    const data = await getList({ start: page * 20 });
-    setList([...list, ...data]);
-    setPage((page) => page + 1);
+    try {
+      const data = await getList({ start: page * 20 });
+      setList([...list, ...data]);
+      setPage((page) => page + 1);
+    } catch (error) {
+      setErrorState({
+        isError: true,
+        message: error.message,
+        error,
+        statusCode: error?.response?.status ?? 0,
+      });
+    }
   };
 
   const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {

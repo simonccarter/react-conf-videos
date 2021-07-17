@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import {
   Header,
@@ -10,9 +10,10 @@ import {
   SearchInput,
 } from 'components';
 
+import withNetworkError from 'components/HOCS/withNetworkError';
 import useSearch from '../../../hooks/useSearch';
 
-export const FrontPage: React.FC<any> = () => {
+const FrontPage: React.FC = withNetworkError(() => {
   const {
     isLoading,
     list,
@@ -47,4 +48,6 @@ export const FrontPage: React.FC<any> = () => {
       </InnerLayoutContainer>
     </>
   );
-};
+});
+
+export default FrontPage;

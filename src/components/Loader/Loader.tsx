@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 
 import styles from './Loader.scss';
 
-export const Loader = () => (
+const Loader: React.FC = () => (
   <div className={styles.loader}>
     <svg
       width="57"
@@ -78,3 +78,5 @@ export const Loader = () => (
     </svg>
   </div>
 );
+
+export default Loader;

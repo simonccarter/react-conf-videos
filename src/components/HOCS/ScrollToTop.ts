@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { withRouter } from 'react-router-dom';
 
 type Props = { location: Location };
@@ -15,4 +15,4 @@ class ScrollToTopInner extends React.Component<Props> {
   }
 }
 
-export const ScrollToTop = withRouter<any, any>(ScrollToTopInner);
+export default withRouter<any, any>(ScrollToTopInner);

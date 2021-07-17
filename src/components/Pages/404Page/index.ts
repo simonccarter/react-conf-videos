@@ -1,1 +1,1 @@
-export * from './404Page';
+export { default } from './404Page';

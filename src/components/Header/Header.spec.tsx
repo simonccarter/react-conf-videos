@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 
 import { render, waitFor, screen } from '../../utils/test';
 
-import { Header } from './Header';
+import Header from './Header';
 
 describe('Header', () => {
   it('should render props', async () => {

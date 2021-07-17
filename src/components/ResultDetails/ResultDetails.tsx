@@ -1,10 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 
 import styles from './ResultDetails.scss';
 
 type Props = { numberOfVideos: number; numberOfConferences: number };
 
-export const ResultDetails: React.FunctionComponent<Props> = ({
+const ResultDetails: React.FunctionComponent<Props> = ({
   numberOfVideos,
   numberOfConferences,
 }) => (
@@ -15,3 +15,5 @@ export const ResultDetails: React.FunctionComponent<Props> = ({
     {numberOfConferences === 1 ? 'conference' : 'conferences'}
   </p>
 );
+
+export default ResultDetails;
