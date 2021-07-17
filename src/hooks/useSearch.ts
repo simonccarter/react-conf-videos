@@ -13,6 +13,7 @@ import useDebounce from './useDebounce';
 import { getList, search } from '../services/web';
 
 import useRemoveLoader from './useRemoveLoader';
+import { unSluggifyUrl } from 'utils';
 
 export default (routeMatch?: string) => {
   const history = useHistory();
@@ -62,7 +63,7 @@ export default (routeMatch?: string) => {
       try {
         if (match?.params?.name) {
           const result = await search({
-            conference: match.params.name,
+            conference: unSluggifyUrl(match.params.name),
             query,
           });
           setList(result);

@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { VideoTransformed } from 'domain/TransformedJSON';
 import { Link } from 'react-router-dom';
 
+import { sluggifyUrl } from 'utils/';
+
 import styles from './Video.scss';
 
 export const VideoInner = React.forwardRef<
@@ -62,9 +64,7 @@ export const VideoInner = React.forwardRef<
         <span dangerouslySetInnerHTML={{ __html: presenter }} />
         <Link
           to={{
-            pathname: `/conference/${
-              conference?.title?.replace(/(<([^>]+)>)/gi, '') ?? ''
-            }`,
+            pathname: `/conference/${sluggifyUrl(conference?.title ?? '')}`,
             search: '',
           }}
           aria-label={`See all videos for conference ${conference?.title?.replace(

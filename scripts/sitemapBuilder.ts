@@ -8,14 +8,14 @@ const conferenceVids: JSONInput = JSON.parse(
 );
 
 // get conferences
-const conferences = conferenceVids.map(conference =>
+const conferences = conferenceVids.map((conference) =>
   sluggifyUrl(conference.title)
 );
 
 // print sitemap
 // tslint:disable-next-line
 console.log('https://www.reactjsvideos.com/search');
-conferences.map(conference =>
+conferences.map((conference) =>
   // tslint:disable-next-line
   console.log(`https://www.reactjsvideos.com/conference/${conference}`)
 );
