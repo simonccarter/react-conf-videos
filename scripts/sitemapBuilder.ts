@@ -14,7 +14,6 @@ const conferences = conferenceVids.map((conference) =>
 
 // print sitemap
 // tslint:disable-next-line
-console.log('https://www.reactjsvideos.com/search');
 conferences.map((conference) =>
   // tslint:disable-next-line
   console.log(`https://www.reactjsvideos.com/conference/${conference}`)

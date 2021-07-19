@@ -1,3 +1,5 @@
 {
-    "prettier.configPath": ".prettierrc.json"
+    "prettier.configPath": ".prettierrc.json",
+    "eslint.format.enable": true,
+    "editor.formatOnSave": true
 }
