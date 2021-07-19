@@ -1,17 +1,22 @@
 {
-  "paths": {
-    "*": ["src/*", "*"]
-  },
   "compilerOptions": {
     "baseUrl": "./",
-    "lib": [
-      "es6"
-    ],
-    "module": "commonjs",
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "skipLibCheck": true,
     "noImplicitAny": false,
+    "strict": false,
+    "noUnusedLocals": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "target": "es5",
+    "lib": ["es5", "es6", "es2019", "dom"],
+    "allowJs": false,
+    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-  }
+    "esModuleInterop": true,
+  },
+  "include": [
+    ".",
+    ".eslintrc.js"
+  ]
 }

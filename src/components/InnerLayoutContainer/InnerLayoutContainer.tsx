@@ -1,5 +1,5 @@
-import * as cn from 'classnames';
-import * as React from 'react';
+import cn from 'classnames';
+import React from 'react';
 
 import styles from './InnerLayoutContainer.scss';
 
@@ -7,8 +7,8 @@ type Props = {
   className?: string;
 };
 
-const InnerLayoutContainer: React.FC<Props> = (props) => (
-  <main className={cn(styles.root, props.className)}>{props.children}</main>
+const InnerLayoutContainer: React.FC<Props> = ({ className, children }) => (
+  <main className={cn(styles.root, className)}>{children}</main>
 );
 
 export default InnerLayoutContainer;

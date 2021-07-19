@@ -1,5 +1,5 @@
-import * as fs from 'fs';
-import * as moment from 'moment';
+import fs from 'fs';
+import moment from 'moment';
 
 import {
   compose,
@@ -41,6 +41,7 @@ const computePlaylistDetails = ifElse(
     Object.keys(playlist).map((key) => {
       playlists += ` - [playlist: ${key}](${playlist[key]})`;
     });
+
     return playlists;
   }
 );
@@ -50,6 +51,7 @@ const conferenceDetails = ({ title, website, playlist = '' }: ConfDetails) => {
   let output = '';
   output += `\n### ${title}\n\n##### ${website ? `[website](${website})` : ''}`;
   output += computePlaylistDetails(playlist);
+
   return `${output}\n`;
 };
 
@@ -62,9 +64,11 @@ const conferenceVideos = (videos: VideoInput[]) => {
     output += tableHeader();
     output += videos.reduce((acc, { title, link, presenter, length }) => {
       acc += `\n[${title}](${link}) | ${presenter} | ${length}`;
+
       return acc;
     }, '');
     output += '\n';
+
     return output;
   });
 
@@ -87,6 +91,7 @@ const conferenceVideos = (videos: VideoInput[]) => {
       ''
     );
   }
+
   return output;
 };
 
@@ -103,6 +108,7 @@ const createBody = (conferenceVids: JSONInput) =>
     acc += conferenceDetails(conference);
     // video table(s)
     acc += conference.videos ? conferenceVideos(conference.videos) : '';
+
     return acc;
   }, '');
 
@@ -132,6 +138,7 @@ const computeLnks = (titlesAndYears: Array<[string, string]>) => {
       .replace(/\s/g, '-')
       .replace(/[\.<>\/\\]+/g, '')
       .toLowerCase()})`;
+
     return acc;
   }, '');
 };
@@ -157,6 +164,7 @@ const sortByDate = sort((a: ConferenceInput, b: ConferenceInput) => {
   const aD = moment(a.date, 'DD-MM-YYYY');
   const bD = moment(b.date, 'DD-MM-YYYY');
   const isBefore = moment(aD).isAfter(bD);
+
   return isBefore ? -1 : 1;
 });
 

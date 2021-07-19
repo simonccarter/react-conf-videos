@@ -5,7 +5,7 @@ module.exports = {
     'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',
     'plugin:jest/recommended',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
   ],
   plugins: ['react', '@typescript-eslint', 'jest'],
   env: {
@@ -20,27 +20,28 @@ module.exports = {
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
     ecmaVersion: 2018,
     sourceType: 'module',
     project: './tsconfig.json',
     tsconfigRootDir: __dirname,
   },
   rules: {
+    'no-continue': 'off',
+    'guard-for-in': 'off',
+    'no-console': 'off',
     'linebreak-style': 'off',
-    "@typescript-eslint/explicit-module-boundary-types": 'off',
-    "@typescript-eslint/no-shadow": 'off',
-    "react/prop-types": 'off',
-    "react/jsx-props-no-spreading": 'off',
-    "prefer-default-export": 'off',
-    "import/prefer-default-export": 'off',
-    "no-restricted-syntax": 'off',
-    "prefer-destructuring": 'off',
-    "padding-line-between-statements": [
-      "error",
-      { blankLine: "always", prev: "*", next: "return" }
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-shadow': 'off',
+    '@typescript-eslint/no-explicity-any': 'off',
+    'react/prop-types': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'prefer-default-export': 'off',
+    'import/prefer-default-export': 'off',
+    'no-restricted-syntax': 'off',
+    'prefer-destructuring': 'off',
+    'padding-line-between-statements': [
+      'error',
+      { blankLine: 'always', prev: '*', next: 'return' },
     ],
     'prettier/prettier': [
       'error',

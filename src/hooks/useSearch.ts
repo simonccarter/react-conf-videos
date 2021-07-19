@@ -10,8 +10,10 @@ import {
   listState,
   queryState,
 } from '../state';
-import useDebounce from './useDebounce';
+import useDebounce from './useDebounceValue';
 import { getList, search } from '../services/web';
+import debounce from '../utils/debounce';
+import throttle from '../utils/throttle';
 
 const removeLoader = () => {
   // remove loader from dom
@@ -125,7 +127,7 @@ export default (routeMatch?: string) => {
     }
   }, [list]);
 
-  const infiniteLoader = async () => {
+  const infiniteLoader = throttle(async () => {
     try {
       const data = await getList({ start: page * 20 });
       setList([...list, ...data]);
@@ -138,7 +140,7 @@ export default (routeMatch?: string) => {
         statusCode: error?.response?.status ?? 0,
       });
     }
-  };
+  });
 
   const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setIsLoading(true);
