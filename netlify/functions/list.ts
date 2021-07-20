@@ -51,12 +51,10 @@ const getVideos = async (videos: string[]) => {
 const getConferences = async (videos: MappedVideo[]) => {
   const [queries, results] = await Services.getConferences(videos);
 
-  const newResults = results.map(([, result], index) => {
-    return {
-      ...result,
-      id: queries[index],
-    };
-  });
+  const newResults = results.map(([, result], index) => ({
+    ...result,
+    id: queries[index],
+  }));
 
   const conferenceMap = new Map();
   const conferencesWithVideos: ResultConference[] = newResults.map(
