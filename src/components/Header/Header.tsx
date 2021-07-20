@@ -1,5 +1,5 @@
-import * as cn from 'classnames';
-import * as React from 'react';
+import React from 'react';
+import cn from 'classnames';
 import { animated, useChain, useSpring } from 'react-spring/web.cjs'; // https://github.com/react-spring/react-spring/issues/552
 
 import { Logo } from 'components';

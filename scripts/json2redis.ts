@@ -11,7 +11,7 @@ import {
 
 // import { remove } from 'diacritics';
 // const { ConferenceInput, JSONInput } = require('../src/domain/InputJSON');
-import { conferenceSchema } from './confSchema';
+import conferenceSchema from './confSchema';
 
 // const whiteListVideos = ['link', 'embeddableLink', 'presenter', 'lightening'];
 // const recurseAction = (action) => (whiteList) =>
