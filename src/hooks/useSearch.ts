@@ -12,7 +12,6 @@ import {
 } from '../state';
 import useDebounce from './useDebounceValue';
 import { getList, search } from '../services/web';
-import debounce from '../utils/debounce';
 import throttle from '../utils/throttle';
 
 const removeLoader = () => {
@@ -40,8 +39,8 @@ export default (routeMatch?: string) => {
   const [isLoading, setIsLoading] = React.useState(true);
   const debouncedQuery = useDebounce(localQuery);
   const [list, setList] = useRecoilState(listState);
-  const [mounted, setMounted] = React.useState(false);
   const [isFirstQuery, setIsFirstQuery] = React.useState(true);
+  const [dirty, setDirty] = React.useState(false);
 
   const { numberOfVideos, numberOfConferences } = useRecoilValue(
     computedResultDetails
@@ -55,18 +54,18 @@ export default (routeMatch?: string) => {
     const searchParams = queryString.parse(location.search);
     const queryValue = searchParams.query ? (searchParams.query as string) : '';
     setLocalQuery(queryValue);
-    setMounted(true);
-  }, [location.search]);
+    setQuery(queryValue);
+  }, [location.search, setQuery]);
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     const newURL = query
       ? `${window.location.pathname}?query=${query}`
       : `${window.location.pathname}`;
     const existingURL = `${window.location.pathname}?${window.location.search}`;
-    if (mounted && newURL !== existingURL) {
+    if (dirty && newURL !== existingURL) {
       history.push(newURL);
     }
-  }, [mounted, query, history]);
+  }, [query, dirty]);
 
   // query api
   React.useEffect(() => {
@@ -143,6 +142,7 @@ export default (routeMatch?: string) => {
   });
 
   const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setDirty(true);
     setIsLoading(true);
     setLocalQuery(e.target.value);
   };

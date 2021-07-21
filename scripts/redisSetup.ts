@@ -41,11 +41,8 @@ const transformedData = transformDataFromJson(data);
 const toArray = (obj) => {
   const transformed = Object.keys(obj)
     .map((key) => {
-      let value = obj[key];
-      if (key === 'presenter') {
-        value = obj.presenter.name;
-      }
-      value = typeof value === 'string' ? he.encode(value) : value;
+      const value =
+        typeof obj[key] === 'string' ? he.encode(obj[key]) : obj[key];
 
       return [key, value];
     })

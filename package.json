@@ -8,7 +8,7 @@
     "node": ">=14.17.0"
   },
   "scripts": {
-    "prebuild": "ts-node --project ./scripts/tsconfig.json ./scripts/redisSetup.js",
+    "prebuild": "ts-node --project ./scripts/tsconfig.json ./scripts/redisSetup.ts",
     "build": "yarn run clean & yarn run createReadme & yarn run sitemap & webpack --progress --config webpack.prod.js",
     "clean": "rm -rf ./dist",
     "createReadme": "ts-node --project ./scripts/tsconfig.json ./scripts/json2readme.ts > README.md",
