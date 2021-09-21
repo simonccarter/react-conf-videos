@@ -12,7 +12,7 @@ import './index.scss';
 ReactGA.initialize('UA-111717324-1');
 
 const App = () => {
-  useBootstrap();
+  useBootstrap;
 
   return (
     <Switch>
